@@ -1,0 +1,50 @@
+{
+	"slidepics": {
+		"value": [{
+			"title": "测试图1",
+			"image": "images/baner.jpg",
+			"link": "http://www.baidu.com"
+		}, {
+			"title": "测试图2",
+			"image": "images/baner1.jpg",
+			"link": "http://www.baidu.com"
+		},{
+			"title": "测试图3",
+			"image": "images/baner.jpg",
+			"link": "http://www.baidu.com"
+		}, {
+			"title": "测试图4",
+			"image": "images/baner1.jpg",
+			"link": "http://www.baidu.com"
+		}],
+		"description": "首页banner大轮滚图",
+		"type": "images",
+		"config": {
+			"width": 640,
+			"height": 387,
+			"limit": 3
+		}
+	},
+	"nybanner": {
+		"value": [{
+			"title": "测试图1",
+			"image": "images/img2.jpg",
+			"link": "http://www.baidu.com"
+		}, {
+			"title": "测试图2",
+			"image": "images/img2.jpg",
+			"link": "http://www.baidu.com"
+		}, {
+			"title": "测试图2",
+			"image": "images/img2.jpg",
+			"link": "http://www.baidu.com"
+		}],
+		"description": "产品详情页图片大轮滚图",
+		"type": "images",
+		"config": {
+			"width": 564,
+			"height": 380,
+			"limit": 3
+		}
+	}
+}

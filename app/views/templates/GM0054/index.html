@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+		// 跳转PC页面
+		{if $site_another_url}
+			if (!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+				location.href = '{$site_another_url}';
+			}
+		{/if}
+		</script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="keywords" content="{$keywords}" />
+<meta name="description" content="{$description}" />
+<link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
+<meta name="viewport" content="width=device-width,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no,minimal-ui">
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta content="telephone=no" name="format-detection">
+<title>{$title}</title>
+<link href="{$site_url}css/css.css" rel="stylesheet" type="text/css" />
+<link href="{$site_url}css/swipe.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="{$site_url}css/public.css" /> 
+<script src="{$site_url}js/TouchSlide.1.1.js"></script>
+<script src="{$site_url}js/jquery.min.js"></script>
+<script type="text/javascript" src="{$site_url}js/function.js"></script>
+<script type="text/javascript" src="{$site_url}js/share.js"></script>
+<script src="{$site_url}js/idangerous.swiper-2.0.min.js"></script>
+<script src="{$site_url}js/simple-app.js"></script>
+{$headscript}
+</head>
+
+<body>
+
+
+<div class="search">
+	<div class="input-div"><input name="" type="text" value="请输入编号" class="search_input" /></div>
+   	<a href="#" class="search_btn">搜索</a>
+</div>
+
+
+      {include file="./_header.html"}
+    <section>
+	{foreach name=mIndexCats_data item=mIndexCat from=$mIndexCats}
+	  {if $mIndexCat.type eq 4}
+    	<div class="boxmain">
+        	<h1 class="boxmain-top"><span class="more"><a href="{$mIndexCat.link}">更多>></a></span><span class=" title">{$mIndexCat.name}</span></h1>
+            <div class="boxmain-about">
+            	<div class="aboutimg"><img src="{$mIndexCat.image}" width="100%"></div>
+                <div class="aboutedite">
+                	 <dd class="nr">  {$mIndexCat.description}</dd>
+   					  <dd class="more1"><a href="{$mIndexCat.link}">[查看详情]</a></dd>
+                </div>
+            </div>
+        </div>
+		{elseif $mIndexCat.type eq 1}
+        <div class="boxmain">
+        	<h1 class="boxmain-top"><span class="more"><a href="{$mIndexCat.link}">更多>></a></span><span class=" title">{$mIndexCat.name}</span></h1>
+            <div class="boxmain-about" style=" margin-top:2px;">
+            	<ul class="newstlist">
+				{foreach name=mIndexCat_data item=mIndexCat_data from=$mIndexCat.data}
+                	<li>
+                    <dt class="title1"><span class="time">post time: {$mIndexCat_data.pubdate}</span>{$mIndexCat_data.title}</dt>
+                    <dd class="nr">{$mIndexCat_data.description}<dd>
+                    </li>
+					{if $mIndexCat_data@index+1 == 4}{break}{/if}
+					{/foreach}
+                    
+                </ul>
+            </div>
+        </div>
+		 {elseif $mIndexCat.type eq 2}
+        <div class="boxmain">
+        	<h1 class="boxmain-top"><span class="more"><a href="{$mIndexCat.link}">更多>></a></span><span class=" title">{$mIndexCat.name}</span></h1>
+            <div class="boxmain-about">
+		
+            	<div class="proimgbox">
+				{foreach name=mIndexCat_data item=mIndexCat_data from=$mIndexCat.data}
+					{if $mIndexCat_data@index < 2}
+                	<div class="proimg">
+                    <a href="{$mIndexCat_data.link}"><img src="{$mIndexCat_data.image}" width="100%" ></a>
+                    </div>
+					{/if}
+					{/foreach}
+					
+					
+					
+                </div>
+				
+                	<div class="proimgbox1">
+					{foreach name=mIndexCat_data item=mIndexCat_data from=$mIndexCat.data}
+					{if $mIndexCat_data@index == 2}
+                	<div class="proimg">
+                    <a href="{$mIndexCat_data.link}"><img src="{$mIndexCat_data.image}" width="100%" ></a>
+                    </div>
+                    <dt class=" title2"><a href="{$mIndexCat.link}">查看更多 >></a></dt>{/if}
+					{/foreach}
+                </div>
+                <div class="proimgbox">
+				
+					{foreach name=mIndexCat_data item=mIndexCat_data from=$mIndexCat.data}
+					{if $mIndexCat_data@index>2 and $mIndexCat_data@index<5}
+                	<div class="proimg">
+                    <a href="{$mIndexCat_data.link}"><img src="{$mIndexCat_data.image}" width="100%" ></a>
+                    </div>
+					{/if}
+					{/foreach}
+                </div>
+				
+            </div>
+        </div>
+		{/if}
+		{/foreach}
+        
+        
+    </section>
+    <footer class="foot"><div class="back-top" id="quickbar-backtotop"><A href="#">TOP</A></div>版权所有：{$footprint}</footer>
+
+
+
+{$footscript}
+</body>
+</html>

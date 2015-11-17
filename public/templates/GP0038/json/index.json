@@ -1,0 +1,53 @@
+{
+	"slidepics": {
+		"value": [{
+			"title": "测试图1",
+			"image": "images/banner.jpg",
+			"link": "",
+			"description": "首页大图"
+		}, {
+			"title": "测试图2",
+			"image": "images/banner.jpg",
+			"link": ""
+		},{
+			"title": "测试图3",
+			"image": "images/banner.jpg",
+			"link": ""
+		}],
+		"description": "多图轮播",
+		"type": "images",
+		"config": {
+			"width":817,
+			"height":467,
+			"limit": 6
+		}
+	},		
+    "aboutedit": {
+		"description": "关于我们",
+		"value": {},
+		"type": "page",
+		"config": {
+			"width": 157,
+			"height": 103
+		}			
+	},
+    
+    "newsedit": {
+		"description": "新闻中心",
+		"value": {},
+		"type": "list",
+		"config": {
+			"width": 115,
+			"height": 75
+		}			
+	},	
+	"prodedit":{
+		"description": "产品中心",
+		"value": {},
+		"type": "list",
+		"config": {
+			"width": 160,
+			"height": 187
+		}	
+	}	
+}

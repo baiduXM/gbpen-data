@@ -1,0 +1,9 @@
+<section>
+<ul>
+              {foreach item=article from=$list.data}
+  <li><a href="{$article.link}"><img src="{$article.image}" height="120" width="167" class="img"/></a><a href="{$article.link}" class="t">{$article.title}</a>
+                            
+                        </li>
+  {/foreach}
+            </ul>
+            </section>

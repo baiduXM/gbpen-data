@@ -1,0 +1,57 @@
+.tell-icon{ height:35px; overflow:hidden; line-height:35px; background:url(../images/icon-tell.png) 10px center no-repeat #413734; background-size: auto 24px; position:absolute; bottom:58px; left:0px; z-index:99; width:100%; text-indent:34px; color:#ffea01; font-size:1.13em; display:none;}
+.display-block{ display:block;}
+.tell-icon .number{ font-size:1.23em;}
+.tell-icon .close{ width:25px; height:25px; overflow:hidden; line-height:25px; top:50%; margin-top:-12px; margin-right:7px;float:right; display:inline; position:relative; background:#211b19; color:#fff;  font-size:1.1em; cursor:pointer; border-radius:100%; text-indent:0px; text-align:center}
+.body{ position: absolute; width:100%; height:100%; overflow:hidden; }
+.wrap{ width:100%; height:100%;min-width:320px; max-width:640px;  position: absolute; top:0px; left:0px; z-index:5; background: #ffcc00; }
+.index-wrap{width:100%; height:100%; overflow:hidden;overflow-y : auto; -webkit-overflow-scrolling:touch;overflow-scrolling: touch; position:absolute; top:0px; left:0px;  }
+.main{ width:100%; height:auto; overflow:hidden; animation:opacity 1.5s linear;-webkit-animation:opacity 1.5s linear; }
+.top{ width:100%; height:auto; overflow:hidden; position:absolute; top:0px; left:0px; z-index:2}
+.header{ width:100%; height: auto; overflow:hidden; background:url(../images/logobg.png) left top no-repeat; background-size:100% auto; z-index:2; position:relative;}
+.logo{width:100%; height: auto; overflow:hidden;}
+.foot{ padding:8px 0px; width:100%; position:absolute; bottom:0px; left:0px; height:auto; overflow:hidden; text-align: center; color:#666666; z-index:11}
+
+/*导航开始*/
+.menu{ height:106px; width:100%;position: relative; overflow:hidden; z-index:1;transition:all 0.3s;
+-webkit-transition: all 0.3s; margin-top:0px; position:relative;transform:translate3d(0, -30px, 0);
+-webkit-transform:translate3d(0, -30px, 0);
+	}
+.menu .nav{height:70px; overflow:hidden; position:relative;margin:0px 12px;  background:url(../images/menubg.png) left top repeat #f1f0e7; box-shadow:0px 2px 3px rgba(165,155,47,0.74); border-radius:4px; }
+.menubtn,.menubtn1{ width:31px; text-align:center; padding-top:8px; height:28px; background:url(../images/upbg.png) left top no-repeat; background-size:31px auto; display:block; position:absolute; right:28px; bottom:0px; z-index:1}
+.menubtn1{ right:62px;}
+.up,.down{ display:none;}
+.block{ display:block;}
+
+.relative{ position:relative;}
+
+
+
+/*分享结束*/
+/*banner开始*/
+.baner{ width:100%; height:100%; overflow:hidden; position:relative; z-index:1}
+.baner .animation{ width:30px; height:auto; overflow:hidden; position:absolute; bottom:10px; left:0px; left:50%; margin-left:-13px; z-index:44;animation: upanimation 3s linear infinite alternate;-webkit-animation: upanimation 3s linear infinite alternate;}
+.baner .upanimation{ width:27px; height:18px; background:url(../images/banerup.png) left top no-repeat; display:block;}
+.baner .animation .title{ height:24px; overflow:hidden;  font-size:13px; text-align:center;text-shadow:0px 0px 1px #fff;}
+/*banner结束*/
+
+
+
+.menutransform{
+	margin-top:-40px;	
+}
+@keyframes upanimation
+{
+0% { bottom:10px;}
+50% {bottom:30px;}
+100% {bottom:10px;}
+}
+
+
+@-webkit-keyframes upanimation
+{
+0% { bottom:10px;}
+50% {bottom:30px;}
+100% {bottom:10px;}
+}
+
+

@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="x-ua-compatible" content="ie=8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="{$keywords}" />
+<meta name="description" content="{$description}" />
+<script type="text/javascript" src="http://common.mn.sina.com.cn/public/resource/lib/jquery.jcarousellite.js"></script>
+
+<link rel="stylesheet" rev="stylesheet" href="{$site_url}css/style_{$stylecolor}.css" type="text/css" />
+
+<!--[if IE 6]>
+<script type="text/javascript" src="js/dd_delatedpng.js" ></script>
+<script type="text/javascript">//如果多个element使用PNG,则用','分隔
+DD_belatedPNG.fix('div,ul,li,a,p,img');
+</script>
+<![endif]-->
+<script type="text/javascript" src="{$site_url}js/jquery1.42.min.js"></script>
+<script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.js"></script>
+
+<link href="{$site_url}css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="{$site_url}js/index.js"></script>
+
+<script type="text/javascript">
+	// 跳转手机页面
+	{if $site_another_url}
+		if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+			location.href = '{$site_another_url}';
+		}
+	{/if}
+	</script>
+	<title>{$title}</title>
+{$headscript}
+
+</head>
+
+<body>
+	<div class='wappers h_o'>	
+{include file="./_header.html"}
+      <div class="containers h_o">
+            <div class="contant h_o">
+                <div class="public">
+                    <div class="contant_top h_o">
+                        <div class="about fl h_o">
+                          <h3 class="c_title"><b>{$index.about.en_name}</b> {$index.about.name}</h3>
+                          <div class="about_art h_o">
+                            <img src="{$index.about.image}">
+                            <p class="article">
+                              {$index.about.description}
+                            </p>
+                          </div>
+                        </div>
+                        <div class="news fl h_o">
+                          <h3 class="c_title"><b>{$index.news.en_name}</b> {$index.news.name}</h3>
+                          <ul class="news_list h_o">
+                            {foreach item=new from=$index.news.data}
+                            <li class="h_o"><img src="{$new.image}" /><div class="li_nr"><h2><a class="ellipsis" href="{$new.link}">{$new.title}</a></h2><p>{$new.description}<a href="{$new.link}">【详细】</a></p></div>
+                            </li>
+                            {if $new@index+1 == 2}{break}{/if}
+                            {/foreach}
+                          </ul>
+                        </div>
+                        <div class="contact fr h_o">
+                          <h3 class="c_title"><b>{$index.contact.en_name}</b> {$index.contact.name}</h3>
+                          <div class="contact_art h_o">
+                              <span class="tel">
+                                <b>咨询热线：{$contact.mobile}</b>
+                                姓名:{$contact.name}<br/>
+                                QQ：:{$contact.qq}<br/>
+                                手机:{$contact.mobile}<br/>
+                                地址：{$contact.address}<br/>
+                              </span>
+                              <ul class="navss">
+                               {foreach item=naver from=$global.second_navs}
+                                <li><a href="{$naver.link}"><span>{$naver.icon} </span>{$naver.name}<br/>{$naver.en_name}</a></li>
+                                 {if $new@index+1 == 3}{break}{/if} 
+                                {/foreach}
+                              </ul>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="products">
+                      <h3 class="title"><a href="{$index.products.link}"><img src="{$site_url}images/more.jpg"></a><em>{$index.products.en_name}</em><i>{$index.products.name}</i></h3>
+                      <div class="picMarquee-left">         
+                        <div class="bd">
+                          <ul class="picList">
+                          {foreach item=product from=$index.products.data}
+                            <li>
+                              <a href="{$product.link}"><img src="{$product.image}" /><span class='case_title'>{$product.title}</span></a>
+                            </li>
+                            {/foreach}
+                          </ul>
+                        </div>
+                      </div>
+                 </div>
+               </div>
+            </div>
+      </div>    
+{include file="./_footer.html"}
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

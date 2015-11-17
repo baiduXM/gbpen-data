@@ -1,0 +1,21 @@
+	<div class="index_top">
+       <header>
+          <div class="header">
+              <div class="logo"><img src="{$logo}" width="100%"> </div>
+          </div>
+          <div class="baner">
+              <div id="slideBox" class="slideBox">
+                <div class="hd">
+                   <ul></ul>
+                </div>
+                <div class="bd">
+                    <ul>
+                        {foreach name=slidepics item=slidepic from=$global.slidepics}
+                            <li><a class="pic" href="{$slidepics.link}"><img src="{$slidepic.image}" alt="{$slidepic.title}" /></a></li>
+                        {/foreach}
+                    </ul>
+                </div>
+              </div>
+          </div>
+       </header>    
+    </div>
