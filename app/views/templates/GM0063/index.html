@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html manifest="huancun.manifest">
+<head>
+<!-- 实时预览调试代码，模板开发完成后删除 -->
+
+<!-- 调试代码 End -->
+<script type="text/javascript">
+// 识别为电脑客户端，自动跳转PC页面
+  {if $site_another_url}
+    if (!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+      location.href = '{$site_another_url}';
+    }
+  {/if}
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no,minimal-ui">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta content="telephone=no, email=no" name="format-detection">
+<!-- 启用360浏览器的极速模式(webkit) -->
+<meta name="renderer" content="webkit">
+<!-- 避免IE使用兼容模式 -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+<meta name="HandheldFriendly" content="true">
+<!-- 微软的老式浏览器 -->
+<meta name="MobileOptimized" content="320">
+<!-- uc强制竖屏 -->
+<meta name="screen-orientation" content="portrait">
+<!-- QQ强制竖屏 -->
+<meta name="x5-orientation" content="portrait">
+<meta name="keywords" content="{$keywords}" />
+<meta name="description" content="{$description}" />
+<link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
+<title>{$title}</title>
+
+<link rel="stylesheet" href="{$site_url}css/reset.css" />
+<link rel="stylesheet" href="{$site_url}css/swiper.css" />
+<link rel="stylesheet" href="{$site_url}css/public.css" />
+<link rel="stylesheet" href="{$site_url}css/style.css" />
+
+<link rel="stylesheet" rev="stylesheet" href="{$site_url}css/style_{$stylecolor}.css" type="text/css" />
+
+
+<script type="text/javascript" src="{$site_url}js/jquery.min.js"></script>
+<script type="text/javascript" src="{$site_url}js/Loader.js"></script>
+<script src="{$site_url}js/TouchSlide.1.1.js"></script>
+<script src="{$site_url}/js/swiper.jquery.min.js"></script>
+<script type="text/javascript" src="{$site_url}js/function.js"></script>
+<script type="text/javascript">
+	window.addEventListener('load', function(){
+   setTimeout(function(){ window.scrollTo(0, 1); }, 100);
+});//safari浏览器可以通过此代码来隐藏地址栏
+</script>
+
+{$headscript}
+</head>
+<body>
+  <div class="fakeloader"><div class="img_w"><img src="{$logo}" alt="{$title}"></div></div>
+
+  <div class="wrap page-active wrap_home">    
+    {include file="./_header.html"}
+    <div class="home_main">
+
+    <!-- 输出导航式栏目（不包括内容式栏目） -->
+    <nav class="menu_nav">
+      <ul class="clearfix">
+
+        {$limit = 4}
+        {foreach item=nav_list from=$navs}            
+        <!-- 仅输出类型为 5内容单页 和 外链的栏目（包括5留言板、7微信、8直达号功能） -->
+        <li>
+          <a href="{$nav_list.link}">
+            {$nav_list.icon}
+            <span>{$nav_list.name}</span>
+          </a>
+        </li>            
+        {if $nav_list@index+1 eq $limit}{break}{/if}
+        {/foreach}
+      </ul>
+    </nav>    
+    
+    <!-- 输出内容式栏目 -->
+    {foreach name=mIndexCats item=mIndexCat from=$mIndexCats}
+
+    <!-- 仅输出类型为 2图片列表 的栏目 -->
+    {if $mIndexCat.type eq 2}
+      <!-- 后台选中“样式1”的展现模式： -->
+      {if $mIndexCat.showtype eq 1}
+      <section class="product_w">
+        <header class="clearfix">
+          <h2><span class="en">{$mIndexCat.en_name}</span>/<span class="zh">{$mIndexCat.name}</span></h2>
+          <a href="{$mIndexCat.link}" class="more">more</a>
+        </header>
+        <div class="product">            
+          <ul class="clearfix"> 
+            <div class="swiper_container_1">
+                <div class="swiper-wrapper">            
+                  {$limit = 6} 
+                  {foreach name=imglist item=imglist from=$mIndexCat.data}
+                    <li class="swiper-slide">
+                      <img src="{$imglist.image}" alt="{$imglist.title|strip_tags}"/>
+                      <div>
+                        <h4>{$imglist.title}</h4>
+                        <div class="disc">{$imglist.description}</div>
+                      </div>
+
+                      <a href="{$imglist.link}" class="read_more">more&gt;&gt;</a>
+                    </li>
+                  {if $imglist@index+1 eq $limit}{break}{/if}
+                  {/foreach} 
+                </div>
+                <!-- 如果需要分页器 -->
+                <!-- <div class="swiper-pagination"></div> -->
+            </div> 
+
+
+          </ul>
+          
+        </div>
+      </section>
+      {/if}
+
+    <!-- 仅输出类型为 4单页内容 的栏目（关于我们、联系我们） -->
+    {elseif $mIndexCat.type eq 4}
+      <section class="about_w">
+        <header>
+          <h2><span class="en">{$mIndexCat.en_name}</span>/<span class="zh">{$mIndexCat.name}</span></h2>
+          <a href="{$mIndexCat.link}" class="more">more</a>
+        </header>
+        <div class="about clearfix">
+          <div class="img_border"><img src="{$mIndexCat.image}" alt="{$mIndexCat.name|strip_tags}"/></div>
+          <div class="txt">{$mIndexCat.description}</div>
+        </div>
+
+      </section>
+    {/if}
+    {/foreach} 
+    </div>
+    <div class="to_top" id="to_top"><a href="javascript:;">top</a></div>
+    <footer class="foot">{$footprint}</footer>
+
+</div>
+{$footscript}
+</body>
+</html>

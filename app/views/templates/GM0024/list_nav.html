@@ -1,0 +1,26 @@
+<!-- 二级栏目列表（展示到三级子栏目） -->
+<div class="hide-class  public_bg1">
+    {foreach name=pagenavs item=nav from=$pagenavs}
+    <dl  class="{if $nav.current}current{/if}">
+      <a href="{$nav.link}">{$nav.name}</a>
+      {if $nav.childmenu}
+      <ul class="second">
+        {foreach key=key item=nav_list from=$nav.childmenu}
+        <li class="{if $nav_list.current}current{/if}">
+          <a href="{$nav_list.link}">&nbsp;&nbsp;&nbsp;{$nav_list.name}</a>
+          {if $nav_list.childmenu}
+          <ul class="third">
+            {foreach key=key item=nav_listsec from=$nav_list.childmenu}
+            <li class="{if $nav_listsec.current}current{/if}">
+              <a href="{$nav_listsec.link}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{$nav_listsec.name}</a>
+            </li>
+            {/foreach}
+          </ul>
+          {/if}
+        </li>
+        {/foreach}
+      </ul>
+      {/if}
+    </dl>
+    {/foreach}
+</div>

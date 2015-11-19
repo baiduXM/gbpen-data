@@ -1,0 +1,55 @@
+{
+	
+    "about_us": {
+		"description": "关于我们",
+		"value": {},
+		"type": "page"
+	},
+    
+	"pro":{
+		"description": "产品中心",
+		"value": {},
+		"type": "list"
+	},
+	"slidepics": {
+		"value": [{
+			"title": "banner",
+			"image": "images/banner.jpg",
+			"link": "article/1.html",
+			"description": "banner1"
+		}, {
+			"title": "测试图2",
+			"image": "images/banner.jpg",
+			"link": "http://www.baidu.com"
+		},{
+			"title": "测试图3",
+			"image": "images/banner.jpg",
+			"link": "http://www.baidu.com"
+		}],
+		"description": "首页多图轮播",
+		"type": "images",
+		"config": {
+			"width": 1423,
+			"height": 559,
+			"limit": 3
+		}
+	},
+	"contact_us": {
+		"value": "地址：厦门市软件园二期观日路36号201单元\r\n电话：4000-127-808\r\n传真：0592-3503377\r\n邮箱：tousu@xm12t.com",
+		"description": "联系我们",
+		"type": "textarea"
+	},
+	"contactimg":{
+		"value": {
+			"title": "联系我们",
+			"image": "images/contact.jpg",
+			"link": "http://www.baidu.com/"
+		},
+		"description": "联系我们栏目图片",
+		"type": "image",
+		"config": {
+			"widht":281,
+			"height": 95
+		}
+	}
+}

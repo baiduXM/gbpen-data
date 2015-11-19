@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+<html manifest="huancun.manifest">
+<head>
+<!-- 实时预览调试代码，模板开发完成后删除 -->
+		
+		<!-- 调试代码 End -->
+		<script type="text/javascript">
+		// 跳转PC页面
+		{if $site_another_url}
+			if (!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+				location.href = '{$site_another_url}';
+			}
+		{/if}
+		</script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no,minimal-ui">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta content="telephone=no, email=no" name="format-detection">
+<!-- 启用360浏览器的极速模式(webkit) -->
+<meta name="renderer" content="webkit">
+<!-- 避免IE使用兼容模式 -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+<meta name="HandheldFriendly" content="true">
+<!-- 微软的老式浏览器 -->
+<meta name="MobileOptimized" content="320">
+<!-- uc强制竖屏 -->
+<meta name="screen-orientation" content="portrait">
+<!-- QQ强制竖屏 -->
+<meta name="x5-orientation" content="portrait">
+<meta name="keywords" content="{$keywords}" />
+<meta name="description" content="{$description}" />
+<link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
+<title>{$title}</title>
+<link rel="stylesheet" href="{$site_url}css/reset.css" /> 
+<link rel="stylesheet" href="{$site_url}css/public.css" /> 
+<link rel="stylesheet" rev="stylesheet" href="{$site_url}css/style_{$stylecolor}.css" type="text/css" />
+<link href="{$site_url}css/css.css" rel="stylesheet" type="text/css" />
+<link href="{$site_url}css/swipe.css" rel="stylesheet" type="text/css" />
+<script src="{$site_url}js/TouchSlide.1.1.js"></script>
+<script type="text/javascript" src="{$site_url}js/jquery.min.js"></script>
+<script type="text/javascript" src="{$site_url}js/function.js"></script>
+<script type="text/javascript" src="{$site_url}js/share.js"></script>
+<script src="{$site_url}js/idangerous.swiper-2.0.min.js"></script>
+<script src="{$site_url}js/idangerous.swiper.3dflow-2.0.js"></script>
+<script src="{$site_url}js/simple-app.js"></script>
+<script type="text/javascript">
+	window.addEventListener('load', function(){
+   setTimeout(function(){ window.scrollTo(0, 1); }, 100);
+});//safari浏览器可以通过此代码来隐藏地址栏
+</script>
+{$headscript}
+</head>
+<body>
+<div class="body">
+
+<div class="wrap page-active">
+<div class="index-wrap">
+	{include file='./_header.html'}
+    <section>
+    	<div class="boxmain">
+			{foreach name=mIndexCats item=mIndexCat from=$mIndexCats}
+			{if $mIndexCat.type eq 2}
+        	<div class="dress">
+            	<div class="index_title">{$mIndexCat.name}<span>{$mIndexCat.en_name} </span></div>
+                <div class="pros_show">
+			<div id="picScroll" class="picScroll">				
+				<div class="bd">
+						{$pro_num=$mIndexCat.data|count}
+						{$time=$pro_num/3}
+						{$f=1}
+						{while $time>0}
+							<ul>
+							{foreach item=article from=$mIndexCat.data}
+							{if $article@index lt ($f-1)*3}{continue}{/if}
+							<li><a onclick="javascript:window.location.href='{$article.link}'"><div class="prsilimg"><img _src="{$article.image}" src="{$article.image}" width="117px" height="74px"/><div class="pri_titles">{$article.title}</div></div></a></li>
+							{if $article@index+1 eq $f*3}{break}{/if}
+							{/foreach}
+							</ul>
+						{$f=$f+1}
+						{$time=$time-1}
+						{/while}						
+
+
+				</div>
+<div class="hd">
+						<span class="next"></span>
+						<ul></ul>
+						<span class="prev"></span>
+				</div>                
+			</div>        
+            </div>
+            </div> 
+			
+			{elseif $mIndexCat.type eq 4}
+            <div class="dress">
+               <div class="index_title"><a onclick="javascript:window.location.href='{$mIndexCat.link}'">{$mIndexCat.name}<span><a onclick="javascript:window.location.href='{$mIndexCat.link}'">{$mIndexCat.en_name}</span></div>
+               <div class="aboutshow">
+<div class="box-about"><a onclick="javascript:window.location.href='{$mIndexCat.link}'">
+                   <div class="aboutimgs"><img src="{$mIndexCat.image}" width="213px" height="136px"></div>
+                   <div class="a_text"><div id="triangle-left"></div>
+                   <div class="text">
+					{$mIndexCat.description|unescape:"html"} 
+					</div>
+                   </div></a>
+                </div>               
+                </div>
+            </div>  
+			
+			{elseif $mIndexCat.type eq 1}
+			{if $mIndexCat.showtype eq 1}
+            <div class="dress">
+               <div class="index_title"><a onclick="javascript:window.location.href='{$mIndexCat.link}'">{$mIndexCat.name}</a><span><a onclick="javascript:window.location.href='{$mIndexCat.link}'">{$mIndexCat.en_name}</span></div>
+               <div class="news_d">
+               	 <ul>
+					{foreach item=article from=$mIndexCat.data}
+                	<li><a onclick="javascript:window.location.href='{$article.link}'">
+                    	<div class="xwzx-detal">                    	   
+                           <div class="news_wprd">
+                             <div class="ndate">{$article.pubdate}</div>
+                             <div class="nword">{$article.title}</div>
+                           
+                           </div>
+                           <div class="newsimg"><img src="{$article.image}" width="138px" height="50px"></div>
+                        </div></a>
+                    </li>   
+					{if $article@index+1 == 4}{break}{/if}
+                	{/foreach}
+                                                                             
+                 </ul>
+               </div>
+            </div>                
+        </div>
+		{/if}
+		{elseif $mIndexCat.type eq 3}
+		{* 不输出内容单页栏目（在最上方导航式栏目中已输出） *}
+		{/if}
+		{/foreach}		
+    </section>
+    <footer class="foot" ><a class="back-top">TOP</a>{$footprint}</footer></div>
+</div>
+	{include file='./_footer.html'}
+</div>
+
+</body>
+</html>

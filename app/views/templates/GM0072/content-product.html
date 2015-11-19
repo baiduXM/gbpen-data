@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- 实时预览调试代码，模板开发完成后删除 -->
+		
+		<!-- 调试代码 End -->
+		<script type="text/javascript">
+		// 跳转PC页面
+		{if $site_another_url}
+			if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+				location.href = '{$site_another_url}';
+			}
+		{/if}
+		</script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,minimum-scale=1.0, maximum-scale=1.5,user-scalable=no,minimal-ui">
+<meta name="keywords" content="{$keywords}" />
+<meta name="description" content="{$description}" />        
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta content="telephone=no, email=no" name="format-detection">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="HandheldFriendly" content="true">
+<meta name="MobileOptimized" content="320">
+<meta name="screen-orientation" content="portrait">
+<meta name="x5-orientation" content="portrait">
+<title>{$title}</title>
+<link rel="stylesheet" href="{$site_url}css/reset.css" /> 
+<link rel="stylesheet" href="{$site_url}css/public.css" /> 
+<link href="{$site_url}css/css.css" rel="stylesheet" type="text/css" />
+<link href="{$site_url}css/swipe.css" rel="stylesheet" type="text/css" />
+<script src="{$site_url}js/TouchSlide.1.1.js"></script>
+<script type="text/javascript" src="{$site_url}js/jquery.min.js"></script>
+<script type="text/javascript" src="{$site_url}js/function.js"></script>
+<script type="text/javascript" src="{$site_url}js/share.js"></script>
+<link rel="stylesheet" href="{$site_url}css/animate.css"> 
+<script src="{$site_url}js/idangerous.swiper-2.0.min.js"></script>
+<script src="{$site_url}js/idangerous.swiper.3dflow-2.0.js"></script>
+<script src="{$site_url}js/simple-app.js"></script>
+<script type="text/javascript">
+	window.addEventListener('load', function(){
+   setTimeout(function(){ window.scrollTo(0, 1); }, 100);
+});//safari浏览器可以通过此代码来隐藏地址栏
+</script>
+
+</head>
+<body>
+<h1 class="fixed-top"><span class="fixed-btn back"><a href="javascript:window.history.back()">返回</a></span> <div class="menulista" id="quickbar" ><a href="#" id="quickbar-navs-btn" ><div class="word">导航</div></a></div>
+               <div class="mind_title">
+                <span>关于我们</span>
+               </div>
+</h1>
+<div class="index-wrap">
+<section>
+    <div class="index_show" style="margin:50px 15px 8px;">
+<div class="d_titles">
+<h1 class="title1">{$article.title}</h1>
+<hl class="title2">更新时间：{$article.pubtimestamp|date_format:'%Y-%m-%d'}  字体 : <span class="smalld">小</span> | <span class="middled">中</span> | <span class="bigd">大</span></hl>
+</div>
+<div class="ping">
+                        	<div class="d_datu"><div id="slideBox" class="slideBox">
+    <div class="hd">
+            <ul></ul>
+              </div>
+	<div class="bd">
+		<ul>
+		{foreach name=image item=image from=$article.images}
+			<li><a class="pic" href="{$image.link}"><img src="{$image.image}" /></a></li>
+			{/foreach}
+		</ul>
+	</div>
+	
+			</div></div><div class="pi_words2">{$article.title}</div>
+                        </div>
+          <div class="box-m">
+<div class="boxmain-m"> 
+
+                <div class="edite" >
+        2005年，厦门易尔通网络科技有限公司被百度授权建立了厦门地区“百度客户销售服务中心”，该服务中心为厦门地区的百度客户提供专业的服务。 
+       2007年11月，百度正式授权易尔通为福建漳州、龙岩、莆田地区核心代理。2009年，易尔通网络科技有限公司拿到了泉州地区的代理权，至此，易尔通的服务已经覆盖整个闽南地区，成为百度闽南营销服务中心。
+      目前我们的客户服务中心为厦门、泉州、漳州、龙岩、莆田及周边地区的百度客户在“咨询服务”、“开户服务”、“关键字管理”到“效果跟踪报告”方面提供服务。让客户充分体验产品加上专业的服务才能在网络推广中获得效益。
+      同时根据厦门、漳州、龙岩、莆田地区客户对服务更 ... ...高质量的要求易尔通客户服务中心再推出“网站建设服务”、“网站优化服务”、“关键字效果分析服务”到“企业网络推广综合报告服务 ”一系列专业服务 ，保证让客户能从网络上获得最佳产品、品牌推广效果，让大量客户从网络中带来了前所未有的经济效益。
+       2005年，厦门易尔通网络科技有限公司被百度授权建立了厦门地区“百度客户销售服务中心”，该服务中心为厦门地区的百度客户提供专业的服务。 
+       2007年11月，百度正式授权易尔通为福建漳州、龙岩、莆田地区核心代理。2009年，易尔通网络科技有限公司拿到了泉州地区的代理权，至此，易尔通的服务已经覆盖整个闽南地区，成为百度闽南营销服务中心。
+      目前我们的客户服务中心为厦门、泉州、漳州、龙岩、莆田及周边地区的百度客户在“咨询服务”、“开户服务”、“关键字管理”到“效果跟踪报告”方面提供服务。让客户充分体验产品加上专业的服务才能在网络推广中获得效益。
+      同时根据厦门、漳州、龙岩、莆田地区客户对服务更 ... ...高质量的要求易尔通客户服务中心再推出“网站建设服务”、“网站优化服务”、“关键字效果分析服务”到“企业网络推广综合报告服务 ”一系列专业服务 ，保证让客户能从网络上获得最佳产品、品牌推广效果，让大量客户从网络中带来了前所未有的经济效益。
+       2005年，厦门易尔通网络科技有限公司被百度授权建立了厦门地区“百度客户销售服务中心”，该服务中心为厦门地区的百度客户提供专业的服务。 
+       2007年11月，百度正式授权易尔通为福建漳州、龙岩、莆田地区核心代理。2009年，易尔通网络科技有限公司拿到了泉州地区的代理权，至此，易尔通的服务已经覆盖整个闽南地区，成为百度闽南营销服务中心。保险。       
+                </div>   
+            <ul class="inner_pages">
+            <li><a href="{$article.prev.link} ">上一篇:{$article.prev.title} </a></li>
+            <li><a href="{$article.next.link} ">上一篇:{$article.next.title} </a></li>
+            </ul>                        
+            </div>
+          </div>
+       </div>
+    </section>
+
+        <footer class="foot"><a class="back-top"><span>TOP</span></a>{$footprint} </footer>
+        
+        {$footscript}        
+    </div>
+
+</body>
+</html>
