@@ -57,7 +57,7 @@ return array(
 			'host'      => '59.56.69.154',
 			'database'  => 'unify',
 			'username'  => 'admin',
-			'password'  => 'admin',
+			'password'  => 'admin12t',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_general_ci',
 			'prefix'    => 'up_',
