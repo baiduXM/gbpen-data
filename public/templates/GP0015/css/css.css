@@ -101,6 +101,7 @@ ul.nav>li>a:hover{background: url(../images/lihover.png) repeat-x;}
 
 /*首页结束*/
 
+
 /*list-page*/
 .side-left{width: 216px;margin-right: 20px;}
 .sidebar{width: 216px;margin-bottom: 10px;}
@@ -143,8 +144,10 @@ text-overflow:ellipsis;}
 .ny-prolist li{width: 240px;margin-right: 22px;margin-bottom: 10px;display:inline;float: left;}
 .ny-prolist li a{display: block;width: 240px}
 .ny-prolist li a img{width: 240px;height: 151px;}
-.ny-prolist li a h2{height: 35px;line-height: 35px;text-align: center;color: #676767;font-size: 14px;font-weight: bold;}
-.ny-prolist li a:hover h2{ color:#cc1835;}
+.ny-prolist li a h2{height: 35px;line-height: 35px;text-align: center;color: #676767;font-size: 14px;font-weight: bold;text-overflow: ellipsis;
+overflow: hidden;
+white-space: nowrap;}
+.ny-prolist li a:hover h2{ color:#cc1835;}	
 
 /*list-imagetext*/
 .ny-list .list-item{border-bottom: 1px solid #e5e5e5;padding-bottom: 10px;height: 107px;margin-bottom: 10px;}
