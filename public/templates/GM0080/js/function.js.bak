@@ -25,11 +25,11 @@ function loader (argument) {
     t2 = setTimeout(remove_load,4000);
 }
 window.onload = function () {
-     //loader();
+     
 };
 
 $(document).ready(function() {  
-
+	loader();
 
 
 

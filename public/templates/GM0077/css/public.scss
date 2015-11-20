@@ -69,16 +69,22 @@ article {
 
 .main{
 	overflow: hidden;
-	&:before{
+	&:before,&:after{
 		position: absolute;
 		content: "";
+		right: 0;
+	}
+	&:before{
 		top: 0;
-		left: 0;
-		height: 700px;
-		width: 200px;
-		background-color: rgba(51,51,51,.1);
-		@include transform(rotate(20deg));
-		@include transform-origin(top right);
+		border-right: 8rem solid #eeecec;
+		border-top: 5rem solid #eeecec;
+		border-bottom: 6rem solid transparent;
+	}
+	&:after{
+		top: 0;
+		border-right: 6rem solid #eeecec;
+		border-top: 4rem solid transparent;
+		border-bottom: 3rem solid #eeecec;
 	}
 }
 

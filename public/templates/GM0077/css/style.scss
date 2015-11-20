@@ -699,27 +699,17 @@ ul.nav{
 				width: 60%;
 				height: 30%;
 				bottom: 14px;
-				background: rgba(0,0,0,.4);
+				background: rgba(0,0,0,.3);
 				z-index: -2;
-				box-shadow: 0 15px 8px rgba(0,0,0,.6);
+				box-shadow: 0 15px 8px rgba(0,0,0,.45);
 			}
 			&:before{
 				left: 25px;
 				@include transform(skew(-35deg) rotate(-6deg));
-				// transform: skew(72deg) rotate(4deg);
-				// -webkit-transform: skew(72deg) rotate(4deg);
-				// -moz-transform: skew(72deg) rotate(4deg);
-				// -o-transform: skew(72deg) rotate(4deg);
-				// -ms-transform: skew(72deg) rotate(4deg);
 			}
 			&:after{
 				right: 25px;				
 				@include transform(skew(35deg) rotate(6deg));
-				// transform: skew(-72deg) rotate(-4deg);
-				// -webkit-transform: skew(-72deg) rotate(-4deg);
-				// -moz-transform: skew(-72deg) rotate(-4deg);
-				// -o-transform: skew(-72deg) rotate(-4deg);
-				// -ms-transform: skew(-72deg) rotate(-4deg);
 			}
 		}
 
