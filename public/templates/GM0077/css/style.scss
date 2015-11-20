@@ -381,14 +381,15 @@ a.classify_btn,a.font_btn {
 	transform: translateY(-50%)
 }
 a.classify_btn{
-	right: 55px;
+	right: 60px;
 }
 a.font_btn{
 	right: 15px
 }
 ul.nav{
 	position: absolute;
-	width: 100%;
+	left: 10px;
+	right: 10px;
 	height: auto;
 	overflow: hidden;
 	display: none;
@@ -691,6 +692,34 @@ ul.nav{
 			img {
 				width: auto;
 				height: 100%
+			}
+			&:before,&:after{
+				position: absolute;
+				content: "";
+				width: 60%;
+				height: 30%;
+				bottom: 14px;
+				background: rgba(0,0,0,.4);
+				z-index: -2;
+				box-shadow: 0 15px 8px rgba(0,0,0,.6);
+			}
+			&:before{
+				left: 25px;
+				@include transform(skew(-35deg) rotate(-6deg));
+				// transform: skew(72deg) rotate(4deg);
+				// -webkit-transform: skew(72deg) rotate(4deg);
+				// -moz-transform: skew(72deg) rotate(4deg);
+				// -o-transform: skew(72deg) rotate(4deg);
+				// -ms-transform: skew(72deg) rotate(4deg);
+			}
+			&:after{
+				right: 25px;				
+				@include transform(skew(35deg) rotate(6deg));
+				// transform: skew(-72deg) rotate(-4deg);
+				// -webkit-transform: skew(-72deg) rotate(-4deg);
+				// -moz-transform: skew(-72deg) rotate(-4deg);
+				// -o-transform: skew(-72deg) rotate(-4deg);
+				// -ms-transform: skew(-72deg) rotate(-4deg);
 			}
 		}
 
