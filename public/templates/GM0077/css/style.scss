@@ -392,7 +392,7 @@ ul.nav{
 	height: auto;
 	overflow: hidden;
 	display: none;
-	top: 100%;
+	top: 4.8rem;
 	li a{
 		width: 100%;
 		text-align: center;
@@ -407,8 +407,8 @@ ul.nav{
 }
 .font {
 	position: absolute;
-	top: 100%;
-	right: 0;
+	top: 4.8rem;
+	right: 15px;
 	width: 85px;
 	height: auto;
 	overflow: hidden;
@@ -571,6 +571,7 @@ ul.nav{
 			line-height: 2.5;
 			height: 2.25rem;
 			color: $browndark;
+			font-weight: bold;
 			@extend %ellipsis-basic;
 		}
 		.detail{
@@ -681,15 +682,12 @@ ul.nav{
 	article{
 		padding: 15px 0;
 		box-shadow: 0 1px 1px #dcdcdc,0 2px 1px #fff;
-		.img_wrap {
+		.img_shadow {
 			float: left;
 			width: auto;
 			font-size: 0;
 			height: 113px;
 			margin-right: 10px;
-			padding: 2px;
-			border: 1px solid #d8d8d7;
-			background-color: $white;
 			img {
 				width: auto;
 				height: 100%
@@ -702,6 +700,7 @@ ul.nav{
 				line-height: 2;
 				height: 28px;
 				color: $browndark;
+				font-weight: bold;
 				@extend %ellipsis-basic;
 			}
 			div {

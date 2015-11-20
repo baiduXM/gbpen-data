@@ -54,7 +54,7 @@ window.addEventListener('load', function(){
         <section class="con_news">
             <article>
               <header>
-                <hd3>{$article.title}</hd3>
+                <h3>{$article.title}</h3>
                 <div class="detail clearfix">
                   <p>分类：<span>{$article.category.name}</span>发布时间：<time datetime="{$article.pubtimestamp|date_format:'%Y-%m-%d'}" pubdate="pubdate">{$article.pubtimestamp|date_format:'%Y-%m-%d'}</time>浏览次数：{$article.viewcount}</p>
                 </div>                    
