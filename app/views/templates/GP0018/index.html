@@ -49,7 +49,7 @@
        <div class="pro_list yc">
          <ul class="clearfix">
          {foreach name=pro item=pro from=$index.pro.data}
-          <li><a href="{$pro.link}"><img src="{$pro.image}" width="175" height="125" /><p>{$pro.title}</p></a></li>
+          <li><a href="{$pro.link}"><img src="{$pro.image}" width="130" height="130" /><p>{$pro.title}</p></a></li>
         {if $pro@index+1 == 8}{break}{/if}
        {/foreach}
          </ul>
@@ -73,6 +73,7 @@
         </ul>
       </div>
     </div>
+    
   </div>
  </div>
 </div>

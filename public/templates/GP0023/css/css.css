@@ -135,7 +135,7 @@ h1.logo {
 	position:absolute;
 	left:300px;
 	top:10px;
-	width:165px;
+	
 	height:88px;
 	z-index:100;
 }
@@ -144,6 +144,7 @@ h1.logo {
 	width: 100%;
 	margin: 0;
 	padding: 0;
+	z-index:200;
 }
 .nav>ul {
 	position: absolute;

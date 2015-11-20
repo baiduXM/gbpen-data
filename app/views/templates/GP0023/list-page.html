@@ -29,8 +29,7 @@
 <body>
     {include file='./_header.html'}
 <div id="sub_container" class="wrap1 clearfix">
-<div class="sidebar">
-</div>
+
 <div class="crumb">
                 <img src="{$site_url}images/ico11.png" width="19" height="15"class="pngFix" />
                 <span>当前位置：<a href="{$site_url}">首页</a>
@@ -44,16 +43,11 @@
 
   <div class="article ">
                     {$list.content|unescape:"html"}
-                   
-	
-	
 	</div>
      <div class="bot"><img src="{$site_url}images/sid_bot.png" width="868" height="48" /></div>
 
 </div>
     {include file='./_aside.html'}            	
-
-   
  </div>
     
     {include file='./_footer.html'}

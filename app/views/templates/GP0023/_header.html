@@ -1,7 +1,7 @@
   <div class="top_l">
     <div class="header_inner">
        <div class="top">
-        <h1 class="logo"><a href="index.html"><img src="{$logo}" alt="{$title}" /></a></h1>
+        <h1 class="logo"><a href="{$site_url}"><img src="{$logo}" alt="{$title}" /></a></h1>
       </div>    
       
        <div class="nav">
@@ -33,23 +33,7 @@
    
 </div>
 
-<div id="nav">
-  <ul class="clearfix wrapper">
-    {$limit = 8}
-    {if $navs|count lt $limit}{$limit = $navs|count}{/if}
-    <li class="nav1" style="width:{100/($limit+1)}%"> <a href="{$site_url}">首页</a> </li>
-    {foreach name=navs item=nav from=$navs}
-    <li class="fl{if $nav.current} current{/if} nav1" style="width:{100/($limit+1)}%"> <a href="{$nav.link}">{$nav.name}</a>
-      <ul class="sub clearfix">
-        {if $nav.childmenu} {foreach key=key item=nav_list from=$nav.childmenu}
-        <li class="{if $nav.current}current{/if} nav2"><a href="{$nav_list.link}">{$nav_list.name}</a></li>
-        {/foreach} {/if}
-      </ul>
-    </li>
-    {if $nav@index+1 eq $limit}{break}{/if}
-    {/foreach}
-  </ul>
-</div>
+
 
  </div>
  
