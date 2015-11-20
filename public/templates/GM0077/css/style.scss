@@ -9,7 +9,7 @@ $dark: #c5c5c5;
 $orange:#e9a045;
 
 $brown:#3b2d2c;
-$browndark:#3b2d2c;
+$browndark:#592a2a;
 $brown_light:#433534;
 $brown_lighter:#674e4e;
 $primary:#3b2d2c;
@@ -443,7 +443,7 @@ ul.nav{
 	}
 	a.return,a.font_btn{
 		color: $white;
-		background-color: $primary;
+		background-color: #4b3e3d;
 		top: auto;
 		bottom: 2px;
 		@include transform(translateY(0));
@@ -565,20 +565,20 @@ ul.nav{
 	margin-bottom: 15px;
 	header{
 		text-align: center;
-		padding: 35px 5px 20px;
+		padding: 1.75rem .2rem 1rem;
 		border-bottom: 1px dotted $grayDark;
-		h4{
+		h3{
 			line-height: 2.5;
 			height: 2.25rem;
-			color: #f48400;
+			color: $browndark;
 			@extend %ellipsis-basic;
 		}
 		.detail{
-			font-size: 15px;
-			color: #767676;
+			font-size: 12px;
+			color: #787474;
 			line-height: 1.5;
 			span,em,time{
-				margin-right: 12px;
+				margin-right: 8px;
 			}
 		}
 	}
@@ -685,7 +685,7 @@ ul.nav{
 			float: left;
 			width: auto;
 			font-size: 0;
-			height: 8rem;
+			height: 113px;
 			margin-right: 10px;
 			padding: 2px;
 			border: 1px solid #d8d8d7;
@@ -697,17 +697,17 @@ ul.nav{
 		}
 
 		.imgtxt {
-			 h4 a{
+			 h3 a{
 				display: block;
 				line-height: 2;
-				height: 1.8rem;
-				color: $orange;
+				height: 28px;
+				color: $browndark;
 				@extend %ellipsis-basic;
 			}
 			div {
-				color: #6a6a6a;
+				color: #494646;
 				line-height: 1.8;
-				max-height: 6.48rem;
+				max-height: 64.8px;
 				overflow: hidden
 			}
 		}

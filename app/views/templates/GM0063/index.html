@@ -43,7 +43,6 @@
 
 
 <script type="text/javascript" src="{$site_url}js/jquery.min.js"></script>
-<script type="text/javascript" src="{$site_url}js/Loader.js"></script>
 <script src="{$site_url}js/TouchSlide.1.1.js"></script>
 <script src="{$site_url}/js/swiper.jquery.min.js"></script>
 <script type="text/javascript" src="{$site_url}js/function.js"></script>
@@ -56,91 +55,109 @@
 {$headscript}
 </head>
 <body>
-  <div class="fakeloader"><div class="img_w"><img src="{$logo}" alt="{$title}"></div></div>
+  <div class="loader_div">
+    <span class="rotate_w"></span>
+    <div class="bg">
+      <div class="b_l">
+        <img src="{$global.load_img.image}" alt="{$global.load_img.title|strip_tags}">
+      </div>
+      <div class="t_r">
+        <img src="{$global.load_img.image}" alt="{$global.load_img.title|strip_tags}">
+      </div>
+    </div>
+  </div>
 
-  <div class="wrap page-active wrap_home">    
-    {include file="./_header.html"}
-    <div class="home_main">
-
-    <!-- 输出导航式栏目（不包括内容式栏目） -->
-    <nav class="menu_nav">
-      <ul class="clearfix">
-
-        {$limit = 4}
-        {foreach item=nav_list from=$navs}            
-        <!-- 仅输出类型为 5内容单页 和 外链的栏目（包括5留言板、7微信、8直达号功能） -->
-        <li>
-          <a href="{$nav_list.link}">
-            {$nav_list.icon}
-            <span>{$nav_list.name}</span>
-          </a>
-        </li>            
-        {if $nav_list@index+1 eq $limit}{break}{/if}
-        {/foreach}
-      </ul>
-    </nav>    
-    
-    <!-- 输出内容式栏目 -->
-    {foreach name=mIndexCats item=mIndexCat from=$mIndexCats}
-
-    <!-- 仅输出类型为 2图片列表 的栏目 -->
-    {if $mIndexCat.type eq 2}
-      <!-- 后台选中“样式1”的展现模式： -->
-      {if $mIndexCat.showtype eq 1}
-      <section class="product_w">
-        <header class="clearfix">
-          <h2><span class="en">{$mIndexCat.en_name}</span>/<span class="zh">{$mIndexCat.name}</span></h2>
-          <a href="{$mIndexCat.link}" class="more">more</a>
+  <div class="big_wrap">
+  <header class="header">
+          <div class="header_menu" id="header_menu"><i class="icon iconfont">&#xe603;</i></div>
+          <h1 class="logo"><a href="javascript:;"><img src="{$logo}" alt="{$title}"></a></h1>
+          <div href="{$search_action}" class="search_btn" id="search_btn"><i class="icon iconfont">&#xe636;</i></div>
         </header>
-        <div class="product">            
-          <ul class="clearfix"> 
-            <div class="swiper_container_1">
-                <div class="swiper-wrapper">            
-                  {$limit = 6} 
-                  {foreach name=imglist item=imglist from=$mIndexCat.data}
-                    <li class="swiper-slide">
-                      <img src="{$imglist.image}" alt="{$imglist.title|strip_tags}"/>
-                      <div>
-                        <h4>{$imglist.title}</h4>
-                        <div class="disc">{$imglist.description}</div>
-                      </div>
 
-                      <a href="{$imglist.link}" class="read_more">more&gt;&gt;</a>
-                    </li>
-                  {if $imglist@index+1 eq $limit}{break}{/if}
-                  {/foreach} 
-                </div>
-                <!-- 如果需要分页器 -->
-                <!-- <div class="swiper-pagination"></div> -->
-            </div> 
 
+	<div class="wrap page-active wrap_home">
+      <div class="index-wrap">
+        
+        
+        <!-- 滚轮图 -->
+        <div class="swiper_container">
+            <div class="swiper-wrapper">
+              {foreach item=slidepic from=$global.slidepics}
+                <div class="swiper-slide"><img src="{$slidepic.image}" alt="{$slidepic.title|strip_tags}"></div>
+              {/foreach} 
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+        </div>
+
+        <!-- 输出导航式栏目（不包括内容式栏目） -->
+        <nav class="menu_nav">
+          <ul class="clearfix">
+
+            {$limit = 6}
+            {foreach item=nav_list from=$navs}            
+            <!-- 仅输出类型为 5内容单页 和 外链的栏目（包括5留言板、7微信、8直达号功能） -->
+            <li>
+              <a href="{$nav_list.link}"><span>{$nav_list.name}</span></a>
+            </li>            
+            {if $nav_list@index+1 eq $limit}{break}{/if}
+            {/foreach}
 
           </ul>
-          
-        </div>
-      </section>
-      {/if}
+        </nav>
+        
+        
+        <!-- 输出内容式栏目 -->
+        {foreach name=mIndexCats item=mIndexCat from=$mIndexCats}
+        <!-- 仅输出类型为 2图片列表 的栏目 -->
+        {if $mIndexCat.type eq 2}
+          <!-- 后台选中“样式1”的展现模式： -->
+          {if $mIndexCat.showtype eq 1}
+          <section class="product_w">
+            <header>
+              <h2><span class="zh">{$mIndexCat.name}</span><br/><span class="en">{$mIndexCat.en_name}</span></h2>
+            </header>
+            <div class="product">            
+              <ul class="clearfix">             
+                {$limit = 5}
+                {foreach name=imglist item=imglist from=$mIndexCat.data} 
+                <li>
+                  <a href="{$imglist.link}"><img src="{$imglist.image}" alt="{$imglist.title|strip_tags}"></a>
+                </li>
 
-    <!-- 仅输出类型为 4单页内容 的栏目（关于我们、联系我们） -->
-    {elseif $mIndexCat.type eq 4}
-      <section class="about_w">
-        <header>
-          <h2><span class="en">{$mIndexCat.en_name}</span>/<span class="zh">{$mIndexCat.name}</span></h2>
-          <a href="{$mIndexCat.link}" class="more">more</a>
-        </header>
-        <div class="about clearfix">
-          <div class="img_border"><img src="{$mIndexCat.image}" alt="{$mIndexCat.name|strip_tags}"/></div>
-          <div class="txt">{$mIndexCat.description}</div>
-        </div>
+                {if $imglist@index+1 eq $limit}{break}{/if}
+                {/foreach}  
+                <li class="last">          
+                  <a href="{$mIndexCat.link}" class="more">更多</a>
+                </li>
+              </ul>
+              
+            </div>
+          </section>
+          {/if}
 
-      </section>
-    {/if}
-    {/foreach} 
+        <!-- 仅输出类型为 4单页内容 的栏目（关于我们、联系我们） -->
+        {elseif $mIndexCat.type eq 4}
+          <section class="about_w">
+            <header>
+              <h2><span class="zh">{$mIndexCat.name}</span><br/><span class="en">{$mIndexCat.en_name}</span></h2>
+            </header>
+            <div class="about">
+              <div class="txt">{$mIndexCat.description}</div>
+              <a href="{$mIndexCat.link}" class="more">更多</a>
+            </div>
+
+          </section>
+        {/if}
+        {/foreach} 
+      </div>
     </div>
+
+    {include file="./_page_search.html"}
     <div class="to_top" id="to_top"><a href="javascript:;">top</a></div>
     <footer class="foot">{$footprint}</footer>
 
-</div>
 {$footscript}
+</div>
 </body>
 </html>

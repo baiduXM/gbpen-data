@@ -26,12 +26,11 @@
 		<meta name="description" content="{$description}" />
 		<link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
 		<title>{$title}</title>
-		<link rel="stylesheet" href="{$site_url}css/reset.css" />
-		<link rel="stylesheet" href="{$site_url}css/swiper.css" />
-		<link rel="stylesheet" href="{$site_url}css/public.css" />
-		<link rel="stylesheet" href="{$site_url}css/style.css" />
+  <link rel="stylesheet" href="{$site_url}css/reset.css" />
+  <link rel="stylesheet" href="{$site_url}css/public.css" />
+    <link rel="stylesheet" href="{$site_url}css/style.css" />
 		<link rel="stylesheet" rev="stylesheet" href="{$site_url}css/style_{$stylecolor}.css" type="text/css" />
-<script>
+		<script>
 window.addEventListener('load', function(){
   setTimeout(function(){ window.scrollTo(0, 1); }, 100);
 });//safari浏览器可以通过此代码来隐藏地址栏
@@ -39,46 +38,42 @@ window.addEventListener('load', function(){
 		
 	</head>
 	<body>
-	<div class="wrap page-active">   
 	{include file="./_header.html"}
-
-	<div class="main">
-
-    <div class="top_nav">
-      <h2><span class="en">{$list.en_name}</span><span class="zh">{$list.name}</span></h2>
-      <a class="classify_btn" href="javascript:;">分类</a>
-      
-      <nav>
-        <ul class="nav up">
-          {foreach name=pagenavs item=nav from=$pagenavs}
-            <li><a href="{$nav.link}">{$nav.name}</a></li>
-          {/foreach}
-        </ul>
-      </nav>
-      <a class="font_btn left" href="javascript:;">字</a>
-      <div class="font left">
-        <span class="big">大</span>
-        <span class="normal">中</span>
-        <span class="small">小</span>
-      </div>             
+	<div class="wrap page-active">
+      <div class="index-wrap"> 
+        <div class="top_nav">
+          <h2>{$list.name}</h2>
+          <a class="font_btn left" href="javascript:;">字</a>
+          <div class="font left">
+            <span class="big">大</span>
+            <span class="normal">中</span>
+            <span class="small">小</span>
+          </div> 
+          <a class="classify_btn" href="javascript:;">分类</a>
+          
+          <nav>
+            <ul class="nav up">
+              {foreach name=pagenavs item=nav from=$pagenavs}
+                <li><a href="{$nav.link}">{$nav.name}</a></li>
+              {/foreach}
+            </ul>
+          </nav>            
+        </div>
+        <section class="list_page">            
+          <div>{$list.content|unescape:"html"}</div>
+        </section>
+      </div> 
     </div>
 
-    <section class="list_page">            
-      <div>{$list.content|unescape:"html"}</div>
-    </section>
-
-	</div>
-	
+    {include file="./_page_search.html"}
+    
     <div class="to_top" id="to_top"><a href="javascript:;">top</a></div> 
     <!-- 底部 -->
     <footer class="foot">{$footprint}</footer>
-
-    </div> 
+{$footscript}
 <script src="{$site_url}js/TouchSlide.1.1.js"></script>
 <script type="text/javascript" src="{$site_url}js/jquery.min.js"></script>
 <script src='{$site_url}js/pagenavs_sub3.js'></script>
-<script src="{$site_url}/js/swiper.jquery.min.js"></script>
 <script type="text/javascript" src="{$site_url}js/function.js"></script>
-{$footscript}
-</body>
+	</body>
 </html>

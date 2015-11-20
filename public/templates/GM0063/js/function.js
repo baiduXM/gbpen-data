@@ -1,15 +1,39 @@
+function loader (argument) {
+    $('.loader_div').addClass('loader_remove');
+    var w_div = $('#quickbar-wrap-body'),
+        w_h = w_div.height();
+    w_div.css('height', '100vh');
+    function wrap_show(argument) {
+        console.log('x');
+        $('.big_wrap').css('display', 'block');
+        clearTimeout(t);
+    }
+    function loaded (argument) {
+        console.log('yes');
+        $('#quickbar-wrap').addClass('loaded');
+        $('#quickbar').css('display', 'block');
+        w_div.css('height', w_h);
+        $('#quickbar-wrap-body').css('cssText', 'overflow-y:auto!important'); 
+        clearTimeout(t1);
+    }
+    function remove_load(argument) {
+        console.log('test');
+        $('.loader_div').remove();
+        clearTimeout(t2);
+    }
+    var t = setTimeout(wrap_show,1000),
+    t1 = setTimeout(loaded,2500);
+    t2 = setTimeout(remove_load,4000);
+}
+window.onload = function () {
+    loader();
+};
+
 $(document).ready(function() {  
     // 自适应
     $(window).resize(function() { 
          $('.swiper-container').height($('.swiper-slide>div').height());   
     })
-
-    //计算.main的最小高度，保证footer在底部
-    var min_height = $('#quickbar-wrap-body').height() - $('header').height() - $('.foot').height();
-    console.log('min_height');
-    console.log(min_height);
-    $('.main').css('min-height', min_height + 'px');
-    $('.home_main').css('min-height', min_height + 'px');
 
     function pageSlideOver() {
         $('.page-out').on('transitionend', 
@@ -96,6 +120,25 @@ $(document).ready(function() {
 
     })
 
+    $("#search_btn").click('touchstart', 
+    function() {
+
+        $(".page_search").removeClass("page_right").addClass("page-in");
+        $(".wrap").removeClass("page-active").addClass("page_left page-in")
+        pageSlideOver();
+
+
+    })
+
+    $(".to_page").click('touchstart', 
+    function() {
+        $(".page_search").addClass("page_right page-out")
+        $(".wrap").removeClass("page_left").addClass(" page-out")
+        pageSlideOver();
+
+
+    })
+
     // 控制字体大小
     $(".font_btn").click(function() {
         $(".font").slideToggle();
@@ -141,16 +184,8 @@ $(document).ready(function() {
     // 产品详情页轮播图  
     if($('.swiper_container').length){
         var swiper = new Swiper('.swiper_container',{        
-            loop: true,
-            autoplay : 3000
-        }); 
-     } 
-     if($('.swiper_container_1').length){
-        var swiper = new Swiper('.swiper_container_1',{        
-            slidesPerView: 3,
-            spaceBetween: 10,
-            loop: true,
-            autoplay : 5000
+            pagination: '.swiper-pagination',
+            paginationClickable: true
         }); 
      } 
     if($('.swiper-container_1').length){

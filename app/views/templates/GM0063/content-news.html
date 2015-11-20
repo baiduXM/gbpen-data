@@ -26,72 +26,57 @@
 		<meta name="description" content="{$description}" />
 		<link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
 		<title>{$title}</title>
-    <link rel="stylesheet" href="{$site_url}css/reset.css" />
-    <link rel="stylesheet" href="{$site_url}css/swiper.css" />
-    <link rel="stylesheet" href="{$site_url}css/public.css" />
+  <link rel="stylesheet" href="{$site_url}css/reset.css" />
+  <link rel="stylesheet" href="{$site_url}css/public.css" />
     <link rel="stylesheet" href="{$site_url}css/style.css" />
-    <link rel="stylesheet" rev="stylesheet" href="{$site_url}css/style_{$stylecolor}.css" type="text/css" />
+		<link rel="stylesheet" rev="stylesheet" href="{$site_url}css/style_{$stylecolor}.css" type="text/css" />
 		
-<script>
+		<script>
 window.addEventListener('load', function(){
   setTimeout(function(){ window.scrollTo(0, 1); }, 100);
 });//safari浏览器可以通过此代码来隐藏地址栏
 </script>
 	</head>
 	<body>
-  <div class="wrap page-active">   
-  <header class="top_title">
-	<h3>{$article.category.name}</h3>
-	<a href="javascript:window.history.back()" class="return">返回</a>          
-	<a class="font_btn" href="javascript:;">字+</a>
-	<div class="font">
-	<span class="big">大</span>
-	<span class="normal">中</span>
-	<span class="small">小</span>
-	</div> 
-  </header>
-  <div class="main">
+	<div class="wrap page-active">
+      <div class="index-wrap">
+        <div class="top_nav">
+          <h2>{$article.category.name}</h2>
+          <a href="javascript:window.history.back()" class="return">返回</a>          
+          <a class="font_btn" href="javascript:;">字</a>
+          <div class="font">
+            <span class="big">大</span>
+            <span class="normal">中</span>
+            <span class="small">小</span>
+          </div>          
+          
+        </div>
+
         <section class="con_news">
             <article>
               <header>
-                <h4>{$article.title}</h4>
+                <h3>{$article.title}</h3>
                 <div class="detail clearfix">
-                  <p>分类：<span>{$article.category.name}</span>发布时间：<time datetime="{$article.pubtimestamp|date_format:'%Y-%m-%d'}" pubdate="pubdate">{$article.pubtimestamp|date_format:'%Y-%m-%d'}</time>浏览次数：{$article.viewcount}</p>
+                  <p>发布时间：<time pubdate="pubdate">{$article.pubtimestamp|date_format:'%Y-%m-%d'}</time></p>
                 </div>                    
               </header>
-              <div class="txt">{$article.description}</div>
-              <div class="big_img"><img src="{$article.image}" alt="{$article.title|strip_tags}"></div>
-             <div class="txt">{$article.content|unescape:"html"}</div>             
+             <div class="text">{$article.content|unescape:"html"}</div>             
             </article>
         </section>
         <section>
           <a href="{$article.prev.link}" class="pre">上一篇：{$article.prev.title}</a>
           <a href="{$article.next.link}" class="nxt">下一篇：{$article.next.title}</a>
         </section>
-        <section class="related">
-        	<h4>相关阅读</h4>
-        	<ul>
-        		{foreach item=article from=$related}
-				<li>
-					<a href="{$article.link}">{$article.title}</a>
-				</li>
-				{/foreach}
-        	</ul>
-        </section>
+      </div> 
+    </div>
     
-
-  </div>
-  
     <div class="to_top" id="to_top"><a href="javascript:;">top</a></div> 
     <!-- 底部 -->
     <footer class="foot">{$footprint}</footer>
-
-    </div> 
+{$footscript}
 <script src="{$site_url}js/TouchSlide.1.1.js"></script>
 <script type="text/javascript" src="{$site_url}js/jquery.min.js"></script>
 <script src='{$site_url}js/pagenavs_sub3.js'></script>
-<script src="{$site_url}/js/swiper.jquery.min.js"></script>
 <script type="text/javascript" src="{$site_url}js/function.js"></script>
-{$footscript}
-</body>
+	</body>
 </html>

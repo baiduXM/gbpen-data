@@ -26,12 +26,12 @@
 		<meta name="description" content="{$description}" />
 		<link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
 		<title>{$title}</title>
-    <link rel="stylesheet" href="{$site_url}css/reset.css" />
-    <link rel="stylesheet" href="{$site_url}css/swiper.css" />
-    <link rel="stylesheet" href="{$site_url}css/public.css" />
+  <link rel="stylesheet" href="{$site_url}css/reset.css" />
+  <link rel="stylesheet" href="{$site_url}css/swiper.css" />
+  <link rel="stylesheet" href="{$site_url}css/public.css" />
     <link rel="stylesheet" href="{$site_url}css/style.css" />
-    <link rel="stylesheet" rev="stylesheet" href="{$site_url}css/style_{$stylecolor}.css" type="text/css" />
-<script>
+		<link rel="stylesheet" rev="stylesheet" href="{$site_url}css/style_{$stylecolor}.css" type="text/css" />
+		<script>
 window.addEventListener('load', function(){
   setTimeout(function(){ window.scrollTo(0, 1); }, 100);
 });//safari浏览器可以通过此代码来隐藏地址栏
@@ -39,19 +39,20 @@ window.addEventListener('load', function(){
 		
 	</head>
 	<body>
-  <div class="wrap page-active">  
-  <header class="top_title">
-    <h3>{$article.category.name}</h3>
-    <a href="javascript:window.history.back()" class="return">返回</a>          
-    <a class="font_btn" href="javascript:;">字+</a>
-    <div class="font">
-    <span class="big">大</span>
-    <span class="normal">中</span>
-    <span class="small">小</span>
-    </div> 
-  </header>
-  <div class="main">
-        <section class="pro_detail pro_detail_w">
+	<div class="wrap page-active">
+      <div class="index-wrap">
+        <div class="top_nav">
+          <h2>{$article.category.name}</h2>
+          <a href="javascript:window.history.back()" class="return">返回</a>          
+          <a class="font_btn" href="javascript:;">字</a>
+          <div class="font">
+            <span class="big">大</span>
+            <span class="normal">中</span>
+            <span class="small">小</span>
+          </div>          
+          
+        </div>
+        <section class="pro_detail pro_detail_w"> 
             <article>
                 <header>
                 <div class="swiper-container_1">
@@ -65,12 +66,13 @@ window.addEventListener('load', function(){
                      {/foreach}
                   </div> 
                   {if $img.title != null}
-                  <h4 class="title">{$img.title}</h4>
+                  <h5 class="title">{$img.title}</h5>
                   {/if} 
                   <!-- Add Pagination -->
                   <div class="swiper-pagination"></div>
                 </div>
-                </header>   
+                </header> 
+                  
                     
                                 
                 <div class="txt">
@@ -82,20 +84,17 @@ window.addEventListener('load', function(){
           <a href="{$article.prev.link}" class="pre">上一篇：{$article.prev.title}</a>
           <a href="{$article.next.link}" class="nxt">下一篇：{$article.next.title}</a>
         </section>
-
-  </div>
-  
+      </div> 
+    </div>
+    
     <div class="to_top" id="to_top"><a href="javascript:;">top</a></div> 
     <!-- 底部 -->
     <footer class="foot">{$footprint}</footer>
-
-    </div> 
+{$footscript}
 <script src="{$site_url}js/TouchSlide.1.1.js"></script>
 <script type="text/javascript" src="{$site_url}js/jquery.min.js"></script>
 <script src="{$site_url}/js/swiper.jquery.min.js"></script>
 <script src='{$site_url}js/pagenavs_sub3.js'></script>
-<script src="{$site_url}/js/swiper.jquery.min.js"></script>
 <script type="text/javascript" src="{$site_url}js/function.js"></script>
-{$footscript}
-</body>
+	</body>
 </html>
