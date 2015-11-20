@@ -16,8 +16,7 @@ function loader (argument) {
         clearTimeout(t1);
     }
     function remove_load(argument) {
-        console.log('test');
-        $('.loader_div').remove();
+        //$('.loader_div').remove();
         clearTimeout(t2);
     }
     var t = setTimeout(wrap_show,1000),
@@ -25,17 +24,10 @@ function loader (argument) {
     t2 = setTimeout(remove_load,4000);
 }
 window.onload = function () {
-     //loader();
+    loader();
 };
 
 $(document).ready(function() {  
-
-
-
-
-
-
-
     // 自适应
     $(window).resize(function() { 
          $('.swiper-container').height($('.swiper-slide>div').height());   
