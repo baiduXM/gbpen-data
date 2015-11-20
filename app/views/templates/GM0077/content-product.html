@@ -41,7 +41,7 @@ window.addEventListener('load', function(){
 	<body>
   <div class="wrap page-active">  
   <header class="top_title">
-    <h3>{$article.category.name}</h3>
+    <h2><div><span class="zh">{$article.category.name}</span><span class="en">{$article.category.en_name}</span></div></h2>
     <a href="javascript:window.history.back()" class="return">返回</a>          
     <a class="font_btn" href="javascript:;">字+</a>
     <div class="font">
@@ -68,7 +68,8 @@ window.addEventListener('load', function(){
                   <h4 class="title">{$img.title}</h4>
                   {/if} 
                   <!-- Add Pagination -->
-                  <div class="swiper-pagination"></div>
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div></div>
                 </div>
                 </header>   
                     
@@ -85,7 +86,7 @@ window.addEventListener('load', function(){
 
   </div>
   
-    <div class="to_top" id="to_top"><a href="javascript:;">top</a></div> 
+    <div class="to_top" id="to_top"><a href="javascript:;"></a></div> 
     <!-- 底部 -->
     <footer class="foot">{$footprint}</footer>
 

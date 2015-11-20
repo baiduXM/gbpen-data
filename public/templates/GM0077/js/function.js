@@ -140,6 +140,8 @@ $(document).ready(function() {
     if($('.swiper_container').length){
         var swiper = new Swiper('.swiper_container',{        
             loop: true,
+            prevButton:'.swiper-button-prev',
+            nextButton:'.swiper-button-next',
             autoplay : 3000
         }); 
      } 

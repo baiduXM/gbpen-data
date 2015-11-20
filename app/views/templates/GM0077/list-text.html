@@ -49,12 +49,11 @@ window.addEventListener('load', function(){
             {foreach name=article item=article from=$list.data}
             <article class="clearfix">
               <header>    
-				<h4><a href="{$article.link}">{$article.title}</a></h4>
+				<h3><a href="{$article.link}">{$article.title}</a></h3>
 				<div class="time_w">
 					<time datetime="{$article.pubtimestamp|date_format:'%Y-%m-%d'}" pubdate="pubdate">[{$article.pubtimestamp|date_format:'%Y-%m-%d'}]</time>
 				</div>  
               </header> 
-              <div class="txt">{$article.description}</div>   	   
             </article>
             {/foreach} 
           {include file="./_page_normal.html"}
@@ -63,7 +62,7 @@ window.addEventListener('load', function(){
 
   </div>
   
-    <div class="to_top" id="to_top"><a href="javascript:;">top</a></div> 
+    <div class="to_top" id="to_top"><a href="javascript:;"></a></div> 
     <!-- 底部 -->
     <footer class="foot">{$footprint}</footer>
 

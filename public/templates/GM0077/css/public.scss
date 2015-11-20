@@ -247,7 +247,7 @@ div#quickbar>ul li p.title {
 
 /*quickbar-navs start*/
 div#quickbar-navs {
-	background-color: #e5cd92 !important;
+	background-color: #d3d3d3 !important;
 	width: 70%
 }
 
@@ -354,8 +354,8 @@ div#quickbar-wrap.page-next {
 
 // Paging start
 .page_normal {
-	padding: 50px 0;
-	padding: 2.5rem 0;
+	padding-top: 24px;
+	padding-top: 1.2rem;
 	ul{
 		width: 100%;
 		text-align: center;
@@ -363,9 +363,9 @@ div#quickbar-wrap.page-next {
 			display: inline-block;
 			margin: 4px 2px;
 			a{
-				color: $white;
-				background-color: $blue;
-				padding: 4px 6px;
+				color: #633100;
+				background-color: #ccc6c2;
+				padding: 2px 4px;
 				line-height: 1		
 			}
 		}
@@ -373,5 +373,5 @@ div#quickbar-wrap.page-next {
 }
 
 .page_normal li.cur a {
-	background-color: $orange;
+	background-color: #8c8c8c;
 }

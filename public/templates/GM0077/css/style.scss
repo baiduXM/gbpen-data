@@ -104,6 +104,7 @@ h2{
 	height: 3.75rem;
 	text-align: center;
 	border: .2rem solid $brown_lighter;
+	background-color: $primary;
 	@include border-radius(50%);
 	&>div{
 		top: 50%;
@@ -356,23 +357,22 @@ a.more{
 //top_nav 
 .top_nav {
 	position: relative;
-	padding: 1rem 0;
+	padding: 5px 0 2rem;
 	z-index: 2;
 	h2{
-		padding-left: 10px;
-		.en{
-			color: $orange;
-		}
-		.zh{
-			color: $blue;
+		background-color: $primary;
+		margin-left: 10px;
+		&:before{
+			content: "1";
 		}
 	}
 }
+
 a.classify_btn,a.font_btn {
 	position: absolute;
 	top: 50%;
 	color: $white;
-	background-color: $blue;
+	background-color: $primary;
 	border-radius: 20px/20px;
 	text-align: center;
 	padding: 0 10px;
@@ -398,7 +398,7 @@ ul.nav{
 		text-align: center;
 		color: $white;
 		display: block;
-		background-color: $blue;
+		background-color: $primary;
 		border-bottom: 1px solid #fff8e7;
 		padding: 0.425rem 0;
 		line-height: 2;
@@ -414,7 +414,7 @@ ul.nav{
 	overflow: hidden;
 	display: none;
 	span{
-		background-color: $blue;
+		background-color: $primary;
 		color: $white;
 		display: block;
 		width: 100%;
@@ -434,23 +434,25 @@ ul.nav{
 
 .top_title{
 	position: relative;
-	background-color: $blue;
 	z-index: 2;
-	h3{
-		color: rgba(187,231,231,1);
-		line-height: 2;
-		text-align: center;
+	h2{
+		margin: 5px auto;
+		&:before{
+			content: "1";
+		}
 	}
 	a.return,a.font_btn{
-		color: $blue;
-		background-color: rgba(187,231,231,1);
+		color: $white;
+		background-color: $primary;
+		top: auto;
+		bottom: 2px;
+		@include transform(translateY(0));
 	}
 	a.return{
+		position: absolute;
 		padding: 2px 10px;
 		border-radius: 20px / 20px;
-		font-size: 12px;
 		left: 15px;
-		@extend %vertical_center;
 	}
 	a.font_btn{
 		right: 15px;
@@ -463,22 +465,27 @@ ul.nav{
 .list_text,.search_result{
 	margin: 0 15px;
 	article{
-		padding-top: 20px;
 		header{
 			border-bottom: 1px dotted #ccc;		
-			h4 a{
-				@extend %inline-block;
-				line-height: 2;
-				height: 1.8rem;
-				color: $blue_dark;
-				margin-left: 15px;
-				@include ellipsis(60%);
+			h3{
+				line-height: 1;
+				 a{
+					@extend %inline-block;
+					line-height: 2;
+					height: 1.8rem;
+					color: #3b3a3a;
+					padding-left: 25px;
+					background-image: url(../images/icon.png);
+					background-repeat: no-repeat;
+					background-position: 4px 8px;
+					@include ellipsis(60%);
+				}
 			}
 			div.time_w {
 				@extend %vertical_center;
 				right: 15px;
 				time{
-					color:$orange;
+					color:#504b4b;
 				}
 			}
 		}
@@ -525,26 +532,19 @@ ul.nav{
 		li {
 			position: relative;
 			@extend %inline-block;
-			width: 41%;
+			width: 33.3%;
 			text-align: center;
-			margin: 1rem 4.5%;
-			color: $white;
-			h4.title,.disc {
+			margin-bottom: .5rem;
+			h3.title{
 				line-height: 2;
-				height: 1.8rem;
+				height: 28px;
 				width: 98%;
+				color: #494646;
 				@extend %ellipsis-basic;
-				border-bottom: 1px solid $gray;
-			}
-			h4.title{
-				color: $orange;
-			}
-			.disc{
-				font-size: 0.9rem;
-				color: #464646;
 			}
 			.img_wrap {
-				width: 100%
+				width: 90%;
+				margin: 0 5%;
 			}
 		}
 	}
@@ -642,7 +642,8 @@ ul.nav{
 	margin-bottom: 20px;
 	border-bottom: 1px dotted #888;
 	.img_wrap {
-		margin: 2rem 10px 0;
+		width: 50%;
+		margin: 2rem auto 0;
 		img {
 			width: 100%;
 		}
@@ -716,7 +717,7 @@ ul.nav{
 a.pre,a.nxt {
 	text-align: left;
 	display: block;
-	color: $blue;
+	color: #6f6f6f;
 	line-height: 2
 }
 

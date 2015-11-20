@@ -98,8 +98,10 @@
                   {$limit = 6} 
                   {foreach name=imglist item=imglist from=$mIndexCat.data}
                     <li class="swiper-slide">
+                      <a href="{$imglist.link}">
                       <img src="{$imglist.image}" alt="{$imglist.title|strip_tags}"/>
                       <h4>{$imglist.title}</h4>
+                      </a>
                     </li>
                   {if $imglist@index+1 eq $limit}{break}{/if}
                   {/foreach} 
@@ -125,7 +127,7 @@
           <article class="clearfix">
               <div class="img_w"><img src="{$article.image}"/></div>
               <div class="news">
-                <header><h3>{$article.title}</h3></header>
+                <header><h3><a href="{$article.link}">{$article.title}</a></h3></header>
                 <div class="txt">{$article.description}</div>
                 <time datetime="{$article.pubtimestamp|date_format:'%Y-%m-%d'}" pubdate="pubdate">{$article.pubtimestamp|date_format:'%Y-%m-%d'}</time>
               </div>            
