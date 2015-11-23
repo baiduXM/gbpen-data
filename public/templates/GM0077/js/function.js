@@ -5,8 +5,7 @@ $(document).ready(function() {
     })
 
     //计算.main的最小高度，保证footer在底部
-    var min_height = $('body').height() - $('header').height() - $('.foot').height()
-                     - $('#to_top a').height()/2 - $('#quickbar').height();
+    var min_height = $('body').height() - $('header').height() - $('.foot').height();
     $('.main').css('min-height', min_height + 'px');
     $('.home_main').css('min-height', min_height + 'px');
 
