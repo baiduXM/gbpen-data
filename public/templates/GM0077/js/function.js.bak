@@ -11,7 +11,7 @@ $(document).ready(function() {
     $('.home_main').css('min-height', min_height + 'px');
     console.log($('body').height());
     console.log($('header').height());
-    console.log($('.foot').height());
+    console.log($('foot').height());
     console.log($('#to_top a').height());
     console.log($('#quickbar').height());
 
