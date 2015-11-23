@@ -16,11 +16,11 @@ function loader (argument) {
         clearTimeout(t1);
     }
     function remove_load(argument) {
-        //$('.loader_div').remove();
+        $('.loader_div').remove();
         clearTimeout(t2);
     }
     var t = setTimeout(wrap_show,1000),
-    t1 = setTimeout(loaded,2500);
+    t1 = setTimeout(loaded,1500);
     t2 = setTimeout(remove_load,4000);
 }
 window.onload = function () {
