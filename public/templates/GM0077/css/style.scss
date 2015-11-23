@@ -466,7 +466,13 @@ ul.nav{
 	}
 }
 
-.list_page{margin: 20px 15px;}
+.list_page{
+	margin: 20px 15px 0;
+	background-image: url(../resource/txt_page.jpg);
+	background-repeat: no-repeat;
+	background-position: right bottom;
+	padding-bottom: 75px;
+}
 
 //list_text & search_result  start
 .list_text,.search_result{
