@@ -65,10 +65,18 @@ article {
 	background-color: $white;
 	background-image: url(../images/bg.jpg);
   	background-repeat: repeat-y;
+  	&:before{
+  		position: absolute;
+  		content: "";
+  		top: 0;right: 0;
+  		bottom: 0;
+  		width: 1.25rem;
+  		background-color: #eeecec;
+  	}
 }
 
 .main{
-	overflow: hidden;
+	// overflow: hidden;
 	&:before,&:after{
 		position: absolute;
 		content: "";
@@ -81,7 +89,7 @@ article {
 		border-bottom: 6rem solid transparent;
 	}
 	&:after{
-		top: 0;
+		bottom: -35px;
 		border-right: 6rem solid #eeecec;
 		border-top: 4rem solid transparent;
 		border-bottom: 3rem solid #eeecec;

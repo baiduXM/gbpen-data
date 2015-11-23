@@ -435,9 +435,10 @@ ul.nav{
 
 .top_title{
 	position: relative;
+	padding: 5px 0;
 	z-index: 2;
 	h2{
-		margin: 5px auto;
+		margin: 0 auto;
 		&:before{
 			content: "1";
 		}
