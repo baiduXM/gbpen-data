@@ -136,14 +136,36 @@ $(document).ready(function() {
 
 
 
-    // 产品详情页轮播图  
+     //  首页轮播图 
     if($('.swiper_container').length){
-        var swiper = new Swiper('.swiper_container',{        
-            pagination: '.swiper-pagination',
-            paginationClickable: true
-        });
+        var swiper = new Swiper('.swiper_container')   
+    }
+     //首页图片列表
+     if($('body').width() >= 480){
+        var swiper = new Swiper('.swiper_container_1',{        
+            slidesPerView: 3,
+            spaceBetween: 10,
+            loop: true,
+            autoplay : 5000
+        }); 
      } 
-    
+     else{
+        var swiper = new Swiper('.swiper_container_1',{        
+            slidesPerView: 2,
+            spaceBetween: 5,
+            loop: true,
+            autoplay : 5000
+        }); 
+     }
+    //产品详情页轮播图   
+    if($('.swiper-container_1').length){
+        var swiper = new Swiper('.swiper-container_1',{        
+            loop: true,
+            prevButton:'.swiper-button-prev',
+            nextButton:'.swiper-button-next',
+            autoplay : 3000
+        }); 
+     } 
     
 });
 function loader (argument) {
