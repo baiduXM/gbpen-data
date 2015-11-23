@@ -20,6 +20,11 @@ $txt_color:#464646;
 
 /* home page start */
 // nav menu
+.wrap_home{
+	&:before{
+		width: 0
+	}
+}
 .wrap_home .menu_nav {
 	position: relative;
 	font-size: 0;
