@@ -62,13 +62,13 @@
         <section>
           <div class="menu">
             <ul class="nav">
-            {foreach item=nav_list from=$navs}
-            {* 仅输出类型为 5内容单页 和 外链的栏目（包括5留言板、7微信、8直达号功能） *}
-              <li onclick="javascript:window.location.href='{$nav_list.link}'">
-                <img src="{$nav_list.image}" width="100%">
-                <dt class="title">{$nav_list.name}</dt>
+            {foreach item=nav from=$navs}
+           
+              <li onclick="javascript:window.location.href='{$nav.link}'">
+               {$nav.icon}
+                <dt class="title">{$nav.name}</dt>
               </li>
-              {if $nav_list@index+1 eq 5}{break}{/if}
+              {if $nav@index+1 == 5}{break}{/if}
               {/foreach}
             </ul>
             {* 输出type为1234的栏目展现HTML，且1234每个都须定义 *}
