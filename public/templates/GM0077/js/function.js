@@ -9,11 +9,6 @@ $(document).ready(function() {
                      - $('#to_top a').height()/2 - $('#quickbar').height();
     $('.main').css('min-height', min_height + 'px');
     $('.home_main').css('min-height', min_height + 'px');
-    console.log($('body').height());
-    console.log($('header').height());
-    console.log($('.foot').height());
-    console.log($('#to_top a').height());
-    console.log($('#quickbar').height());
 
     function pageSlideOver() {
         $('.page-out').on('transitionend', 
