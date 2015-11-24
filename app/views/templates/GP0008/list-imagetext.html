@@ -21,8 +21,8 @@
 <script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.js"></script>
 <script type="text/javascript" src="http://common.mn.sina.com.cn/public/resource/lib/jquery.jcarousellite.js">
 </script>
-<script type="text/javascript" src="{$site_url}js/global.js"></script>
 <script type="text/javascript" src="{$site_url}js/function.js"></script>
+<script type="text/javascript" src="{$site_url}js/global.js"></script>
 
 <title>{$title}</title>
 </head>
@@ -39,10 +39,10 @@
            {/foreach}</span>
        </h1>
        <div class="ny-left fl">
-            <ul class="ny-prolist">
-                    {foreach name=article item=article from=$list.data} 
-                        <li><a href="{$article.link}"><img alt="" src="{$article.image}" width="238" height="159" /><h2>{$list.data[0].title}<span>+</span></h2></a></li>
-                        {if $article@index+1 == 9} {break} {/if}
+            <ul class="ny-newlist">
+                    {foreach name=article item=article from=$list.data}
+						
+                        <li><a href="{$article.link}"><div class="date"><span>{$article.pubtimestamp|date_format:'%d'} </span>{$article.pubtimestamp|date_format:'%Y . %m'} </div><img src="{$article.image}"  height="126" width="165" title="{$article.title}">{$article.title}</a></li>
                         
                     {/foreach}     
             </ul>
@@ -66,7 +66,7 @@
                       <input class="searchbox" type="text" name="s" value="请输入关键字" />
                       <div class="searchbtn"><input type="submit" value="" /></div>
                </form>   
-           </div> 
+           </div>       
            <!-- 导入侧导航 -->
            {include file='./_pagenavs_sub3.html'}
            <div class="new-latest">
