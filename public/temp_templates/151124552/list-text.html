@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<!-- 实时预览调试代码，模板开发完成后删除 -->
-		
+		<script type="text/javascript" src="http://chanpin.xm12t.com.cn/js/preview.js"></script>
 		<!-- 调试代码 End -->
 		<script type="text/javascript">
 		// 跳转PC页面
@@ -82,36 +82,24 @@
             </ul>                
           </div>
 <div class="boxmain-ny-m">
-<div class="news_lista">
+<div class="ny_newslist">
                 	<ul>
-                        
-                 {foreach name=article item=article from=$list.data}
-                	<li><a onclick="javascript:window.location.href='{$article.link}'">
-                    	<div class="xwzs_show">
-                            	<div class="nimg"><img src="{$article.image}" width="100%"></div>
-                                <div class="news_wprd"><div class="enter_fuhao">&gt;</div>
-                                 <div class="ntitle">{$article.title}</div>
-                                 <div class="nword">{$article.description}</div>
-                                 <div class="timer">{$article.pubtimestamp|date_format:'%Y-%m-%d'}</div>
-                               </div>
-                               
-                            </div></a>
-                    </li>
-                  {if $article@list+1 == 6}{break}{/if}
-				{/foreach}  
-                                                                                                                                 
+                    {foreach name=article item=article from=$list.data}
+                    	<li>
+                        	<a href="{$article.link}"><span>{$article.pubtimestamp|date_format:'%Y-%m-%d'}</span>{$article.title}</a>
+                        </li> 
+                     {/foreach}                                                                     
+                                                
                     </ul>
-<div class="next1"><a href="{$page_links.first_link}" class="cu">首页</a><a href="{$page_links.prev_link}">上一页</a>
+ <div class="next1"><a href="{$page_links.first_link}" class="cu">首页</a><a href="{$page_links.prev_link}">上一页</a>
               {foreach item=near_link key=near_page from=$page_links.nears_link}
                 {if $near_page == $page_links.current_page}
                   <a class="current">{$near_page}</a></li>
                 {else}
                   <a href="{$near_link}">{$near_page}</a></li>
                 {/if}
-              {/foreach}
-<a href="{$page_links.next_link}" >下一页</a><a href="{$page_links.last_link}"  >尾页</a></div>                 
-                    
-                </div>            		
+              {/foreach} 
+ <a href="{$page_links.next_link}" >下一页</a><a href="{$page_links.last_link}"  >尾页</a></div>                    </div>            		
            </div>                  	
         </div>
     </section>
