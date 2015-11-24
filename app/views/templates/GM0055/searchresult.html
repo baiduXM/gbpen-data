@@ -43,34 +43,34 @@
 		});//safari浏览器可以通过此代码来隐藏地址栏
 		</script>
 	</head>
-	<body>
-	<!-- 头部 -->
-	{include file="./_header.html"}
-
-
-     <section>
-        <div class="box-m">
-			<div class="boxmain-m">
-			<p class="sea_realut">共搜索到<b>{$search.total}</b>个结果</p>
-                          <div class="newslista">
-            	<ul>
-				{foreach name=article item=article from=$search.data}
-                	<li><a href="{$article.link}"><span>{$article.pubdatestamp|date_format:"%y "}/{$article.pubdatestamp|date_format:"%d "}/{$article.pubdatestamp|date_format:"%m "} </span>{$article.title}</a></li>
+<body>
+<div class="body">
+<div class="wrap page-active">
+    <div class="index-wrap"> 
+     {include file='./_header.html'}
+  <section>
+    <div class="boxmaind">
+      <div class="boxmain_d">
+        <div class="main">
+          <div class="searchresult">
+            <p>共搜索到{$search.total}个结果</p>
+            <ul>
+            	{foreach name=article item=article from=$search.data}
+                 <li><a href="{$article.link}">{$article.title}</a></li>
+                	<li><a href="{$article.link}">{$article.title}</a></li>
 				{/foreach}
-                </ul>
-                <div class="next1">
-					<a href="{$page_links.prev_link}">上一页</a>
-					{$page_links.current_page}/{$page_links.page_count}
-					<a href="{$page_links.next_link}">下一页</a>
-				</div>
-            </div>
-               </div>                       
+              {if $article@index+1 == 10} {break} {/if}
+            </ul>
+            
+                <div class="next1"><a href="{$page_links.first_link}">首页</a><a href="{$page_links.prev_link}">上一页</a>{$page_links.current_page}/{$page_links.page_count}　<a href="{$page_links.next_link}">下一页</a><a href="{$page_links.last_link}">尾页</a></div>
+            
+          </div>
         </div>
-     </section>
-
-
-	<!-- 底部 -->
-	<footer class="foot">{$footprint}</footer>
-	{$footscript}
-	</body>
+      </div>
+    </div>
+  </section>
+      <footer class="foot" ><a class="back-top">∧</a>{$footprint}</footer>
+</div>
+</div>{$footscript}</div>
+</body>
 </html>
