@@ -413,7 +413,10 @@ ul.nav{
 				line-height: 2;
 				height: 1.8rem;
 				color: $blue_dark;
-				margin-left: 15px;
+				padding-left: 15px;
+				background-image: url(../images/icon.png);
+				background-repeat: no-repeat;
+				background-position: 0 .5rem;
 				@include ellipsis(60%);
 			}
 			div.time_w {
