@@ -1,18 +1,11 @@
 function loader (argument) {
     $('.loader_div').addClass('loader_remove');
-    var w_div = $('#quickbar-wrap-body'),
-        w_h = w_div.height();
-    w_div.css('height', '100vh');
     function wrap_show(argument) {
         $('.big_wrap').css('display', 'block');
         clearTimeout(t);
     }
     function loaded (argument) {
-        console.log('yes');
         $('#quickbar-wrap').addClass('loaded');
-        $('#quickbar').css('display', 'block');
-        w_div.css('height', w_h);
-        $('#quickbar-wrap-body').css('cssText', 'overflow-y:auto!important'); 
         clearTimeout(t1);
     }
     function remove_load(argument) {
@@ -185,7 +178,6 @@ $(document).ready(function() {
             pagination: '.swiper-pagination',
             paginationClickable: true
         });
-        console.log(swiper); 
      } 
     if($('.swiper-container_1').length){
         var swiper = new Swiper('.swiper-container_1',{        

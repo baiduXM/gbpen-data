@@ -721,10 +721,12 @@ a.pre,a.nxt {
 }
 
 .loader_div {
-	position: absolute;
+	position: fixed;
+	top: 0;
+	bottom: 0;
 	left: 0;
 	right: 0;
-	height: 100vh;
+	overflow-y: hidden;
 	background-color: rgba(242,242,242,0.8);
 	z-index: 99
 }
