@@ -1,20 +1,9 @@
 function loader (argument) {
-    $('.loader_div').addClass('loader_remove');
-    function wrap_show(argument) {
-        $('.big_wrap').css('display', 'block');
-        clearTimeout(t);
-    }
-    function loaded (argument) {
-        $('#quickbar-wrap').addClass('loaded');
-        clearTimeout(t1);
-    }
-    function remove_load(argument) {
-        $('.loader_div').remove();
-        clearTimeout(t2);
-    }
-    var t = setTimeout(wrap_show,1000),
-    t1 = setTimeout(loaded,1500);
-    t2 = setTimeout(remove_load,4000);
+    $('#quickbar-wrap').addClass('loaded');
+
+    setTimeout(function(){
+        $(".loader_div").remove();
+    }, 4000);
 }
 window.onload = function () {
     loader();
