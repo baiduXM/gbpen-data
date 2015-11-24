@@ -36,7 +36,7 @@
             <div class="inborder">
                <div class="homkes"><span>您当前位置：
                    {foreach item=nav from=$posnavs}
-                     - <a href="{$nav.link}">{$nav.name}</a>
+                    <a href="{$nav.link}">{$nav.name}-</a>
                    {/foreach}
                 </span>{$list.name}</div>
 <div class="deteo">
@@ -45,7 +45,7 @@
           {foreach name=article item=article from=$list.data}
               <li>
                       <div class="news_show">
-                          <div class="nimgs2"><a href="{$article.link}"><img src="{$article.image}" height="88" width="111" /></a></div>
+                          
                           <div class="news_da">
                               <div class="ne_title"><a href="{$article.link}">{$article.title}</a></div>
                               <div class="ndate">[{$article.pubdate}]</div>
