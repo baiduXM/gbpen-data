@@ -73,7 +73,7 @@
                  <div class="leftaimg">
                  	<div class="aimg_tu">
                     	<div class="topxzc"></div>
-                        <div class="aimg"><span><img src="images/aimg.jpg" width="100%"></span></div>
+                        <div class="aimg"><span><img src="{$mIndexCat.image}" width="100%"></span></div>
                     </div>
                     <div class="left_name">
                     	<div class="topxzc"></div>
@@ -87,7 +87,8 @@
                  <div class="right_edit">
                    <div class="topxzc"></div>
                    <div class="rbger">
-					<div class="rbger_edit">{$mIndexCat.description}<span><a onclick="javascript:window.location.href='{$mIndexCat.link}'">[查看更多]</a></span> </div>   
+					<div class="rbger_edit">{$mIndexCat.description}</div>   
+                    <span class="gengduo"><a onclick="javascript:window.location.href='{$mIndexCat.link}'">[查看更多]</a></span> 
                     <div class="a_tuxing"></div>               
                    </div>
                  </div>
@@ -104,6 +105,7 @@
 <div id="picScroll{$mIndexCat@index+1}" class="picScroll">				
 				<div class="bd">
                 {foreach  item=articleb from=$mIndexCat.data}
+                    {foreach item=articlec from=$mIndexCat.data}
 						<ul>
                         {foreach item=article from=$mIndexCat.data}
 							<li><a onclick="javascript:window.location.href='{$article.link}'"><div class="prsilimg"><img _src="{$article.image}" src="{$article.image}" /><div class="pri_titles">{$article.title}</div></div></a></li>
@@ -111,6 +113,7 @@
                         {/foreach}
                    
 						</ul>   
+                          {/foreach}
 				{/foreach}                                      
                                                                 
 

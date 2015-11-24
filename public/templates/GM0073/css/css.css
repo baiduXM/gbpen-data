@@ -21,7 +21,7 @@
 .name_title_d{ color:#01dacd;}
 .rbger{ background:#fff; width:100%; height:auto; overflow:hidden;}
 .rbger_edit{ color:#666666; line-height:24px; font-size:0.9em; height:96px; overflow:hidden; padding:5px 10px;} 
-.rbger_edit span{ display:block;}
+.rbger span.gengduo{ display:block; padding-left:10px;}
 .a_tuxing{ position:relative; height:30px; overflow:hidden;}
 .a_tuxing:before{ height:2px; background:#63c4be; position:absolute; content:""; width:100%;-webkit-transform:translate(0,-50%); top:50%;}
 .a_tuxing:after{ width:26px; height:26px; position:absolute; background:#fff; border:2px solid #63c4be; border-radius:100%; content:""; left:50%; margin-left:-13px;}
@@ -33,7 +33,7 @@
 .pro_bg{ position:relative; height:auto; overflow:hidden; width:100%;}
 .prodshow{background:#fff; padding:8px;}
 .picScroll{ text-align:center; margin:5px 0px;  }
-.picScroll .bd ul{ width:100%;  float:left; padding-top:0px;  }
+.picScroll .bd ul{ float:left; padding-top:0px;  }
 .picScroll .bd li{ width:33%; float:left; font-size:14px; text-align:center;  }
 .picScroll .bd li a{-webkit-tap-highlight-color:rgba(0, 0, 0, 0); /* 取消链接高亮 */ }
 .picScroll .bd li .prsilimg{ margin:0px 5px; height:auto; overflow:hidden;}	
@@ -143,7 +143,9 @@ ul.third li a:hover{color:#5beaa0; }
 .pros_showa ul li{ width:33.3%; float:left; height:auto; overflow:hidden;}
 .pros_showa ul li div{ margin:4px 6px; margin-left:2px;height:auto; overflow:hidden;}
 .pros_showa ul li div p{  height:auto; overflow:hidden;}
-.pros_showa ul li div .imgword{ display:block; height:30px; line-height:30px; text-align:center; font-weight:1em; }
+.pros_showa ul li div .imgword{ display:block; height:30px; line-height:30px; text-align:center; font-weight:1em;  overflow:hidden;text-overflow: ellipsis;
+    white-space: nowrap; 
+    word-break: keep-all;}
 .pros_showa ul li a{ color:#585858;}
 .fixed-top{ position:absolute; top:0px; left:0px; background:#143f5a;display:block;
  font-size:1.14em; overflow:hidden; text-align:center;padding:5px 0px; height:50px; color:#00bcb1;z-index:100000;  margin:0px 5px 8px;height: auto; overflow:hidden;-webkit-mask:url(../images/zz3.png) no-repeat;-webkit-mask-size:100% 100%; width:100%; }
