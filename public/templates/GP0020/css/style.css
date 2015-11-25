@@ -173,7 +173,7 @@ p{line-height:25px;}
 .slideBoxb .hd ul li.on{ background:#f00; color:#fff; }
 .slideBoxb .bd{ position:relative; height:100%; z-index:0; width:356px; height:277px; margin:0px auto; text-align:center;   }
 .slideBoxb .bd li{ zoom:1; vertical-align:middle; }
-.slideBoxb .bd img{ width:350px; height:231px; display:block;padding:2px;border:1px solid #ddd;margin:0px auto; text-align:center; }
+.slideBoxb .bd img{ max-width:350px; height:231px; display:block;padding:2px;border:1px solid #ddd;margin:0px auto; text-align:center; }
 .slideBoxb .bd h3{height:40px;line-height: 40px; }
 	
 
