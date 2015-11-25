@@ -37,10 +37,11 @@
 
             <div class="inborder">
                 <div class="homkes"><span>您当前位置：
+                   <a href="{$site_url}">首页</a>
                    {foreach item=nav from=$posnavs}
-                    <a href="{$nav.link}">{$nav.name}-</a>
+                    -<a href="{$nav.link}">{$nav.name}</a>
                    {/foreach}
-                </span>{$article.category.name}</div>
+                   </span>{$article.category.name}</div>
 <div class="deteo">
                     <div class="main_right_con2" >
         	<div class="description">

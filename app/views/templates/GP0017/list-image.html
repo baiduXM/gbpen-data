@@ -31,13 +31,14 @@
         <div class="detali">
             <div class="topos_t">
                 <!-- 导航文件导入 -->
-   {include file='./_pagenavs_sub3.html'}
+               {include file='./_pagenavs_sub3.html'}
             </div>
 
             <div class="inborder">
                 <div class="homkes"><span>您当前位置：
+                   <a href="{$site_url}">首页</a>
                    {foreach item=nav from=$posnavs}
-                    <a href="{$nav.link}">{$nav.name}-</a>
+                    -<a href="{$nav.link}">{$nav.name}</a>
                    {/foreach}
                 </span>{$list.name}</div>
 <div class="deteo">
@@ -71,19 +72,5 @@
     </div>      
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
