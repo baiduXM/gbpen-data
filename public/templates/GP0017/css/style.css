@@ -122,9 +122,9 @@ body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, fo
 .homkes a:hover{ color:#90ba1c;}
 .deteo{ padding:0px 0px 0px; height:auto; overflow:hidden; height:auto; width:936px; padding-bottom:15px;min-height:500px; _height:expression(this.scrollHeight < 500? "500px" : "auto") ; margin:0px auto;}
 .about_edit{ color:#666; line-height:24px; margin-top:10px; padding-right:0px; margin-left:0px; margin-right:0px;text-align:Justify;text-justify:inter-ideograph;}
-.news_detal_d{ width:970px; height:auto; overflow:hidden;}
+.news_detal_d{ height:auto; overflow:hidden;}
 .news_detal_d ul li{ width:440px; float:left; display:inline; overflow:hidden; margin-right:30px; margin-left:5px; height:auto; margin-bottom:25px; margin-top:15px;}
-.news_show{ width:440px; height:auto; overflow:hidden;}
+.news_show{ width:440px; height:auto; overflow:hidden; margin-left:-111px; }
 .nimgs2{ width:111px; height:88px; overflow:hidden; float:left; display:inline; margin-top:5px;}
 .news_da{ width:313px; float:right; display:inline; overflow:hidden; height:88px;}
 .ne_title{ font-size:14px; line-height:20px; height:20px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis; }
