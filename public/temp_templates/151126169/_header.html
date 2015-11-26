@@ -1,0 +1,56 @@
+        <div class="headerbg">
+          <div class="logo"><a href="{$site_url}"><img src="{$logo}" height="116" width="462" /></a></div>
+        </div>
+
+<!-- 导航栏，通过百分比自适个数 -->
+
+      <div class="menu">
+        <ul id="nav" class="nav clearfix">
+          {$limit = 8}
+          <li class="nLi" style="width:{100/$limit}%">
+            <h3><a href="{$site_url}">首页</a></h3>
+          </li>
+          
+                {foreach name=navs item=nav from=$navs}
+          <li  class="{if $nav.current} current on{/if} nLi" style="width:{100/$limit}%">
+              <h3><a href="{$nav.link}">{$nav.name}</a></h3>
+            <ul class="sub clearfix">
+                    {if $nav.childmenu}
+              {foreach key=key item=nav_list from=$nav.childmenu}
+              <li class="{if $nav.current}current{/if}"><a href="{$nav_list.link}">{$nav_list.name}</a></li>
+              {/foreach}
+                        {/if}
+            </ul>
+          </li>
+          {if $nav@index+1 gte $limit}{break}{/if}
+              {/foreach}
+                                              
+        </ul>
+
+       </div>
+
+
+
+
+
+
+        
+      <div class="banners">
+  <div class="focusBox" style="margin:0 auto">
+      <ul class="pic">
+
+          {foreach item=slidepic from=$global.slidepics}
+                      <li><a href="{$slidepic.link}" target="_blank"><img src="{$slidepic.image}" alt="{$slidepic.title}" /></a></li>
+          {/foreach}
+      </ul>
+      <a class="prev" href="javascript:void(0)"></a>
+      <a class="next" href="javascript:void(0)"></a>
+                <ul class="hd">        
+                        {foreach item=slidepic from=$global.slidepics}
+                      <li></li>
+          {/foreach}
+                </ul>
+
+      </div>        
+      </div>      
+   
