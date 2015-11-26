@@ -6,7 +6,7 @@
 		<ul class="first">
 			{foreach name=pagenavs item=nav from=$pagenavs}
 			<li class="{if $nav.current}current{/if}">
-				<a href="{if count($nav.childmenu) eq 0}javascript:;{else}{$nav.link}{/if}">{$nav.name}</a>
+				<a href="{if count($nav.childmenu) eq 0}{$nav.link}{else}javascript:;{/if}">{$nav.name}</a>
 				{if $nav.childmenu}
 				<ul class="second">
 					{foreach key=key item=nav_list from=$nav.childmenu}
@@ -37,18 +37,20 @@
 		<ul class="first">
 			{foreach name=pagenavs item=nav from=$pagenavs}
 			<li class="{if $nav.current}current{/if}">
-				<a href="{$nav.link}">{$nav.name}</a>
+				<a href="{if count($nav.childmenu) eq 0}{$nav.link}{else}javascript:;{/if}">{$nav.name}</a>
 				{if $nav.childmenu}
 				<ul class="second">
 					{foreach key=key item=nav_list from=$nav.childmenu}
 					<li class="{if $nav_list.current}current{/if}"><a href="{$nav_list.link}">{$nav_list.name}</a>
-						{if $nav_list.childmenu}
+					{if $nav_list.childmenu}
 						<ul class="three">
 							{foreach key=key item=nav_listse from=$nav_list.childmenu}
 							<li class="{if $nav_listse.current}current{/if}"><a href="{$nav_listse.link}">{$nav_listse.name}</a>
 							{/foreach}
 						</ul>
 						{/if}
+
+
 					</li>
 					{/foreach}
 				</ul>
@@ -56,7 +58,6 @@
 			</li>
 			{/foreach}
 		</ul>
-
 
 
 </div>

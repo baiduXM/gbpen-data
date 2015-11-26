@@ -64,7 +64,7 @@
                             {foreach name=article item=article from=$list.data} 
                                 <div class="list-item">
                                   <dl><a href="{$article.link}"><img src="{$article.image}"></a></dl>
-                                  <dt><a href="{$article.link}">{$article.title}</a></dt>
+                                  <dt><a href="{$article.link}">{$article.title|truncate:20:"…"}</a></dt>
                                   <dd>{$article.description|truncate:400:"…"}</dd>
                                 </div>
 
