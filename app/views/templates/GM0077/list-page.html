@@ -2,8 +2,8 @@
 <html manifest="huancun.manifest">
 	<head>
 		<!-- 实时预览调试代码，模板开发完成后删除 -->
-		
-		
+		<!-- {$page_links.next_link = 'list-image.html'} -->
+		<script type="text/javascript" src="http://chanpin.xm12t.com.cn/js/preview.js"></script>
 		<!-- 调试代码 End -->
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="viewport" content="width=device-width,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no,minimal-ui">
@@ -45,7 +45,7 @@ window.addEventListener('load', function(){
 	<div class="main">
 
     <div class="top_nav">
-      <h2><span class="en">{$list.en_name}</span><span class="zh">{$list.name}</span></h2>
+      <h2><div><span class="zh">{$list.name}</span><span class="en">{$list.en_name}</span></div></h2>
       <a class="classify_btn" href="javascript:;">分类</a>
       
       <nav>

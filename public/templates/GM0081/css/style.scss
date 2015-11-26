@@ -283,10 +283,11 @@ a.more{
 	margin: 0 12%;
 	z-index: 3;
 	.img_w{
-		width: 40%;
+		height: 165px;
+		width: auto;
 	}
 	.txt{
-		max-height: 140px;
+		max-height: 7rem;
 		overflow: hidden;
 	}
 	.more{
@@ -803,7 +804,11 @@ a.pre,a.nxt {
 			}
 		}
 	}
-	.about{		
+	.about{	
+		margin: 0 14%;
+		.img_w {
+		  height: 100px;
+		}	
 		.txt{
 			max-height: 72px;
 			line-height: 1.5;

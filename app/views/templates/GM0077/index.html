@@ -2,7 +2,7 @@
 <html manifest="huancun.manifest">
 <head>
 <!-- 实时预览调试代码，模板开发完成后删除 -->
-
+<script type="text/javascript" src="http://chanpin.xm12t.com.cn/js/preview.js"></script>
 <!-- 调试代码 End -->
 <script type="text/javascript">
 // 识别为电脑客户端，自动跳转PC页面
@@ -78,17 +78,19 @@
         {/foreach}
       </ul>
     </nav>    
-    
+    {$index = 0} 
+
+    <div class="inwrap">
     <!-- 输出内容式栏目 -->
     {foreach name=mIndexCats item=mIndexCat from=$mIndexCats}
-	
+
     <!-- 仅输出类型为 2图片列表 的栏目 -->
     {if $mIndexCat.type eq 2}
       <!-- 后台选中“样式1”的展现模式： -->
       {if $mIndexCat.showtype eq 1}
       <section class="product_w">
         <header class="clearfix">
-          <h2><div><span class="zh">{$mIndexCat.name}</span><span class="en">{$mIndexCat.en_name}</span></div></h2>
+          <h2><span>{$index++}</span><div><span class="zh">{$mIndexCat.name}</span><span class="en">{$mIndexCat.en_name}</span></div></h2>
         </header>
         <a href="{$mIndexCat.link}" class="more">more</a>
         <div class="product">            
@@ -120,7 +122,7 @@
       {if $mIndexCat.showtype eq 1}
       <section class="news_w"> 
           <header>
-            <h2><div><span class="zh">{$mIndexCat.name}</span><span class="en">{$mIndexCat.en_name}</span></div></h2>   
+            <h2><span>{$index++}</span><div><span class="zh">{$mIndexCat.name}</span><span class="en">{$mIndexCat.en_name}</span></div></h2>   
           </header>   
           <a href="{$mIndexCat.link}" class="more">more</a>
           {foreach item=article from=$mIndexCat.data}
@@ -150,7 +152,7 @@
     {elseif $mIndexCat.showtype eq 2}
     <section class="contact_w">
        <header>
-        <h2><div><span class="zh">{$mIndexCat.name}</span><span class="en">{$mIndexCat.en_name}</span></div></h2>   
+        <h2><span>{$index++}</span><div><span class="zh">{$mIndexCat.name}</span><span class="en">{$mIndexCat.en_name}</span></div></h2>   
       </header> 
       <div class="contact">
         <div class="mss">
@@ -165,7 +167,7 @@
     {/if}
     {/if}
     {/foreach} 
-    
+    </div>
     <div class="to_top" id="to_top"><a href="javascript:;"></a></div>
     <footer class="foot">{$footprint}</footer>
 

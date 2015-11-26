@@ -2,8 +2,8 @@
 <html manifest="huancun.manifest">
 	<head>
 		<!-- 实时预览调试代码，模板开发完成后删除 -->
-		
-		
+		<!-- {$page_links.next_link = 'list-image.html'} -->
+		<script type="text/javascript" src="http://chanpin.xm12t.com.cn/js/preview.js"></script>
 		<!-- 调试代码 End -->
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="viewport" content="width=device-width,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no,minimal-ui">
@@ -63,16 +63,12 @@ window.addEventListener('load', function(){
                      </div>
                      {/foreach}
                   </div> 
-                  {if $img.title != null}
-                  <h4 class="title">{$img.title}</h4>
-                  {/if} 
                   <!-- Add Pagination -->
                   <div class="swiper-button-prev"></div>
                   <div class="swiper-button-next"></div>
                 </div><!--swiper-container-->         
 
-                <header>
-                </header>                    
+                <header><h4 class="title">{$article.title}</h4></header>                   
                                 
                 <div class="txt">
                   {$article.content|unescape:"html"}
