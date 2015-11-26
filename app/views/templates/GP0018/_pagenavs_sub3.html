@@ -25,12 +25,16 @@
 		{/foreach}
 	</ul>
 </nav>
+
+
+
 {else}	<!-- 让客服自己选择，如果当前无子栏目 展现的目标栏目 -->
 <nav>
 
-	<h3 class="tit">{$_pagenavs_sub3.pagenavs.name}&nbsp;<span>{$_pagenavs_sub3.pagenavs.en_name}</span></h3>
+	<h3 class="tit">{$posnavs[0].name}&nbsp;<span>{$posnavs[0].en_name}</span></h3>
+
 	<ul class="clearfix">
-		{foreach name=pagenavs2 item=nav from=$_pagenavs_sub3.pagenavs.childmenu}
+		{foreach name=pagenavs item=nav from=$pagenavs}
 		<li class="{if $nav.current}current{/if}">
 			<a href="{if count($nav.childmenu) eq 0}javascript:;{else}{$nav.link}{/if}">{$nav.name}</a>
 			{if $nav.childmenu}
