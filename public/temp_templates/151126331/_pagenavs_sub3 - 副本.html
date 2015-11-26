@@ -1,0 +1,67 @@
+<!-- 二级栏目列表（展示到三级子栏目） -->
+
+{if $pagenavs}
+<nav class="list">
+
+     <h3>{$posnavs[0].name}<b>{$posnavs[0].en_name}</b></h3>
+	 
+     <div class="listbg">
+	 	<!-- 下表为0的面包屑导航正好是一级栏目的当前栏目 -->
+		<ul>
+			{foreach name=pagenavs item=nav from=$pagenavs}
+			<li class="{if $nav.current}current{/if}">
+				<a href="{$nav.link}">{$nav.name}</a>
+				{if $nav.childmenu}
+				<ul class="second">
+					{foreach key=key item=nav_list from=$nav.childmenu}
+					<li class="{if $nav_list.current}current{/if}"><a href="{$nav_list.link}">{$nav_list.name}</a>
+					</li>
+					{if $nav_list.childmenu}
+						{foreach key=key item=nav_listse from=$nav_list.childmenu}
+						<li class="{if $nav_listse.current}current{/if}"><a href="{$nav_listse.link}">&nbsp;&nbsp;&nbsp;{$nav_listse.name}</a></li>
+						{/foreach}
+					{/if}
+					{/foreach}
+				</ul>
+				{/if}
+			</li>
+			{/foreach}
+		</ul>
+
+     </div>
+
+
+</nav>
+{else}	<!-- 让客服自己选择，如果当前无子栏目 展现的目标栏目 -->
+<nav class="list">
+
+     <h3>{$posnavs[0].name}<b><img src="{$site_url}images/gywm.jpg" height="36" width="81" /></b></h3>
+	 
+     <div class="listbg">
+	 	<!-- 下表为0的面包屑导航正好是一级栏目的当前栏目 -->
+		<ul>
+			{foreach name=pagenavs item=nav from=$_pagenavs_sub3.pagenavs}
+			<li class="{if $nav.current}current{/if}">
+				<a href="{$nav.link}">{$nav.name}</a>
+				{if $nav.childmenu}
+				<ul class="second">
+					{foreach key=key item=nav_list from=$nav.childmenu}
+					<li class="{if $nav_list.current}current{/if}"><a href="{$nav_list.link}">{$nav_list.name}</a>
+					</li>
+					{if $nav_list.childmenu}
+						{foreach key=key item=nav_listse from=$nav_list.childmenu}
+						<li class="{if $nav_listse.current}current{/if}"><a href="{$nav_listse.link}">&nbsp;&nbsp;&nbsp;{$nav_listse.name}</a></li>
+						{/foreach}
+					{/if}
+					{/foreach}
+				</ul>
+				{/if}
+			</li>
+			{/foreach}
+		</ul>
+
+     </div>
+
+
+</nav>
+{/if}
