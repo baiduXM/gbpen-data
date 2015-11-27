@@ -1,22 +1,67 @@
-{
-    "news": {
-		"description": "新闻中心",
-		"value": {},
-		"type": "list"
+{	 
+	"slidepics": {
+		"value": [{
+			"title": "首页滚轮图1",
+			"image": "images/slid_1.jpg",
+			"link": ""
+		}, {
+			"title": "首页滚轮图2",
+			"image": "images/slid_1.jpg",
+			"link": ""
+		}, {
+			"title": "首页滚轮图3",
+			"image": "images/slid_1.jpg",
+			"link": ""
+		}],
+		"description": "大轮滚图",
+		"type": "images",
+		"config": {
+			"width": 1920,
+			"height": 736,
+			"limit": 3
+		}
 	},
-	"about_us": {
-		"description": "关于我们",
-		"value": {},
-		"type": "page"
+	"qrcode": {
+		"value": {
+			"title": "关注一下哦~",
+			"image": "images/follow_us.jpg",
+			"link": ""
+		},
+		"description": "首页底部二维码图片",
+		"type": "image",
+		"config": {
+			"width":165,
+			"height": 165
+		}
 	},
-	"wonderful":{
-		"description": "精彩瞬间",
-		"value": {},
-		"type": "list"
+	"phone_title": {
+		"value": "百度推广业务",
+		"description": "首页底部正方形框内的标题",
+		"type": "text"
 	},
-	"course":{
-		"description": "课程",
-		"value": {},
-		"type": "list"
+	"phone_1": {
+		"value": "0592-3503388 3503777",
+		"description": "业务专线",
+		"type": "text"
+	},
+	"phone_2": {
+		"value": "0592-3503388 3503777",
+		"description": "客服专线",
+		"type": "text"
+	},
+	"phone_5": {
+		"value": "0592-3503388 3503777",
+		"description": "招聘热线",
+		"type": "text"
+	},
+	"phone_6": {
+		"value": "0592-3503388 3503777",
+		"description": "投诉中心",
+		"type": "text"
+	},
+	"feedback_txt": {
+		"value": "<p>您好 HELLO<br/>感谢您来到厦门易尔通互动，若您有合作意向，请您为我们留言或使用以下方式联系我们，我们将尽快给你回复，并为您提</p>",
+		"description": "首页留言板块文字信息",
+		"type": "textarea"
 	}
 }
