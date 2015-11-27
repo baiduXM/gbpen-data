@@ -154,7 +154,9 @@ white-space: nowrap;}
 .ny-list .list-item dl{width: 175px;height: 107px;float: left;margin-right: 12px;}
 .ny-list .list-item dl a{display: block;border: 1px solid #e8e8e8;padding: 1px;}
 .ny-list .list-item dl a img{width: 171px;height: 103px;}
-.ny-list .list-item dt a{font-size: 14px;color: #777;font-weight: bold;line-height: 32px;}
+.ny-list .list-item dt a{font-size: 14px;color: #777;font-weight: bold;line-height: 32px;text-overflow: ellipsis;
+overflow: hidden;
+white-space: nowrap;}
 .ny-list .list-item dt a:hover{color:#cc1835;}
 .ny-list .list-item dd{height: 75px;overflow: hidden;color: #777;line-height: 25px;}
 
@@ -187,4 +189,3 @@ white-space: nowrap;}
 .searchlist li{border-bottom: 1px dotted #bebdbd;line-height: 32px;background: url(../images/circle2.png) left center no-repeat;padding-left: 10px;}
 .searchlist li a{color: #909090;}
 .searchlist li a:hover{color: #cc1835;}
-
