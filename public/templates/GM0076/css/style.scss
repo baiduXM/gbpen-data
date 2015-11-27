@@ -593,11 +593,12 @@ ul.nav{
 		}
 	}
 	h4.title {
-		width: 70%;
+		// width: 70%;
 		margin: 0 auto;
 		color: #585858;
 		text-align: center;
-		line-height: 2
+		line-height: 2;
+		font-weight: bold;
 	}
 	.swiper-pagination {
 		position: relative;
@@ -707,13 +708,13 @@ a.pre,a.nxt {
 }
 @-webkit-keyframes color-change {
   0% {
-    background: #009DDC;
+    background: $blue;
   }
   33% {
     background: #50B949;
   }
   66% {
-    background: #EE2D24;
+    background: $orange;
   }
   100% {
     background: #FEB825;
@@ -721,13 +722,13 @@ a.pre,a.nxt {
 }
 @keyframes color-change {
   0% {
-    background: #009DDC;
+    background: $blue;
   }
   33% {
     background: #50B949;
   }
   66% {
-    background: #EE2D24;
+    background: $orange;
   }
   100% {
     background: #FEB825;
@@ -773,13 +774,13 @@ a.pre,a.nxt {
 }
 @-webkit-keyframes color-bubble {
   0% {
-    color: #009DDC;
+    color: $blue;
   }
   33% {
     color: #50B949;
   }
   66% {
-    color: #EE2D24;
+    color: $orange;
   }
   100% {
     color: #FEB825;
@@ -787,13 +788,13 @@ a.pre,a.nxt {
 }
 @keyframes color-bubble {
   0% {
-    color: #009DDC;
+    color: $blue;
   }
   33% {
     color: #50B949;
   }
   66% {
-    color: #EE2D24;
+    color: $orange;
   }
   100% {
     color: #FEB825;

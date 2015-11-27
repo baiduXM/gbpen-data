@@ -190,6 +190,29 @@ h1.logo {
 	}
 }
 
+div#to_top {
+	width: 40px;
+	height: 40px;
+	right: 1rem;
+	margin: 1.25rem 0;
+	a{
+		position: relative;
+		display: block;
+		line-height: 40px;
+		text-align: center;
+		font-size: 12px;
+		border-radius: 50%;
+		color: $white;
+		background-color: $orange;
+		text-transform: uppercase;
+	}
+}
+
+.wrap_home{
+	div#to_top{
+		left: 1rem;
+	}
+}
 .foot,.foot a{color: $white;}
 
 .foot p {
@@ -254,8 +277,12 @@ div#quickbar-navs .quickbar-navs-close {
 	display: block
 }
 
+div#quickbar-navs ul.quickbar-navs-list{
+	padding-bottom: 60px;
+}
+
 div#quickbar-navs ul.quickbar-navs-list li a {
-	color: #464646;
+	color: $blue;
 	font-size: 1.2rem;
 	line-height: 2.5rem
 }
@@ -272,7 +299,7 @@ span.icon2,span.qbnav-icon1 {
 }
 
 div#quickbar-navs ul.quickbar-navs-list li.menu_body dl a {
-	color: #b09143;
+	color: $orange;
 	font-size: 1.1rem;
 	text-indent: 1em
 }
