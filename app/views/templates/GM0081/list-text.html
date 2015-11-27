@@ -39,6 +39,7 @@ window.addEventListener('load', function(){
 		
 	</head>
 	<body>
+  {include file="./_loader.html"}
   <div class="wrap page-active">   
   {include file="./_header.html"}
 
@@ -49,11 +50,12 @@ window.addEventListener('load', function(){
             {foreach name=article item=article from=$list.data}
             <article class="clearfix">
               <header>    
-				<h3><a href="{$article.link}">{$article.title}</a></h3>
+				<h4><a href="{$article.link}">{$article.title}</a></h4>
 				<div class="time_w">
 					<time datetime="{$article.pubtimestamp|date_format:'%Y-%m-%d'}" pubdate="pubdate">[{$article.pubtimestamp|date_format:'%Y-%m-%d'}]</time>
 				</div>  
               </header> 
+              <div class="txt">{$article.description}</div>   	   
             </article>
             {/foreach} 
           {include file="./_page_normal.html"}
@@ -62,16 +64,16 @@ window.addEventListener('load', function(){
 
   </div>
   
-    <div class="to_top" id="to_top"><a href="javascript:;"></a></div> 
+    <div class="to_top" id="to_top"><a href="javascript:;">top</a></div> 
     <!-- 底部 -->
     <footer class="foot">{$footprint}</footer>
 
     </div> 
-{$footscript}
 <script src="{$site_url}js/TouchSlide.1.1.js"></script>
 <script type="text/javascript" src="{$site_url}js/jquery.min.js"></script>
 <script src='{$site_url}js/pagenavs_sub3.js'></script>
 <script src="{$site_url}/js/swiper.jquery.min.js"></script>
 <script type="text/javascript" src="{$site_url}js/function.js"></script>
-	</body>
+{$footscript}
+</body>
 </html>
