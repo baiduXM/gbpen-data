@@ -39,20 +39,22 @@ window.addEventListener('load', function(){
 		
 	</head>
 	<body>
+  {include file="./_loader.html"}
   <div class="wrap page-active">  
+  <header class="top_title">
+    <h3>{$article.category.name}</h3>
+    <a href="javascript:window.history.back()" class="return">返回</a>          
+    <a class="font_btn" href="javascript:;">字+</a>
+    <div class="font">
+    <span class="big">大</span>
+    <span class="normal">中</span>
+    <span class="small">小</span>
+    </div> 
+  </header>
   <div class="main">
-        <header class="top_title">
-          <h2><div><span class="zh">{$article.category.name}</span><span class="en">{$article.category.en_name}</span></div></h2>
-          <a href="javascript:window.history.back()" class="return">返回</a>          
-          <a class="font_btn" href="javascript:;">字+</a>
-          <div class="font">
-          <span class="big">大</span>
-          <span class="normal">中</span>
-          <span class="small">小</span>
-          </div> 
-        </header>
         <section class="pro_detail pro_detail_w">
             <article>
+                <header>
                 <div class="swiper-container_1">
                   <div class="swiper-wrapper">
                      {foreach item=img from=$article.images}
@@ -64,11 +66,13 @@ window.addEventListener('load', function(){
                      {/foreach}
                   </div> 
                   <!-- Add Pagination -->
-                  <div class="swiper-button-prev"></div>
-                  <div class="swiper-button-next"></div>
-                </div><!--swiper-container-->         
-
-                <header><h3 class="title">{$article.title}</h3></header>                   
+                  <div class="swiper-pagination"></div>
+                </div>
+                
+                <h4 class="title">{$article.title}</h4>
+                
+                </header>   
+                    
                                 
                 <div class="txt">
                   {$article.content|unescape:"html"}
@@ -82,17 +86,17 @@ window.addEventListener('load', function(){
 
   </div>
   
-    <div class="to_top" id="to_top"><a href="javascript:;"></a></div> 
+    <div class="to_top" id="to_top"><a href="javascript:;">top</a></div> 
     <!-- 底部 -->
     <footer class="foot">{$footprint}</footer>
 
     </div> 
-{$footscript}
 <script src="{$site_url}js/TouchSlide.1.1.js"></script>
 <script type="text/javascript" src="{$site_url}js/jquery.min.js"></script>
 <script src="{$site_url}/js/swiper.jquery.min.js"></script>
 <script src='{$site_url}js/pagenavs_sub3.js'></script>
 <script src="{$site_url}/js/swiper.jquery.min.js"></script>
 <script type="text/javascript" src="{$site_url}js/function.js"></script>
-	</body>
+{$footscript}
+</body>
 </html>

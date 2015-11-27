@@ -39,13 +39,14 @@ window.addEventListener('load', function(){
 		
 	</head>
 	<body>
+	<div class="fakeloader"><div class="img_w"><img src="{$logo}" alt="{$title}"></div></div>
 	<div class="wrap page-active">   
 	{include file="./_header.html"}
 
 	<div class="main">
 
     <div class="top_nav">
-      <h2><div><span class="zh">{$list.name}</span><span class="en">{$list.en_name}</span></div></h2>
+      <h2><span class="en">{$list.en_name}</span><span class="zh">{$list.name}</span></h2>
       <a class="classify_btn" href="javascript:;">分类</a>
       
       <nav>
@@ -69,16 +70,16 @@ window.addEventListener('load', function(){
 
 	</div>
 	
-    <div class="to_top" id="to_top"><a href="javascript:;"></a></div> 
+    <div class="to_top" id="to_top"><a href="javascript:;">top</a></div> 
     <!-- 底部 -->
     <footer class="foot">{$footprint}</footer>
 
     </div> 
-{$footscript}
 <script src="{$site_url}js/TouchSlide.1.1.js"></script>
 <script type="text/javascript" src="{$site_url}js/jquery.min.js"></script>
 <script src='{$site_url}js/pagenavs_sub3.js'></script>
 <script src="{$site_url}/js/swiper.jquery.min.js"></script>
 <script type="text/javascript" src="{$site_url}js/function.js"></script>
-	</body>
+{$footscript}
+</body>
 </html>

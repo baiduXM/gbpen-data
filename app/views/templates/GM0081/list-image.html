@@ -39,6 +39,7 @@ window.addEventListener('load', function(){
 		
 	</head>
 	<body>
+  {include file="./_loader.html"}
   <div class="wrap page-active">   
   {include file="./_header.html"}
 
@@ -54,7 +55,8 @@ window.addEventListener('load', function(){
                     <div class="img_wrap">
                       <img src="{$article.image}" alt="{$article.title|strip_tags}" />
                     </div>
-                    <h3 class="title">{$article.title}</h3>
+                    <h4 class="title">{$article.title}</h4>
+                    <div class="disc">{$article.description}</div>
                   </a>
               </li>
               {/foreach}
@@ -66,16 +68,16 @@ window.addEventListener('load', function(){
 
   </div>
   
-    <div class="to_top" id="to_top"><a href="javascript:;"></a></div> 
+    <div class="to_top" id="to_top"><a href="javascript:;">top</a></div> 
     <!-- 底部 -->
     <footer class="foot">{$footprint}</footer>
 
     </div> 
-{$footscript}
 <script src="{$site_url}js/TouchSlide.1.1.js"></script>
 <script type="text/javascript" src="{$site_url}js/jquery.min.js"></script>
 <script src='{$site_url}js/pagenavs_sub3.js'></script>
 <script src="{$site_url}/js/swiper.jquery.min.js"></script>
 <script type="text/javascript" src="{$site_url}js/function.js"></script>
-	</body>
+{$footscript}
+</body>
 </html>
