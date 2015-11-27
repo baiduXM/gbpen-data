@@ -1,0 +1,29 @@
+{   
+	"roll": {
+		"value": {},
+		"description": "滚动资讯",
+		"type": "list"
+	},
+	"slidepics": {
+     "value": [{
+			"title": "",
+			"image": "images/banner.JPG",
+			"link": ""	
+		}, {
+			"title": "",
+			"image": "images/banner.JPG",
+			"link": ""
+		}, {
+			"title": "",
+			"image": "images/banner.JPG",
+			"link": ""
+		}],
+		"description": "大轮滚图",
+		"type": "images",
+		"config": {
+			"width": 1000,
+			"height": 430,
+			"limit": 4
+		}
+	}
+}	
