@@ -1,6 +1,12 @@
 // color
 $blue:rgba(37,171,170,1);
-$orange:#ef8100;
+$orange:#e9a045;
+
+$brown:#3b2d2c;
+$browndark:#592a2a;
+$brown_light:#433534;
+$brown_lighter:#674e4e;
+$primary:$brown;
 
 @import 'F:/min/sass/tobe/function';
 
@@ -21,41 +27,23 @@ body {
 	width: 100%;
 	overflow: auto;
 	color: #3f3f3f;
-	font-size: 18px !important;
-	font-size: 0.9rem !important
+	font-size: 14px !important;
+	font-family:"simsun",Arial  !important;
 }
 
 h1{
-	font-size: 32px;
-	font-size: 1.6rem
+	font-size: 30px;
 }
 
 h2 {
-	font-size: 30px;
-	font-size: 1.5rem
+	font-size: 15px;
 }
 
-h3 {
-	font-size: 24px;
-	font-size: 1.2rem
+h3{
+	font-size: 14px;
 }
 
-h4 {
-	font-size: 18px;
-	font-size: 0.9rem
-}
-
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-nav,
-section,
-summary {
+article {
   position: relative;
 }
 
@@ -77,20 +65,35 @@ summary {
 	background-color: $white;
 	background-image: url(../images/bg.jpg);
   	background-repeat: repeat-y;
+  	&:before{
+  		position: absolute;
+  		content: "";
+  		top: 0;right: 0;
+  		bottom: 0;
+  		width: 1.25rem;
+  		background-color: #eeecec;
+  	}
 }
 
 .main{
-	overflow: hidden;
-	&:before{
+	// overflow: hidden;
+	&:before,&:after{
 		position: absolute;
 		content: "";
+		right: 0;
+		z-index: -1;
+	}
+	&:before{
 		top: 0;
-		left: 0;
-		height: 700px;
-		width: 200px;
-		background-color: rgba(51,51,51,.1);
-		@include transform(rotate(20deg));
-		@include transform-origin(top right);
+		border-right: 8rem solid #eeecec;
+		border-top: 5rem solid #eeecec;
+		border-bottom: 6rem solid transparent;
+	}
+	&:after{
+		bottom: -35px;
+		border-right: 6rem solid #eeecec;
+		border-top: 4rem solid transparent;
+		border-bottom: 3rem solid #eeecec;
 	}
 }
 
@@ -98,123 +101,131 @@ summary {
 	position: relative;
 	width: 100%;
 	height: auto;
-	background: #191817;
+	background: $white;
 	overflow: hidden;
 	z-index: 2;
-	@include box-shadow(rgba($grayDarker, .6) 0 1px 10px);
+	@include box-shadow(rgba($white, .6) 0 1px 10px);
 }
 
-h1.logo,.company{
-	position: absolute;
-	z-index: 99;
-	text-align: center;
-	left: 0;
-	right: 0;
-	margin: 0 auto;
-}
-
-h1.logo {
-	line-height: 1;
-	width: 8.65rem;
-	height: auto;
-	overflow: hidden;
-	text-align: center;
-	bottom: 1.8rem;
-	@include transform(translateY(40%));
-	a {
-		display: block;
-		height: 8.65rem;
-		width: 8.65rem;
-		overflow: hidden;
+.top{
+	position: relative;
+	margin: 0 10px;
+	padding: 10px 0 45px;
+	background-color: $primary;
+	border-radius: 0 0 5px 5px / 5px;
+	z-index: 3;
+	i.iconfont {
+		font-size: 1.2rem;
+		color: $white;
+	}
+	h1.logo {
+		position: absolute;
+		z-index: 99;
+		text-align: center;
+		top: 0;
+		left: 0;
+		right: 0;
+		width: 13.9rem;
+		height: 13.9rem;
 		margin: 0 auto;
-		border-radius: 50%;
-		background-color: $blue;
-		img {
-			width: 75%;
-			max-height: 50%;
-			margin-top: 10%;
+		overflow: hidden;
+		text-align: center;
+		background-color: #674e4e;
+		@include border-radius(50%);
+		@include transform(translateY(-60%));
+		a {
+			display: block;
+			height: 12.35rem;
+			width: 12.35rem;
+			overflow: hidden;
+			margin: 1.6rem auto 0;
+			@include border-radius(50%);
+			background-color: $primary;
+			img {
+				position: relative;
+				width: 62%;
+				top: 56%;
+				max-height: 35%;
+			}
 		}
+	}
+	.to_home,.header_menu{
+		position: relative;
+		margin: 0 1rem;
+	}
+	.to_home{
+		float: left;
+	}
+
+	.header_menu {
+		float: right;
 	}
 }
 
-.company{
-	width: 95%;
-	bottom: 0;
-	overflow: hidden;
-	line-height: 2;
-	color: $white;
-	background-color: $blue;
-	border-radius: 20px 20px 0 0 / 20px 20px;
-}
-
-.header_menu {
-	position: absolute;
-	top: 20px;
-	right: 20px;
-	z-index: 99;
-}
-
-.header_menu i.iconfont {
-	font-size: 2rem;
-	color: rgba(239,129,0,1);
+.to_top a{
+	position: relative;
+	display: block;
+	float: right;
+	margin-right: 20px;
+	width: 35px;
+	height: 35px;
+	background-color: $white;
+	text-align: center;
+	@include border-radius(50%);
+	@include transform(translateY(50%));
+	&:before{
+		content: "";
+		border-bottom: 11px solid $brown;
+		border-left: 6.5px solid transparent;
+		border-right: 6.5px solid transparent;
+		left: 0;
+		right: 0;
+		width: 0;
+		margin: 0 auto;
+		@extend %vertical_center;
+	}
+	&:after{
+		position: absolute;
+		content: "top";
+		text-transform: uppercase;
+		color: $orange;
+		top: 100%;
+		left: 0;
+		right: 0;
+		text-align: center;
+	}
 }
 
 /*foot start*/
 .foot {
 	position: relative;
+	width: 100%;
 	height: auto;
 	left: 0;
 	right: 0;
-	margin: 0 10px;
+	margin: 0 auto 30px;
 	margin-bottom: 30px;
 	//#quickbar.padding-top + #quickbar.padding-bottom= 30px
-	padding: 10px 25px;
 	text-align: center; 
-	background-color: $orange;
+	line-height: 2;
+	padding: 6px 0;
+	background-color: $brown_light;
 	overflow: hidden;
-	&:before,&:after{			
+	&:before{			
 		position: absolute;
 		content: "";
-	}
-	&:before{
-		top: 0;
-		left: 0;
-		border-left: 50px solid #b16000;
-		border-bottom: 50px solid transparent;
-	}
-	&:after{
 		bottom: 0;
-		right: 0;
-		border-right: 50px solid #b16000;
-		border-top: 50px solid transparent;
-	}
-}
-
-div#to_top {
-	position: relative;
-	width: 40px;
-	height: 40px;
-	left: 100%;
-	margin: 1.25rem 0 1.25rem -1rem;
-	@include transform(translateX(-100%));
-	a{
-		position: relative;
-		display: block;
-		line-height: 40px;
-		text-align: center;
-		font-size: 12px;
-		border-radius: 50%;
-		color: $white;
-		background-color: $orange;
-		text-transform: uppercase;
+		left: 10px;
+		width: 45px;
+		height: 45px;
+		background-color: $brown;
+		@include border-radius(50%);
+		@include transform(translateY(65%));
 	}
 }
 
 .foot,.foot a{color: $white;}
 
-.foot p {
-	line-height: 1.5
-}
 /*foot end*/
 
 /*#quickbar start*/
@@ -233,25 +244,25 @@ div#quickbar>ul li {
 }
 
 #quickbar i.iconfont {
-	font-size: 24px;
+	font-size: 20px;
 	line-height: 1;
 }
 
 #quickbar>ul li p.fix_icon {
-	height: 24px;
+	height: 20px;
 	line-height: 1;
 	padding-bottom: 10px;
 }
 
 div#quickbar>ul li p.title {
-	font-size: 20px;
+	font-size: 14px;
 	height: 20px;
 	line-height: 1;
 }
 
 /*quickbar-navs start*/
 div#quickbar-navs {
-	background-color: #d4d4d3 !important;
+	background-color: #d3d3d3 !important;
 	width: 70%
 }
 
@@ -279,7 +290,7 @@ div#quickbar-navs ul.quickbar-navs-list{
 }
 
 div#quickbar-navs ul.quickbar-navs-list li a {
-	color: $blue;
+	color: #3b2d2c;
 	font-size: 1.2rem;
 	line-height: 2.5rem
 }
@@ -289,14 +300,14 @@ div#quickbar-navs ul.quickbar-navs-list li {
 }
 
 span.icon2,span.qbnav-icon1 {
-	color: #948255;
+	color: #3b2d2c;
 	font-weight: bolder;
 	font-size: 1.1rem;
 	line-height: 2.5rem
 }
 
 div#quickbar-navs ul.quickbar-navs-list li.menu_body dl a {
-	color: $orange;
+	color: #696967;
 	font-size: 1.1rem;
 	text-indent: 1em
 }
@@ -362,8 +373,8 @@ div#quickbar-wrap.page-next {
 
 // Paging start
 .page_normal {
-	padding: 50px 0;
-	padding: 2.5rem 0;
+	padding-top: 24px;
+	padding-top: 1.2rem;
 	ul{
 		width: 100%;
 		text-align: center;
@@ -371,9 +382,9 @@ div#quickbar-wrap.page-next {
 			display: inline-block;
 			margin: 4px 2px;
 			a{
-				color: $white;
-				background-color: $blue;
-				padding: 4px 6px;
+				color: #633100;
+				background-color: #ccc6c2;
+				padding: 2px 4px;
 				line-height: 1		
 			}
 		}
@@ -381,5 +392,5 @@ div#quickbar-wrap.page-next {
 }
 
 .page_normal li.cur a {
-	background-color: $orange;
+	background-color: #8c8c8c;
 }

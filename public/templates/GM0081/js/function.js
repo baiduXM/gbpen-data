@@ -5,9 +5,7 @@ $(document).ready(function() {
     })
 
     //计算.main的最小高度，保证footer在底部
-    var min_height = $('#quickbar-wrap-body').height() - $('header').height() - $('.foot').height();
-    console.log('min_height');
-    console.log(min_height);
+    var min_height = $('body').height() - $('header').height() - $('.foot').height();
     $('.main').css('min-height', min_height + 'px');
     $('.home_main').css('min-height', min_height + 'px');
 
@@ -61,17 +59,30 @@ $(document).ready(function() {
     })
      // 字体大小控制
     $(".big").click(function() {
-        $('html').css('cssText', 'font-size:125%!important');
+        $('body').css('cssText', 'font-size:16px!important');
+        $('h2').css('font-size', '17px');
+        $('h3').css('font-size', '16px');
     })
     $(".normal").click(function() {
-        $('html').css('cssText', 'font-size:94%!important');
-
+        $('body').css('cssText', 'font-size:14px!important');
+        $('h2').css('font-size', '15px');
+        $('h3').css('font-size', '14px');
     })
     $(".small").click(function() {
-        $('html').css('cssText', 'font-size:62.5%!important');
+        $('body').css('cssText', 'font-size:12px!important');
+        $('h2').css('font-size', '13px');
+        $('h3').css('font-size', '12px');
 
     })
-
+h1{
+    font-size: 30px;
+}
+h2 {
+    font-size: 15px;
+}
+h3{
+    font-size: 14px;
+}
 
     // 返回顶部
      $("#to_top").click('touchstart', function() {
@@ -97,14 +108,12 @@ $(document).ready(function() {
 
 
 
-    // 产品详情页轮播图  
+     //  首页轮播图 
     if($('.swiper_container').length){
-        var swiper = new Swiper('.swiper_container',{        
-            loop: true,
-            autoplay : 3000
-        }); 
-     } 
-     if($('.swiper_container_1').length){
+        var swiper = new Swiper('.swiper_container') ; 
+    }
+     //首页图片列表
+     if($('body').width() >= 480){
         var swiper = new Swiper('.swiper_container_1',{        
             slidesPerView: 3,
             spaceBetween: 10,
@@ -112,12 +121,23 @@ $(document).ready(function() {
             autoplay : 5000
         }); 
      } 
+     else{
+        var swiper = new Swiper('.swiper_container_1',{        
+            slidesPerView: 2,
+            spaceBetween: 5,
+            loop: true,
+            autoplay : 5000
+        }); 
+     }
+    //产品详情页轮播图   
     if($('.swiper-container_1').length){
         var swiper = new Swiper('.swiper-container_1',{        
-            pagination: '.swiper-pagination',
-            paginationClickable: true
-        })   
-    }
+            loop: true,
+            prevButton:'.swiper-button-prev',
+            nextButton:'.swiper-button-next',
+            autoplay : 3000
+        }); 
+     } 
     
 });
 function loader (argument) {

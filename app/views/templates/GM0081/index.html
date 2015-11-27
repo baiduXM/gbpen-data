@@ -42,6 +42,10 @@
 <link rel="stylesheet" rev="stylesheet" href="{$site_url}css/style_{$stylecolor}.css" type="text/css" />
 
 
+<script type="text/javascript" src="{$site_url}js/jquery.min.js"></script>
+<script src="{$site_url}js/TouchSlide.1.1.js"></script>
+<script src="{$site_url}/js/swiper.jquery.min.js"></script>
+<script type="text/javascript" src="{$site_url}js/function.js"></script>
 <script type="text/javascript">
 	window.addEventListener('load', function(){
    setTimeout(function(){ window.scrollTo(0, 1); }, 100);
@@ -55,13 +59,13 @@
 
   <div class="wrap page-active wrap_home">    
     {include file="./_header.html"}
-    <div class="home_main">
+    
 
     <!-- 输出导航式栏目（不包括内容式栏目） -->
     <nav class="menu_nav">
       <ul class="clearfix">
 
-        {$limit = 4}
+        {$limit = 5}
         {foreach item=nav_list from=$navs}            
         <!-- 仅输出类型为 5内容单页 和 外链的栏目（包括5留言板、7微信、8直达号功能） -->
         <li>
@@ -74,7 +78,9 @@
         {/foreach}
       </ul>
     </nav>    
-    
+    {$index = 0} 
+
+    <div class="inwrap">
     <!-- 输出内容式栏目 -->
     {foreach name=mIndexCats item=mIndexCat from=$mIndexCats}
 
@@ -84,23 +90,20 @@
       {if $mIndexCat.showtype eq 1}
       <section class="product_w">
         <header class="clearfix">
-          <h2><span class="en">{$mIndexCat.en_name}</span>/<span class="zh">{$mIndexCat.name}</span></h2>
-          <a href="{$mIndexCat.link}" class="more">more</a>
+          <h2><span>{$index++}</span><div><span class="zh">{$mIndexCat.name}</span><span class="en">{$mIndexCat.en_name}</span></div></h2>
         </header>
+        <a href="{$mIndexCat.link}" class="more">more</a>
         <div class="product">            
           <ul class="clearfix"> 
             <div class="swiper_container_1">
-                <div class="swiper-wrapper">            
+                <div class="swiper-wrapper">      
                   {$limit = 6} 
                   {foreach name=imglist item=imglist from=$mIndexCat.data}
                     <li class="swiper-slide">
+                      <a href="{$imglist.link}">
                       <img src="{$imglist.image}" alt="{$imglist.title|strip_tags}"/>
-                      <div>
-                        <h4>{$imglist.title}</h4>
-                        <div class="disc">{$imglist.description}</div>
-                      </div>
-
-                      <a href="{$imglist.link}" class="read_more">more&gt;&gt;</a>
+                      <h4>{$imglist.title}</h4>
+                      </a>
                     </li>
                   {if $imglist@index+1 eq $limit}{break}{/if}
                   {/foreach} 
@@ -108,38 +111,67 @@
                 <!-- 如果需要分页器 -->
                 <!-- <div class="swiper-pagination"></div> -->
             </div> 
-
-
           </ul>
-          
         </div>
+      </section>
+      {/if}
+
+    <!-- 仅输出类型为 3图文列表 的栏目 -->
+    {elseif $mIndexCat.type eq 3}
+      <!-- 后台选中“样式1”的展现模式： -->
+      {if $mIndexCat.showtype eq 1}
+      <section class="news_w"> 
+          <header>
+            <h2><span>{$index++}</span><div><span class="zh">{$mIndexCat.name}</span><span class="en">{$mIndexCat.en_name}</span></div></h2>   
+          </header>   
+          <a href="{$mIndexCat.link}" class="more">more</a>
+          {foreach item=article from=$mIndexCat.data}
+          <article class="clearfix">
+              <div class="img_w"><img src="{$article.image}"/></div>
+              <div class="news">
+                <header><h3><a href="{$article.link}">{$article.title}</a></h3></header>
+                <div class="txt">{$article.description}</div>
+                <time datetime="{$article.pubtimestamp|date_format:'%Y-%m-%d'}" pubdate="pubdate">{$article.pubtimestamp|date_format:'%Y-%m-%d'}</time>
+              </div>            
+          </article>
+          {if $article@index+1 eq 2}{break}{/if}
+        {/foreach}        
       </section>
       {/if}
 
     <!-- 仅输出类型为 4单页内容 的栏目（关于我们、联系我们） -->
     {elseif $mIndexCat.type eq 4}
+    {if $mIndexCat.showtype eq 1}
       <section class="about_w">
-        <header>
-          <h2><span class="en">{$mIndexCat.en_name}</span>/<span class="zh">{$mIndexCat.name}</span></h2>
-          <a href="{$mIndexCat.link}" class="more">more</a>
-        </header>
         <div class="about clearfix">
-          <div class="img_border"><img src="{$mIndexCat.image}" alt="{$mIndexCat.name|strip_tags}"/></div>
+          <div class="img_w"><img src="{$mIndexCat.image}" alt="{$mIndexCat.name|strip_tags}"/></div>
           <div class="txt">{$mIndexCat.description}</div>
+          <a href="{$mIndexCat.link}" class="more">more</a>
         </div>
-
       </section>
+    {elseif $mIndexCat.showtype eq 2}
+    <section class="contact_w">
+       <header>
+        <h2><span>{$index++}</span><div><span class="zh">{$mIndexCat.name}</span><span class="en">{$mIndexCat.en_name}</span></div></h2>   
+      </header> 
+      <div class="contact">
+        <div class="mss">
+          <p class="addres">地址：{$contact.address}</p>
+          <p>电话：{$contact.telephone}</p>
+          <p>传真：{$contact.fax} </p>
+          <p>投诉：{$contact.mail}</p>          
+        </div>
+        <div class="img_w"><img src="{$global.contact_us.image}" alt="{$global.contact_us.title|strip_tags}"></div>
+      </div>
+    </section>
+    {/if}
     {/if}
     {/foreach} 
     </div>
-    <div class="to_top" id="to_top"><a href="javascript:;">top</a></div>
+    <div class="to_top" id="to_top"><a href="javascript:;"></a></div>
     <footer class="foot">{$footprint}</footer>
 
 </div>
-<script type="text/javascript" src="{$site_url}js/jquery.min.js"></script>
-<script src="{$site_url}js/TouchSlide.1.1.js"></script>
-<script src="{$site_url}/js/swiper.jquery.min.js"></script>
-<script type="text/javascript" src="{$site_url}js/function.js"></script>
 {$footscript}
 </body>
 </html>
