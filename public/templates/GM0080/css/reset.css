@@ -1,20 +1,20 @@
 @charset "utf-8";
 *{ margin:0px; padding:0px;}
-a{ text-decoration:none}
+a{ text-decoration:none;font-family: "Microsoft Yahei","微软雅黑";}
 li{list-style:none;}
 a:link, a:visited{text-decoration:none; }
 a:hover{ text-decoration:none;}
 a img{ border:none;}
 img{ vertical-align:top; max-width:100%;}
 #clear{ clear:both;}
-body{font-size:14px; text-align:left;font-weight:normal; line-height:24px; font-family:"Microsoft Yahei","微软雅黑";display: -webkit-box;
+body{font-size:14px; text-align:left;font-weight:normal; line-height:24px; font-family:"simsun","宋体",Arial;display: -webkit-box;
 -webkit-box-orient: vertical;
 -webkit-box-align: stretch; min-width:320px; margin:0px auto;overflow-x: hidden;}
 a{blr:expression(this.onFocus=this.blur())} /* */
  /*a{ -webkit-tap-highlight-color:rgba(0,0,0,0);  }  去掉链接触摸高亮 */
 a{outline:none;} /*for Firefox*/
 ol,p,dl,li{margin:0;pading:0; list-style:none;}
-h1,h2,h3,h4,h5{font-size:14px;margin:0;padding:0; font-weight:normal;}
+h1,h2,h3,h4,h5{font-size:14px;margin:0;padding:0; font-weight:normal;font-family: "Microsoft Yahei","微软雅黑";}
 button, input, optgroup, select, textarea { color: inherit; font: inherit; margin: 0; }
 button { overflow: visible; }
 button, select { text-transform: none; }
