@@ -29,48 +29,7 @@ $(document).ready(function() {
         }
 
     }
-    foulpage();
-    //导航滚动事件控制
-    // $(window).scroll( function() { 
-    //     var left_nav = $(".class"),
-    //     page_search = $(".page_search"),
-    //     l_h = left_nav.height(),
-    //     s_h = page_search.height(),
-    //     w_h = $(window).height(),
-    //     lw_h = l_h - w_h,
-    //     sw_h = s_h - w_h;
-        
-    //     if (lw_h > 0) {
-
-    //         if ($(document).scrollTop() < lw_h) {
-    //           left_nav.css({
-    //               position: 'absolute',
-    //               top: 0
-    //           });
-    //         } else if ($(document).scrollTop() >= lw_h) {
-    //           left_nav.css({
-    //               position: 'fixed',
-    //               top: -lw_h + 'px'
-    //           });
-    //         }
-    //     }
-
-        
-    //     if (sw_h) {
-
-    //         if ($(document).scrollTop() < sw_h) {
-    //           page_search.css({
-    //               position: 'absolute',
-    //               top: 0
-    //           });
-    //         } else if ($(document).scrollTop() >= sw_h) {
-    //           page_search.css({
-    //               position: 'fixed',
-    //               top: -sw_h + 'px'
-    //           });
-    //         }
-    //     }
-    // });
+    foulpage();    
 
     //隐藏导航跟wrap的切换
     $("#header_menu").click('touchstart', 
@@ -100,17 +59,30 @@ $(document).ready(function() {
     })
      // 字体大小控制
     $(".big").click(function() {
-        $('html').css('cssText', 'font-size:125%!important');
+        $('body').css('cssText', 'font-size:16px!important');
+        $('h2').css('font-size', '17px');
+        $('h3').css('font-size', '16px');
     })
     $(".normal").click(function() {
-        $('html').css('cssText', 'font-size:94%!important');
-
+        $('body').css('cssText', 'font-size:14px!important');
+        $('h2').css('font-size', '15px');
+        $('h3').css('font-size', '14px');
     })
     $(".small").click(function() {
-        $('html').css('cssText', 'font-size:62.5%!important');
+        $('body').css('cssText', 'font-size:12px!important');
+        $('h2').css('font-size', '13px');
+        $('h3').css('font-size', '12px');
 
     })
-
+h1{
+    font-size: 30px;
+}
+h2 {
+    font-size: 15px;
+}
+h3{
+    font-size: 14px;
+}
 
     // 返回顶部
      $("#to_top").click('touchstart', function() {
