@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html manifest="huancun.manifest">
+<html>
 <head>
 <!-- 实时预览调试代码，模板开发完成后删除 -->
-
-<!-- 调试代码 End -->
-<script type="text/javascript">
+		
+		<!-- 调试代码 End -->
+		<script type="text/javascript">
 		// 跳转PC页面
 		{if $site_another_url}
-			if (!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+			if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
 				location.href = '{$site_another_url}';
 			}
 		{/if}
@@ -51,39 +51,44 @@
 });//safari浏览器可以通过此代码来隐藏地址栏
 </script>
 </head>
+
 <body>
 <div class="body">
-  <div class="wrap page-active">
-    <div class="index-wrap"> {include file='./_header.html'}
-      <section>
-        <div class="boxmaind">
-          <div class="boxmain_d">
-              <h1 class="boxmain-top">
-          <span class="more3" id="first">分类<span id="down"> ∧</span><span id="up"> ∨ </span></span>
-         <div class="sub_zh public_color">{$list.name}</div><div class="sub_en public_color">{$list.en_name}</div></h1>
-       
-            {include file='./_nav.html'}
-            <div class="main">
-              <div class="list_image yc">
-                <ul class="clearfix">
-                  {foreach name=article item=article from=$list.data}
-                  <li><a href="{$article.link}">
-                    <div> <b><img src="{$article.image}" width="100%" title="160*150"></b>
-                     
-                    </div>
-                    </a> </li>
-                      {if $article@index+1 == 12} {break} {/if}
-                    {/foreach}
-                </ul>
-                <div class="next1 public_color"><a href="{$page_links.first_link}" class="public_color">首页</a><a href="{$page_links.prev_link}" class="public_color">上一页</a>{$page_links.current_page}/{$page_links.page_count}　<a href="{$page_links.next_link}" class="public_color">下一页</a><a href="{$page_links.last_link}" class="public_color">尾页</a></div>
-              </div>
-            </div>
+
+<div class="wrap page-active">
+
+<div class="index-wrap">
+      {include file='./_header.html'}
+      <div class="mainbox public_bg">
+           <div class="aboutbox1">
+            
+          <h2 class="clearfix public_color">{$list.name}<span class="more2" id="first">分类<span id="down"> &darr;</span><span id="up"> &uarr; </span></span></h2>          
+		  {include file='./_nav.html'}       
+          <ul class="prolist prolist1 clearfix">
+              {foreach name=article item=article from=$list.data}
+            <li>
+                
+                <div class="prolistb"  onclick="javascript:window.location.href='{$article.link}'"> <img src="{$article.image}" width="100%" />
+                  <a href="{$article.link}">{$article.title}</a>
+                  
+                </div>
+              </li>
+              
+              
+             {/foreach}
+            </ul>
+           <div class="next1 public_color"><a href="{$page_links.first_link}" class="public_bg1 public_color1" >首页</a><a href="{$page_links.prev_link}" class="public_bg1 public_color1">上一页</a>{$page_links.current_page}/{$page_links.page_count}<a href="{$page_links.next_link}" class="public_bg1 public_color1">下一页</a><a href="{$page_links.last_link}" class="public_bg1 public_color1">尾页</a></div>
           </div>
-        </div>
-      </section>
-      <footer class="foot" ><a class="back-top">∧</a>{$footprint}</footer>
-    </div>
-  </div>
-  {$footscript} </div>
+      </div>
+    <footer class="foot">
+       
+        <div class="text">{$footprint}</div>
+      </footer>
+</div>
+	{$footscript}
+</div>
+</div>
+
 </body>
+
 </html>

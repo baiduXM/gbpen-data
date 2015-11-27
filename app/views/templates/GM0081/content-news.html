@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html manifest="huancun.manifest">
+<html>
 <head>
 <!-- 实时预览调试代码，模板开发完成后删除 -->
 		
@@ -7,7 +7,7 @@
 		<script type="text/javascript">
 		// 跳转PC页面
 		{if $site_another_url}
-			if (!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+			if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
 				location.href = '{$site_another_url}';
 			}
 		{/if}
@@ -33,8 +33,8 @@
 <meta name="description" content="{$description}" />
 <link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
 <title>{$title}</title>
-<link rel="stylesheet" href="{$site_url}css/reset.css" /> 
-<link rel="stylesheet" href="{$site_url}css/public.css" /> 
+<link rel="stylesheet" href="{$site_url}css/reset.css" />
+<link rel="stylesheet" href="{$site_url}css/public.css" />
 <link href="{$site_url}css/css.css" rel="stylesheet" type="text/css" />
 <link href="{$site_url}css/swipe.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" rev="stylesheet" href="{$site_url}css/style_{$stylecolor}.css" type="text/css" />
@@ -53,38 +53,57 @@
 </head>
 <body>
 <div class="body">
-  <div class="wrap page-active">
-    <h1 class="fixed-top">
-      <span class="fixed-btn back"><a href="javascript:window.history.back()">返回</a></span>
-      <span class="fixed-btn more2" id="font">字+</span>
-      {$article.category.name}</h1>
-      <div class="font">
-            <dl class="big">大</dl>
-            <dl class="normal">中</dl>
-            <dl class="small">小</dl>
-          </div>
-    <div class="index-wrap">
-      <section>
-        <div class="index_show">
-          <div class="d_titles">
-            <h1 class="title1 public_color">{$article.title}</h1>
-            <hl class="title2 public_color">更新时间：{$article.pubdate}  </hl>
-          </div>
-          <div class="box-m">
-            <div class="boxmain-m">
-              <div class="edite public_color" > {$article.content|unescape:"html"}</div>
-              <ul class="inner_pages">
-             <li><a href="{$article.prev.link}" class="public_color">上一条:{$article.prev.title}</a></li>
-            <li><a href="{$article.next.link}" class="public_color">下一条:{$article.next.title}</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-    <footer class="foot" ><a class="back-top">∧</a>{$footprint}</footer></div>
-    </div>
-  </div>
-  {$footscript}
+
+<div class="wrap page-active">
+
+<h1 class="fixed-top public_color1"><span class="back"><a href="javascript:window.history.back()" class="public_color1">返回</a></span><span class="back" id="font" style="float:right">字+</span>{$article.category.name}</h1>
+<div class="font fix-font public_bg1">
+            	<dl class="big public_color1">大</dl>
+                <dl class="normal public_color1">中</dl>
+                <dl class="small public_color1">小</dl>
 </div>
+     
+<div class="index-wrap">
+      <section>  
+      <div class="mainbox ny-wrap public_bg">
+      	  <div class="aboutbox2 public_color">
+          		<div class=" news_detail public_color">
+            	<h1 class="title1">{$article.title}</h1>
+                <dl class=" title2 public_bor">{$article.pubdate}</dl>
+                
+                <div class="edite">
+					{$article.content|unescape:"html"}
+                </div>
+                
+            </div>
+            <div class="next2">
+            	<dl><a href="{$article.prev.link}" class="public_color">上一则：{$article.prev.title}</a></dl>
+                <dl><a href="{$article.next.link}" class="public_color">下一则：{$article.next.title}</a></dl>
+            </div>
+            <div class="boxmain relate">
+        	<h1 class="boxmain-top relate-top">相关阅读：</h1>
+            <div class="relate-m">
+            	<ul class="newstlist2">
+					{foreach item=article from=$related}
+                	<li class="public_bg3"><a href="{$article.link}" class="public_color"><span class="date1">{$article.pubdate}</span>{$article.title}</a></li>
+					{if $article@index+1 == 4}{break}{/if}
+                    {/foreach}
+                	
+                </ul>
+            </div>
+        </div>
+          </div>
+      </div>
+      </section>
+      <footer class="foot">
+       
+        <div class="text">{$footprint}</div>
+      </footer>
+</div>
+	{$footscript}
+</div>
+</div>
+
 </body>
+
 </html>

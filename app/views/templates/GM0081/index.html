@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html manifest="huancun.manifest">
+﻿<!DOCTYPE html>
+<html>
 <head>
 <!-- 实时预览调试代码，模板开发完成后删除 -->
 		
@@ -33,8 +33,8 @@
 <meta name="description" content="{$description}" />
 <link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
 <title>{$title}</title>
-<link rel="stylesheet" href="{$site_url}css/reset.css" /> 
-<link rel="stylesheet" href="{$site_url}css/public.css" /> 
+<link rel="stylesheet" href="{$site_url}css/reset.css" />
+<link rel="stylesheet" href="{$site_url}css/public.css" />
 <link href="{$site_url}css/css.css" rel="stylesheet" type="text/css" />
 <link href="{$site_url}css/swipe.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" rev="stylesheet" href="{$site_url}css/style_{$stylecolor}.css" type="text/css" />
@@ -52,66 +52,100 @@
 </script>
 {$headscript}
 </head>
+
 <body>
 <div class="body">
+  
   <div class="wrap page-active">
-    <div class="index-wrap">
-      {include file="./_header.html"}
-      <section> 
-      {foreach name=mIndexCats item=mIndexCat from=$mIndexCats}
-      {if $mIndexCat.type eq 4}
-      <div class="in_page">
-      <div class="in_pagebg2"></div>
-       <div class="in_pagebg">
-           <h2 class="in_h2"><div class="in_h21"></div><a href="{$mIndexCat.link}"><div class="in_en">{$mIndexCat.en_name}</div><div class="in_zh">{$mIndexCat.name}</div></a></h2>
-        <div class="inner clearfix">
-            <div class="page_img"><img src="images/about_img.jpg"></div>
-          <p>{$mIndexCat.description}</p>
-       </div>
-       </div>
+    
+    <div class="index-wrap">   
+	{include file='./_header.html'}
+<section>
+   <div class="content public_bg">
+		{foreach name=mIndexCats item=mIndexCat from=$mIndexCats}
+        <div class="mainbox clearfix">
+        <div class="probox mainbox">
+          <div class="innerbox">
+            <div class="rightbox rightbox1">
+        </div>
+		{if $mIndexCat.type eq 1}
+            <div class="newxbox mainbox">
+            <div class="innerbox">
+          <div class="rightbox">
+          <div class="newstitle">
+          <div class="text">
+          <div class="chinese"><a onClick="javascript:window.location.href='{$mIndexCat.link}'">"{$mIndexCat.name}"</a></div>
+          <div class="english"><a onClick="javascript:window.location.href='{$mIndexCat.link}'">{$mIndexCat.en_name}</a></div>
+          </div>
+          </div>
+          <ul class="news-list2 clearfix">
+          <div class="line">
+          
+           <div class="c1"></div><div class="c2"></div><div class="c3"></div><div class="c4"></div><div class="c5"></div><div class="c6"></div>
+          </div>
+					{foreach item=article from=$mIndexCat.data}
+                     <li onClick="javascript:window.location.href='{$article.link}'" class="clearfix" >
+                    <a href="{$article.link}" class="clearfix public_bor ">{$article.description}</a></li>
+                     {if $article@index+1 == 6}{break}{/if}
+                     {/foreach}
+          </ul>
+          </div>
+          </div>
+          </div>
+		  
+		  {elseif $mIndexCat.type eq 2}	
+            <div class="innerbox">
+          <div class="rightbox">
+          <div class="aboutbox">
+          
+          <div class="title">
+          <div class="text">
+          <div class="chinese">"{$mIndexCat.name}"</div>
+          <div class="english">{$mIndexCat.en_name}</div>
+          </div>
+          
+          </div>
+          <div class="aboutboxm"  onclick="javascript:window.location.href='{$mIndexCat.link}'">
+          <ul class="clearfix">
+		   {foreach item=article from=$mIndexCat.data}
+          <li><img src="{$article.image}" width="141px" height="91px"><a href="{$article.link}">{$article.title}</a></li>
+          {if $article@index+1 == 2}{break}{/if}
+		  {/foreach}
+          </ul>
+          </div>
+          </div>
+          
+          </div>
+            
         </div>
         
-      {elseif $mIndexCat.type eq 2} 
-        <div  class="wrapper in_image">
-           <h2 class="in_h2"><a href="{$mIndexCat.link}"><div class="in_more">更多</div><div class="in_en">{$mIndexCat.en_name}</div><div class="in_zh">{$mIndexCat.name}</div></a></h2>
-        <div class="inner yc">
-            <ul>
-            {foreach item=article from=$mIndexCat.data}
-              <li><a href="{$article.link}">
-              <div>
-                  <div class="in_proimg"><img src="{$article.image}" width="100%" title="160*150"></div>
-                  <div class="in_protitle"> <p>{$article.title}</p></div></div></a>
-              </li>
-              {if $article@index+1 == 3}{break}{/if} {/foreach}
 
-            </ul>
-            </div>
         </div>
-        
-        {elseif $mIndexCat.type eq 3} 
-        <div class="wrapper in_imagetext">
-                <div class="in_bg"><h2 class="in_h2"><a  href="{$mIndexCat.link}"><div class="in_en">{$mIndexCat.en_name}</div><div class="in_zh">{$mIndexCat.name}</div></a></h2></div>
-           <div class="inner">
-            <ul class="clearfix">
-              {foreach item=article from=$mIndexCat.data}
-              <li><a href="{$article.link}" class="clearfix">
-                 <div class="in_imgbox">  <div class="in_title">{$article.title}</div><img src="{$article.image}" width="100%" title="120*88"></div>
-                 <div class="in_textbox">
-                 <div class="in_des">{$article.description}</div>
-                 </div></a>
-              </li>
-               {if $article@index+1 == 2}{break}{/if} {/foreach}
-            </ul>
+   </div>
         </div>
-        </div>
-        
-        {/if} 
-{/foreach}
-      </section>
-    <footer class="foot" ><a class="back-top">∧</a>{$footprint}</footer></div>
+		
+		{elseif $mIndexCat.type eq 3}	
+		{elseif $mIndexCat.type eq 4}	
+		{/if}
+		{/foreach}
+		        <div class="menulist">
+            	<div class="nav">
+               <div class="swiper-nav swiper-container">
+                  <div class="swiper-wrapper">
+					{foreach item=nav from=$navs}
+                      <div class="swiper-slide"><span><a href="{$nav.link}" class="public_color">{$nav.name}</a></span></div>
+                       {/foreach}
+                  </div>
+				</div>
+                </div>
     </div>
+      </section>
+            <footer class="foot">
+        <div class="text">{$footprint}</div>
+      </footer>
+    </div>
+	{$footscript}
   </div>
-  {$footscript}
-  </div>
+</div>
 </body>
 </html>
