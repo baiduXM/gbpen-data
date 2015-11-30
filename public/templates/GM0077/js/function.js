@@ -65,7 +65,7 @@ $(document).ready(function() {
         $('.wrap').attr('class',"wrap page-active font_normal")
     })
     $(".small").click(function() {
-        $('.wrap').attr('class',"wrap page-active")
+        $('.wrap').attr('class',"wrap page-active font_small")
 
     })
 
@@ -126,7 +126,6 @@ $(document).ready(function() {
     
 });
 function loader (argument) {
-    console.log('test');
     setTimeout(function(){
         $('#quickbar').addClass('loaded');
         $(".fakeloader").fadeOut();
