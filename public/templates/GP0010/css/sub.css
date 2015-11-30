@@ -11,7 +11,7 @@
 
 
 .list_image ul li{ float:left; text-align:center; margin:15px; width:189px;}
-.list_image ul li img{ display:block; padding:2px; border:solid 1px #ccc; }
+.list_image ul li img{ display:block; padding:2px; border:solid 1px #ccc; width:100%; }
 .list_image ul li a{display:block; overflow: hidden;text-overflow: ellipsis;white-space: nowrap; width:100%}
 
 .list_text ul li{ border-bottom:dashed 1px #ccc;   background:url(../images/text_ico.jpg) no-repeat 5px; padding:10px 10px 0 15px;}
