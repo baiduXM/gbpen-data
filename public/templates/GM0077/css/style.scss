@@ -137,13 +137,13 @@ h2{
 	span.zh {
 		color: $orange;
 		font-weight: bold;
-		height: 16.8px;
+		height: 18px;
 		overflow: hidden;
 	}
 
 	span.en {
 		color: #666;
-		max-height: 33.6px;
+		max-height: 36px;
 		overflow: hidden;
 	}
 }
@@ -202,6 +202,7 @@ a.more{
 		.mss{
 			font-family: "Microsoft Yahei";
 			color: $white;
+			margin-right: 12px;
 			.addres{
 				max-height: 48px;
 				overflow: hidden;
@@ -489,11 +490,14 @@ ul.nav{
 }
 
 .list_page{
-	margin: 20px 15px 0;
-	background-image: url(../images/txt_page.jpg);
+	margin: 20px 20px 0;
+	background-image: url(../images/txt_page.png);
 	background-repeat: no-repeat;
 	background-position: right bottom;
 	padding-bottom: 75px;
+}
+.main.page:before {
+  z-index: 0;
 }
 
 //list_text & search_result  start
@@ -507,9 +511,9 @@ ul.nav{
 				 a{
 					@extend %inline-block;
 					line-height: 2;
-					height: 1.8rem;
+					height: 28px;
 					color: #3b3a3a;
-					padding-left: 25px;
+					padding: 4px 0 4px 25px;
 					background-image: url(../images/icon.png);
 					background-repeat: no-repeat;
 					background-position: 4px 8px;
