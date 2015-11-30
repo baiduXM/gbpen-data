@@ -160,8 +160,9 @@ ul.news-list3{ margin:0px; padding:0px; }
 ul.news-list3 li{   margin-bottom:8px; overflow:hidden; padding:8px}
 ul.news-list3 li .news_img{ float:left; width:25%; border:solid 1px #999; overflow:hidden; margin-top:5px; }
 ul.news-list3 li .news_img img{}
-ul.news-list3 li .news_content{ float:right; width:70%; margin-left:2%; height:95%; overflow:hidden; margin-top:0px;}
+ul.news-list3 li .news_content{ float:right; margin-left:2%; height:95%; overflow:hidden; margin-top:0px;}
 ul.news-list3 li .news_title{  padding-bottom:3px; margin-bottom:3px;white-space:nowrap; text-overflow:ellipsis; overflow:hidden; text-decoration:underline}
+ul.news-list3 li .news_content1{ float:left; margin-left:2%; height:95%; overflow:hidden; margin-top:0px;}
 
 .news_bg{background:rgba(255,255,255,0.5)}
 

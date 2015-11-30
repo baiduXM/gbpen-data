@@ -226,9 +226,9 @@ ul.newslist li a span{float: right;}
 .slideBoxb .hd ul{ overflow:hidden; zoom:1; float:left; display:none;  }
 .slideBoxb .hd ul li{ float:left; margin-right:2px;  width:15px; height:15px; line-height:14px; text-align:center; background:#fff; display:none; cursor:pointer; }
 .slideBoxb .hd ul li.on{ background:#f00; color:#fff; }
-.slideBoxb .bd{ position:relative; height:100%; z-index:0; width:415px;margin:0px auto; text-align:center;   }
+.slideBoxb .bd{ position:relative; height:100%; z-index:0;/* width:415px;*/margin:0px auto; text-align:center;   }
 .slideBoxb .bd li{ zoom:1; vertical-align:middle; }
-.slideBoxb .bd img{ width:411px; height:411px; display:block;border:2px solid #806246; margin:0 auto; text-align:center; }
+.slideBoxb .bd img{/* width:411px; */max-width:411px;/*height:411px; */display:block;border:2px solid #806246; margin:0 auto; text-align:center; }
 .slideBoxb .bd h3{  width:186px;padding:0 5px;height:31px;line-height: 31px;background: url(../images/pictitbg.jpg) no-repeat;margin:8px auto;}
 /* 下面是前/后按钮代码，如果不需要删除即可 */
 .slideBoxb .prev,
