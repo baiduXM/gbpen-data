@@ -56,7 +56,7 @@ window.addEventListener('load', function(){
                   <header>
                     <h3 class="title"><a href="{$article.link}">{$article.title}</a></h3>
                   </header>
-                  <div>{$article.description|unescape:"html"}</div>
+                  <div class="two_row">{$article.description|unescape:"html"}</div>
                   <div class="time_w"><time datetime="{$article.pubtimestamp|date_format:'%Y-%m-%d'}" pubdate="pubdate">[{$article.pubtimestamp|date_format:'%Y-%m-%d'}]</time></div>
                 </div>                  
               </article>

@@ -757,7 +757,7 @@ ul.nav{
 			div {
 				color: #494646;
 				line-height: 1.8;
-				max-height: 64.8px;
+				max-height: 50.4px;
 				overflow: hidden
 			}
 		}
@@ -772,35 +772,6 @@ a.pre,a.nxt {
 }
 
 /*inner page end*/
-
-/*font*/
-.font_big{
-	font-size: 16px !important;
-	h3{
-		font-size: 16px !important;
-	}
-	h3>a{
-		height: 32px !important;
-	}
-}
-.font_small{
-	font-size: 14px !important;
-	h3{
-		font-size: 14px !important;
-	}
-	h3>a{
-		height: 28px !important;
-	}
-}
-.font_small{
-	h3{
-		font-size: 12px !important;
-	}
-	h3>a{
-		height: 24px !important;
-	}
-}
-/*font*/
 
 /*loading*/
 .fakeloader{
@@ -958,14 +929,6 @@ a.pre,a.nxt {
 }
 /*loading*/
 
-/*font*/
-.font_big{
-	font-size: 16px;
-}
-.font_normal{
-	font-size: 14px;
-}
-
 @media only screen and (max-width: 479px){
 	body{
 		font-size: 12px !important;
@@ -1031,6 +994,9 @@ a.pre,a.nxt {
 			-webkit-clip-path: polygon(0 50%,100% 0,100% 100%);
 		}
 	}
+	div.two_row{
+		max-height: 64.8px !important;
+	}
 }
 @media only screen and (min-width: 480px) and (max-width: 559px) {
 	html {
@@ -1070,3 +1036,43 @@ a.pre,a.nxt {
 		}
 	}
 }
+
+
+
+/*font*/
+.font_big{
+	font-size: 16px !important;
+	h3{
+		font-size: 16px !important;
+	}
+	h3>a{
+		height: 32px !important;
+	}
+	div.two_row{
+		max-height: 57.6px;
+	}
+}
+.font_normal{
+	font-size: 14px !important;
+	h3{
+		font-size: 14px !important;
+	}
+	h3>a{
+		height: 28px !important;
+	}
+	div.two_row{
+		max-height: 50.4px;
+	}
+}
+.font_small{
+	h3{
+		font-size: 12px !important;
+	}
+	h3>a{
+		height: 24px !important;
+	}
+	div.two_row{
+		max-height: 64.8px !important;
+	}
+}
+/*font*/
