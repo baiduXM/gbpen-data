@@ -13,6 +13,7 @@ strong{display: block;margin: 0 auto;overflow: hidden;text-overflow: ellipsis;wh
 
 #header{ height:120px; position:relative; z-index:100}
 #logo{ width:275px; height:120px; overflow:hidden}
+#logo img{ width:100%}
 #nav{ height:28px; width:710px; position:absolute; right:0px; bottom:20px; }
 #nav ul li{ float:left; text-align:center; overflow:hidden}
 #nav ul li a{color:#4d4d4d; font-size:14px; display:block; padding:0 5px; height:30px; overflow:hidden}
