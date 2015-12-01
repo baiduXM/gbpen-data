@@ -53,7 +53,7 @@
       <div class="inner">
         <ul class="clearfix" id="MarqueeDiv1">
         {foreach name=pro item=pro from=$index.pro.data}
-          <li><a href="{$pro.link}"><img src="{$pro.image}"  /></a></li>
+          <li><a href="{$pro.link}"><div class="pic"><img src="{$pro.image}"/></div></a></li>
           {/foreach}
         </ul>
       </div>

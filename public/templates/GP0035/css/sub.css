@@ -10,7 +10,9 @@
 
 
 .list_image ul li{ float:left; text-align:center; margin:15px; width:187px;}
-.list_image ul li img{ display:block; padding:2px; border:solid 1px #ccc; }
+
+.list_image ul li img { width:180px;height:147px;  display:block; padding:2px; border:solid 1px #ccc; }
+
 
 
 .list_text ul li{ border-bottom:dashed 1px #ccc; height:24px; line-height:24px; background:url(../images/text_ico.jpg) no-repeat 5px; padding:0 10px 0 15px;}
