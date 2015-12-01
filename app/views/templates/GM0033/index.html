@@ -59,16 +59,11 @@
                 {$num}F
               </div>
               <div class="tit_zh public_color">
-                {$mIndexCat.name}
+                <li onclick="javascript:window.location.href='{$mIndexCat.link}'">{$mIndexCat.name}</li>
                 <span>{$mIndexCat.en_name}</span>
               </div>
               <div class="des public_color1">{$mIndexCat.description}</div>
             </h1>
-            <div class="about-m">
-              <div class="nr">
-               <a href="{$mIndexCat.link}">{$mIndexCat.content}</a>
-              </div>
-            </div>
           </div>
           {/if}
           {* 仅输出类型为 2图片列表 的栏目 *}
