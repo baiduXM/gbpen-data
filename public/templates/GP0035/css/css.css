@@ -202,12 +202,15 @@ strong{display: block;margin: 0 auto;overflow: hidden;text-overflow: ellipsis;wh
 }
 #pro .inner ul li {
 	width:114px;
-	height:94px;
+	
 	float:left;
 	margin-right:15px;
+	border:1px solid #b1b1b1;
+	
 }
 #pro .inner ul li img {
-	border:1px solid #b1b1b1
+	
+	width:100%;
 }
 #video {
 	float:left;
