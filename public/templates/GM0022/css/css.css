@@ -34,8 +34,8 @@
 .aboutbox{ max-height:190px; overflow:hidden}
 .aboutboxm{ font-size:0.9em;  } 
 
-.about_img{ float:left; border-radius:50%; overflow:hidden; margin-right:20px;}
-.about_img img{border-radius:50%; }
+.about_img{ float:left; border-radius:50%; overflow:hidden; margin-right:20px;width: 45%;}
+.about_img img{border-radius:50%; width: 100%;height: auto;}
 
 .probox{ height:auto; overflow:hidden; }
 .proboxm{ padding:6px 0px; height:auto; overflow:hidden; padding-bottom:3%}
@@ -62,7 +62,7 @@ ul.prolist1 li .prolistb .title1{font-size:1.2em; text-align:center; overflow:hi
 .about_img{ width:80px; height:80px; margin-top:3%; margin-right:10px;}
 ul.news-list2 li b { font-size:0.8em}
 ul.prolist li .prolistb .title1{  line-height:18px; text-align:center; margin-top:-20px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;   }
-ul.prolist li{  display: inline-block; margin:4px 0px; padding-top:1%; width:100%; }
+ul.prolist li{  display: inline-block; margin:4px 0px; padding-top:1%;  }
 ul.prolist1 li{  display: inline-block; margin:4px 0px; padding-top:1%; width:50%; }
 }
 
