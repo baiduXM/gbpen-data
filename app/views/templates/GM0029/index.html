@@ -71,7 +71,7 @@
                 <li onclick="javascript:window.location.href='{$mIndexCat.link}'"><dd class="china">{$mIndexCat.name}</dd></li>
             </h1>
             <div class="boxmain-about">
-            <img class="lazy" src="{$mIndexCat.image}"  data-original="{$mIndexCat.image}" width="140px height="172px" title="140px*172px">
+            <img class="lazy" src="{$mIndexCat.image}"  data-original="{$mIndexCat.image}" width="100%" height="100%" title="140px*172px">
             <dd class="nr"><a onclick="javascript:window.location.href='{$mIndexCat.link}'">{$mIndexCat.description}</dd>
             </div>
         </div>
@@ -105,7 +105,7 @@
             </h1>
             <ul class="boxmain-pro">
 				{foreach item=article from=$mIndexCat.data}
-            	<li><div><a href="{$article.link}"><img class="lazy" src="{$article.image}"  data-original="{$article.image}" title="305*199" width="176px" height="115px"></a></div></li>
+            	<li><div><a href="{$article.link}"><img class="lazy" src="{$article.image}"  data-original="{$article.image}" title="305*199" width="100%" height="100%"></a></div></li>
                {if $article@index+1 == 4}{break}{/if}
 				{/foreach}
             </ul>
