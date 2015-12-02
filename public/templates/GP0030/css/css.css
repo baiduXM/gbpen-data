@@ -198,17 +198,16 @@ strong{display: block;margin: 0 auto;overflow: hidden;text-overflow: ellipsis;wh
 	font-family:Microsoft Yahei;
 }
 #pro .inner {
-	height:102px;
+	
 }
 #pro .inner ul li {
-	width:114px;
-	height:94px;
+	width:115px;
 	float:left;
 	margin-right:15px;
+	border:1px solid #b1b1b1;
 }
-#pro .inner ul li img {
-	border:1px solid #b1b1b1
-}
+#pro .inner ul li .pic{ max-height:94px; overflow:hidden}
+#pro .inner ul li .pic img { width:115px; height:94px;}
 #video {
 	float:left;
 	width:270px;
