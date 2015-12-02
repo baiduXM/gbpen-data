@@ -42,9 +42,9 @@
 <h2><b>{$index.news.name}</b>{$index.news.en_name}</h2></div>
 
 <div class="inner clearfix">
-<div class="np"><img src="{$index.news.image}" width="111" height="73" /></div>
+<div class="np"><img src="{$index.news.data[0].image}" width="111" height="73" /></div>
 <div class="nr">
-<h2>{$index.news.data[0].title}</h2>
+<h2><a href="{$index.news.data[0].link}">{$index.news.data[0].title}</a></h2>
 <div class="nz">{$index.news.data[0].description}</div>
 <span>{$index.news.data[0].pubdate}</span>
 </div>
