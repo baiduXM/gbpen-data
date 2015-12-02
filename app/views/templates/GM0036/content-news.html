@@ -57,7 +57,7 @@
             <div class=" about-m">
               <div class=" news_detail">
                 <h1 class="title1">{$article.title}</h1>
-                <dl class=" title2">发布日期：{$article.pubtimestamp|date_format:'%Y年%m月%d日 %H:%M'}</dl>
+                <dl class=" title2">发布日期：{$article.pubtimestamp|date_format:'%Y-%m-%d- %H:%M'}</dl>
                 <div class="edite">
                   <img src="{$article.image}" style="display:block; margin-bottom:10px; width:95%">{$article.content|unescape:"html"}</div>
               </div>
