@@ -99,8 +99,8 @@ strong{display: block;margin: 0 auto;overflow: hidden;text-overflow: ellipsis;wh
 #pro .title b{ color:#6b9726; font-size:18px; font-family:Microsoft Yahei; margin-right:5px;}
 #pro .title{ font-family:Microsoft Yahei;background:url(../images/ty.jpg) bottom center no-repeat; padding-bottom:11px;}
 #pro .inner{ height:150px; margin-top:5px; overflow:hidden}
-#pro .inner ul li{ float:left; margin-right:11px; margin-left:13px; margin-bottom:10px;}
-#pro .inner ul li img{ border:1px solid #fff; -moz-border-radius: 0.5em;  -webkit-border-radius: 0.5em; border-radius:0.5em; display:block;}
+#pro .inner ul li{ float:left; margin-right:11px; margin-left:13px; margin-bottom:10px; width:110px;}
+#pro .inner ul li img{ border:1px solid #fff; -moz-border-radius: 0.5em;  -webkit-border-radius: 0.5em; border-radius:0.5em; display:block; width:110px; height:67px;}
 
 
 #contact{ margin-top:15px; position:relative}

@@ -9,8 +9,8 @@
 .module_page  select{ margin-left:5px; color:#000;}
 
 
-.list_image ul li{ width:156px; float:left; text-align:center; margin:15px 10px;}
-.list_image ul li img{ display:block; padding:2px; border:solid 1px #ccc; }
+.list_image ul li{ width:237px; float:left; text-align:center; margin:15px 10px; overflow:hidden}
+.list_image ul li img{ display:block; padding:2px; border:solid 1px #ccc; width:231px; height:140px;}
 
 
 .list_text ul li{ border-bottom:dashed 1px #ccc; height:32px; line-height:32px; background:url(../images/text_ico.jpg) no-repeat 5px; padding:0 10px 0 15px;}
@@ -44,9 +44,9 @@ ul.inner_pages a:hover{color:#469c18}
 .slideBoxb .hd ul{ overflow:hidden; zoom:1; float:left; display:none;  }
 .slideBoxb .hd ul li{ float:left; margin-right:2px;  width:15px; height:15px; line-height:14px; text-align:center; background:#fff; display:none; cursor:pointer; }
 .slideBoxb .hd ul li.on{ background:#f00; color:#fff; }
-.slideBoxb .bd{ position:relative; height:100%; z-index:0;  margin:0px auto; text-align:center;   }
+.slideBoxb .bd{ position:relative; height:100%; z-index:0;  margin:20px auto; text-align:center;   }
 .slideBoxb .bd li{ zoom:1; vertical-align:middle; }
-.slideBoxb .bd img{ display:block;  border:1px solid #ddd; padding:1px; margin:0px auto; text-align:center; }
+.slideBoxb .bd img{ display:block;  border:1px solid #ddd; padding:1px; margin:0px auto; text-align:center; width:550px; height:335px; }
 
 		/* 下面是前/后按钮代码，如果不需要删除即可 */
 .slideBoxb .prev,
