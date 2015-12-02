@@ -15,7 +15,7 @@
 .img_ligs{ -webkit-border-radius:100%; height:100%; width:100%;position:absolute; left:0px; top:0px;}
 .img_ligs:after{ position:absolute; left:0px; top:0px; content:""; width:100%; height:100%;background:rgba(0,0,0,0.5); -webkit-border-radius:100%;  }
 .img_ligs img{ -webkit-border-radius:100%;}
-.logo{ position:absolute; left:0px; top:0px; width:100%; height:100%; overflow:hidden; -webkit-border-radius:100%; margin-top:70px; }
+.logo{ position:absolute; left:0px; top:0px; width:100%; height:100%; overflow:hidden; -webkit-border-radius:100%; margin-top:20%; }
 .menulist{ position:relative; height:100%; overflow:hidden; width:100%; position:absolute; left:0px; top:0px;}
 .menulist .lilist{border-radius:100%; background:rgba(0,0,0,0.2); width:90px; height:90px; line-height:90px; text-align:center; font-size:1.1em; position:relative;}
 .menulist .lilist a{ color:#fff; display:block; width:100%; height:100%; overflow:hidden;}
@@ -74,13 +74,13 @@
 .nword{ height:22px; line-height:22px; overflow:hidden; color:#797979; font-size:0.9em; text-overflow: ellipsis;
     white-space: nowrap;
     word-break: keep-all;}
-.next1{ margin:10px auto; height:30px; width:80%;font-size:1em;line-height:30px; padding:5px 0px; overflow:hidden;text-align:center; }
+.next1{ margin:10px auto; height:30px; font-size:1em;line-height:30px; padding:5px 0px; overflow:hidden;text-align:center; }
 .next1 a{ border-radius:4px; background:#f1f4f5; color:#585858;  cursor:pointer; margin-right:10px; height:30px; line-height:30px; padding:5px; }
 .ntitle span{ float:right; display:inline; overflow:hidden;}
 .ndata{ height:20px; color:#585858; line-height:20px; background:url(../images/timer.png) no-repeat; background-size:16px auto; padding-left:18px;}
 
 .pros_showa{ width:100%; height:auto; overflow:hidden; position:relative;}
-.pros_showa ul{ width:101%; height:auto; overflow:hidden; position:relative; padding-top:10px;}
+.pros_showa ul{ width:100%; height:auto; overflow:hidden; position:relative; padding-top:10px;}
 .pros_showa ul li{ width:50%; float:left; height:auto; overflow:hidden; }
 .pros_showa ul li div{ margin:4px 10px 2px; margin-left:0px;height:auto; overflow:hidden;}
 .pros_showa ul li div p{ height:auto; overflow:hidden;}
