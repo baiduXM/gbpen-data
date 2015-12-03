@@ -55,7 +55,9 @@ ul.prolist li .sub4{ background:#2f2f2f; color:#fff; font-size:20px; text-align:
 ul.prolist li .word{ color:#817f7f; line-height:20px; font-size:12px;text-overflow: ellipsis;
 overflow: hidden;
 white-space: nowrap;}
-ul.prolist li a{font-size:15px; margin-top:10px;} 
+ul.prolist li a{font-size:15px; margin-top:10px;text-overflow: ellipsis;
+overflow: hidden;
+white-space: nowrap;} 
  
  
 ul.prolist li .prolistb img{ width:100%;  margin: auto; }
