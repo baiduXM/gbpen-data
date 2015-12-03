@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- 实时预览调试代码，模板开发完成后删除 -->
+		
+		<!-- 调试代码 End -->
+		<script type="text/javascript">
+		// 跳转PC页面
+		{if $site_another_url}
+			if (!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+				location.href = '{$site_another_url}';
+			}
+		{/if}
+		</script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,minimum-scale=1.0, maximum-scale=1.5,user-scalable=no,minimal-ui">
+<meta name="keywords" content="{$keywords}" />
+<meta name="description" content="{$description}" />        
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta content="telephone=no, email=no" name="format-detection">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="HandheldFriendly" content="true">
+<meta name="MobileOptimized" content="320">
+<meta name="screen-orientation" content="portrait">
+<meta name="x5-orientation" content="portrait">
+<title>{$title}</title>
+
+<link rel="stylesheet" href="{$site_url}css/swiper.css">
+<link href="{$site_url}css/iconfont.css" rel="stylesheet" type="text/css" />
+<link href="{$site_url}css/css.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+	window.addEventListener('load', function(){
+   setTimeout(function(){ window.scrollTo(0, 1); }, 100);
+});//safari浏览器可以通过此代码来隐藏地址栏
+</script>
+</head>
+<body>
+
+
+    <div class="wrap transition p_a">
+		<div class="main">
+		    <div class="aboutheader p_r">
+			   	 <i class="icon iconfont ss p_a">&#xe601;</i>
+			     <a href=""><img src="{$logo}" alt=""></a>
+				 <i class="icon iconfont slide-nav p_a">&#xe60f;</i>
+			 </div>
+		 	 <div class="aboutment swiper-container">
+		 	    <div  class="swiper-wrapper">
+			        
+				   {foreach item=nav from=$navs}
+						    <div class="swiper-slide">
+						        <ul>
+						        
+						            <li><a href="{$nav.link}">{$nav.name}</a></li>
+						            
+						           
+						        </ul>
+						    </div>
+						     {/foreach} 
+	             
+			    </div>   
+			</div>
+            
+            <div class="about">
+            	<div class="className p_r">
+			     <div class="tit">{$list.name}<div class="font"><span class="type">分类∧</span><em class="font-set">字体+</em></div>
+				</div>
+                 <ul class="font-list font-sel" style="display: none;">
+				<li class="d">大</li>
+				<li class="z">中</li>
+				<li class="x">小</li>
+			</ul>
+				</div>
+				
+			  {include file="./_pagenavs_sub3.html"}
+		        <div class="aboutms info">
+		          
+		             <div class="infos newsimg">
+			            
+			               <ul>
+
+			           
+                     {foreach item=article from=$list.data}
+                    	       <li >
+						<a href="">
+							<figure><img src="{$article.image}" alt=""></figure>
+
+							<div class="imgright p_r">
+							<h3 class="title">{$article.title}</h3>
+							<p>{$article.description}</p></div></a>
+						</li>
+                        {if $article@index+1 == 8}{break}{/if}
+                     {/foreach}                                                                               
+                         
+
+                                   
+                    </ul>
+                    <div class="num"><a href="{$page_links.first_link}" class="cu">首页</a><a href="{$page_links.prev_link}">上一页</a><a href="{$page_links.next_link}" >下一页</a><a href="{$page_links.last_link}"  >尾页</a></div> 
+			        </div> 
+		        </div> 
+	        </div>  
+			 
+		    <p class="aboutbq">{$footprint}</p>
+		</div>
+	
+		
+		
+		
+
+    </div>	
+		 {$footscript}
+
+
+<script src="{$site_url}js/jquery.min.js"></script>
+<script type="text/javascript" src="{$site_url}js/function.js"></script>
+<script type="text/javascript" src="{$site_url}js/lazyload.js"></script>
+<script type="text/javascript" src="{$site_url}js/swiper.min.js"></script>
+<script type="text/javascript" src="{$site_url}js/about.js"></script>
+</body>
+</html>
