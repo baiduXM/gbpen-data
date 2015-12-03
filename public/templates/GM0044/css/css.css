@@ -52,7 +52,9 @@ ul.prolist li .sub1{ background:#a0a0a0; color:#fff; font-size:20px; text-align:
 ul.prolist li .sub2{ background:#484846; color:#fff; font-size:20px; text-align:center;}
 ul.prolist li .sub3{ background:#4f4a50; color:#fff; font-size:20px; text-align:center;}
 ul.prolist li .sub4{ background:#2f2f2f; color:#fff; font-size:20px; text-align:center;}
-ul.prolist li .word{ color:#817f7f; line-height:20px; font-size:12px;}
+ul.prolist li .word{ color:#817f7f; line-height:20px; font-size:12px;text-overflow: ellipsis;
+overflow: hidden;
+white-space: nowrap;}
 ul.prolist li a{font-size:15px; margin-top:10px;} 
  
  
