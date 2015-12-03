@@ -1,64 +1,60 @@
 {
 	
     "about_us": {
-		"description": "关于我们",
+		"description": "左侧内容单页（如关于我们）",
 		"value": {},
 		"type": "page"
 	},
 	"news":{
-		"description": "新闻中心",
+		"description": "中间文字列表（如影视资讯）",
 		"value": {},
 		"type": "list"		
 	},
-	"advior":{
-		"description": "advior金牌顾问",
-		"value": {},
-		"type": "list"		
-	},
-	"note":{
-		"description":"公告",
+	"jion":{
+		"description":"右侧图片列表(如产品展示)",
 		"value":{},
 		"type":"list"
 	},
-	"busis":{
-		"value": [{
-			"title": "<span>信用贷款</span>无抵押，无担保",
-			"image": "images/dk.png",
-			"link": "images/baidu.html",
-			"description": "banner1"
-		}, {
-			"title": "<span>房产抵押贷款</span>最高可达评估价8成",
-			"image": "images/home.png",
-			"link": "http://www.baidu.com"
-		},{
-			"title": "<span>保障贷款</span>全程代办，安全担保",
-			"image": "images/bz.png",
-			"link": "http://www.baidu.com"
-		}, {
-			"title": "<span>经营贷款</span>有营业执照即可申请",
-			"image": "images/people.png",
-			"link": "http://www.baidu.com"
-		},{
-			"title": "<span>应急贷款</span>最快当天放贷",
-			"image": "images/money.png",
-			"link": "http://www.baidu.com"
-		}],
-		"description": "相关业务",
-		"type": "images",
+	"about_img":{
+		"description":"左侧内容单页-栏目图片（如关于我们）",
+		"value":{
+			"title": "XXX企业",
+			"image": "images/aboutimg.png",
+			"link": "http://www.baidu.com/"
+		},
+		"type": "image",
 		"config": {
-			"width": 210,
-			"height": 66,
-			"limit":5
+			"width":296,
+			"height": 92
 		}
 	},
-	"problem":{
-		"description":"常见问题",
-		"value":{},
-		"type":"list"
+	"news_img":{
+		"description":"中间文字列表-栏目图片（如影视资讯）",
+		"value":{
+			"title": "XXX企业",
+			"image": "images/newsimg.png",
+			"link": "http://www.baidu.com/"
+		},
+		"type": "image",
+		"config": {
+			"width":298,
+			"height": 112
+		}
 	},
-	"coops":{
-		"description":"合作伙伴",
-		"value":{},
-		"type":"list"
+	"pro_img":{
+		"description":"右侧图片列表-栏目图片（如影视资讯）",
+		"value":{
+			"title": "XXX企业",
+			"image": "images/joinimg.png",
+			"link": "http://www.baidu.com/"
+		},
+		"type": "image",
+		"config": {
+			"width":296,
+			"height": 92
+		}
 	}
 }
+
+
+

@@ -1,8 +1,16 @@
 {
-	"topword":{
-		"value":"欢迎来到易尔通！服务热线 400-807-9400 (工作日 8:30-19:30)",
-		"description":"头部文字",
-		"type":"text"
+	"nylogo":{
+		"value": {
+			"title": "XXX企业",
+			"image": "images/logo1.png",
+			"link": "http://www.baidu.com/"
+		},
+		"description": "网站内页LOGO",
+		"type": "image",
+		"config": {
+			"width":474,
+			"height": 126
+		}
 	},
 	"contactimg":{
 		"value": {
@@ -32,69 +40,13 @@
 			"image": "images/banner.jpg",
 			"link": "http://www.baidu.com"
 		}],
-		"description": "关于我们多图轮播",
+		"description": "多图轮播",
 		"type": "images",
 		"config": {
-			"width": 178,
-			"height": 137,
+			"width": 1500,
+			"height": 828,
 			"limit": 3
 		}
-	},
-	"list1":{
-		"description":"第二导航第1个子栏目",
-		"value":{},
-		"type":"list",
-		"config":{
-			"filter":"list,page"
-		}
-	},
-	"list2":{
-		"description":"第二导航第2个子栏目",
-		"value":{},
-		"type":"list",
-		"config":{
-			"filter":"list,page"
-		}
-	},
-	"list3":{
-		"description":"第二导航第3个子栏目",
-		"value":{},
-		"type":"list",
-		"config":{
-			"filter":"list,page"
-		}
-	},
-	"list4":{
-		"description":"第二导航第4个子栏目",
-		"value":{},
-		"type":"list",
-		"config":{
-			"filter":"list,page"
-		}
-	},
-	"list5":{
-		"description":"第二导航第5个子栏目",
-		"value":{},
-		"type":"list",
-		"config":{
-			"filter":"list,page"
-		}
-	},
-	"list6":{
-		"description":"第二导航第6个子栏目",
-		"value":{},
-		"type":"list",
-		"config":{
-			"filter":"list,page"
-		}
-	},
-	"list7":{
-		"description":"第二导航第7个子栏目",
-		"value":{},
-		"type":"list",
-		"config":{
-			"filter":"list,page"
-		}
 	}
-	
+
 }

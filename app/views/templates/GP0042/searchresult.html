@@ -18,65 +18,80 @@
 <meta http-equiv="Content-Language" content="zh-CN">
 <link href="{$site_url}css/css.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="{$site_url}js/jquery-1.11.3.js"></script>
-<script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.js"></script>
-<script type="text/javascript" src="http://common.mn.sina.com.cn/public/resource/lib/jquery.jcarousellite.js">
-</script>
-
-<script type="text/javascript" src="{$site_url}js/global.js"></script>
-<script type="text/javascript" src="{$site_url}js/index.js"></script>
+<script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript" src="{$site_url}js/function.js"></script>
 <title>{$title}</title>
 
 </head>
 
 <body>
-<div class="wrap">
+<div class="nywrap">
 <!-- 导入头部文件 -->
     {include file='./_header.html'}
 
-    <div class="ny-con">
-            <div class="side-left fl">
-                {include file='./_pagenavs_sub3.html'}
-            </div>
-            <div class="side-right fr">
-                <h1 class="ny-tit">
-                   {$list.name}
-                     <span class="locate">当前位置：<a href="{$site_url}">首页</a>
-                               {foreach item=nav from=$pagenavs}
-                                - <a href="{$nav.link}">{$nav.name}</a>
-                               {/foreach}
-                      </span>
+
+   <div class="nycontent">
+        <div class="nyconttop">
+            <div class="tel fl">
+            免费服务热线：
+              <span>{$contact.telephone}</span>
+            </div> 
+            <div class="search fr">
+              <form action="{$search_action}" method="GET">
+                <input class="searchbox" type="text" name="s" value="请输入关键字" />
+                <input class="searchbtn" type="submit" value="" />
+              </form>
+            </div>                     
+        </div>
+        <div class="main">
+
+          <div class=".searchbox">
+            <div class="search-tit">搜索结果<span>当前位置：<a href="{$site_url}">首页</a> &gt; 搜索结果</span></div>
+            <div class="rightcont">                   
+
+          
+              <p class="searchtxt">以下是您输入的关键字“<span>{$search.keyword}</span>”，搜索结果有{$search.total}条</p>
+             
+    
+              <ul class="newslist">
+                {foreach name=article item=article from=$search.data} 
+                    <li>
+                      <a href="{$article.link}"><h2>{$article.title}</h2><span>[{$article.pubtimestamp|date_format:'%Y-%m-%d'}]</span></a>
+                    </li>
                   
+                    
+                {/foreach}  
 
-                </h1>
-                <div class="ny-main">
+                 
+              </ul>
+              <div  class="paging">
+                第{$page_links.current_page}页/共{$page_links.page_count}页　　共{$page_links.per_page}条记录
+                <a href="{$page_links.first_link}">[第一页]</a>
+                <a href="{$page_links.prev_link}"> [上一页]</a>
+                {foreach item=near_link key=near_page from=$page_links.nears_link}
+                        {if $near_page == $page_links.current_page}
+                          <a class="current">{$near_page}</a></li>
+                        {else}
+                          <a href="{$near_link}">{$near_page}</a></li>
+                        {/if}
+                {/foreach}
+                <a href="{$page_links.next_link}">[下一页]</a>
+                <a href="{$page_links.last_link}">[最后页]</a>       
+              </div>
 
-                     <div class="search-con">
-                           {if $search.total eq 0}
-                            <p class="searchtit">没有查找到相关数据！</p>
-                           {else}
-                            <p class="searchtit">以下是您输入的关键字“{$search.keyword}”，搜索的结果有{$search.total}条。</p>
-                           
-                            <ul class="ny-newlist">
-                                {foreach item=article from=$search.data}
-                                <li><a href="{$article.link}">{$article.title}<span class="fr">{$article.pubdate}</span></a></li>
-                                {if $article@index+1 eq 10}{break}{/if}
-                                {/foreach}
-                            </ul>                              
-                           {/if}
-                                  
-                      </div>
+            </div>
+            <div class="rightbg"></div>
+          </div>
+        </div>
 
-                 </div>
-             </div>
-    </div>
-   
+      </div>
+
+
+
+    <!-- 导入底部文件 -->
+
      {include file='./_footer.html'}
 
 </div>
 </body>
 </html>
-
-
-
-
-                  
