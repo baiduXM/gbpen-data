@@ -1,4 +1,4 @@
-﻿@charset "utf-8";
+@charset "utf-8";
 *{ margin:0px; padding:0px;}
 a{ text-decoration:none}
 li{list-style:none;}
@@ -48,7 +48,7 @@ ul.class-list li{ height: auto; line-height:35px; overflow:hidden; border-bottom
 ul.class-list li .icon{ width:35px; height:35px; text-align:center; float:right; display:inline;text-indent:0px; font-size:1.2em;color:#02b791;}
 ul.class-list li a{ color:#01644f; display:block;}
 ul.class-list li .icon1{ display:none;}
-.menu_body{/*display:none;  padding:5px 0px; */height:auto; overflow:hidden;}
+.menu_body{display:none;  padding:5px 0px; height:auto; overflow:hidden;}
 .menu_body dl{ height:27px; line-height:27px; overflow:hidden; font-size:0.9em;}
 ul.class-list li.cur{ background:rgba(0,0,0,0.1); }
 ul.class-list li.cur .icon1{ display:block;}
