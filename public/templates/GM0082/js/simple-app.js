@@ -1,8 +1,10 @@
 $(function(){
 	//Init Navigation
+
 	var holdPosition = 0;
+	
 	var nav = $('.swiper-nav').swiper({
-		slidesPerView:4,
+		slidesPerView: '4',
 		freeMode:true,
 		freeModeFluid:true,
 		paginationClickable: true,
@@ -36,19 +38,43 @@ $(function(){
 			$('.arrow-right').removeClass("current1").addClass("current");
 		}
 	}
-	var menuswiper=$('.class .scroll-container').swiper({
+	$('.class .scroll-container').each(function(){
+		$(this).swiper({
 			mode:'vertical',
 			scrollContainer: true,
 			mousewheelControl: true,
-			freeModeFluid:true,
-			calculateHeight: true
+		})
+	})
+	var myswiper=$('.index-wrap .scroll-container').swiper({
+			mode:'vertical',
+			scrollContainer: true,
+			mousewheelControl: true,
 		})
 	
-	//幻灯片元素与类"menu_body"段与类"menu_head"时点击
-	$(".menu_head .icon").click(function(){
-		$(this).parent().toggleClass("cur").next(".menu_body").toggleClass("cu").siblings(".menu_body").removeClass("cu");
-		$(this).parent().siblings().removeClass("cur");
-		$('.class .scroll-container').find('.swiper-wrapper').css({'transform':'translate3d(0px, 0px, 0px)','-webkit-transform':'translate3d(0px, 0px, 0px)','transition': '0.3s'});
-		menuswiper.reInit();
-	});	
+	$('.thumbs-cotnainer').each(function(){
+		$(this).swiper({
+			slidesPerView:'auto',
+			offsetPxBefore:25,
+			offsetPxAfter:10,
+			calculateHeight: true,
+			mode:'horizontal',
+		})
+		
+	})
+	$(".font dl.big").click(function(){
+		$(".edite").attr('class',"edite font-big")
+		$(".news-ins").attr('class',"news-ins font-big")
+		myswiper.reInit();
+	})
+	$(".font dl.normal").click(function(){
+		$(".edite").attr('class',"edite font-normal")
+		$(".news-ins").attr('class',"news-ins font-normal")
+		myswiper.reInit();
+	})
+	$(".font dl.small").click(function(){
+		$(".edite").attr('class',"edite font-small")
+		$(".news-ins").attr('class',"news-ins font-normal")
+		myswiper.reInit();
+	})	
+	
 })
