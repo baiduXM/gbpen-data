@@ -1,125 +1,199 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+﻿<!DOCTYPE html>
+<html manifest="huancun.manifest">
 <head>
-<meta http-equiv="x-ua-compatible" content="ie=8" />
+<!-- 实时预览调试代码，模板开发完成后删除 -->
+		
+		<!-- 调试代码 End -->
+		<script type="text/javascript">
+		// 跳转PC页面
+		{if $site_another_url}
+			if (!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+				location.href = '{$site_another_url}';
+			}
+		{/if}
+		</script>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no,minimal-ui">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta content="telephone=no, email=no" name="format-detection">
+<!-- 启用360浏览器的极速模式(webkit) -->
+<meta name="renderer" content="webkit">
+<!-- 避免IE使用兼容模式 -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+<meta name="HandheldFriendly" content="true">
+<!-- 微软的老式浏览器 -->
+<meta name="MobileOptimized" content="320">
+<!-- uc强制竖屏 -->
+<meta name="screen-orientation" content="portrait">
+<!-- QQ强制竖屏 -->
+<meta name="x5-orientation" content="portrait">
 <meta name="keywords" content="{$keywords}" />
 <meta name="description" content="{$description}" />
-<script type="text/javascript" src="http://common.mn.sina.com.cn/public/resource/lib/jquery.jcarousellite.js"></script>
-
+<link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
+<title>{$title}</title>
+<link rel="stylesheet" href="{$site_url}css/reset.css" /> 
+<link rel="stylesheet" href="{$site_url}css/public.css" /> 
+<link href="{$site_url}css/css.css" rel="stylesheet" type="text/css" />
+<link href="{$site_url}css/swipe.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" rev="stylesheet" href="{$site_url}css/style_{$stylecolor}.css" type="text/css" />
-
-<!--[if IE 6]>
-<script type="text/javascript" src="js/dd_delatedpng.js" ></script>
-<script type="text/javascript">//如果多个element使用PNG,则用','分隔
-DD_belatedPNG.fix('div,ul,li,a,p,img');
-</script>
-<![endif]-->
-<script type="text/javascript" src="{$site_url}js/jquery1.42.min.js"></script>
-<script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.js"></script>
-
-<link href="{$site_url}css/style.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="{$site_url}js/index.js"></script>
-
+<script src="{$site_url}js/TouchSlide.1.1.js"></script>
+<script type="text/javascript" src="{$site_url}js/jquery.min.js"></script>
+<script type="text/javascript" src="{$site_url}js/function.js"></script>
+<script type="text/javascript" src="{$site_url}js/share.js"></script>
+<script src="{$site_url}js/idangerous.swiper-2.0.min.js"></script>
+<script src="{$site_url}js/idangerous.swiper.3dflow-2.0.js"></script>
+<script src="{$site_url}js/simple-app.js"></script>
 <script type="text/javascript">
-	// 跳转手机页面
-	{if $site_another_url}
-		if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
-			location.href = '{$site_another_url}';
-		}
-	{/if}
-	</script>
-	<title>{$title}</title>
+	window.addEventListener('load', function(){
+   setTimeout(function(){ window.scrollTo(0, 1); }, 100);
+});//safari浏览器可以通过此代码来隐藏地址栏
+</script>
 {$headscript}
-
 </head>
-
 <body>
-	<div class="wappers">
-    	
-		{include file="./_header.html"}
-	
-       
+<div class="body">
+
+<div class="wrap page-active">
+
+<div class="index-wrap">
+	<header>
+    <div class="top">   
     
-       <div class="containers">
-       	<div class="index">
-			  <div class="left">
-                <div class="list" style="height:218px;">
-                  <div class="a_title2"><span>{$index.homenavs.en_name}</span> <i>{$index.homenavs.name}</i></div> <!-- 下表为0的面包屑导航正好是一级栏目的当前栏目 -->
-       <div class="listbg">
-  <ul class="">
-    {foreach name=homenavs item=navho from=$index.homenavs.childmenu}
-    <li class="{if $navho.current}current{/if}">
-      <a href="{$navho.link}" class="choose">{$navho.name}</a>
-    </li>
-    {/foreach}
-  </ul>
-    </div>                           
-                </div>              
-              </div>  
-              <div class="aboiut">
-            	       <div class="list_title2"><i><a href="{$index.about.link}">更多</a></i>{$index.about.name}</div>
-<div class="border"><img src="{$index.about.image}" height="136" width="165"/>
-                    	<div class="anputt">
-       {$index.about.description}<span><a href="{$index.about.link}">[了解更多]</a></span>
- </div>
-                    </div>               
-              </div> 
-              <div class="contacta">
-            	   <div class="list_title"><i><a href="{$index.contact1.link}">更多</a></i>联系方式</div>
-                   <div class="ttal_ta">
-真诚欢迎您的来电！                   
-                   </div>
-<div class="tela">
-{$index.contact} 
-    </div>             
-              
-              </div>       
-        </div>
-<div class="prods">
-            	<div class="titlt_i"><span><a href="{$index.products.link}"><img src="{$site_url}images/more2.jpg" height="13" width="42"></a></span>{$index.products.name}</div>
-<div class="proimg">
-                     <div class="rollBox">
-     <div class="LeftBotton" onmousedown="ISL_GoUp()" onmouseup="ISL_StopUp()" onmouseout="ISL_StopUp()"></div>
-     <div class="Cont" id="ISL_Cont">
-      <div class="ScrCont">
-       <div id="List1">
-        <!-- 图片列表 begin -->
-        {foreach name=products item=product from=$index.products.data}
-		<div class="pic">
-          <a href="{$product.link}" target="_blank" class="choose" ><img src="{$product.image}" height="134" width="179"/><h2 class="xu_word">{$product.title}</h2></a>
-         </div>       
-         {/foreach}                                                                                 
-        <!-- 图片列表 end -->    
-       </div>
-       <div id="List2"></div>
-      </div>
-     </div>
-     <div class="RightBotton" onmousedown="ISL_GoDown()" onmouseup="ISL_StopDown()" onmouseout="ISL_StopDown()"></div>
-    </div>
-     
-    </div>                    
-            </div>        
-       </div>
-  	{include file="./_footer.html"}
+    	<div class="header">
+        	<div class="logo"><img src="{$logo}" width="100%"></div>
+        </div>                 
+        <div class="baner">
+	<div id="slideBox" class="slideBox">
+    <div class="hd">
+            <ul></ul>
+              </div>
+	<div class="bd">
+		<ul>
+			{foreach name=slidepics item=slidepics from=$global.slidepics}
+			<li><a class="pic" href="{$slidepics.link}"><img src="{$slidepics.image}" title="640*414" /></a></li>
+			{/foreach}
+		</ul>
+	</div>
 	
-    </div>    
+			</div>
+			
+   </div>
+   <div class="menutop">
+ <div class="menu"><div class="menubottom"></div>
+            	<div class="nav">
+            	<a class="arrow-left" href="#">&lt;</a> 
+   				 <a class="arrow-right" href="#">&gt;</a>
+               <div class="swiper-nav swiper-container">
+                  <div class="swiper-wrapper"> 
+					  <div class="swiper-slide"><span><a href="{$site_url}"><div class="micont"><img src="{$site_url}images/menuicon1.png" width="100%"></div><div class="menuword">网站首页</div></a></span></div>
+					{foreach name=navs item=nav from=$navs}
+                      <div class="swiper-slide"><span><a href="{$nav.link}"><div class="micont">{$nav.icon}</div><div class="menuword">{$nav.name}</div></a></span></div>
+                     {if $nav@index+1 == 4}{break}{/if}
+					{/foreach}               
+                  </div>
+				</div>
+                </div>
+    </div>     
+	 <!-- style="width="77px";overflow:hidden;white-space:nowrap;text-overflow:ellipsis" -->
+    </div>
+
+    </div>
+    </header>
+    <section>
+	
+	
+      <div class="boxmain">
+			{foreach name=mIndexCats item=mIndexCat from=$mIndexCats}
+			{if $mIndexCat.type eq 1}
+			{if $mIndexCat.showtype eq 1}
+      	<div class="knowledge">
+        	<div class="zhishi-title">
+            	<div class="zs-alte">
+                   <div class="listens">{$mIndexCat.en_name}</div><div class="ze-chines">{$mIndexCat.name}</div>
+                </div>
+                <div class="moregd">
+                	<a href="{$mIndexCat.link}">+</a>
+                </div>
+            </div>
+			
+            <div class="news_d">
+            	<ul>
+				{foreach item=article from=$mIndexCat.data}
+                	<li><a href="{$article.link}">
+                    	<div class="xwzx-detal">
+                    	   <div class="newsimg"><img src="{$article.image}" width="100px" height="83px"></div>
+                           <div class="news_wprd">
+                             <div class="ntitle">{$article.title}</div>
+                             <div class="ndate">{$article.pubdate}</div>
+                             <div class="nword">{$article.description}</div>
+                           
+                           </div>
+                        </div></a>
+                    </li>
+                	 {if $article@index+1 == 3}{break}{/if}
+						{/foreach}               
+                </ul>
+            </div>
+        </div>
+		{/if}
+		
+		
+		
+		
+		{elseif $mIndexCat.type eq 4}
+        <div class="quality">
+        	<div class="quabanner"><a href="{$mIndexCat.link}">
+            	<div class="qimga"><img src="image/img4.jpg" width="355px" height="65px"><div class="qword">{$mIndexCat.en_name}</div></div>
+                <div class="pinzhi">{$mIndexCat.name}<div class="jiaohao">+</div></div>
+                </a>
+            </div>
+			
+            <div class="pinzhi_edit">
+            	<div class="ppimgs"><img src="{$mIndexCat.image}" width="120px" height="74px"></div>
+                <div class="pz_pp">
+                   {$mIndexCat.description}
+                </div>
+            </div>
+        </div>
+		
+		{elseif $mIndexCat.type eq 2}
+        <div class="wine">
+            <div class="zhishi-title">
+            	<div class="zs-alte">
+                   <div class="listens">{$mIndexCat.en_name}</div><div class="ze-chines">{$mIndexCat.name}</div>
+                </div>
+                <div class="moregd">
+                	<a href="{$mIndexCat.link}">+</a>
+                </div>
+            </div>  
+            <div class="wine_pro">
+            	<ul>
+					{foreach item=article from=$mIndexCat.data}
+                	<li><a href="{$article.link}">
+                    	<div class="windbg">
+                        	<div class="wimg"><img src="{$article.image}" width="165px" height="172px"></div>
+                            <div class="wenzi">
+                            <div class="wineword">WINE</div>
+                            <div class="pro-title">{$article.title}</div>   
+                            </div>                         
+                        </div></a>
+                    </li>
+                	 {if $article@index+1 == 6}{break}{/if}
+						{/foreach}          
+                </ul>
+            </div>      
+        </div>
+      </div>
+	  {elseif $mIndexCat.type eq 3}
+	  {/if}
+	  {/foreach}
+    </section>
+    <footer class="foot" ><a class="back-top">∧</a>{$footprint}</footer></div>
+</div>
+	{$footscript}
+</div>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
