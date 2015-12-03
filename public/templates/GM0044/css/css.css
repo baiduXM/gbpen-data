@@ -31,7 +31,7 @@
 .rightbox1{margin-top:20px;}
 .aboutbox{}
 .aboutboxm{ font-size:14px; line-height:30px; width:75%; overflow:hidden; margin:auto; margin-top:2%; } 
-.aboutboxm .inner{ line-height:30px; text-align:center;}
+.aboutboxm .inner{ line-height:30px; text-align:center;max-height: 120px;overflow: hidden;}
 
 .about_img{ float:left; overflow:hidden; margin:0 3%; width:33%; border:1px solid #fff; display:inline;}
 .about_img img{ width:100% }
@@ -52,8 +52,12 @@ ul.prolist li .sub1{ background:#a0a0a0; color:#fff; font-size:20px; text-align:
 ul.prolist li .sub2{ background:#484846; color:#fff; font-size:20px; text-align:center;}
 ul.prolist li .sub3{ background:#4f4a50; color:#fff; font-size:20px; text-align:center;}
 ul.prolist li .sub4{ background:#2f2f2f; color:#fff; font-size:20px; text-align:center;}
-ul.prolist li .word{ color:#817f7f; line-height:20px; font-size:12px;}
-ul.prolist li a{font-size:15px; margin-top:10px;} 
+ul.prolist li .word{ color:#817f7f; line-height:20px; font-size:12px;text-overflow: ellipsis;
+overflow: hidden;
+white-space: nowrap;}
+ul.prolist li a{font-size:15px; margin-top:10px;text-overflow: ellipsis;
+overflow: hidden;
+white-space: nowrap;} 
  
  
 ul.prolist li .prolistb img{ width:100%;  margin: auto; }
@@ -70,8 +74,14 @@ ul.prolist li .prolistb .title2{  text-align:right}
 .menulist .swiper-nav span img{ width:40%;}
 ul.prolist1 li{  display: inline-block; padding-top:1%; width:45%; }
 .box_top .text_en{ font-size:28px; line-height:20px;}
-.aboutboxm .inner{ line-height:22px; height:85px; overflow:hidden;text-overflow: initial;white-space: initial;
-    text-align: left;}
+.aboutboxm .inner{
+    line-height:22px;
+    height: 88px;
+    overflow:hidden;
+    text-overflow: initial;
+    white-space: initial;
+    text-align: left;
+    }
 .aboutboxm{ font-size:12px; line-height:25px; padding:0; height:100px; overflow:hidden } 
 .mainbox{ margin-bottom:0px;}
 ul.prolist li a{ font-size:14px;}
@@ -188,3 +198,4 @@ ul.relatelist li div{ margin:7px; height:auto; overflow:hidden;}
 
 .proboxm .word{white-space:normal;}
 
+i.iconfont{font-size:22px !important;}

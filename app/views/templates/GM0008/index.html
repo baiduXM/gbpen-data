@@ -63,25 +63,17 @@
               {foreach item=slidepic from=$global.image_first}
               <img src="{$slidepic.image}" width="100%">{/foreach}</div>
             <div class="imgbg"></div>
-            {foreach name=mIndexCats item=mIndexCat from=$mIndexCats}
-            {* 仅输出类型为 4图文列表 的栏目 *}
-            {if $mIndexCat.type eq 4}
-            {* 后台选中“样式1”的展现模式： *}
-            {if $mIndexCat.showtype eq 1}
             <div class="abouts">
               <div class="lieanst">
                 <div class="toplinea"></div>
                 <div class="toplinear"></div>
               </div>
-              <div class="abiut_edit"><a href="{$mIndexCat.link}">{$mIndexCat.description}</a></div>
+              <div class="abiut_edit">{$global.indextext}</div>
               <div class="lieanst">
                 <div class="toplinea"></div>
                 <div class="toplinear"></div>
               </div>
             </div>
-            {/if}
-            {/if}
-            {/foreach}
             <div class="menulist">
               {foreach item=nav_list from=$navs}
               {* 仅输出类型为 5内容单页 和 外链的栏目（包括5留言板、7微信、8直达号功能） *}

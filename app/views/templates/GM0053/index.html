@@ -119,7 +119,16 @@
             
         </div>
         
-        <div class="menulist">
+       
+        </div>
+   </div>
+        </div>
+		
+		{elseif $mIndexCat.type eq 3}	
+		{elseif $mIndexCat.type eq 4}	
+		{/if}
+		{/foreach}
+		 <div class="menulist">
             	<div class="nav">
                <div class="swiper-nav swiper-container">
                   <div class="swiper-wrapper">
@@ -130,16 +139,8 @@
 				</div>
                 </div>
     </div>
-        </div>
-   </div>
-        </div>
-		
-		{elseif $mIndexCat.type eq 3}	
-		{elseif $mIndexCat.type eq 4}	
-		{/if}
-		{/foreach}
-		
       </section>
+	  
             <footer class="foot">
         <div class="text">{$footprint}</div>
       </footer>

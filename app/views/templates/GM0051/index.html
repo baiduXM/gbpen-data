@@ -72,7 +72,7 @@
             <ul class="prolist clearfix">
 			{foreach item=article from=$mIndexCat.data}
               <li>
-                <div onClick="javascript:window.location.href='{$mIndexCat.link}'"> <img src="{$article.image}" width="99px" height="99px"></div>
+                <div onClick="javascript:window.location.href='{$mIndexCat.link}'"> <img src="{$article.image}" /></div>
                 <div class="text">
                 <div class="english">SHOW</div>
                 <div class="triangles"></div>
@@ -86,8 +86,8 @@
         </div>
         </div>
       
-	   
-        </div>
+	   </div>
+       
 		{/if}
 		{elseif $mIndexCat.type eq 4}	
 		
@@ -138,14 +138,16 @@
           
         
         
-    
-            <div class="foot">
+     <div class="foot">
         
         <div class="text">{$footprint}</div>
       </div>
 		{$footscript}
+           
     </div>
   </div>
+   </div>
 </div>
+
 </body>
 </html>
