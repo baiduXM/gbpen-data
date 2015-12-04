@@ -43,7 +43,9 @@
 
 
 ul.prolist{width:75%; margin:auto;}
-ul.prolist li{  float:left; display: inline-block;  width:26%;  margin:2% 3.5%; text-align:center;}
+ul.prolist li{  float:left; display: inline-block;  width:26%;  margin:2% 3.5%; text-align:center;text-overflow: ellipsis;
+overflow: hidden;
+white-space: nowrap;}
 ul.prolist li .pic{position:relative; width:100%;box-shadow:2px 2px 2px rgba(51,51,51,.4); margin-bottom:5%; }
 ul.prolist li .pic:before{ width:100%; height:98%; content:""; background:#fff;box-shadow:2px 2px 2px rgba(51,51,51,.2);transform:rotate(10deg);-ms-transform:rotate(7deg);/* IE 9 */-moz-transform:rotate(7deg); 	/* Firefox */-webkit-transform:rotate(7deg); /* Safari 和 Chrome */-o-transform:rotate(7deg); position:absolute; left:0px; top:0px;border:1px solid #fff;box-shadow:2px 2px 2px rgba(51,51,51,.4); }
 ul.prolist li .pic img{ width:100%;background:#fff;  position:relative;border:1px solid #fff }
