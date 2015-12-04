@@ -1,120 +1,162 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <script type="text/javascript">
+<script type="text/javascript">
     // 跳转手机页面
     {if $site_another_url}
-        if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
-            location.href = '{$site_another_url}';
-        }
+      if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+        location.href = '{$site_another_url}';
+      }
     {/if}
     </script>
-     
-    
-    <meta name="keywords" content="{$keywords}"/>
-    <meta name="description" content="{$description}"/>
 
-    <meta http-equiv="x-ua-compatible" content="ie=8" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title> {$title}</title>
-    <link href="{$site_url}css/css.css" rel="stylesheet" type="text/css" />
-    <script src="{$site_url}js/jquery-1.7.2.min.js" type="text/javascript"></script>
-    <script type="text/javascript" src="http://common.mn.sina.com.cn/public/resource/lib/jquery.jcarousellite.js"></script>
-    <script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.1.js"></script>
-    <script type="text/javascript" src="{$site_url}js/function.js"></script>
-    {$headscript}
+<meta http-equiv="x-ua-compatible" content="ie=7" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="{$keywords}"/>
+<meta name="description" content="{$description}"/>
+<link href="{$site_url}css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="{$site_url}js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.js"></script>
+<script type="text/javascript" src="{$site_url}js/function.js"></script>
+<title>{$title}</title> 
+{$headscript}
+
 </head>
+
 <body>
-    <div class="wrap">
-        <!-- 导入头部文件 -->
-        {include file='./_header.html'}
-        <div class="content">
-        	<div class="side-left fl">
-                <div class="side-tit">
-                    <h2>{$index.about_us.name}</h2><span>{$index.about_us.en_name}</span><i></i><a href="{$index.about_us.link}" class="more"></a>
-                </div>
-                <div class="about">
-                    <dl>
-                        <a href="{$index.about_us.link}">
-                                {$index.about_us.description}
-                        </a>
-                    </dl>
-                    <dt><a href="{$index.about_us.link}"><img src="{$index.about_us.image}" alt=""></a></dt>
-                </div>
+     <div class="wrap">
+       {include file="./_header.html"}
+       <div class="public content_abounews">
+        	<div class="datu">                     
+                <div id="slideBox" class="slideBox">
+                    <div class="hd">
+                        <ul>
+                           {foreach name=slidepicsb item=slidepic from=$index.slidepics}
+                             <li>{$slidepic@index+1}</li>
+                           {/foreach}                            
+                        </ul>
+                    </div>
+                    <div class="bd">
+                        <ul>
+                             {foreach name=slidepicsb item=slidepic from=$index.slidepics}
+                              <li><a href="{$slidepic.link}" target="_blank"><img src="{$slidepic.image}" alt="{$slidepic.title}" /></a></li>                            
+                             {/foreach}                                
+                        </ul>                           
+                    </div>
+                    <a class="prev" href="javascript:void(0)"></a>
+                    <a class="next" href="javascript:void(0)"></a>
+		        </div>                               
             </div>
-            <div class="side-middle fl">
-                <div class="side-tit"><h2>{$index.news.name}</h2><span>{$index.news.en_name}</span><i></i><a href="{$index.news.link}" class="more"></a></div>
-
-
-                <ul class="newlist">
-                    {foreach item=new from=$index.news.data}
-                    {if  $new@index == 0}                      
-                    <div class="firstnew">
-                        <div class="firstnew-pic"><a href="{$new.link}"><img src="{$new.image}" alt=""></a></div>
-                        <div class="firstnew-dep">
-                            <h2><a href="{$new.link}">{$new.title}</a></h2>
-                            <span class="firstnew-date">{$new.pubtimestamp|date_format:'%Y-%m-%d'}</span>
-                            <span class="firstnew-dep-desc">
-                                {$new.description}
-                            </span>
+            <div class="index_cont">
+            	<div class="iconta">
+                	<a href="#" id="iconta" class="tdong"></a>
+                </div>
+                <div class="content" id="content">
+                	<div class="aboutnews">
+                        <div class="topicont">
+                            <a href="#" id="topicont" class="tdong"></a>
                         </div>
-
-                    </div>
-                    {elseif $new@index > 0}                                                 
-
-                     <li><a href="{$new.link}"><h2>{$new.title} </h2><span>{$new.pubtimestamp|date_format:'%Y-%m-%d'}{*$new.pubdate*}</span></a></li>
-                                
-                    {/if}
-                           
-                    {/foreach}                   
-                 </ul>
-
-            </div>
-            <div class="side-right fr">
-                <div class="contact">
-                    <h2>CONTACT US</h2>
-                    <div class="contactbox">
-                        {$global.contact_us}
-
-                    </div>
-                    <div class="idea">
-                        <a href="{$global.yijian.link}">
-                            <h3>{{$global.yijian.name}}</h3>
-                            <span>{$global.yijian.en_name}</span>
-                        </a>
+                        <div class="aboutedit fl">
+                        	<div class="a_title">{$index.aboutedit.name} <b>· {$index.aboutedit.en_name}</b></div>
+<div class="border"><div class="aimg"><img src="{$index.aboutedit.image}" height="103" width="157"/></div>
+                    <div class="anputt">
+                        <p>{$index.aboutedit.description}</p>
+                         <span><a href="{$index.aboutedit.link}">[查看详情]</a></span>
+                    </div>                              
+                        </div>                            
+                        </div>
+                        <div class="news_edit fr">
+                           <div class="a_title">{$index.newsedit.name} <b>· {$index.newsedit.en_name}</b></div>
+   {foreach name=news item=article from=$index.newsedit.data}   
+   {if  $article@index == 0}                              
+                        <div class="n_tu">
+                         	<div class="n_img"><a href="{$article.link}"><img src="{$article.image}" height="75" width="115"/></a></div>
+                            <div class="n_word">
+                            	<div class="n_title"><a href="{$article.link}">{$article.title}</a></div>
+                                <div class="huiyi_edit">
+                                <p>{$article.description}</p><Span><a href="{$article.link}">[详细]</a></Span>
+                                </div>                                
+                            </div>
+                         </div>                          
+			            <div class="news_deta3">
+                          <ul> 	
+	  {elseif $article@index > 0}                            
+                        <li><a href="{$article.link}"><span>{$article.pubtimestamp|date_format:'%Y-%m-%d'}</span>{$article.title}</a>
+                        </li>                          
+                           {if $article@index+1 == 4}{break}{/if}
+                             {/if}
+                       
+      {/foreach}   
+                          </ul>  
+                       </div>                             
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="pro">
-                <div class="side-tit"><h2>{$index.pro.name}</h2><span>{$index.pro.en_name}</span><i></i><a href="{$index.pro.link}" class="more"></a></div> 
-                <div id="prizes">
-                    <div class="photos">
-                        <a href="javascript:void(0);" class="photos-button photos-prev"></a>
-                        <div class="photos-content {if $index.pro.data|count>4}enable{/if}">
-                            <ul>
-                               {foreach name=pro item=pro from=$index.pro.data}
-                                   <li>
-                                    <a href="{$pro.link}" class="choose">
-                                       <img alt="" src="{$pro.image}" />
-                                       <h2>{$pro.title}</h2>
-                                    </a>
-                                   </li>
-                                  
-                                {/foreach}
-                            </ul>
-                        </div>
-                        <a href="javascript:void(0);" class="photos-button photos-next"></a>
-                    
-                    </div>
-                </div> 
-
+        </div> 
+       <div class="public prodshow">
+        	<div class="a_titleb">{$index.prodedit.name} <b>· {$index.prodedit.en_name}</b></div>
+            <div class="pr_cpaxs">                       
+                    <div id="prizes">
+					                <div class="photos">                        
+                                         <div class="photos-content {if $index.prodedit.data|count>4} enable{/if}" >
+                                            <ul>           
+                                                {section name=key loop=$index.prodedit.data start=0 step=1}
+                                                    <li>
+                                                     <a href="{$index.prodedit.data[key].link}"><img src="{$index.prodedit.data[key].image}"  height="158" width="190"/></a>
+                                        
+                                                    </li>                                                     
+                                                {/section}                                                                                                                                                         
+                                              </ul>
+                                        </div>                
+                                    </div>
+                                </div>                               
             </div>
-    
-            <!-- 导入底部文件 -->
-            {include file='./_footer.html'}   
+        </div>              
+        <div class="public footer">
+        	<div class="footpword">
+                         <a href="{$site_url}">首页</a> |
+                        {foreach name=navs item=nav from=$navs}
+                            <a href="{$nav.link}" >{$nav.name}</a> |
+                        {/foreach}<br />  
+                        友情链接:
+                         {foreach key=key item=link from=$global.links}
+                            <a href="{$link.link}">{$link.title}</a>
+                            {/foreach}<br />
+   {$footprint}        
+            </div>
         </div>
-        
-
-    </div>
+     </div>
+  <div class="side">
+	<ul>
+        <li><a href="{$global.sidea.link}" ><div class="sidebox">{$global.sidea.icon}<span>{$global.sidea.name}</span></div></a></li>        
+		<li><a href="{$global.sideb.link}" ><div class="sidebox">{$global.sideb.icon}<span>{$global.sideb.name}</span></div></a></li>    
+		<li><a href="javascript:void(0);"><div class="sidebox sideboxb">{$global.sidec.icon}<span>
+                <form action="{$search_action}" method="GET">
+                    <input type="text" name="s" value="" class="txt1" />
+                    <input type="submit" class="bta" />
+    	        </form>        
+        </span></div></a></li>
+	    <li><a href="javascript:void(0);"  class="sidetopa" id="sidetopa">{$global.sided.icon}</a><div id="code_img"><img src="{$global.sidea.image}" /></div></li>            
+		<li><a href="javascript:goTop();" class="sidetop">返回<br />顶部</a></li>
+	</ul>
+</div>           
+     {$footscript}
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
