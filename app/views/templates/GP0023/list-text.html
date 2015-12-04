@@ -40,10 +40,9 @@
                         	
 
         <div class="main">
-            
             <div class="article">
             <div class="list_text">
-     <ul>
+      <ul>
                                  {foreach name=article item=article from=$list.data}
 
         <li><a href="{$article.link}"><span>[{$article.pubtimestamp|date_format:'%Y/%m/%d'}] </span>{$article.title}</a></li>
