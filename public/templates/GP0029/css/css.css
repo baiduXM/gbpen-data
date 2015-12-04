@@ -11,7 +11,8 @@ img{ border:none;}
 .C{ clear:both}
 .yc  li  p  {width:100%; display:block; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; }
 .yc  ul li  p {width:100%; display:block; white-space:nowrap; text-overflow:ellipsis; overflow:hidden;  height:30px;}
- 
+ strong{display: block;margin: 0 auto;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+
 .wrapper{width:1003px; margin:auto;}
 
 .bg1{ background:url(../images/sub_container_bg.jpg) no-repeat center top #060808; padding-bottom:50px; }
