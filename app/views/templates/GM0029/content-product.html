@@ -1,123 +1,85 @@
-<!DOCTYPE html>
-<html manifest="huancun.manifest">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-<!-- 实时预览调试代码，模板开发完成后删除 -->
-		
-		<!-- 调试代码 End -->
-		<script type="text/javascript">
-		// 跳转PC页面
-		{if $site_another_url}
-			if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
-				location.href = '{$site_another_url}';
-			}
-		{/if}
-		</script>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no,minimal-ui">
-<meta name="apple-mobile-web-app-capable" content="yes" />
-<meta name="apple-mobile-web-app-status-bar-style" content="black" />
-<meta content="telephone=no, email=no" name="format-detection">
-<!-- 启用360浏览器的极速模式(webkit) -->
-<meta name="renderer" content="webkit">
-<!-- 避免IE使用兼容模式 -->
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
-<meta name="HandheldFriendly" content="true">
-<!-- 微软的老式浏览器 -->
-<meta name="MobileOptimized" content="320">
-<!-- uc强制竖屏 -->
-<meta name="screen-orientation" content="portrait">
-<!-- QQ强制竖屏 -->
-<meta name="x5-orientation" content="portrait">
-<meta name="keywords" content="{$keywords}" />
-<meta name="description" content="{$description}" />
-<link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
-<title>{$title}</title>
-<link rel="stylesheet" href="{$site_url}css/reset.css" /> 
-<link rel="stylesheet" href="{$site_url}css/public.css" /> 
-<link rel="stylesheet" rev="stylesheet" href="{$site_url}css/style_{$stylecolor}.css" type="text/css" />
-<link href="{$site_url}css/css.css" rel="stylesheet" type="text/css" />
-<link href="{$site_url}css/swipe.css" rel="stylesheet" type="text/css" />
-<script src="{$site_url}js/TouchSlide.1.1.js"></script>
-<script type="text/javascript" src="{$site_url}js/jquery.min.js"></script>
-<script type="text/javascript" src="{$site_url}js/lazyload.js"></script>
-<script type="text/javascript" src="{$site_url}js/function.js"></script>
-<script type="text/javascript" src="{$site_url}js/share.js"></script>
-<script src="{$site_url}js/idangerous.swiper-2.0.min.js"></script>
-<script src="{$site_url}js/idangerous.swiper.3dflow-2.0.js"></script>
-<script src="{$site_url}js/simple-app.js"></script>
-<script type="text/javascript">
-	window.addEventListener('load', function(){
-   setTimeout(function(){ window.scrollTo(0, 1); }, 100);
-});//safari浏览器可以通过此代码来隐藏地址栏
-</script>
+    <script type="text/javascript">
+    // 跳转手机页面
+    {if $site_another_url}
+    if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+        location.href = '{$site_another_url}';
+    } {/if}
+    </script>
+    
+    <meta http-equiv="x-ua-compatible" content="ie=7" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="{$keywords}" />
+    <meta name="description" content="{$description}" />
+    <link href="{$site_url}css/css.css" rel="stylesheet" type="text/css" />
+    <link href="{$site_url}css/sub.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="{$site_url}js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="http://common.mn.sina.com.cn/public/resource/lib/jquery.jcarousellite.js">
+    </script>
+    <script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.js"></script>
+    <script type="text/javascript" src="{$site_url}js/jquery.kinMaxShow-1.0.min.js"></script>
+    <script type="text/javascript" src="{$site_url}js/function.js"></script>
+  
+    <title>{$title}</title>
 </head>
+
 <body>
-<div class="body">
+    {include file='./_header.html'}
+<div id="sub_container" class="wrapper">
+  <div class="c_top"><img src="{$site_url}images/container_topbg.jpg" width="1010" height="20" /></div>
+  <div class="crumb">当前位置：<a href="{$site_url}">首页</a> {foreach item=nav from=$posnavs}&gt; <a href="{$nav.link}">{$nav.name}</a> {/foreach} </div>                              	
+                	
 
-<div class="wrap page-active">
-
-<div class="index-wrap">
-	{include file='./_header.html'}
-    <section>
-    	<div class=" boxmain boxmain_ny">
-        	<div class="boxmain_nytop">
-            <span class="more2" id="font">字+</span>
-            <div class=" title">
-            	<dd class="en">{$article.category.en_name}</dd>
-                <dd class="china">{$article.category.name}</dd>
-            </div>
-            </div>
-            <div class="font">
-            	<dl class="big">大</dl>
-                <dl class="normal">中</dl>
-                <dl class="small">小</dl>
-            	</div>  
-          <div class="boxmain-m">
-           	 <div class="bigimgbox">
-            	<div class="bigimg" id="bigimg"><ul>
-            	{foreach item=image from=$article.images}
-            	<li>
-            	
-            	<img src="{$image.image}" width="100%"  title="528*345">
-            	</li>{/foreach}</ul>
-            	</div>
-                <h1 class="bigimgtitle">{$article.title}</h1>
-            </div>
-            	<div class="edite">
-                	   {$article.content|unescape:"html"}
-                </div>
-                <div class="pagebox">
-                	<dl class="pageprve"><a href="{$article.prev.link}">上一个：{$article.prev.title}</a></dl>
-                    <dl class="pagenext"><a href="{$article.next.link}">下一个  ></a></dl>
-                </div>
-           </div>
-        </div>
-		
-        <div class="relatepro">
-        	<h1 class="relatepro-top">相关产品 </h1>
-            <div class="relatepro_m">
-            <div class="swiper-container thumbs-cotnainer">
-                  <div class="swiper-wrapper">
-                      <div class="swiper-slide">
-                      	<div class="relatebox">
-							{foreach item=article from=$related}
-                        	<a href="{$article.link}"><img class="lazy" src="{$site_url}images/loading.gif"  data-original="{$article.image}" width="100%" title="305*199">
-                            <dt class="title">{$article.title}</dt></a>
-							{if $article@index+1 == 3}{break}{/if}
-							{/foreach}
+        <div class="main clearfix"> 
+              {include file='./_aside.html'}
+            <div class="article">
+                        <div class="descripimg">
+                            <div id="slideBoxb" class="slideBoxb" style="margin:0 auto">
+                                <div class="hd">
+                                    <ul>
+                                        {foreach item=proshowb from=$article.images}
+                                        <li>{$proshowb@index+1}</li>
+                                        {/foreach}
+                                    </ul>
+                                </div>
+                                <div class="bd">
+                                    <ul>
+                                        {foreach item=proshowb from=$article.images}
+                                        <li><img src="{$proshowb.image}" alt="{$proshowb.title}" width="500" height="500"/></li>
+                                        {/foreach}
+                                    </ul>
+                                </div>
+                                <!-- 下面是前/后按钮代码，如果不需要删除即可 -->
+                                <a class="prev" href="javascript:void(0)"></a>
+                                <a class="next" href="javascript:void(0)"></a>
+                            </div>
                         </div>
-                      </div>
-                      
-                      
-                  </div>
-				</div>
-                </div>
+                        <div class="descriptcot">
+                            <div class="text_p">
+                                产品名称：{$article.title}
+                                <br />
+                            </div>
+                        </div>
+                        <div class="moule_edot">
+                            <b style="font-size:14px;">产品介绍</b>
+                            <br /> {$article.content|unescape:"html"} </div>
+                        <div style="height:30px;overflow: hidden; padding-top:7px; margin-top:15px;color:#000; float:right;">
+                            <!-- Baidu Button BEGIN -->
+                            {shareExt shareText=$article.content|unescape:"html"|strip_tags|truncate:140:"…" sharePic=$article.image}
+                        </div>
+                        <ul class="inner_pages" style="margin-left:15px; clear:both;">
+                            <li>上一篇：<a href="{$article.prev.link}">{$article.prev.title}</a></li>
+                            <li>下一篇：<a href="{$article.next.link}">{$article.next.title}</a></li>
+                        </ul>
+                    </div>
         </div>
-    </section>
-</div>
-	{$footscript}
-</div>
-</div>
+        <div class="cn_bot"><img src="{$site_url}images/sub_conbg.jpg" width="1010" height="15" /></div>
+
+    </div>
+    {include file='./_footer.html'}
 </body>
+
 </html>

@@ -1,19 +1,34 @@
 {
 	"slidepics": {
 		"value": [{
-			"title": "测试图1",
-			"image": "images/baner.jpg",
-			"link": "http://www.baidu.com"
+			"title": "banner",
+			"image": "images/banner.jpg",
+			"link": "article/1.html",
+			"description": "banner1"
 		}, {
 			"title": "测试图2",
-			"image": "images/baner.jpg",
+			"image": "images/banner2.jpg",
+			"link": "http://www.baidu.com"
+		},{
+			"title": "测试图3",
+			"image": "images/banner.jpg",
 			"link": "http://www.baidu.com"
 		}],
-		"description": "大轮滚图",
+		"description": "关于我们多图轮播",
 		"type": "images",
 		"config": {
-			"width": 640,
-			"height": 360
+			"width": 987,
+			"height": 374,
+			"limit": 3
 		}
+	},
+		"contact_us":{
+		"value": "XXX有限公司\r\n 联 系 人：某经理\r\n 固定电话：01234567\r\n移动电话：0592-01234567\r\n传真号码：0592-01234567\r\n电子邮箱1234567@qq.com\r\n联系地址：厦门市思明区洪莲西路31号店面之10瑞景商业广场旁",
+		"description": "首页右下角联系方式",
+		"type": "textarea"
 	}
+
+	
+	
+	
 }

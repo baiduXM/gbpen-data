@@ -9,7 +9,7 @@
 .module_page  select{ margin-left:5px; color:#000;}
 
 
-.list_image ul li{ float:left; text-align:center; margin:15px;}
+.list_image ul li{ float:left; text-align:center; margin:15px; width:186px; overflow:hidden}
 .list_image ul li img{ display:block; padding:2px; border:solid 1px #ccc; }
 
 
@@ -44,7 +44,7 @@ ul.inner_pages li{line-height:26px;}
 .slideBoxb .hd ul li.on{ background:#f00; color:#fff; }
 .slideBoxb .bd{ position:relative; height:100%; z-index:0;  margin:0px auto; text-align:center;   }
 .slideBoxb .bd li{ zoom:1; vertical-align:middle; }
-.slideBoxb .bd img{ display:block;  border:1px solid #ddd; padding:1px; margin:0px auto; text-align:center; }
+.slideBoxb .bd img{ display:block;  border:1px solid #ddd; padding:1px; margin:0px auto; text-align:center; width:520px; height:370px; }
 
 		/* 下面是前/后按钮代码，如果不需要删除即可 */
 .slideBoxb .prev,
@@ -54,7 +54,7 @@ ul.inner_pages li{line-height:26px;}
 .slideBoxb .nextStop{ display:none;  }
 
 
-.inner_news_tit{height:20px; line-height:20px; font-size:14px; text-align:center; font-size:14px;   font-weight: bold; }
+.inner_news_tit{line-height:20px; font-size:14px; text-align:center; font-size:14px;   font-weight: bold; }
 .inner_news_time{height:25px; line-height:25px;color:#808080; padding-left:10px; margin-bottom:8px; border-bottom:solid 1px #ccc; text-align:center; padding-bottom:8px; }
 .inner_news_time a{ color:#808080;}
 .inner_news_time a:hover{ color:#4e3012; text-decoration:underline;}

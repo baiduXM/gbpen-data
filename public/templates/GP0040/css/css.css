@@ -236,9 +236,9 @@ ul.news-list li a span{position: absolute;right: 0;top:0;}
 .pon{color: #2e4d82 !important;font-weight: bold !important;}
 /*prolist*/
 .pro-list{margin:0 20px;overflow: hidden;padding: 20px 0;}
-.pro-list li{float: left;padding: 0 10px 15px;}
+.pro-list li{float: left;padding: 0 10px 15px;display: inline-block;}
 .pro-list li a{display: block;position: relative;width: 150px;}
-.pro-list li a img{width: 148px;height: 128px;border: 1px solid #e2e2e2;}
+.pro-list li a img{width: 148px;/*height: 128px;*/border: 1px solid #e2e2e2;}
 .pro-list li a h2{height:40px;line-height: 40px;text-align: center;color: #333;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
 .pro-list li a:hover h2{color: #3f6b9c;}
 
@@ -266,9 +266,9 @@ ul.news-list li a span{position: absolute;right: 0;top:0;}
 .slideBoxb .hd ul{ overflow:hidden; zoom:1; float:left; display:none;  }
 .slideBoxb .hd ul li{ float:left; margin-right:2px;  width:15px; height:15px; line-height:14px; text-align:center; background:#fff; display:none; cursor:pointer; }
 .slideBoxb .hd ul li.on{ background:#f00; color:#fff; }
-.slideBoxb .bd{ position:relative; height:301px; z-index:0; width:414px;text-align:center; margin: 0 auto;}
+.slideBoxb .bd{ position:relative; /*height:301px;*/ z-index:0; max-width:414px;text-align:center; margin: 0 auto;}
 .slideBoxb .bd li{ zoom:1; vertical-align:middle; }
-.slideBoxb .bd img{ width:414px; height:301px; display:block;text-align:center; }
+.slideBoxb .bd img{ max-width:414px; height:301px;}
 .slideBoxb .bd h3{  width:404px;padding:0 5px;height:30px;line-height: 30px;color: #333;text-align: center;margin-top: 5px;}
 /* 下面是前/后按钮代码，如果不需要删除即可 */
 .slideBoxb .prev{ position:absolute; left:0; top:50%; margin-top:-31px; display:block; width:47px; height:67px; background:url(../images/prev.png) no-repeat;}
@@ -283,8 +283,8 @@ ul.news-list li a span{position: absolute;right: 0;top:0;}
 .list{padding: 20px;overflow: hidden;}
 .list div{height: 125px;margin-bottom: 30px;}
 .list div dl{width: 125px;float: left;margin-right: 16px;}
-.list div dl a{display: block;border: 1px solid #cfd0d1;background: #fff;padding: 3px;}
-.list div dl a img{width: 117px;height: 116px;}
+.list div dl a{display: block;max-width: 125px;}
+.list div dl a img{max-width: 117px;height: 116px;border: 1px solid #cfd0d1;background: #fff;padding: 3px;}
 .list div dt{white-space: nowrap;text-overflow:ellipsis;overflow: hidden;}
 .list div dt a{color: #494745;font-weight: bold;}
 .list div dt a:hover{text-decoration: underline;}
