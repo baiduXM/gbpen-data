@@ -48,7 +48,7 @@ ul.inner_pages a:hover{color:#469c18}
 .slideBoxb .hd ul li.on{ background:#f00; color:#fff; }
 .slideBoxb .bd{ position:relative; height:100%; z-index:0;  margin:0px auto; text-align:center;   }
 .slideBoxb .bd li{ zoom:1; vertical-align:middle; }
-.slideBoxb .bd img{ display:block;  border:1px solid #ddd; padding:1px; margin:0px auto; text-align:center; width:280px; height:230px; }
+.slideBoxb .bd img{ display:block;  border:1px solid #ddd; padding:1px; margin:0px auto; text-align:center; width:530px; height:433px; }
 
 		/* 下面是前/后按钮代码，如果不需要删除即可 */
 .slideBoxb .prev,
@@ -58,7 +58,7 @@ ul.inner_pages a:hover{color:#469c18}
 .slideBoxb .nextStop{ display:none;  }
 
 
-h1.inner_news_tit{height:20px; line-height:20px; font-size:14px; text-align:center; font-size:14px;   font-weight: bold; }
+h1.inner_news_tit{line-height:20px; font-size:14px; text-align:center; font-size:14px;   font-weight: bold; }
 h2.inner_news_time{height:25px; line-height:25px;color:#808080; padding-left:10px; margin-bottom:8px; text-align:center; padding-bottom:8px; }
 h2.inner_news_time a{ color:#808080;}
 h2.inner_news_time a:hover{ color:#4e3012; text-decoration:underline;}

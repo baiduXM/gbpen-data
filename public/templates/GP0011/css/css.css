@@ -160,9 +160,9 @@ ul.third li a:hover{color:#f00; }
 .ny_prod{ padding:8px 0px 12px;color:#333; overflow:hidden;}
 
 ul.inner_pro{height:auto; overflow:hidden; padding-bottom:10px; width:830px; padding-top:0px;}
-ul.inner_pro li{ float:left; margin:0px 35px 5px 7px;display:inline; width:205px; }
-ul.inner_pro li img{width:196px; height:154px;  vertical-align:top;  padding:2px;  border:1px solid #bebebe; }
-ul.inner_pro li a{ height:190px; display:block; color:#4e3012;overflow:hidden; padding-top:5px;}
+ul.inner_pro li{ float:left; margin:15px 10px;display:inline; width:206px;}
+ul.inner_pro li img{width:200px; height:167px;  vertical-align:top;  padding:2px;  border:1px solid #bebebe; }
+ul.inner_pro li a{  display:block; color:#4e3012;overflow:hidden; }
 ul.inner_pro li a:hover{ color:#8e8e8e;}
 p.photo_title{text-align:center; height:32px; line-height:32px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap; display:block; width:100%; }
 
@@ -238,7 +238,7 @@ text-justify:inter-ideograph;}
 		.slideBoxb .hd ul li.on{ background:#f00; color:#fff; }
 		.slideBoxb .bd{ position:relative; height:100%; z-index:0; width:554px; height:436px; margin:0px auto; text-align:center;   }
 		.slideBoxb .bd li{ zoom:1; vertical-align:middle; }
-		.slideBoxb .bd img{ width:550px; height:413px; display:block;  border:1px solid #ddd; padding:1px; margin:0px auto; text-align:center; }
+		.slideBoxb .bd img{ width:500px; height:415px; display:block;  border:1px solid #ddd; padding:1px; margin:0px auto; text-align:center; }
 
 		/* 下面是前/后按钮代码，如果不需要删除即可 */
 		.slideBoxb .prev,
