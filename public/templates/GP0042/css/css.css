@@ -122,7 +122,7 @@ top: -75px;}
 
 .nyleft{width: 440px;min-height:500px;overflow: hidden;margin-right: 20px;position: relative;}
 .img{width: 325px;height: 500px;position:absolute;left: 0; }
-.img img{width: 320px;height:458px;margin-left: 5px; }
+.img img{max-width: 320px;max-height:458px;margin-left: 5px; }
 .img div{height: 40px;background: url(../images/imgshadow.jpg) 20px  no-repeat;}
 /*sidebar*/
 .sidebar{width: 212px;min-height:420px;position: relative;float: right;background: url(../images/nynavbg.jpg) right bottom no-repeat;}
@@ -201,6 +201,7 @@ ul.prolist li a:hover h2{color:#efba65;text-decoration: underline;}
 .ny-det{padding: 10px 20px;}
 .proimg{width:386px;margin: 20px auto;}
 /*.proimg img{width:378px;height:291px;padding:3px;border: 1px solid #585c5f;}*/
+/*.proimg img{width:378px;height:291px;padding:3px;border: 1px solid #585c5f;}*/
 .proimg h2{color: #b5b9bc;text-align: center;line-height: 35px;}
 
 .proSlide{ width:386px;height: 336px; overflow:hidden; position:relative;margin: o auto;}
@@ -208,9 +209,9 @@ ul.prolist li a:hover h2{color:#efba65;text-decoration: underline;}
 .proSlide .hd ul{ overflow:hidden; zoom:1; float:left; display:none;  }
 .proSlide .hd ul li{ float:left; margin-right:2px;  width:15px; height:15px; line-height:14px; text-align:center; background:#fff; display:none; cursor:pointer; }
 .proSlide .hd ul li.on{ background:#f00; color:#fff; }
-.proSlide .bd{ position:relative; height:291px; z-index:0; width:378px;padding:3px;border: 1px solid #585c5f;text-align:center; margin: 0 auto;}
+.proSlide .bd{ position:relative; /*height:291px; */z-index:0; max-width:386px;text-align:center; margin: 0 auto;}
 .proSlide .bd li{ zoom:1; vertical-align:middle;}
-.proSlide .bd img{ width:378px; height:291px; display:block;text-align:center; }
+.proSlide .bd img{ max-width:378px;/* height:291px;*/text-align:center;padding:3px;border: 1px solid #585c5f; }
 .proSlide .bd h3{  width:378px;padding:0 5px;height:30px;line-height: 30px;color:#b9b8b8;text-align: center;margin-top: 5px;}
 /* 下面是前/后按钮代码，如果不需要删除即可 */
 .proSlide .prev{ position:absolute; left:0; top:50%; margin-top:-33px; display:block; width:47px; height:67px; background:url(../images/prev.png) no-repeat;}
