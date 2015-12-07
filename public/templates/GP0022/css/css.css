@@ -199,16 +199,20 @@ h2 {
 	height:166px;
 	margin: 15px auto auto auto
 }
-#pro ul li img {
-	border:2px solid #ebebeb
-}
+
 #pro ul li {
 	float:left;
-	width:212px;
-	height:160px;
+	width:216px;
+	height:166px;
 	margin-right:26px;
 	display:inline
 }
+#pro ul li img{
+	border:2px solid #ebebeb;
+	width:212px;
+	height:160px;
+}
+
 #zh {
 	background:url(../images/c_bg.jpg) top center no-repeat;
 	height:150px;
