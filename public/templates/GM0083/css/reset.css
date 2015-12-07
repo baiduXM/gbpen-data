@@ -7,7 +7,7 @@ a:hover{ text-decoration:none;}
 a img{ border:none;}
 img{ vertical-align:top; max-width:100%;}
 #clear{ clear:both;}
-body{font-size:14px; text-align:left;font-weight:normal; line-height:24px; font-family:"微软雅黑";  color:#333333; background: #fff;display: -webkit-box;
+body{font-size:14px; text-align:left;font-weight:normal; line-height:24px; font-family:"微软雅黑";  color:#04224d; background:#fff;display: -webkit-box;
 -webkit-box-orient: vertical;
 -webkit-box-align: stretch; min-width:320px; max-width:640px; margin:0px auto;overflow-x: hidden;}
 a{blr:expression(this.onFocus=this.blur())} /* */
@@ -33,5 +33,4 @@ optgroup { font-weight: bold; }
 input::-moz-placeholder, textarea::-moz-placeholder { color: #cccccc; }
 input:-ms-input-placeholder, textarea:-ms-input-placeholder { color: #cccccc; }
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { color: #cccccc; }
-
-div{ z-index:1; position:relative}
+div{ position:relative; z-index:1}

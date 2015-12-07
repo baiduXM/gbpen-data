@@ -184,3 +184,7 @@ white-space: nowrap;
 /*搜索结果页*/
 .seresult{margin: 10px 0;overflow: hidden;}
 .resultbox li{border-bottom: 1px dotted #acacac;line-height: 32px;background: url(../images/dot.jpg) left center no-repeat;padding-left: 10px;}
+
+
+ul.newslist li a {display: block; width: 60%; float: left; overflow: hidden; height: 26px;}
+.newbox dt a{display: block; width: 60%; float: left; overflow: hidden; height: 26px;}
