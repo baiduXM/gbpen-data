@@ -10,7 +10,7 @@
 
 
 .list_image ul li{ float:left; text-align:center; margin:15px; width:186px; overflow:hidden}
-.list_image ul li img{ display:block; padding:2px; border:solid 1px #ccc; }
+.list_image ul li img{ display:block; padding:2px; border:solid 1px #ccc; width:180px; height:180px; }
 
 
 .list_text ul li{ border-bottom:dashed 1px #ccc; height:24px; line-height:24px; background:url(../images/text_ico.jpg) no-repeat 5px; padding:0 10px 0 15px;}
@@ -44,7 +44,7 @@ ul.inner_pages li{line-height:26px;}
 .slideBoxb .hd ul li.on{ background:#f00; color:#fff; }
 .slideBoxb .bd{ position:relative; height:100%; z-index:0;  margin:0px auto; text-align:center;   }
 .slideBoxb .bd li{ zoom:1; vertical-align:middle; }
-.slideBoxb .bd img{ display:block;  border:1px solid #ddd; padding:1px; margin:0px auto; text-align:center; width:520px; height:370px; }
+.slideBoxb .bd img{ display:block;  border:1px solid #ddd; padding:1px; margin:0px auto; text-align:center; width:500px; height:500px; }
 
 		/* 下面是前/后按钮代码，如果不需要删除即可 */
 .slideBoxb .prev,
