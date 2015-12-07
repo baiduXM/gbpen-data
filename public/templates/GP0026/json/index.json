@@ -1,12 +1,12 @@
 {
 	
     "about_us": {
-		"description": "左上方内容单页（如关于我们）",
+		"description": "左侧内容单页（如关于我们栏目）",
 		"value": {},
 		"type": "page"
 	},
 	"news":{
-		"description": "中间文字列表（如新闻栏目）",
+		"description": "中间部分文字列表页（如新闻栏目）",
 		"value": {},
 		"type": "list",
 		"config":{
@@ -15,7 +15,7 @@
 
 	},
 	"pro":{
-		"description":"底部图片列表多图滚动(如产品展示)",
+		"description":"右侧图片列表(如产品展示)",
 		"value":{},
 		"type":"list"
 	}

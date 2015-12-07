@@ -22,39 +22,43 @@
     <script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.js"></script>
     <script type="text/javascript" src="{$site_url}js/jquery.kinMaxShow-1.0.min.js"></script>
     <script type="text/javascript" src="{$site_url}js/function.js"></script>
-    <style>
-    .tx1 {
-        behavior: url(pie.htc);
-    }
-    </style>
+   
     <title>{$title}</title>
 </head>
 
 <body>
     {include file='./_header.html'}
-    <div id="container" class="wrapper clearfix">
-                    {include file='./_aside.html'}            	
-
-        <div class="main">
-            <div class="crumb">
-                {$list.name}{$list.en_name}
-                <span>当前位置：<a href="{$site_url}">首页</a>
+<div id="sub_container" class=" clearfix">
+  <div class="sid_bg">
+    <div class="sidebar wrapper clearfix">
+      <div class="title">
+        <h2><span>{$list.en_name}</span><br />
+          <b>{$list.name}</b></h2>
+      </div>
+      <div class="crumb"><img src="{$site_url}images/ico5.jpg" width="19" height="24"class="pngFix" /><span>当前位置：<a href="{$site_url}">首页</a>
            {foreach item=nav from=$posnavs}
              &gt; <a href="{$nav.link}">{$nav.name}</a>
-           {/foreach}</span>
-            </div>
+           {/foreach}</span> </div>
+    </div>
+  </div>
+  <div class="main wrapper clearfix">
+                    {include file='./_aside.html'}            	
+
+    
             <div class="article">
-      <div class="list_image">
+      <div class="list_image yc">
      <ul class="clearfix">
       {foreach name=article item=article from=$list.data}
-        <li><a href="{$article.link}"><img src="{$article.image}"/><p>{$article.title} </p></a></li>
-      {/foreach}
+        <li><a href="{$article.link}"><img src="{$article.image}" width="155" height="155"/><p>{$article.title} </p></a></li>
+      {if $article@index+1 == 8} {break} {/if} {/foreach}
      </ul>	
      <div class="module_page">
                             第{$page_links.current_page}页/共{$page_links.page_count} 页
                             <a href="{$page_links.first_link}">首页</a>
-                            <a href="{$page_links.prev_link}">上一页</a> {foreach name=nears_link item=near_link key=near_page from=$page_links.nears_link} {if $near_page == $page_links.current_page}
-                            <a class="current">{$near_page}</a> {else}
+                            <a href="{$page_links.prev_link}">上一页</a> 
+                            {foreach name=nears_link item=near_link key=near_page from=$page_links.nears_link} 
+                            {if $near_page == $page_links.current_page}
+                            <a class="current_near">{$near_page}</a> {else}
                             <a href="{$near_link}">{$near_page}</a> {/if} {/foreach}
                             <a href="{$page_links.next_link}">下一页</a>
                             <a href="{$page_links.last_link}">尾页</a></div>
@@ -63,6 +67,7 @@
             </div>
         </div>
     </div>
+    </div></div>
     {include file='./_footer.html'}
 </body>
 

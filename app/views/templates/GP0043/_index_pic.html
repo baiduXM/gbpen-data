@@ -2,13 +2,21 @@
 
       <div class="picMarquee">
 				<ul class="picList">
-					{foreach  name=list4 item=article from=$index.list4.data}
-                         <li><a href="{$article.link}" class="pic"><img src="{$article.image}"  height="95" width="189" /></a>
-                            <a href="{$article.link}" class="title">{$article.title}</a>
-                         </li>
+					{$pronum=$index.list2.data|count}<!-- 计算产品的数量-->
+                        {$num=1}
+                        {$fullnum=5}<!-- 样式正常满足的最低个数-->
+                        {while ($pronum lt $fullnum)}
+                            {$pronum=$pronum % $fullnum}
+                            {$fullnum=$fullnum-$pronum}
+                            {$num=$num+1}
+                        {/while}
+                        {for $item=1 to 5}
+					{foreach  name=list2 item=article from=$index.list2.data}
+                         <li><a href="{$article.link}" class="pic"><img src="{$article.image}"  height="147" width="160" /></a>
+                         <a href="{$article.link}" class="title">{$article.title} </a></li>
                     {/foreach}
+                    {/for}
 				</ul>
-                 <a class="prev" href="javascript:void(0)"></a>
-                <a class="next" href="javascript:void(0)"></a>       
-		</div>
+
+			</div>
 </section>

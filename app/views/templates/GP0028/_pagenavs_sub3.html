@@ -1,7 +1,10 @@
+
+
 <!-- 二级栏目列表（展示到三级子栏目） -->
 {if $pagenavs}
 <nav>
-<h4><strong>{$posnavs[0].name}</strong><span>{$posnavs[0].en_name}</span><a href="{$posnavs[0].link}" class='more-btn'></a></h4>    
+<h3>{$posnavs[0].name}<span> . {$posnavs[0].en_name}</span></h3>
+<div class="listbg">
 	<ul class="list">
 {foreach name=pagenavs item=nav from=$pagenavs}
 		<li class="{if $nav.current}current{/if}">
@@ -26,10 +29,12 @@
         
        
 	</ul>
+</div>
 </nav>
 {else}	<!-- 让客服自己选择，如果当前无子栏目 展现的目标栏目 -->
 <nav>
-	<h4><strong>{$_pagenavs_sub3.pagenavs.name}</strong><span>{$_pagenavs_sub3.pagenavs.en_name}</span><a href="{$_pagenavs_sub3.pagenavs.link}" class='more-btn'></a></h4>
+	<h3>{$_pagenavs_sub3.pagenavs.name}<span> . {$_pagenavs_sub3.pagenavs.en_name}</span></h3>
+	<div class="listbg">
 	<ul class="list">
 		{foreach name=pagenavs2 item=nav from=$_pagenavs_sub3.pagenavs.childmenu}
 		<li class="{if $nav.current}current{/if}">
@@ -52,9 +57,12 @@
 		</li>
 		{/foreach}
 	</ul>
+	</div>
 </nav>
 
 	
 {/if}
+
+
 
 

@@ -1,14 +1,11 @@
 
 <div class="sidebar">
   <div class="subnav">
+ 
     <div class="list_class"> 
-
 <!-- 二级栏目列表（展示到三级子栏目） -->
 {if $pagenavs}
 <nav>
-      
-
-	<div class="alefttitle"><h2><span>{$posnavs[0].en_name}</span> {$posnavs[0].name}</h2></div>	<!-- 下表为0的面包屑导航正好是一级栏目的当前栏目 -->
     <div class="category">
 	<ul class="listbg clearfix">
 		{foreach name=pagenavs item=nav from=$pagenavs}
@@ -33,12 +30,13 @@
 		{/foreach}
 	</ul>
     </div>
+           <div class="bot"><img src="{$site_url}images/sid_bot.jpg" width="232" height="19" /></div>
+
 </nav>
         
         
 {else}	<!-- 让客服自己选择，如果当前无子栏目 展现的目标栏目 -->
 <nav>
-	<div class="alefttitle"><h2><span>{$_aside.pagenavs.en_name}</span> {$_aside.pagenavs.name}</h2></div>	
      <div class="category">
 	<ul class="listbg clearfix">
 		{foreach name=pagenavs2 item=nav from=$_aside.pagenavs.childmenu}
@@ -67,17 +65,10 @@
 
 {/if}
  </div>
+
   </div>
- <div class="sub_contact"> <h2><span>contact us</span>联系方式</h2>
-  <Div class="inner">
-  {$contact.company}<br />
-  {$global.contact_us}</Div></div>
+  <div class="sub_contact">{$global.contact_us}</div>
 </div>
-
-
-
-
-
 
 
 

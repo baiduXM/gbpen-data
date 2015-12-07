@@ -1,34 +1,46 @@
-
-<div id="header" class="wrapper clearfix">
-    <div id="logo"><img src="{$logo}" alt="{$title}" width="178" height="77"/></div>
-     <div class="ser clearfix">
-       <form action="{$search_action}" method="GET">
-          <input type="text" name="s" value="" class="search_area" />
-       <input type="submit" class="search_btn"  value="搜索"/>
-        </form>
-</div>
-
-<div id="nav">
-  <ul class="clearfix">
-            {$limit = 7}
-            {if $navs|count lt $limit}{$limit = $navs|count}{/if}
-            <li style="width:{100/($limit+1)-2}%">
-                <a href="{$site_url}"><b>网站首页</b><span>Home</span></a>
-            </li>
+  <div class="menu">
+       <ul id="nav" class="nav">
+            <li class="nLi" style="width:{100/(($navs|count)+1)}%"><h3><a href="{$site_url}">网站首页</a></h3></li>
             {foreach name=navs item=nav from=$navs}
-            <li class="fl{if $nav.current} current{/if} aa" style="width:{100/($limit+1)}%">
-                <a href="{$nav.link}"><b>{$nav.name}</b><span>{$nav.en_name}</span></a>
-                <ul class="sub clearfix">
-                    {if $nav.childmenu} {foreach key=key item=nav_list from=$nav.childmenu}
-                    <li class="{if $nav.current}current{/if} cc"><a href="{$nav_list.link}">{$nav_list.name}</a></li>
-                    {/foreach} {/if}
-                </ul>
+            <li class="{if $nav.current}on{/if} nLi" style="width:{100/(($navs|count)+1)}%">
+                <h3><a href="{$nav.link}">{$nav.name}</h3></a>
+                {if $nav.childmenu}
+                    <ul class="sub">
+                        {foreach key=key item=nav_list from=$nav.childmenu}
+                        <li class="{if $nav.current}current{/if}"><a href="{$nav_list.link}">{$nav_list.name}</a></li>
+                        {/foreach}
+                    </ul>
+                {/if}
             </li>
-            {if $nav@index+1 eq $limit}{break}{/if}
             {/foreach}
-        </ul>
-</div>
-</div>
+        </ul>  
+  </div>
+ 
+  
+    <!--banner-->
+    <div class="banner">
+      <div class="logo"><a href="{$site_url}"><img src="{$logo}"></a></div>
+
+        <div id="slideBox" class="slideBox">
+          <div class="hd">
+            <ul><li>1</li><li>2</li><li>3</li></ul>
+          </div>
+          <div class="bd">
+            <ul>
+
+              {foreach name=slidepics item=slidepic from=$global.slidepics}
+                    <li><a href="{$slidepic.link}" target="_blank"><img src="{$slidepic.image}" alt="{$slidepic.title}" /></a></li>       
+              {/foreach}
+            </ul>
+          </div>
+
+        
+
+        </div>        
+        <div class="bannerbg"><img src="{$site_url}images/bannerbg.png"></div>
+    </div>
+
+
 
 
 

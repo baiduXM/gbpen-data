@@ -1,6 +1,4 @@
 {
-
-
 	"slidepics": {
 		"value": [{
 			"title": "banner",
@@ -9,31 +7,25 @@
 			"description": "banner1"
 		}, {
 			"title": "测试图2",
-			"image": "images/banner.jpg",
+			"image": "images/banner2.jpg",
 			"link": "http://www.baidu.com"
 		},{
 			"title": "测试图3",
 			"image": "images/banner.jpg",
 			"link": "http://www.baidu.com"
 		}],
-		"description": "banner大图轮播",
+		"description": "关于我们多图轮播",
 		"type": "images",
 		"config": {
-			"width": 1002,
-			"height": 418,
+			"width": 1920,
+			"height": 450,
 			"limit": 3
 		}
 	},
-	"yijian":{
-		"value":{},
-		"description":"意见反馈",
-		"type":"list"
-	},
 	"contact_us": {
-		"value": "电 话：0592-3503377 \r\n 地址：厦门市软件园二期观日路36号201单元",
+		"value": "地址：厦门市软件园二期观日路36号201单元\r\n电话：4000-127-808\r\n传真：0592-3503377\r\n邮箱：tousu@xm12t.com",
 		"description": "联系我们",
 		"type": "textarea"
-	 }
-	
-	
+	}
+
 }

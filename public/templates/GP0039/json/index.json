@@ -1,26 +1,35 @@
 {
-	
-    "about_us": {
-		"description": "左侧内容单页（如关于我们栏目）",
+	"about": {
+		"description": "关于我们",
 		"value": {},
 		"type": "page"
-	},
-	"news":{
-		"description": "中间部分文字列表页（如新闻栏目）",
-		"value": {},
-		"type": "list",
-		"config":{
-			"showchilddata":"true"
-		}	
-
-	},
+	},	
+	
 	"pro":{
-		"description":"右侧图片列表(如产品展示)",
+		"description": "产品中心",
+		"value": {},
+		"type": "list"
+	},	
+	
+	"news":{
+		"description": "首页新闻",
+		"value": {},
+		"type": "list"
+	},
+	
+	"btn1":{
+		"description":"底部第一个按钮",
+		"value":{},
+		"type":"list"
+	},
+
+   "btn2":{
+		"description":"底部第二个按钮",
 		"value":{},
 		"type":"list"
 	}
+
+	
+	
+	
 }
-               
-
-
-

@@ -15,11 +15,12 @@
 DD_belatedPNG.fix('div,ul,li,a,p,img');
 </script>
 <![endif]-->
+<link href="{$site_url}css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="{$site_url}js/jquery1.42.min.js"></script>
 <script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.js"></script>
-
-<link href="{$site_url}css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="{$site_url}js/index.js"></script>
+<script type="text/javascript" src="{$site_url}js/pagesub.js"></script>
+
 <script type="text/javascript">
 	// 跳转手机页面
 	{if $site_another_url}
@@ -29,28 +30,27 @@ DD_belatedPNG.fix('div,ul,li,a,p,img');
 	{/if}
 	</script>
 	<title>{$title}</title>
-
 </head>
 
 <body>
-<div class="wappers">
-    {include file="./_header.html"}
-        <div class="containers h_o ">
-        	<div class="cont h_o">
-				  	<div class="left fl p_r">
-		             {include file="./_pagenavs_sub3.html"}                          
-					</div>			  
-					<div class="right h_o fr">
-	                	<h3 class="list_title"><i>您现在当前的位置：</i><a href="{$site_url}">首页</a> &gt; {foreach item=nav from=$posnavs}>> <a href="{$nav.link}">{$nav.name}</a>
-						{/foreach}
-						</h3>
-						<div class="article h_o">
-			            	<ul class="pro_list">
-			                {foreach name=article item=article from=$list.data}
-						   <li><a href="{$article.link}"><img src="{$article.image}"/><p class="photo_title2">{$article.title}</p></a></li>
-			               {/foreach}  
-		  				</ul>
-		                <ul class="clearfix munber">
+<div class="wrapper">
+    	{include file="./_header.html"}
+       	<div class="content">
+			<div class="about fl">
+                {include file="./_pagenavs_sub3.html"}    
+			</div>			  
+             
+			<div class="news">
+                 <div class="right_tt"><span class="location">所在位置:<a href="{$site_url}">首页</a> &gt; {foreach item=nav from=$posnavs}
+		         >> <a href="{$nav.link}">{$nav.name}</a>{/foreach}</span>{$list.name}
+		         </div>
+				<div class="article">
+               		 <ul class='pro_list'>
+		                {foreach name=article item=article from=$list.data}
+					   <li><a href="{$article.link}"><img src="{$article.image}" height="134" width="179"/><p class="photo_title2">{$article.title}</p></a></li>
+		               {/foreach}  
+			  		</ul>
+  					   <ul class="clearfix munber">
 								<li ><a href="{$page_links.first_link}">首页</a></li>
 								<li ><a href="{$page_links.prev_link}">上一页</a></li>
 								{foreach item=near_link key=near_page from=$page_links.nears_link}
@@ -62,14 +62,12 @@ DD_belatedPNG.fix('div,ul,li,a,p,img');
 								{/foreach}
 								<li><a href="{$page_links.next_link}">下一页</a></li>
 								<li><a href="{$page_links.last_link}">末页</a></li>
-							</ul>
-			            </div>
-		                     
-	           		</div>
-	         </div> 
-	        {include file="./_footer.html"}     
+							</ul>       
+                </div>    
+           </div>                        
        </div>
- </div>   
+     	{include file="./_footer.html"}
+ </div>    
 
 </body>
 </html>

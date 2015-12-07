@@ -6,7 +6,8 @@
 <!-- 二级栏目列表（展示到三级子栏目） -->
 {if $pagenavs}
 <nav>
-	<div class="alefttitle">{$posnavs[0].name}</div>	<!-- 下表为0的面包屑导航正好是一级栏目的当前栏目 -->
+
+	<div class="alefttitle">{$posnavs[0].en_name} / <span>{$posnavs[0].name}</span></div>	<!-- 下表为0的面包屑导航正好是一级栏目的当前栏目 -->
     <div class="category">
 	<ul class="listbg clearfix">
 		{foreach name=pagenavs item=nav from=$pagenavs}
@@ -31,14 +32,12 @@
 		{/foreach}
 	</ul>
     </div>
-     <div class="bot"><img src="{$site_url}images/sub_bot.jpg" width="222" height="15" /></div>   
-
 </nav>
         
         
 {else}	<!-- 让客服自己选择，如果当前无子栏目 展现的目标栏目 -->
 <nav>
-	<div class="alefttitle">{$_aside.pagenavs.name}</div>
+	<div class="alefttitle">{$_aside.pagenavs.en_name}/ <span>{$_aside.pagenavs.name}</span><</div>	
      <div class="category">
 	<ul class="listbg clearfix">
 		{foreach name=pagenavs2 item=nav from=$_aside.pagenavs.childmenu}
@@ -63,14 +62,10 @@
 		{/foreach}
 	</ul>
     </div>
-         <div class="bot"><img src="{$site_url}images/sub_bot.jpg" width="222" height="15" /></div>   
-
 </nav>
 
 {/if}
  </div>
- 
- 
   </div>
 </div>
 

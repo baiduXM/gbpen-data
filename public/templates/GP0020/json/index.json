@@ -1,26 +1,14 @@
 {
 	
-    "about_us": {
-		"description": "左上方内容单页（如关于我们栏目）",
+	"prizesa": {
 		"value": {},
-		"type": "page"
+		"description": "产品中心",
+		"type": "list"
 	},
-	"news":{
-		"description": "右上方方文字列表页（如新闻栏目）",
-		"value": {},
-		"type": "list",
-		"config":{
-			"showchilddata":"true"
-		}	
-
-	},
-	"pro":{
-		"description":"底部图片列表(如产品展示)",
+	"left_nav":{
 		"value":{},
-		"type":"list"
+		"type":"list",
+		"description":"首页侧边栏导航"
 	}
 }
-               
-
-
 

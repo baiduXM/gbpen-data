@@ -1,34 +1,33 @@
 {
-	"site_url": "./",
+	"site_url": "",
 	"site_another_url": "#此刻已跳转到与viewport相符的显示界面",
 	"search_action": "searchresult.html",
-	"title": "厦门易尔通",
+	"title": "厦门纽巴客汽车设备有限公司",
 	"keywords": "关键词A,关键词B,关键词C",
 	"description": "这是这个页面的描述，这是一大段的描述语句，里面有很多的内容，多写点 多写点...",
 	"logo": "images/logo.png",
 	"favicon": "images/favicon.ico",
 	"stylecolor": "green",
 	"footprint": "copyright 2014-2015",
-	"footscript": "<!-- 这里将会输出底部脚本代码 -->\n<script type=\"text/javascript\" src=\"http://chanpin.xm12t.com.cn/js/quickbar.js\"></script>",
+	"footscript": "<!-- 这里将会输出底部脚本代码 -->",
 	"headscript": "<!-- 这里将会输出头部脚本代码 -->",
-	
 	"navs": [
 		{
+
 			"name": "关于我们",
-			"en_name": "About Us",
+			"en_name": "ABOUT US",
 			"link": "list-page.html?id=1",
-			"image": "images/aimg.jpg",
-			"description": "百度厦门营销服务中心——厦门易尔通网络科技有限公司 2005年，厦门易尔通网络科技有限公司被百度授权建立了厦门地区“百度客户销售服务中心”该服务中心为厦门地区的百度客户提供专业的服务。 目前我们的客户服务中心为厦门、泉州、漳州、龙岩、莆田及周边地区的百度客户在“咨询服务”、“开户服务”、“关键字管理 ”到“效果跟踪报告方面提供服务。让客户充分体验产品加上专业的服....百度厦门营销服务中心——厦门易尔通网络科技有限公司 2005年，厦门易尔通网络科技有限公司被百度授权建立了厦门地区“百度客户销售服务中心”该服务中心为厦门地区的百度客户提供专业的服务。 目前我们的客户服务中心为厦门、泉州、漳州、龙岩、莆田及周边地区的百度客户在“咨询服务”、“开户服务”、“关键字管理 ”到“效果跟踪报告方面提供服务。让客户充分体验产品加上专业的服....百度厦门营销服务中心——厦门易尔通网络科技有限公司 2005年，厦门易尔通网络科技有限公司被百度授权建立了厦门地区“百度客户销售服务中心”该服务中心为厦门地区的百度客户提供专业的服务。 目前我们的客户服务中心为厦门、泉州、漳州、龙岩、莆田及周边地区的百度客户在“咨询服务”、“开户服务”、“关键字管理 ”到“效果跟踪报告方面提供服务。让客户充分体验产品加上专业的服....",
+			"image": "http://chanpin.xm12t.com.cn/images/cat_01.jpg",
+			"description": "我司是国内最早从事汽车玻璃钢配件研发及制作的企业厂商之一，现为金龙联合汽车工业有限公司、金龙旅行车有限公司等整车制造企业玻璃钢配件的主要供应商。公司已先后通过ISO9001：2008质量管理体系认证、中国船级社的CCS工厂认证及产品CE认证，2011年被认定为“高新技术企业”。 2013年起我司成立了专用车事业部，专业从事冷藏车、房车、商务车、采血车等的改装和销售，现已和国内多家知名供应商合作....",
 			"current": 0,
 			"lastest": null,
 			"type": 4,
-			"childmenu": null
+			"childmenu":null
 		},
-		
 		{
-			"name": "旅游资讯",
-			"en_name": "Trip News",
-			"link": "list-imagetext.html?id=2",
+			"name": "新闻中心",
+			"en_name": "NEWS",
+			"link": "list-text.html?id=2",
 			"image": "http://chanpin.xm12t.com.cn/images/cat_01.jpg",
 			"current": 0,
 			"lastest": [
@@ -530,9 +529,9 @@
 			]
 		},
 		{
-			"name": "联系我们",
-			"en_name": "Contacts",
-			"link": "list-page.html?id=3",
+			"name": "产品中心",
+			"en_name": "PRODUCTS",
+			"link": "list-image.html?id=3",
 			"image": "http://chanpin.xm12t.com.cn/images/cat_01.jpg",
 			"description": "这是栏目的一段描述...",
 			"current": 0,
@@ -541,11 +540,11 @@
 			"childmenu": null
 		},
 		{
-			"name": "周边游",
+			"name": "案例展示",
 			"en_name": "Trip Around",
 			"link": "list-text.html?id=4",
-			"image": "images/nimg.jpg",
-			"description": null,
+			"image": "http://chanpin.xm12t.com.cn/images/cat_01.jpg",
+			"description": "这是栏目的一段描述...",
 			"current": 0,
 			"lastest": [
 				{
@@ -709,7 +708,7 @@
 			"childmenu": null
 		},
 		{
-			"name": "国内游",
+			"name": "合作伙伴",
 			"en_name": "Trip Internal",
 			"link": "list-text.html?id=5",
 			"image": "http://chanpin.xm12t.com.cn/images/cat_01.jpg",
@@ -877,7 +876,7 @@
 			"childmenu": null
 		},
 		{
-			"name": "境外游",
+			"name": "意见反馈",
 			"en_name": "Trip International",
 			"link": "list-text.html?id=6",
 			"image": "http://chanpin.xm12t.com.cn/images/cat_01.jpg",
@@ -1045,7 +1044,7 @@
 			"childmenu": null
 		},
 		{
-			"name": "自驾游",
+			"name": "联系我们",
 			"en_name": "Trip Drive",
 			"link": "list-text.html?id=7",
 			"image": "http://chanpin.xm12t.com.cn/images/cat_01.jpg",
@@ -1213,8 +1212,6 @@
 			"childmenu": null
 		}
 	],
-	
-	
 	"pagenavs": [
 		{
 			"name": "导航F1",
@@ -1277,7 +1274,7 @@
 		}
 	],
 	"contact": {
-		"company": "XXX有限公司",
+		"company": "厦门纽巴客汽车设备有限公司",
 		"name": "X先生",
 		"mobile": 13489990000,
 		"telephone": "0592-23232232",
@@ -1826,7 +1823,7 @@
 			"name": "关于我们",
 			"en_name": "About Us",
 			"link": "list-page.html?id=1",
-			"image": "http://chanpin.xm12t.com.cn/images/tourlist/navicon2.png",
+			"image": "images/about.jpg",
 			"description": "这是栏目的一段描述...",
 			"content": "&lt;p&gt;这里是页面内容，可以使用html&lt;/p&gt;",
 			"type": 4,

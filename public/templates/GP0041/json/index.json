@@ -1,35 +1,60 @@
 {
-	"about": {
-		"description": "关于我们",
+	
+    "about_us": {
+		"description": "左侧内容单页（如关于我们）",
 		"value": {},
 		"type": "page"
-	},	
-	
-	"pro":{
-		"description": "产品中心",
-		"value": {},
-		"type": "list"
-	},	
-	
+	},
 	"news":{
-		"description": "首页新闻",
+		"description": "中间文字列表（如影视资讯）",
 		"value": {},
-		"type": "list"
+		"type": "list"		
 	},
-	
-	"btn1":{
-		"description":"底部第一个按钮",
+	"jion":{
+		"description":"右侧图片列表(如产品展示)",
 		"value":{},
 		"type":"list"
 	},
-
-   "btn2":{
-		"description":"底部第二个按钮",
-		"value":{},
-		"type":"list"
+	"about_img":{
+		"description":"左侧内容单页-栏目图片（如关于我们）",
+		"value":{
+			"title": "XXX企业",
+			"image": "images/aboutimg.png",
+			"link": "http://www.baidu.com/"
+		},
+		"type": "image",
+		"config": {
+			"width":296,
+			"height": 92
+		}
+	},
+	"news_img":{
+		"description":"中间文字列表-栏目图片（如影视资讯）",
+		"value":{
+			"title": "XXX企业",
+			"image": "images/newsimg.png",
+			"link": "http://www.baidu.com/"
+		},
+		"type": "image",
+		"config": {
+			"width":298,
+			"height": 112
+		}
+	},
+	"pro_img":{
+		"description":"右侧图片列表-栏目图片（如影视资讯）",
+		"value":{
+			"title": "XXX企业",
+			"image": "images/joinimg.png",
+			"link": "http://www.baidu.com/"
+		},
+		"type": "image",
+		"config": {
+			"width":296,
+			"height": 92
+		}
 	}
-
-	
-	
-	
 }
+
+
+

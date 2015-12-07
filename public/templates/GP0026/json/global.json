@@ -1,6 +1,4 @@
 {
-
-
 	"slidepics": {
 		"value": [{
 			"title": "banner",
@@ -16,24 +14,31 @@
 			"image": "images/banner.jpg",
 			"link": "http://www.baidu.com"
 		}],
-		"description": "banner大图轮播",
+		"description": "导航下方的大图轮播（banner）",
 		"type": "images",
 		"config": {
-			"width": 1002,
-			"height": 418,
-			"limit": 3
+			"width": 1920,
+			"height": 584,
+			"limit": 6
 		}
 	},
-	"yijian":{
-		"value":{},
-		"description":"意见反馈",
-		"type":"list"
-	},
-	"contact_us": {
-		"value": "电 话：0592-3503377 \r\n 地址：厦门市软件园二期观日路36号201单元",
-		"description": "联系我们",
-		"type": "textarea"
-	 }
+	"links": {
+		"value": [{
+			"title": "厦门易尔通",
+			"image": "http://tb2.bdstatic.com/tb/static-common/img/search_logo_big_282cef2.gif",
+			"link": "http://www.12t.cn"
+		}, {
+			"title": "百度",
+			"image": "http://img0.bdstatic.com/static/common/widget/search_box_search/logo/logo_3b6de4c.png",
+			"link": "http://www.baidu.com"
+		}],
+		"description": "友情链接",
+		"type": "images",
+		"config": {
+			"width": 100,
+			"height": 60
+		}
+	}
 	
 	
 }

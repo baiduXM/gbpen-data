@@ -1,25 +1,22 @@
 {
-	"list1": {
+	"about": {
+		"description": "关于我们",
 		"value": {},
-		"description": "第一个栏目列表",
-		"type": "list"
-	},
-	"list2": {
+		"type": "page"
+	},	
+	"pro":{
+		"description": "产品中心",
 		"value": {},
-		"description": "第二个栏目列表",
 		"type": "list"
-	}, 
-
-
-	"list3": {
-		"value": {},
-		"description": "第三个栏目列表",
-		"type": "list"
-	},
-
-     "list4": {
-		"value": {},
-		"description": "第四个栏目列表",
-		"type": "list"
+	},	
+	"news":{
+		"description":"新闻中心",
+		"value":{},
+		"type":"list"
+	},		
+	"pro_list":{
+		"description":"首页侧边栏导航",
+		"value":{},
+		"type":"list"
 	}
 }

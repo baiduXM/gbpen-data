@@ -33,51 +33,81 @@
 <body>    
 
 
+ {include file='./_header.html'}
 
-    {include file='./_header.html'}
-    <div class="container_bg">
-  <div id="container" class="clearfix wrapper">
-    
-      <div id="about">
-      <div class="title"><span><a href="{$index.about.link}">更多>></a></span>
-        <h2><b>{$index.about.en_name}</b> {$index.about.name}</h2>
-      </div>
-      <div class="inner"><img src="{$index.about.image}"  width="95" height="65" />{$index.about.description}</div>
-    </div>
-    
-    
-    <div id="pro">
-      <div class="title"><span><a href="{$index.pro.link}">更多&gt;&gt;</a></span>
-        <h2><b>{$index.pro.en_name}</b> {$index.pro.name}</h2>
-      </div>
-      <div class="inner">
-        <ul class="clearfix" id="MarqueeDiv1">
-        {foreach name=pro item=pro from=$index.pro.data}
-          <li><a href="{$pro.link}"><div class="pic"><img src="{$pro.image}"/></div></a></li>
-          {/foreach}
-        </ul>
-      </div>
-    </div>
-
-
-   
-   
-   
-   <div id="video">
+<div id="container" class=" clearfix">
+  <div id="about" class="clearfix wrapper">
+    <div class="a_l">
       <div class="title">
-        <h2>宣传视频</h2>
+        <h2><span>{$index.about.en_name}</span><br />
+          <b>{$index.about.name}</b></h2>
       </div>
-      <div class="inner">
-      <embed src="{$index.video}" allowFullScreen="true" quality="high" width="199" height="127" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
-      
-      
-      
+      <div class="inner">{$index.about.description}</div>
+      <div class="mo"><a href="{$index.about.link}"><img src="{$site_url}images/mo.jpg" width="22" height="22" /></a></div>
+    </div>
+    <div class="a_r">
+      <div class="xw">{$index.about_txt}</div>
+      <img src="{$index.about.image}" width="455" height="338"  /> </div>
+  </div>
+  <div class="news_bg">
+    <div id="news" class="wrapper">
+      <div class="title">
+        <h2><span>{$index.news.en_name}</span><br />
+          <b>{$index.news.name}</b></h2>
+        <h3><a href="{$index.news.link}"><img src="{$site_url}images/mo2.jpg" width="22" height="21" /></a></h3>
+
+      </div>
+      <div class="inner yc">
+        <div class="pex"><img src="{$site_url}images/ico2.png" width="110" height="13" /></div>
+        <div class="zex"><img src="{$site_url}images/ico33.png" width="110" height="13" /></div>
+        <ul>   
+        {foreach name=news item=article from=$index.news.data}   
+          
+          <li>
+            <div class="nn">
+             <a href="{$article.link}"> <div class="n1"><img src="{$article.image}" width="120" height="116" /></div>
+              <p>{$article.title}</a></p>
+              <div class="te">{$article.description}</div></a>
+            </div>
+          </li>
+          
+          	  {if $article@index+1 == 4}{break}{/if}
+               {/foreach}
+          
+        </ul>
+ 
       </div>
     </div>
-   
-   
- </div>
- </div>
+  </div>
+  <div id="pro">
+    <div class="title">
+      <div class="wrapper">
+        <div class="pz clearfix">
+          <h2><span>{$index.case.en_name}</span><br />
+            <b>{$index.case.name}</b></h2>
+          <h3><a href="{$index.case.link}"><img src="{$site_url}images/mo2.jpg" width="22" height="21" /></a></h3>
+        </div>
+      </div>
+    </div>
+    <div class="inner wrapper yc">
+    <ul id="MarqueeDiv1" class="clearfix">
+{foreach name=case item=case from=$index.case.data}
+        <li><a href="{$case.link}"><img height="193"  src="{$case.image}" /></a><a href="{$case.link}"><p>{$case.title}</p></a></li>
+       {/foreach}
+    </ul>
+    
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+    
+ 
     
     {include file="./_footer.html"}
 </body>

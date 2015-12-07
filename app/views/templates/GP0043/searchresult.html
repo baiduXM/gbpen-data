@@ -16,9 +16,10 @@
 <meta name="keywords" content="{$keywords}" />
  <meta name="description" content="{$description}" />
 <link href="{$site_url}css/css.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="{$site_url}js/jquery1.9.min.js"></script>
+<script type="text/javascript" src="{$site_url}js/jquery1.42.min.js"></script>
 <script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.js"></script>
  <script id="jsID" type="text/javascript" src="{$site_url}js/jquery_nav.js"></script>
+<script type="text/javascript" src="{$site_url}js/jquery_banner.js"></script>
 <script type="text/javascript" src="{$site_url}js/jquery_pic.js"></script>
 
 <script type="text/javascript" src="{$site_url}js/left_nav.js"></script>
@@ -27,24 +28,27 @@
 <body>
  <!-- 头部开始 -->
  {include file="./_header.html"}
- <div class="contant about_c">
+ <div class="contant about_contant">
            <div class="about_l"><div class="left">
          {include file="./_pagenavs_sub3.html"}
         </div>
-        <div class="about_tel">
-          {include file="./_global.html"}
+        <div class="left2">
+          <a href="{$global.left2.link}" style="background:url({$global.left2.image}) no-repeat center center;"></a>
+        </div>
+        <div class="left3">
+           <a href="{$global.left3.link}" style="background:url({$global.left3.image}) no-repeat center center;"></a>
         </div>
           
           </div>
           <div class="about_r">
-          <h3 class="pic_tit titi"><em class="more">当前位置:<a href="{$site_url}">首页</a> - 搜索结果
-</em>搜索结果</h3>
+          <h2 class="top_pro"><b></b>搜索结果</h2>
        <div class="info"><p class="sousu">搜索关键词为“<span>{$search.keyword}</span>”的产品/文章，共搜索到{$search.total}个结果：</p>
 <ul class="list">
   {foreach item=article from=$search.data}
   <li><a href="{$article.link}">{$article.title}<time class="fr" datetime="{$article.pubdate}" pubdate="pubdate">{$article.pubdate}</time></a></li>
   {/foreach}
-</ul></div>
+</ul><div class="num">{include file="./_num.html"}</div>
+</div>
           </div>
   </div>
  <!-- 头部结束 -->

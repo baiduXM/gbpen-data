@@ -22,26 +22,31 @@
     <script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.js"></script>
     <script type="text/javascript" src="{$site_url}js/jquery.kinMaxShow-1.0.min.js"></script>
     <script type="text/javascript" src="{$site_url}js/function.js"></script>
-  
+   
     <title>{$title}</title>
 </head>
 
 <body>
     {include file='./_header.html'}
-    <div id="container" class="wrapper clearfix">
-                    {include file='./_aside.html'}            	
-
-        <div class="main">
-            <div class="crumb">
-                {$article.category.name}
-              
-                <span>当前位置：<a href="{$site_url}">首页</a>
+ <div id="sub_container" class=" clearfix">
+  <div class="sid_bg">
+    <div class="sidebar wrapper clearfix">
+      <div class="title">
+        <h2><span>{$article.category.en_name}</span><br />
+          <b>{$article.category.name}</b></h2>
+      </div>
+      
+      
+      <div class="crumb"><img src="{$site_url}images/ico5.jpg" width="19" height="24"class="pngFix" /><span>当前位置：<a href="{$site_url}">首页</a>
            {foreach item=nav from=$posnavs}
              &gt; <a href="{$nav.link}">{$nav.name}</a>
-           {/foreach}</span>
-            </div>
+           {/foreach}</span> </div>
+    </div>
+  </div>
+  <div class="main wrapper clearfix">
+                    {include file='./_aside.html'}     
             <div class="article">
-                        <div class="descripimg">
+<div class="descripimg">
                             <div id="slideBoxb" class="slideBoxb" style="margin:0 auto">
                                 <div class="hd">
                                     <ul>
@@ -53,7 +58,7 @@
                                 <div class="bd">
                                     <ul>
                                         {foreach item=proshowb from=$article.images}
-                                        <li><img src="{$proshowb.image}" alt="{$proshowb.title}" /></li>
+                                        <li><img src="{$proshowb.image}" alt="{$proshowb.title}" width="500" height="500"/></li>
                                         {/foreach}
                                     </ul>
                                 </div>
@@ -62,25 +67,27 @@
                                 <a class="next" href="javascript:void(0)"></a>
                             </div>
                         </div>
-                        <div class="descriptcot">
+<div class="descriptcot">
                             <div class="text_p">
                                 产品名称：{$article.title}
                                 <br />
                             </div>
                         </div>
-                        <div class="moule_edot">
+<div class="moule_edot">
                             <b style="font-size:14px;">产品介绍</b>
                             <br /> {$article.content|unescape:"html"} </div>
-                        <div style="height:30px;overflow: hidden; padding-top:7px; margin-top:15px;color:#000; float:right;">
+<div style="height:30px;overflow: hidden; padding-top:7px; margin-top:15px;color:#000; float:right;">
                             <!-- Baidu Button BEGIN -->
                             {shareExt shareText=$article.content|unescape:"html"|strip_tags|truncate:140:"…" sharePic=$article.image}
                         </div>
-                        <ul class="inner_pages" style="margin-left:15px; clear:both;">
+<ul class="inner_pages" style="margin-left:15px; clear:both;">
                             <li>上一篇：<a href="{$article.prev.link}">{$article.prev.title}</a></li>
                             <li>下一篇：<a href="{$article.next.link}">{$article.next.title}</a></li>
                         </ul>
                     </div>
         </div>
+    </div>
+    </div>
     </div>
     {include file='./_footer.html'}
 </body>

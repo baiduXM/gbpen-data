@@ -1,61 +1,48 @@
-<header>
-<section>
-<div class="head_outsild">
-      <div class="head">
-          <a href="{$site_url}" title="返回首页" class="logo"><img src="{$logo}" height="139" width="503" /></a>
-          <div class="sz"><a href="{$site_url}"><img src="{$site_url}images/sz_03.png" height="10" width="11" alt="">&nbsp;返回首页</a>
-          <a href="javascript:void(0);" onclick="SetHome(this, window.location)"><img src="{$site_url}images/sy_05.png" height="10" width="11" alt="">&nbsp;设为首页</a>
-          <a href="javascript:void(0);" onclick="shoucang(document.title, window.location)"><img src="{$site_url}images/sy_05.png" height="10" width="11" alt="">&nbsp;收藏首页</a></div>
-          <form action="{$search_action}" method="GET" class="ss"> 
-              <span>全网搜索</span>
-              <img src="{$site_url}images/ssl_05.png" height="35" width="5" alt="">
-              <input type="text" placeholder="请输入关键词" class="input_case" name="s">
-              <input type="submit" value="" class="input_key">
-          </form>
-      </div>
+
+
+
+
+<div id="header_bar" >
+<div class="wrapper">
+<div class="search">
+
+
+  <form action="{$search_action}" method="GET">
+  <input type="text" name="s" value="" class="search_area" />
+  <input type="submit" class="search_btn"  value="搜索"/>
+</form>
 </div>
-</section>
-<section>
-    <div class="header_menu">   
-       <ul id="nav" class="nav">
-       <li class="nLi">
-       <h3><a href="{$site_url}">网站首页<br />HOME</a></h3>
-      </li>
-      {foreach item=nav from=$navs}
-      <li class="nLi">
-       <h3><a href="{$nav.link}" class="{if $nav.current}current{/if}">{$nav.name}<br />{$nav.en_name}</a></h3>
-      
-        {if $nav.childmenu}
-          <ul class="sub">
-
-            {foreach item=nav_list from=$nav.childmenu}
-            <li class="{if $nav_list.current}current{/if}"><a href="{$nav_list.link}">{$nav_list.name}</a></li>
-            {/foreach}
-          </ul>
-        {/if}
-      </li>
-      {/foreach}
-    </ul>
-    </div>
-</section>
- <section>
-<div class="banner">
-    <div id="slideBox" class="slideBox">
-        
-       <div class="bd">
-        <ul>
-                     {foreach item=slidepic from=$_header.slidepics}
-                              <li><a href="{$slidepic.link}" target="_blank"><img src="{$slidepic.image}" alt="{$slidepic.title}" height="458px" width="1600px" /></a></li>
-                     {/foreach}
-                </ul>
-      </div>
-
-
-      <!-- 下面是前/后按钮代码，如果不需要删除即可 -->
-      <a class="prev" href="javascript:void(0)"></a>
-      <a class="next" href="javascript:void(0)"></a>
-
-    </div>
 </div>
-    </section>
-</header>
+</div>
+<div id="banner">
+<h1><a href="{$site_url}"><img src="{$logo}" alt="{$title}" /></a></h1>
+ <div id="nav">
+   <ul class="wrapper menu1">
+    {foreach item=nav from=$navs}
+    <li class="{if $nav.current}current{/if} nav1"><a href="{$nav.link}">{$nav.name}</a>
+	<span class="hoverview">
+		<ul class="sub clearfix">
+		  {if $nav.childmenu} {foreach item=nav_list from=$nav.childmenu}
+		  <li class="{if $nav.current}current{/if} nav2"><a href="{$nav_list.link}">
+
+{$nav_list.name}</a></li>
+                  {/foreach} {/if}
+		</ul>
+	</span>
+		  </li>
+{if $nav@index+1 eq 6}{break}{/if}
+{/foreach}
+   </ul>
+ </div>
+  <div class="banner_box">
+    <div id="kinMaxShow" style="display:none;"> {foreach name=slidepics item=slidepic from=$global.slidepics}
+      <div> <a href="{$slidepic.link}" target="_blank"><img src="{$slidepic.image}" alt="{$slidepic.title}"  /></a></div>
+      {/foreach} </div>
+  </div>
+</div>
+
+
+
+
+
+

@@ -1,75 +1,79 @@
 {
-	"links": {
-		"value": [{
-			"title": "百度贴吧",
-			"image": "http://tb2.bdstatic.com/tb/static-common/img/search_logo_big_282cef2.gif",
-			"link": "http://tieba.baidu.com"
-		}, {
-			"title": "百度图片",
-			"image": "http://img0.bdstatic.com/static/common/widget/search_box_search/logo/logo_3b6de4c.png",
-			"link": "http://image.baidu.com"
-		}],
-		"description": "友情链接",
-		"type": "images",
+ "slidepics":{
+	"value":[{
+		
+		"title":"测试图1",
+		"image":"images/banner.jpg",
+		"link":"http://www.baidu.com"
+	},{
+		"title":"测试图1",
+		"image":"images/banner.jpg",
+		"link":"http://www.baidu.com"
+	
+	},{
+		"title":"测试图1",
+		"image":"images/banner.jpg",
+		"link":"http://www.baidu.com"
+	
+	}
+	
+	],
+	"description":"大轮滚动",
+	"type":"images",
+	"config": {
+			"width": 1000,
+			"height": 323,
+			"limit": 3
+ 
+			}
+ 
+ },
+ "second_navs": {
+		"value": {},
+		"description": "第二导航（顶部）",
+		"type": "navs",
 		"config": {
-			"width": 100,
-			"height": 60
+			"limit":3
 		}
 	},
-	"list1":{
-		"description":"左边无分类的第1个子栏目",
-		"value":{},
-		"type":"nav",
-		"config":{
-			"filter":"list,page"
+	"ftlogo": {
+		"value": {},
+		"description": "底部logo",
+		"type": "page",
+		"config": {
+			"width": 155,
+			"height": 77
+			
 		}
 	},
-	"list2":{
-		"description":"左边无分类第2个子栏目",
-		"value":{},
-		"type":"nav",
-		"config":{
-			"filter":"list,page"
-		}
+		
+"contact": {
+		"value": {},
+		"description": "联系我们",
+		"type": "page",
+		"config": {
+			"width": 320,
+			"height": 88
+			}
 	},
-	"list3":{
-		"description":"左边无分类第3个子栏目",
-		"value":{},
-		"type":"nav",
-		"config":{
-			"filter":"list,page"
-		}
+	"Recruitment": {
+		"value": {},
+		"description": "人才招聘",
+		"type": "page",
+		"config": {
+			"width": 320,
+			"height": 88
+			}
 	},
-	"sidea":{
-		"description":"侧边的栏目分类一",
-		"value":{},
-		"type":"nav",
-		"config":{
-			"filter":"list,page"
-		}
-	},	
-	"sideb":{
-		"description":"侧边的栏目分类二",
-		"value":{},
-		"type":"nav",
-		"config":{
-			"filter":"list,page"
-		}
-	},
-	"sidec":{
-		"description":"侧边搜索",
-		"value":{},
-		"type":"nav",
-		"config":{
-			"filter":"list,page"
-		}
-	},		
-	"sided":{
-		"description":"侧边微信",
-		"value":{},
-		"type":"nav",
-		"config":{
-			"filter":"list,page"
-		}
-	}			
-}
+	"Feedback": {
+		"value": {},
+		"description": "意见反馈",
+		"type": "page",
+		"config": {
+			"width": 320,
+			"height": 88
+			}
+	}
+	
+ }
+ 

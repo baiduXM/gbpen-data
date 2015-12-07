@@ -1,8 +1,8 @@
 <!-- 二级栏目列表（展示到三级子栏目） -->
 {if $pagenavs}
 <nav>
-	<div class="a_title2">{$posnavs[0].name} <i>{$posnavs[0].en_name}</i></div>	<!-- 下表为0的面包屑导航正好是一级栏目的当前栏目 -->
-	<ul class="listbg clearfix h_o">
+	<span>{$posnavs[0].name}</span><!-- 下表为0的面包屑导航正好是一级栏目的当前栏目 -->
+	<ul class="first clearfix">
 		{foreach name=pagenavs item=nav from=$pagenavs}
 		<li class="{if $nav.current}current{/if}">
 			<a href="{if $nav.childmenu}javascript:;{else}{$nav.link}{/if}" class="h_top {if $nav.selected}selected{/if}">{$nav.name}</a>
@@ -24,16 +24,11 @@
 		</li>
 		{/foreach}
 	</ul>
-	<ul class="contact001 h_o">
-              <li><a href="{$global.contact.link}"><img src="{$global.contact.image}"></a></li>
-              <li><a href="{$global.Recruitment.link}"><img src="{$global.Recruitment.image}"></a></li>
-             
-          </ul>
 </nav>
 {else}	<!-- 让客服自己选择，如果当前无子栏目 展现的目标栏目 -->
 <nav>
-	<div class="a_title2"><span>{$_pagenavs_sub3.pagenavs.en_name}</span><i>{$_pagenavs_sub3.pagenavs.name}</i></div>	
-	<ul class="listbg clearfix h_o">
+	<span>{$_pagenavs_sub3.pagenavs.name}</span>
+	<ul class="first clearfix">
 		{foreach name=pagenavs2 item=nav from=$_pagenavs_sub3.pagenavs.childmenu}
 		<li class="{if $nav.current}current{/if}">
 			<a href="{if $nav.childmenu}javascript:;{else}{$nav.link}{/if}">{$nav.name}</a>
@@ -55,11 +50,6 @@
 		</li>
 		{/foreach}
 	</ul>
-	<ul class="contact001 h_o">
-              <li><a href="{$global.contact.link}"><img src="{$global.contact.image}"></a></li>
-              <li><a href="{$global.Recruitment.link}"><img src="{$global.Recruitment.image}"></a></li>
-           
-          </ul>
 </nav>
 
 

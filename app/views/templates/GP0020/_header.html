@@ -1,59 +1,72 @@
 
-<div class="header">
-  
-  <div class="searchbox">
-    <span>全站搜索:</span>
-    <div class="search">
-      <form action="{$search_action}" method="GET">
-        <input class="sinp fl" type="text" value="请输入关键字" name="s" />
-        <input class="sbtn fl" type="submit" value="搜 索" />
-      </form>          
-    </div>
-  </div>
+<header>
+	<section class="headtop">
+		<div class='header'>
 
-   <div class="menu">
-        <h1 class="logo"><a href="{$site_url}" title="{$title}"><img src="{$logo}" alt=""></a></h1>
-        <nav>
-          <ul class="nav" id="nav">
-           {$limit = 6}
-          {foreach item=nav from=$navs}
-            <li class="{if $nav@index > 2}fl{else}fr{/if} nLi {if $nav.current}on{/if}">
-              <h3><a href="{$nav.link}">{$nav.name}</a></h3>
-              {if $nav.childmenu}
-                <ul class="sub">
-                  {foreach item=nav_list from=$nav.childmenu}
-                  <li class="{if $nav_list.current}current{/if}"><a href="{$nav_list.link}">{$nav_list.name}</a></li>
-                  {/foreach}
-                </ul>
-              {/if}
-            </li>
-            {if $nav@index+1 gte $limit}{break}{/if}
-          {/foreach} 
-          </ul>
-        </nav>  
-   </div>
-  
+			<div class='container'>
+		        <div class="logo"><a href="{$site_url}"><img src="{$logo}"></a></div>
+				<span class="home"><a href="{$site_url}">返回首页</a> </span>
+			</div>
+		</div>
+        		
+		<div class="nav-box"> 
+			<div class="menu">      
+				<ul id="nav" class="nav clearfix">
+					{$limit = 5}
+					<li class="nLi" style="width:{100/($limit+1)}%">
+						<h3><a href="{$site_url}">首页</a></h3>
+					</li>
+					
+		            {foreach name=navs item=nav from=$navs}
+					<li  class="{if $nav.current} current on{/if} nLi" style="width:{100/($limit+1)}%">
+							<h3><a href="{$nav.link}">{$nav.name}</a></h3>
+						<ul class="sub clearfix">
+		                {if $nav.childmenu}
+							{foreach key=key item=nav_list from=$nav.childmenu}
+							<li class="{if $nav.current}current{/if}"><a href="{$nav_list.link}">{$nav_list.name}</a></li>
+							{/foreach}
+		                    {/if}
+						</ul>
+					</li>
+					{if $nav@index+1 gte $limit}{break}{/if}
+		          {/foreach}
+		                                          
+				</ul>
+				<div class='tel'>
+					<span>全国免费热线:</span>{$contact.telephone}
+				</div>        
+	        </div>     
+        </div>
+          
+        <div class="banner">
+            <div id="slideBox" class="slideBox">
+				<div class="hd">
+					<ul><!-- <li>1</li><li>2</li><li>3</li></ -->
+						{foreach item=countimg from=$global.slidepics}
+						  <li>{$countimg@index+1}</li>
+						{/foreach}
+					<ul>
+				</div>
+				<div class="bd">
+					<ul>
+	                  {foreach name=slidepics item=slidepic from=$global.slidepics}
+	                      <li><a href="{$slidepic.link}" target="_blank"><img src="{$slidepic.image}" alt="{$slidepic.title}" /></a></li>
+	                    
+	                    {/foreach}                     
+						
+					</ul>
+				</div>	
 
-</div>
 
-<!--banner-->
-<div class="banner">
-
-  <div class="focusBox">
-      <ul class="pic">
-        {foreach name=slidepics item=slidepic from=$global.slidepics}
-            <li><a href="{$slidepic.link}" target="_blank"><img src="{$slidepic.image}" alt="{$slidepic.title}" /></a></li>       
-        {/foreach}
-      </ul>
-      <a class="prev" href="javascript:void(0)"></a>
-      <a class="next" href="javascript:void(0)"></a>
-      <ul class="hd">
-        {foreach name=slidepics item=slidepic from=$global.slidepics}
-          <li></li>
-        {/foreach}
-       
-      </ul>
-  </div>
+			</div>
 
 
-</div>    
+        </div> 
+ 	</section>
+</header>
+ 
+ 
+
+
+
+

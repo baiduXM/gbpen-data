@@ -1,2 +1,14 @@
-<div class="foot">{$footprint} {$contact.company}  技术支持：<a href="http://www.12t.cn/">厦门易尔通网络科技有限公司</a> 人才支持：<a href="http://www.xmrc.com.cn/">厦门人才网</a> </div> 
+    <div class="foot">
+        <div class="footer">
+            {$footprint}
+            <div class="footnav">
+
+				{foreach item=nav from=$global.second_navs}
+				    <a href="{$nav.link}">{$nav.name}</a> |
+				    
+				{/foreach}
+
+            </div>
+        </div>
+    </div>
 {$footscript}    

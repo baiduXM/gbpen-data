@@ -1,7 +1,9 @@
 <!-- 二级栏目列表（展示到三级子栏目） -->
 {if $pagenavs}
-<div class="sidebar">
-    <h2 class="sidebar-tit">{$posnavs[0].name}</h2>
+<div class="ny-menu">
+  <div class="sidetbg"></div>
+  <div class="sidebar-tit">{$posnavs[0].name}</div>
+
     <ul class="first">
 		{foreach name=pagenavs item=nav from=$pagenavs}
 		<li class="{if $nav.current}current{/if}">
@@ -24,11 +26,12 @@
 		</li>
 		{/foreach} 
     </ul>                    
+    <div class="sidebbg"></div>
 </div>
-
 {else}	<!-- 让客服自己选择，如果当前无子栏目 展现的目标栏目 -->
-<div class="sidebar">
-	 <h2 class="sidebar-tit">{$_pagenavs_sub3.pagenavs.name}</h2>
+<div class="ny-menu">
+  <div class="sidetbg"></div>
+  <div class="sidebar-tit">{$_pagenavs_sub3.pagenavs.name}</div>
 	<ul class="first">
 		{foreach name=pagenavs2 item=nav from=$_pagenavs_sub3.pagenavs.childmenu}
 		<li class="{if $nav.current}current{/if}">
@@ -51,8 +54,8 @@
 		</li>
 		{/foreach}
 	</ul>
+    <div class="sidebbg"></div>
 </div>
-
 	
 {/if}
 

@@ -1,57 +1,42 @@
-    <div class="header">
-      <div class="headerbox">
-        <div class="logo"><a href="{$site_url}" title="返回首页"><img src="{$logo}"></a></div>
-        <div class="menu">
-         
-            <ul id="nav" class="nav">
 
-                 {$limit = 5}
-                 <li class="nLi"  style="width:{100/($limit+1)}%"><h3><a href="{$site_url}">网站首页</a></h3></li>
-                  {foreach item=nav from=$navs}
-                    <li class="nLi {if $nav.current}on{/if}" style="width:{100/($limit+1)}%">
-                      <h3><a href="{$nav.link}">{$nav.name}</a></h3>
-                      {if $nav.childmenu}
-                        <ul class="sub">
-                          {foreach item=nav_list from=$nav.childmenu}
-                          <li class="{if $nav_list.current}current{/if}"><a href="{$nav_list.link}">{$nav_list.name}</a></li>
-                          {/foreach}
-                        </ul>
-                      {/if}
-                    </li>
-                    {if $nav@index+1 gte $limit}{break}{/if}
-                  {/foreach}              
-            </ul>      
-        </div>
-      </div>
-    </div>
+<div id="header" class="wrapper clearfix">
+    <div id="logo"><img src="{$logo}" alt="{$title}" width="178" height="77"/></div>
+     <div class="ser clearfix">
+       <form action="{$search_action}" method="GET">
+          <input type="text" name="s" value="" class="search_area" />
+       <input type="submit" class="search_btn"  value="搜索"/>
+        </form>
+</div>
 
-    <!--banner-->
-    <div class="banner">
-
-      <div class="focusBox" style="margin:0 auto">
-          <ul class="pic">
-            {foreach name=slidepics item=slidepic from=$global.slidepics}
-                <li><a href="{$slidepic.link}" target="_blank"><img src="{$slidepic.image}" alt="{$slidepic.title}" /></a></li>       
+<div id="nav">
+  <ul class="clearfix">
+            {$limit = 7}
+            {if $navs|count lt $limit}{$limit = $navs|count}{/if}
+            <li style="width:{100/($limit+1)-2}%">
+                <a href="{$site_url}"><b>网站首页</b><span>Home</span></a>
+            </li>
+            {foreach name=navs item=nav from=$navs}
+            <li class="fl{if $nav.current} current{/if} aa" style="width:{100/($limit+1)}%">
+                <a href="{$nav.link}"><b>{$nav.name}</b><span>{$nav.en_name}</span></a>
+                <ul class="sub clearfix">
+                    {if $nav.childmenu} {foreach key=key item=nav_list from=$nav.childmenu}
+                    <li class="{if $nav.current}current{/if} cc"><a href="{$nav_list.link}">{$nav_list.name}</a></li>
+                    {/foreach} {/if}
+                </ul>
+            </li>
+            {if $nav@index+1 eq $limit}{break}{/if}
             {/foreach}
+        </ul>
+</div>
+</div>
 
-          </ul>
-          <a class="prev" href="javascript:void(0)"></a>
-          <a class="next" href="javascript:void(0)"></a>
-          <ul class="hd">
-            {foreach name=slidepics item=slidepic from=$global.slidepics}
-              <li></li>
-            {/foreach}
-           
-          </ul>
-      </div>
-      <div class="searchbox">
-        <div class="search">
-          <form action="{$search_action}" method="GET">
-            <input class="sinp fl" type="text" name="s" value="请输入关键字">
-            <input class="sbtn fl" type="submit" value="搜 索">
-          </form>          
-        </div>
 
-      </div>
 
-    </div>
+
+
+
+
+
+
+
+

@@ -31,44 +31,33 @@
 <body>
 
       {include file='./_header.html'}
-        <div class="right-top"> </div>
-<div id="container" class="bg1">
-<div class="bottom_left"></div>
-<div class="bottom_right"></div>
-  <div class="container-inner1 wrapper clearfix">
- <div class="container-inner2 clearfix">
+<div id="sub_container" class="wrapper">
 
-         {include file='./_aside.html'}            	
+  <div class="c_top"><img src="{$site_url}images/container_topbg.jpg" width="1010" height="20" /></div>
+  <div class="crumb">当前位置：<a href="{$site_url}">首页</a> {foreach item=nav from=$posnavs}&gt; <a href="{$nav.link}">{$nav.name}</a> {/foreach} </div>
+                 	
+             <div class="main clearfix"> 
+                       {include file='./_aside.html'}            	
 
-
-            <div class="main">
-            
-            
-                   <div class="crumb"> {$article.category.name}{$article.category.en_name} 
-<span>当前位置：<a href="{$site_url}">首页</a> {foreach item=nav from=$posnavs}
-  &gt; <a href="{$nav.link}">{$nav.name}</a> {/foreach}</span> </div>
-  
-    
             <div class="article">
-            
-<h1 class="inner_news_tit">{$article.title} </h1>
-<h2 class="inner_news_time">{$article.pubtimestamp|date_format:'%Y-%m-%d %r '} </h2>
-<div class="edit">
-     <article>{$article.content|unescape:"html"} </article>
- </div>
-<div style="height:30px;overflow: hidden; padding-top:7px; margin-top:15px; color:#000; float:right;">
-     <!-- Baidu Button BEGIN -->{shareExt shareText=$article.content|unescape:"html"|strip_tags|truncate:140:"…" sharePic=$article.image}
-</div>
-<ul class="inner_pages" style="clear:both;">
-    <li>上一篇：<a href="{$article.prev.link}">{$article.prev.title}</a></li>
-     <li>下一篇：<a href="{$article.next.link}">{$article.next.title}</a></li>
-</ul>
-                    </div>                      
+                <h1 class="inner_news_tit">{$article.title} </h1>
+                <h2 class="inner_news_time">{$article.pubtimestamp|date_format:'%Y-%m-%d %r '} </h2>
+                <div class="edit">
+                    <article>{$article.content|unescape:"html"}</article>
+                </div>
+                <div style="height:30px;overflow: hidden; padding-top:7px; margin-top:15px; color:#000; float:right;">
+                    <!-- Baidu Button BEGIN -->
+                    {shareExt shareText=$article.content|unescape:"html"|strip_tags|truncate:140:"…" sharePic=$article.image}
+                </div>
+                <ul class="inner_pages" style="clear:both;">
+                    <li>上一篇：<a href="{$article.prev.link}">{$article.prev.title}</a></li>
+                    <li>下一篇：<a href="{$article.next.link}">{$article.next.title}</a></li>
+                </ul>
+            </div>                      
                     </div>                  
-                 
+                         <div class="cn_bot"><img src="{$site_url}images/sub_conbg.jpg" width="1010" height="15" /></div>
+  
         </div>      
-        </div>
-        </div>
       {include file='./_footer.html'}
 
 </body>

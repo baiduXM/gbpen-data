@@ -15,10 +15,9 @@
 DD_belatedPNG.fix('div,ul,li,a,p,img');
 </script>
 <![endif]-->
+<link href="{$site_url}css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="{$site_url}js/jquery1.42.min.js"></script>
 <script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.js"></script>
-
-<link href="{$site_url}css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="{$site_url}js/index.js"></script>
 
 <script type="text/javascript">
@@ -35,61 +34,44 @@ DD_belatedPNG.fix('div,ul,li,a,p,img');
 </head>
 
 <body>
-	<div class='wappers h_o'>	
+<div class="wrapper">
 		{include file="./_header.html"}
-      <div class="containers h_o ">
-          <div class="contan h_o">
-            <div class="contant_top h_o fl">
-                <div class="about h_o">
-                  <h3 class="c_title"><a href="{$index.about.link}"><img src="{$site_url}images/more.jpg"></a>{$index.about.name}<b>{$index.about.en_name}</b></h3>
-                  <div class="about_art h_o">
-                    <img src="{$index.about.image}">
-                    <p class="article">
-                      {$index.about.description}
-                    </p>
-                  </div>
-                </div>
-                <div class="news h_o">
-                  <h3 class="c_title"><a href="{$index.news.link}"><img src="{$site_url}images/more.jpg"></a>{$index.news.name}<b>{$index.news.en_name}</b> </h3>
-                  <ul class="news_list h_o">
-                    {foreach item=new from=$index.news.data}
-                    <li class="h_o"><a class="ellipsis" href="{$new.link}"><span>{$new.pubtimestamp|date_format:'%Y-%m-%d'}</span>{$new.title}</a></li>
-                    {if $new@index+1 == 5}{break}{/if}
-                    {/foreach}
-                  </ul>
-                </div>
-            </div> 
-             <div class="foucebox fr">
-              <div class="bd">
-                <ul>
-                 {foreach item=product from=$index.products.data}
-                    <li><a href="{$product.link}"><img src="{$product.image}" /></a> </li>
-                    {if $product@index+1 == 4}{break}{/if}
-                  {/foreach}
-                </ul>
-              </div>
-              <div class="hdc">
-                <h3 class="title">{$index.products.name}<em>{$index.products.en_name}</em></h3>
-                <div class="hd">
-                  <div  class="hoverBg" ></div>
-                  <ul>
-                    {foreach item=product from=$index.products.data}
-                      <li><a href="{$product.link}"><img src="{$product.image}" /></a> </li>
-                       {if $product@index+1 == 4}{break}{/if}
-                    {/foreach}
-                  </ul>
-                </div>
-              </div>
-            </div>
-        </div>
-          <ul class="contact h_o">
-              <li><a href="{$global.contact.link}"><img src="{$global.contact.image}"></a></li>
-              <li><a href="{$global.Recruitment.link}"><img src="{$global.Recruitment.image}"></a></li>
-              <li><a href="{$global.Feedback.link}"><img src="{$global.Feedback.image}"></a></li>
+  <div class="content">
+      <div class="about fl">
+        <h3><a href="{$index.about.link}">MORE</a>{$index.about.en_name} {$index.about.name}</h3>
+        <div class="in_article">
+          {$index.about.description}
+         </div>
+      </div>
+    <div class="news">
+      <h3><a href="{$index.news.link}">MORE</a>{$index.news.en_name} {$index.news.name}</h3>
+      <ul class="new_list">
+      {foreach name=news item=new from=$index.news.data}
+        <li><a href="{$new.link}"><span>{$new.pubtimestamp|date_format:'%Y-%m-%d'}</span>{$new.title}</a></li>
+        {if $new@index+1 == 5}{break}{/if}
+      {/foreach}
+      </ul>
+    </div>
+  </div>
+   <div class="products public">
+      <h3><a href="{$index.products.link}">MORE</a>{$index.products.en_name}  {$index.products.name}</h3>
+      <div class="picMarquee-left">         
+        <div class="bd">
+          <ul class="picList">
+           {foreach item=product from=$index.products.data}
+            <li>
+              <a href="{$product.link}"><!-- <span class="picbg">+</span> --><img src="{$product.image}" /><span class='pic_title'><b>{$product.title}</b>{$product.description} </span></a>
+            </li>
+          {/foreach}  
+            
           </ul>
-      {include file="./_footer.html"}
-      </div>    
-</div>
+        </div>
+      </div>
+    </div>
+  	{include file="./_footer.html"}
+	
+</div>    
+
 </body>
 </html>
 

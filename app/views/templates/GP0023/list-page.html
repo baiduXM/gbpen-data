@@ -15,53 +15,51 @@
     <meta name="keywords" content="{$keywords}" />
     <meta name="description" content="{$description}" />
     <link href="{$site_url}css/css.css" rel="stylesheet" type="text/css" />
+    <link href="{$site_url}css/sub.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="{$site_url}js/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="http://common.mn.sina.com.cn/public/resource/lib/jquery.jcarousellite.js">
-    </script>
+</script>
     <script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.js"></script>
+    <script type="text/javascript" src="{$site_url}js/jquery.kinMaxShow-1.0.min.js"></script>
     <script type="text/javascript" src="{$site_url}js/function.js"></script>
-    <style>
-    .tx1 {
-        behavior: url(pie.htc);
-    }
-    </style>
+  
     <title>{$title}</title>
 </head>
 
 <body>
     {include file='./_header.html'}
-    <div id="container" class="wrapper clearfix">
-        <div class="sidebar">
-            <div class="subnav">
-                <div class="list_class">
-                    {include file='./_pagenavs_sub3.html'}
-                </div>
-            </div>
-            <div id='contact'>
-                <div class="title">
-                    <div class="ch">联系方式</div>
-                    <div class="en"> CONTACT US</div>
-                </div>
-                {$global.contact_us}
-            </div>
-        </div>
-        <div class="main">
-            <div class="crumb">
-                <div class="ch">{$list.name}</div>
-                <div class="en">{$list.en_name}</div>
+<div id="sub_container" class="wrap1 clearfix">
+
+<div class="crumb">
+                <img src="{$site_url}images/ico11.png" width="19" height="15"class="pngFix" />
                 <span>当前位置：<a href="{$site_url}">首页</a>
            {foreach item=nav from=$posnavs}
              &gt; <a href="{$nav.link}">{$nav.name}</a>
            {/foreach}</span>
             </div>
-            <div class="deteo">
-                <div class="ny_about">
+           
+           
+<div class="main fr">
+
+  <div class="article ">
                     {$list.content|unescape:"html"}
-                </div>
-            </div>
-        </div>
-    </div>
+	</div>
+     <div class="bot"><img src="{$site_url}images/sid_bot.png" width="868" height="48" /></div>
+
+</div>
+    {include file='./_aside.html'}            	
+ </div>
+    
     {include file='./_footer.html'}
 </body>
 
 </html>
+
+<!--#*
+{$list.name}
+{$list.en_name}
+<span>当前位置：<a href="{$site_url}">首页</a>
+{foreach item=nav from=$pagenavs}&gt; <a href="{$nav.link}">{$nav.name}</a>{/foreach}
+</span>
+            
+*#-->
