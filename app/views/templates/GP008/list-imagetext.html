@@ -42,7 +42,7 @@
             <ul class="ny-newlist">
                     {foreach name=article item=article from=$list.data}
 						
-                        <li><a href="{$article.link}"><div class="date"><span>{$article.pubtimestamp|date_format:'%d'} </span>{$article.pubtimestamp|date_format:'%Y . %m'} </div><img src="{$article.image}"  height="126" width="165" title="{$article.title}">{$article.title}</a></li>
+                        <li><a href="{$article.link}"><div class="date"><span>{$article.pubtimestamp|date_format:'%d'} </span>{$article.pubtimestamp|date_format:'%Y . %m'} </div><img src="{$article.image}"  height="126" width="165"/>　{$article.title}</a></li>
                         
                     {/foreach}     
             </ul>

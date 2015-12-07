@@ -41,7 +41,7 @@
        <div class="ny-left fl">
             <ul class="ny-prolist">
                     {foreach name=article item=article from=$list.data} 
-                        <li><a href="{$article.link}"><img alt="" src="{$article.image}" width="238" height="159" /><h2>{$list.data[0].title}<span>+</span></h2></a></li>
+                        <li><a href="{$article.link}"><img alt="" src="{$article.image}" width="238" height="159" /><h2>{$article.title}<span>+</span></h2></a></li>
                         
                     {/foreach}     
             </ul>

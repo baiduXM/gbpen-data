@@ -79,7 +79,7 @@
         {foreach name=slidepics item=slidepic from=$index.slidepics}
         <li>
           <a href="{$slidepic.link}" target="_blank">
-            <img src="{$slidepic.image}" alt="{$slidepic.title}" width="100%" height="559px" />
+            <img src="{$slidepic.image}" alt="{$slidepic.title}" width="1903px" height="559px" />
           </a>
         </li>
         {/foreach}
@@ -124,10 +124,10 @@
           <li>
             <a href="{$new.link}">
               {$new.title}
-              <span>{$new.pubtimestamp|date_format:'%Y / %m / %d'}</span>
+              <span>{$new.pubdate}</span>
             </a>
           </li>
-          {if $new@index+1 == 4}{break}{/if}
+          {if $new@index+1 == 3}{break}{/if}
                      {/foreach}
         </ul>
       </div>
