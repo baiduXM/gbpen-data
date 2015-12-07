@@ -22,27 +22,23 @@
     <script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.js"></script>
     <script type="text/javascript" src="{$site_url}js/jquery.kinMaxShow-1.0.min.js"></script>
     <script type="text/javascript" src="{$site_url}js/function.js"></script>
- 
     <title>{$title}</title>
 </head>
 
 <body>
     {include file='./_header.html'}
-<div id="sub_container" class="wrap1 clearfix">
-                  
-                    <div class="sidebar">
-</div>
-                    <div class="crumb">
-                <img src="{$site_url}images/ico11.png" width="19" height="15"class="pngFix" />
+    <div id="container" class="wrapper clearfix">
+                    {include file='./_aside.html'}            	
+
+        <div class="main">
+            <div class="crumb">
+                {$article.category.name}
+                {$article.category.en_name}
                 <span>当前位置：<a href="{$site_url}">首页</a>
            {foreach item=nav from=$posnavs}
              &gt; <a href="{$nav.link}">{$nav.name}</a>
            {/foreach}</span>
             </div>
-           	
-
-        <div class="main">
-            
             <div class="article">
                         <div class="descripimg">
                             <div id="slideBoxb" class="slideBoxb" style="margin:0 auto">
@@ -56,7 +52,7 @@
                                 <div class="bd">
                                     <ul>
                                         {foreach item=proshowb from=$article.images}
-                                        <li><img src="{$proshowb.image}" alt="{$proshowb.title}" width="500" height="500"/></li>
+                                        <li><img src="{$proshowb.image}" alt="{$proshowb.title}" /></li>
                                         {/foreach}
                                     </ul>
                                 </div>
@@ -83,10 +79,7 @@
                             <li>下一篇：<a href="{$article.next.link}">{$article.next.title}</a></li>
                         </ul>
                     </div>
-                     <div class="bot"><img src="{$site_url}images/sid_bot.png" width="868" height="48" /></div>
         </div>
-        
-           {include file='./_aside.html'}    
     </div>
     {include file='./_footer.html'}
 </body>

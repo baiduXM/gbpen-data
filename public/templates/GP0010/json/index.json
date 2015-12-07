@@ -1,49 +1,26 @@
 {
+	
+    "about_us": {
+		"description": "左上方内容单页（如关于我们）",
+		"value": {},
+		"type": "page"
+	},
 	"news":{
-		"description":"新闻中心",
-		"value":{},
-		"type":"list"
+		"description": "中间文字列表（如新闻栏目）",
+		"value": {},
+		"type": "list",
+		"config":{
+			"showchilddata":"true"
+		}	
+
 	},
 	"pro":{
-		"description": "产品中心",
-		"value": {},
-		"type": "list"
-	},
-	"list1":{
-        "value": {},
-		"description":"导航第1个子栏目",
-		"type":"list",
-		"config":{
-			"filter":"list,page"
-		}
-	},
-	
-	
-	"list2":{
-		"description":"导航第2个子栏目",
+		"description":"底部图片列表多图滚动(如产品展示)",
 		"value":{},
-		"type":"list",
-		"config":{
-			"filter":"list,page"
-		}
-	},
-
-	
-	"list3":{
-		"description":"导航第3个子栏目",
-		"value":{},
-		"type":"list",
-		"config":{
-			"filter":"list,page"
-		}
-	},
-	"list4":{
-		"description":"导航第4个子栏目",
-		"value":{},
-		"type":"list",
-		"config":{
-			"filter":"list,page"
-		}
+		"type":"list"
 	}
-	
 }
+               
+
+
+

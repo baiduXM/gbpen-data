@@ -1,14 +1,19 @@
 <section>
-
-      <div class="picMarquee">
-				<ul class="picList">
-
-					{foreach  name=list4 item=article from=$index.list4.data}
-                         <li><a href="{$article.link} class="pic""><img src="{$article.image}"  height="116" width="133" />
-                         <a href="{$article.link}" class="title">{$article.title|truncate:7:"…"}</a> </a></li>
-                    {/foreach}
-
-				</ul>
-
-			</div>
+<div class="slide">
+        <ul>
+          
+          {foreach  name=list item=article from=$index.list1.data}
+                         <li><a href="{$article.link}" class="pro"><img src="{$article.image}"  height="auto" width="333" /> </a>
+                         <h3 class="title"><div class="banck"></div><span>{$article.title}</span></h3></li>
+                         {if $article@index+1 == 9}{break}{/if}
+          {/foreach}
+        </ul>
+</div>
+<div class="hd">
+            <ul>
+                {foreach item=slidepic from=$_header.slidepics}
+                    <li>{$slidepic@index+1}</li>
+                {/foreach}
+            </ul>
+</div>
 </section>

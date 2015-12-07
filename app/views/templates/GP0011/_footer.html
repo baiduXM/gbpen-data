@@ -1,16 +1,8 @@
-<footer>    
-        
-<DIV class="foobgt">
-        	<div class="mid_foters">
-<a href="{$site_url}">首页</a> |
-            {foreach name=navs item=nav from=$navs}
-				<a href="{$nav.link}" >{$nav.name}</a> |
-    {/foreach}<br />                
-            {$global.contactusfoot}<br /> {$contact.company} 
-{$footprint}
-            </div>
-        </DIV>           
-     
-</footer>
-
-{$footscript}  
+<div id="footer_bg">
+    <div id="footer" class="wrapper">
+        <a href="{$site_url}">首页</a> | {foreach name=navs item=nav from=$navs}
+        <a href="{$nav.link}">{$nav.name}</a> | {/foreach}
+        <br /> {$footprint} 
+    </div>
+</div>
+{$footscript}

@@ -1,13 +1,3 @@
 
-jQuery(".hxz").slide({mainCell:".bd ul",autoPlay:true,effect:"leftMarquee",vis:5,interTime:50});
 
-jQuery(".pro_det").slide({mainCell:"ul",autoPlay:true,effect:"leftMarquee",vis:4,interTime:50});
-
-jQuery('.gd .picMarquee').slide({mainCell:"ul.picList",autoPlay:true,effect:"leftMarquee",vis:5,interTime:50});
-
-jQuery('.anli .picMarquee').slide({mainCell:"ul.picList",autoPlay:true,effect:"leftMarquee",vis:4,interTime:50});
-
-
-
-
-
+jQuery(".index_pic").slide({titCell:".hd ul",mainCell:".slide ul",autoPage:true,effect:"leftLoop",autoPlay:true,scroll:3,vis:3,trigger:"click"});

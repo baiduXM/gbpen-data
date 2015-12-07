@@ -1,79 +1,80 @@
-{
-	"contactimg":{
-		"value": {
-			"title": "XXX企业",
-			"image": "images/recru.jpg",
-			"link": "http://www.baidu.com/"
-		},
-		"description": "联系我们栏目图片",
-		"type": "image",
-		"config": {
-			"widht":281,
-			"height": 95
-		}
-	},
+{	
 	"slidepics": {
 		"value": [{
-			"title": "banner",
-			"image": "images/banner.jpg",
-			"link": "article/1.html",
-			"description": "banner1"
+			"title": "image1",
+			"image": "images/1.jpg",
+			"link": ""
 		}, {
-			"title": "测试图2",
-			"image": "images/banner.jpg",
-			"link": "http://www.baidu.com"
-		},{
-			"title": "测试图3",
-			"image": "images/banner.jpg",
-			"link": "http://www.baidu.com"
+			"title": "image2",
+			"image": "images/2.jpg",
+			"link": ""
+		}, {
+			"title": "image3",
+			"image": "images//3.jpg",
+			"link": ""
+		}, {
+			"title": "image4",
+			"image": "images/4.jpg",
+			"link": ""
 		}],
-		"description": "关于我们多图轮播",
+		"description": "大轮滚图",
 		"type": "images",
 		"config": {
-			"width": 178,
-			"height": 137,
-			"limit": 3
+			"width": 1600,
+			"height": 394,
+			"limit": 0
 		}
+	},        
+   "links": {
+		"value": [{
+			"title": "百度",
+			"image": "images/slidepics/1.jpg",
+			"link": "",
+			"description": "Although it isn't gooseberry season anymore, I thought I would publish this recipe now because it wo..."
+		}, {
+			"title": "易尔通",
+			"image": "images/slidepics/2.jpg",
+			"link": "",
+			"description": "Post-Christmas I find I just can't get enough of Turkey. I always think it is such a shame that I on..."
+		}, {
+			"title": "新浪",
+			"image": "images/slidepics/3.jpg",
+			"link": "",
+			"description": "The PS Cafe chain in Singapore is a must visit when in town. I first visited the Paragon branch over..."
+		}, {
+			"title": "易尔通",
+			"image": "images/slidepics/4.jpg",
+			"link": "",
+			"description": "A few days ago I began a wardrobe detox. In the new year I always try and start by clearing out my l..."
+		}],
+		"description": "友情链接",
+		"type": "images",
+		"config": {
+			"width": 60,
+			"height": 60,
+			"limit": 0
+		}		
 	},
-	"list1":{
-		"description":"第二导航第1个子栏目",
-		"value":{},
-		"type":"list",
-		"config":{
-			"filter":"list,page"
-		}
-	},
-	"list2":{
-		"description":"第二导航第2个子栏目",
-		"value":{},
-		"type":"list",
-		"config":{
-			"filter":"list,page"
-		}
-	},
-	"list3":{
-		"description":"第二导航第3个子栏目",
-		"value":{},
-		"type":"list",
-		"config":{
-			"filter":"list,page"
-		}
-	},
-	"list4":{
-		"description":"第二导航第4个子栏目",
-		"value":{},
-		"type":"list",
-		"config":{
-			"filter":"list,page"
-		}
-	},
-	"list5":{
-		"description":"第二导航第5个子栏目",
-		"value":{},
-		"type":"list",
-		"config":{
-			"filter":"list,page"
-		}
-	}
-	
+	"rczprec": {
+		"value": {},
+		"description": "第一栏目",
+		"type": "list"
+	},	
+	"feedback": {
+		"value": {},
+		"description": "第二栏目",
+		"type": "list"
+	},	
+	"dowload": {
+		"value": {},
+		"description": "第三栏目",
+		"type": "list"
+	},			
+	"contactusfoot":{
+		"value": "XXX有限公司\r 地址：厦门市海沧区东孚镇边坂村\r 电话：13003911139\r 联系人：薛小姐\r",
+		"description": "底部联系方式",
+		"type": "textarea"
+	}	
+
+ 
 }

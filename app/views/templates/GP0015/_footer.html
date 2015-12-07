@@ -1,14 +1,21 @@
-     <div class="foot">
-         <div class="public">
-             <p>{$footprint} 地址：{$contact.address} 电话：{$contact.telephone} <br />  <span>技术支持：<a href="http://www.12t.cn/">厦门易尔通网络科技有限公司</a> 人才支持：<a href="http://www.xmrc.com.cn/">厦门人才网</a></span></p>
-             <span class="footlink">
-				<a href="{$global.list1.link}">{$global.list1.name}</a> |
-				<a href="{$global.list2.link}">{$global.list2.name}</a> |
-				<a href="{$global.list3.link}">{$global.list3.name}</a> |
-				<a href="{$global.list4.link}">{$global.list4.name}</a> |
-				<a href="{$global.list5.link}">{$global.list5.name}</a>
-             </span>
-         </div>
-     </div>
 
-{$footscript}
+<footer>
+<div class="link">
+        		<b>友情链接：</b>
+  {foreach name=friend_link item=friend from=$global.links}
+		    <a href="{$friend.link}">{$friend.title}</a> 
+		 	{/foreach}                
+        </div>   
+<div class="footer">        
+            		<div class="fo_con">
+<a href="{$site_url}">首页</a> |
+            {foreach name=navs item=nav from=$navs}
+				<a href="{$nav.link}" >{$nav.name}</a> |
+    {/foreach}<br />                        
+                 {$global.contactusfoot}
+                  {$footprint} 
+</div>
+            </div>
+</footer>
+
+{$footscript}  

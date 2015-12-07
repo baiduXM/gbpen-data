@@ -1,11 +1,13 @@
-     <div class="foot">
-         <div class="public">
-         	{$footprint}
-             <span class="footlink">
-				<a href="{$global.list1.link}">{$global.list1.name}</a> |
-				<a href="{$global.list2.link}">{$global.list2.name}</a>
-             </span>
-         </div>
-     </div>
 
+  <div class='footersbg'>  
+   <div class="public">
+   <ul class='navs h_o'>
+			{foreach key=key item=naver from=$global.second_navs}
+				<li><a href="{$naver.link}">{$naver.name}</a></li>
+				{if $naver@index+1 == 8}{break}{/if}
+			{/foreach}
+		</ul>
+    <span class="footer_li">{$footprint}</span>
+	</div>
+ </div>
 {$footscript}

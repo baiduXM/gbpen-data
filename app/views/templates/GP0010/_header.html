@@ -1,43 +1,65 @@
+    	<div class="header">
+           <div class="topleft">
+               <a id="animation" href="{$site_url}" title="返回首页"></a>
+           </div>  
+           <div class="search">
+                <form action="{$search_action}" method="GET">
+                  <input class="searchbox fl" type="text" name="s" value="关键字搜索" />
+                  <input class="searchbtn fl" type="submit" value="" />
+                </form>               
+           </div>
 
-    <div id="header" class="wrapper">
-    
-        <div id="logo"><img src="{$logo}" alt="{$title}" /></div>
-        <div id="nav">
-        <ul class="clearfix">
-            {$limit = 7}
-            {if $navs|count lt $limit}{$limit = $navs|count}{/if}
-            <li class="aa" style="width:{100/($limit+1)}%">
-                <a href="{$site_url}">网站首页</a>
-            </li>
-            {foreach name=navs item=nav from=$navs}
-            <li class="fl{if $nav.current} current{/if} aa" style="width:{100/($limit+1)}%">
-                <a href="{$nav.link}">{$nav.name}</a>
-                <ul class="sub clearfix">
-                    {if $nav.childmenu} {foreach key=key item=nav_list from=$nav.childmenu}
-                    <li class="{if $nav.current}current{/if} cc"><a href="{$nav_list.link}">{$nav_list.name}</a></li>
-                    {/foreach} {/if}
-                </ul>
-            </li>
-            {if $nav@index+1 eq $limit}{break}{/if}
-            {/foreach}
-        </ul>
-</div>
-        <div id="search">
-            <form action="{$search_action}" method="GET">
-                <input type="text" name="s" value="" class="sa" />
-                <input type="submit" class="bta" />
-                
-            </form>
+           <div class="menu">
+                    <h1 class="logo"><a href="{$site_url}" title="{$title}"><img src="{$logo}" alt=""></a></h1>
+                    <nav>
+                        <ul class="clearfix">
+                            {foreach name=navs item=nav from=$navs}
+                            <li class="{if $nav@index > 2}fr{else}fl{/if}{if $nav.current} current{/if}">
+                                <a href="{$nav.link}">{$nav.name}</a>
+
+
+                            </li>
+                            {if $nav@index+1 == 6}{break}{/if}
+                            {/foreach}
+                        </ul>
+
+
+
+
+                    </nav>      
+           </div>
+
+
+
+
+
         </div>
-        
-    </div>
+
+        <div class="banner">
+            <div class="banner-shd"></div>
+            <div id="slideBox" class="slideBox">
+                <div class="hd">
+                    <ul>
+                       {foreach name=slidepics item=slidepic from=$global.slidepics}
+                        <li></li>
+                       {/foreach}
+                    </ul>
+                </div>
+                <div class="bd">
+                    <ul>
+                        {foreach name=slidepics item=slidepic from=$global.slidepics}
+                              <li><a href="{$slidepic.link}" target="_blank"><img src="{$slidepic.image}" alt="{$slidepic.title}" /></a></li>       
+                        {/foreach}
 
 
-<div id="banner_bg">
-     <div id="banner_top"></div>
-     <div class="banner_box" >
-    <div id="kinMaxShow"> {foreach name=slidepics item=slidepic from=$global.slidepics}
-      <div> <a href="{$slidepic.link}" target="_blank"><img src="{$slidepic.image}" alt="{$slidepic.title}"  /></a></div>
-      {/foreach} </div>
-  </div>
-</div>
+                    </ul>
+                </div>
+
+                <!-- 下面是前/后按钮代码，如果不需要删除即可 -->
+
+                <a class="prev" href="javascript:void(0)"></a>
+                <a class="next" href="javascript:void(0)"></a>
+
+
+            </div>            
+        </div>

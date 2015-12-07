@@ -1,41 +1,23 @@
 {
-
-	"newslist": {
-		"value": {},
-		"description": "新闻中心",
-		"type": "list",
-		"config": {
-			"width": 138,
-			"height": 110
-		}			
-	},		
-	"aboutlist": {
+	"about": {
 		"description": "关于我们",
 		"value": {},
-		"type": "page",
-		"config": {
-			"width": 159,
-			"height": 177
-		}			
+		"type": "page"
+		
 	},	
-	"prizesa": {
+	"news":{
+		"description":"新闻中心",
+		"value":{},
+		"type":"list"
+	},
+	"pro":{
+		"description": "产品中心",
 		"value": {},
-		"description": "产品展示-产品滚动",
-		"type": "list",
-		"config": {
-			"width": 550,
-			"height": 413
-		}			
-	},		
-	"casesa": {
+		"type": "list"
+	},
+	"left_nav":{
+		"description": "首页分类",
 		"value": {},
-		"description": "案例展示-产品滚动",
-		"type": "list",
-		"config": {
-			"width": 550,
-			"height": 413
-		}	
-	}	
-	
-
+		"type": "list"
+	}
 }

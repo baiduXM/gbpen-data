@@ -1,18 +1,42 @@
 {
-	
-    "about_us": {
-		"description": "关于我们",
-		"value": {},
-		"type": "page"
-	},
-	"news":{
+	"newswidtha": {
+		"value": "新闻中心",
 		"description": "新闻中心",
+		"type": "list"
+	},		
+	"video": {
+		"value":"http://player.youku.com/player.php/Type/Folder/Fid/25949051/Ob/1/sid/XMTI5NDQyNDkzNg==/v.swf",
+		"description": "视频中心",
+		"type": "text",
+		"config": {
+			"width": 225,
+			"height": 198
+		}	
+		
+	},	
+
+	
+	"atnabout": {
+		"value":{},
+		"description": "关于我们",
+		"type": "page"
+	},	
+	"contact": {
 		"value": {},
-		"type": "list"		
-	},
-	"case":{
-		"description": "成功案例",
+		"description": "联系方式",
+		"type": "page"
+	},			
+	"prizesa": {
 		"value": {},
-		"type": "list"		
+		"description": "产品中心",
+		"type": "list",
+		"config": {
+			"width": 550,
+			"height": 432
+		}	
 	}
+	
+	
+
 }
+

@@ -1,16 +1,19 @@
-<div  class="footer_bg">
-    <div id="footer" class="wrap1 clearfix">
-      <div class="cty">{$footprint}</div>
-      <div class="links">
-        友情链接{foreach name=friend item=friend from=$global.links}
+<div id="footer">
+   <div class="wrapper clearfix" style="position:relative">
+     <div class="copyright">
+      友情链接{foreach name=friend item=friend from=$global.links}
 		    <a href="{$friend.link}">{$friend.title}</a> 
 		 	{/foreach} 
-      </div>
-    </div>
-  </div>
+<br />
+{$footprint}
 
+     </div>
+     <div class="bot_logo"><img src="{$logo}" alt="{$title}" width="80%" style="margin:auto" /></div>
+   </div>
+ </div>
 
-{$footscript}
+{$footscript} 
+
 
 <!--#*
 {foreach name=navs item=nav from=$navs}<a href="{$nav.link}" >{$nav.name}</a> |{/foreach}

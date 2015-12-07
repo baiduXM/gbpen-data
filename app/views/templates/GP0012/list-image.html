@@ -27,44 +27,42 @@
 
 <body>
     {include file='./_header.html'}
-<div id="sub_container" class="wrap1 clearfix">
+    <div id="container" class="wrapper clearfix">
+                    {include file='./_aside.html'}            	
 
-<div class="crumb">
-                <img src="{$site_url}images/ico11.png" width="19" height="15"class="pngFix" />
+        <div class="main">
+            <div class="crumb">
+                {$list.name}{$list.en_name}
                 <span>当前位置：<a href="{$site_url}">首页</a>
            {foreach item=nav from=$posnavs}
              &gt; <a href="{$nav.link}">{$nav.name}</a>
            {/foreach}</span>
             </div>
-            
-                      	
-
-        <div class="main">
             <div class="article">
-      <div class="list_image">
+      <div class="list_image yc">
      <ul class="clearfix">
       {foreach name=article item=article from=$list.data}
-        <li><a href="{$article.link}"><img src="{$article.image}" width="180" height="180"/><p>{$article.title} </p></a></li>
-      {if $article@index+1 == 8} {break} {/if} {/foreach}
+        <li><a href="{$article.link}"><img src="{$article.image}" /><p>{$article.title} </p></a></li>
+    {/foreach}
      </ul>	
      <div class="module_page">
-                        <a href="{$page_links.prev_link}">&laquo; 上一页</a> 
-                        {foreach item=near_link key=near_page from=$page_links.nears_link} 
-                        {if $near_page == $page_links.current_page}
-                        <a class="current">{$near_page}</a></li>
-                        {else}
-                        <a href="{$near_link}">{$near_page}</a></li>
-                        {/if} {/foreach}
-                        <a href="{$page_links.next_link}">下一页 &raquo;</a>
-                    </div>
+
+
+
+     
+                            第{$page_links.current_page}页/共{$page_links.page_count} 页
+                            <a href="{$page_links.first_link}">首页</a>
+                            <a href="{$page_links.prev_link}">上一页</a> 
+                            {foreach name=nears_link item=near_link key=near_page from=$page_links.nears_link} 
+                            {if $near_page == $page_links.current_page}
+                            <a class="current_near">{$near_page}</a> {else}
+                            <a href="{$near_link}">{$near_page}</a> {/if} {/foreach}
+                            <a href="{$page_links.next_link}">下一页</a>
+                            <a href="{$page_links.last_link}">尾页</a></div>
 	</div>
                 
             </div>
-              <div class="bot"><img src="{$site_url}images/sid_bot.png" width="868" height="48" /></div>
         </div>
-        
-        {include file='./_aside.html'}  
-        
     </div>
     {include file='./_footer.html'}
 </body>

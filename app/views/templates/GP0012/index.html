@@ -21,72 +21,55 @@
     <script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.js"></script>
     <script type="text/javascript" src="{$site_url}js/jquery.kinMaxShow-1.0.min.js"></script>
     <script type="text/javascript" src="{$site_url}js/function.js"></script>
- 
     <title>{$title}</title>
     {$headscript}
 </head>
 
 <body>    
 
-<div class="wrap">
+
 
     {include file='./_header.html'}
-    <div class="top_r"></div>
-    <div id="container" class="wrap1 clearfix">
-    <div id="news">
-      <div class="title"><span><a href="{$index.news.link}"><img src="{$site_url}images/mo.jpg" width="12" height="12" /></a></span>
-        <h2>{$index.news.name}</h2>
-      </div>
-      <div class="inner">
-
-     {foreach name=news item=news from=$index.news.data}
-        <div id="n1" class="clearfix">
-         <div class="np"><img src="{$news.image}" width="97" height="71" /></div>
-          <div class="nr">
-            <h2>{$news.pubtimestamp|date_format:'%Y/%m/%d'} </h2>
-            <div class="wz"><a href="{$news.link}">{$news.description}</a> </div>
-          </div>
-        </div>
-          {if $news@index+1 == 2}{break}{/if}
-    {/foreach}
-        
-        
-      </div>
-    </div>
+    <div id="container" class="wrapper">
     
-    <div id="about">
-      <div class="title"><span><a href="{$index.about.link}"><img src="{$site_url}images/mo.jpg" width="12" height="12" /></a></span>
-        <h2>{$index.about.name}</h2>
-      </div>
-      <div class="inner"><img src="{$index.about.image}" width="130" height="75" />
-        <p>{$index.about.description}</p>
-      </div>
-    </div>
-    
-     <div class="c"></div>
-     
-     <div id="product">
-      <div class="title"><span><a href="{$index.pro.link}"><img src="{$site_url}images/mo.jpg" width="12" height="12" /></a></span>
-        <h2>{$index.pro.name}</h2>
-      </div>
-      
-      <div class="inner">
-
-	<ul id="MarqueeDiv2">
-       {foreach name=pro item=pro from=$index.pro.data}
-       <li><a href="{$pro.link}"><img height="146" width="161" src="{$pro.image}" /><h2>{$pro.title}</h2></a></li>
+      <div id="case" class="clearfix">
+      <div class="inner yc" style="margin:auto">
+       <ul id="MarqueeDiv1">
+       {foreach name=case item=case from=$index.case.data}
+       <li class="fl"><a href="{$case.link}"><img src="{$case.image}" /><p>{$case.title}</p></a></li>
        {/foreach}
-    </ul>  
-      </div>
-    </div>
+    </ul>
+  </div> 
+  
+   </div>
+   <div id="about" class="fl">
+     <h2 class="tit"><span><a href="{$index.about.link}"><img src="{$site_url}images/more.jpg" /></a></span>{$index.about.en_name} {$index.about.name}</h2>
+     <div class="inner">
+        <img src="{$index.about.image}" height="81" width="118" />{$index.about.description|truncate:50:"…"}
+     </div>
+   </div>
+   <div id="product" class="fl">
+     <h2 class="tit"><span><a href="{$index.pro.link}"><img src="{$site_url}images/more.jpg" /></a></span>{$index.pro.en_name}{$index.pro.name}</h2>
+     <div class="inner yc">
+ <ul id="MarqueeDiv2">
+       {foreach name=pro item=pro from=$index.pro.data}
+       <li class="fl"><a href="{$pro.link}"><img height="65" src="{$pro.image}" /><h2>{$pro.title}</h2></a></li>
+       {/foreach}
+    </ul>     </div>
+   </div>
+   <div id="video" class="fl">
+     <h2 class="tit"><span><a href="#"><img src="{$site_url}images/more.jpg" /></a></span>VIDEO 视频中心</h2>
+     <div class="inner">
+     <div class="video_img"><embed src="{$index.video}" allowFullScreen="true" quality="high" width="238" height="128" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed></div>
+
+        
+     </div>
+   </div>
    <div style="clear:both"></div>
-   
-   
  </div>
  
     
     {include file="./_footer.html"}
-    </div>
 </body>
 
 </html>
