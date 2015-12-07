@@ -1,83 +1,104 @@
 {
-	"nylogo":{
-		"value": {
-			"title": "XXX企业",
-			"image": "images/logo1.png",
-			"link": "http://www.baidu.com/"
-		},
-		"description": "网站内页LOGO",
-		"type": "image",
-		"config": {
-			"width":474,
-			"height": 126
-		}
-	},
-	"contactimg":{
-		"value": {
-			"title": "XXX企业",
-			"image": "images/recru.jpg",
-			"link": "http://www.baidu.com/"
-		},
-		"description": "联系我们栏目图片",
-		"type": "image",
-		"config": {
-			"widht":281,
-			"height": 95
-		}
-	},
 	"slidepics": {
 		"value": [{
-			"title": "banner",
-			"image": "images/nybanner.jpg",
+			"title": "Gooseberry and Elderflower Tower Cakes",
+			"image": "images/banners_03.jpg",
 			"link": "article/1.html",
-			"description": "banner1"
+			"description": "Although it isn't gooseberry season anymore, I thought I would publish this recipe now because it wo..."
 		}, {
 			"title": "测试图2",
-			"image": "images/nybanner.jpg",
+			"image": "images/banners_03.jpg",
 			"link": "http://www.baidu.com"
 		},{
 			"title": "测试图3",
-			"image": "images/nybanner.jpg",
+			"image": "images/banners_03.jpg",
 			"link": "http://www.baidu.com"
 		}],
-		"description": "内页大图多图轮播（banner）",
+		"description": "大轮滚图",
 		"type": "images",
 		"config": {
-			"width":1600,
-			"height": 244
+			"width": 1000,
+			"height": 380,
+			"limit": 3
 		}
 	},
-	"links": {
-		"value": [{
-			"title": "厦门易尔通",
-			"image": "images/1.jpg",
-			"link": "http://www.12t.cn",
-			"description": "友情链接1"
-		}, {
-			"title": "百度",
-			"image": "images/2.jpg",
-			"link": "http://www.baidu.com"
-		},{
-			"title": "网易163",
-			"image": "images/3.jpg",
-			"link": "http://www.baidu.com"
-		}],
-		"description": "友情链接",
-		"type": "images",
+	"contact_us": {
+		"value": "姓名：洪先生\r\n电话：13606999989 \r\n手机：13606999989 \r\n传真：13606999989 \r\n邮箱：13606999989@qq.com\r\n地址：龙海市榜山镇文苑村洪厝社\r\n  ",
+		"description": "联系我们",
+		"type": "textarea"
+	},
+	"contact_img":{
+		"description":"联系我们栏目图片",
+		"value": {
+			"title": "contactimg",
+			"image": "images/inbgw_11.jpg",
+			"link": "http://www.baidu.com/"
+		},
+		"type": "image",
 		"config": {
-			"width": 100,
-			"height": 100,
-			"limit": 5
+			"height": 89,
+			"width":219
+		}
+
+	},
+	"list1": {
+		"value": {},
+		"description": "第二导航菜单",
+		"type": "list",
+		"config": {
+			"filter":"page,list",
+			"limit": 5,
+			"star_only": true
 		}
 	},
-	"contact_us":{
-		"value":{},
-		"type":"list",
-		"description":"内页右侧栏目（如联系我们）"
+	"list2": {
+		"value": {},
+		"description": "第二导航菜单",
+		"type": "list",
+		"config": {
+			"filter":"page,list",
+			"limit": 5,
+			"star_only": true
+		}
 	},
-	"serve":{
-		"value":{},
-		"type":"list",
-		"description":"内页右侧栏目（如服务项目）"
-	}	
+	"list3": {
+		"value": {},
+		"description": "第二导航菜单",
+		"type": "list",
+		"config": {
+			"filter":"page,list",
+			"limit": 5,
+			"star_only": true
+		}
+	},
+	"list4": {
+		"value": {},
+		"description": "第二导航菜单",
+		"type": "list",
+		"config": {
+			"filter":"page,list",
+			"limit": 5,
+			"star_only": true
+		}
+	},
+	"list5": {
+		"value": {},
+		"description": "第二导航菜单",
+		"type": "list",
+		"config": {
+			"filter":"page,list",
+			"limit": 5,
+			"star_only": true
+		}
+	},
+	"list6": {
+		"value": {},
+		"description": "第二导航菜单",
+		"type": "list",
+		"config": {
+			"filter":"page,list",
+			"limit": 5,
+			"star_only": true
+		}
+	}
 }

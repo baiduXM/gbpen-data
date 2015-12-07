@@ -1,0 +1,82 @@
+{
+	
+	"lastest_title": {
+		"value": "最新产品",
+		"description": "自定义“最新产品”",
+		"type": "text"
+	},
+	"lastest": {
+		"value": {},
+		"description": "最新产品",
+		"type": "list"
+	},
+	"hots": {
+		"value": {},
+		"description": "热门产品",
+		"type": "list",
+		"config": {
+			"limit": 4,
+			"star_only": 1
+		}
+	},
+	"list1": {
+		"value": {},
+		"description": "第一个栏目列表",
+		"type": "list"
+	},
+	"list2": {
+		"value": {},
+		"description": "第二个栏目列表",
+		"type": "list"
+	}, 
+
+
+	"list3": {
+		"value": {},
+		"description": "第二个栏目列表",
+		"type": "list"
+	},
+
+     "list4": {
+		"value": {},
+		"description": "第二个栏目列表",
+		"type": "list"
+	},
+	"list5": {
+		"value": {},
+		"description": "第二个栏目列表",
+		"type": "list"
+	},
+	"list6": {
+		"value": {},
+		"description": "第二个栏目列表",
+		"type": "list"
+	},
+	"list7": {
+		"value": {},
+		"description": "第二个栏目列表",
+		"type": "list"
+	},
+
+	"logo": {
+		"value": {
+			"title": "XXX企业",
+			"image": "images/logo-home.png",
+			"link": "http://www.baidu.com/"
+		},
+		"description": "网站LOGO",
+		"type": "image",
+		"config": {
+			"width": 950,
+			"height": 500,
+			"limit": 4
+		}
+	},
+	"contact": {
+		"value": "地址：软件园二期观日路36号201号\r\n电话：0592-23232232\r\n传真：0592-23232232\r\nE-mail：01@eexx.me\r\n",
+		"description": "联系我们",
+		"type": "textarea"
+	}
+}
+
+

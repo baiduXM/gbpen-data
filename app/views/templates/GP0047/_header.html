@@ -1,0 +1,57 @@
+<header>
+<section>
+<div class="head_outsild">
+      <div class="head">
+          <a href="{$site_url}" title="返回首页" class="logo"><img src="{$logo}" height="116" width="438" /></a>
+          <div class="tel">服务热线：<span>{$contact.telephone}</span></div>
+          <form action="{$search_action}" method="GET" class="ss"> 
+              <span>产品搜索：</span>
+              <img src="images/ssl_07.jpg" height="28" width="3" style="float:left;display:block">
+              <input type="text" placeholder="请输入关键词" class="input_case" name="" autocomplete="on">
+              <input type="submit" value="" class="input_key">
+          </form>
+      </div>
+</div>    
+</section>
+<section>
+    <div class="header_menu">   
+       <ul id="nav" class="nav">
+      {foreach item=nav from=$navs}
+      <li class="nLi">
+       <h3><a href="{$nav.link}" class="{if $nav.current}current{/if}">{$nav.name}</a></h3>
+      
+        {if $nav.childmenu}
+          <ul class="sub">
+
+            {foreach item=nav_list from=$nav.childmenu}
+            <li class="{if $nav_list.current}current{/if}"><a href="{$nav_list.link}">{$nav_list.name}</a></li>
+            {/foreach}
+          </ul>
+        {/if}
+      </li>
+      {/foreach}
+    </ul>
+    </div>
+</section>
+ <section>
+
+    <div id="slideBox" class="slideBox">
+    <div class="banner">
+
+       <div class="bd">
+        <ul>
+                     {foreach item=slidepic from=$_header.slidepics}
+                              <li><a href="{$slidepic.link}" target="_blank"><img src="{$slidepic.image}" alt="{$slidepic.title}" height="464" width="1500"/></a></li>
+                     {/foreach}
+                </ul>
+      </div>
+
+
+      <!-- 下面是前/后按钮代码，如果不需要删除即可 -->
+      <a class="prev" href="javascript:void(0)"></a>
+      <a class="next" href="javascript:void(0)"></a>
+
+    </div>
+</div>
+    </section>
+</header>

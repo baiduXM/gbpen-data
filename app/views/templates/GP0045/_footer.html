@@ -1,24 +1,19 @@
-  <div class="nyfoot">
-      <div class="footer">
-        {$footprint} {$contact.address} 
-        <div class="selectbox">
-          <select onchange="javascript:openLink(this)" value="--友情链接--">   
-            <option> 友情链接</option>  
-            {foreach item=flink from=$global.links} 
-            <option value="{$flink.link}">{$flink.title}</option>   
-        <!--     <option value="http://www.baidu.com">百度</option>   -->  
-            {/foreach}  
-          </select> 
-          <script type="text/javascript">
-             function openLink(obj) {
-                if (obj.selectedIndex != 0) {
-                  window.open(obj.options[obj.selectedIndex].value);
-                }
-              }
-          </script>  
-        </div>
-      </div>
-    </div>
+  <div class="footes">
+        	<div class="mid_ft">
+            	<div class="flink">
+
+				<a href="{$global.list1.link}">{$global.list1.name}</a> | 
+				<a href="{$global.list2.link}">{$global.list2.name}</a> | 
+				<a href="{$global.list3.link}">{$global.list3.name}</a> | 
+				<a href="{$global.list4.link}">{$global.list4.name}</a> | 
+				<a href="{$global.list5.link}">{$global.list5.name}</a> | 
+				<a href="{$global.list6.link}">{$global.list6.name}</a> 
 
 
-{$footscript}
+               <!--  <a href="#">网站首页</a> | <a href="#">关于我们</a> | <a href="#">新闻中心</a> | <a href="#">产品中心</a> | <a href="#">案例展示</a> | <a href="#">联系方式</a> -->
+                </div>
+{$footprint} {$contact.company}  地址：{$contact.address}<br />
+技术支持：<a href="#">厦门易尔通网络科技有限公司</a> 人才支持：<a href="#">厦门人才网</a>                
+            </div>
+        </div>     
+{$footscript}  
