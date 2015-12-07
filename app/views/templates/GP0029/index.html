@@ -89,7 +89,7 @@
           <li>
             <div class="text"><a href="{$case.link}"><p>{$case.title}
              </p> <p>{$case.description}</p></a></div>
-            <img src="{$case.image}" width="120" height="87" /></li>
+            <img src="{$case.image}" width="120" height="92" /></li>
             {if $case@index+1 == 4}{break}{/if}
          {/foreach}          
           
@@ -121,7 +121,7 @@
       <div class="inner">
  <ul id="MarqueeDiv1">
 {foreach name=pro item=pro from=$index.pro.data}
-        <li class="fl pngFix"><a href="{$pro.link}"><img height="148" src="{$pro.image}" /></a></li>
+        <li class="fl pngFix"><a href="{$pro.link}"><img src="{$pro.image}" /></a></li>
        {/foreach}
     </ul> 
     </div>
