@@ -12,7 +12,21 @@ $(document).ready(function(){
 				
 $(window).load(function(){
 /*美工专属区域*/
-  
+var w=$(".menulist .swiper-nav span").width()
+var w1=$(".menulist .swiper-nav span img").height()
+$(".swiper-wrapper,.swiper-slide ").height(w+30)
+  $(".menulist .swiper-nav span").height(w)
+    $(".menulist .swiper-nav span b").height( $(".menulist .swiper-nav span b").width()).css("margin-top",(w- $(".menulist .swiper-nav span b").width())*0.5+"px")
+
+  $(".menulist .swiper-nav span img").css("margin-top",($(".menulist .swiper-nav span b").width()-w1)*0.5+"px")
+    $(".menulist .swiper-nav span i").css("margin-top",($(".menulist .swiper-nav span b").width()-w1)*0.5+"px")
+
+  $(".menulist .arrow-left,.menulist .arrow-right").css("line-height",w+30+"px")
+  $(".in_page,.in_pagebg2").height($(".in_pagebg").height())
+  $(".in_pagebg2").css("top",$(".in_page").width()*0.05+"px")
+ $(".in_imagetext").css("margin-top",$(".in_page").width()*0.05+40+"px")
+ $(".in_image .inner").height($(".in_image ul li").height())
+ $(".searchresult ul li:odd").addClass("bg22")
 
 /*美工专属区域*/
 	
@@ -92,32 +106,31 @@ $(window).load(function(){
 	})
 								
 
-                                function setHeighti() {
+  function setHeighti() {
                                   // $('.slimgs2').each(function () {
-                                        var self5 = $(".aboutimgs");
-                                        var heights5 = $(self5).height()-'20'+'px';;
-                                        var alimat5 = $(".a_text");
-                                        alimat5.height(heights5);										
+        var self5 = $(".aboutimgs");
+        var heights5 = $(self5).height()-'20'+'px';;
+        var alimat5 = $(".a_text");
+       alimat5.height(heights5);										
                                   //  })
 
                                 };
-                                setHeighti();								
-				 $(window).resize(function(){
-					setTimeout(setHeighti);
-				 })		
+          setHeighti();								
+ $(window).resize(function(){
+	setTimeout(setHeighti);
+	 })		
 	
   //隐藏导航跟wrap的切换
-  $("#daohang").click(function(){
-		$(".class").removeClass("page-prev").addClass("page-in");
-		$(".wrap").removeClass("page-active").addClass("page-next page-in")
-		$(".opacity2").show()
+  $("#daohang,#header_menu,#fixed_menu").click(function(){
+		$("#quickbar-navs").removeClass("page-prev").addClass("page-in");
+		$("#quickbar-wrap").removeClass("page-active").addClass("page-next page-in")
+		$(".quickbar-opacity2").show()
 		pageSlideOver();
-		
 	})
-	$(".class-close,.opacity2").on('touchstart',function(){
-		$(".class").addClass("page-prev page-out")
-		$(".wrap").removeClass("page-next").addClass(" page-out")
-		$(".opacity2").hide()
+	$(".quickbar-navs-close,.quickbar-opacity2").on('touchstart',function(){
+		$("#quickbar-navs").addClass("page-prev page-out")
+		$("#quickbar-wrap").removeClass("page-next").addClass(" page-out")
+		$(".quickbar-opacity2").hide()
 		$(".newsclass").removeClass("show")
 		pageSlideOver();
 		return false;
@@ -135,26 +148,27 @@ $(window).load(function(){
 		$("#up").hide()
 		$("#down").show()
 		$(".hide-class").removeClass("hide-class1")
-		$(".font").slideToggle()
+		$(".font,.font_1").slideToggle()
 		$(".hide-class").slideUp()	
 	})
-	$(".font dl.big").click(function(){
+	$(".font dl.big,.font_1 dl.big").click(function(){
 		$(".edite").attr('class',"edite font-big")
 		$(".news-ins").attr('class',"news-ins font-big")
 		$(".list_page").attr('class',"list_page font-big")
-		$(".font").hide()
+		$(".font,.font_1").hide()
 	})
-	$(".font dl.normal").click(function(){
+	$(".font dl.normal,.font_1 dl.normal").click(function(){
 		$(".edite").attr('class',"edite font-normal")
 		$(".news-ins").attr('class',"news-ins font-normal")
 		$(".list_page").attr('class',"list_page font-normal")
-		$(".font").hide()
+		$(".font,.font_1").hide()
 	})
-	$(".font dl.small").click(function(){
+	
+	$(".font dl.smal,.font_1 dl.smal").click(function(){
 		$(".edite").attr('class',"edite font-small")
 		$(".news-ins").attr('class',"news-ins font-small")
 		$(".list_page").attr('class',"list_page font-small")
-		$(".font").hide()
+		$(".font,.font_1").hide()
 
 	})	
 	//字体上下拉结束

@@ -12,10 +12,25 @@ $(document).ready(function(){
 				
 $(window).load(function(){
 /*美工专属区域*/
-$(".menulist .swiper-nav span .txt_bg").height($(".menulist .swiper-nav span .txt_bg").width())
-$(".menulist .swiper-nav span .txt").height($(".menulist .swiper-nav span .txt").width())
-$(".swiper-wrapper,.swiper-slide").height($(".menulist .swiper-nav span .txt_bg").width())
-$("#in_page .inner p").height($("#in_page .inner img").height())
+  $(".logo").height($(".logo").width()*0.2)
+  $(".nav_ico").height($(".nav_ico").width()*0.58)
+  $(".menulist .swiper-nav,.swiper-wrapper,.swiper-slide").height($(".nav_ico").height()+30)
+  $(".baner").css("margin-top",$(".logo").height()*0.7)
+  $(".arrow-left,.arrow-right").css("margin-top",($(".navlist").height()-40)*0.5)
+  $(".index div.wrapper:odd").addClass("public_bg2").css({"padding-top":15+"px","margin-top":20+"px"})
+   $(".index div.wrapper:even").css("margin-top",-13+"px")
+    $('.index div.wrapper:odd').each(function(){
+	 if( $(this).attr("class")== 'wrapper insub_image public_bg2'){
+	  $(this).find(".inner ul li p").css({"background":"rgba(255,255,255,0.4)"})}
+   })
+   $('.index div.wrapper:even').each(function(){
+	 if( $(this).attr("class")== 'wrapper insub_image'){
+	  $(this).find(".inner ul li p").addClass("public_bg2")}
+   })
+    
+	
+   
+
 
 /*美工专属区域*/
 	
@@ -23,7 +38,7 @@ $("#in_page .inner p").height($("#in_page .inner img").height())
 /*标题自适应宽度*/		
 	$(".yc ul li").each(function(){
 		 var ww=$(this).find("img").width();
-   $(this).find("p").width(ww);
+   $(this).find("p").width(ww*0.8).css({"padding-left":ww*0.1,"padding-right":ww*0.1});
   });
  /*标题自适应宽度*/
  
@@ -137,7 +152,7 @@ $("#in_page .inner p").height($("#in_page .inner img").height())
 		$("#up").hide()
 		$("#down").show()
 		$(".hide-class").removeClass("hide-class1")
-		$(".font").slideToggle()
+		$(".font,.font1").slideToggle()
 		$(".hide-class").slideUp()	
 	})
 	$(".font dl.big").click(function(){

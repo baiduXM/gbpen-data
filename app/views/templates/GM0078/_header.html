@@ -1,28 +1,24 @@
 
-<header class="he p_r">
 
-			    <h3 class="trapezoid"></h3>
-				<img src="{$logo}" class="logo" alt="">
-				<i class="iconfont daohang demo-icon icon-th-list iconnav p_a fix_icon" id="quickbar-navs-btn">&#xe603;</i>
-				<!-- <i class="demo-icon icon-th-list slide-nav  iconnav p_a">&#xe800;</i>  -->
-				</header>
-				 <div class="banners p_r">
-            	<canvas id="canvas"></canvas>
-           
-				<div class="banner swiper-container margin">
-			        <ul class="swiper-wrapper">
-			         
-					{foreach name=slidepics item=slidepic from=$global.slidepics}
-					<li class="swiper-slide"><a class="pic" href="{$slidepic.link}" target="_blank"><figure><img src="{$slidepic.image}" alt="{$slidepic.title}" /></figure></a></li>
-					{/foreach}
-			        </ul>
-			      
-			        
-			        
-			        <div class="swiper-button-next"></div>
-			        <div class="swiper-button-prev"></div>     
-			    </div>
-            </div>
-
-
-
+		<header>
+			<span id="quickbar" class="icon_n hd_icon fl"><i id="quickbar-navs-btn" class="iconfont icon">&#xe633;</i></span>
+			<div class="logo"><img src="{$logo}" ></div>
+		</header>
+		<div class="banner" >
+		<div class="hd">
+		        <div class="swiper-container">
+				        <div class="swiper-wrapper">
+				            {foreach name=slidepics item=slidepic from=$global.slidepics}
+		         			<div class="swiper-slide"><img src="{$slidepic.image}"></div>
+		           {/foreach}
+				        </div>
+    				</div>
+		    </div>
+	    <div class="mune swiper-container">
+    		<ul class=" swiper-wrapper ">
+    			{foreach item=nav from=$navs}
+	    		<li class="swiper-slide"><a href="{$nav.link}"><span><i class="iconfont icon">{$nav.icon}</i>{$nav.name}</span></a></li>
+	    		 {/foreach}
+	    	</ul>
+	    </div>
+    	</div>

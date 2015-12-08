@@ -61,44 +61,55 @@
       {foreach name=mIndexCats item=mIndexCat from=$mIndexCats}
       {if $mIndexCat.type eq 4}
       <div id="in_page" class="wrapper">
-   <h2 class="in_h1"><div class="bg"><a href="{$mIndexCat.link}"><div class="in_en">{$mIndexCat.en_name}</div><div class="in_zh">{$mIndexCat.name}</div></a></div></h2>
+        <h2 class="in_h2"><a href="{$mIndexCat.link}"><div class="in_en">{$mIndexCat.en_name}</div><div class="in_zh">{$mIndexCat.name}</div></a></h2>
         <div class="inner clearfix">
-           <div class="page_img"><img src="{$mIndexCat.image}"></div>
-          <p class="public_color">{$mIndexCat.description}</p>
+         <div class="bg clearfix">
+          <img src="{$mIndexCat.image}">{$mIndexCat.description}
+          </div>
        </div>
         </div>
-      {elseif $mIndexCat.type eq 1} 
-        <div id="in_text" class="wrapper clearfix">
-   <h2 class="in_h1"><div class="bg"><a href="{$mIndexCat.link}"><div class="in_en">{$mIndexCat.en_name}</div><div class="in_zh">{$mIndexCat.name}</div></a></div></h2>
+        
+      {elseif $mIndexCat.type eq 3} 
+       <div id="in_imagetext" class="wrapper">
+        <h2 class="in_h2"><a href="{$mIndexCat.link}"><div class="in_en">{$mIndexCat.en_name}</div><div class="in_zh">{$mIndexCat.name}</div></a></h2>
         <div class="inner">
-         <img src="{$mIndexCat.image}" >
             <ul>
             {foreach item=article from=$mIndexCat.data}
-              <li><a href="{$article.link}">
-                 <div class="in_title public_color">{$article.title}</div>
-                 </a>
+              <li>
+              <div class="part clearfix">
+              <a href="{$article.link}">
+                 <div class="in_imgbox"><img src="{$article.image}" width="100%" title="120*88"></div>
+                 <div class="in_textbox">
+                 <div class="in_title">{$article.title}</div>
+                 <div class="in_data">{$article.pubtimestamp|date_format:"%d "}/{$article.pubtimestamp|date_format:"%m "}</div>
+                 <div class="in_des">{$article.description}</div>
+                <div class="more"><div class="add">+</div>查看更多</div>
+                 </div></a>
+                 </div>
               </li>
               {if $article@index+1 == 3}{break}{/if} {/foreach}
-
             </ul>
-            </div>
         </div>
-        {elseif $mIndexCat.type eq 2} 
-        <div id="in_image" class="wrapper">
-        <div class="inner">
+        </div>
+        
+      {elseif $mIndexCat.type eq 2} 
+      <div id="in_image" class="wrapper">
+        <div class="inner yc">
             <ul class="clearfix">
             {foreach item=article from=$mIndexCat.data}
               <li><a href="{$article.link}">
                   <div class="in_proimg"><img src="{$article.image}" width="100%" title="160*150"></div>
-                  </a>
+                  <div class="in_protitle"> <p>{$article.title}</p></div></a>
               </li>
-             {if $article@index+1 == 3}{break}{/if} {/foreach}
+             {if $article@index+1 == 6}{break}{/if} {/foreach}
             </ul>
         </div>
         </div>
         {/if} 
 {/foreach}
       </section>
+      
+      
     <footer class="foot" ><a class="back-top">∧</a>{$footprint}</footer></div>
     </div>
   </div>

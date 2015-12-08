@@ -1,5 +1,7 @@
 <div class="header">
-    <div class="baner">
+      <div class="logo"><img src="{$logo}" width="100%"></div>
+      <div class="header_menu" id="header_menu"></div>
+      <div class="baner">
         <div id="slideBox" class="slideBox">
           <div class="hd">
             <ul>
@@ -7,18 +9,11 @@
           </div>
           <div class="bd">
             <ul>
-            {foreach name=slidepics item=slidepic from=$global.slidepics}
-              <li><a class="pic" href="{$slidepic.link}"><img src="{$slidepic.image}" title="640*316" /></a></li>
+             {foreach name=slidepics item=slidepic from=$global.slidepics}
+              <li><a class="pic" href="{$slidepic.link}"><img src="{$slidepic.image}" title="500*245" /></a></li>
             {/foreach}
             </ul>
           </div>
         </div>
       </div>
-      <div class="baner_bg"><img src="{$site_url}images/baner_bg.png"></div>
-      <div class="home"><a href="{$site_url}">首 页</a></div>
-      <div class="logo"><img src="{$logo}" width="100%"></div>
-    <div class="header_menu" ><a href="#" id="header_menu">导 航</a></div>
     </div>
-	
-	
-	

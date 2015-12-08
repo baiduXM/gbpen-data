@@ -1,19 +1,18 @@
-<header>
-    <div class="header">
+  <header>
+    <div class="baner">
       <div class="logo"><img src="{$logo}" width="100%"></div>
-      <div class="menulist public_bg">
-        <div class="navlist"> <a class="arrow-left" href="#">&lt;</a> <a class="arrow-right" href="#">&gt;</a>
+      <div class="menulist">
+        <div class="navlist">
           <div class="swiper-nav swiper-container">
             <div class="swiper-wrapper">
-              <div class="swiper-slide"><span><a href="{$site_url}">æœ¬ç«™é¦–é¡µ</a></span></div>
+              <div class="swiper-slide"><span class="public_bg"><a href="{$site_url}">ÍøÕ¾Ê×Ò³</a></span></div>
                {foreach item=nav from=$navs}
-              <div class="swiper-slide"><span><a href="{$nav.link}">{$nav.name}</a></span></div>
+              <div class="swiper-slide"><span  class="public_bg"><a href="{$nav.link}">{$nav.name}</a></span></div>
                {/foreach}
             </div>
           </div>
         </div>
       </div>
-      <div class="baner">
         <div id="slideBox" class="slideBox">
           <div class="hd">
             <ul>
@@ -28,9 +27,4 @@
           </div>
         </div>
       </div>
-      
-    </div>
   </header>
-	
-	
-	

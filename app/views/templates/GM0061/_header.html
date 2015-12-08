@@ -1,0 +1,18 @@
+<div class="header">
+      <div class="logo"><img src="{$logo}" width="100%"></div>
+      <div class="menulist">
+        <div class="navlist"> 
+          <div class="swiper-nav swiper-container">
+            <div class="swiper-wrapper">
+        <div class="swiper-slide"><span><div class="txt_bg"><div class="txt"><div class="pic"><img src="{$site_url}images/home.png"></div><div class="wz"><a href="{$site_url}">网站首页</a></div></div></div></span></div>
+               {foreach item=nav from=$navs}
+<div class="swiper-slide"><span><div class="txt_bg"><div class="txt"><div class="pic">{$nav.icon}</div><div class="wz"><a href="{$nav.link}">{$nav.name}</a></div></div></div></span></div>
+               {/foreach}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+	
+	
+	

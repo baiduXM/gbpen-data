@@ -1,200 +1,154 @@
 $(document).ready(function(){
-	/*大图js效果*/
-	TouchSlide({ 
-					slideCell:"#slideBox",
-					titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
-					mainCell:".bd ul", 
-					effect:"leftLoop", 
-					autoPage:true,//自动分页
-					autoPlay:true,
-					interTime:6000 //自动播放
-				});
-				
-$(window).load(function(){
-/*美工专属区域*/
-$("#in_image ul li:last").css("margin-right",0)
-
-$("#in_image ul li").height($("#in_image ul li").width())
-$("#in_image ul li .in_proimg").height($("#in_image ul li").width())
 
 
-/*美工专属区域*/
-	
-	
-/*标题自适应宽度*/		
-	$(".yc ul li").each(function(){
-		 var ww=$(this).find("img").width();
-   $(this).find("p").width(ww);
-  });
- /*标题自适应宽度*/
- 
- 
- 
-  var img=new Image();
-		var self5 = $(".cpszs_show");
-                                        var heights5 = $(self5).height();;
-                                        var alimat5 = $(".listpp");
-                                        alimat5.height(heights5);		
-		var self6 = $(".nimg1");
-                                        var heights6 = $(self6).height();;
-                                        var alimat6 = $(".decurlits");
-                                        alimat6.height(heights6);
-	img.src=$(".prolist img").attr("src");
-	$(".index-wrap").height($(".wrap").height())
-	$(".class-m").height($(".class").outerHeight()-$(".class-top").outerHeight())
-	$(".menulist dl").height($(".menulist dl").width())
-	$(".menu").height($(".menulist dl").outerHeight())
-	$(".prolist .tielbox").height($(".prolist img").height())
-	});
+
+
+ var lineHeight=$("header,.aboutheader").outerHeight()
+		$("header i,.aboutheader i").css({
+			lineHeight: lineHeight+"px"
+		});
+	//获取高度
+	function resize(){
+		$(".nav-menu").height($(window).outerHeight());
+		
+	}
+	resize();
+	//根据设备窗口大小调整高度
 	$(window).resize(function(){
-		/* $(".index-wrap").height($(window).height()-$(".fixed").height()-$(".tell-icon").height()) */
-		$(".class-m").height($(".class").outerHeight()-$(".class-top").outerHeight())
-		$(".menulist dl").height($(".menulist dl").width())
-		$(".menu").height($(".menulist dl").outerHeight())
-		$(".prolist .tielbox").height($(".prolist img").height())
+		resize();
+
+		var lineHeight=$("header").outerHeight()
+		$("header i").css({
+			lineHeight: lineHeight+"px"
+		});
+
 		
-	$("#about .nr dd").height($("#about img").height()-29)
-	if($(window).width()<400){
-		$("#about .nr dd").css({'line-height':$("#about .nr dd").height()/3+"px"})
-		}else{
-			if($(window).width()<540)
-			{$("#about .nr dd").css({'line-height':$("#about .nr dd").height()/5+"px"})}
-			else{$("#about .nr dd").css({'line-height':$("#about .nr dd").height()/6+"px"})}
-			}
+	});
+
+	
+	
+
+    //底部咨询电话
+
+	//分享
+	$(".share").height($("footer").height())
+
+	//二级菜单下拉
+	nav("#left_nav");
+	nav(".aboutNav");
+	function nav(stair){
+		var stair=$(stair).children('li').children('a');
+		var obj=stair.next();
+		var erj=obj.children('li').children('a');
+        var sj=erj.next();
+		if (obj.length>0) {
 			
-			
-	$(".class-m").height($(".class").outerHeight()-$(".class-top").outerHeight())
-	 $(".index-wrap").height($(".wrap").height()+$(".quickbar-tips").height()) 
-	//赖加载
+			obj.prev().append('<span>+</span>')
+			stair.click(function(event) {
+
+				if($(this).children('span').text() == "+"){
+					// event.preventDefault();
+                     $(this).attr('href', 'javascript:void(0)');
+                 $(this).children('span').text('-')
+             }else{
+                 $(this).children('span').text('+')
+             };
+              $(this).next().slideToggle(200)
+			});
+            if (sj.length>0) {
+
+            	sj.prev().append('<span>+</span>')
+            	
+            	erj.click(function(event) {
+            		
+            		if($(this).children('span').text() == "+"){
+            			$(this).attr('href', 'javascript:void(0)');
+                 $(this).children('span').text('-')
+             }else{
+                 $(this).children('span').text('+')
+             };
+
+              $(this).next().slideToggle(200)
+            	});
+            };
+		};       
+    }
+
+  
+
+
+	
+	 //隐藏导航跟wrap的切换
+	$(".slide-nav").click(function(){
+		$("nav,.wrap").addClass("slide");
+		$(".shadow").show();
+	})
+	$(".nav-close,.shadow").on('touchstart click',function(){
+		$("nav,.wrap").removeClass("slide");
+		$(".shadow").hide(400);
+
+		
+	})
+	
+	$(".qx").click(function() {
+		$(".share").hide();
+
+	});
+	$(".icon-flow-branch").click(function() {
+
+		$(".share").show(500, function() {
+			$(".share").height($("footer").outerHeight())
+		});
+	});
+ //返回上一页
+	$('.forword').click(function(){
+		window.history.go(-1);
 	
 	});
 	
 	
-	function pageSlideOver(){
-    $('.page-out').live('transitionend', function(){
-      $(this).removeClass('page-out');
-    });
-    $('.page-in').live('transitionend', function(){
-      $(this).removeClass('page-in');
-    });
-  }
-  //隐藏导航跟wrap的切换
-	$("#class,#header_menu").click(function(){
-		$("#quickbar-navs").removeClass("page-prev").addClass("page-in");
-		$("#quickbar-wrap").removeClass("page-active").addClass("page-next page-in")
-		$(".quickbar-opacity2").show()
-		pageSlideOver();
-	})
+		$('.type').click(function(){
+			if($('.aboutName').is(':hidden')){
+				$(this).html("分类∨");
+				
+			}else{
+				
+				$(this).html("分类∧");
+			}
+			$('.aboutName').slideToggle(200);
+			
+		})
 
-		$(".quickbar-navs-close,.quickbar-opacity2").on('touchstart',function(){
-		$("#quickbar-navs").addClass("page-prev page-out")
-		$("#quickbar-wrap").removeClass("page-next").addClass(" page-out")
-		$(".quickbar-opacity2").hide()
-		$(".newsclass").removeClass("show")
-		pageSlideOver();
-		return false;
-	})
-						
-
-                                function setHeighti() {
-                                  // $('.slimgs2').each(function () {
-                                        var self5 = $(".aboutimgs");
-                                        var heights5 = $(self5).height()-'20'+'px';;
-                                        var alimat5 = $(".a_text");
-                                        alimat5.height(heights5);										
-                                  //  })
-
-                                };
-                                setHeighti();								
-				 $(window).resize(function(){
-					setTimeout(setHeighti);
-				 })		
 	
-  //隐藏导航跟wrap的切换
-  $("#daohang").click(function(){
-		$(".class").removeClass("page-prev").addClass("page-in");
-		$(".wrap").removeClass("page-active").addClass("page-next page-in")
-		$(".opacity2").show()
-		pageSlideOver();
+	$('.font-set').click(function(){
+		$('.font-list').slideToggle(200);
+		$('.type-list').slideUp(200);
+	});
+	
+	fontSize('.d','1.25rem');
+	fontSize('.x','.75rem');
+	fontSize('.z','1rem');
+	function fontSize(fontSiz,siz){
+		$(fontSiz).click(function() {
+		$('.infos').css('font-size',siz);
+		$('.font-sel').slideUp();
+		});
 		
-	})
-	$(".class-close,.opacity2").on('touchstart',function(){
-		$(".class").addClass("page-prev page-out")
-		$(".wrap").removeClass("page-next").addClass(" page-out")
-		$(".opacity2").hide()
-		$(".newsclass").removeClass("show")
-		pageSlideOver();
-		return false;
-	})
-		
-	$(".tell-icon .close").click(function(){
-		$(".tell-icon").removeClass("display-block")
-		$(".index-wrap").height($(window).height()-$(".fixed").height())
-		return false
-	})
+	}
 	
-	//字体上下拉开始
-  	
-	$("#font").click(function(){
-		$("#up").hide()
-		$("#down").show()
-		$(".hide-class").removeClass("hide-class1")
-		$(".font").slideToggle()
-		$(".hide-class").slideUp()	
-	})
-	$(".font dl.big").click(function(){
-		$(".edite").attr('class',"edite font-big")		 
-		$(".list_page").attr('class',"list_page font-big")
-		$(".news-ins").attr('class',"news-ins font-big")
-		$(".font").hide()
-	})
-	$(".font dl.normal").click(function(){
-		$(".edite").attr('class',"edite font-normal")				
-		$(".list_page").attr('class',"list_page font-normal")
-		$(".news-ins").attr('class',"news-ins font-normal")
-		$(".font").hide()
-	})
-	$(".font dl.small").click(function(){
-		$(".edite").attr('class',"edite font-small")						   
-		$(".list_page").attr('class',"list_page font-small")
-		$(".news-ins").attr('class',"news-ins font-normal")
-		$(".font").hide()
+	//返回顶部
+	$('.icon-angle-circled-up').click(function(){
+		$('.main').animate({
+			'scrollTop' : 0
 
-	})	
-	//字体上下拉结束
-	//分类上下拉开始
-	$("#first").click(function(){
-		$("#up").toggle()
-		$("#down").toggle()
-		$(".hide-class").slideToggle()
-		$(".font").slideUp()	
-	})
-	//分类上下拉结束
-	
-	$(".title2 span.bigd").click(function(){
-		$(".edite").attr('class',"edite font-big")
-	})
-	$(".title2 span.middled").click(function(){
-		$(".edite").attr('class',"edite font-normal")
-	})
-	$(".title2 span.smalld").click(function(){
-		$(".edite").attr('class',"edite font-small")
+		},1);
 
-	})		
-	//返回顶部开始
-	$(".back-top").click(function(){$(".index-wrap").animate({scrollTop :0}, 800)})
-	$("#share_btn").click(function(){
-		$(".newsclass").addClass("show")
-		$(".opacity2").show()
-		return false
 	})
-	//返回顶部结束
-	//分享取消按钮开始
-	$(".share-cance").click(function(){
-		$(".newsclass").removeClass("show")
-		$(".opacity2").hide()
-	})
-  	});
-	//分享取消按钮结束
+    
+    $(".logo").outerHeight( $(".logo img").outerWidth()/2)
+    $(".logo img").css({
+    	marginLeft: - $(".logo img").outerWidth()/2,
+    	marginTop:- $(".logo img").outerWidth()/2
+    });
 
-	
+  });

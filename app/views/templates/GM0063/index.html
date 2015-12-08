@@ -2,16 +2,16 @@
 <html manifest="huancun.manifest">
 <head>
 <!-- 实时预览调试代码，模板开发完成后删除 -->
-
-<!-- 调试代码 End -->
-<script type="text/javascript">
-// 识别为电脑客户端，自动跳转PC页面
-  {if $site_another_url}
-    if (!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
-      location.href = '{$site_another_url}';
-    }
-  {/if}
-</script>
+		
+		<!-- 调试代码 End -->
+		<script type="text/javascript">
+		// 跳转PC页面
+		{if $site_another_url}
+			if (!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+				location.href = '{$site_another_url}';
+			}
+		{/if}
+		</script>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no,minimal-ui">
 <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,131 +33,82 @@
 <meta name="description" content="{$description}" />
 <link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
 <title>{$title}</title>
-
-<link rel="stylesheet" href="{$site_url}css/reset.css" />
-<link rel="stylesheet" href="{$site_url}css/swiper.css" />
-<link rel="stylesheet" href="{$site_url}css/public.css" />
-<link rel="stylesheet" href="{$site_url}css/style.css" />
-
+<link rel="stylesheet" href="{$site_url}css/reset.css" /> 
+<link rel="stylesheet" href="{$site_url}css/public.css" /> 
+<link href="{$site_url}css/css.css" rel="stylesheet" type="text/css" />
+<link href="{$site_url}css/swipe.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" rev="stylesheet" href="{$site_url}css/style_{$stylecolor}.css" type="text/css" />
-
-
-<script type="text/javascript" src="{$site_url}js/jquery.min.js"></script>
 <script src="{$site_url}js/TouchSlide.1.1.js"></script>
-<script src="{$site_url}/js/swiper.jquery.min.js"></script>
+<script type="text/javascript" src="{$site_url}js/jquery.min.js"></script>
 <script type="text/javascript" src="{$site_url}js/function.js"></script>
+<script type="text/javascript" src="{$site_url}js/share.js"></script>
+<script src="{$site_url}js/idangerous.swiper-2.0.min.js"></script>
+<script src="{$site_url}js/idangerous.swiper.3dflow-2.0.js"></script>
+<script src="{$site_url}js/simple-app.js"></script>
 <script type="text/javascript">
 	window.addEventListener('load', function(){
    setTimeout(function(){ window.scrollTo(0, 1); }, 100);
 });//safari浏览器可以通过此代码来隐藏地址栏
 </script>
-
 {$headscript}
 </head>
 <body>
-  <div class="loader_div">
-    <span class="rotate_w"></span>
-    <div class="bg">
-      <div class="b_l">
-        <img src="{$global.load_img.image}" alt="{$global.load_img.title|strip_tags}">
-      </div>
-      <div class="t_r">
-        <img src="{$global.load_img.image}" alt="{$global.load_img.title|strip_tags}">
-      </div>
+<div class="body">
+  <div class="wrap page-active">
+    <div class="index-wrap">
+      {include file="./_header.html"}
+      <section> 
+         <div class="content">
+         <div class="q"></div>
+      <div class="x"></div>
+      {foreach name=mIndexCats item=mIndexCat from=$mIndexCats}
+      {if $mIndexCat.type eq 4}
+      <div id="in_page" class="wrapper clearfix">
+      <h2 class="in_h1 public_color1"><a href="{$mIndexCat.link}"><div class="in_zh">{$mIndexCat.name}</div><div class="in_en">{$mIndexCat.en_name}</div><div class="circle">1</div></a></h2>
+        <div class="inner clearfix">
+        <div class="pic"><img src="{$mIndexCat.image}"></div>
+          <p>{$mIndexCat.description}</p>
+       </div>
+        </div>
+        
+      {elseif $mIndexCat.type eq 1} 
+       <div id="in_text" class="wrapper clearfix">
+      <h2 class="in_h1 public_color1"><a href="{$mIndexCat.link}"><div class="in_zh">{$mIndexCat.name}</div><div class="in_en">{$mIndexCat.en_name}</div><div class="circle">3</div></a></h2>
+
+        <div class="inner">
+            <ul>
+            {foreach item=article from=$mIndexCat.data}
+              <li class="clearfix">
+ <div class="bg">+</div><div class="in_title"><a href="{$article.link}" class="public_color" >{$article.title}</a> </div>
+              </li>
+              {if $article@index+1 == 3}{break}{/if} {/foreach}
+            </ul>
+        </div>
+        </div>
+      {elseif $mIndexCat.type eq 2} 
+      <div id="in_image" class="wrapper clearfix">
+         <h2 class="in_h1 public_color1"><a href="{$mIndexCat.link}"><div class="in_zh">{$mIndexCat.name}</div><div class="in_en">{$mIndexCat.en_name}</div><div class="circle">2</div></a></h2>
+
+        <div class="inner yc">
+            <ul class="clearfix">
+            {foreach item=article from=$mIndexCat.data}
+              <li><a href="{$article.link}">
+                  <div class="in_proimg"><img src="{$article.image}" width="100%" title="160*150"></div>
+              </li>
+             {if $article@index+1 == 2}{break}{/if} {/foreach}
+            </ul>
+        </div>
+        </div>
+        {/if} 
+{/foreach}
+</div>
+      </section>
+      
+      
+    <footer class="foot" ><a class="back-top">∧</a>{$footprint}</footer></div>
     </div>
   </div>
-
-  <div class="big_wrap">
-  <header class="header">
-          <div class="header_menu" id="header_menu"><i class="icon iconfont">&#xe603;</i></div>
-          <h1 class="logo"><a href="javascript:;"><img src="{$logo}" alt="{$title}"></a></h1>
-          <div href="{$search_action}" class="search_btn" id="search_btn"><i class="icon iconfont">&#xe636;</i></div>
-        </header>
-
-
-	<div class="wrap page-active wrap_home">
-      <div class="index-wrap">
-        
-        
-        <!-- 滚轮图 -->
-        <div class="swiper_container">
-            <div class="swiper-wrapper">
-              {foreach item=slidepic from=$global.slidepics}
-                <div class="swiper-slide"><img src="{$slidepic.image}" alt="{$slidepic.title|strip_tags}"></div>
-              {/foreach} 
-            </div>
-            <!-- 如果需要分页器 -->
-            <div class="swiper-pagination"></div>
-        </div>
-
-        <!-- 输出导航式栏目（不包括内容式栏目） -->
-        <nav class="menu_nav">
-          <ul class="clearfix">
-
-            {$limit = 6}
-            {foreach item=nav_list from=$navs}            
-            <!-- 仅输出类型为 5内容单页 和 外链的栏目（包括5留言板、7微信、8直达号功能） -->
-            <li>
-              <a href="{$nav_list.link}"><span>{$nav_list.name}</span></a>
-            </li>            
-            {if $nav_list@index+1 eq $limit}{break}{/if}
-            {/foreach}
-
-          </ul>
-        </nav>
-        
-        
-        <!-- 输出内容式栏目 -->
-        {foreach name=mIndexCats item=mIndexCat from=$mIndexCats}
-        <!-- 仅输出类型为 2图片列表 的栏目 -->
-        {if $mIndexCat.type eq 2}
-          <!-- 后台选中“样式1”的展现模式： -->
-          {if $mIndexCat.showtype eq 1}
-          <section class="product_w">
-            <header>
-              <h2><span class="zh">{$mIndexCat.name}</span><br/><span class="en">{$mIndexCat.en_name}</span></h2>
-            </header>
-            <div class="product">            
-              <ul class="clearfix">             
-                {$limit = 5}
-                {foreach name=imglist item=imglist from=$mIndexCat.data} 
-                <li>
-                  <a href="{$imglist.link}"><img src="{$imglist.image}" alt="{$imglist.title|strip_tags}"></a>
-                </li>
-
-                {if $imglist@index+1 eq $limit}{break}{/if}
-                {/foreach}  
-                <li class="last">          
-                  <a href="{$mIndexCat.link}" class="more">更多</a>
-                </li>
-              </ul>
-              
-            </div>
-          </section>
-          {/if}
-
-        <!-- 仅输出类型为 4单页内容 的栏目（关于我们、联系我们） -->
-        {elseif $mIndexCat.type eq 4}
-          <section class="about_w">
-            <header>
-              <h2><span class="zh">{$mIndexCat.name}</span><br/><span class="en">{$mIndexCat.en_name}</span></h2>
-            </header>
-            <div class="about">
-              <div class="txt">{$mIndexCat.description}</div>
-              <a href="{$mIndexCat.link}" class="more">更多</a>
-            </div>
-
-          </section>
-        {/if}
-        {/foreach} 
-      </div>
-    </div>
-
-    {include file="./_page_search.html"}
-    <div class="to_top" id="to_top"><a href="javascript:;">top</a></div>
-    <footer class="foot">{$footprint}</footer>
-
-{$footscript}
-</div>
+  {$footscript}
+  </div>
 </body>
 </html>

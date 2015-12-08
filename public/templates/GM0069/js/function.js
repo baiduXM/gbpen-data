@@ -12,9 +12,17 @@ $(document).ready(function(){
 				
 $(window).load(function(){
 /*美工专属区域*/
-$("#in_image ul li:last").css("margin-right",0)
-$("#in_page .inner").height($("#in_page .in_h1").height())
+  
+$(".logo").height($(".logo").width());
+$(".logo").css({"margin-left":"-"+$(".logo").width()/2+"px"})
+$("#in_text ul li .part .right").height($("#in_text ul li .part .left img").height());
+$(".list_text ul li .part .right").height($(".list_text ul li .part .left img").height());
+$(".list_imagetext ul li .part .text_box").height($(".list_imagetext ul li .part .img_box img").height());
+$(".list_imagetext ul li .part .text_box").height($(".list_imagetext ul li .part .img_box img").height());
 
+
+var m=$(".logo").height()-$(".logo img").height();
+$(".logo img").css({"marginTop":m*0.5})
 
 /*美工专属区域*/
 	
@@ -77,22 +85,21 @@ $("#in_page .inner").height($("#in_page .in_h1").height())
     });
   }
   //隐藏导航跟wrap的切换
-	$("#class").click(function(){
-		$(".class").removeClass("page-prev").addClass("page-in");
-		$(".wrap").removeClass("page-active").addClass("page-next page-in")
-		$(".opacity2").show()
+	$("#daohang,#header_menu,#fixed_menu").click(function(){
+		$("#quickbar-navs").removeClass("page-prev").addClass("page-in");
+		$("#quickbar-wrap").removeClass("page-active").addClass("page-next page-in")
+		$(".quickbar-opacity2").show()
 		pageSlideOver();
-		
 	})
-	$(".class-close,.opacity2").on('touchstart',function(){
-		$(".class").addClass("page-prev page-out")
-		$(".wrap").removeClass("page-next").addClass(" page-out")
-		$(".opacity2").hide()
+	$(".quickbar-navs-close,.quickbar-opacity2").on('touchstart',function(){
+		$("#quickbar-navs").addClass("page-prev page-out")
+		$("#quickbar-wrap").removeClass("page-next").addClass(" page-out")
+		$(".quickbar-opacity2").hide()
 		$(".newsclass").removeClass("show")
 		pageSlideOver();
 		return false;
 	})
-								
+						
 
                                 function setHeighti() {
                                   // $('.slimgs2').each(function () {
@@ -107,24 +114,8 @@ $("#in_page .inner").height($("#in_page .in_h1").height())
 				 $(window).resize(function(){
 					setTimeout(setHeighti);
 				 })		
-	
-  //隐藏导航跟wrap的切换
-  $("#daohang").click(function(){
-		$(".class").removeClass("page-prev").addClass("page-in");
-		$(".wrap").removeClass("page-active").addClass("page-next page-in")
-		$(".opacity2").show()
-		pageSlideOver();
-		
-	})
-	$(".class-close,.opacity2").on('touchstart',function(){
-		$(".class").addClass("page-prev page-out")
-		$(".wrap").removeClass("page-next").addClass(" page-out")
-		$(".opacity2").hide()
-		$(".newsclass").removeClass("show")
-		pageSlideOver();
-		return false;
-	})
-		
+
+ 
 	$(".tell-icon .close").click(function(){
 		$(".tell-icon").removeClass("display-block")
 		$(".index-wrap").height($(window).height()-$(".fixed").height())
@@ -141,21 +132,21 @@ $("#in_page .inner").height($("#in_page .in_h1").height())
 		$(".hide-class").slideUp()	
 	})
 	$(".font dl.big").click(function(){
-		$(".edite").attr('class',"edite font-big")		 
-		$(".list_page").attr('class',"list_page font-big")
+		$(".edite").attr('class',"edite font-big")
 		$(".news-ins").attr('class',"news-ins font-big")
+		$(".list_page").attr('class',"list_page font-big")
 		$(".font").hide()
 	})
 	$(".font dl.normal").click(function(){
-		$(".edite").attr('class',"edite font-normal")				
-		$(".list_page").attr('class',"list_page font-normal")
+		$(".edite").attr('class',"edite font-normal")
 		$(".news-ins").attr('class',"news-ins font-normal")
+		$(".list_page").attr('class',"list_page font-normal")
 		$(".font").hide()
 	})
 	$(".font dl.small").click(function(){
-		$(".edite").attr('class',"edite font-small")						   
+		$(".edite").attr('class',"edite font-small")
+		$(".news-ins").attr('class',"news-ins font-small")
 		$(".list_page").attr('class',"list_page font-small")
-		$(".news-ins").attr('class',"news-ins font-normal")
 		$(".font").hide()
 
 	})	

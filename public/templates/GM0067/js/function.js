@@ -13,8 +13,24 @@ $(document).ready(function(){
 $(window).load(function(){
 /*美工专属区域*/
 var ww=$(".in_h2 .in_zh").height()+$(".in_h2 .in_en").height();
-$(".in_h2").css("top",($(".page_img").height()-ww)*0.5+"px");
 $("#in_image ul li:last").css("margin-right",0)
+$(".menulist .swiper-nav span").height($(".menulist .swiper-nav span").width())
+$(".menulist .navlist,.swiper-wrapper,.swiper-slide").height($(".menulist .swiper-nav span").width())
+var m=$(".menulist .swiper-nav span").height()-10+"px"
+$(".menulist .swiper-nav span").css({"line-height":m})
+
+$("section div.wrapper:odd").addClass("bg")
+$("section div.wrapper:odd .in_h2 .local").addClass("bg2")
+$("section div.wrapper:odd #xx").addClass("bj2")
+$("section div.wrapper:odd .square").removeClass("bg")
+$("section div.wrapper:odd .square").addClass("bj3")
+$("section div.wrapper:odd .inner p").css({"color":"#fff"})
+
+
+$("#in_text .inner .line").height($("#in_text .inner ul").height()-15+"px")
+$("#in_text .inner ul li:last").css({"marginBottom":"0"})
+$("#in_image .inner").height($("#in_image .inner ul").height())
+
 
 /*美工专属区域*/
 	
@@ -137,26 +153,30 @@ $("#in_image ul li:last").css("margin-right",0)
 		$("#up").hide()
 		$("#down").show()
 		$(".hide-class").removeClass("hide-class1")
+		$(".font1").slideToggle()
 		$(".font").slideToggle()
 		$(".hide-class").slideUp()	
 	})
-	$(".font dl.big").click(function(){
+	$(".font dl.big,.font1 dl.big").click(function(){
 		$(".edite").attr('class',"edite font-big")
 		$(".list_page").attr('class',"list_page font-big")
 		$(".news-ins").attr('class',"news-ins font-big")
 		$(".font").hide()
+		$(".font1").hide()
 	})
-	$(".font dl.normal").click(function(){
+	$(".font dl.normal,.font1 dl.normal").click(function(){
 		$(".edite").attr('class',"edite font-normal")
 		$(".list_page").attr('class',"list_page font-normal")
 		$(".news-ins").attr('class',"news-ins font-normal")
 		$(".font").hide()
+		$(".font1").hide()
 	})
-	$(".font dl.small").click(function(){
+	$(".font dl.small,.font1 dl.small").click(function(){
 		$(".edite").attr('class',"edite font-small")
 		$(".list_page").attr('class',"list_page font-small")
 		$(".news-ins").attr('class',"news-ins font-normal")
 		$(".font").hide()
+		$(".font1").hide()
 
 	})	
 	//字体上下拉结束

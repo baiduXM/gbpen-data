@@ -1,35 +1,43 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<!-- 实时预览调试代码，模板开发完成后删除 -->
-		
-		<!-- 调试代码 End -->
-		<script type="text/javascript">
+<html manifest="huancun.manifest">
+<head>
+<!-- 实时预览调试代码，模板开发完成后删除 -->
+
+<!-- 调试代码 End -->
+<script type="text/javascript">
 		// 跳转PC页面
 		{if $site_another_url}
-			if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+			if (!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
 				location.href = '{$site_another_url}';
 			}
 		{/if}
 		</script>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width,minimum-scale=1.0, maximum-scale=1.5,user-scalable=no,minimal-ui">
-<meta name="keywords" content="{$keywords}" />
-<meta name="description" content="{$description}" />        
+<meta name="viewport" content="width=device-width,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no,minimal-ui">
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 <meta content="telephone=no, email=no" name="format-detection">
+<!-- 启用360浏览器的极速模式(webkit) -->
 <meta name="renderer" content="webkit">
+<!-- 避免IE使用兼容模式 -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
 <meta name="HandheldFriendly" content="true">
+<!-- 微软的老式浏览器 -->
 <meta name="MobileOptimized" content="320">
+<!-- uc强制竖屏 -->
 <meta name="screen-orientation" content="portrait">
+<!-- QQ强制竖屏 -->
 <meta name="x5-orientation" content="portrait">
+<meta name="keywords" content="{$keywords}" />
+<meta name="description" content="{$description}" />
+<link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
 <title>{$title}</title>
-<link rel="stylesheet" href="{$site_url}css/reset.css" /> 
-<link rel="stylesheet" href="{$site_url}css/public.css" /> 
+<link rel="stylesheet" href="{$site_url}css/reset.css" />
+<link rel="stylesheet" href="{$site_url}css/public.css" />
 <link href="{$site_url}css/css.css" rel="stylesheet" type="text/css" />
 <link href="{$site_url}css/swipe.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" rev="stylesheet" href="{$site_url}css/style_{$stylecolor}.css" type="text/css" />
 <script src="{$site_url}js/TouchSlide.1.1.js"></script>
 <script type="text/javascript" src="{$site_url}js/jquery.min.js"></script>
 <script type="text/javascript" src="{$site_url}js/function.js"></script>
@@ -44,37 +52,38 @@
 </script>
 </head>
 <body>
-{include file="./_header.html"}
-    <section>
-<div class="index_show">
-       <div class="coust_titles"><span class="more2" id="first">分类<span id="down"> &darr;</span><span id="up"> &uarr; </span></span><div class="keftitle">{$list.name}<b>{$list.en_name}</b></div></div>     
-             {include file='./_nav.html'}   
-<div class="boxmain-m">
-<div class="course_detal">
-            	<ul>
-                 {foreach name=article item=article from=$list.data}
-                	<li><a onclick="javascript:window.location.href='{$article.link}'">
-                    	<div class="kechengs">
-                        	<div class="pings">
-                              <div class="cimgs"><img src="{$article.image}" width="100%"></div>
-                            </div>
-                            <div class="c_title2">{$article.title}</div>
-                            <div class="c_eidt2">{$article.description}</div>
-<div class="xax_d">详情信息</div>
-                        </div></a>
-                    </li>
-                  {if $article@index+1 == 6}{break}{/if}
-				{/foreach}  
-                	                                                      
+<div class="body">
+  <div class="wrap page-active">
+    <div class="index-wrap"> {include file='./_header.html'}
+      <section>
+        <div class="boxmaind">
+          <div class="boxmain_d">
+              <h1 class="boxmain-top2">
+          <span class="more3" id="first">分类<span id="down"> ∧</span><span id="up"> ∨ </span></span>
+         <div class="sub_zh public_color">{$list.name}</div><div class="sub_en public_color">{$list.en_name}</div></h1>
+       
+            {include file='./_nav.html'}
+            <div class="main">
+              <div class="list_image yc">
+                <ul class="clearfix">
+                  {foreach name=article item=article from=$list.data}
+                  <li><a href="{$article.link}">
+                    <div> <b><img src="{$article.image}" width="100%" title="160*150"></b>
+                     
+                    </div>
+                    </a> </li>
+                      {if $article@index+1 == 12} {break} {/if}
+                    {/foreach}
                 </ul>
-                <div class="next1"><a href="{$page_links.first_link}" class="cu">首页</a><a href="{$page_links.prev_link}">上一页</a>{$page_links.current_page}/{$page_links.page_count}<a href="{$page_links.next_link}" >下一页</a><a href="{$page_links.last_link}"  >尾页</a></div>    
-                
+                <div class="next1 public_color"><a href="{$page_links.first_link}" class="public_color">首页</a><a href="{$page_links.prev_link}" class="public_color">上一页</a>{$page_links.current_page}/{$page_links.page_count}　<a href="{$page_links.next_link}" class="public_color">下一页</a><a href="{$page_links.last_link}" class="public_color">尾页</a></div>
+              </div>
             </div>
-               </div>              
+          </div>
+        </div>
+      </section>
+      <footer class="foot" ><a class="back-top">∧</a>{$footprint}</footer>
     </div>
-    </section>
-        <footer class="foot">{$footprint} </footer>
-        
-        {$footscript}    
+  </div>
+  {$footscript} </div>
 </body>
 </html>

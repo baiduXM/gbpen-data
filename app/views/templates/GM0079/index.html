@@ -33,11 +33,11 @@
 <link href="{$site_url}css/swipe.css" rel="stylesheet" type="text/css" />
 <script src="{$site_url}js/TouchSlide.1.1.js"></script>
 <script type="text/javascript" src="{$site_url}js/jquery.min.js"></script>
+<script type="text/javascript" src="{$site_url}js/function.js"></script>
 <script type="text/javascript" src="{$site_url}js/share.js"></script>
 <script src="{$site_url}js/idangerous.swiper-2.0.min.js"></script>
 <script src="{$site_url}js/idangerous.swiper.3dflow-2.0.js"></script>
 <script src="{$site_url}js/simple-app.js"></script>
-<script type="text/javascript" src="{$site_url}js/function.js"></script>
 <script type="text/javascript">
 	window.addEventListener('load', function(){
    setTimeout(function(){ window.scrollTo(0, 1); }, 100);
@@ -46,110 +46,140 @@
 	{$headscript}
 </head>
 <body>
-    <div class="index-wrap">
-         <div class="class">
-  <h1 class="class-top"><span class="class-close">×</span>快速搜索</h1>
-  <div class="class-m">
-  <div class="swiper-container scroll-container">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide">
-                        	<div class="search_all">
-                    	<form action="{$search_action}" method="GET">
-                 	<div class="suosuo">
-                       
-                           <div class="ss_input"><input type="text" name="s" value=""  class="txt1"></div>
-                             <div class="ss_btn"><input type="submit" class="btn1" value="搜索"> </div>
-                          
-                                                  
-                    </div>  </form>                          
-                            </div>
-  	
-    </div></div></div>
-  </div>
-</div>        
-         <div class="headerbanner">
-               <div class="header_l">      
-              <div class="logo_l"><img src="{$logo}" width="100%"></div>     		
-                <div class="menu2"  id="quickbar" ><a href="#" id="quickbar-navs-btn"><span></span></a></div> 
-                <div class="search" id="daohang">
-                  <a href="#"><span></span></a>
-                </div>    
-        </div>
-        <div class="baner">
-            <div id="slideBox" class="slideBox">
-            <div class="hd">
-                    <ul></ul>
-                      </div>
-            <div class="bd">
-                <ul>
-          {foreach name=slidepics item=slidepic from=$global.slidepics}
-                            <li><a class="pic" href="{$slidepic.link}"><img src="{$slidepic.image}" alt="{$slidepic.title}" /></a></li>
-                        {/foreach}
-                </ul>
-            </div>
-            </div>
-            
-  	   </div>                   
+
+        <div class="index-wrap">
+          <div class="wrap-bg">
+           {include file="./_header.html"} 
+           <div class="topxzb"></div>
+           <div class="baner">
+	<div id="slideBox" class="slideBox">
+    <div class="hd">
+            <ul></ul>
+              </div>
+	<div class="bd">
+		<ul>
+  {foreach name=slidepics item=slidepic from=$global.slidepics}
+                    <li><a class="pic" href="{$slidepics.link}"><img src="{$slidepic.image}" alt="{$slidepic.title}" /></a></li>
+                {/foreach}
+		</ul>
+	</div>
     </div>
-         <div class="menu">
-                    <div class="nav">
-                   <div class="swiper-nav swiper-container">
-<div class="swiper-wrapper">
-                   <div class="swiper-slide"><a href="{$site_url}index.html"><i><span>网站首页</span></i></a></div>
-                        {foreach item=nav from=$navs}
-                    <div class="swiper-slide"><a href="{$nav.link}"><i><span>{$nav.name}</span></i></a></div>
-                          
-                        {/foreach}                                  
-                    </div>
-                    </div>
-                    </div>
-           </div>
-         <section>
-         <div class="indexbg_al">
+            
+   </div>  
+           <div class="index_edit">
            {foreach item=mIndexCat from=$mIndexCats}
-               {if $mIndexCat.type eq 2} 
-                	<div class="picture2">
-                    <ul>
-                    {foreach item=article from=$mIndexCat.data}
-                       <li onclick="{$article.link}"><div>
-                        <p class="img"><img src="{$article.image}" width="100%" title="{$article.title}" /></p>
-                        <dl class=" title1">
-                        <dd class="china">{$article.title}</dd>
-                        </dl></div>
-                       </li>  
-                       {if $article@index+1 == 6}{break}{/if} 
-                        {/foreach} 
-                      
-          		   </ul>     
-                     <div class="more"><a href="{$mIndexCat.link}">点击查看更多产品</a>             </div>
-                     </div>  
-              {elseif $mIndexCat.type eq 1} 
-				<div class="news">
-					<ul>
-                          {foreach item=article from=$mIndexCat.data}
-						<li><a href="javascript:window.location.href='{$article.link}'"><span>{$article.pubtimestamp|date_format:'%y'}.{$article.pubtimestamp|date_format:'%m'}.{$article.pubtimestamp|date_format:'%d'}</span>{$article.title}</a></li>
-                         {if $article@index+1 == 6}{break}{/if}
+           {if $mIndexCat.type eq 4} 
+               <div class="about_p">
+                 <div class="leftaimg">
+                 	<div class="aimg_tu">
+                    	<div class="topxzc"></div>
+                        <div class="aimg"><span><img src="images/aimg.jpg" width="100%"></span></div>
+                    </div>
+                    <div class="left_name">
+                    	<div class="topxzc"></div>
+                        <div class="name_title">{$mIndexCat.name}</div>
+                    </div>
+                    <div class="left_name">
+                    	<div class="topxzc"></div>
+                        <div class="name_title name_title_d">{$mIndexCat.en_name}</div>                    
+                    </div>
+                 </div>
+                 <div class="right_edit">
+                   <div class="topxzc"></div>
+                   <div class="rbger">
+					<div class="rbger_edit">{$mIndexCat.description}<span><a onclick="javascript:window.location.href='{$mIndexCat.link}'">[查看更多]</a></span> </div>   
+                    <div class="a_tuxing"></div>               
+                   </div>
+                 </div>
+               </div>  
+                {elseif $mIndexCat.type eq 2}
+               <div class="prod_p">
+                   <div class="pro_title">
+                     <div class="topxzd"></div>
+                     <div class="title_a">{$mIndexCat.name} · <b>{$mIndexCat.en_name}</b></div>
+                   </div>
+                   <div class="pro_bg">
+                     <div class="topxzd"></div>
+                     <div class="prodshow">
+<div id="picScroll{$mIndexCat@index+1}" class="picScroll">				
+				<div class="bd">
+                {foreach  item=articleb from=$mIndexCat.data}
+						<ul>
+                        {foreach item=article from=$mIndexCat.data}
+							<li><a onclick="javascript:window.location.href='{$article.link}'"><div class="prsilimg"><img _src="{$article.image}" src="{$article.image}" /><div class="pri_titles">{$article.title}</div></div></a></li>
+                           {if $article@index+1 == 3}{break}{/if}
                         {/foreach}
-					</ul>
-					<div class="more"><a href="{$mIndexCat.link}">点击查看更多产品</a>             </div>
-				</div> 
-               {elseif $mIndexCat.type eq 4}   
-<div class="about">
-				    <div class="aboutdatel">
-					    <div class="leftaimg"><img src="{$mIndexCat.image}" alt=""></div>
-						<div class="right_edit">{$mIndexCat.description}</div>
-					</div>
-					
-					<div class="more"><a href="{$mIndexCat.link}">点击查看更多内容</a>             </div>
-				</div>                                  
-               {/if}
-           {/foreach}                     	
-         </div>
-         </section>
-<div class="foot">
- <div class="top">∧</div>{$footprint} 
-</div>         
-   </div>
-{$footscript}  
+                   
+						</ul>   
+				{/foreach}                                      
+                                                                
+
+
+				</div>
+<div class="hd">
+						<span class="next"></span>
+						<ul>
+                {foreach name=slidepics item=slidepic from=$index.slidepics}
+                 <li>{$slidepic@index+1}</li>
+                   {/foreach}                        
+                        </ul>
+						<span class="prev"></span>
+				</div>                
+			</div>                     
+                     </div>  
+                     <div class="prbtm">
+                      <div class="topxzd"></div> 
+                      <div class="cpb"></div>                	
+                      </div>
+                   </div>   
+               </div>
+               {elseif $mIndexCat.type eq 1}
+               <div class="news_p">
+                   <div class="pro_title">
+                     <div class="topxzd"></div>
+                     <div class="title_a">{$mIndexCat.name} · <b>{$mIndexCat.en_name}</b></div>
+                   </div> 
+                   {foreach item=article from=$mIndexCat.data}   
+                   <div class="new_list">
+                   	 <div class="news_data">
+                       <div class="topxzb"></div>
+                       <div class="data">
+                       {$article.pubtimestamp|date_format:'%y'}.{$article.pubtimestamp|date_format:'%m'}<b>{$article.pubtimestamp|date_format:'%d'}</b>
+                       </div>
+                     	
+                     </div>
+                     <div class="news_word">
+                       <div class="topxzb"></div>
+                   <div class="rbgerb">
+					<div class="rbger_title">{$article.title}</div> 
+                    <div class="rbger_editb">
+                    {$article.description}
+                    </div> 
+                     </div>
+                   </div>           
+               </div> 
+                {if $article@index+1 == 3}{break}{/if}
+               {/foreach}
+           </div>
+                {/if}
+            {/foreach} 
+<div class="dfoot">
+               	 <div class="top">∧</div>
+               	 <div class="midfot">
+                   <div class="topxzc"></div>
+                   <div class="dibu">
+{$footprint}                   
+                   </div>
+                 </div>
+               </div>               
+        </div>
+           
+         </div>   
+          
+        
+        {$footscript}              
+        </div>
+
+
 </body>
 </html>

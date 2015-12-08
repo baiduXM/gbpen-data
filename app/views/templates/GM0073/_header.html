@@ -1,44 +1,6 @@
 
-<div class="class">
-  <h1 class="class-top"><span class="class-close">×</span>快速搜索</h1>
-  <div class="class-m">
-  <div class="swiper-container scroll-container">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide">
-                        	<div class="search_all">
-                    	<form action="{$search_action}" method="GET">
-                 	<div class="suosuo">
-                       
-                           <div class="ss_input"><input type="text" name="s" value=""  class="txt1"></div>
-                             <div class="ss_btn"><input type="submit" class="btn1" value="搜索"> </div>
-                          
-                                                  
-                    </div>  </form>                          
-                            </div>
-  	
-    </div></div></div>
-  </div>
-</div>    
-           <div class="topxz"></div>
-           <div class="header">      
-              <div class="logo"><img src="{$logo}" width="100%"></div>     		
-                <div class="menu2"  id="quickbar" ><a href="#" id="quickbar-navs-btn"><span></span></a></div> 
-                <div class="search" id="daohang">
-                  <a href="#"><span></span></a>
-                </div>    
-        </div>
-           <div class="menu">
-                    <div class="nav">
-                    <a class="arrow-left" href="#">&lt;</a> 
-                     <a class="arrow-right" href="#">&gt;</a>
-                   <div class="swiper-nav swiper-container">
-<div class="swiper-wrapper">
-                   <div class="swiper-slide"><span><a href="{$site_url}index.html"><strong></strong><i class="menulist">网站首页<b>Home</b></i></a></span></div>
-                        {foreach item=nav from=$navs}
-                    <div class="swiper-slide"><span><a href="{$nav.link}"><strong></strong><i class="menulist">{$nav.name}<b>{$nav.en_name}</b></i></a></span></div>
-                          
-                        {/foreach}                                  
-                    </div>
-                    </div>
-                    </div>
-           </div>       
+      <header>
+      <span class="fl" id="quickbar"><a href="#" id="quickbar-navs-btn"><span><i class="iconfont icon">&#xe633;</i></span></a></span>
+      <div class="logo"><img src="{$logo}" ></div>
+      <span class="ss fr">  <form action="{$search_action}" method="GET"><i class="iconfont icon">&#xf00ae;</i> </form></span>
+    </header>  

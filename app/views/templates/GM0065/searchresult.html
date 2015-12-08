@@ -53,16 +53,15 @@
       <div class="boxmain_d">
         <div class="main">
           <div class="searchresult">
-            <p>共搜索到{$search.total}个结果</p>
+            <p class="public_color">共搜索到{$search.total}个结果</p>
             <ul>
             	{foreach name=article item=article from=$search.data}
-                 <li><a href="{$article.link}">{$article.title}</a></li>
-                	<li><a href="{$article.link}">{$article.title}</a></li>
+                 <li><a href="{$article.link}" class="public_color">{$article.title}</a></li>
 				{/foreach}
               {if $article@index+1 == 10} {break} {/if}
             </ul>
             
-                <div class="next1"><a href="{$page_links.first_link}">首页</a><a href="{$page_links.prev_link}">上一页</a>{$page_links.current_page}/{$page_links.page_count}　<a href="{$page_links.next_link}">下一页</a><a href="{$page_links.last_link}">尾页</a></div>
+                <div class="next1 public_color"><a href="{$page_links.first_link}" class="public_color">首页</a><a href="{$page_links.prev_link}" class="public_color">上一页</a>{$page_links.current_page}/{$page_links.page_count}　<a href="{$page_links.next_link}" class="public_color">下一页</a><a href="{$page_links.last_link}" class="public_color">尾页</a></div>
             
           </div>
         </div>

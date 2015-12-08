@@ -1,11 +1,18 @@
-var items = document.querySelectorAll('.menuItem');
+jQuery(document).ready(function($) {
+		//首页banner切换
+    var swiper = new Swiper('.banner.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true
+    });
 
-for(var i = 0, l = items.length; i < l; i++) {
-  items[i].style.left = (50 - 35*Math.cos(-0.5 * Math.PI - 2*(1/l)*i*Math.PI)).toFixed(4) + "%";
-  
-  items[i].style.top = (50 + 35*Math.sin(-0.5 * Math.PI - 2*(1/l)*i*Math.PI)).toFixed(4) + "%";
-}
+	//首页产品切换
+    	  var swiper = new Swiper('.pro .swiper-container', {
+     
+        slidesPerView: 2,
+        paginationClickable: true,
+        spaceBetween: 30,
+        loop: true
+    });
 
-document.querySelector('.center').onclick = function(e) {
-   e.preventDefault(); document.querySelector('.circle').classList.toggle('open');
-}
+
+});

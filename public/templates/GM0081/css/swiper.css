@@ -1,5 +1,5 @@
 /**
- * Swiper 3.1.7
+ * Swiper 3.1.2
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * 
  * http://www.idangero.us/swiper/
@@ -10,12 +10,11 @@
  * 
  * Licensed under MIT
  * 
- * Released on: October 10, 2015
+ * Released on: August 22, 2015
  */
-.swiper_container {
+.swiper-container {
   margin: 0 auto;
   position: relative;
-  width: 100%;
   overflow: hidden;
   /* Fix of Webkit flickering */
   z-index: 1;
@@ -81,7 +80,7 @@
   position: relative;
 }
 /* a11y */
-.swiper_container .swiper-notification {
+.swiper-container .swiper-notification {
   position: absolute;
   left: 0;
   top: 0;
@@ -165,13 +164,13 @@
 .swiper-pagination.swiper-pagination-hidden {
   opacity: 0;
 }
-.wrap_home .swiper-pagination-bullet {
-  width: 1.5rem;
-  height: 4px;
+.swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
   display: inline-block;
-  border-radius: 5%;
-  background: #a9a9a9;
-  opacity: 1;
+  border-radius: 100%;
+  border:1px solid #970f0f;
+
 }
 button.swiper-pagination-bullet {
   border: none;
@@ -189,9 +188,9 @@ button.swiper-pagination-bullet {
 .swiper-pagination-white .swiper-pagination-bullet {
   background: #fff;
 }
-.swiper-container-horizontal >.swiper-pagination span.swiper-pagination-bullet-active {
+.swiper-pagination-bullet-active {
   opacity: 1;
-  background: #b7ad42;
+  background: #007aff;
 }
 .swiper-pagination-white .swiper-pagination-bullet-active {
   background: #fff;
@@ -212,7 +211,7 @@ button.swiper-pagination-bullet {
   margin: 5px 0;
   display: block;
 }
-.wrap_home .swiper-pagination {
+.swiper-container-horizontal > .swiper-pagination {
   bottom: 10px;
   left: 0;
   width: 100%;

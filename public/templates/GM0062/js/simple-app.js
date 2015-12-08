@@ -1,8 +1,6 @@
 $(function(){
 	//Init Navigation
-
 	var holdPosition = 0;
-	
 	var nav = $('.swiper-nav').swiper({
 		slidesPerView:4,
 		freeMode:true,
@@ -43,11 +41,8 @@ $(function(){
 			scrollContainer: true,
 			mousewheelControl: true,
 			freeModeFluid:true,
-			onTouchStart : function() {		 
-			 }
-
+			calculateHeight: true
 		})
-	
 	
 	//幻灯片元素与类"menu_body"段与类"menu_head"时点击
 	$(".menu_head .icon").click(function(){
@@ -55,18 +50,5 @@ $(function(){
 		$(this).parent().siblings().removeClass("cur");
 		$('.class .scroll-container').find('.swiper-wrapper').css({'transform':'translate3d(0px, 0px, 0px)','-webkit-transform':'translate3d(0px, 0px, 0px)','transition': '0.3s'});
 		menuswiper.reInit();
-	});
-	
-	
-	//Thumbs
-	$('.thumbs-cotnainer').each(function(){
-		$(this).swiper({
-			slidesPerView:'auto',
-			offsetPxBefore:25,
-			offsetPxAfter:10,
-			calculateHeight: true
-		})
-	})
-
-	
+	});	
 })

@@ -56,18 +56,16 @@ $(document).ready(function(){
 	img.src=$(".prolist img").attr("src");
 		console.log($('div[id^=picScroll]').length);
 	var img=new Image();
+	$(".index-wrap").height($(window).height()-$(".fixed").height()-$(".tell-icon").height())
 	$(".class-m").height($(".class").outerHeight()-$(".class-top").outerHeight())
 	$(".topxz").width($(".wrap-bg").width()-50)
 	$(".header").width($(".wrap-bg").width()-10)
 	$(".class-m").height($(".class").outerHeight()-$(".class-top").outerHeight())
-	$(".swiper-nav").height($(".swiper-slide a").height())	
-	$(".swiper-nav a").height($(".swiper-nav a").width())
-	$(".swiper-nav a i").height($(".swiper-nav a").width()-14)
-	$(".swiper-nav a i").width($(".swiper-nav a").width()-14)		
-		$(".swiper-nav a span").css({
-		"line-height":$(".swiper-nav a i").height()+"px"
-		})	
-	
+	$(".fixed-top").width($(".index-wrap").width()-10)
+	$(".menu").height($(".menulist dl").outerHeight())
+	$(".rbger").height($(".leftaimg").height()-5)
+	$(".topxze").width($(".wrap-bg").width()-60)	
+	$(".topxz").width($(".wrap-bg").width()-50)	
 	});
 	$(window).resize(function(){
 	$(".index-wrap").height($(window).height()-$(".fixed").height()-$(".tell-icon").height())
@@ -75,17 +73,14 @@ $(document).ready(function(){
 	$(".topxz").width($(".wrap-bg").width()-50)
 	$(".header").width($(".wrap-bg").width()-10)
 	$(".class-m").height($(".class").outerHeight()-$(".class-top").outerHeight())
-	$(".swiper-nav").height($(".swiper-slide a").height())	
-	$(".swiper-nav a").height($(".swiper-nav a").width())
-	$(".swiper-nav a i").height($(".swiper-nav a").width()-14)
-	$(".swiper-nav a i").width($(".swiper-nav a").width()-14)	
-		$(".swiper-nav a span").css({
-		"line-height":$(".swiper-nav a i").height()+"px"
-		})	
+	$(".menulist dl").height($(".menulist dl").width())
+	$(".menu").height($(".menulist dl").outerHeight())
+	$(".rbger").height($(".leftaimg").height()-5)
+	$(".topxze").width($(".wrap-bg").width()-60)	
 
 	});
 	
-
+	
 	function pageSlideOver(){
     $('.page-out').live('transitionend', function(){
       $(this).removeClass('page-out');

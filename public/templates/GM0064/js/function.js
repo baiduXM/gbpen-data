@@ -9,20 +9,32 @@ $(document).ready(function(){
 					autoPlay:true,
 					interTime:6000 //自动播放
 				});
+	TouchSlide1({ 
+					slideCell:"#slideBox1",
+					titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+					mainCell:".bd ul", 
+					effect:"leftLoop", 
+					autoPage:true,//自动分页
+					autoPlay:true,
+					interTime:6000 //自动播放
+				});
 				
 $(window).load(function(){
 /*美工专属区域*/
-  
-$(".logo").height($(".logo").width());
-$(".logo").css({"margin-left":"-"+$(".logo").width()/2+"px"})
-$("#in_text ul li .part .right").height($("#in_text ul li .part .left img").height());
-$(".list_text ul li .part .right").height($(".list_text ul li .part .left img").height());
-$(".list_imagetext ul li .part .text_box").height($(".list_imagetext ul li .part .img_box img").height());
-$(".list_imagetext ul li .part .text_box").height($(".list_imagetext ul li .part .img_box img").height());
-
-
-var m=$(".logo").height()-$(".logo img").height();
-$(".logo img").css({"marginTop":m*0.5})
+ $("section div").each(
+    function(){
+		var h1=$(this).find(".in_h2").height();
+		var h2=$(this).find(".inner").height();
+		if(h1 > h2){
+			$(this).find(".in_h2").addClass("bor1")
+			$(this).find(".inner").css("padding-top",(h1-h2)*0.5)
+			}
+		else{$(this).find(".inner").addClass("bor2")
+			$(this).find(".in_h2").css("padding-top",(h2-h1)*0.5)
+		}
+		});
+		
+	$("section div.wrapper:odd").addClass("bg3")
 
 /*美工专属区域*/
 	
@@ -85,7 +97,39 @@ $(".logo img").css({"marginTop":m*0.5})
     });
   }
   //隐藏导航跟wrap的切换
-	$("#daohang,#header_menu,#fixed_menu").click(function(){
+	$("#class").click(function(){
+		$(".class").removeClass("page-prev").addClass("page-in");
+		$(".wrap").removeClass("page-active").addClass("page-next page-in")
+		$(".opacity2").show()
+		pageSlideOver();
+		
+	})
+	$(".class-close,.opacity2").on('touchstart',function(){
+		$(".class").addClass("page-prev page-out")
+		$(".wrap").removeClass("page-next").addClass(" page-out")
+		$(".opacity2").hide()
+		$(".newsclass").removeClass("show")
+		pageSlideOver();
+		return false;
+	})
+								
+
+  function setHeighti() {
+                                  // $('.slimgs2').each(function () {
+        var self5 = $(".aboutimgs");
+        var heights5 = $(self5).height()-'20'+'px';;
+        var alimat5 = $(".a_text");
+       alimat5.height(heights5);										
+                                  //  })
+
+                                };
+          setHeighti();								
+ $(window).resize(function(){
+	setTimeout(setHeighti);
+	 })		
+	
+  //隐藏导航跟wrap的切换
+  $("#daohang,#header_menu,#fixed_menu").click(function(){
 		$("#quickbar-navs").removeClass("page-prev").addClass("page-in");
 		$("#quickbar-wrap").removeClass("page-active").addClass("page-next page-in")
 		$(".quickbar-opacity2").show()
@@ -99,23 +143,7 @@ $(".logo img").css({"marginTop":m*0.5})
 		pageSlideOver();
 		return false;
 	})
-						
-
-                                function setHeighti() {
-                                  // $('.slimgs2').each(function () {
-                                        var self5 = $(".aboutimgs");
-                                        var heights5 = $(self5).height()-'20'+'px';;
-                                        var alimat5 = $(".a_text");
-                                        alimat5.height(heights5);										
-                                  //  })
-
-                                };
-                                setHeighti();								
-				 $(window).resize(function(){
-					setTimeout(setHeighti);
-				 })		
-
- 
+		
 	$(".tell-icon .close").click(function(){
 		$(".tell-icon").removeClass("display-block")
 		$(".index-wrap").height($(window).height()-$(".fixed").height())
@@ -128,22 +156,22 @@ $(".logo img").css({"marginTop":m*0.5})
 		$("#up").hide()
 		$("#down").show()
 		$(".hide-class").removeClass("hide-class1")
-		$(".font").slideToggle()
+		$(".font,.font_page").slideToggle()
 		$(".hide-class").slideUp()	
 	})
-	$(".font dl.big").click(function(){
+	$(".font dl.big,.font_page dl.big").click(function(){
 		$(".edite").attr('class',"edite font-big")
 		$(".news-ins").attr('class',"news-ins font-big")
 		$(".list_page").attr('class',"list_page font-big")
 		$(".font").hide()
 	})
-	$(".font dl.normal").click(function(){
+	$(".font dl.normal,.font_page dl.normal").click(function(){
 		$(".edite").attr('class',"edite font-normal")
 		$(".news-ins").attr('class',"news-ins font-normal")
 		$(".list_page").attr('class',"list_page font-normal")
 		$(".font").hide()
 	})
-	$(".font dl.small").click(function(){
+	$(".font dl.small,.font_page dl.small").click(function(){
 		$(".edite").attr('class',"edite font-small")
 		$(".news-ins").attr('class',"news-ins font-small")
 		$(".list_page").attr('class',"list_page font-small")

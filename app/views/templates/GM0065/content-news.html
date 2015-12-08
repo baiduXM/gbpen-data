@@ -65,17 +65,17 @@
           </div>
     <div class="index-wrap">
       <section>
-        <div class="index_show" style="margin:40px 15px 8px;">
+        <div class="index_show">
           <div class="d_titles">
-            <h1 class="title1">{$article.title}</h1>
-            <hl class="title2">更新时间：{$article.pubdate}  </hl>
+            <h1 class="title1 public_color">{$article.title}</h1>
+            <hl class="title2 public_color">更新时间：{$article.pubdate}  </hl>
           </div>
           <div class="box-m">
             <div class="boxmain-m">
-              <div class="edite" > {$article.content|unescape:"html"}</div>
+              <div class="edite public_color" > {$article.content|unescape:"html"}</div>
               <ul class="inner_pages">
-             <li><a href="{$article.prev.link}">上一条:{$article.prev.title}</a></li>
-            <li><a href="{$article.next.link}">下一条:{$article.next.title}</a></li>
+             <li><a href="{$article.prev.link}" class="public_color">上一条:{$article.prev.title}</a></li>
+            <li><a href="{$article.next.link}" class="public_color">下一条:{$article.next.title}</a></li>
               </ul>
             </div>
           </div>

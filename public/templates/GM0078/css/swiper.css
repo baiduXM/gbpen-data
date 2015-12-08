@@ -1,5 +1,5 @@
 /**
- * Swiper 3.1.7
+ * Swiper 3.1.2
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * 
  * http://www.idangero.us/swiper/
@@ -10,13 +10,14 @@
  * 
  * Licensed under MIT
  * 
- * Released on: October 10, 2015
+ * Released on: August 22, 2015
  */
 .swiper-container {
- 
+  margin: 0 auto;
+  position: relative;
   overflow: hidden;
   /* Fix of Webkit flickering */
-
+  z-index: 1;
 }
 .swiper-container-no-flexbox .swiper-slide {
   float: left;
@@ -30,8 +31,6 @@
 }
 .swiper-wrapper {
   position: relative;
-  width: 100%;
-  height: 100%;
   z-index: 1;
   display: -webkit-box;
   display: -moz-box;
@@ -74,8 +73,7 @@
   -webkit-flex-shrink: 0;
   -ms-flex: 0 0 auto;
   flex-shrink: 0;
-  width: 100%;
-  height: 100%;
+
   position: relative;
 }
 /* a11y */
@@ -101,14 +99,14 @@
 .swiper-button-next {
   position: absolute;
   top: 50%;
-  width: 35px;
-  height: 70px;
-  margin-top: -35px;
+  width: 27px;
+  height: 44px;
+  margin-top: -22px;
   z-index: 10;
   cursor: pointer;
-  -moz-background-size: 35px 70px;
-  -webkit-background-size: 35px 70px;
-  background-size: 35px 70px;
+  -moz-background-size: 27px 44px;
+  -webkit-background-size: 27px 44px;
+  background-size: 27px 44px;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -120,8 +118,8 @@
 }
 .swiper-button-prev,
 .swiper-container-rtl .swiper-button-next {
-  background-image: url("../images/bl_08.png");
-  left: 0;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23007aff'%2F%3E%3C%2Fsvg%3E");
+  left: 10px;
   right: auto;
 }
 .swiper-button-prev.swiper-button-black,
@@ -134,8 +132,8 @@
 }
 .swiper-button-next,
 .swiper-container-rtl .swiper-button-prev {
-  background-image: url("../images/br_09.png");
-  right: 0px;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23007aff'%2F%3E%3C%2Fsvg%3E");
+  right: 10px;
   left: auto;
 }
 .swiper-button-next.swiper-button-black,
@@ -168,7 +166,8 @@
   height: 8px;
   display: inline-block;
   border-radius: 100%;
-  background: #b91c22;
+  border:1px solid #970f0f;
+
 }
 button.swiper-pagination-bullet {
   border: none;
@@ -188,7 +187,7 @@ button.swiper-pagination-bullet {
 }
 .swiper-pagination-bullet-active {
   opacity: 1;
-  background: #000000;
+  background: #007aff;
 }
 .swiper-pagination-white .swiper-pagination-bullet-active {
   background: #fff;
@@ -210,7 +209,7 @@ button.swiper-pagination-bullet {
   display: block;
 }
 .swiper-container-horizontal > .swiper-pagination {
-  bottom: 0px;
+  bottom: 10px;
   left: 0;
   width: 100%;
 }

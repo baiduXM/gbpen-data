@@ -33,27 +33,43 @@
 <link href="{$site_url}css/swipe.css" rel="stylesheet" type="text/css" />
 <script src="{$site_url}js/TouchSlide.1.1.js"></script>
 <script type="text/javascript" src="{$site_url}js/jquery.min.js"></script>
+<script type="text/javascript" src="{$site_url}js/function.js"></script>
 <script type="text/javascript" src="{$site_url}js/share.js"></script>
 <script src="{$site_url}js/idangerous.swiper-2.0.min.js"></script>
 <script src="{$site_url}js/idangerous.swiper.3dflow-2.0.js"></script>
 <script src="{$site_url}js/simple-app.js"></script>
-<script type="text/javascript" src="{$site_url}js/function.js"></script>
 <script type="text/javascript">
 	window.addEventListener('load', function(){
    setTimeout(function(){ window.scrollTo(0, 1); }, 100);
 });//safari浏览器可以通过此代码来隐藏地址栏
 </script>
 </head>
-<body>              
-    <div class="index-wrap" style=" background:#fff">
-            <h1 class="fixed-topa">
-                  <div class="title_top">
-                  <span class="more2" id="first">分类<span id="down"> &darr;</span><span id="up"> &uarr; </span></span>
-                   <div class="menu3"  id="quickbar" ><a href="#" id="quickbar-navs-btn"><span></span></a></div>              
-                  <span class="l_name">{$list.name}</span>
-                 </div>
-                </h1>
-           <div class="hide-class">                
+<body>
+
+        <div class="index-wrap">
+          <div class="wrap-bg">
+           {include file="./_header.html"} 
+           <div class="topxzb"></div>
+           <div class="baner">
+	<div id="slideBox" class="slideBox">
+    <div class="hd">
+            <ul></ul>
+              </div>
+	<div class="bd">
+		<ul>
+  {foreach name=slidepics item=slidepic from=$global.slidepics}
+                    <li><a class="pic" href="{$slidepics.link}"><img src="{$slidepic.image}" alt="{$slidepic.title}" /></a></li>
+                {/foreach}
+		</ul>
+	</div>
+    </div>
+            
+   </div>  
+           <div class="index_edit">
+           <div class="topxzc"></div> 
+             <div class="index_show">
+       <div class="coust_titles"><span class="more2" id="first">分类<span id="down"> &darr;</span><span id="up"> &uarr; </span></span>{$list.name}</div>     
+            <div class="hide-class">                
              <ul>
              {foreach name=pagenavs item=nav from=$pagenavs}
                 <li  class="{if $nav.current}current{/if}"><a href="{if $nav.childmenu}javascript:;{else}{$nav.link}{/if}" class="{if $nav.selected}selected{/if}">{$nav.name}</a>
@@ -75,9 +91,9 @@
                 </li>
                 {/foreach}                                                                                                                                           
             </ul>                
-          </div>      
-    	<div class="boxmain-m">
-                	<div class="news_lista">
+          </div>
+<div class="boxmain-m">
+<div class="news_lista">
                 	<ul>
                      {foreach item=article from=$list.data}
                     	<li><a onclick="javascript:window.location.href='{$article.link}'">
@@ -95,13 +111,27 @@
                                              
                     </ul>
                      <div class="next1"><a href="{$page_links.first_link}" class="cu">首页</a><a href="{$page_links.prev_link}">上一页</a><a href="{$page_links.next_link}" >下一页</a><a href="{$page_links.last_link}"  >尾页</a></div>     	
-                </div>  
+                </div>
+               </div>              
+    </div>
+              
+               <div class="dfoot">
+               	 <div class="top">∧</div>
+               	 <div class="midfot">
+                   <div class="topxzc"></div>
+                   <div class="dibu">
+{$footprint}              
+                   </div>
+                 </div>
+               </div>         
         </div>
-<div class="foot">
- <div class="top">∧</div>{$footprint} 
-</div>         
-   </div>
-   {$footprint}  
-{$footscript}  
+           
+         </div>   
+          
+        
+        {$footscript}              
+        </div>
+
+
 </body>
 </html>
