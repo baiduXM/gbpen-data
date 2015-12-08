@@ -12,9 +12,26 @@ $(document).ready(function(){
 				
 $(window).load(function(){
 /*美工专属区域*/
-$("#in_image ul li:last").css("margin-right",0)
-
-
+  $(".menulist ul li").height($(".menulist ul li").width());
+   $(".menulist .nav_ico .iconfont").height($(".menulist .nav_ico").height());
+   $(".menulist .nav_ico .iconfont").css("line-height",$(".menulist .nav_ico").height()+"px")
+    $(".menulist .nav_ico")
+  $("section").children("div:even").addClass("in_bg1")
+  $("section").children("div:odd").addClass("in_bg2")
+  $(".in_cir").height($(".in_cir").width());
+  var t1=$(".in_cir1").height()*0.5
+  $(".in_bg1,.in_bg2").css({"padding-top":t1*1.5,"padding-bottom":t1*2})
+  $(".in_cir1").css({"top":-t1,"left":-t1})
+  $(".in_cir2").css({"top":-t1,"left":t1})
+  $(".in_cir3").css({"bottom":-t1,"left":-t1})
+  $(".in_cir4").css({"bottom":-t1,"left":t1})
+  $(".in_bg1").addClass("public_bg2")
+  $(".in_bg1 .in_cir1,.in_bg1 .in_cir4,.in_bg2 .in_cir2,.in_bg2 .in_cir3").addClass("public_bg2")
+  $(".in_bg1 .in_cir2,.in_bg1 .in_cir3,.in_bg2 .in_cir1,.in_bg2 .in_cir4").addClass("public_bg")
+  $("section").children("div:first").find(".in_cir1,.in_cir2").hide();
+  $("section").children("div:last").find(".in_cir3,.in_cir4").hide();
+  
+ 
 /*美工专属区域*/
 	
 	
@@ -140,21 +157,21 @@ $("#in_image ul li:last").css("margin-right",0)
 		$(".hide-class").slideUp()	
 	})
 	$(".font dl.big").click(function(){
-		$(".edite").attr('class',"edite font-big")		 
-		$(".list_page").attr('class',"list_page font-big")
+		$(".edite").attr('class',"edite font-big")
 		$(".news-ins").attr('class',"news-ins font-big")
+		$(".list_page").attr('class',"list_page font-big")
 		$(".font").hide()
 	})
 	$(".font dl.normal").click(function(){
-		$(".edite").attr('class',"edite font-normal")				
-		$(".list_page").attr('class',"list_page font-normal")
+		$(".edite").attr('class',"edite font-normal")
 		$(".news-ins").attr('class',"news-ins font-normal")
+		$(".list_page").attr('class',"list_page font-normal")
 		$(".font").hide()
 	})
 	$(".font dl.small").click(function(){
-		$(".edite").attr('class',"edite font-small")						   
+		$(".edite").attr('class',"edite font-small")
+		$(".news-ins").attr('class',"news-ins font-small")
 		$(".list_page").attr('class',"list_page font-small")
-		$(".news-ins").attr('class',"news-ins font-normal")
 		$(".font").hide()
 
 	})	

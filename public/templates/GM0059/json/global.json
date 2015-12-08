@@ -2,49 +2,32 @@
 	"slidepics": {
 		"value": [{
 			"title": "测试图1",
-			"image": "images/baner.jpg",
+			"image": "images/slide_1.jpg",
 			"link": "http://www.baidu.com"
 		}, {
 			"title": "测试图2",
-			"image": "images/baner1.jpg",
-			"link": "http://www.baidu.com"
-		},{
-			"title": "测试图3",
-			"image": "images/baner.jpg",
-			"link": "http://www.baidu.com"
-		}, {
-			"title": "测试图4",
-			"image": "images/baner1.jpg",
+			"image": "images/slide_1.jpg",
 			"link": "http://www.baidu.com"
 		}],
-		"description": "首页banner大轮滚图",
+		"description": "大轮滚图",
 		"type": "images",
 		"config": {
 			"width": 640,
-			"height": 387,
-			"limit": 3
+			"height": 290,
+			"limit": 2
 		}
 	},
-	"nybanner": {
-		"value": [{
-			"title": "测试图1",
-			"image": "images/bigimg.jpg",
-			"link": "http://www.baidu.com"
-		}, {
-			"title": "测试图2",
-			"image": "images/bigimg.jpg",
-			"link": "http://www.baidu.com"
-		}, {
-			"title": "测试图2",
-			"image": "images/bigimg.jpg",
-			"link": "http://www.baidu.com"
-		}],
-		"description": "产品详情页图片大轮滚图",
-		"type": "images",
+	"contact_us": {
+		"value": {
+			"title": "XXX企业",
+			"image": "images/contact.jpg",
+			"link": "http://www.baidu.com/"
+		},
+		"description": "首页联系我们模块下的三角形图片",
+		"type": "image",
 		"config": {
-			"width": 564,
-			"height": 380,
-			"limit": 3
+			"width":325,
+			"height": 399
 		}
 	}
 }
