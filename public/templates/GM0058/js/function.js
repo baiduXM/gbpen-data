@@ -1,8 +1,9 @@
 function loader (argument) {
+    $('body').addClass('loaded');
+
     setTimeout(function(){
         $(".loader_div").remove();
     }, 4000);
-    $('body').addClass('loaded');
 }
 window.onload = function () {
     loader();
@@ -75,9 +76,7 @@ $(document).ready(function() {
     //           });
     //         }
     //     }
-    //     console.log('');
     // });
-    
 
     //隐藏导航跟wrap的切换
     $("#header_menu").click('touchstart', 
