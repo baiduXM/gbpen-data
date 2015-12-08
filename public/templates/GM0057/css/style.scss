@@ -180,9 +180,14 @@ a.more{
 	@include transform(translateY(-50%));
 }
 
-.about_w a.more{
-	right: 1rem;
-}
+.about_w{
+	a.more{
+		right: 1rem;
+	}
+	.txt{
+		@include line-clamp(10.8rem, 6);
+	}
+} 
 
 .product_w a.more{
 	left: 1rem;
@@ -190,8 +195,7 @@ a.more{
 
 .img_border{
 	position: relative;
-	font-size: 0;
-	width: 8.6rem;
+	height: 10.8rem;
 	margin: 0 25px 0 50px;
 	float: left;
 	&:before{
@@ -205,10 +209,6 @@ a.more{
 		border: 1px solid $gray;
 		z-index: -1;
 		@include box-shadow(rgba($gray, .6) 0 0 1px);
-	}
-	img{
-		width: 100%;
-		height: auto;
 	}
 }
 
@@ -243,9 +243,10 @@ a.more{
 				}
 				.disc{
 					line-height: 1.5;
-					max-height: 2.7rem;
+					// max-height: 2.7rem;
 					margin-bottom: 15px;
-					overflow: hidden;
+					// overflow: hidden;
+					@include line-clamp(2.7rem,2);
 				}
 			}
 			a.read_more {
@@ -430,7 +431,7 @@ ul.nav{
 		.txt{
 			color:$txt_color;
 			line-height: 2;
-			@include ov_hidden(7.4rem);
+			@include line-clamp(7.4rem,4);
 		}
 	}
 }
@@ -652,8 +653,7 @@ ul.nav{
 			div {
 				color: #6a6a6a;
 				line-height: 1.8;
-				max-height: 6.48rem;
-				overflow: hidden
+				@include line-clamp(6.48rem,4);
 			}
 		}
 	}	

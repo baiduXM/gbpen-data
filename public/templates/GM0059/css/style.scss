@@ -295,8 +295,12 @@ a.more{
 		}
 	}
 	.txt{
-		max-height: 7rem;
+		max-height: 112px;
 		overflow: hidden;
+		//Weird WebKit Flexbox Way
+		display: -webkit-box;
+		-webkit-line-clamp: 4;
+		-webkit-box-orient: vertical;
 	}
 	.more{
 		position: relative;
@@ -322,10 +326,9 @@ a.more{
 		}
 	}
 	.txt{
-		max-height:42px;
-		overflow: hidden;
 		line-height: 1.5; 
 		margin: 10px 0 0 0;
+		@include line-clamp(42px,2);
 	}
 	time{
 		line-height: 1;
@@ -760,8 +763,7 @@ ul.nav{
 			div {
 				color: #494646;
 				line-height: 1.8;
-				max-height: 50.4px;
-				overflow: hidden
+				@include line-clamp(50.4px,2);
 			}
 		}
 	}	
@@ -1000,6 +1002,7 @@ a.pre,a.nxt {
 	}
 	div.two_row{
 		max-height: 64.8px !important;
+		-webkit-line-clamp: 3 !important;
 	}
 }
 @media only screen and (min-width: 480px) and (max-width: 559px) {

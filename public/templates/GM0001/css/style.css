@@ -401,13 +401,17 @@ span.s_btn_w {
 
 .list_text article>div {
 	position: relative;
-	padding: 8px 8px 15px 8px;
+	margin: 8px 8px 15px 8px;
 	z-index: 1;
 	color: #191817;
 	text-indent: 2em;
 	max-height: 7.2rem;
 	overflow: hidden;
 	line-height: 2;
+	/*Weird WebKit Flexbox Way*/
+	display: -webkit-box;
+	-webkit-line-clamp: 4;
+	-webkit-box-orient: vertical;
 }
 
 /*
