@@ -53,7 +53,7 @@ ul.newslist li img{ width:50%; float:left; max-width:306px; margin-top:10px;}
 ul.newslist li .editbox{ width:50%; float:left; position:relative; height: auto;}
 ul.newslist li .editbox:before{ width:100%; height:100%; content:""; position:absolute; top:0px; left:0;   text-align:center ; color:#40372e}
 ul.newslist li .editbox .title{ text-align: center; height:30px; line-height:30px; border:1px solid #40372e; border-right:0px; border-left:0px; background:#1e1c1a; color:#ddba5e; overflow:hidden; margin-top:10px; position:relative; font-size:1.12em; padding:0px 5px;}
-ul.newslist li .editbox .nr{ display: block; color:#9a7f62;width: 100%;padding: 7px 7px 0px;max-height: 72px;overflow: hidden;}
+ul.newslist li .editbox .nr{ display: block; color:#9a7f62;width: 100%;padding: 7px 7px 0px;overflow: hidden;height: auto;}
 ul.newslist li:nth-child(1) .editbox:before{ content:"01"}
 ul.newslist li:nth-child(2) .editbox:before{ content:"02"}
 ul.newslist li:nth-child(3) .editbox:before{ content:"03"}
