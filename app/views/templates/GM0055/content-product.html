@@ -7,7 +7,7 @@
 		<script type="text/javascript">
 		// 跳转PC页面
 		{if $site_another_url}
-			if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+			if (!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
 				location.href = '{$site_another_url}';
 			}
 		{/if}
@@ -53,89 +53,54 @@
 </head>
 <body>
 <div class="body">
-
-<div class="wrap page-active">
-
-<h1 class="fixed-top">
-       <div class="fanhui"><a href="javascript:window.history.back()">&lt;返回</a></div>
-       <div class="logo"><img src="{$logo}" width="100%"></div>
-     <div class="menu2" id="quickbar-showcats"><a href="#"><span></span></a></div>   
- </h1>
-<div class="index-wrap">
-	<header>
-    <div class="topb">
-        <div class="dbaner"><img src="{$site_url}images/baner2.jpg" width="100%"></div>  
-        <div class="toplist">
-        	<div class="box-title">
-               <div class="boxbottom"></div>
-               <div class="winetu"><img src="{$site_url}images/menuicon2.png" width="100%"></div>
-               <div class="btitles">{$article.category.name}</div>
-                <div class="winnbeer"><img src="{$site_url}images/wine.png" width="100%"></div>
-                <span class="more3" id="first">分类<span id="down">∧</span><span id="up">∨</span></span>
-            <div class="hide-class">
-			{foreach name=pagenavs item=nav from=$pagenavs}
-              <dl><a href="{$nav.link}">{$nav.name}</a></dl>
-			  {/foreach}
-          </div>                     
-            </div>
-        </div>   
-        </div>    
-    </header>
-       <section>
-  <div class="index_show">
-<div class="d_titles">
-<h1 class="title1">{$article.title}</h1>
-<hl class="title2">更新时间：{$article.pubdate}  字体 : <span class="smalld">小</span> | <span class="middled">中</span> | <span class="bigd">大</span></hl>
-</div>
+  <div class="wrap page-active">
+    <h1 class="fixed-top">
+      <span class="fixed-btn back"><a href="javascript:window.history.back()">返回</a></span>
+      <span class="fixed-btn more2" id="font">字+</span>
+      {$article.category.name}</h1>
+      <div class="font">
+            <dl class="big">大</dl>
+            <dl class="normal">中</dl>
+            <dl class="small">小</dl>
+          </div>
+    <div class="index-wrap">
+      <section>
+        <div class="index_show">
+          <div class="d_titles">
+            <h1 class="title1 public_color">{$article.title}</h1>
+            <hl class="title2 public_color">更新时间：{$article.pubdate}</hl>
+          </div>
           <div class="box-m">
-<div class="boxmain-m"> 
-<div class="baner">
+            <div class="boxmain-m">
+            <div class="baner">
 	<div id="slideBox" class="slideBox">
     <div class="hd">
             <ul></ul>
               </div>
 	<div class="bd">
 		<ul>
-			{foreach item=image from=$article.images}
-			
-			<li><a class="pic"><img src="{$image.image}" width="100%"  title="567*414" /></a></li>
+        			{foreach item=image from=$article.images}
+			<li><a class="pic"><img src="{$image.image}" width="100%" title="500*240" /></a></li>
 			{/foreach}
 		</ul>
 	</div>
 	
 			</div>
 			
-   </div>   <span class="imgword">{$article.title}</span>         
-                <div class="edite" >
-         {$article.content|unescape:"html"}
-                </div>   
-	<div class="tjcp">
-    	推荐产品
-    </div> 
-     <div class="wine_pro2" style="padding:0px 0px 10px;">
-            	<ul>
-					{foreach item=article from=$related}
-                	<li><a href="{$article.link}">
-                    	<div class="windbg">
-                        	<div class="wimg"><img src="{$article.image}" width="102px" height="106px"></div>
-                            <div class="wenzi">
-                            <div class="wineword">WINE</div>
-                            <div class="pro-title">{$article.title}</div>   
-                            </div>                         
-                        </div></a>
-                    </li>
-                	{if $article@index+1 == 3}{break}{/if}
-					{/foreach}
-                </ul>
-            </div>                    
-            </div>          
+   </div>
+              <div class="edite public_color" >  {$article.content|unescape:"html"}</div>
+              <ul class="inner_pages">
+            <li><a href="{$article.prev.link}" class="public_color">上一条:{$article.prev.title}</a></li>
+            <li><a href="{$article.next.link}" class="public_color">下一条:{$article.next.title}</a></li>
+              </ul>
+            </div>
           </div>
-       </div>
-    </section>
+        </div>
+      </section>
     <footer class="foot" ><a class="back-top">∧</a>{$footprint}</footer></div>
+    </div>
+  </div>
+  {$footscript}
 </div>
-	{$footscript}
-</div>
-
 </body>
 </html>
