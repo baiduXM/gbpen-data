@@ -68,7 +68,7 @@
               <ul class="news-list1">
                 {foreach name=article item=article from=$list.data}
                 <li onclick="javascript:window.location.href='{$article.link}'">
-                  <a href="news_detail.html" class="clearfix">
+                  <a href="{$article.link}" class="clearfix">
                     <div class="news_date" >
                       <div class="news_cir">
                         {$article.pubtimestamp|date_format:'%d'}
