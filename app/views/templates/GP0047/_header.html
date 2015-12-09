@@ -16,13 +16,14 @@
 <section>
     <div class="header_menu">   
        <ul id="nav" class="nav">
+	   <li class="nLi">
+       <h3><a href="{$site_url}" class="current">网站首页</a></h3></li>
       {foreach item=nav from=$navs}
       <li class="nLi">
        <h3><a href="{$nav.link}" class="{if $nav.current}current{/if}">{$nav.name}</a></h3>
-      
         {if $nav.childmenu}
           <ul class="sub">
-
+			
             {foreach item=nav_list from=$nav.childmenu}
             <li class="{if $nav_list.current}current{/if}"><a href="{$nav_list.link}">{$nav_list.name}</a></li>
             {/foreach}

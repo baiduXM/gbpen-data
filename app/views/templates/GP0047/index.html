@@ -53,9 +53,10 @@
         <div class="right1 right3">
           <h3 class="title"><a href="{$index.list4.link}"></a>{$index.list4.name}&nbsp;<span>{$index.list4.en_name}</span></h3>
           <div class="about_xq">
+		  
            <ul class="bottom">
           {foreach  name=list4 item=article from=$index.list4.data}
-                          <li><a href="{$article.link}"><span class="time">{$article.pubdate}</span>{$article.title|truncate:30:""}</a></li>
+                          <li><a href="{$article.link}"><span class="time">{$article.pubdate}</span>{$article.title}</a></li>
                        {if $article@index+1 == 6}{break}{/if}
           {/foreach}
         </ul>

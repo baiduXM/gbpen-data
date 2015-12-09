@@ -22,7 +22,7 @@
 <script type="text/javascript" src="{$site_url}js/jquery_banner.js"></script>
 <script type="text/javascript" src="{$site_url}js/jquery_pic.js"></script>
 <script type="text/javascript" src="{$site_url}js/jquery_sz.js"></script>
-<script type="text/javascript" src="{$site_url}js/left_nav.js"></script>
+
 <title>{$title}</title>
 </head>
 <body>
@@ -44,15 +44,15 @@
 
 
 <ul>
-{foreach item=article from=$list.data}
+			{foreach item=article from=$list.data}
  
                         <li>
             <div class="details_img">
-              <a href=""><img src="{$list.image}" height="109" width="176"/></a>
+              <a href=""><img src="{$article.image}" height="109" width="176"/></a>
             </div>
             <div class="details_text">
-              <h3><a href="">{$list.data[0].title}</a></h3>
-              <div class="xq">{$list.description}<a href="">[查看详细]</a></div>
+              <h3><a href="">{$article.title}</a></h3>
+              <div class="xq">{$article.description}<a href="{$article.link}">[查看详细]</a></div>
             </div>
           </li>
  {if $article@index+1 ==4}{break}{/if}
