@@ -7,7 +7,7 @@
                          <li><a href="{$article.link} class="pic""><img src="{$article.image}"  height="116" width="133" />
                          <a href="{$article.link}" class="title">{$article.title|truncate:7:"…"}</a> </a></li>
                     {/foreach}
-
+                    {if $article@index+1 == 4}{break}{/if} 
 				</ul>
 
 			</div>

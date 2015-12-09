@@ -48,11 +48,11 @@
  
                         <li>
             <div class="details_img">
-              <a href=""><img src="{$article.image}" height="109" width="176"/></a>
+              <a href="{$article.link}"><img src="{$article.image}" height="109" width="176"/></a>
             </div>
             <div class="details_text">
-              <h3><a href="">{$article.title}</a></h3>
-              <div class="xq">{$article.description}<a href="{$article.link}">[查看详细]</a></div>
+              <h3><a href="{$article.link}">{$article.title}</a></h3>
+              <div class="xq">{$article.description|truncate:70:"…"}<a href="{$article.link}">[查看详细]</a></div>
             </div>
           </li>
  {if $article@index+1 ==4}{break}{/if}
