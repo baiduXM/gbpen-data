@@ -55,9 +55,28 @@ strong{display: block;margin: 0 auto;overflow: hidden;text-overflow: ellipsis;wh
 #container{ margin-top:20px;}
 #left{ float:left; width:680px; margin-right:20px; display:inline}
 #pro{}
-#pro ul li{ float:left; width:151px; background:url(../images/pro_img_bg.jpg) no-repeat bottom; padding-bottom:31px; margin-right:19px; display:inline }
+#pro ul li {
+	position:relative;
+	overflow:hidden;
+	margin:0 8px;
+	display: inline-block;
+	width: 150px;background:url(../images/pro_img_bg.jpg) no-repeat bottom;  padding-bottom:31px;
+}
+#pro ul li .img{
+	position:relative;
+	width: 147px;
+	background-color: #fff;
+	text-align: center;
+	padding: 1px;
+}
+#pro ul li img {
+	width: 100%;
+	height: auto;
+}
+
+/*#pro ul li{ float:left; width:151px; background:url(../images/pro_img_bg.jpg) no-repeat bottom; padding-bottom:31px; margin-right:19px; display:inline }
 #pro ul li img{ width: 154px; height: 128px;}
-.pro{width:680px;margin-bottom: 20px;}
+*/.pro{width:680px;margin-bottom: 20px;}
 .photos {overflow:hidden;padding:10px 0;*padding-top:13px;_height:161px;_padding-top:20px;position: relative;}
 .photos .photos-button {position: absolute;top: 40px;width: 57px;height: 102px;z-index: 10;}
 .photos .photos-prev {left: -5px;background: url(images/photos-prev.png) no-repeat;}
@@ -159,10 +178,30 @@ ul.third li a:hover{color:#f00; }
 .article{ line-height:30px;height:auto; overflow:hidden; overflow:hidden; height:auto;min-height:400px; _height:expression(this.scrollHeight < 400? "400px" : "auto") ; margin:0px auto;  padding-top:15px; margin-left:10px;}
 .ny_prod{ padding:8px 0px 12px;color:#333; overflow:hidden;}
 
-ul.inner_pro{height:auto; overflow:hidden; padding-bottom:10px; width:830px; padding-top:0px;}
-ul.inner_pro li{ float:left; margin:15px 10px;display:inline; width:206px;}
+/*/*ul.inner_pro{height:auto; overflow:hidden; padding-bottom:10px; width:830px; padding-top:0px;}
+*/ul.inner_pro li{
+	position:relative;
+	overflow:hidden;
+	margin:0 8px;
+	display: inline-block;
+	width: 194px;
+}
+ul.inner_pro li .img{
+	position:relative;
+	width: 190px;
+	border:1px solid #d3d3d3;
+	background-color: #fff;
+	text-align: center;
+	padding: 1px;
+}
+ul.inner_pro li img {
+	width: 100%;
+	height: auto;
+}
+
+/*ul.inner_pro li{ float:left; margin:15px 10px;display:inline; width:206px;}
 ul.inner_pro li img{width:200px; height:167px;  vertical-align:top;  padding:2px;  border:1px solid #bebebe; }
-ul.inner_pro li a{  display:block; color:#4e3012;overflow:hidden; }
+*/ul.inner_pro li a{  display:block; color:#4e3012;overflow:hidden; }
 ul.inner_pro li a:hover{ color:#8e8e8e;}
 p.photo_title{text-align:center; height:32px; line-height:32px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap; display:block; width:100%; }
 
@@ -181,19 +220,42 @@ p.photo_title{text-align:center; height:32px; line-height:32px;overflow: hidden;
 
 
 .news_deta4{ width:100%; height:auto; overflow:hidden;}
-.news_deta4 ul li{ margin-top:17px; padding-bottom:17px; background:url(../images/nline.jpg) repeat-x left bottom; height:auto; overflow:hidden;}
+/*.news_deta4 ul li{ margin-top:17px; padding-bottom:17px; background:url(../images/nline.jpg) repeat-x left bottom; height:auto; overflow:hidden;}
+*/.news_deta4 ul li {
+	position:relative;
+	overflow:hidden;
+	margin:0 18px;
+	display: block;
+
+	margin-top:17px; padding-bottom:17px; background:url(../images/nline.jpg) repeat-x left bottom; height:auto; overflow:hidden;
+}
+.news_deta4 ul li .img{
+	position:relative;
+	width: 150px;
+	border:1px solid #d3d3d3;
+	background-color: #fff;
+	text-align: center;
+	padding: 1px;
+	display: inline-block; margin-right:12px;
+}
+.news_deta4 ul li img {
+	width: 100%;
+	height: auto;
+}
+
+
 .deteo{ padding:0px 0px 0px; height:auto; overflow:hidden; height:auto; width:665px; padding-bottom:15px;min-height:400px; _height:expression(this.scrollHeight < 400? "400px" : "auto") ; }
 .nimgb{ width:150px; height:109px; float:left; display:inline;box-shadow: 3px 3px 3px #b1a9a3; padding:1px; margin-right:15px;}
 .right_newsb{ width:100%; height:auto; overflow:hidden;}
 .right_newsb .nlist_a{ background:url(../images/niewimc.jpg) left  bottom no-repeat; padding-left:20px;  border-bottom:none; line-height:39px; height:39px; }
-.right_news{ width:498px; float:left;display: inline;}
+.right_news{ width:458px; 	display: inline-block; vertical-align:top}
 .right_news span a{ color:#f00}
 .nlist_a{ height:32px; line-height:32px; font-weight:bold; font-size:14px; border-bottom:1px dotted #98826d; margin-bottom:10px;}
 .nlist_a b{ font-weight:normal;}
 .nlist_a b{ font-weight:normal; font-size:12px; float:right; display:inline;}
 .nlist_a a{ color:#4e3012;}
 .nlist_a a:hover{ color:#bb3239;}
-.nlist_word{ height:46px; line-height:24px;text-align:Justify;text-justify:inter-ideograph; color:#4e3012; font-size:12px; overflow:hidden;}
+.nlist_word{ height:24px; line-height:24px;text-align:Justify;text-justify:inter-ideograph; color:#4e3012; font-size:12px; overflow:hidden;}
 .nlist_word a{ color:#bb3239;}
 .nlist_word a:hover{ color:#4e3012;}
 .ny_about{ color:#4e3012; line-height:24px;  padding-right:0px; margin-left:5px; margin-right:5px;text-align:Justify;text-justify:inter-ideograph;}
@@ -231,15 +293,35 @@ ul.inner_pages a:hover{color:#469c18}
 .moule_edot{  color:#333;width:99%; margin-left:5px; clear:both;text-align:Justify;
 text-justify:inter-ideograph;}
 
-.slideBoxb{ width:100%; height:413px; overflow:hidden; position:relative;}
+.slideBoxb{ width:100%; height:100%; overflow:hidden; position:relative;}
 		.slideBoxb .hd{ height:15px; overflow:hidden; position:absolute; right:5px; bottom:5px; z-index:1; display:none; }
 		.slideBoxb .hd ul{ overflow:hidden; zoom:1; float:left; display:none;  }
 		.slideBoxb .hd ul li{ float:left; margin-right:2px;  width:15px; height:15px; line-height:14px; text-align:center; background:#fff; display:none; cursor:pointer; }
 		.slideBoxb .hd ul li.on{ background:#f00; color:#fff; }
-		.slideBoxb .bd{ position:relative; height:100%; z-index:0; width:554px; height:436px; margin:0px auto; text-align:center;   }
-		.slideBoxb .bd li{ zoom:1; vertical-align:middle; }
-		.slideBoxb .bd img{ width:500px; height:415px; display:block;  border:1px solid #ddd; padding:1px; margin:0px auto; text-align:center; }
+		.slideBoxb .bd{ position:relative; height:100%; z-index:0; width:554px; margin:0px auto; text-align:center;   }
+.slideBoxb .bd li {
+	position:relative;
+	overflow:hidden;
+	margin:0 18px;
+	display: inline-block;
+	width: 500px;
+	zoom:1; vertical-align:middle; 
+}
+.slideBoxb .bd .img{
+	position:relative;
+	width: 496px;
+	border:1px solid #d3d3d3;
+	background-color: #fff;
+	text-align: center;
+	padding: 1px;
+}
+.slideBoxb .bd img {
+	width: 100%;
+}
 
+/*		.slideBoxb .bd li{ zoom:1; vertical-align:middle; }
+		.slideBoxb .bd img{ width:500px; height:415px; display:block;  border:1px solid #ddd; padding:1px; margin:0px auto; text-align:center; }
+*/
 		/* 下面是前/后按钮代码，如果不需要删除即可 */
 		.slideBoxb .prev,
 		.slideBoxb .next{ position:absolute; left:3%; top:50%; margin-top:-25px; display:block; width:32px; height:40px; background:url(../images/prev.png) left no-repeat;}

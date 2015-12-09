@@ -1,5 +1,5 @@
 function loader (argument) {
-    $('#quickbar-wrap').addClass('loaded');
+    $('body').addClass('loaded');
 
     setTimeout(function(){
         $(".loader_div").remove();
