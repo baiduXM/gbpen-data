@@ -18,16 +18,15 @@
 <!--[if lte IE 8]>
 <link rel="stylesheet" href="css/ie.css">
 <![endif]-->
-<script type="text/javascript" src="{$site_url}js/jquery-1.7.1.min.js"></script>
-<script src='{$site_url}js/pagenavs_sub3.js'></script>
-<script type="text/javascript" src="{$site_url}js/slid.js"></script>
-<script type="text/javascript" src="{$site_url}js/tap.js"></script>
 
+<script type="text/javascript" src="{$site_url}js/jquery-1.7.1.min.js"></script>
+
+<script src='{$site_url}js/pagenavs_sub3.js'></script>
+<script type="text/javascript" src="{$site_url}js/tap.js"></script>
 </head>
 <body>
-	<div class="wrap case-detail">
+	<div class="wrap case">
 		{include file='./_header.html'} 
-
 		<div class="main">
 			<div class="top group">
 				<div class="title">{if $pagenavs}
@@ -43,52 +42,24 @@
 				</p></div>
 			</div>
 			<div class="con">
-				<div class="article">
-					<div class="article-title">
-						<h4>{$article.title}</h4>			    
-						<div>
-							<span class="cat">分类：{$article.category.name}</span>
-							<span class="date">发布日期：{$article.pubdate}</span>
-							<span class="count">浏览次数：{$article.viewcount}</span>
-						</div>
-					</div>
-					<div class="content group">
-						<div class="img_wrap">
-						<div id="img_wrap" >
-							<ul class="slides group">
-								{foreach item=image from=$article.images}
-								<li><div><img src="{$image.image}" alt="{$image.title|strip_tags}" /></div></li>
-								{/foreach}
-							</ul>
-						</div>
-						</div>
-						<div class="img_txt">{$article.content|unescape:"html"}</div>
+				<ul class="group list_img">
+				{foreach name=article item=article from=$list.data}
+					<li>
+						<div class="img"><img src="{$article.image}" alt="{$article.title|strip_tags}"/></div>
+						<div class="case-name"><h3><a href="{$article.link}">{$article.title}</a></h3></div>
+						<div class="case-style">{$article.description}</div>
+					</li>
 
-						<!-- Baidu Button BEGIN -->
-						{shareExt shareText=$article.content|unescape:"html"|strip_tags|truncate:140:"…" sharePic=$article.image}				
-						<!-- Baidu Button END -->
+				{/foreach}
+				</ul>
 
-					</div>
-				</div>
-				<div class="article-link">
-					<a class="article-pre" href="{$article.prev.link}">上一篇：{$article.prev.title}</a>
-					<a class="article-next" href="{$article.next.link}">下一篇：{$article.next.title}</a>
-				</div>
-				
-				<div class="article_rank">
-					<h5>相关阅读</h5>
-					{foreach name=articles item=article from=$related}
-                    <a href="{$article.link}">{$article.title}</a>
-                    {if $article@index+1 == 8}{break}{/if} 
-                    {/foreach}
-				</div>
+				<!-- page[分页] -->
+				{include file='./_page_normal.html'} 
 				
 			</div>
 			{include file='./_pagenavs_sub3.html'} 		
 		</div>	
-
 		{include file='./_footer.html'}
 	</div>
-
 </body>
 </html>
