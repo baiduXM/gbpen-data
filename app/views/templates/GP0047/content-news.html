@@ -41,7 +41,7 @@
           <div class="about_r">{include file="./_pro_right_nav.html"}
               <div class="info detal_s">
                 <h1 class="module_news_Details">{$article.title} </h1>
-   <h2 class="module_news_Details">发表日期：{$article.pubtimestamp}</h2>
+   <h2 class="module_news_Details">发表日期：{$article.pubdate}</h2>
    <div class="ny_text">{$article.content} </div>
     <div style="height:30px;overflow: hidden; padding-top:7px; color:#000;">
 {shareExt shareText=$article.content|unescape:"html"|strip_tags|truncate:140:"…" sharePic=$article.image}
