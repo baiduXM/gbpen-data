@@ -50,7 +50,7 @@
          <ul class="clearfix">
          {foreach name=pro item=pro from=$index.pro.data}
           <li><a href="{$pro.link}"><div class="img"><img src="{$pro.image}"  /></div><p>{$pro.title}</p></a></li>
-        {if $pro@index+1 == 8}{break}{/if}
+        {if $pro@index+1 == 10}{break}{/if}
        {/foreach}
          </ul>
        </div>
