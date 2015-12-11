@@ -49,20 +49,61 @@ form{ margin:0; padding:0; }
 .des .nav_list ul li a:hover{ background:url(../images/subnav_bg.png) no-repeat center; color:#f5e1c8}
 
 .pro_list{ float:left; width:830px; margin:45px 0 0 35px;}
-.pro_list ul li{ float:left; text-align:center; margin:0 12px 5px 12px;}
+.pro_list ul li {
+	position:relative;
+	overflow:hidden;
+	margin:0 8px;
+	display: inline-block;
+	width: 130px
+}
+.pro_list ul li .img{
+	position:relative;
+	width: 126px;
+	background-color: #fff;
+	text-align: center;
+	padding: 1px;
+}
+.pro_list ul li img {
+	width: 100%;
+	height: auto;
+}
+
+/*.pro_list ul li{ float:left; text-align:center; margin:0 12px 5px 12px;}
 .pro_list ul li img{ display:block; border:solid 3px #fff; margin-bottom:6px;}
-.pro_list ul li a{ color:#c3a286}
-.yc  ul li  p {width:100%; display:block; white-space:nowrap; text-overflow:ellipsis; overflow:hidden;  height:30px;}
+*/.pro_list ul li a{ color:#c3a286}
+.yc  ul li  p {width:100%; display:block; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; line-height:20px; height:20px; padding-top:15px;}
 
 
-.an{ background:url(../images/index_bg.jpg) no-repeat center; height:306px; padding-top:45px}
+.an{ background:url(../images/index_bg2.jpg) center repeat-y;}
+.an1{ background:url(../images/index_bg3.jpg) bottom center no-repeat;}
+.an2{ background:url(../images/index_bg1.jpg) top center no-repeat ; padding-top:35px; padding-bottom:35px;}
 #about{ float:left; width:460px; margin-left:10px;}
+#about .inner{ background:url(../images/about_bg.jpg) no-repeat top center; padding-top:10px; }
 #about p{ padding-left:30px; height:75px;  overflow:hidden}
 #about a.more{ text-align:right; height:30px;text-decoration:underline; display:block;margin-bottom:40px; }
 #news{ float:left; width:440px; margin-left:70px;}
-#news ul li{ float:left; width:170px; padding:10px; margin:0 15px; background:#a58975; height:250px; overflow:hidden}
+#news ul li {
+	position:relative;
+	overflow:hidden;
+	margin:0 8px;
+	display: inline-block;
+	width: 170px;background:#a58975;padding:10px; 
+}
+#news ul li .img{
+	position:relative;
+	width: 166px;
+	background-color: #fff;
+	text-align: center;
+	padding: 1px;
+}
+#news ul li img {
+	width: 100%;
+	height: auto;
+}
+
+/*#news ul li{ float:left; width:170px; padding:10px; margin:0 15px; background:#a58975; height:250px; overflow:hidden}
 #news ul li img{ display:block}
-#news ul li b{ color:#493a30; display:block; height:35px; line-height:35px;}
+*/#news ul li b{ color:#493a30; display:block; height:35px; line-height:35px;}
 #news ul li a{ color:#6b584b; line-height:20px;}
 
 #footer{ text-align:center; padding:10px 0; border-top:solid 1px #7d594e; margin-top:20px;}

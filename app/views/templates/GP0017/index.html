@@ -75,15 +75,16 @@
                     <div class="content clearfix">
                      {foreach name=news item=new from=$index.news.data}
                          {if  $new@index == 0} 
-                        <div class="pic"><img src="{$new.image}" height="148" width="165" /></div>
+                        <div class="pic"><img src="{$new.image}" /></div>
                         <div class="word">
                             <h2>{$new.title}</h2>
                             <div class="txt">{$new.description|truncate:110:"…"}</div>
                             {/if}
                             {/foreach}
+                            <div class="button"><a href="{$index.news.data[0].link}">+查看更多</a></div>
                         </div>
                     </div>
-                    <div class="button"><a href="{$index.news.data[0].link}">+查看更多</a></div>
+                    
                 </div>
             </div>
         </div>
@@ -101,7 +102,7 @@
                         <ul>
                             {foreach name=pro item=article from=$index.pro.data}
                             <li>
-                                <a href="{$article.link}"><img alt="" src="{$article.image}" />
+                                <a href="{$article.link}"><div class="img"><img alt="" src="{$article.image}" /></div>
                                     <h2>{$article.title}</h2></a>
                             </li>
                             {/foreach}

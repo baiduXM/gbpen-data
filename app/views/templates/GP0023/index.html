@@ -41,7 +41,7 @@
 
      {foreach name=news item=news from=$index.news.data}
         <div id="n1" class="clearfix">
-         <div class="np"><img src="{$news.image}" width="97" height="71" /></div>
+         <div class="np"><div class="img"><img src="{$news.image}" /></div></div>
           <div class="nr">
             <h2>{$news.pubtimestamp|date_format:'%Y/%m/%d'} </h2>
             <div class="wz"><a href="{$news.link}">{$news.description}</a> </div>
@@ -74,7 +74,7 @@
 
 	<ul id="MarqueeDiv2">
        {foreach name=pro item=pro from=$index.pro.data}
-       <li><a href="{$pro.link}"><img height="146" width="161" src="{$pro.image}" /><h2>{$pro.title}</h2></a></li>
+       <li><a href="{$pro.link}"><div class="img"><img src="{$pro.image}" /></div><h2>{$pro.title}</h2></a></li>
        {/foreach}
     </ul>  
       </div>

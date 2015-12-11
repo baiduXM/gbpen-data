@@ -49,7 +49,7 @@
        <div class="pro_list yc">
          <ul class="clearfix">
          {foreach name=pro item=pro from=$index.pro.data}
-          <li><a href="{$pro.link}"><img src="{$pro.image}" width="130" height="130" /><p>{$pro.title}</p></a></li>
+          <li><a href="{$pro.link}"><div class="img"><img src="{$pro.image}"  /></div><p>{$pro.title}</p></a></li>
         {if $pro@index+1 == 8}{break}{/if}
        {/foreach}
          </ul>
@@ -58,6 +58,7 @@
   </div>
   
   <div class="an">
+  <div class="an1"><div class="an2">
   <div class="wrapper clearfix">
     <div id="about">
      <div class="inner"><p>{$index.about.description}</p><a href="{$index.about.link}" class="more">[查看更多]</a><img src="{$index.about.image}" width="450" height="105" /></div>
@@ -66,7 +67,7 @@
       <div class="inner yc">
         <ul class="clearfix">
         {foreach name=news item=news from=$index.news.data}
-        <li><a href="{$news.link}"><img src="{$news.image}" width="170" height="100"/><p>{$news.title}</p><div style="height:120px; overflow:hidden">{$news.description}</div></a></li>
+        <li><a href="{$news.link}"><div class="img"><img src="{$news.image}"/></div><p>{$news.title}</p><div style="height:72px; overflow:hidden">{$news.description}</div></a></li>
  
   {if $news@index+1 == 2}{break}{/if}
 {/foreach}
@@ -76,6 +77,7 @@
     
   </div>
  </div>
+ </div></div>
 </div>
  
     
