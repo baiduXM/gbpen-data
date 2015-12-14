@@ -8,10 +8,12 @@ $(document).ready(function() {
         $(this).parent().siblings().find(".third").slideUp()
         $(this).siblings(".third").slideToggle()
     }) 
-	if($(".bd img").width()>500)
-	{
-	$(".bd img").width("100%")	
-		}
+	$(".bd li").each(function(){
+	if($(this).find("img").width() > 600){
+        $(this).find("img").width("100%");
+}
+
+		})
 	
 /*导航*/
    jQuery("#nav").slide({
