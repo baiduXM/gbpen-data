@@ -47,7 +47,7 @@
       <div class="list_image">
      <ul class="clearfix">
       {foreach name=article item=article from=$list.data}
-        <li><a href="{$article.link}"><img src="{$article.image}"/><p>{$article.title} </p></a></li>
+        <li><a href="{$article.link}"><div class="img"><img src="{$article.image}"/></div><p>{$article.title} </p></a></li>
       {/foreach}
      </ul>	
      <div class="module_page">

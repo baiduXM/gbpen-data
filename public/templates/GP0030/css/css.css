@@ -224,14 +224,27 @@ img {
 	color:#393939;
 	line-height:18px; height:56px; overflow:hidden
 }
-#news .inner .nn .n1 {
+
+#news .inner .nn .n1{
+	position:relative;
+	width: 120px;
+	background-color: #fff;
+	text-align: center;
+	
+}
+#news .inner .nn .n1 img {
+	width: 100%;
+	height: auto;
+}
+
+/*#news .inner .nn .n1 {
 	width:120px;
 	margin:auto
 }
 #news .inner .nn .n1 img {
 	border:1px solid #ccc
 }
-#pro {
+*/#pro {
 	margin-top:15px;
 }
 #pro .title {
@@ -279,14 +292,33 @@ img {
 	margin-top:20px;
 	text-align:center;
 }
-#pro .inner ul li {
+#pro ul li {
+	position:relative;
+	overflow:hidden;
+	margin:0 8px;
+	display: inline-block;
+	width: 150px;
+}
+#pro ul li .img{
+	position:relative;
+	width: 150px;
+	background-color: #fff;
+	text-align: center;
+
+}
+#pro ul li img {
+	width: 100%;
+	height: auto;
+}
+
+/*#pro .inner ul li {
 	float:left;
 	margin-right:45px;
 }
 #pro .inner img {
 	display:block
 }
-#pro .inner ul li a {
+*/#pro .inner ul li a {
 	font-size:14px;
 	font-weight:bold;
 	line-height:33px;

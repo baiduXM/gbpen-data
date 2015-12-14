@@ -35,7 +35,7 @@
   <div id="news">
     <div class="title"><span><a href="{$index.news.link}"><img src="{$site_url}images/mo.jpg" width="33" height="5" /></a></span><b>{$index.news.name}</b></div>
     <div class="inner clearfix"> 
-    <div class="np"><img src="{$index.news.image}" width="93" height="67" /></div>
+    <div class="np"><img src="{$index.news.image}" /></div>
       <div class="nz">
         <h2><a href="{$index.news.data[0].link}">{$index.news.data[0].title}</a></h2>
         <div class="wz">{$index.news.data[0].description}</div>
@@ -67,7 +67,7 @@ type="application/x-shockwave-flash"></embed></div>
  <div id="pro">
     <ul class="clearfix" id="MarqueeDiv1">
     {foreach name=pro item=pro from=$index.pro.data}
-       <li class="fl"><a href="{$pro.link}"><img  src="{$pro.image}" /></a></li>
+       <li class="fl"><a href="{$pro.link}"><div class="img"><img  src="{$pro.image}" /></div></a></li>
        {/foreach}
     </ul>
   </div>

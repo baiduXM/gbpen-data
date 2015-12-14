@@ -200,7 +200,26 @@ strong{display: block;margin: 0 auto;overflow: hidden;text-overflow: ellipsis;wh
 #pro .inner {
 	
 }
-#pro .inner ul li {
+#pro ul li {
+	position:relative;
+	overflow:hidden;
+	margin:0 8px;
+	display: inline-block;
+	width: 115px;
+}
+#pro ul li .pic{
+	position:relative;
+	width: 111px;
+	background-color: #fff;
+	text-align: center;
+	padding: 1px;
+}
+#pro ul li img {
+	width: 100%;
+	height: auto;
+}
+
+/*#pro .inner ul li {
 	width:115px;
 	float:left;
 	margin-right:15px;
@@ -208,7 +227,7 @@ strong{display: block;margin: 0 auto;overflow: hidden;text-overflow: ellipsis;wh
 }
 #pro .inner ul li .pic{ max-height:94px; overflow:hidden}
 #pro .inner ul li .pic img { width:115px; height:94px;}
-#video {
+*/#video {
 	float:left;
 	width:270px;
 	margin-left:8px;

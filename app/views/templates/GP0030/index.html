@@ -65,8 +65,8 @@
           
           <li>
             <div class="nn">
-             <a href="{$article.link}"> <div class="n1"><img src="{$article.image}" width="120" height="116" /></div>
-              <p>{$article.title}</a></p>
+             <a href="{$article.link}"> <div class="n1"><img src="{$article.image}" /></div>
+              <p>{$article.title}</p></a>
               <div class="te">{$article.description}</div></a>
             </div>
           </li>
@@ -92,7 +92,7 @@
     <div class="inner wrapper yc">
     <ul id="MarqueeDiv1" class="clearfix">
 {foreach name=case item=case from=$index.case.data}
-        <li><a href="{$case.link}"><img height="193"  src="{$case.image}" /></a><a href="{$case.link}"><p>{$case.title}</p></a></li>
+        <li><a href="{$case.link}"><div class="img"><img src="{$case.image}" /></div></a><a href="{$case.link}"><p>{$case.title}</p></a></li>
        {/foreach}
     </ul>
     
