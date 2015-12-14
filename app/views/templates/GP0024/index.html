@@ -82,19 +82,12 @@
     <div id="case">
       <h2 class="title">{$index.case.name}</h2>
       <div class="inner">
-        <div class="y"></div>
-        <ul class="clearfix yc">
+        <div class="y" style="line-height:0"></div>
+        <ul class="clearfix yc" style="line-height:0">
          {foreach name=case item=case from=$index.case.data}
-
-          <li>
-            <div class="text"><a href="{$case.link}"><p>{$case.title}
-             </p> <p>{$case.description}</p></a></div>
-            <img src="{$case.image}" width="120" height="92" /></li>
+          <li><div class="text" style="line-height:20px"><a href="{$case.link}"><p>{$case.title}</p> <p>{$case.description}</p></a></div><div class="img"><img src="{$case.image}"  /></div></li>
             {if $case@index+1 == 4}{break}{/if}
          {/foreach}          
-          
-          
-          
         </ul>
       </div>
       <a href="{$index.case.link}" class="more">查看更多>></a> </div>
@@ -104,7 +97,7 @@
         <ul>   
         {foreach name=news item=article from=$index.news.data}   
        <li class="clearfix">
-            <div class="img"><img src="{$article.image}" height="63" width="82" /></div>
+            <div class="img"><img src="{$article.image}"  /></div>
             <div class="rightinner">
               <h3><a href="{$article.link}">{$article.title}</a></h3>
               <div class="text">{$article.description}</div>
@@ -121,7 +114,7 @@
       <div class="inner">
  <ul id="MarqueeDiv1">
 {foreach name=pro item=pro from=$index.pro.data}
-        <li class="fl pngFix"><a href="{$pro.link}"><img src="{$pro.image}" /></a></li>
+        <li class="pngFix"><div class="img"><a href="{$pro.link}"><img src="{$pro.image}"/></a></div></li>
        {/foreach}
     </ul> 
     </div>

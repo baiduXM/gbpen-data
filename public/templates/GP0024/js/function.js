@@ -70,12 +70,12 @@ $(document).ready(function() {
 	/*案例*/
  $("#case ul li").hover(
   function(){
-		 $(this).find("div").stop().animate({width:"100%",left:"0"})
+		 $(this).find("div.text").stop().animate({width:"100%",left:"0"})
 		 $(this).find("p").stop().delay(400).fadeIn()
 	     },
 	 function(){
 		 $(this).find("p").stop().fadeOut()
-		 $(this).find("div").stop().delay(400).animate({width:"0%",left:"50%"})
+		 $(this).find("div.text").stop().delay(400).animate({width:"0%",left:"50%"})
 		 
 		 }
  
@@ -109,6 +109,11 @@ $("#banner").slideDown("slow")
 	
 /*图片*/
 $("#product ul li:even").addClass("left_bg");
+var hh=170-$("#product ul li img").height();
+var hh1=92-$("#case ul li img").height();
+	$("#product ul li img").css("margin-top",hh*0.5+"px")
+	$("#case ul li img").css("margin-top",hh1*0.5+"px")
+
 	
 	
 /*滚动js*/	
