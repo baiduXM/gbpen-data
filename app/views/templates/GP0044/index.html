@@ -85,9 +85,10 @@
         {/foreach}
       </ul>
       <ul class="hd">
-        <li></li>
-        <li></li>
-        <li></li>
+         {foreach name=slidepics item=slidepic from=$index.slidepics}
+             <li></li>
+         {/foreach}
+       
       </ul>
     </div>
 
@@ -124,8 +125,8 @@
           <li>
             <a href="{$new.link}">
               {$new.title}
-              <span>{$new.pubdate}</span>
             </a>
+            <span>{$new.pubdate}</span>
           </li>
           {if $new@index+1 == 3}{break}{/if}
                      {/foreach}
