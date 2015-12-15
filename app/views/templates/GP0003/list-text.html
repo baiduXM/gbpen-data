@@ -36,7 +36,6 @@
 			<div class="article">
 				<div class="list_txt">
 					<ul class="list">
-						{$limit = 8}
 						{foreach name=article item=article from=$list.data}
 						<li class="clearfix">
 							<div class="c_l">
@@ -47,7 +46,6 @@
 							<h6><a href="{$article.link}">{$article.title}</a></h6>
 						</div>
 						</li>
-						{if $article@index+1 eq $limit}{break}{/if}
 						{/foreach}										
 					</ul>
 

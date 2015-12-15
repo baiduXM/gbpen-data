@@ -285,7 +285,7 @@ $(function($) {
 	}
 
 	function feedback() {
-		$('#submit').click(function(event) {
+		$('#feedback_smt').click(function(event) {
 			$.ajax({
 				url: $('#f').attr("action"),
 				// 跳转到 action    

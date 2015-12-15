@@ -4,14 +4,20 @@
     </div>
     <nav>
       <ul id="nav">
-        <li><a href="{$site_url}" onClick="jarallax.jumpToProgress( 0, 2000, 30);">首页</a></li>
-        {foreach name=navs item=nav from=$navs}
+        {$index = $posnavs|@count-1}
+        <li><a href="{$site_url}">首页</a></li>
+        <li class="{if $global.about.name eq $posnavs[$index].name}cur{/if}"><a href="{$global.about.link}">{$global.about.name}</a></li>
+        <li class="{if $global.news.name eq $posnavs[$index].name}cur{/if}"><a href="{$global.news.link}">{$global.news.name}</a></li>
+        <li class="{if $global.products.name eq $posnavs[$index].name}cur{/if}"><a href="{$global.products.link}">{$global.products.name}</a></li>
+        <li class="{if $global.case.name eq $posnavs[$index].name}cur{/if}"><a href="{$global.case.link}">{$global.case.name}</a></li>
+        <li class="{if $global.feedback.name eq $posnavs[$index].name}cur{/if}"><a href="{$global.feedback.link}">{$global.feedback.name}</a></li>
+        <li class="{if $global.contact_us.name eq $posnavs[$index].name}cur{/if}"><a href="{$global.contact_us.link}">{$global.contact_us.name}</a></li>
 
-          
-          <li class="{if $nav.current}cur{/if}">
-            <a href="{$nav.link}">{$nav.name}</a>            
-          </li>           
-                        
+
+        {foreach name=navs item=nav from=$global.fixed_navs}          
+          <li class="{if $nav.name eq $posnavs[$index].name}cur{/if}">
+            <a href="{$nav.link}">{$nav.name}</a>
+          </li>              
         {/foreach}
       </ul>
     </nav>

@@ -18,13 +18,13 @@ h1 a.logo{
 	position: relative;
 	display: block;
 	width: 175px;
-	height: 91px;
+	height: auto;
 }
 h1 a.logo img{
 	width: 100%;
 }
 #nav{
-	max-height: 440px;
+	// max-height: 440px;
 	overflow: hidden;
 }
 #nav>li{
