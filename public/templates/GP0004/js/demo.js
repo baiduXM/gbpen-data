@@ -1,9 +1,6 @@
 $(function($) {
 	init = function() {
 		jarallax = new Jarallax(new ControllerScroll(true));
-		// var controllerTime = new ControllerTime(0.01,0.01,0);
-		// controllerTime.activate(jarallax);
-		// console.log(ssss);
 		var currentProgress = 0,
 			progressSteps = 1 / 5,
 			home_h = $('#home').outerHeight(),
@@ -285,14 +282,15 @@ $(function($) {
 	}
 
 	function feedback() {
-		$('#submit').click(function(event) {
+		$('#feedback_smt').click(function(event) {
 			$.ajax({
 				url: $('#f').attr("action"),
 				// 跳转到 action    
 				data: {
-					username: $('#username').val(),
-					phone: $('#phone').val(),
-					info: $('#info').val()
+					name: $('#username').val(),
+					telephone: $('#phone').val(),
+					content: $('#info').val(),
+					submit: 1
 				},
 				type: 'post',
 				cache: false,

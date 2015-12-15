@@ -33,8 +33,8 @@
 		"description": "首页底部二维码图片",
 		"type": "image",
 		"config": {
-			"height": 100,
-			"limit": 1
+			"width":165,
+			"height": 165
 		}
 	},
 	"phone_title": {
@@ -62,45 +62,9 @@
 		"description": "投诉中心",
 		"type": "text"
 	},
-	"about":{
-		"description": "关于我们",
-		"value": {},
-		"type": "page"
-	},
-	"news":{
-		"description": "新闻中心",
-		"value": {},
-		"type": "list"
-	},
-	"products":{
-		"value":{},
-		"description":"首页产品推荐的四张图片列表",
-		"type":"list",
-		"config":{
-			"width":220,
-			"height": 217
-		}
-	},
-	"case":{
-		"value":{},
-		"description":"首页案例展示的六张图片列表",
-		"type":"list",
-		"config":{
-			"width":470,
-			"height": 470
-		}
-	},
-	"feedback":{
-		"value": {},
-		"description": "留言板",
-		"type": "nav",
-		"config": {
-			"filter": "feedback"
-		}
-	},
-	"contact_us":{
-		"description": "联系方式",
-		"value": {},
-		"type": "page"
+	"feedback_txt": {
+		"value": "<p>您好 HELLO<br/>感谢您来到厦门易尔通互动，若您有合作意向，请您为我们留言或使用以下方式联系我们，我们将尽快给你回复，并为您提</p>",
+		"description": "首页留言板块文字信息",
+		"type": "textarea"
 	}
 }

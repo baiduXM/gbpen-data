@@ -1,7 +1,7 @@
 {if $pagenavs}
 <nav>
 <div class="nav">
-<ul class="mtree">
+<ul class="mtree clearfix">
 	{foreach name=pagenavs item=nav from=$pagenavs}
     <li  class="{if $nav.current}mtree-open{/if} {if $nav.selected}selected{/if}"><a href="{if $nav.childmenu}javascript:;{else}{$nav.link}{/if}">{$nav.name}</a>
     {if $nav.childmenu}
@@ -28,7 +28,7 @@
 <nav>
 <div class="nav">
 	
-	<ul class="mtree">
+	<ul class="mtree clearfix">
 		{foreach name=pagenavs2 item=nav from=$_pagenavs_sub3.pagenavs.childmenu}
 		<li  class="{if $nav.current}mtree-open{/if} {if $nav.selected}selected{/if}"><a href="{if $nav.childmenu}javascript:;{else}{$nav.link}{/if}">{$nav.name}</a>
     {if $nav.childmenu}

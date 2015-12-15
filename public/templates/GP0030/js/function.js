@@ -18,10 +18,12 @@ $(document).ready(function() {
         $(this).parent().siblings().find(".third").slideUp()
         $(this).siblings(".third").slideToggle()
     }) 
-	if($(".bd img").width()>500)
-	{
-	$(".bd img").width("100%")	
-		}
+	$(".bd li").each(function(){
+	if($(this).find("img").width() > 600){
+        $(this).find("img").width("99%");
+}
+
+		})
 /*导航*/
     jQuery("#nav").slide({
         type: "menu", // 效果类型，针对菜单/导航而引入的参数（默认slide）

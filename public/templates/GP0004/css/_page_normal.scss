@@ -12,11 +12,12 @@ page
 .page_normal a,.page_normal span{
 	padding:4px 5px;
 	font-size:10px;
-	margin-left: 5px;
+	margin:0 4px 20px;
 	color:#fff;
 	background-color: #a38600;
 }
 .page_normal a{
 	text-decoration:none;
 }
+.page_normal li{display: inline-block;}
 .page_normal li.cur a{background-color: #214760;cursor: pointer;}

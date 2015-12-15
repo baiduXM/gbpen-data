@@ -1,8 +1,10 @@
 $(document).ready(function() {
-	   if($(".bd img").width()>500)
-	{
-	$(".bd img").width("100%")	
-		}
+	$(".bd li").each(function(){
+	if($(this).find("img").width() > 500){
+        $(this).find("img").width("99%");
+}
+
+		})
 jQuery(".slideBoxb").slide({mainCell:".bd ul",autoPlay:false,effect:"leftLoop"});				
   		$(".listbg li a").click(function () {
         $(this).parent().siblings().find(".second").slideUp()
