@@ -18,6 +18,8 @@
 
 <link href="{$site_url}css/style.css" rel="stylesheet" type="text/css" />
 
+<script type="text/javascript" src="{$site_url}js/jquery.js"></script>
+<script type="text/javascript" src="{$site_url}js/jarallax-0.2.3b.js"></script>
 <style>
   body{
     height: 2000px;
@@ -37,17 +39,9 @@
     <nav>
       <ul id="nav">
         <li><a href="{$site_url}" onClick="jarallax.jumpToProgress( 0, 2000, 30);return false;">首页</a></li>
-        <li><a href="{$global.about.link}" onClick="jarallax.jumpToProgress( 10, 2000, 30);return false;">{$global.about.name}</a></li>
-        <li><a href="{$global.news.link}" onClick="jarallax.jumpToProgress( 20, 2000, 30);return false;">{$global.news.name}</a></li>
-        <li><a href="{$global.products.link}" onClick="jarallax.jumpToProgress( 30, 2000, 30);return false;">{$global.products.name}</a></li>
-        <li><a href="{$global.case.link}" onClick="jarallax.jumpToProgress( 40, 2000, 30);return false;">{$global.case.name}</a></li>
-        <li><a href="{$global.feedback.link}" onClick="jarallax.jumpToProgress( 50, 2000, 30);return false;">{$global.feedback.name}</a></li>
-        <li><a href="{$global.contact_us.link}" onClick="jarallax.jumpToProgress( 60, 2000, 30);return false;">{$global.contact_us.name}</a></li>
-
-
-        {foreach name=navs item=nav from=$global.fixed_navs}          
+        {foreach name=navs item=nav from=$navs}          
           <li>
-            <a href="{$nav.link}">{$nav.name}</a>
+            <a href="{$nav.link}" onClick="{if $nav.name == $index.about.name}jarallax.jumpToProgress( 10, 2000, 30);return false;{elseif $nav.name == $index.news.name}jarallax.jumpToProgress( 20, 2000, 30);return false;{elseif $nav.name == $index.products.name}jarallax.jumpToProgress( 30, 2000, 30);return false;{elseif $nav.name == $index.case.name}jarallax.jumpToProgress( 40, 2000, 30);return false;{elseif $nav.name == $index.feedback.name}jarallax.jumpToProgress( 50, 2000, 30);return false;{elseif $nav.name == $index.contact_us.name}jarallax.jumpToProgress( 60, 2000, 30);return false;{/if}">{$nav.name}</a>
           </li>              
         {/foreach}
       </ul>
@@ -79,12 +73,12 @@
       <ul>
           {foreach item=slidepic from=$index.slidepics}
           <li>
-            <input type="hidden" class="EditInfo" value="">
+            <input type="hidden" class="EditInfo" value="{$slidepic.description}">
             <img src="{$slidepic.image}" height="736" width="1920" alt="{$slidepic.title|strip_tags}" />
             <div class="box_inner ">
               <div class="description">
                 <p class="yellow"></p>
-                <p class="sub_title">{$slidepic.title}</p>
+                <p class="sub_title">{$slidepic.title|strip_tags}</p>
                 <p class="p"></p>
               </div>              
               <div class="shap">
@@ -104,15 +98,15 @@
   <div class="container" id="slide1">
     <div class="slide_inner">
     <div class="inner_wrap clearfix">
-      <h2><span>{$global.about.en_name}</span>{$global.about.name}</h2>
+      <h2><span>{$index.about.en_name}</span>{$index.about.name}</h2>
       <div class="c_l">
         <div class="txt">
-          <p>{$global.about.description}</p>
+          <p>{$index.about.description}</p>
         </div>
-        <a href="{$global.about.link}" class="read_more">详情+</a>
+        <a href="{$index.about.link}" class="read_more">详情+</a>
       </div>
       <div class="c_r">
-        <img src="{$global.about.image}" alt="{$title}">
+        <img src="{$index.about.image}" height="344" width="459" alt="{$title}">
       </div>
     </div>
     </div>
@@ -126,19 +120,19 @@
     <div class="inner_wrap clearfix">
       <div class="c_l">
         <div class="img_wrap">
-          <img src="{$global.news.image}" alt="{$global.news.name|strip_tags}">
+          <img src="{$index.news.image}" height="305" width="244" alt="">
         </div>
       </div>
       <div class="c_r">
-        <h2><span>{$global.news.en_name}</span>{$global.news.name}</h2>
+        <h2><span>{$index.news.en_name}</span>{$index.news.name}</h2>
         <ul>
           {$limit = 5}
-          {foreach name=new item=new from=$global.news.data}
-          <li><a class="clearfix" href="{$new.link}"><span class="title">{$new.title}</span><span class="date">（{$new.pubtimestamp|date_format:'%Y-%m-%d'}）</span></a></li>
+          {foreach name=new item=new from=$index.news.data}
+          <li><a class="clearfix" href="{$new.link}"><span class="title">{$new.title|strip_tags}</span><span class="date">（{$new.pubtimestamp|date_format:'%Y-%m-%d'}）</span></a></li>
           {if $new@index+1 eq $limit}{break}{/if}
           {/foreach}
         </ul>
-        <a href="{$global.news.link}" class="read_more">详情+</a>
+        <a href="{$index.news.link}" class="read_more">详情+</a>
       </div>
       </div>
     </div>
@@ -149,16 +143,16 @@
   <div class="container" id="slide3">
     <div class="slide_inner">
     <div class="inner_wrap">
-      <h2><span>{$global.products.en_name}</span>{$global.products.name}</h2>
+      <h2><span>{$index.products.en_name}</span>{$index.products.name}</h2>
       <ul class="clearfix">
 
           {$limit = 4}
-          {foreach name=product item=product from=$global.products.data}
+          {foreach name=product item=product from=$index.products.data}
           
            <li>
-            <img src="{$product.image}" alt="{$product.title|strip_tags}">
+            <img src="{$product.image}" height="271" width="220" alt="{$product.title|strip_tags}">
             <div class="smak">
-              <h5>{$product.title}</h5>
+              <h5>{$product.title|strip_tags}</h5>
               <p>{$product.description}</p>
               <a href="{$product.link}" class="more">+</a>
             </div>
@@ -168,7 +162,7 @@
           {/foreach}
         
       </ul>
-      <a href="{$global.products.link}" class="read_more">详情+</a>
+      <a href="{$index.products.link}" class="read_more">详情+</a>
     </div>
     </div>
   </div>
@@ -178,17 +172,17 @@
   <div class="container" id="slide4">
     <div class="slide_inner">
     <div class="inner_wrap">
-      <h2><span>{$global.case.en_name}</span>{$global.case.name}</h2>
+      <h2><span>{$index.case.en_name}</span>{$index.case.name}</h2>
       <div class="img_list">
         <ul>
           {$limit = 6}
-          {foreach name=case_list item=case_list from=$global.case.data}
+          {foreach name=case_list item=case_list from=$index.case.data}
           <li>
             <div class="inner mask">
               <img src="{$case_list.image}" alt=""/>
               <div class="mask_content"></div>
               <div class="title">
-                <h5><a href="{$case_list.link}">{$case_list.title}</a></h5>
+                <h5><a href="{$case_list.link}">{$case_list.title|strip_tags}</a></h5>
               </div>                       
             </div>
           </li>
@@ -196,7 +190,7 @@
           {/foreach}
             </ul>
       </div>
-      <a href="{$global.case.link}" class="read_more">详情+</a>
+      <a href="{$index.case.link}" class="read_more">详情+</a>
     </div>
     </div>
   </div>
@@ -206,9 +200,9 @@
   <div class="container" id="slide5">
     <div class="slide_inner">
     <div class="inner_wrap clearfix">
-    <h2><span>{$global.feedback.en_name}</span>{$global.feedback.name}</h2>
+    <h2><span>{$index.feedback.en_name}</span>{$index.feedback.name}</h2>
     <div class="c_l">
-      <form action="" id="f" class="form" onsubmit="return feedback();">
+      <form action="{$index.feedback.posturl}" id="f" class="form" onsubmit="return feedback();">
         <div class="f_item">
           <label for="username">姓名<span>NAME</span></label>
           <input type="text" name="username" id="username" />
@@ -223,12 +217,14 @@
         </div>
 
         <div class="f_submit">
-          <input type="submit" name="submit" id="feedback_smt"  value="提交留言" />
+          <input type="submit" name="submit" id="submit"  value="提交留言" />
         </div>
 
       </form>
     </div>
-    <div class="c_r">{$index.feedback_txt}</div>
+    <div class="c_r">
+      <p>您好 HELLO<br/>感谢您来到厦门易尔通互动，若您有合作意向，请您为我们留言或使用以下方式联系我们，我们将尽快给你回复，并为您提</p>
+    </div>
     </div>
     </div>
   </div>
@@ -239,7 +235,7 @@
     <div class="slide_inner">
     
     <div class="inner_wrap clearfix">
-    <h2><span>{$global.contact_us.en_name}</span>{$global.contact_us.name}</h2>
+    <h2><span>CONTACT US</span>联系方式</h2>
     <div class="c_l">
       <div class="follow_us_w clearfix">
         <img class="follow_us" src="{$index.qrcode.image}" height="164" width="165" alt=""/>
@@ -263,13 +259,10 @@
     </div>
     </div>
   </div>
-
-<script type="text/javascript" src="{$site_url}js/jquery.js"></script>
-<script type="text/javascript" src="{$site_url}js/jarallax-0.2.3b.js"></script>
+  {$footscript}
+  <!-- contactus layer end -->
 <script type="text/javascript" src="{$site_url}js/unslider.min.js"></script>
 <script src="{$site_url}js/demo.js" type="text/javascript"></script>
-{$footscript}
-  <!-- contactus layer end -->
 
 </body>
 </html>
