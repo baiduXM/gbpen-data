@@ -4,7 +4,7 @@
                 <a href="{$page_links.prev_link}">[上一页]</a>
                 {foreach name=nears_link item=near_link key=near_page from=$page_links.nears_link}
                 {if $near_page == $page_links.current_page}
-                    <a>{$near_page}</a>
+                    <a class="cu">{$near_page}</a>
                 {else}
                     <a href="{$near_link}">{$near_page}</a>
                 {/if}

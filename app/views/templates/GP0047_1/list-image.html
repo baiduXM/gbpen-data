@@ -24,6 +24,7 @@
 <script type="text/javascript" src="{$site_url}js/jquery_sz.js"></script>
 <script type="text/javascript" src="{$site_url}js/left_nav.js"></script>
 <title>{$title}</title>
+
 </head>
 <body>
  <!-- 头部开始 -->
@@ -38,39 +39,8 @@
           {include file="./_global.html"}
         </div>
       </div>
-          <div class="about_r">{include file="./_pro_right_nav.html"}
-              <div class="info pro_det">
-              <div class="description">
-        
-         <div class="pimgw p_r">
-         <div  id="slide">
-                   
-                        <div class="bd">
-                          <ul>
-                                  {foreach item=proshowb from=$article.images}
-                                        <li><img src="{$proshowb.image}" alt="{$proshowb.title}"/></li>
-                                      
-                                  {/foreach}               
-                          </ul>
-                        </div>      
-                        <!-- 下面是前/后按钮代码，如果不需要删除即可 -->
-                        <a class="prev" href="javascript:void(0)"></a>
-                        <a class="next" href="javascript:void(0)"></a>                  
-
-                  </div> 
-         </div>
-
-          </div>
-
-         <div class="neir">{$article.content}</div>
-    <div style="height:30px;overflow: hidden; padding-top:7px; color:#000;">
-{shareExt shareText=$article.content|unescape:"html"|strip_tags|truncate:140:"…" sharePic=$article.image}
-                </div>
-            <ul class="inner_pages">
-     <li><a href="{$article.prev.link}">上一篇：{$article.prev.title}</a></li>
-     <li><a href="{$article.next.link}">下一篇：{$article.next.title}</a></li>
-    </ul>
-              </div>
+          <div class="about_r">{include file="./_right_nav.html"}
+              <div class="info"><div class="inner_pro">{include file="./_pro.html"}</div><div class="num">{include file="./_num.html"}</div></div></div>
           </div>
   </div>
  <!-- 头部结束 -->

@@ -39,30 +39,10 @@
         </div>
       </div>
           <div class="about_r">{include file="./_pro_right_nav.html"}
-              <div class="info pro_det">
-              <div class="description">
-        
-         <div class="pimgw p_r">
-         <div  id="slide">
-                   
-                        <div class="bd">
-                          <ul>
-                                  {foreach item=proshowb from=$article.images}
-                                        <li><img src="{$proshowb.image}" alt="{$proshowb.title}"/></li>
-                                      
-                                  {/foreach}               
-                          </ul>
-                        </div>      
-                        <!-- 下面是前/后按钮代码，如果不需要删除即可 -->
-                        <a class="prev" href="javascript:void(0)"></a>
-                        <a class="next" href="javascript:void(0)"></a>                  
-
-                  </div> 
-         </div>
-
-          </div>
-
-         <div class="neir">{$article.content}</div>
+              <div class="info detal_s">
+                <h1 class="module_news_Details">{$article.title} </h1>
+   <h2 class="module_news_Details">发表日期：{$article.pubdate}</h2>
+   <div class="ny_text">{$article.content} </div>
     <div style="height:30px;overflow: hidden; padding-top:7px; color:#000;">
 {shareExt shareText=$article.content|unescape:"html"|strip_tags|truncate:140:"…" sharePic=$article.image}
                 </div>
