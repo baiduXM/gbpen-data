@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compative" content="Edge">
 <script type="text/javascript">
   // 跳转手机页面
   {if $site_another_url}
@@ -209,7 +208,7 @@
     <div class="inner_wrap clearfix">
     <h2><span>{$global.feedback.en_name}</span>{$global.feedback.name}</h2>
     <div class="c_l">
-      <form action="{$index.feedback.posturl}" id="f" class="form" onsubmit="return feedback();">
+      <form action="{$global.feedback.posturl}" id="f" class="form" onsubmit="return false">
         <div class="f_item">
           <label for="username">姓名<span>NAME</span></label>
           <input type="text" name="username" id="username" />
