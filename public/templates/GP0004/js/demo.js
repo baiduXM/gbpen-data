@@ -284,37 +284,32 @@ $(function($) {
 
 	}
 
-	function feedback() {
-		$('#feedback_smt').click(function(event) {
-			$.ajax({
-				url: $('#f').attr("action"),
-				// 跳转到 action    
-				data: {
-					name: $('#username').val(),
-					telephone: $('#phone').val(),
-					content: $('#info').val(),
-					submit: 1
-				},
-				type: 'post',
-				cache: false,
-				dataType: 'json',
-				success: function(data) {
-					if (data.msg == "true") {
-						alert("提交成功！");
-						// window.location.reload();    
-					} else {
-						view(data.msg);
-					}
-				},
-				error: function() {
-					// view("异常！");    
-					alert("提交失败！");
-				}
-			});
+	function feedback() {		
+		var url = $('#f').attr("action");
+		// var name = $('#username').val();
+		// var telephone = $('#phone').val();
+		// var content = $('#info').val();
 
+		//验证	
+		$('#feedback_smt').click(function(event) {			
+			$.getJSON(url,{ 
+				name: $('#username').val(), 
+				telephone: $('#phone').val(),
+				content:$('#info').val(),
+				ajax:"1",
+				callback: "?"
+			},function(data){
+			  if (!data.err) {//提交成功,则重置表单值为空
+			  	$('#username').val("");
+			  	$('#phone').val("");
+			  	$('#info').val("");
+			  }else{//提交失败，则显示错误信息
+			  	$('#errmsg').html(data.msg);			  	
+			  };
+			});
 		});
 		return false;
-	}
+	}	
 
 	init();
 	feedback();
