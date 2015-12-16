@@ -59,7 +59,7 @@ DD_belatedPNG.fix('div,ul,li,a,p,img');
               </div>  
               <div class="aboiut">
             	       <div class="list_title2"><i><a href="{$index.about.link}">更多</a></i>{$index.about.name}</div>
-<div class="border"><img src="{$index.about.image}" height="136" width="165"/>
+<div class="border"><img src="{$index.about.image}"/>
                     	<div class="anputt">
        {$index.about.description}<span><a href="{$index.about.link}">[了解更多]</a></span>
  </div>
@@ -87,7 +87,7 @@ DD_belatedPNG.fix('div,ul,li,a,p,img');
         <!-- 图片列表 begin -->
         {foreach name=products item=product from=$index.products.data}
 		<div class="pic">
-          <a href="{$product.link}" target="_blank" class="choose" ><img src="{$product.image}" height="134" width="179"/><h2 class="xu_word">{$product.title}</h2></a>
+          <a href="{$product.link}" target="_blank" class="choose" ><img src="{$product.image}"/><h2 class="xu_word">{$product.title}</h2></a>
          </div>       
          {/foreach}                                                                                 
         <!-- 图片列表 end -->    

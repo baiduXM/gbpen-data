@@ -13,9 +13,12 @@ input {font:12px;}
 
 body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td{ margin:0px; padding:0px;}
 .wappers{ width:100%; height:auto; overflow:hidden;  font-family:"微软雅黑"; background:url(../images/wappper.jpg) repeat-x; }
-.headerbg{ width:1022px; height:123px; overflow:hidden; margin:0px auto; position:relative;}
-.headerbg .tel{position:absolute; text-indent:50px; font-weight:bold;font-size:24px; background:url(../images/dsfs.jpg) no-repeat left; top:0px;line-height:123px; right:10px; height:123px;}
+.headerbg{ width:1022px; min-height: 123px; overflow:hidden; margin: 0 auto; position:relative;}
+.headerbg .tel{position:absolute; text-indent:50px; font-weight:bold;font-size:24px; background:url(../images/dsfs.jpg) no-repeat left; top:0px;line-height:123px; right:10px; height:123px;bottom: 0;margin: auto 0;}
 .headerbg .tel i{padding-left:10px; line-height:25px; font-style:normal; font-size:24px; color:#333333;}
+h1.logo {
+    padding: 10px 0;
+}
 
 .menu{ width:1022px; text-align:center; background:url(../images/menubg.jpg) no-repeat; height:44px; margin:0px auto 10px;overflow:hidden; }
 .menu ul{ width:1001px; margin:0px auto; height:44px; overflow:hidden; }
@@ -27,16 +30,16 @@ body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, fo
 #menu ul li a{color:#fff;}
 #menu ul li a span.over{color:#fffc01;}
 #menu ul li span.bg{height:44px;background:url(../images/menu_on.jpg) top center no-repeat;}
-.banners{ width:1000px; height:367px; border:2px solid #fff; margin:0px auto 22px; overflow:hidden;}
+.banners{ width:1000px; /* height:367px; */ border:2px solid #fff; margin:0px auto 22px; overflow:hidden;}
 /* 本例子css */
-.slideBox{ width:1000px; height:367px; overflow:hidden; position:relative;  }
+.slideBox{ width:1000px; /* height:367px; */ overflow:hidden; position:relative;  }
 .slideBox .hd{ height:15px; overflow:hidden; position:absolute; right:5px; bottom:5px; z-index:1; }
 .slideBox .hd ul{ overflow:hidden; zoom:1; float:left;  }
 .slideBox .hd ul li{ float:left; margin-right:2px;  width:15px; height:15px; line-height:14px; text-align:center; background:#fff; cursor:pointer; }
 .slideBox .hd ul li.on{ background:#f00; color:#fff; }
-.slideBox .bd{ position:relative; height:100%; z-index:0;   }
+.slideBox .bd{ position:relative; /* height:100%; */ z-index:0;   }
 .slideBox .bd li{ zoom:1; vertical-align:middle; }
-.slideBox .bd img{ width:1000px; height:367px; display:block;  }
+.slideBox .bd img{ width:1000px; /* height:367px; */ display:block;  }
 /* 下面是前/后按钮代码，如果不需要删除即可 */
 .slideBox .prev,
 .slideBox .next{ position:absolute; left:3%; top:50%; margin-top:-25px; display:block; width:32px; height:40px; background:url(../images/slider-arrow.png) -110px 5px no-repeat; filter:alpha(opacity=50);opacity:0.5;   }
@@ -76,7 +79,7 @@ ul.third{padding-left: 10px;display: none;}
 .list_title2 i a:link,.list_title2 i a:visited{ color:#333333;}
 .list_title2 i a:hover{ color:#2d8d2d;}
 .border{  margin-left:0px; width:444px; height:auto; margin:5px auto 0px; }
-.border img{ width:165px; height:136px; float:left;margin-right:10px; display:inline; overflow:hidden; margin-top:5px; 
+.border img{ /* width:165px; */ height:136px; float:left;margin-right:10px; display:inline; overflow:hidden; margin-top:5px; 
 padding:2px; border:1px solid #d2d2d2;}
 .anputt{text-align:Justify;text-justify:inter-ideograph; color:#333;  margin-left:5px; margin-top:0px; line-height:25px;}
 .anputt h1{ color:#333; font-weight:bold;}
@@ -94,20 +97,20 @@ padding:2px; border:1px solid #d2d2d2;}
 .ttal_ta{ width:234px; height:30px; line-height:30px; font-family:"微软雅黑"; font-size:16px; color:#c50000; padding-top:10px; margin:0px auto 5px;}
 .tela{ width:234px; height:auto; overflow:hidden; margin:0px auto; color:#333333;}
 
-.prods{ width:1004px;overflow:hidden; margin:0px auto 25px; background:#fff; height:263px; border-bottom:2px solid #d5d5d5;}
+.prods{ width:1004px;overflow:hidden; margin:0px auto 25px; background:#fff; /* height:263px; */ border-bottom:2px solid #d5d5d5;}
 .proimg{ margin:0px auto 0px; overflow:hidden; width:1004px; margin-top:0px; }
 /* 滚动代码 */
 .rollBox{width:100%;overflow:hidden;margin-top:0px; height:auto; padding-bottom:0px; padding-top:0px;}
 .rollBox .LeftBotton{height:216px;width:42px;background:url(../images/pro_06.jpg) no-repeat left center;overflow:hidden;float:left;display:inline;cursor:pointer; margin-left:0px; }
 .rollBox .RightBotton{height:216px;width:42px;background:url(../images/pro_08.jpg) no-repeat right center;overflow:hidden;float:right;display:inline;cursor:pointer; margin-right:0px;}
-.rollBox .Cont{width:91%; height:190px;overflow:hidden;float:left; display:inline; margin-left:5px;}
+.rollBox .Cont{width:91%; /* height:190px; */overflow:hidden;float:left; display:inline; margin-left:5px;}
 .rollBox .ScrCont{width:10000000px;}
-.rollBox .Cont .pic{width:185px; height:190px;float:left;margin-right:10px; margin-left:11px; display:inline; margin-top:20px;}
-.rollBox .Cont .pic img{ width:179px; height:134px;vertical-align:top; padding:2px; border:1px solid #cccccc; }
+.rollBox .Cont .pic{width:185px; /* height:190px; */float:left;margin-right:10px; margin-left:11px; display:inline; margin-top:20px;}
+.rollBox .Cont .pic img{ width:179px; /* height:134px; */vertical-align:top; padding:2px; border:1px solid #cccccc; }
 .rollBox .Cont .pic h2{height:30px; line-height:30px; text-align:center;}
 .rollBox #List1,.rollBox #List2{float:left;}
 .rollBox .Cont .pic .xu_word {height:35px; line-height:35px; text-align:center;width:100%;}
-.rollBox .Cont .pic a{ width:185px; display:block; height:170px; overflow:hidden;}
+.rollBox .Cont .pic a{ width:185px; display:block; /* height:170px; */ overflow:hidden;}
 .rollBox .Cont .pic a:link,.rollBox .Cont .pic a:visited{ color:#333;}
 .rollBox .Cont .pic a:hover {font-size:12px; color:#38a238;}
 .titlt_i{ height:47px;line-height:37px; color:#fff; font-family:"微软雅黑"; font-size:14px; text-indent:55px; background:url(../images/titlt_i.jpg) no-repeat;} 
@@ -120,9 +123,9 @@ padding:2px; border:1px solid #d2d2d2;}
 .midfha a:link,.midfha a:visited{ color:#fff;}
 .midfha a:hover{ color:#fffc01;}
 
-.right_a{ width:746px; float:right; display:inline; overflow:hidden; height:auto; border-bottom:2px solid #d5d5d5; margin-bottom:25px; }
-.detal_s{  border-bottom:none;  width:733px; height:auto; overflow:hidden;margin-top:0px; width:726px; padding:10px; background:#fff;} 
-.deteo{ padding:0px 0px 0px; height:auto; overflow:hidden; height:auto; width:726px; padding-bottom:15px;min-height:400px; _height:expression(this.scrollHeight < 400? "400px" : "auto") ; }
+.right_a{ width:746px; float:right; display:inline; overflow:hidden; height:auto; border-bottom:2px solid #d5d5d5; margin-bottom:25px;}
+.detal_s{  border-bottom:none;  width:733px; height:auto; overflow:hidden;margin-top:0px; width:726px;   padding: 10px; background:#fff;} 
+.deteo{ padding:0px 0px 0px; height:auto; overflow:hidden; height:auto; width:726px; padding-bottom:15px;min-height:400px; _height:expression(this.scrollHeight < 400? "400px" : "auto") ; position: relative;}
 .about_edit{ color:#333; line-height:24px; margin-top:10px; padding-right:0px; margin-left:5px; margin-right:5px;text-align:Justify;text-justify:inter-ideograph;}
 
 .tn_detal7{width:720px; height:auto; margin-left:3px; overflow:hidden; }
@@ -182,19 +185,19 @@ ul.inner_pages a:hover{color:#309230}
 .nlist_word a{ color:#bb3239;}
 .nlist_word a:hover{ color:#4e3012;}
 
-.nimgb{ width:150px; height:109px; float:left; display:inline;box-shadow: 3px 3px 3px #b1a9a3; padding:1px; margin-right:15px;}
+.nimgb{ width: 179px; /* height:109px; */ float:left; display:inline;box-shadow: 3px 3px 3px #b1a9a3; padding:1px; margin-right:15px;}
+.nimgb a img{width: 179px;}
 
-
-ul.inner_pro2{height:auto; overflow:hidden; padding-bottom:10px; width:820px; padding-top:15px;}
-ul.inner_pro2 li{ float:left; margin:0px 32px 0px 29px;display:inline; }
-ul.inner_pro2 li img{width:179px; height:134px; padding:1px; vertical-align:top; border:1px solid #c7c7c7; }
-ul.inner_pro2 li a{ width:183px; height:178px; display:block; color:#333; overflow:hidden;}
+ul.inner_pro2{height:auto; overflow:hidden; padding-bottom:10px; width: 100%; padding-top:15px;font-size: 0;}
+ul.inner_pro2 li{ /* float:left; */ /* margin:0px 32px 0px 29px; */ display: inline-block; width: 33.3%; font-size: 12px;}
+ul.inner_pro2 li img{width:179px; /* height:134px; */ padding:1px; vertical-align:top; border:1px solid #c7c7c7; }
+ul.inner_pro2 li a{ width:183px; /* height:178px; */ display:block; color:#333; overflow:hidden; margin: 0 auto;}
 ul.inner_pro2 li a:hover{ color:#309230;}
 p.photo_title2{text-align:center; height:40px; line-height:40px;}
 ul.inner_pro2 li a:hover img{ border:1px solid #309230;}
 
 .pro_show{ width:720px; height:auto; overflow:hidden; padding-top:20px;}
-.ping{ width:340px;  height:255px; padding:1px; border:1px solid #ccc; margin:5px auto 0px;}
+.ping{ width:340px;  /* height:255px; */ padding:1px; border:1px solid #ccc; margin:5px auto 0px;}
 .pri_title{ width:720px; text-align:center; margin:0px auto; color:#333; height:45px; line-height:45px; border-bottom:1px solid #dbdbdb;}
 .moule_edot{  color:#333333; padding-top:10px; padding-bottom:10px; margin-left:0px; clear:both;text-align:Justify;
 text-justify:inter-ideograph;}
@@ -205,9 +208,9 @@ ul.inner_pages2 a:hover{color:#309230}
 
 
 .current a{color:#2d8d2d;}
-.widthh{ width:340px; height:255px; overflow:hidden; position:relative;  }
+.widthh{ width:340px; /* height:255px; */ overflow:hidden; position:relative;  }
 
-.widthh .bd img{ width:340px; height:255px; display:block;  }
+.widthh .bd img{ width:340px; /* height:255px; */ display:block;  }
 /* 下面是前/后按钮代码，如果不需要删除即可 */
 
 
