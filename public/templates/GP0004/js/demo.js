@@ -1,9 +1,6 @@
 $(function($) {
 	init = function() {
 		jarallax = new Jarallax(new ControllerScroll(true));
-		// var controllerTime = new ControllerTime(0.01,0.01,0);
-		// controllerTime.activate(jarallax);
-		// console.log(ssss);
 		var currentProgress = 0,
 			progressSteps = 1 / 5,
 			home_h = $('#home').outerHeight(),
@@ -284,29 +281,123 @@ $(function($) {
 
 	}
 
-	function feedback() {		
+	// 电话号码格式校验
+	// 号码格式：11位手机号码,3-4位区号，7-8位直播号码，1－4位分机号
+	// 校验正确返回ture，校验失败返回false
+	function telvalid(val) {
+		var reg = /((\d{11})|^((\d{7,8})|(\d{4}|\d{3})-(\d{7,8})|(\d{4}|\d{3})-(\d{7,8})-(\d{4}|\d{3}|\d{2}|\d{1})|(\d{7,8})-(\d{4}|\d{3}|\d{2}|\d{1}))$)/;
+		
+		if(!reg.test(val)){
+			return false;
+			
+		}else{
+			return true;
+		}
+		
+	}
+
+	// 字符输入校验，至少输入10个字节的字符
+	function words_deal(objval){
+	    var len = objval.replace(/[^\x00-\xff]/g, "**").length;
+	    if(len < 10){
+	        return false;
+	    }else{
+	    	return true;
+	    }
+	}
+
+	function validfun () {			
+		var valid = false;	
+		var telcheck  = false;
+		var wordscheck = false;
+		var telephone = $('#phone');
+		var content = $('#info');
+		telephone.blur(function(event) {
+			telcheck  = telvalid(telephone.val());
+			if(telcheck){
+				$('span.telmsg').html("");
+			}else{
+
+				$('span.telmsg').html("号码格式错误，请输入11位手机号码,3-4位区号，7-8位直播号码，1－4位分机号！")
+			}
+			valid = telcheck && words_deal(content.val());
+		});
+		telephone.keydown(function(e) {
+			var ev = document.all ? window.event : e;
+   			if(ev.keyCode==13) {
+				telcheck  = telvalid(telephone.val());
+				if(telcheck){
+					$('span.telmsg').html("");
+					content.focus();
+				}else{
+					$('span.telmsg').html("号码格式错误，请输入11位手机号码,3-4位区号，7-8位直播号码，1－4位分机号！")
+				}
+				valid = telcheck && words_deal(content.val());
+			}
+		});
+		content.blur(function(event) {
+			wordscheck = words_deal(content.val());
+			if(wordscheck){
+				$('span.infomsg').html("");
+			}else{
+
+				$('span.infomsg').html("至少输入10个字节的字符！")
+			}
+			valid = telvalid(telephone.val()) && wordscheck;
+		});
+		content.keydown(function(e) {			
+			var ev = document.all ? window.event : e;
+	   		if(ev.keyCode==13) {
+
+				wordscheck = words_deal(content.val());
+				if(wordscheck){
+					$('span.infomsg').html("");
+				}else{
+
+					$('span.infomsg').html("至少输入10个字节的字符！")
+				}
+				valid = telvalid(telephone.val()) && wordscheck;
+   			}
+		});
+		return valid;
+	}
+
+	function feedback() {
+		var valid = validfun();	
 		var url = $('#f').attr("action");
-		// var name = $('#username').val();
-		// var telephone = $('#phone').val();
-		// var content = $('#info').val();
+		var username = $('#username');
+		var telephone = $('#phone');
+		var content = $('#info');
+		username.keydown(function(e) {			
+			var ev = document.all ? window.event : e;
+	   		if(ev.keyCode==13) {
+	   			telephone.focus();
+	   		}
+		});
 
 		//验证	
-		$('#feedback_smt').click(function(event) {			
-			$.getJSON(url,{ 
-				name: $('#username').val(), 
-				telephone: $('#phone').val(),
-				content:$('#info').val(),
-				ajax:"1",
-				callback: ""
-			},function(data){
-			  if (!data.err) {//提交成功,则重置表单值为空
-			  	$('#username').val("");
-			  	$('#phone').val("");
-			  	$('#info').val("");
-			  }else{//提交失败，则显示错误信息
-			  	$('#errmsg').html(data.msg);			  	
-			  };
-			});
+		$('#feedback_smt').click(function(event) {
+			valid = telvalid(telephone.val()) && words_deal(content.val());
+			console.log(valid);
+			if(valid){
+				$.getJSON(url,{ 
+					name: username.val(), 
+					telephone: telephone.val(),
+					content:content.val(),
+					ajax:"1",
+					callback: ""
+				},function(data){
+				  if (!data.err) {//提交成功,则重置表单值为空
+				  	$('#username').val("");
+				  	$('#phone').val("");
+				  	$('#info').val("");
+				  	$('#errmsg').html("提交成功！我们会尽快给您回复！");
+				  }else{//提交失败，则显示错误信息
+				  	$('#errmsg').html(data.msg);			  	
+				  };
+				});			
+			}			
+			
 		});
 		return false;
 	}	

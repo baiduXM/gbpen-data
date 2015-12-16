@@ -209,23 +209,25 @@
     <h2><span>{$global.feedback.en_name}</span>{$global.feedback.name}</h2>
     <div class="c_l">
       <form action="{$global.feedback.posturl}" id="f" class="form" onsubmit="return false">
+        <span id="errmsg" class="err"></span>
         <div class="f_item">
           <label for="username">姓名<span>NAME</span></label>
           <input type="text" name="username" id="username"/>
         </div>
         <div class="f_item">
           <label for="phone">电话<span>PHONE</span></label>
+          <span class="telmsg err"></span>
           <input type="text" name="phone" id="phone"/>
         </div>
         <div class="f_item">
           <label for="info">信息<span>Information</span></label>
+          <span class="infomsg err"></span>
           <textarea name="info" id="info" cols="30" rows="13"></textarea>
         </div>
 
         <div class="f_submit">
           <input type="submit" name="submit" id="feedback_smt"  value="提交留言" />
         </div>
-
       </form>
     </div>
     <div class="c_r">{$index.feedback_txt}</div>
