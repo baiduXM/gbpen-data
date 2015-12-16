@@ -297,7 +297,7 @@ $(function($) {
 				telephone: $('#phone').val(),
 				content:$('#info').val(),
 				ajax:"1",
-				callback: "?"
+				callback: ""
 			},function(data){
 			  if (!data.err) {//提交成功,则重置表单值为空
 			  	$('#username').val("");
