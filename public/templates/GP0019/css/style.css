@@ -58,17 +58,17 @@ input {font:12px;}
 .c_title{ height: 30px; font: 12px/30px "微软雅黑"; color: #535353;}
 .c_title b{ font-family: "Arial";}
 .about_art{ padding-top: 15px;}
-.about_art img{ display: block; width: 305px; height: 95px;}
+.about_art img{ display: block; height: 95px;}
 .about_art .article{ color: #353535; line-height: 18px; padding-top: 8px; height: 55px; overflow: hidden;}
 
 .news{ width: 380px;padding:24px;}
 .news_list{padding-top: 15px;}
-.news_list li{padding-bottom: 5px; border-bottom: 1px solid #e5e5e5;}
-.news_list li img{ height: 56px; width:106px; padding:2px; display: block; float: left; margin-right:8px; border-radius: 4px; border:1px solid #dddddd; }
-.li_nr{display: inline-block; height: 60px; overflow: hidden; width:205px;}
+.news_list li{padding-bottom: 10px; border-bottom: 1px solid #e5e5e5;}
+.news_list li img{ height: 56px; /* width:106px; */ padding:2px; display: block; float: left; margin-right:8px; border-radius: 4px; border:1px solid #dddddd; }
+.li_nr{/* display: inline-block; */ height: 60px; overflow: hidden; /* width:205px; */}
 .news_list li:last-child{padding-top: 10px;}
 .li_nr h2{height: 24px; overflow: hidden;}
-.li_nr  a{ color: #2b2b2b; font-weight: bold;}
+.li_nr  a{ color: #2b2b2b; font-weight: bold; line-height: 18px;}
 .li_nr p{ color: #656565;  height: 36px; overflow: hidden; line-height: 18px; display: block;}
 .li_nr  a:hover{color:red;}
 .contact{ width: 260px; padding:24px;}
@@ -89,9 +89,9 @@ input {font:12px;}
 .picMarquee-left{ width:100%; position:relative;padding-top:32px;}
 .picMarquee-left .bd{padding:0px; }
 .picMarquee-left .bd ul{ zoom:1;height: 100% !important; }
-.picMarquee-left .bd ul li{ margin:0 25px; float:left;display:inline; padding: 2px; border:1px solid #e5e5e5;  }
+.picMarquee-left .bd ul li{ margin:0 25px; float:left; padding: 2px; border:1px solid #e5e5e5;  }
 .picMarquee-left .bd ul li a{ text-align:center;  color:#1b1b1b; position: relative; display:block;width:217px;}
-.picMarquee-left .bd ul li img{ width:217px; height: auto; border: 1px solid #e5e5e5; }
+.picMarquee-left .bd ul li img{ width:217px; /* height: auto; */ border: 1px solid #e5e5e5; }
 .picMarquee-left .bd ul li  a:hover .case_title{ display: block; }
 .picMarquee-left .bd ul li .case_title{ width: 218px; position: absolute; bottom: 0; left: 0; height: 27px; background: #7f7f7f; color: #ffffff; display: none;}
 
@@ -135,8 +135,8 @@ ul.listbg  li ul.second li ul.third li a.selected{ color:#970f0f; }
 .ny_news_list{ height:auto; overflow:hidden;}
 .ny_news_list li{  padding:0 0 25px 0; overflow:hidden; height: auto;}
 .ny_news_list .nimgb{display: inline-block; float: left; padding-right: 10px;}
-.ny_news_list .nimgb img{display: inline-block; height:98px;padding:2px; border:1px solid #d1d1d2;  background: #ffffff; }
-.right_news{ display:inline; overflow: hidden; }
+.ny_news_list .nimgb img{ height:98px;padding:2px; border:1px solid #d1d1d2;  background: #ffffff;}
+.right_news{ overflow: hidden; }
 .right_news h3 a{color:#494745; display:block; line-height: 25px; font-weight: bold; }
 .right_news h3 a:hover{color:#3e86ca;}
 .right_news p{height: 72px; overflow: hidden;}
@@ -163,8 +163,8 @@ ul.listbg  li ul.second li ul.third li a.selected{ color:#970f0f; }
 		/*新闻详情 结束*/
 /*产品列表开始*/
 		
-		.pro_list{padding:0 6px;margin:0;height:auto; overflow:hidden; width:825px;}
-		.pro_list li{margin:0 25px 25px 0; float:left;display:inline; width:180px;  overflow:hidden; text-align:center;  }
+		.pro_list{padding:0 6px;margin:0;height:auto; overflow:hidden; width:825px;font-size: 0;}
+		.pro_list li{margin:0 25px 25px 0; display: inline-block; width:180px;  overflow:hidden; text-align:center;  }
 		.pro_list li a{ text-align:center; line-height: 28px;  color:#333333; display:block; overflow:hidden;}
 		.pro_list li img{ width:180px; border: 1px solid #e2e2e2; }
 		.pro_list li img:hover{ opacity: 0.8}

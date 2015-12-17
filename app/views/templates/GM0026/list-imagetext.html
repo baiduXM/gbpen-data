@@ -7,7 +7,7 @@
 		<script type="text/javascript">
 		// 跳转PC页面
 		{if $site_another_url}
-			if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+			if (!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
 				location.href = '{$site_another_url}';
 			}
 		{/if}
@@ -68,7 +68,7 @@
           <div class="boxmain-m">
            		<ul class="newslist1">
 				{foreach name=article item=article from=$list.data}
-                	<li onclick="javascript:window.location.href='{$article.link}'"><img src="{$article.image}" width="88px" height="88px"><dt><span class="date fr">{$article.pubdate}</span>{$article.title}</dt><dd>{$article.description}</dd></li>
+                	<li onClick="javascript:window.location.href='{$article.link}'"><img src="{$article.image}" width="88px" height="88px"><dt><span class="date fr">{$article.pubdate}</span>{$article.title}</dt><dd>{$article.description}</dd></li>
 					{/foreach}
                 </ul> 
                <div class="next1"><a href="{$page_links.first_link}">首页</a><a href="{$page_links.prev_link}">上一页</a>{$page_links.current_page}/{$page_links.page_count}<a href="{$page_links.next_link}">下一页</a><a href="{$page_links.last_link}">尾页</a></div>    	

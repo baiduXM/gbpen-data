@@ -37,14 +37,14 @@
        <li>
           <div class="nimgb"><a href="{$article.link}"><img src="{$article.image}" alt="{$article.title|strip_tags}"/></a></div>
           <div class="right_news"><div class="nlist_a"><a href="{$article.link}">{$article.title}</a></div>
-           <div class="nlist_word"><em>{$article.description}</em><span><a href="{$article.link}">[查看详情]</a></span>
-                                </div>
-                                </div>
-                            </li>     
-        {/foreach}                          
+           <div class="nlist_word"><span>{$article.description}</span><span class="readmore"><a href="{$article.link}">[查看详情]</a></span></div>
+           
+          </div>
+       </li>     
+       {/foreach}                          
  
-                          </ul>
-                           <div class="num">{include file="./_num.html"}</div>
+    </ul>
+    <div class="num">{include file="./_num.html"}</div>
            </div>
          </div>
       </div>

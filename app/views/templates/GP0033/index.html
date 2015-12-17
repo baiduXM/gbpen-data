@@ -108,9 +108,9 @@
                 	<div class="a_title">                    
                     	<div class="mchinera"><strong>{$index.about.name}</strong><b>{$index.about.en_name}</b></div>
                     <span><a href="{$index.about.link}"><img src="{$site_url}images/more.jpg" height="17" width="48" /></a></span></div>
-<div class="border"><div class="aimg"><img src="{$index.about.image}" height="179" width="144"/></div>
+<div class="border"><div class="aimg"><img src="{$index.about.image}"/></div>
                     <div class="anputt">
- {$index.about.description|truncate:110:"…"}<span><a href="{$index.about.link}">[详细]</a></span>
+ {$index.about.description|truncate:110:"…"}<span class="readmore"><a href="{$index.about.link}">[详细]</a></span>
                     </div>                              
                         </div>                    
                 </div>
@@ -123,11 +123,11 @@
    {foreach name=news item=article from=$global.news.data}   
    {if  $article@index == 0}                      
                         <div class="n_tu">
-                         	<div class="n_img"><a href="{$article.link}"><img src="{$article.image}" height="88" width="128"/></a></div>
+                         	<div class="n_img"><a href="{$article.link}"><img src="{$article.image}"/></a></div>
                             <div class="n_word">
                             	<div class="n_title"><a href="{$article.link}">{$article.title}</a></div>
                                 <div class="huiyi_edit">
-                                 {$article.description}<Span><a href="{$article.link}">[详细]</a></Span>
+                                 {$article.description}<Span class="readmore"><a href="{$article.link}">[详细]</a></Span>
                                 </div>                                
                             </div>
                          </div>  
@@ -153,7 +153,7 @@
                      <div class="photos-content {if $index.pro.data|count>4} enable{/if}" >
                         <ul>
                     {section name=key loop=$index.pro.data start=0 step=1}
-                    <li><a href="{$index.pro.data[key].link}" target="_blank"><img alt="" src="{$index.pro.data[key].image}"  width="174" height="131"/></a></li>
+                    <li><a href="{$index.pro.data[key].link}" target="_blank"><img alt="" src="{$index.pro.data[key].image}"/></a></li>
                     {/section}                     
 
                         </ul>

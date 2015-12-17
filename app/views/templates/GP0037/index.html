@@ -57,7 +57,7 @@
                 </div>
 <div class="border">
                     <div class="anputt">
- {$index.about.description|truncate:110:"…"}<span><a href="{$index.about.link}">[详细]</a></span>
+ {$index.about.description|truncate:110:"…"}<span class="readmore"><a href="{$index.about.link}">[详细]</a></span>
                     </div>                              
                         </div>                  
             </div>
@@ -72,7 +72,7 @@
 		<div class="photos-content photo1 {if $index.pro.data|count>2} enable{/if}">
 			<ul>
                     {section name=key loop=$index.pro.data start=0 step=2}
-                   <li><a href="{$index.pro.data[key].link}"><img alt="" src="{$index.pro.data[key].image}"  width="174" height="131"/></a>
+                   <li><a href="{$index.pro.data[key].link}"><img alt="" src="{$index.pro.data[key].image}"/></a>
                     </li>     
                         
                     {/section}   
@@ -82,7 +82,7 @@
 		<div class="photos-content photo2 {if $index.pro.data|count>2} enable{/if}">      
 			<ul>
                     {section name=key loop=$index.pro.data start=1 step=2}
-                   <li><a href="{$index.pro.data[key].link}"><img alt="" src="{$index.pro.data[key].image}"  width="174" height="131"/></a>
+                   <li><a href="{$index.pro.data[key].link}"><img alt="" src="{$index.pro.data[key].image}"/></a>
                     </li>       
 
                     {/section}                    

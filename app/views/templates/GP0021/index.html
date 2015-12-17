@@ -58,7 +58,7 @@
     <div class="photos-content {if $index.prizesa.data|count>4} enable{/if}">
       <ul>
                    {foreach name=prizesa item=article from=$index.prizesa.data}
-                    <li><a href="{$article.link}"><img alt="" src="{$article.image}"  width="174" height="131"/><h2>{$article.title}</h2></a></li>                    
+                    <li><a href="{$article.link}"><img alt="" src="{$article.image}"/><h2>{$article.title}</h2></a></li>                    
                     {/foreach}         
   
         
@@ -75,9 +75,9 @@
             <div class="gywom_ta">
             	<div class="about_ta">
                 	<div class="pro_titles2"><span><a href="{$index.aboutlist.link}">更多>></a></span>{$index.aboutlist.name}  | <b>{$index.aboutlist.en_name}</b></div>
-<div class="border"><img src="{$index.aboutlist.image}" height="177" width="159" />
+<div class="border"><img src="{$index.aboutlist.image}"/>
                       <div class="anputt">
-                        {$index.aboutlist.description}<span><a href="{$index.aboutlist.link}">[了解更多]</a></span>
+                        {$index.aboutlist.description}<span class="readmore"><a href="{$index.aboutlist.link}">[了解更多]</a></span>
                       </div>
                    </div>                   
                 	
@@ -93,11 +93,11 @@
    {foreach name=newslist item=article from=$index.newslist.data}   
    {if  $article@index == 0}                          
                         <div class="n_tu">
-                         	<div class="n_img"><img src="{$article.image}" height="110" width="138"/></div>
+                         	<div class="n_img"><img src="{$article.image}"/></div>
                             <div class="n_word">
                             	<div class="n_title"><a href="{$article.link}">{$article.title}</a></div>
                                 <div class="huiyi_edit">
-                                  {$article.description}<Span><a href="{$article.link}">[详情]</a></Span>
+                                  {$article.description}<Span class="readmore"><a href="{$article.link}">[详情]</a></Span>
                                 </div>   
                                 <div class="data">发表日期：{$article.pubdate}</div>  
                                                             
@@ -123,7 +123,7 @@
     <div class="photos-content {if $index.prizesa.data|count>4} enable{/if}">
       <ul>
                     {section name=key loop=$index.casesa.data start=0 step=1}
-                    <li><a href="{$index.casesa.data[key].link}" target="_blank"><img alt="" src="{$index.casesa.data[key].image}"  width="174" height="131"/><h2>{$index.casesa.data[key].title}</h2></a></li>
+                    <li><a href="{$index.casesa.data[key].link}" target="_blank"><img alt="{$index.casesa.data[key].title|strip_tags}" src="{$index.casesa.data[key].image}"/><h2>{$index.casesa.data[key].title}</h2></a></li>
                     {/section}  
 
       </ul>

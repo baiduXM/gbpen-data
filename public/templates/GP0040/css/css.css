@@ -27,8 +27,8 @@ ol,p,dl,li{list-style:none;}
 /*首页start*/
 /*.indexwrap{width: 1283px;height:879px;overflow: hidden;}*/
 .aside{width: 175px;/*height:825px;*/background: url(../images/asidebg.jpg) left repeat-y;padding: 40px 0 40px 40px;margin-right: 40px;position:fixed;left:0;height:100%;min-height: 800px;}
-.logo{width:158px;height: 80px;margin-bottom:20px; }
-.logo img{height: 80px;max-width: 158px;}
+.logo{width: 100%;margin-bottom:20px; text-align: center;}
+.logo img{max-width: 100%;margin: 0 auto;}
 .menu{width: 158px;}
 .menu .nav{}
 .menu .nav li{width: 175px;height: 63px;margin-bottom: 20px;font-family: Microsoft YaHei;}
@@ -55,22 +55,22 @@ ol,p,dl,li{list-style:none;}
 .slideBox .bd ul{ position:relative; height:100%;  }
 
 .slideBox .bd li{ zoom:1; vertical-align:middle; }
-.slideBox .bd img{height:432px; /*width: 100%;*/}
+.slideBox .bd img{ width: 100%;}
 
 .incontent{margin: 20px 0 40px;overflow: hidden;}
 .pro{/*height: 116px;*/background: #fff;overflow: hidden;padding: 16px;margin-bottom: 20px;overflow: hidden;}
 /*.pro ul li{width: 136px;float: left;margin:0 6px;}*/
 
 
-.photos{position: relative;width:100%;height: 118px;overflow: hidden;}
+.photos{position: relative;width:100%;overflow: hidden;}
 .photos .photos-button {display: none;position: absolute;top: 40px;width: 57px;height: 102px;z-index: 10;}
 .photos .photos-prev {display: none;left: -5px;background: url(images/photos-prev.png) no-repeat;}
 .photos .photos-next {display: none;right: -18px;background: url(images/photos-next.png) no-repeat;}
 
 .photos .photos-content{width: 100%;}
-.photos .photos-content li {float: left;/*width: 14.2%;*/}
-.photos .photos-content li a{display: block;height: 116px;text-align: center;}
-.photos .photos-content li img {/*width: 132px;*/height: 114px;border: 1px solid #e2e2e2;}
+.photos .photos-content li {float: left;overflow: hidden;width: 215.7px;}
+.photos .photos-content li a{display: block;text-align: center;}
+.photos .photos-content li img {width: 200px;border: 1px solid #e2e2e2;}
 .photos .photos-content li a:hover img {border-color: #ff001b;}
 
 
@@ -121,7 +121,11 @@ ul.tab li{width: 80px;height: 30px;line-height: 30px;margin-bottom: 5px;color: #
 /*关于我们*/
 .row .about{/*width: 330px;*/overflow: hidden;/*margin-right: 8px;*/width:32%; }
 .about h1{background: url(../images/aboutico.jpg) left center no-repeat; padding-left: 32px;}
-.about .aboutimg{width: 330px;height: 54px;margin-bottom: 5px;overflow: hidden;}
+.about .aboutimg{width: 330px;height: 54px;margin-bottom: 5px;overflow: hidden;text-align: center;}
+.about .aboutimg img {
+    height: 100%;
+    margin: 0 auto;
+}
 .aboutnr{height: 72px;overflow: hidden;}
 
 /*底部*/
@@ -235,10 +239,10 @@ ul.news-list li a span{position: absolute;right: 0;top:0;}
 .page a:hover{color: #2e4d82;font-weight: bold;}
 .pon{color: #2e4d82 !important;font-weight: bold !important;}
 /*prolist*/
-.pro-list{margin:0 20px;overflow: hidden;padding: 20px 0;}
-.pro-list li{float: left;padding: 0 10px 15px;display: inline-block;}
-.pro-list li a{display: block;position: relative;width: 150px;}
-.pro-list li a img{width: 148px;/*height: 128px;*/border: 1px solid #e2e2e2;}
+.pro-list{margin:0 20px;overflow: hidden;padding: 20px 0;font-size: 0;}
+.pro-list li{padding: 0 10px 15px;display: inline-block;}
+.pro-list li a{}
+.pro-list li a img{width: 148px;border: 1px solid #e2e2e2;}
 .pro-list li a h2{height:40px;line-height: 40px;text-align: center;color: #333;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
 .pro-list li a:hover h2{color: #3f6b9c;}
 
@@ -267,8 +271,8 @@ ul.news-list li a span{position: absolute;right: 0;top:0;}
 .slideBoxb .hd ul li{ float:left; margin-right:2px;  width:15px; height:15px; line-height:14px; text-align:center; background:#fff; display:none; cursor:pointer; }
 .slideBoxb .hd ul li.on{ background:#f00; color:#fff; }
 .slideBoxb .bd{ position:relative; /*height:301px;*/ z-index:0; max-width:414px;text-align:center; margin: 0 auto;}
-.slideBoxb .bd li{ zoom:1; vertical-align:middle; }
-.slideBoxb .bd img{ max-width:414px; height:301px;}
+.slideBoxb .bd li{ zoom:1; vertical-align:middle; text-align: center;}
+.slideBoxb .bd img{ max-width:414px; margin: 0 auto;}
 .slideBoxb .bd h3{  width:404px;padding:0 5px;height:30px;line-height: 30px;color: #333;text-align: center;margin-top: 5px;}
 /* 下面是前/后按钮代码，如果不需要删除即可 */
 .slideBoxb .prev{ position:absolute; left:0; top:50%; margin-top:-31px; display:block; width:47px; height:67px; background:url(../images/prev.png) no-repeat;}
@@ -282,9 +286,9 @@ ul.news-list li a span{position: absolute;right: 0;top:0;}
 /*list*/
 .list{padding: 20px;overflow: hidden;}
 .list div{height: 125px;margin-bottom: 30px;}
-.list div dl{width: 125px;float: left;margin-right: 16px;}
-.list div dl a{display: block;max-width: 125px;}
-.list div dl a img{max-width: 117px;height: 116px;border: 1px solid #cfd0d1;background: #fff;padding: 3px;}
+.list div dl{float: left;margin-right: 15px;}
+.list div dl a{}
+.list div dl a img{height: 116px;border: 1px solid #cfd0d1;background: #fff;padding: 3px;}
 .list div dt{white-space: nowrap;text-overflow:ellipsis;overflow: hidden;}
 .list div dt a{color: #494745;font-weight: bold;}
 .list div dt a:hover{text-decoration: underline;}

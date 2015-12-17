@@ -22,20 +22,44 @@ figure{line-height: 0;}
 /*特性样式*/
 .body{width: 100%;position: relative;overflow: hidden;height: 837px;}
 header{width: 1680px;position: absolute;left:50%;margin-left: -840px;}
-header:before{width: 1680px;height: 837px;overflow: hidden;display: block;content: "";background: url(../images/i_01.png) no-repeat center top;position: absolute;left:50%;margin-left: -840px;z-index: 99}
-.head{width: 1002px;margin: 0 auto;height: auto;}
-.head_outside{position: absolute;z-index: 999;height: 105px;left: 50%;margin-left: -501px;width: 1002px;}
+.head_outside:before{width: 100%;overflow: hidden;display: block;content: "";background: url(../images/slid_top.png) no-repeat center top;position: absolute;left: 0;right: 0;height: 169px;}
+.head{width: 1002px;margin: 0 auto;height: 105px;}
+.head_outside{position: relative;z-index: 999;width: 100%;text-align: center;min-width: 1002px;}
 .header_menu{width: 702px;height: 105px;}
-
+.head .logo{
+  position: relative;
+  width: 279px;
+  height: 105px;
+  overflow: hidden;
+}
+.head .logo img{
+  position: absolute;
+  max-width: 100%;
+  max-height: 100%;
+  top: 0;bottom: 0;
+  margin: auto;
+}
 /*banner*/
-.banners{position: relative;width: 100%;height:787px;overflow: hidden; }
-.slideBox{ width:1680px;height:100%; overflow:hidden; position:absolute;left: 50%;margin-left: -840px;}
+.banners{position: relative;width: 100%;overflow: hidden; }
+.banners:before {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  overflow: hidden;
+  background: url(../images/slid_bottom.png) no-repeat center top;
+  height: 140px;
+  z-index: 1;
+}
+.slideBox{ width: 100%; overflow:hidden; position: relative;}
 .slideBox .hd { width:100%; position: absolute; bottom: 10px; text-align: center; font-size:0; z-index:999; }
 .slideBox .hd li{margin: 0 5px; background: url(../images/yd_10.png) no-repeat center center; height: 13px; overflow: hidden; width: 13px; cursor: pointer;display:inline-block;}
 .slideBox .hd .on{ background: url(../images/ydh_12.png) no-repeat center center;}
-.slideBox .bd{ position:relative; height:100%; z-index:0;   }
+.slideBox .bd{ position:relative; height: auto; z-index:0;   }
 .slideBox .bd li{ zoom:1; vertical-align:middle; }
-.slideBox .bd li img{width: 1680px;height: 787px}
+.slideBox .bd li img{width: 1680px;height: auto;}
 .nav{ width:100%; margin:0px auto; height:73px;position:relative; z-index:1;display:table;  }
 
 .nav .nLi{position:relative; display:inline; height: 100%;display: table-cell;}
@@ -136,13 +160,13 @@ header:before{width: 1680px;height: 837px;overflow: hidden;display: block;conten
 .about h3.tit p{height: 106px;overflow: hidden;}
 .about .about_left{width: 849px;height: 192px;overflow: hidden;}
 .about .about_left .xq{width:100%}
-.about .about_left img{display: inline-block;margin-left:10px;float: right;}
+.about .about_left img{display: inline-block;margin-left: 13px;float: right;height: 138px;}
 .pic_gd{padding: 0 130px}
 .pic.w{width: 1100px;margin-top: 20px;}
 .pic .tit{background: url(../images/t1_14.png) no-repeat center center;width: 210px;height: 103px;margin: 0 auto;text-align: center;font: 16px/103px "微软雅黑";color: #333333;}
 .slide ul li{width: 192px;height: auto;float: left;margin: 0 9px;}
 .slide .tempWrap{width: 840px !important;margin:0 auto;}
-.slide ul li img{border-radius: 5px;padding: 3px}
+.slide ul li img{border-radius: 5px;padding: 3px;width: 192px;height: auto;}
 .slide ul li:hover img{padding: 0;border: 3px solid #ff3d3d}
 .slide  .title{width: 100%;max-height: 72px;overflow: hidden;}
 .slide  .title p{height: 24px;overflow: hidden;font-size: 14px;color: #ff3d3d;text-align: center;}
@@ -166,7 +190,7 @@ header:before{width: 1680px;height: 837px;overflow: hidden;display: block;conten
 .footer{width: 1680px;position: absolute;left:50%;margin-left: -840px;background:url(../images/f_09.jpg) no-repeat center top;min-height: 232px;padding-top: 162px;text-align: center;color: #016a97;height: auto;overflow: hidden;}
 .footer a{color: #016a97;}
 .footer a:hover{color:#3685c1;}
-.nlist_word{height: 100%;overflow: hidden;line-height: 25px;}
+.nlist_word{max-height: 100%;overflow: hidden;line-height: 25px;}
 .contant_about{min-height: 169px;overflow: hidden;height: auto;margin-bottom: 169px;overflow: hidden;}
 .about_l{width: 235px;height: auto;overflow: hidden;}
 .about_l nav h3{ background: url(../images/yl.png) no-repeat; width: 235px;height: 135px;font: 16px/135px "微软雅黑";color: #333333; text-indent: 133px;overflow: hidden;}
@@ -194,16 +218,26 @@ header:before{width: 1680px;height: 837px;overflow: hidden;display: block;conten
 .num a:hover{background:#3685c1;color: #fff;}
 .num a.current,.num span{background:#3685c1;color: #fff;}
 
-.pro li{float: left;width:220px;height:auto;overflow: hidden;margin: 0px 8px 10px;}
-.pro li a.title{height: 30px;width: 100%;text-align: center;display: block;line-height: 30px;}
+.pro ul{font-size:0;}
+.pro li{display: inline-block;width:220px;height:auto;overflow: hidden;margin: 0px 8px 10px;}
+.pro li a.title{height: 30px;width: 100%;text-align: center;display: block;line-height: 30px;font-size: 12px;}
 .pro li:hover .title{color: #3685c1;}
 .pro li a img{padding: 3px;width: 212px;height: auto;overflow: hidden;display: block;}
 .pro li a:hover img{border: 1px solid #006ba9;padding: 2px;}
 
 .new_two li{margin-top: 16px;width: 100%;height: 130px;overflow: hidden;}
-.new_two li .nimgb{width: 180px;height: 130px;overflow: hidden;float: left;}
-.new_two li .nimgb img{width: 180px;height: 130px;display: block;overflow: hidden;}
-.new_two li .right_news{float: right;width: 520px;overflow: hidden;height: 130px;}
+.new_two li .nimgb{width: auto;height: 130px;overflow: hidden;float: left;margin-right: 15px;}
+.new_two li .nimgb img{width: auto;height: 130px;display: block;overflow: hidden;}
+.new_two li .right_news{overflow: hidden;max-height: 130px;position: relative;}
+.right_news span.readmore {
+  position: absolute;
+  bottom: 1px;
+  right: 0;
+  height: 25px;
+  background-color: #f1f1f1;
+  padding-left: 12px;
+  box-shadow: 0 0 20px #f1f1f1;
+}
 .nlist_a a{font-weight: bold;font-size: 14px;color: #333;}
 .new_two li a:hover{color: #3685c1;}
 

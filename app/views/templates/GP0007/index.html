@@ -53,9 +53,9 @@
                            {foreach name=article item=article from=$index.prolist.data}                                                 
                             <li>
                                 <a href="{$article.link}">
-                                    <div class="proslist"><div class="probg"></div>
+                                    <div class="proslist">
                                         <div class="pronum">0{$article@index+1}</div>
-                                        <div class="proimg"><img src="{$article.image}" height="58" width="86" /></div>
+                                        <div class="proimg"><img src="{$article.image}"/></div>
                                     </div>
                                 </a>
                             </li>
@@ -74,7 +74,7 @@
                                 {foreach name=article item=article from=$index.knowleages.data}                
                                 	<li>
                                     	<a href="{$article.link}">
-                                        	<div class="nimg"><img src="{$article.image}" height="86" width="81" /><div class="lborder"></div></div>
+                                        	<div class="nimg"><img src="{$article.image}"/><div class="lborder"></div></div>
                                             <div class="nword">
                                             	<div class="newtitle">{$article.title}</div>
                                                 <div class="huiyi_edit">
@@ -121,11 +121,11 @@
                                <div class="entitle">{$index.aboutedit.en_name}</div>
                             </div>   
                       <div class="aboutbg">
-                      	<div class="about_leftimg"><img src="{$index.aboutedit.image}" height="92" width="63" /></div>
+                      	<div class="about_leftimg"><img src="{$index.aboutedit.image}"/></div>
                         <div class="about_word">
                         	<div class="titlaer">{$contact.company} </div>
                                 <div class="anputt">
-{$index.aboutedit.description}<span><a href="{$index.aboutedit.link}">[查看详情]</a></span>
+<div>{$index.aboutedit.description}</div><span><a href="{$index.aboutedit.link}">[查看详情]</a></span>
                                 </div>                            
                         </div>
                       </div>                 

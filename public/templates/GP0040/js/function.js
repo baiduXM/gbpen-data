@@ -17,13 +17,13 @@ $(document).ready(function() {
 
 		jQuery(".nybanner .slideBox").slide({mainCell:".bd ul",autoPlay:true, effect:"fold", trigger:"click",interTime:4000});
 		jQuery(".slideBox").slide({mainCell:".bd ul",autoPlay:true, effect:"fold", trigger:"click",interTime:4000});
- 		$('.photos .photos-content ul li').width($('.photos').width()/7)
+ 		// $('.photos .photos-content ul li').width($('.photos').width()/7)
 		$('#prizes  .photos-content.enable').jCarouselLite({
 			btnPrev: '#prizes a.photos-prev',
 			btnNext: '#prizes a.photos-next',
 			visible: 7,
 			auto: 3000,
-			speed: 1000
+			speed: 10000000
 		}).css({visibility:"visible"});
         
 

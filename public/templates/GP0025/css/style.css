@@ -52,7 +52,7 @@ i,em{ font-style: normal;}
 .slideBox{ width:1000px; position:relative; z-index: -1 }
 .slideBox .bd{padding: 0; }
 .slideBox .bd li{ zoom:1; vertical-align:middle; }
-.slideBox .bd img{width:1000px; height:323px; display:block;  }
+.slideBox .bd img{width:1000px;  display:block;  }
 
 .containers{background:#ffffff;padding: 15px; width: 970px;margin: 0 auto;}
 .contant_top{width: 420px;}
@@ -61,7 +61,7 @@ i,em{ font-style: normal;}
 .c_title b{ font-size: 12px; color: #B7B7B6; font-weight: normal;}
 .c_title a{display: inline-block; float: right; padding:4px 5px 0 0;}
 .about_art{ padding-top: 15px;}
-.about_art img{ display:inline-block; width: 155px; float: left; padding-right: 15px;max-height: 105px;}
+.about_art img{ float: left; padding-right: 15px; height: 105px;}
 .about_art .article{ color: #565656; height: 100px; overflow: hidden;}
 
 .news{padding:5px; border: 1px solid #dddddd; margin-top: 10px;}
@@ -86,15 +86,15 @@ i,em{ font-style: normal;}
 .foucebox .title em{color: #51593C; font-size: 10px;}
 .foucebox .hd {position:relative; z-index:1; }
 .foucebox .hd ul { position:relative; overflow:hidden;  background: #f3f3f3;  }
-.foucebox .hd li { padding:5px; overflow:hidden;  }
-.foucebox .hd img {width:110px;height:62px; display:block;  }
+.foucebox .hd li { margin: 5px; overflow:hidden;  width: 100%; height: 62px; position: relative;}
+.foucebox .hd img { display:block;  width: 100%; position: absolute; top: 0; bottom: 0; margin: auto;}
 .foucebox .hoverBg { position:absolute; top:0; left:0px; width:110px; height:70px; z-index:100; background:rgba(255,255,255,.6); }
 
-.contact{ height: 90px; overflow: hidden; padding: 15px 0}
+.contact{ overflow: hidden; padding: 15px 0;font-size: 0;}
 .cont{ background: #f4f4f4;}
-.contact li{display: inline; float: left;}
-.contact li a{display: block; width: 320px; height: 88px; border: 1px solid #e0e0e0;}
-.contact li a img{ height: 88px; width: 320px;}
+.contact li{display: inline-block; }
+.contact li a{display: block; width: 320px; /* height: 88px; */ border: 1px solid #e0e0e0;}
+.contact li a img{ width: 320px;}
 .footersbg{ color: #666666; line-height: 28px; clear: both; padding-top: 25px;}
 .footersbg img{ background: url(../images/fdd.jpg) no-repeat right;  display: inline-block; float: left; height: 77px; padding-right: 20px;}
 .footer_li{ text-align: center; display:inline-block; padding-left: 15px;}
@@ -128,7 +128,7 @@ ul.listbg  li ul.second li ul.third li a.selected{ color:#d37f05; }
 .right .list_title{height:42px; overflow: hidden; color:#d37f05; padding-left: 27px; line-height: 42px; background: #ffffff; }
 .right .list_title i,.right .list_title a{color:#d37f05; }
 
-.right .article{color:#333333; padding:20px;min-height: 250px;}
+.right .article{color:#333333; padding: 20px 0;min-height: 250px;margin: 0 20px;}
 
 /*新闻列表开始*/
 .news_ls{ overflow:hidden;height:auto;padding:0 8px;}
@@ -141,7 +141,7 @@ ul.listbg  li ul.second li ul.third li a.selected{ color:#d37f05; }
 .ny_news_list li{  padding:0 0 25px 0; overflow:hidden; height: auto;}
 .ny_news_list .nimgb{display: inline-block; float: left; padding-right: 10px;}
 .ny_news_list .nimgb img{display: inline-block; height:98px;padding:2px; border:1px solid #d1d1d2;  background: #ffffff; }
-.right_news{ display:inline; overflow: hidden; }
+.right_news{ overflow: hidden; }
 .right_news h3 a{color:#494745; display:block; line-height: 25px; font-weight: bold; }
 .right_news h3 a:hover{color:#3e86ca;}
 .right_news p{height: 72px; overflow: hidden;}
@@ -168,10 +168,10 @@ ul.listbg  li ul.second li ul.third li a.selected{ color:#d37f05; }
 		/*新闻详情 结束*/
 /*产品列表开始*/
 		
-		.pro_list{padding:0 6px;margin:0;height:auto; overflow:hidden; width:825px;}
-		.pro_list li{margin:0 25px 25px 0; float:left;display:inline; width:202px;  overflow:hidden; text-align:center;  }
+		.pro_list{padding:0 6px;margin:0;height:auto; overflow:hidden; width: 100%;font-size: 0;position: relative;}
+		.pro_list li{ display: inline-block; width: 33.3%;  overflow:hidden; text-align:center;  }
 		.pro_list li a{ text-align:center; line-height: 28px;  color:#333333; display:block; overflow:hidden;}
-		.pro_list li img{ width:200px; border: 1px solid #E2E2E2; }
+		.pro_list li img{ width:200px; border: 1px solid #E2E2E2; margin: 0 auto;}
 		.pro_list li img:hover{ opacity: 0.8}
 		.pro_list li  a:hover{color:#d37f05;  }
 		.pro_list li .photo_title2{display:block; line-height:30px; height:30px;overflow:hidden;}
