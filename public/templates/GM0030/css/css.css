@@ -128,10 +128,10 @@
 
 ul.news-list1{ margin:0px; padding:0px;  margin-top:20px; margin-bottom:40px; width:98%; margin:auto }
 ul.news-list1 li{ width:49%; float:left}
-ul.news-list1 .news_pic,ul.news-list1 .news_pic1{overflow:hidden;width: 100%;			}
+ul.news-list1 .news_pic,ul.news-list1 .news_pic1{overflow:hidden;width: 100%; height: 85.05px;}
 ul.news-list1 .news_content1{ overflow:hidden;  font-size:12px; line-height:16px; padding-top:5px;  }
 ul.news-list1 .news_content2{ overflow:hidden;  font-size:12px; line-height:16px;  }
-.news_con{ height:32px; overflow:hidden}
+.news_con{ height:50px; overflow:hidden}
 
 ul.news-list1 .news_content1 p,ul.news-list1 .news_content2 p{ font-size:14px; line-height:24px;}
 
@@ -144,7 +144,9 @@ ul.news-list1 .news_content1 p,ul.news-list1 .news_content2 p{ font-size:14px; l
 
 /*news-list3 css*/
 ul.news-list3{ margin:0px; padding:0px; }
+ul.news-list31{ margin:0px; padding:0px; }
 ul.news-list3 li{   margin-bottom:8px; overflow:hidden; padding:8px}
+ul.news-list31 li{   margin-bottom:8px; overflow:hidden; padding:8px}
 ul.news-list3 li .news_img{ float:left; width:25%; border:solid 1px #999; overflow:hidden; margin-top:5px; }
 ul.news-list3 li .news_img img{}
 ul.news-list3 li .news_content{ float:right; width:70%; margin-left:2%; height:95%; overflow:hidden; margin-top:0px;}
