@@ -12,20 +12,20 @@ $(document).ready(function(){
 			});
 	
 		
-$(function(){
-	$('.photos .zolistw').hover(function(){
-		$('.text',this).stop().animate({
-			height:'182px'
-		});
-		$(this).find(".p_title").hide();
-	},function(){
-		$('.text',this).stop().animate({
-			height:'0px'
-		});
-		$(this).find(".p_title").show();
-	})	
+// $(function(){
+// 	$('.photos .zolistw').hover(function(){
+// 		$('.text',this).stop().animate({
+// 			height:'182px'
+// 		});
+// 		$(this).find(".p_title").hide();
+// 	},function(){
+// 		$('.text',this).stop().animate({
+// 			height:'0px'
+// 		});
+// 		$(this).find(".p_title").show();
+// 	})	
 				
-});		
+// });		
       $(".photos  .linell").height($(".photos .pings img").height()-6)
       $(".photos .zolistw ").each(function(){
         $(this).find(".linell").width($(this).find("img").innerWidth()-6)
