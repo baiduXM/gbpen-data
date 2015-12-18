@@ -3,7 +3,7 @@
  <option>友情链接</option>	
 
 	{foreach key=key item=link from=$_links.links}
-	 <option value="{$link.link}">{$link.title}</option>	
+	 <option value="{$link.link}"  target="_blank">{$link.title}</option>	
 	{/foreach}
 
  </select>
