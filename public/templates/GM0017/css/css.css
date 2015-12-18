@@ -125,7 +125,7 @@ text-overflow:ellipsis;}
 .box-img { color:#a6aebf;}
 .boxmain-m .edite{ height:auto; overflow:hidden; color:#a6aebf; padding:0px; padding-bottom:18px; border-bottom:1px solid #0c1421;}
 .inner_pages {color: #eaab4c;margin-bottom:0px;padding-top: 20px; }
-.inner_pages li {    height: 25px;    line-height: 25px;    margin-bottom: 5px;}
+.inner_pages li {    height: 25px;    line-height: 25px;    margin-bottom: 5px; text-overflow: ellipsis;overflow: hidden;white-space: nowrap;}
 .inner_pages a {    color: #a6aebf;
 }
 .d_titles{ text-align:center; margin:0px auto; height:auto; overflow:hidden; margin:10px 10px; padding-bottom:5px;border-bottom:1px solid #0c1421; }

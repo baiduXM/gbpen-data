@@ -20,8 +20,8 @@
 
 ul.newslist{ width:100%; height:auto; overflow:hidden; padding:10px 0px;}
 ul.newslist li{ padding:10px 0px; height:auto; overflow:hidden; background:#fff; border-bottom:1px solid #dddddd}
-ul.newslist li img{ width:88px; height:88px; overflow:hidden; float:left; display:inline; margin-right:10px;}
-ul.newslist li dt{ height:36px; line-height:36px; overflow:hidden; font-size:1.12em; color:#333333;white-space: nowrap;text-overflow: ellipsis;}
+ul.newslist li img{ width:30%; height:auto; overflow:hidden; float:left; display:inline; margin-right:10px;}
+ul.newslist li dt{ height:auto; overflow:hidden; font-size:1.12em; color:#333333;white-space: nowrap;text-overflow: ellipsis;}
 ul.newslist li dt .date{ color:#666666}
 ul.newslist li dd{ height:52px; line-height:26px; overflow:hidden;}
 
