@@ -28,8 +28,9 @@ img{border:none;}
 .head_outside{position: absolute;z-index: 999;width: 100%;height: 73px;}
 .banck{width: 100%;height: 100%;background: #0c0b1a; opacity:0.4 ;filter: alpha(opacity=40);position: absolute;top:0px;left:0px;z-index: 1}
 .head{width:1000px;height: 100%;margin: 0 auto;position: relative;z-index: 999; }
- h2.logo{float: left;width: 377px;height: 100%;overflow: hidden;}
-
+ h2.logo{float: left;width: 377px;height: 100%;overflow: hidden;position: relative;}
+ h2.logo img{position:absolute;top:0;bottom:0;margin:auto 0;max-height:100%;max-width: 100%;}
+ 
  .header_menu{float: left;width:623px;}
 .nav{ width:100%; margin:0px auto; height:73px;position:relative; z-index:1;display:table;  }
 
@@ -66,6 +67,7 @@ h6.tit span{font-size: 16px;color: #333333;}
 .tempWrap{ width:100% !important; }
 .slide ul{ overflow:hidden; zoom:1;height:auto;width:1000px;margin-top: 25px;}
 .slide ul li{width: 323px;height: auto;float: left;position: relative;margin: 0 5px;}
+.slide ul li img{width:100%;height:auto;}
 .slide a.pro{ display:block;width: 100%;height:100%;overflow: hidden;}
 .slide h3.title{position: absolute;width:323px;height: 30px;line-height: 30px;overflow: hidden;text-align: center;bottom: 0;left:0;}
 .title span{font-size: 14px;font-weight: bold;position: relative;z-index: 99999}
@@ -98,7 +100,7 @@ h5.tit span{font-size: 16px;}
 .about_left{color: #ffffff; font-size:12px;width: 663px;height: 100%;float: left;margin-right: 66px;}
 .about_left a{color:#3197cc;}
 .about_left a:hover{color: #ffffff; }
-.about_ms img{float: right;}
+.about_ms img{height: 227px;max-width: 271px;}
 
 .index_news{width: 1000px;margin:46px auto;height: 310px;overflow: hidden; }
 .news_left{width:224px;float: left;height: 100%; }
@@ -110,7 +112,8 @@ h4.tit span{font-size: 16px;color: #333333;}
 
 .news_right{width: 756px;height: 100%;overflow: hidden;float: left;margin-left: 20px;}
 .news_right .top{width: 100%;/* height:218px; */overflow: hidden; }
-.news_right .top li{width:227px;/* height: 218px; */margin: 0 12px;float: left;overflow: hidden;position: relative;}
+.news_right .top li{width:227px;margin: 0 12px;float: left;overflow: hidden;position: relative;}
+.news_right .top li img{width:100%;}
 .photo_title{position: absolute;width: 100%;height: 52px;bottom: 0px;left: 0px;z-index: 99;display: block;}
 .photo_title span{position: relative;z-index: 9999;display: block;height: 100%;color: #d4d4d4;padding: 0 10px;}
 .photo_title span a{color: #ffd43e; position: absolute;bottom:5px;left:158px;}
@@ -154,11 +157,12 @@ strong{display: block;margin: 0 auto;overflow: hidden;text-overflow: ellipsis;wh
 .num a:hover{ text-decoration:none; color:#fff; background:#3197cc}
 
 .inner_pro {height:auto; overflow:hidden; padding-bottom:10px; width:100%;}
-.inner_pro li{ float:left;width:173px; /* height:156px; */overflow: hidden;margin: 10px 6px;}
-.inner_pro li a.img{width:173px; height:126px;display:block; color:#808080; overflow:hidden; }
-.inner_pro li a img{margin:3px;}
-.inner_pro li a img:hover{margin: 0px; border: 3px solid #3297cb}
-.t{height:30px; line-height:30px; text-align:center;width: 100%;display:block;overflow: hidden;}
+.inner_pro ul{font-size:0;}
+.inner_pro li{width:173px; display: inline-block;overflow: hidden;margin: 10px 6px;}
+.inner_pro li a.img{width:173px;color:#808080; overflow:hidden; }
+.inner_pro li a img{border: 3px solid #fff;width:167px}
+.inner_pro li a img:hover{margin: 0px; border: 3px solid #3297cb;}
+.t{height:30px; line-height:30px; text-align:center;width: 100%;display:block;overflow: hidden;font-size: 12px;}
 
 /*pro_det*/
 .detal_s{  width:100%; padding-bottom:5px;height:auto; overflow:hidden;}

@@ -34,7 +34,7 @@
      </div> 
      <div class="index_about"><div class="about_xq"><a href="{$index.list2.link}"><h5 class="tit">{$index.list2.en_name}</br><span>{$index.list2.name}</span></h5></a>
      <div class="about_ms"><div class="about_left">{$index.list2.description} <a href="{$index.list2.link}">【查看详情】</a></div>
-     <img src="{$index.list2.image}"  height="227" width="271" />
+     <img src="{$index.list2.image}"/>
      </div>
      </div></div>
      <div class="index_news">
@@ -49,7 +49,7 @@
        <div class="top">
          <ul>
              {foreach item=article from=$index.list3.data}
-                       <li><a href="{$article.link}"><img src="{$article.image}" width="227" /></a><div class="photo_title"> <div class="banck"></div><span>{$article.title}<a href="{$article.link}">[查看更多]</a></span></div></li>
+                       <li><a href="{$article.link}"><img src="{$article.image}"/></a><div class="photo_title"> <div class="banck"></div><span>{$article.title}<a href="{$article.link}">[查看更多]</a></span></div></li>
                        {if $article@index+1 == 3}{break}{/if}
                 {/foreach}
          </ul>
