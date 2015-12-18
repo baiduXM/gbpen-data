@@ -413,6 +413,15 @@ $(function($) {
 					var xhr = new XMLHttpRequest();
 					xhr.onload = function(){
 					 	console.log(xhr.responseText);
+					 	var data = xhr.responseText.split(',')
+					 	if(!data[err]){//提交成功,则重置表单值为空
+						  	$('#username').val("");
+						  	$('#phone').val("");
+						  	$('#info').val("");
+						  	$('#errmsg').html("提交成功！我们会尽快给您回复！");
+						  }else{//提交失败，则显示错误信息
+						  	$('#errmsg').html(data[msg]);			  	
+						  };
 					};
 					xhr.open('POST', url, true);
 					xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");

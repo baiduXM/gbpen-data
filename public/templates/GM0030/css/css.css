@@ -128,9 +128,10 @@
 
 ul.news-list1{ margin:0px; padding:0px;  margin-top:20px; margin-bottom:40px; width:98%; margin:auto }
 ul.news-list1 li{ width:49%; float:left}
-ul.news-list1 .news_pic,ul.news-list1 .news_pic1{overflow:hidden;width: 100%;}
+ul.news-list1 .news_pic{overflow:hidden;width: 100%; height:160px !important;}
+ul.news-list1 .news_pic1{overflow:hidden;width: 100%;}
 ul.news-list1 .news_content1{ overflow:hidden;  font-size:12px; line-height:16px; padding-top:5px;  }
-ul.news-list1 .news_content2{ overflow:hidden;  font-size:12px; line-height:16px; height:143.5px important;}
+ul.news-list1 .news_content2{ overflow:hidden;  font-size:12px; line-height:16px; height:143.5px !important;}
 .news_con{ height:126px; overflow:hidden}
 
 ul.news-list1 .news_content1 p,ul.news-list1 .news_content2 p{ font-size:14px; line-height:24px;font-weight:bold;}
