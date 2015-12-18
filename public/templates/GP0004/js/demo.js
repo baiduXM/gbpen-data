@@ -374,7 +374,7 @@ $(function($) {
 					}
 					valid = telvalid(telephone.val()) && wordscheck;
 				}else{
-					wordscheck = words_deal(content.val()，1500);
+					wordscheck = words_deal(content.val(),1500);
 					if(wordscheck){
 						$('span.infomsg').html("");
 					}else{
