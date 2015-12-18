@@ -42,7 +42,8 @@
               <div class="edit">
                     <ul class="imglist">
                         {foreach name=article item=article from=$list.data} 
-                          <li><a href="{$article.link}"><img src="{$article.image}" alt=""><h2>{$article.title}</h2></a></li>                        
+                          <li><a href="{$article.link}"><img src="{$article.image}" alt=""><h2>{$article.title}</h2></a></li> 
+                        {if $article@index eq 2} {break}{/if}                      
                         {/foreach}
                         {if  $list.data|count > 3} <div style="height:30px;line-height:30px;position: absolute;top: 50%;left: 30%;color: #f00;background:blue;padding: 0 10px;">分页条数必须设置为3条</div>{/if}
                     </ul>

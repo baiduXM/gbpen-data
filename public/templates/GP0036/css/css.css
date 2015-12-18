@@ -150,7 +150,7 @@ ol,p,dl,li{list-style:none;}
 .location a:hover{text-decoration: underline;}
 .edit{margin: 18px 5px 0;overflow: hidden;/*height: 416px;*/}
 .nyabout-pic{width: 318px;height: 416px;overflow: hidden;}
-.nyabout-pic img{height: 416px;width: 318px;}
+.nyabout-pic img{height: 416px;min-width: 318px;margin-left: 50%;      margin-left: 0\9;      -webkit-transform: translateX(-50%);      -o-transform: translateX(-50%);      -ms-transform: translateX(-50%);      -moz-transform: translateX(-50%);      transform: translateX(-50%);}
 /* scr_con style */
 .nyabout-desc{height: 416px;overflow: hidden;padding-left: 22px;width: 730px;}
 
@@ -170,17 +170,17 @@ ol,p,dl,li{list-style:none;}
 /*list-imgtext*/
 .list-imgtxt{padding-right:18px;height: 381px;overflow: hidden; }
 .list-imgtxt li{border-bottom: 1px solid #e5e5e5;height: 107px;padding-bottom: 10px;margin-bottom: 10px;}
-.list-pic{width: 171px;height: 103px;background: #fff;padding: 1px;border: 1px solid #e8e8e9;overflow: hidden;float: left;margin-right: 12px;}
-.list-pic img{height: 103px;width: 171px;}
+.list-pic{height: 103px;background: #fff;padding: 1px;border: 1px solid #e8e8e9;overflow: hidden;float: left;margin-right: 12px;}
+.list-pic img{height: 103px;}
 .list-desc{height: 107px;overflow: hidden;line-height: 26px;}
 .list-desc h2 a{color: #777;font-size: 14px;font-weight: bold;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}
 .list-desc h2 a:hover{color: #4169bd;}
 .list-desc span{display: block;height: 78px;color: #777;overflow: hidden;}
 
 /*imglist*/
-.imglist{width:1032px;margin: 10px auto 40px;overflow: hidden;height: 342px;}
+.imglist{width:1032px;margin: 10px auto 40px;overflow: hidden;}
 .imglist li{margin:0 12px;float: left;width: 320px;}
-.imglist li img{width: 320px;height: 294px;overflow: hidden;}
+.imglist li img{width: 320px;overflow: hidden;}
 .imglist li h2{margin-top: 3px;height: 38px;line-height: 38px;padding: 5px;background: #476094;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;text-align: center;font-size: 18px;color: #fff;}
 .imglist li a:hover h2{background: #4169bd;}
 
@@ -193,7 +193,7 @@ ol,p,dl,li{list-style:none;}
 .slideBoxb .hd ul li.on{ background:#f00; color:#fff; }
 .slideBoxb .bd{ position:relative; height:100%; z-index:0; width:410px;margin:0px auto; text-align:center;   }
 .slideBoxb .bd li{ zoom:1; vertical-align:middle; }
-.slideBoxb .bd img{ width:410px; height:378px; display:block;}
+.slideBoxb .bd img{ width:410px;margin-top: 50%;margin-top: 0\9;-webkit-transform: translateY(-50%);-o-transform: translateY(-50%);-ms-transform: translateY(-50%);-moz-transform: translateY(-50%);transform: translateY(-50%);}
 
 /* 下面是前/后按钮代码，如果不需要删除即可 */
 .slideBoxb .prev,
@@ -231,5 +231,3 @@ ol,p,dl,li{list-style:none;}
 .searchlist li{line-height:30px;border-bottom: 1px dotted #b9b9b8;background: url(../images/circle.jpg) 5px center no-repeat;padding-left: 20px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}
 .searchlist li a{color: #909090;}
 .searchlist li a:hover{color: #4169bd;}
-
-

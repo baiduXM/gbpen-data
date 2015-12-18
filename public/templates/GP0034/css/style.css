@@ -28,7 +28,7 @@ figure{line-height: 0;}
 .nav .nLi{position:relative; height: 100%;width: 100px;float: left;}
 .nav .nLi h3{ float:left;width: 100%;}
 .nav .nLi h3 a{ overflow: hidden;display:block;color:#333333;width: 100%;height:100px; text-align:center;font:14px/128px "微软雅黑"; }
-.nav .nLi h3 a:hover,.nav .nLi.on h3 a,.nav .nLi.current h3 a{ background:#b91c22;color: #fff;border-radius:10px;}
+.nav .nLi h3 a:hover,.nav .nLi.current h3 a{ background:#b91c22;color: #fff;border-radius:10px;}
 .nav .sub{padding: 20px 0; display:none;left:0; top:101px;  position:absolute; background:#b91c22; line-height:26px;width: 100%;border-radius: 10px; z-index: 9999 }
 .nav .sub li{ zoom:1; }
 .nav .sub a{ display:block;text-align:center;line-height:28px; height:28px; font-size:14px; overflow: hidden;color: #fff;}
