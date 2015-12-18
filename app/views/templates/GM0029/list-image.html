@@ -7,7 +7,7 @@
 		<script type="text/javascript">
 		// 跳转PC页面
 		{if $site_another_url}
-			if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+			if (!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
 				location.href = '{$site_another_url}';
 			}
 		{/if}
@@ -72,7 +72,7 @@
           <div class="boxmain-m">
            	<ul class="prolist">
 				{foreach name=article item=article from=$list.data}
-				<li onclick="javascript:window.location.href='{$article.link}'">
+				<li onClick="javascript:window.location.href='{$article.link}'">
                 	<div class="listleft">
                     <dl class="title">{$article.title}</dl>
                      </div>
