@@ -1,3 +1,17 @@
+window.onload=function(){
+	 $(".yc ul li").each(function(){
+		 var ww=$(this).find("img").width();
+   $(this).find("p").width(ww);
+  });
+	$(".bd li").each(function(){
+	if($(this).find("img").width() > 640){
+        $(this).find("img").width("99%");
+}
+
+		})
+	
+	}
+
 $(document).ready(function() {
 						   jQuery(".slideBoxb").slide({mainCell:".bd ul",autoPlay:false,effect:"leftLoop"});				
 
@@ -10,10 +24,6 @@ $(document).ready(function() {
         $(this).parent().siblings().find(".third").slideUp()
         $(this).siblings(".third").slideToggle()
     }) 
-	if($(".bd img").width()>500)
-	{
-	$(".bd img").width("100%")	
-		}
 	/*导航*/
     jQuery("#nav").slide({
         type: "menu", // 效果类型，针对菜单/导航而引入的参数（默认slide）
