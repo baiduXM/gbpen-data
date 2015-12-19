@@ -7,7 +7,7 @@
 		<script type="text/javascript">
 		// 跳转PC页面
 		{if $site_another_url}
-			if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+			if (!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
 				location.href = '{$site_another_url}';
 			}
 		{/if}

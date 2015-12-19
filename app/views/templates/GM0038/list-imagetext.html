@@ -7,7 +7,7 @@
 		<script type="text/javascript">
 		// 跳转PC页面
 		{if $site_another_url}
-			if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+			if (!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
 				location.href = '{$site_another_url}';
 			}
 		{/if}
@@ -74,7 +74,7 @@
 <div class="news_lista">
                 	<ul>
 						{foreach name=article item=article from=$list.data}
-                    	<li><a onclick="javascript:window.location.href='{$article.link}'">
+                    	<li><a onClick="javascript:window.location.href='{$article.link}'">
                         	<div class="xwzs_show">
                             	<div class="nimg"><img src="{$article.image}" width="90px" height="67px"></div>
                                 <div class="news_wprd">
