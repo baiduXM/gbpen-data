@@ -4,12 +4,33 @@ window.onload=function(){
    $(this).find("p").width(ww);
   });
 
-	
+$("#product ul li").each(function(){
+  var hh=170-$(this).find("img").height();
+
+  	$(this).find("img").css("margin-top",hh*0.5+"px")
+
+})
+
+$("#case ul li").each(function(){
+  var hh1=92-$(this).find("img").height();
+  	$(this).find("img").css("margin-top",hh1*0.5+"px")
+
+})
+
+
+
+		$(".bd li").each(function(){
+	if($(this).find("img").width() > 500){
+        $(this).find("img").width("99%");
+}
+
+		})
+
 	}
 
 $(document).ready(function() {
 /*侧边栏*/
-
+ 
 		$(".listbg li a").click(function () {
         $(this).parent().siblings().find(".second").slideUp()
         $(this).siblings(".second").slideToggle()
@@ -85,7 +106,7 @@ $(document).ready(function() {
  $("#news ul li").hover(
      function(){
 		 $(this).find("h3 a").addClass("hover")
-	     $(this).find(".rightinner .more").stop().animate({marginLeft:"170"}).addClass("hover1")
+	     $(this).find(".rightinner .more").stop().animate({marginLeft:"140"}).addClass("hover1")
 	     $(this).find(".rightinner .text").addClass("hover2")
 	     },
 	 function(){

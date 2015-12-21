@@ -76,7 +76,7 @@
   <div class="container-inner wrapper clearfix">
     <div id="about">
       <h2 class="title">{$index.about.name}</h2>
-      <div class="inner"><img src="{$index.about.image}" class="pngFix"  width="310" height="81"/> <b>{$contact.company}</b>{$index.about.description}</div>
+      <div class="inner"><img src="{$index.about.image}" class="pngFix" style="width:100%"/> <b>{$index.about.description}</b></div>
       <a href="{$index.about.link}">查看更多>></a>
     </div>
     <div id="case">
@@ -97,7 +97,7 @@
         <ul>   
         {foreach name=news item=article from=$index.news.data}   
        <li class="clearfix">
-            <div class="img"><img src="{$article.image}"  /></div>
+            <div class="img"><img src="{$article.image}" /></div>
             <div class="rightinner">
               <h3><a href="{$article.link}">{$article.title}</a></h3>
               <div class="text">{$article.description}</div>
