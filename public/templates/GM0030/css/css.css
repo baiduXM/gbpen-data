@@ -128,12 +128,13 @@
 
 ul.news-list1{ margin:0px; padding:0px;  margin-top:20px; margin-bottom:40px; width:98%; margin:auto }
 ul.news-list1 li{ width:49%; float:left}
-ul.news-list1 .news_pic,ul.news-list1 .news_pic1{overflow:hidden;width: 100%;			}
+ul.news-list1 .news_pic{overflow:hidden;width: 100%;}
+ul.news-list1 .news_pic1{overflow:hidden;width: 100%; height:88px;}
 ul.news-list1 .news_content1{ overflow:hidden;  font-size:12px; line-height:16px; padding-top:5px;  }
-ul.news-list1 .news_content2{ overflow:hidden;  font-size:12px; line-height:16px;  }
-.news_con{ height:32px; overflow:hidden}
+ul.news-list1 .news_content2{ overflow:hidden;  font-size:12px; line-height:16px;}
+.news_con{ max-height:50px; overflow:hidden}
 
-ul.news-list1 .news_content1 p,ul.news-list1 .news_content2 p{ font-size:14px; line-height:24px;}
+ul.news-list1 .news_content1 p,ul.news-list1 .news_content2 p{ font-size:14px; line-height:24px;font-weight:bold;}
 
 
 @media screen and (min-width: 320px) and (max-width: 480px){
@@ -144,22 +145,26 @@ ul.news-list1 .news_content1 p,ul.news-list1 .news_content2 p{ font-size:14px; l
 
 /*news-list3 css*/
 ul.news-list3{ margin:0px; padding:0px; }
+ul.news-list31{ margin:0px; padding:0px; }
 ul.news-list3 li{   margin-bottom:8px; overflow:hidden; padding:8px}
+ul.news-list31 li{   margin-bottom:8px; overflow:hidden; padding:8px}
 ul.news-list3 li .news_img{ float:left; width:25%; border:solid 1px #999; overflow:hidden; margin-top:5px; }
 ul.news-list3 li .news_img img{}
 ul.news-list3 li .news_content{ float:right; width:70%; margin-left:2%; height:95%; overflow:hidden; margin-top:0px;}
+ul.news-list31 li .news_content{ float:left; margin-left:2%; height:95%; overflow:hidden; margin-top:0px;}
 ul.news-list3 li .news_title{  padding-bottom:3px; margin-bottom:3px;white-space:nowrap; text-overflow:ellipsis; overflow:hidden; text-decoration:underline}
-
+ul.news-list31 li .news_title{  padding-bottom:3px; margin-bottom:3px;white-space:nowrap; text-overflow:ellipsis; overflow:hidden; text-decoration:underline}
 .news_bg{background:rgba(255,255,255,0.5)}
 
 .li_bg{ background:rgba(0,0,0,0.1)}
 
 @media screen and (min-width: 320px) and (max-width: 480px){
 ul.news-list3 li .news_content{ height:44px; line-height:22px;}
+ul.news-list31 li .news_content{ height:44px; line-height:22px;}
 }
 @media screen and (min-width: 480px)  {
 ul.news-list3 li .news_content{ height:66px; line-height:22px;}
-
+ul.news-list31 li .news_content{ height:66px; line-height:22px;}
 }
 
 
