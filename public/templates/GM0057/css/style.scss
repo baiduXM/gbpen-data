@@ -196,8 +196,10 @@ a.more{
 .img_border{
 	position: relative;
 	height: 10.8rem;
+	max-width: 40%;
 	margin: 0 25px 0 50px;
 	float: left;
+	overflow: hidden;
 	&:before{
 		position: absolute;
 		content: "";
@@ -209,6 +211,9 @@ a.more{
 		border: 1px solid $gray;
 		z-index: -1;
 		@include box-shadow(rgba($gray, .6) 0 0 1px);
+	}
+	img{
+		height: 100%;
 	}
 }
 

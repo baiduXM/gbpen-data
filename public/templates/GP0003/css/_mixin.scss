@@ -65,6 +65,13 @@
 	-webkit-transform: translateY($transform);
 	-o-transform: translateY($transform);
 }
+@mixin transform_translateX($transform){
+	transform: translateX($transform);
+	-ms-transform: translateX($transform);
+	-moz-transform: translateX($transform);
+	-webkit-transform: translateX($transform);
+	-o-transform: translateX($transform);
+}
 @mixin filter_blur($filter_blur){
 	-webkit-filter: blur($filter_blur); /* Chrome, Opera */
        -moz-filter: blur($filter_blur);

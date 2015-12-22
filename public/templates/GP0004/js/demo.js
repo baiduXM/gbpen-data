@@ -326,7 +326,12 @@ $(function($) {
 
 				$('span.telmsg').html("号码格式错误，请输入11位手机号码,3-4位区号，7-8位直播号码，1－4位分机号！")
 			}
-			valid = telcheck && words_deal(content.val());
+			if(typeof XMLHttpRequest === "function"){
+				valid = telcheck && words_deal(content.val());
+			}else{
+				valid = telcheck && words_deal(content.val(),1500);
+			}
+			
 		});
 		telephone.keydown(function(e) {
 			var ev = document.all ? window.event : e;
@@ -338,7 +343,11 @@ $(function($) {
 				}else{
 					$('span.telmsg').html("号码格式错误，请输入11位手机号码,3-4位区号，7-8位直播号码，1－4位分机号！")
 				}
-				valid = telcheck && words_deal(content.val());
+				if(typeof XMLHttpRequest === "function"){
+					valid = telcheck && words_deal(content.val());
+				}else{
+					valid = telcheck && words_deal(content.val(),1500);
+				}
 			}
 		});
 		content.blur(function(event) {
@@ -404,50 +413,70 @@ $(function($) {
 
 		$('#feedback_smt').click(function(event) {
 			$('#errmsg').html("");
-			
-			if(typeof XMLHttpRequest === "function"){
-				valid = telvalid(telephone.val()) && words_deal(content.val());
-				if(valid){
-					var xhrdata = 'name=' + username.val() +'&telephone=' + telephone.val()
-								+ '&content=' + content.val() + '&ajax=1';
-					var xhr = new XMLHttpRequest();
-					xhr.onload = function(){
-					 	console.log(xhr.responseText);
-					 	var data = xhr.responseText.split(',')
-					 	if(!data[err]){//提交成功,则重置表单值为空
-						  	$('#username').val("");
-						  	$('#phone').val("");
-						  	$('#info').val("");
-						  	$('#errmsg').html("提交成功！我们会尽快给您回复！");
-						  }else{//提交失败，则显示错误信息
-						  	$('#errmsg').html(data[msg]);			  	
-						  };
-					};
-					xhr.open('POST', url, true);
-					xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-					xhr.send(xhrdata);	
-				}
-			}else{
-				valid = telvalid(telephone.val()) && words_deal(content.val(),1500);
-				if(valid){
-					$.getJSON(url,{ 
-						name: username.val(), 
-						telephone: telephone.val(),
-						content:content.val(),
-						ajax:"1",
-						callback: ""
-					},function(data){
-					  if (!data.err) {//提交成功,则重置表单值为空
-					  	$('#username').val("");
-					  	$('#phone').val("");
-					  	$('#info').val("");
-					  	$('#errmsg').html("提交成功！我们会尽快给您回复！");
-					  }else{//提交失败，则显示错误信息
-					  	$('#errmsg').html(data.msg);			  	
-					  };
-					});	
-				}						
-			}					
+			// var xhr = new XMLHttpRequest();
+			// if("withCredentials" in xhr){
+			// 	valid = telvalid(telephone.val()) && words_deal(content.val());
+			// 	if(valid){
+			// 		var xhrdata = 'name=' + username.val() +'&telephone=' + telephone.val()
+			// 					+ '&content=' + content.val() + '&ajax=1';
+					
+			// 		xhr.onload = function(){
+			// 			var data = $.parseJSON(xhr.responseText);
+			// 		 	if(!data['err']){//提交成功,则重置表单值为空
+			// 			  	$('#username').val("");
+			// 			  	$('#phone').val("");
+			// 			  	$('#info').val("");
+			// 			  	$('#errmsg').html("提交成功！我们会尽快给您回复！");
+			// 			  }else{//提交失败，则显示错误信息
+			// 			  	$('#errmsg').html(data[msg]);			  	
+			// 			  };
+			// 		};
+			// 		xhr.open('POST', url, true);
+			// 		xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+			// 		xhr.send(xhrdata);	
+			// 	}
+			// }else{
+			// 	valid = telvalid(telephone.val()) && words_deal(content.val(),1500);
+			// 	if(valid){
+			// 		$.getJSON(url,{ 
+			// 			name: username.val(), 
+			// 			telephone: telephone.val(),
+			// 			content:content.val(),
+			// 			ajax:"1",
+			// 			callback: ""
+			// 		},function(data){
+			// 			console.log(data);
+			// 		  if (!data.err) {//提交成功,则重置表单值为空
+			// 		  	$('#username').val("");
+			// 		  	$('#phone').val("");
+			// 		  	$('#info').val("");
+			// 		  	$('#errmsg').html("提交成功！我们会尽快给您回复！");
+			// 		  }else{//提交失败，则显示错误信息
+			// 		  	$('#errmsg').html(data.msg);			  	
+			// 		  };
+			// 		});	
+			// 	}						
+			// }
+			valid = telvalid(telephone.val()) && words_deal(content.val(),1500);
+			if(valid){
+				$.getJSON(url,{ 
+					name: username.val(), 
+					telephone: telephone.val(),
+					content:content.val(),
+					ajax:"1",
+					callback: ""
+				},function(data){
+					console.log(data);
+				  if (!data.err) {//提交成功,则重置表单值为空
+				  	$('#username').val("");
+				  	$('#phone').val("");
+				  	$('#info').val("");
+				  	$('#errmsg').html("提交成功！我们会尽快给您回复！");
+				  }else{//提交失败，则显示错误信息
+				  	$('#errmsg').html(data.msg);			  	
+				  };
+				});	
+			}						
 			
 		});
 		return false;
