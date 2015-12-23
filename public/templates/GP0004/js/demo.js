@@ -413,69 +413,56 @@ $(function($) {
 
 		$('#feedback_smt').click(function(event) {
 			$('#errmsg').html("");
-			// var xhr = new XMLHttpRequest();
-			// if("withCredentials" in xhr){
-			// 	valid = telvalid(telephone.val()) && words_deal(content.val());
-			// 	if(valid){
-			// 		var xhrdata = 'name=' + username.val() +'&telephone=' + telephone.val()
-			// 					+ '&content=' + content.val() + '&ajax=1';
+			var xhr = new XMLHttpRequest();
+			if("withCredentials" in xhr){
+				valid = telvalid(telephone.val()) && words_deal(content.val());
+				if(valid){
+					var xhrdata = 'name=' + username.val() +'&telephone=' + telephone.val()
+								+ '&content=' + content.val() + '&ajax=1';
 					
-			// 		xhr.onload = function(){
-			// 			var data = $.parseJSON(xhr.responseText);
-			// 		 	if(!data['err']){//提交成功,则重置表单值为空
-			// 			  	$('#username').val("");
-			// 			  	$('#phone').val("");
-			// 			  	$('#info').val("");
-			// 			  	$('#errmsg').html("提交成功！我们会尽快给您回复！");
-			// 			  }else{//提交失败，则显示错误信息
-			// 			  	$('#errmsg').html(data[msg]);			  	
-			// 			  };
-			// 		};
-			// 		xhr.open('POST', url, true);
-			// 		xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-			// 		xhr.send(xhrdata);	
-			// 	}
-			// }else{
-			// 	valid = telvalid(telephone.val()) && words_deal(content.val(),1500);
-			// 	if(valid){
-			// 		$.getJSON(url,{ 
-			// 			name: username.val(), 
-			// 			telephone: telephone.val(),
-			// 			content:content.val(),
-			// 			ajax:"1",
-			// 			callback: ""
-			// 		},function(data){
-			// 			console.log(data);
-			// 		  if (!data.err) {//提交成功,则重置表单值为空
-			// 		  	$('#username').val("");
-			// 		  	$('#phone').val("");
-			// 		  	$('#info').val("");
-			// 		  	$('#errmsg').html("提交成功！我们会尽快给您回复！");
-			// 		  }else{//提交失败，则显示错误信息
-			// 		  	$('#errmsg').html(data.msg);			  	
-			// 		  };
-			// 		});	
-			// 	}						
-			// }
-			valid = telvalid(telephone.val()) && words_deal(content.val(),1500);
-			if(valid){
-				$.getJSON(url,{ 
-					name: username.val(), 
-					telephone: telephone.val(),
-					content:content.val(),
-					ajax:"1",
-					callback: ""
-				},function(data){
-					console.log(data);
-				  if (!data.err) {//提交成功,则重置表单值为空
-				  	$('#username').val("");
-				  	$('#phone').val("");
-				  	$('#info').val("");
-				  	$('#errmsg').html("提交成功！我们会尽快给您回复！");
-				  }else{//提交失败，则显示错误信息
-				  	$('#errmsg').html(data.msg);			  	
-				  };
-				});	
+					xhr.onload = function(){
+						var data = $.parseJSON(xhr.responseText);
+					 	if(!data['err']){//提交成功,则重置表单值为空
+						  	$('#username').val("");
+						  	$('#phone').val("");
+						  	$('#info').val("");
+						  	$('#errmsg').html("提交成功！我们会尽快给您回复！");
+						  }else{//提交失败，则显示错误信息
+						  	$('#errmsg').html(data[msg]);			  	
+						  };
+					};
+					xhr.timeout = 30000;//设置超时时间为30秒
+					xhr.ontimeout = function () {
+						alert("请求超时...");
+					}
+					xhr.onerror = function () {
+						alert("发生错误...");
+					}
+					xhr.open('POST', url, true);
+					xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+					xhr.send(xhrdata);	
+				}
+			}else{
+				valid = telvalid(telephone.val()) && words_deal(content.val(),1500);
+
+				if(valid){
+					$.getJSON(url+'?callback=?',{ 
+						name: username.val(), 
+						telephone: telephone.val(),
+						content:content.val(),
+						ajax:"1"
+					},function(data){
+						console.log(data);
+					  if (!data.err) {//提交成功,则重置表单值为空
+					  	$('#username').val("");
+					  	$('#phone').val("");
+					  	$('#info').val("");
+					  	$('#errmsg').html("提交成功！我们会尽快给您回复！");
+					  }else{//提交失败，则显示错误信息
+					  	$('#errmsg').html(data.msg);			  	
+					  };
+					});	
+				}						
 			}						
 			
 		});
