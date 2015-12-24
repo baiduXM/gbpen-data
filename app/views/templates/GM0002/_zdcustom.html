@@ -7,7 +7,7 @@
          {foreach item=bottomnav from=$global.bottom_navs}
         <div class="PathItem">
           <span class="item">
-          <div class="icon">{if $bottomnav.icon}<li class="iconfont">{$bottomnav.icon}</li>{else}<img src="{$bottomnav.image}" width="30">{/if}</div>
+          <div class="icon">{if $bottomnav.icon}<li class="iconfont">{$bottomnav.icon}</li>{else}<img src="{$bottomnav.link}" width="30">{/if}</div>
             <dt class="title">{$bottomnav.name}</dt>
           </span>
         </div>
