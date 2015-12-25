@@ -65,9 +65,9 @@
               </div>
 	<div class="bd">
 		<ul>
-  {foreach name=image item=image from=$article.images}
-                    <li><a class="pic" href="{$image.link}"><img src="{$image.image}" alt="{$image.title}" /></a></li>
-                {/foreach}
+               {foreach name=imagea item=imagea from=$article.images}
+                    <li><a class="pic" href="#"><img src="{$imagea.image}" alt="{$imagea.title}" /></a></li>
+                {/foreach}           
 		</ul>
 	</div>
     </div>
@@ -86,8 +86,8 @@
             </div>
         </div>
 <div class="foot">
- <div class="top">∧</div>{$footprint} 
-</div>         
+ <div class="top"><a href="#" class="back-top">∧</a></div>{$footprint} 
+</div>       
    </div>
    {$footprint}  
 {$footscript}  
