@@ -61,7 +61,7 @@
       {foreach name=mIndexCats item=mIndexCat from=$mIndexCats}
       {if $mIndexCat.type eq 4}
       <div id="in_page" class="wrapper">
-      <div class="in_h2"><div class="line"></div><div class="local public_bg1"><div class="in_zh">{$mIndexCat.name}</div><div class="in_en">{$mIndexCat.en_name}</div><div class="in_title1">{$mIndexCat.description}</div></div></div>
+      <div class="in_h2"><a href="{$mIndexCat.link}"><div class="line"></div><div class="local public_bg1"><div class="in_zh">{$mIndexCat.name}</div><div class="in_en">{$mIndexCat.en_name}</div></div></a></div>
         <div class="inner clearfix">
             <div class="page_img"><img src="{$mIndexCat.image}"></div>
           <p>{$mIndexCat.description}</p>
@@ -69,7 +69,7 @@
         </div>
       {elseif $mIndexCat.type eq 1} 
         <div id="in_text" class="wrapper clearfix">
-            <div class="in_h2"><div class="line"></div><div class="local public_bg1"><div class="in_zh">{$mIndexCat.name}</div><div class="in_en">{$mIndexCat.en_name}</div><div class="in_title1">{$mIndexCat.description}</div></div></div>
+            <div class="in_h2"><a href="{$mIndexCat.link}"><div class="line"></div><div class="local public_bg1"><div class="in_zh">{$mIndexCat.name}</div><div class="in_en">{$mIndexCat.en_name}</div><div class="in_title1">{$mIndexCat.description}</div></div></a></div>
         <div class="inner">
          <div class="line"><div class="circle bg"></div><div class="circle bg two"></div><div class="circle bg three"></div><div class="circle bg four"></div></div>
             <ul>
@@ -88,7 +88,7 @@
         
         {elseif $mIndexCat.type eq 2} 
         <div id="in_image" class="wrapper">
-           <div class="in_h2"><div class="line"></div><div class="local public_bg1"><div class="in_zh">{$mIndexCat.name}</div><div class="in_en">{$mIndexCat.en_name}</div><div class="in_title1">{$mIndexCat.description}</div></div></div>
+           <div class="in_h2"><a href="{$mIndexCat.link}"><div class="line"></div><div class="local public_bg1"><div class="in_zh">{$mIndexCat.name}</div><div class="in_en">{$mIndexCat.en_name}</div><div class="in_title1">{$mIndexCat.description}</div></div></a></div>
          <div class="inner yc">
             <ul class="clearfix">
             {foreach item=article from=$mIndexCat.data}

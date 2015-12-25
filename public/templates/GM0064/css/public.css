@@ -198,11 +198,11 @@ a{ color:#333}
 .list_imagetext ul li .img_box img,.insub_imagetext ul li .in_imgbox img{ }
 .list_imagetext ul li .text_box,.insub_imagetext ul li .in_textbox{ float:right; width:70%;}
 .list_imagetext ul li .text_box .text_title,.insub_imagetext ul li .in_title{ font-size:1.2em;  line-height:26px; margin-top:5px;width:100%; display:block; white-space:nowrap; text-overflow:ellipsis; overflow:hidden;  height:26px;}
-.list_imagetext ul li .text_box .text_data,.insub_imagetext ul li .in_data{ font-size:12px; line-height:20px; color:#000;opacity:0.3;filter:Alpha(opacity=30);}
+.list_imagetext ul li .text_box .text_data,.insub_imagetext ul li .in_data{ font-size:12px; line-height:20px; color:#fff;opacity:0.6;filter:Alpha(opacity=60);}
 .list_imagetext ul li .text_box .text_des,.insub_imagetext ul li .in_des{ padding-top:7px; line-height:20px; height:40px; overflow:hidden;opacity:0.5;filter:Alpha(opacity=50);}
 @media screen and (min-width: 320px) and (max-width: 480px){
 .list_imagetext ul li .text_box .text_title,.insub_imagetext ul li .in_title{ font-size:14px;  } 
-.list_imagetext ul li .text_box .text_des,.insub_imagetext ul li .in_des{ display:none}
+
 }
 /*list_imagetext*/
 

@@ -27,6 +27,7 @@ a{ color:#333}
 
 
 /*banner开始*/
+#baner{ width:96%; margin:auto}
 .baner{ height:auto; overflow:hidden;z-index:1;   z-index:2; position:relative; width:100%;}
 .slideBox{ position:relative; z-index:1; overflow:hidden;/* 设置焦点图最大宽度 */ }
 .slideBox .hd{ width:100%; height:11px;  position:absolute; z-index:1; bottom:10px; text-align:center;}

@@ -34,8 +34,8 @@
 #in_page .inner{ }
 #in_page .inner p{ float:left; width:72%; line-height:24px; height:72px; overflow:hidden;}
 @media screen and (min-width: 320px) and (max-width: 480px){
-#in_page .inner p{ line-height:20px; height:40px; overflow:hidden; font-size:12px; width:100%}
-#in_page .inner .page_img{ display:none}
+#in_page .inner p{ line-height:20px; height:40px; overflow:hidden; font-size:12px;}
+#in_page .inner .page_img{ }
 }
 @media screen and (min-width: 480px) {
 #in_page .inner p{ line-height:20px; height:60px; overflow:hidden; background-attachment:fixed}

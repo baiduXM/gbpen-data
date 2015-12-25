@@ -13,13 +13,13 @@ $(document).ready(function(){
 $(window).load(function(){
 /*美工专属区域*/
 var w=$(".menulist .swiper-nav span").width()
-var w1=$(".menulist .swiper-nav span img").height()
+var w1=$(".menulist .swiper-nav span i").height()
 $(".swiper-wrapper,.swiper-slide ").height(w+30)
-  $(".menulist .swiper-nav span").height(w)
-    $(".menulist .swiper-nav span b").height( $(".menulist .swiper-nav span b").width()).css("margin-top",(w- $(".menulist .swiper-nav span b").width())*0.5+"px")
-
-  $(".menulist .swiper-nav span img").css("margin-top",($(".menulist .swiper-nav span b").width()-w1)*0.5+"px")
-    $(".menulist .swiper-nav span i").css("margin-top",($(".menulist .swiper-nav span b").width()-w1)*0.5+"px")
+$(".menulist .swiper-nav span").height(w)
+$(".menulist .swiper-nav span b").height($(".menulist .swiper-nav span b").width()).css("margin-top",(w- $(".menulist .swiper-nav span b").width())*0.5+"px")
+var n=$(".menulist .swiper-nav span b").height()+"px"
+$(".menulist .swiper-nav span b").css({"line-height":n})
+$(".menulist .swiper-nav span b .iconfont").css({"font-size":25})
 
   $(".menulist .arrow-left,.menulist .arrow-right").css("line-height",w+30+"px")
   $(".in_page,.in_pagebg2").height($(".in_pagebg").height())

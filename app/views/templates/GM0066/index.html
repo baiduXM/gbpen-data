@@ -61,7 +61,7 @@
       {foreach name=mIndexCats item=mIndexCat from=$mIndexCats}
       {if $mIndexCat.type eq 4}
       <div id="in_page" class="wrapper">
-          <h2 class="in_h1 clearfix"><div class="in_zh">{$mIndexCat.name}</div><div class="in_en">/ {$mIndexCat.en_name}</div></h2>
+          <h2 class="in_h1 clearfix"><a href="{$mIndexCat.link}"><div class="in_zh">{$mIndexCat.name}</div><div class="in_en">/ {$mIndexCat.en_name}</div></a></h2>
         <div class="inner clearfix">
            <div class="pic"><img src="{$mIndexCat.image}"></div>
           <div class="txt"><p class="public_color">{$mIndexCat.description}</p></div>
@@ -69,22 +69,23 @@
         </div>
       {elseif $mIndexCat.type eq 1} 
         <div id="in_text" class="wrapper clearfix">
-            <h2 class="in_h1 clearfix"><div class="in_zh">{$mIndexCat.name}</div><div class="in_en">{$mIndexCat.en_name}</div></h2>
+            <h2 class="in_h1 clearfix"><a href="{$mIndexCat.link}"><div class="in_zh">{$mIndexCat.name}</div><div class="in_en">{$mIndexCat.en_name}</div></a></h2>
         <div class="inner">
             <ul>
-              <li class="bg">
-              <div class="in_data"><a href="#" class="public_color2" >2015-9-29</a></div> 
-              <div class="in_title"><a href="#" class="public_color2" >新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新题新闻标题</a></div>
-               <div class="more"><a href="#" class="public_color2" >+</a></div>
+              <li class="bg"><a href="{$mIndexCats[0].data[0].link}">
+              <div class="in_data"><div class="public_color2" >{$mIndexCats[0].data[0].pubtimestamp|date_format:"%d "}/{$mIndexCats[0].data[0].pubtimestamp|date_format:"%y "}</div></div> 
+              <div class="in_title"><div class="public_color2" >{$mIndexCats[0].data[0].title}</div></div>
+               <div class="more"><div class="public_color2" >+</div></div>
                <div style="clear:both"></div>
-               <div class="in_des">琥珀酒色，晶莹剔透，丽质清雅，米香纯正，闻之浓而不骤，香而不艳，入口绵甜醇厚，馥郁柔和，头甘尾净，圆润爽怡，无悬浮物，无沉淀、蜜香清</div>
+               <div class="in_des">{$mIndexCats[0].data[0].description} </div>
+               </a>
                </li>
             {foreach item=article from=$mIndexCat.data}
-              <li class="bg1 clearfix">
-               <div class="in_data"><a href="#" class="public_color1" >{$article.pubtimestamp|date_format:"%d "}/{$article.pubtimestamp|date_format:"%m "}</a></div> 
-              <div class="in_title"><a href="#" class="public_color1" >{$article.title}</a></div>
-               <div class="more bg2"><a href="#" class="public_color2" >+</a></div>
-                
+              <li class="bg1 clearfix"><a href="{$article.link}">
+               <div class="in_data"><div class="public_color1" >{$article.pubtimestamp|date_format:"%d "}/{$article.pubtimestamp|date_format:"%m "}</div></div> 
+              <div class="in_title"><div class="public_color1" >{$article.title}</div></div>
+               <div class="more bg2"><div class="public_color2" >+</div></div>
+                </a>
               </li>
               {if $article@index+1 == 2}{break}{/if} {/foreach}
             </ul>
@@ -92,7 +93,7 @@
         </div>
         {elseif $mIndexCat.type eq 2} 
         <div id="in_image" class="wrapper">
-               <h2 class="in_h1 clearfix"><div class="in_zh">{$mIndexCat.name}</div><div class="in_en">/ {$mIndexCat.en_name}</div></h2>
+               <h2 class="in_h1 clearfix"><a href="{$mIndexCat.link}"><div class="in_zh">{$mIndexCat.name}</div><div class="in_en">/ {$mIndexCat.en_name}</div></a></h2>
         <div class="inner public_color">
             <ul>
             {foreach item=article from=$mIndexCat.data}
