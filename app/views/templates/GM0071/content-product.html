@@ -65,8 +65,8 @@
               </div>
 	<div class="bd">
 		<ul>
-  {foreach name=slidepics item=slidepic from=$global.slidepics}
-                    <li><a class="pic" href="{$slidepic.link}"><img src="{$slidepic.image}" alt="{$slidepic.title}" /></a></li>
+  {foreach name=slidepics item=image from=$article.images}
+                    <li><a class="pic" href="{$image.link}"><img src="{$image.image}" alt="{$image.title}" /></a></li>
                 {/foreach}
 		</ul>
 	</div>

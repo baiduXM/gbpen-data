@@ -209,6 +209,8 @@ $(document).ready(function(){
         $(this).parent().siblings().find(".third").slideUp()
         $(this).siblings(".third").slideToggle()
     })  	
+	//返回顶部开始
+	$(".back-top").click(function(){$(".index-wrap").animate({scrollTop :0}, 800)})	
   	});
 	//分享取消按钮结束
 
