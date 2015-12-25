@@ -1,30 +1,21 @@
-  <header>
-    <div class="baner">
-      <div class="logo"><img src="{$logo}" width="100%"></div>
-      <div class="menulist">
-        <div class="navlist">
-          <div class="swiper-nav swiper-container">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide"><span class="public_bg"><a href="{$site_url}">ÍøÕ¾Ê×Ò³</a></span></div>
-               {foreach item=nav from=$navs}
-              <div class="swiper-slide"><span  class="public_bg"><a href="{$nav.link}">{$nav.name}</a></span></div>
-               {/foreach}
-            </div>
+	<div class="index_top">
+       <header>
+          <div class="header">
+              <div class="logo"><img src="{$logo}" width="100%"> </div>
           </div>
-        </div>
-      </div>
-        <div id="slideBox" class="slideBox">
-          <div class="hd">
-            <ul>
-            </ul>
+          <div class="baner">
+              <div id="slideBox" class="slideBox">
+                <div class="hd">
+                   <ul></ul>
+                </div>
+                <div class="bd">
+                    <ul>
+                        {foreach name=slidepics item=slidepic from=$global.slidepics}
+                            <li><a class="pic" href="{$slidepics.link}"><img src="{$slidepic.image}" alt="{$slidepic.title}" /></a></li>
+                        {/foreach}
+                    </ul>
+                </div>
+              </div>
           </div>
-          <div class="bd">
-            <ul>
-             {foreach name=slidepics item=slidepic from=$global.slidepics}
-              <li><a class="pic" href="{$slidepic.link}"><img src="{$slidepic.image}" title="640*200" /></a></li>
-            {/foreach}
-            </ul>
-          </div>
-        </div>
-      </div>
-  </header>
+       </header>    
+    </div>

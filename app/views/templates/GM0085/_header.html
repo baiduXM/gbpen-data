@@ -1,31 +1,35 @@
-<header>
-    <div class="header public_bg2">
-      <div class="logo"><img src="{$logo}" width="80%" ></div>
-      <div class="baner">
-        <div id="slideBox" class="slideBox">
-          <div class="hd">
+  <div class="top_conts">
+       <div class="baner">
+         <div id="slideBox" class="slideBox">
+           <div class="hd">
+             <ul></ul>
+           </div>
+           <div class="bd">
             <ul>
+                {foreach name=slidepics item=slidepic from=$global.slidepics}
+                    <li><a class="pic" href="{$slidepics.link}"><img src="{$slidepic.image}" alt="{$slidepic.title}" /></a></li>
+                {/foreach}
             </ul>
+          </div>	
+		 </div>
+       </div>      
+     <div class="headmenu">     
+        <div class="heaer">
+            <div class="logo"><img src="{$logo}" width="100%"></div>
+        </div>      
+        <div class="menu">
+           <div class="nav">
+              <a class="arrow-left" href="#">&lt;</a> 
+              <a class="arrow-right" href="#">&gt;</a>
+              <div class="swiper-nav swiper-container">
+                <div class="swiper-wrapper">
+                   <div class="swiper-slide"><span><a href="{$site_url}index.html">网站首页</a></span></div>
+                        {foreach item=nav from=$navs}
+                          <div class="{if $nav.current}current{/if} swiper-slide"><span><a href="{$nav.link}">{$nav.name}</a></span></div>
+                        {/foreach}                                  
+                    </div>
+             </div>
           </div>
-          <div class="bd">
-            <ul>
-             {foreach name=slidepics item=slidepic from=$global.slidepics}
-              <li><a class="pic" href="{$slidepic.link}"><img src="{$slidepic.image}" title="500*245" /></a></li>
-          {/foreach} 
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="menulist">
-        <div class="navlist"> <a class="arrow-left" href="#">&lt;</a> <a class="arrow-right" href="#">&gt;</a>
-          <div class="swiper-nav swiper-container">
-            <div class="swiper-wrapper">
-             {foreach item=nav from=$navs}
-    <div class="swiper-slide"><span><a href="{$nav.link}"><div class="nav_ico"><img src="{$nav.image}" width="100%"></div><p>{$nav.name}</p></a></span></div>
-     {/foreach}  
-            </div>
-          </div>
-        </div>
-      </div>
+        </div> 
     </div>
-  </header>
+  </div>    
