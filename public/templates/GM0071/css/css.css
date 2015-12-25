@@ -28,7 +28,7 @@
 
 .picture2{ height:auto; overflow:hidden; width:100%; padding:15px 0px 5px; }
 .picture2 ul{ width:100%; height:auto; overflow:hidden;}
-.picture2 li{ margin:4px 0px; height:auto; overflow:hidden; float:left;}
+.picture2 li{ margin:4px 0px; height:auto; overflow:hidden; display:inline-block;}
 .picture2 li div{ margin:0px 8px; height:auto; overflow:hidden;}
 .picture2 li div .img{ border:1px solid #ccc; padding:3px; }
 .picture2 li div .title1{height:24px; line-height:24px; text-align:center;}
@@ -158,10 +158,10 @@ ul.third li a:hover{color:#5beaa0; }
 }	
 .d_datu{ width:100%; height:auto; overflow:hidden;}
 @media screen and (min-width: 320px) and (max-width: 480px){
-.picture2 li{ width:50%}
+.picture2 li{ width:48%}
 
 }
 @media screen and (min-width: 480px) {
-.picture2 li{ width:33.3%}
+.picture2 li{ width:32.5%}
 }
 

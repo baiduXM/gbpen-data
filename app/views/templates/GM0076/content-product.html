@@ -66,7 +66,7 @@
 	<div class="bd">
 		<ul>
                {foreach name=imagea item=imagea from=$article.images}
-                    <li><a class="pic" href="{$article.images.link}"><img src="{$imagea.image}" alt="{$imagea.title}" /></a></li>
+                    <li><a class="pic" href="{$article.category.link}"><img src="{$imagea.image}" alt="{$imagea.title}" /></a></li>
                 {/foreach}     
 		</ul>
 	</div>

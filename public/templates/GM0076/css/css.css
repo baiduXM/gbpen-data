@@ -57,7 +57,7 @@
 .banerd{   width:80%; height:auto; overflow:hidden; margin:20px auto 10px; position:relative; }
 .datu{ position:relative; height:auto; overflow:hidden; background:#f97600; height:auto; width:100%;display:block;-webkit-mask:url(../images/datu.png) no-repeat;-webkit-mask-size:100% auto; position:absolute; left:0px; top:0px; z-index:1000}
 .menulist{ position:absolute; width:80%; bottom:30px; height:auto; overflow:hidden; text-align:right; float:right; right:10px; display:inline;-webkit-animation:fadeIn 3s .1s ease both;
--moz-animation:fadeIn 3s .1s ease both; }
+-moz-animation:fadeIn 3s .1s ease both; z-index:1000 }
 .clear{ clear:both;  height:0px; width:0px;}
 .menulist dl dd{ margin-bottom:5px;}
 .menulist dl:nth-child(1){ width:100%; margin:0px auto; width:130px; float:right; display:inline; margin-bottom:5px; -webkit-animation-duration: 1.5s; 
