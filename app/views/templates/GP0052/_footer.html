@@ -1,0 +1,27 @@
+  <div class="link">
+    <div class="linkbox">
+     <span>友情链接 :</span>
+     {$limit =  3}
+      {foreach name=flink item=flink from=$global.flinks}
+      <a href="{$flink.link}">{$flink.title}</a> 
+	  {if $flink@index+1 gte $limit}{break}{/if}
+      | 
+      {/foreach}
+    </div>
+  </div>
+  <div class="footer">
+    <div class="footlink">
+<!--       <a href=""><i class="iconfont1 icon1">&#xe6a4;</i></a>
+      <a href=""><i class="iconfont1 icon2">&#xe6b2;</i></a>
+      <a href=""><i class="iconfont1 icon3">&#xe6a1;</i></a>
+      <a href=""><i class="iconfont1 icon4">&#xe6af;</i></a>
+      <a href=""><i class="iconfont1 icon5">&#xe681;</i></a> -->
+      {foreach item=fshare from=$global.fshares}
+      <a href="{$fshare.link}"><i class="iconfont1 icon{$fshare@index+1}">{$fshare.title}</i></a>
+      {/foreach}
+    </div>
+
+    {$footprint}     
+   
+  </div>
+{$footscript}    

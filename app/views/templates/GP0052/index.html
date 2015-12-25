@@ -1,0 +1,225 @@
+<!DOCTYPE>
+<html>
+<head>
+<script type="text/javascript">
+// 跳转手机页面
+{if $site_another_url}
+    if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+        location.href = '{$site_another_url}';
+    }
+{/if}
+</script>
+ 
+
+<meta name="keywords" content="{$keywords}"/>
+<meta name="description" content="{$description}"/>
+<meta http-equiv="x-ua-compatible" content="ie=8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{$title}</title>
+<link href="{$site_url}css/font.css" rel="stylesheet" type="text/css" />
+<link href="{$site_url}css/css.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="{$site_url}css/iconfont.css">
+<script src="{$site_url}js/jquery-1.7.2.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="http://common.mn.sina.com.cn/public/resource/lib/jquery.jcarousellite.js"></script>
+<script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript" src="{$site_url}js/function.js"></script>
+<style>
+  .footlink a{behavior:url(pie.htc);position: relative;}
+</style>
+{$headscript}
+</head>
+<body>
+<div class="wrap">
+  <!-- 导入头部文件 -->
+  {include file='./_header.html'}
+  <div class="content">
+    <div class="recommend">
+      <div class="recommend-tit">
+        <h2>{$index.about_us.name}</h2>
+        <span>{$index.about_us.en_name}</span>
+        <img src="{$site_url}images/colicoimg.png" alt="">
+        <a href="{$index.about_us.link}" class="rmore">+</a>
+      </div>
+
+      <div class="focusBox">
+          <ul class="pic">
+          {foreach item=aimg from=$index.about_us.data}
+          <li><a href="{$aimg.link}" target="_blank"><img src="{$aimg.image}"/></a></li>
+          {/foreach}
+
+          </ul>
+          <div class="txt-bg"></div>
+          <div class="txt">
+            <ul>
+              {foreach item=aimg from=$index.about_us.data}
+              <li><a href="{$aimg.link}" target="_blank">{$aimg.title}</a></li>
+              {/foreach}
+            </ul>
+          </div>
+
+          <ul class="num">
+            {foreach item=aimg from=$index.about_us.data}
+            <li><a href="{$aimg.link}" target="_blank"><span></span></a></li>
+            {/foreach}            
+          </ul>
+      </div>
+      <div class="recommend-desc">
+        
+        <div>
+        {$index.about_us.description}
+        </div>
+        <a href="{$index.about_us.link}" class="more">更多</a>
+      </div>
+      <div class="recommedbg">
+        <img src="{$site_url}images/toprbg.png" alt="">
+      </div>
+    </div>
+    <div class="cl"></div>
+    <div class="contact">
+     <div class="telbox fl">
+       <span class="telword">HOTLINE</span>
+       <span class="telnum">{$contact.telephone}</span>
+     </div>
+     <div class="address fl">
+       <span class="addword">ADDRESS</span>
+       <span class="addnum">{$contact.address}</span>       
+     </div>
+     <div class="serve fl">
+       <span class="addword">ONLINE SERVICE</span>   
+       <div class="servelist">
+          {foreach name=QQ item=QQ from=$index.QQ}
+          <a target="_blank" href="http://wpa.qq.com/msgrd?V=3&amp;uin={$QQ.title}&amp;Site=QQ客服&amp;Menu=yes" class="qq"><img border="0" src="{$QQ.image}"></a>
+          {/foreach}
+
+       </div>    
+     </div>
+     <div class="web fl">
+       {$index.website}
+     </div>
+
+    </div>
+
+    <div class="prowrap">
+      <div class="pro">
+        <div class="pro-top">
+          <div class="pro-tit">
+            <div class="pro-tit-word">
+              <input type="hidden" class="pro-tit-word-hide" value="{$index.pro.name}" />
+              <span class="fword">产</span>
+              <span class="sword">品</span>            
+            </div>
+            <div class="pro-tit-rt">
+
+              <h2>中心</h2>
+              <span>{$index.pro.en_name}</span>
+              <img src="{$site_url}images/proword.png" alt="">
+            </div>
+          </div>
+          <div class="pro-class">
+            {foreach item=proclass from=$index.pro.childmenu}
+              <a href="{$proclass.link}"><!-- <span class="letter">A</span> -->{$proclass.name}</a>
+            {/foreach}
+<!--             <a href="">A 夏威夷果</a>
+            <a href="">B 酱料</a>
+            <a href="">C 核桃</a>
+            <a href="">D 开心果</a>
+            <a href="">E 沙茶酱</a>
+            <a href="">F 黑胡椒酱</a>
+            <a href="">G 番茄酱</a> -->
+
+
+          </div>
+       
+<!--           <div class="picScroll-left">
+            <div class="hd">
+              <a class="next"></a>
+              <ul></ul>
+              <a class="prev"></a>
+              <span class="pageState"></span>
+            </div>
+            <div class="bd">
+              <ul class="picList">
+                {foreach item=proimg from=$index.pro.data}
+                <li>
+                  <div class="pic"><a href="{$proimg.link}" target="_blank"><img src="{$proimg.image}" /></a></div>
+                  <div class="title"><a href="{$proimg.link}" target="_blank">{$proimg.title}</a></div>
+                </li>
+                {/foreach}
+
+              </ul>
+            </div>
+          </div> -->
+          <div id="prizes">
+              <div class="photos">
+                  <a href="javascript:void(0);" class="photos-button photos-prev"></a>
+                  <div class="photos-content {if $index.pro.data|count>3}enable{/if}">
+                      <ul>
+                         {foreach name=pro item=pro from=$index.pro.data}
+                            
+                            <li>
+                              <div class="pic"><a href="{$proimg.link}" target="_blank"><img src="{$proimg.image}" /></a></div>
+                              <div class="title"><a href="{$proimg.link}" target="_blank">{$proimg.title}</a></div>
+                            </li>
+
+                           
+                            
+                          {/foreach}
+                      </ul>
+                  </div>
+                  <a href="javascript:void(0);" class="photos-button photos-next"></a>
+              
+              </div>
+          </div> 
+
+    
+        </div>
+
+        <div class="limit">
+          <ul>
+            {foreach item=xsimg from=$index.xianshi}
+            <li>  
+                <a href="{$xsimg.link}">
+                  <div class="limit-pic"><img src="{$xsimg.image}" alt=""></div>
+                  <div class="limit-desc">
+                    <h2>限时 特惠</h2>
+                    <span>{$xsimg.title}</span>
+                  </div>
+                </a>
+            </li>
+
+            {/foreach}
+
+          </ul>
+        </div>
+        <div class="probg"><img src="{$site_url}images/toplbg.png" alt=""></div>
+        <div class="probbg"><img src="{$site_url}images/bottomrbg.png" alt=""></div>
+      </div>
+    </div>
+    <div class="news">
+      {$limit = 3}
+      {foreach item=newchild from=$index.news.childmenu}
+          <div class="newslist">
+            <div class="news-tit">
+              <h2>{$newchild.name}</h2><span>{$newchild.en_name}</span>
+            </div>
+            <ul>      
+            {foreach item=new1 from=$newchild.data}
+              <li><a href="{$new1.link}">{$new1.title}</a></li>
+             {/foreach} 
+            </ul>
+          </div>
+           
+          {if $newchild@index+1 gte $limit}{break}{/if}
+        {/foreach}
+      <div class="cl"></div>
+      <div class="newsbg"><img src="{$site_url}images/btbg.png" alt=""></div>
+    </div>
+
+
+  </div>
+  <!-- 导入底部文件 -->
+  {include file='./_footer.html'}
+</div>
+</body>
+</html>
+ 

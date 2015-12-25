@@ -1,0 +1,17 @@
+<div class="baner1">
+    <div class="focusBox" style="margin:0 auto">
+        <ul class="pic">
+            {foreach name=slidepicss item=slidepic from=$global.slidepicss}
+                <li><a href="{$slidepic.link}"><img src="{$slidepic.image}" alt="{$slidepic.title}" /></a></li>
+            {/foreach}       
+        </ul>
+            <a class="prev" href="javascript:void(0)"></a>
+            <a class="next" href="javascript:void(0)"></a>
+        <ul class="hd">
+            {foreach name=slidepicss item=slidepic from=$global.slidepicss}
+                <li>{$slidepic@index+1}</li>
+            {/foreach}
+        </ul>         
+    </div>
+</div>
+            

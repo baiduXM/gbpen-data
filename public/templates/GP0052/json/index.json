@@ -1,0 +1,77 @@
+{
+	
+    "about_us": {
+		"description": "左上方内容单页（如关于我们）",
+		"value": {},
+		"type": "list",
+		"config": {
+			"width": 320,
+			"height": 238
+		}
+	},
+	"news":{
+		"description": "底部文字列表（如新闻栏目）",
+		"value": {},
+		"type": "list",
+		"config":{
+			"showchilddata":"true"
+		}	
+
+	},
+	"pro":{
+		"description":"中间图片列表多图滚动(如产品展示)",
+		"value":{},
+		"type":"list"
+	},
+	"website":{
+		"value": "www.123456789.com",
+		"description": "公司网址",
+		"type": "text"
+	},
+	"QQ":{
+		"value": [{
+			"title": "1234567",
+			"image": "images/qq1.png",
+			"link": "http://www.baidu.com"
+		}, {
+			"title": "1234567",
+			"image": "images/qq2.png",
+			"link": "http://www.baidu.com"
+		}, {
+			"title": "1234567",
+			"image": "images/qq3.png",
+			"link": "http://www.baidu.com"
+		}],
+		"description": "QQ",
+		"type": "images",
+		"config": {
+			"width": 34,
+			"height": 34
+		}
+	},
+	"xianshi":{
+		"value": [{
+			"title": "三只松鼠_碧根果210gx2袋",
+			"image": "images/tr1.jpg",
+			"link": "http://www.baidu.com"
+		}, {
+			"title": "三只松鼠_碧根果210gx2袋",
+			"image": "images/tr2.jpg",
+			"link": "http://www.baidu.com"
+		}, {
+			"title": "三只松鼠_碧根果210gx2袋",
+			"image": "images/tr3.jpg",
+			"link": "http://www.baidu.com"
+		}],
+		"description": "QQ",
+		"type": "images",
+		"config": {
+			"width": 320,
+			"height": 177
+		}		
+	}
+}
+               
+
+
+

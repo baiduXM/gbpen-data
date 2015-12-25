@@ -1,0 +1,105 @@
+{
+
+	"topword":{
+		"value": "您好，欢迎来到厦门易尔通网络科技有限公司！",
+		"description": "顶部文字描述",
+		"type": "text"
+	},
+	"slidepics": {
+		"value": [{
+			"title": "banner",
+			"image": "images/banner.png",
+			"link": "article/1.html",
+			"description": "banner1"
+		}, {
+			"title": "测试图2",
+			"image": "images/banner.png",
+			"link": "http://www.baidu.com"
+		},{
+			"title": "测试图3",
+			"image": "images/banner.png",
+			"link": "http://www.baidu.com"
+		}],
+		"description": "banner大图轮播",
+		"type": "images",
+		"config": {
+			"width": 1002,
+			"height": 418,
+			"limit": 3
+		}
+	},
+	"yijian":{
+		"value":{},
+		"description":"意见反馈",
+		"type":"list"
+	},
+	"contact_us": {
+		"value": "电 话：0592-3503377 \r\n 地址：厦门市软件园二期观日路36号201单元",
+		"description": "联系我们",
+		"type": "textarea"
+	 },
+	"flinks": {
+		"value": [{
+			"title": "厦门易尔通网络科技有限公司",
+			"image": "images/1.jpg",
+			"link": "http://www.12t.cn",
+			"description": "友情链接1"
+		}, {
+			"title": "百度",
+			"image": "images/2.jpg",
+			"link": "http://www.baidu.com"
+		},{
+			"title": "网易163",
+			"image": "images/3.jpg",
+			"link": "http://www.baidu.com"
+		}],
+		"description": "友情链接",
+		"type": "images",
+		"config": {
+			"width": 100,
+			"height": 100,
+			"limit": 5
+		}
+	},
+	"fshares": {
+		"value": [{
+			"title": "&#xe6a4;",
+			"image": "images/1.jpg",
+			"link": "http://www.12t.cn",
+			"description": "新浪微博"
+		}, {
+			"title": "&#xe6b2;",
+			"image": "images/2.jpg",
+			"link": "http://www.baidu.com",
+			"description": "微信"
+
+		},{
+			"title": "&#xe6a1;",
+			"image": "images/3.jpg",
+			"link": "http://www.baidu.com",
+			"description": "QQ"
+
+		},{
+			"title": "&#xe6af;",
+			"image": "images/3.jpg",
+			"link": "http://www.baidu.com",
+			"description": "腾讯微博"
+
+		},{
+			"title": "&#xe681;",
+			"image": "images/3.jpg",
+			"link": "http://www.baidu.com",
+			"description": "百度"
+
+		}],
+		"description": "第三方平台",
+		"type": "images",
+		"config": {
+			"width": 20,
+			"height": 20,
+			"limit": 5
+		}
+	}
+	
+	
+}
