@@ -65,8 +65,9 @@
            </div>
            <div class="bd">
             <ul>
+            
                 {foreach name=slidepics item=slidepic from=$global.slidepics}
-                    <li><a class="pic" href="{$slidepics.link}"><img src="{$slidepic.image}" alt="{$slidepic.title}" /></a></li>
+                    <li><a class="pic" href="{$slidepic.link}"><img src="{$slidepic.image}" alt="{$slidepic.title}" /></a></li>
                 {/foreach}
             </ul>
           </div>	
@@ -75,7 +76,7 @@
     </div>
     <div class="menulist"> 
         <dl>
-        	<dd><a href="{$site_url}index.html">网站首页</a></span></dd>
+        	<dd><a href="{$site_url}">网站首页</a></span></dd>
         </dl>
         <dl>
            {foreach item=nav from=$navs}     
@@ -94,7 +95,7 @@
         
     </div>
     </div>
-        <footer class="foot">{$footprint} </footer>
+        <footer class="foot"><a class="back-top"><span>TOP</span></a>{$footprint} </footer>
         
              
     </div>

@@ -48,7 +48,7 @@
 <body>
 <h1 class="fixed-top"><span class="fixed-btn back"><a href="javascript:window.history.back()">返回</a></span> <div class="menulista" id="quickbar" ><a href="#" id="quickbar-navs-btn" ><div class="word">导航</div></a></div>
                <div class="mind_title">
-                <span>关于我们</span>
+                <span>{$article.category.name}</span>
                </div>
 </h1>
 <div class="index-wrap">
@@ -65,9 +65,9 @@
               </div>
 	<div class="bd">
 		<ul>
-		{foreach name=image item=image from=$article.images}
-			<li><a class="pic" href="{$image.link}"><img src="{$image.image}" /></a></li>
-			{/foreach}
+               {foreach name=imagea item=imagea from=$article.images}
+                    <li><a class="pic" href="{$article.images.link}"><img src="{$imagea.image}" alt="{$imagea.title}" /></a></li>
+                {/foreach}     
 		</ul>
 	</div>
 	
