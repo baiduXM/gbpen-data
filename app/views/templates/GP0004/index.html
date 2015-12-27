@@ -51,7 +51,7 @@
             </ul>
         </nav>
         <!--  -->
-        <div class="search">
+        <div class="search clearfix">
             <form id="form" class="fm" action="{$search_action}" method="GET" name="fm">
                 <span class="s_ipt_wr">
           <input type="text" id="kw" name="s" class="s_ipt" placeholder=""/>
@@ -72,9 +72,8 @@
                 <ul>
                     {foreach item=slidepic from=$index.slidepics}
                     <li>
-                        <input type="hidden" class="EditInfo" value="">
-                        <img src="{$slidepic.image}" height="736" width="1920" alt="{$slidepic.title|strip_tags}" />
-                        <div class="box_inner ">
+                        <img src="{$slidepic.image}" alt="{$slidepic.title|strip_tags}" />
+                        <!-- <div class="box_inner ">
                             <div class="description">
                                 <p class="yellow"></p>
                                 <p class="sub_title">{$slidepic.title}</p>
@@ -83,7 +82,7 @@
                             <div class="shap">
                                 <div class="shap_inner circle"><span class="txt_b"></span><span class="txt_s">。</span></div>
                             </div>
-                        </div>
+                        </div> -->
                     </li>
                     {/foreach}
                 </ul>
@@ -163,13 +162,11 @@
                 <div class="img_list">
                     <ul>
                         {$limit = 6} {foreach name=case_list item=case_list from=$global.case.data}
-                        <li>
-                            <div class="inner mask">
-                                <img src="{$case_list.image}" alt="" />
-                                <div class="mask_content"></div>
-                                <div class="title">
-                                    <h5><a href="{$case_list.link}">{$case_list.title}</a></h5>
-                                </div>
+                        <li class="mask">
+                            <img src="{$case_list.image}" alt="" />
+                            <div class="mask_content"></div>
+                            <div class="title">
+                                <h5><a href="{$case_list.link}">{$case_list.title}</a></h5>
                             </div>
                         </li>
                         {if $case_list@index+1 eq $limit}{break}{/if} {/foreach}

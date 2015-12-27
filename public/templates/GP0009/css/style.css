@@ -1,4 +1,4 @@
-/*全局变量start*/
+﻿/*全局变量start*/
 @charset "utf-8";
 *{ margin:0px; padding:0px;}
 a,a:link,a:visited,a:hover{text-decoration:none; }
@@ -129,6 +129,7 @@ position:relative; padding:20px 0px; height:54px;padding-left:15px; line-height:
 -moz-animation:background 1s .2s ease both;}
 .section ul li .proer_pic{ width:270px; /* height:180px; */ position:relative;}
 .section ul li .photo{width:270px;/* height:180px; */overflow:hidden;}
+.section ul li a .proer_pic .photo img{width:100%;}
 .section .rsp{width:270px;/* height:180px; */overflow:hidden;position: absolute;background:#000;top: 0;left: 0;bottom: 0;}
 .section .text{position:absolute;width:270px;height:180px;left:-270px;top:0px;overflow:hidden;}
 .section .txbger{text-align:center;color:#FFFFFF;font-size:14px;text-align:left; width:200px; height:75px; margin:0px auto; margin-top:27px;overflow:hidden;}

@@ -9,13 +9,22 @@ $(document).ready(function(){
 				returnDefault:true //鼠标移走后返回默认状态，例如默认频道是"预告片"，鼠标移走后会返回"预告片"（默认false）
 			});	
 	jQuery(".det-img").slide({ mainCell:".bd ul",effect:"fold", autoPlay:true, delayTime:300});
-	$('.first li a').click(function() {
-        $(this).parent().siblings().find('.second').slideUp()
-        $(this).siblings(".second").slideToggle()
-        $(this).siblings(".second").children('li').children('a').click(function() {
-              $(this).parent().siblings().find('.three').slideUp()
-              $(this).siblings(".three").slideToggle()
-        });
-      });
+	// $('.first li a').click(function() {
+ //        $(this).parent().siblings().find('.second').slideUp()
+ //        $(this).siblings(".second").slideToggle()
+ //        $(this).siblings(".second").children('li').children('a').click(function() {
+ //              $(this).parent().siblings().find('.three').slideUp()
+ //              $(this).siblings(".three").slideToggle()
+ //        });
+ //      });
+		$('.first li a').click(function() {
+	        $(this).parent().siblings().find('.second').slideUp()
+	        $(this).siblings(".second").slideToggle()
+	        $(this).siblings(".second").children('li').children('a').click(function() {
+	              $(this).parent().siblings().find('.three').slideUp()
+	              $(this).siblings(".three").slideToggle()
+	        });
+	    });
+ 
 
 });

@@ -230,32 +230,6 @@ $(function($) {
 			dots: true
 		});
 
-		//  Find any element starting with a # in the URL
-		//  And listen to any click events it fires
-		$('a[href^="#"]').click(function() {
-			//  Find the target element
-			var target = $($(this).attr('href'));
-
-			//  And get its position
-			var pos = target.offset(); // fallback to scrolling to top || {left: 0, top: 0};
-
-			//  jQuery will return false if there's no element
-			//  and your code will throw errors if it tries to do .offset().left;
-			if (pos) {
-				//  Scroll the page
-				$('html, body').animate({
-					scrollTop: pos.top,
-					scrollLeft: pos.left
-				}, 1000);
-			}
-
-			//  Don't let them visit the url, we'll scroll you there
-			return false;
-		});
-
-		// var GoSquared = {acct: 'GSN-396664-U'};
-		// 
-
 		var left_able = false;
 
 		//导航滚动事件控制
@@ -471,49 +445,4 @@ $(function($) {
 
 	init();
 	feedback();
-
-
-	// 首页轮滚图文本处理
-	var editWord = function() {
-			this.subinfo = function() {
-				var Arr_key = this.info.split('|');
-				this.contentword = Arr_key[0];
-				this.keyword = Arr_key[1];
-				this.Engword = Arr_key[2];
-			}, this.init = function() {
-				var _this = this;
-				this.Engword = this.Engword || '';
-				$('.banner ul li').each(function() {
-					_this.info = $(this).find('.EditInfo').val();
-					_this.subinfo();
-					_this.fill($(this));
-				});
-			}, this.fill = function(current) {
-				// 英文填充
-				if (this.Engword) {
-					var ThisEngword = this.Engword.split(' ');
-					var _div = '';
-					for (var i = 1; i < ThisEngword.length; i++) {
-						_div += '<span>' + ThisEngword[i] + '</span>'
-					}
-					current.find('.description .yellow').html(ThisEngword[0] + _div);
-				}
-				if (!this.contentword || !this.keyword) {
-					console.log('请填写轮滚图简介文本或者关键字！');
-				} else {
-					if (this.keyword.length > 3) {
-						console.log('关键字字数应少于两个字！');
-					} else {
-						// 简介文本填充
-						current.find('.description .p').append(this.contentword);
-						// 关键字填充
-						current.find('.shap_inner .txt_b').append(this.keyword[0]);
-						current.find('.shap_inner .txt_s').prepend(this.keyword[1]);
-					}
-				}
-			}
-			this.init();
-		}();
-
-
 });
