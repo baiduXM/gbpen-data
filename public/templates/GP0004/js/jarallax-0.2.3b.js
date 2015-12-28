@@ -14,23 +14,23 @@
 // jarallax class //////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 var Jarallax = function (controller) {
-  this.FPS = 20;
-  this.FPS_INTERVAL = 1000 / this.FPS;
-  this.FRAME_DATA_SAMPLE = 24;
-  this.FRAME_DATA_REFRESH = 12;
-  this.fpsTop = 0;
-  this.fpsBottom = 1000;
+  this.FPS = 200;//20
+  this.FPS_INTERVAL = 1000 / this.FPS;//1000 / this.FPS
+  this.FRAME_DATA_SAMPLE = 24;//24
+  this.FRAME_DATA_REFRESH = 12;//12
+  this.fpsTop = 0;//0
+  this.fpsBottom = 1000;//1000
   this.animations = [];
   this.defaultValues = [];
-  this.progress = 0.0;
-  this.prev_progress = 0.0;
+  this.progress = 0.0;//0.0
+  this.prev_progress = 0.0;//0.0
   this.controllers = [];
-  this.maxProgress = 1;
-  this.timer = undefined;
-  this.allowWeakProgress = true;
-  this.frameRate = this.FPS;
-  this.stepSize = 0;
-  this.jumping = false;
+  this.maxProgress = 1;//1
+  this.timer = undefined;//undefined
+  this.allowWeakProgress = true;//true
+  this.frameRate = this.FPS;//this.FPS
+  this.stepSize = 0;//0
+  this.jumping = false;//false
 
   if (controller === undefined) {
     if($.browser.iDevice){

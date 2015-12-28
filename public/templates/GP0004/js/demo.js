@@ -30,13 +30,11 @@ function words_deal(objval,max){
 $(function($) {
 	init = function() {
 		jarallax = new Jarallax(new ControllerScroll(true));
-		var currentProgress = 0,
-			progressSteps = 1 / 5,
-			home_h = $('#home').outerHeight(),
-			slide1_h = $('#slide1').outerHeight(),
-			slide5_h = $('#slide5').outerHeight(),
-			slide6_h = $('#slide6').outerHeight(),
-			window_h = $(window).height();
+		var currentProgress = 0;
+		var progressSteps = 1 / 7;
+		var slide5_h = $('#slide5').outerHeight();
+		var slide6_h = $('#slide6').outerHeight();
+		var window_h = $(window).height();
 
 		jarallax.setDefault('.container', {
 			opacity: 0,
@@ -46,179 +44,166 @@ $(function($) {
 			opacity: 1,
 			display: 'block'
 		})
+		jarallax.setDefault('#slide1', {
+			opacity: 1,
+			display: 'block'
+		})
 
 		jarallax.addAnimation('#home', [{
-			progress: '0',
-			opacity: '1',
-			top: '0%'
-		}, {
-			progress: '10',
-			opacity: '.8',
-			top: '-45%'
-		}, {
-			progress: '20',
-			opacity: '0',
-			top: '-200%'
-		}]);
+            progress: '0',
+            opacity: '1',
+			display: 'block'
+        }, {
+            progress: '14',
+            opacity: '.5',
+			display: 'block'
+        }, {
+            progress: '15',
+            opacity: '0',
+			display: 'none'
+        }, {
+            progress: '100%',
+            opacity: '0',
+			display: 'none'
+        }]);
 
 		//progress参数对应的是导航描点 box_inner 
 		jarallax.addAnimation('#slide1', [{
-			progress: '0',
-			display: 'block',
-			opacity: '1',
-			top: Math.floor(home_h) + 'px'
-		}, {
-			progress: '10',
-			display: 'block',
-			opacity: '1',
-			top: Math.floor(home_h * .3) + 'px'
-		}, {
-			progress: '20',
-			display: 'block',
-			opacity: '1',
-			top: Math.floor(slide1_h) * -1.8 + 'px'
-		}]);
-		jarallax.addAnimation('.dots', [{
-			progress: '0',
-			bottom: '220px'
-		}, {
-			progress: '10',
-			bottom: '350px'
-		}, {
-			progress: '20',
-			bottom: '400px'
-		}]);
-		jarallax.addAnimation('.box_inner', [{
-			progress: '0',
-			top: '225px'
-		}, {
-			progress: '10',
-			top: '180px'
-		}, {
-			progress: '20',
-			top: '-300px'
-		}]);
-
-
-		var animation = jarallax.addAnimation('#slide2', [{
-			progress: '0',
-			display: 'block',
-			opacity: '.5',
-			top: '150%'
-		}, {
-			progress: '10',
-			display: 'block',
-			opacity: '.5',
-			top: '75%'
-		}, {
-			progress: '20',
-			display: 'block',
-			opacity: '1',
-			top: '20%'
-		}, {
-			progress: '30',
-			display: 'block',
-			opacity: '.5',
-			top: '-30%'
-		}, {
-			progress: '40',
-			display: 'block',
-			opacity: '0',
-			top: '-200%'
-		}]);
-
-		jarallax.addAnimation('#slide3', [{
-			progress: '10',
-			display: 'block',
-			opacity: '0.6',
-			top: '200%'
-		}, {
-			progress: '20',
-			display: 'block',
-			opacity: '1',
-			top: '75%'
-		}, {
-			progress: '30',
-			display: 'block',
-			opacity: '1',
-			top: '0%'
-		}, {
-			progress: '40',
-			display: 'block',
-			opacity: '1',
-			top: '-200%'
-		}]);
-
-
-		jarallax.addAnimation('#slide4', [{
-			progress: '20',
-			display: 'block',
-			opacity: '.1',
-			top: '200%'
-		}, {
-			progress: '30',
-			display: 'block',
-			opacity: '.8',
-			top: '60%'
-		}, {
-			progress: '40',
-			display: 'block',
-			opacity: '1',
-			top: '-20%'
-		}, {
-			progress: '50',
-			display: 'block',
-			opacity: '.8',
-			top: '-200%'
-		}]);
-
-		jarallax.addAnimation('#slide5', [{
-			progress: '30',
-			display: 'block',
-			opacity: '1',
-			top: Math.floor(window_h * 2) + 'px'
-		}, {
-			progress: '40',
-			display: 'block',
-			opacity: '1',
-			top: Math.floor(window_h * .95) + 'px'
-		}, {
-			progress: '50',
-			display: 'block',
-			opacity: '1',
-			top: '0px'
-		}, {
-			progress: '60',
-			display: 'block',
-			opacity: '1',
-			top: Math.floor(window_h - slide6_h - slide5_h) + 'px'
-		}]);
-
-
-		jarallax.addAnimation('#slide6', [{
-			progress: '40',
-			display: 'block',
-			opacity: '.6',
-			top: Math.floor(window_h * .9) + 'px'
-		}, {
-			progress: '50',
-			display: 'block',
-			opacity: '.6',
-			top: Math.floor(window_h - slide6_h) + 'px'
-		}, {
-			progress: '60',
-			display: 'block',
-			opacity: '1',
-			top: Math.floor(window_h - slide6_h) + 'px'
-		}]);
-
-
-
-		$('#slide1').css({
-			opacity: 1,
-			display: 'block'
-		});
-
+            progress: '0',
+            display: 'block',
+            opacity: '1',
+            top: '736px'
+        }, {
+            progress: '14',
+            display: 'block',
+            opacity: '1',
+            top: '200px'
+        }, {
+            progress: '28',
+            display: 'block',
+            opacity: '0',
+            top: '-2000px'
+        }, {
+            progress: '100',
+            display: 'block',
+            opacity: '0',
+            top: '-5000px'
+        }]);
+        jarallax.addAnimation('#slide2', [{
+            progress: '0',
+            display: 'block',
+            opacity: '0',
+            top: '736px'
+        }, {
+            progress: '14',
+            display: 'block',
+            opacity: '.5',
+            top: '736px'
+        }, {
+            progress: '28',
+            display: 'block',
+            opacity: '1',
+            top: '200px'
+        }, {
+            progress: '43',
+            display: 'block',
+            opacity: '0',
+            top: '-1000px'
+        }, {
+            progress: '100',
+            display: 'block',
+            opacity: '0',
+            top: '-5000px'
+        }]);
+        jarallax.addAnimation('#slide3', [{
+            progress: '14',
+            display: 'block',
+            opacity: '0',
+            top: '2000px'
+        }, {
+            progress: '28',
+            display: 'block',
+            opacity: '1',
+            top: '800px'
+        }, {
+            progress: '43',
+            display: 'block',
+            opacity: '1',
+            top: '50px'
+        }, {
+            progress: '57',
+            display: 'block',
+            opacity: '0',
+            top: '-1000px'
+        }, {
+            progress: '100',
+            display: 'block',
+            opacity: '0',
+            top: '-5000px'
+        }]);
+        jarallax.addAnimation('#slide4', [{
+            progress: '43',
+            display: 'block',
+            opacity: '0',
+            top: '1000px'
+        }, {
+            progress: '57',
+            display: 'block',
+            opacity: '1',
+            top: '0px'
+        }, {
+            progress: '71',
+            display: 'block',
+            opacity: '0',
+            top: '-1000px'
+        }, {
+            progress: '100',
+            display: 'block',
+            opacity: '0',
+            top: '-5000px'
+        }]);
+        jarallax.addAnimation('#slide5', [{
+            progress: '57',
+            display: 'block',
+            opacity: '1',
+            top: '2000px'
+        }, {
+            progress: '71',
+            display: 'block',
+            opacity: '1',
+            top: '0px'
+        }, {
+            progress: '86',
+            display: 'block',
+            opacity: '1',
+            top: Math.floor(window_h - slide6_h - slide5_h) + 'px'
+        }, {
+            progress: '100',
+            display: 'block',
+            opacity: '1',
+            top: Math.floor(window_h - slide6_h - slide5_h) + 'px'
+        }]);
+        jarallax.addAnimation('#slide6', [{
+            progress: '57',
+            display: 'block',
+            opacity: '0',
+            top: '3000px'
+        },{
+            progress: '71',
+            display: 'block',
+            opacity: '1',
+            top: Math.floor(window_h - slide6_h) + 'px'
+        }, {
+            progress: '86',
+            display: 'block',
+            opacity: '1',
+            top: Math.floor(window_h - slide6_h) + 'px'
+        }, {
+            progress: '100',
+            display: 'block',
+            opacity: '1',
+            top: Math.floor(window_h - slide6_h) + 'px'
+        }]);
 
 		if (window.chrome) {
 			$('.banner li').css('background-size', '100% 100%');
@@ -426,7 +411,6 @@ $(function($) {
 						content:content.val(),
 						ajax:"1"
 					},function(data){
-						console.log(data);
 					  if (!data.err) {//提交成功,则重置表单值为空
 					  	$('#username').val("");
 					  	$('#phone').val("");
