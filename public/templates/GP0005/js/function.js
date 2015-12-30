@@ -50,7 +50,7 @@ var MarqueeDiv1Control=new Marquee("MarqueeDiv1");      //箭头控制滚动方�
 MarqueeDiv1Control.Direction="left";
 MarqueeDiv1Control.Step=1;
 MarqueeDiv1Control.Width=948;
-// MarqueeDiv1Control.Height=174;
+MarqueeDiv1Control.Height=174;
 MarqueeDiv1Control.Timer=20;
 MarqueeDiv1Control.ScrollStep=1;                //若为-1则禁止鼠标控制实例
 MarqueeDiv1Control.Start();
@@ -60,7 +60,7 @@ var MarqueeDiv2Control=new Marquee("MarqueeDiv2");      //箭头控制滚动方�
 MarqueeDiv2Control.Direction="left";
 MarqueeDiv2Control.Step=1;
 MarqueeDiv2Control.Width=948;
-// MarqueeDiv2Control.Height=174;
+MarqueeDiv2Control.Height=174;
 MarqueeDiv2Control.Timer=20;
 MarqueeDiv2Control.ScrollStep=1;                //若为-1则禁止鼠标控制实例
 MarqueeDiv2Control.Start();
