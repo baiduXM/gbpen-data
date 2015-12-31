@@ -46,7 +46,7 @@
      <ul>
       {foreach name=article item=article from=$list.data}
         <li class="clearfix">
-          <div class="img_box"><a href="{$article.link}"><img src="{$article.image}"  /></a></div>
+          <div class="img_box"><a href="{$article.link}"><img src="{$article.image}" width="140" height="90" /></a></div>
           <div class="text_box">
             <div class="text_title"><a href="{$article.link}"><span>[{$article.pubtimestamp|date_format:'%Y/%m/%d'}]</span><b> {$article.title}</b></a></div>
             <div class="text_word">   <div class="text_word1">

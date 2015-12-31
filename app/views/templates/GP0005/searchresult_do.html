@@ -21,9 +21,10 @@
 
 <body>
    {include file="./_header.html"} 
-     <div class="contant_about w">
+     <div class="contant_about">
         <div class="about_l f_l">
          {include file="./_pagenavs_sub3.html"}
+          <div class="lx"><div class="lx_q">{include file="./_global.html"}</div></div>
         </div>
        <div class="about_r f_r">
          {include file="./_right_nav.html"}
@@ -33,9 +34,9 @@
                     {else}
            <p class="t">搜索关键词为“<span>{$search.keyword}</span>”的产品/文章，共搜索到{$search.total}个结果：</p>
            <ul class="module_news">
-              {foreach item=article from=$search.data}
-              <li><a href="{$article.link}">{$article.title}<span class="fr" datetime="{$article.pubdate}" pubdate="pubdate">{$article.pubdate}</span></a></li>
-              {/foreach}
+              {foreach item=article from=$search.data}<!--search_content_start-->
+              <li><a href="search_$link">search_$title<span class="fr" datetime="search_$pubdate" pubdate="pubdate">search_$pubdate</span></a></li>
+              <!--search_content_end-->{/foreach}
             </ul>
             {/if}
            <div class="num">{include file="./_num.html"}</div>

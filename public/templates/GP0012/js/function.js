@@ -18,12 +18,7 @@ $(document).ready(function() {
         $(this).parent().siblings().find(".third").slideUp()
         $(this).siblings(".third").slideToggle()
     }) 
-	$(".bd li").each(function(){
-	if($(this).find("img").width() > 500){
-        $(this).find("img").width("99%");
-}
 
-		})
 
 
 
