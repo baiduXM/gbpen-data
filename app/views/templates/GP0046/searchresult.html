@@ -9,7 +9,9 @@
         }
     {/if}
     </script>
+     
  
+
 
 <meta name="keywords" content="{$keywords}"/>
 <meta name="description" content="{$description}"/>
@@ -25,7 +27,6 @@
 <script type="text/javascript" src="{$site_url}js/global.js"></script>
 <script type="text/javascript" src="{$site_url}js/index.js"></script>
 <title>{$title}</title>
-{$headscript}
 </head>
 
 <body>
@@ -37,11 +38,12 @@
             <div class="side-left fl">
                 {include file='./_pagenavs_sub3.html'}
                 <div class="recu">
-                     <h1 class="title">人才招聘<span>recruitment</span></h1>
+                     <h1 class="title">{$global.sidecol.name}<span>{$global.sidecol.en_name}</span></h1>
                      <div class="ny-recu">
-                         <a href="{$global.contactimg.link}" class="recuimg">
-                           <img src="{$global.contactimg.image}" width="215" height="134">
+                         <a href="{$global.sidecol.link}" class="recuimg">
+                           <img src="{$global.sidecol.image}" width="215" height="134">
                          </a>
+
                      </div>
 
                 </div>

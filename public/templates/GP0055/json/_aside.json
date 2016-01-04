@@ -1,0 +1,29 @@
+{
+	"pagenavs": {
+		"value": {},
+		"description": "侧边栏目列表（当前栏目无子栏目时展示的目标栏目）",
+		"type": "list",
+		"config": {
+			"filter": "list,page",
+			"mustchild": true
+		}
+	},
+		"contact":{
+		"value": "移动电话：0592-01234567",
+		"description": "内页侧边栏联系我们",
+		"type": "textarea"
+	},"list1":{
+	"description":"侧边栏快捷按钮",
+	"value":{},
+	"type":"list",
+	"config":{
+			"filter":"list,page"
+		}
+	},
+		"contact":{
+		"value": "手机号码：15159825555",
+		"description": " 内页侧边栏联系我们",
+		"type": "textarea"
+	}
+	}
+	

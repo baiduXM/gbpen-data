@@ -16,7 +16,7 @@ $(".menulist .swiper-nav span .txt_bg").height($(".menulist .swiper-nav span .tx
 $(".menulist .swiper-nav span .txt").height($(".menulist .swiper-nav span .txt").width())
 $(".swiper-wrapper,.swiper-slide").height($(".menulist .swiper-nav span .txt_bg").width())
 $("#in_page .inner p").height($("#in_page .inner img").height())
-
+$(".iconfont").css({"color":"#214322","font-size":25})
 /*美工专属区域*/
 	
 	

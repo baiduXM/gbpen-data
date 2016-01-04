@@ -65,7 +65,7 @@
                                 <div class="list-item">
                                   <dl><a href="{$article.link}"><img src="{$article.image}"></a></dl>
                                   <dt><a href="{$article.link}">{$article.title}</a></dt>
-                                  <dd>{$article.description|truncate:400:"…"}</dd>
+                                  <dd>{$article.description|truncate:70:"…"}<a href="{$article.link}">[查看详情]</a></dd>
                                 </div>
 
                                 {if $article@index+1 == 4} {break} {/if}

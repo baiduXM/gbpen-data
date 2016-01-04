@@ -24,7 +24,7 @@ ol,p,dl,li{list-style:none;}
 /*首页start*/
 /*头部标签*/
 .header{width:100%;height: 95px;background:#fff;border-top: 3px solid #cc1835;}
-.logo{width: 168px;height: 78px;padding: 4px 0;float: left;}
+.logo{width: 168px;height: 78px;padding: 4px 0;float: left; margin-top:-17px;}
 .home{width: 243px;float: right;margin-right: 15px;}
 .home span{margin-top: 15px;display: block;float: right;}
 .home span a{color: #686868;padding: 0 5px;}
@@ -93,7 +93,7 @@ ul.nav>li>a:hover{background: url(../images/lihover.png) repeat-x;}
 
 /*foot*/
 .foot{width:100%;background: #252527;padding: 20px 0 27px;overflow: hidden;}
-.foot p{width: 740px;float: left;color: #838383}
+.foot p{width: 740px;float: left;color: #838383;text-align:center;}
 .foot p span a,.footlink a{color: #838383;}
 .foot p span a:hover,.footlink a:hover{color:#f00;}
 .footlink{float: right;color: #838383}
@@ -149,7 +149,7 @@ ul.first>li>a:hover,.cu{background:#939393 url(../images/arrow2.png) 10px center
 .ny-list .list-item dl{width: 175px;height: 107px;float: left;margin-right: 12px;}
 .ny-list .list-item dl a{display: block;border: 1px solid #e8e8e8;padding: 1px;}
 .ny-list .list-item dl a img{width: 171px;height: 103px;}
-.ny-list .list-item dt a{font-size: 14px;color: #777;font-weight: bold;line-height: 32px;}
+.ny-list .list-item dt a{font-size: 14px;color: #777;font-weight: bold;line-height: 32px; overflow:hidden; word-wrap:normal; text-overflow:ellipsis; display:block; max-height:24px;}
 .ny-list .list-item dt a:hover{color:#cc1835;}
 .ny-list .list-item dd{height: 75px;overflow: hidden;color: #777;line-height: 25px;}
 

@@ -1,7 +1,7 @@
       <script type="text/javascript">
       // 跳转PC页面
       {if $site_another_url}
-          if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+          if (!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
               location.href = '{$site_another_url}';
           }
       {/if}
@@ -54,7 +54,7 @@
     <div class="index-wrap">
       <header>
            <div class="nyheader">
-               <i class="hicon2 iconfont">&#xe603;</i>
+               <i class="hicon2 iconfont" id="quickbar-showcats">&#xe603;</i>
                <span class="hicon1"><a href="javascript:window.history.back()">返回</a></span>
            </div>
       </header>

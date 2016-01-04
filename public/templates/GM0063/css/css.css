@@ -22,7 +22,7 @@
 
 #in_page{ margin-top:5%;}
 #in_page .in_h1 { float:left; width:18%; position:relative}
-#in_page .in_h1 .in_zh{width:100%;line-height:30px; height:30px;font-size:18px; padding-left:5px;  text-align:left; margin:auto;  margin-top:10px; margin-bottom:10px; border:1px solid #878379; background:url(../images/a_bg.png) no-repeat 90px 12px;}
+#in_page .in_h1 .in_zh{width:100%;line-height:30px; height:30px;font-size:18px;   text-align:center; margin:auto;  margin-top:10px; margin-bottom:10px; border:1px solid #878379; }
 #in_page .in_h1 .in_en{ width:50%;color:#e12735; line-height:20px; height:20px; font-weight:normal; font-size:15px; text-align:center; margin:auto; text-align:right; position:absolute; right:30px; overflow:hidden}
 #in_page .in_h1 .circle{ width:20px; height:20px; background:#d96e17; border-radius:50%; color:#fff; text-align:center; line-height:20px; position:absolute; right:0px }
 
@@ -59,7 +59,7 @@
 
 #in_text{ margin-top:5%;}
 #in_text .in_h1 { float:left; width:18%; position:relative}
-#in_text .in_h1 .in_zh{width:100%;line-height:30px; height:30px;font-size:18px; padding-left:5px;  text-align:left; margin:auto;  margin-top:10px; margin-bottom:10px; border:1px solid #878379; background:url(../images/a_bg.png) no-repeat 90px 12px; overflow:hidden}
+#in_text .in_h1 .in_zh{width:100%;line-height:30px; height:30px;font-size:18px; text-align:center; margin:auto;  margin-top:10px; margin-bottom:10px; border:1px solid #878379; overflow:hidden}
 #in_text .in_h1 .in_en{ width:50%;color:#e12735; line-height:20px; height:20px; font-weight:normal; font-size:15px; text-align:center; margin:auto; text-align:right; position:absolute; right:40px; overflow:hidden}
 #in_text .in_h1 .circle{ width:20px; height:20px; background:#d96e17; border-radius:50%; color:#fff; text-align:center; line-height:20px; position:absolute; right:0px }
 #in_text .inner{float:right; width:70%; line-height:26PX; font-size:13px; margin-top:20px; margin-left:5%; height:140px;}
@@ -74,13 +74,13 @@
 #in_text .in_h1 .in_en{ font-size:11px; line-height:15px; height:15px;  right:20px; width:60%}
 #in_text .in_h1 .circle{ width:15px; height:15px; line-height:15px;}
 #in_text .inner{ font-size:12px; width:62%; margin-left:12%; line-height:23px; }
-#in_text .in_h1 .in_zh{background:url(../images/a_bg.png) no-repeat 65px 12px;}
+
 }
 @media screen and (min-width: 480px) {
 }
 #in_image{ margin-top:40px;}
 #in_image .in_h1 { float:left; width:18%; position:relative}
-#in_image .in_h1 .in_zh{width:100%;line-height:30px; height:30px;font-size:18px; padding-left:5px;  text-align:left; margin:auto;  margin-top:10px; margin-bottom:10px; border:1px solid #878379; background:url(../images/a_bg.png) no-repeat 90px 12px;overflow:hidden}
+#in_image .in_h1 .in_zh{width:100%;line-height:30px; height:30px;font-size:18px;  text-align:center; margin:auto;  margin-top:10px; margin-bottom:10px; border:1px solid #878379;overflow:hidden}
 #in_image .in_h1 .in_en{ width:70%;color:#e12735; line-height:20px; height:20px; font-weight:normal; font-size:15px; text-align:center; margin:auto; text-align:right; position:absolute; right:30px; overflow:hidden}
 #in_image .in_h1 .circle{ width:20px; height:20px; background:#d96e17; border-radius:50%; color:#fff; text-align:center; line-height:20px; position:absolute; right:0px}
 #in_image .inner{ float:left; width:76%;   line-height:26PX; font-size:13px; margin-top:0px; margin-left:5%; }

@@ -4,7 +4,7 @@
       <script type="text/javascript">
       // 跳转PC页面
       {if $site_another_url}
-          if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+          if (!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
               location.href = '{$site_another_url}';
           }
       {/if}
@@ -106,7 +106,7 @@
             <div class="nytop">
               <h2>{$list.name}</h2>
               <span class="fontbox">字体</span>
-              <span class="more2">分类 <i><img src="images/classarrow.png" alt=""></i></span>
+              <span class="more2">分类 <i><img src="{$site_url}images/classarrow.png" alt=""></i></span>
 
             </div>
             <ul class="hide-class">
