@@ -65,7 +65,7 @@
 												<p class="date">[<span>search_$pubdate</span>]</p>
 											</li>
 											
-											{/foreach}										
+											<!--search_content_end-->{/foreach}										
 										</ul>									
 									</div>
 									{/if}
@@ -84,7 +84,7 @@
 							{else}
 								<li><a href="{$near_link}">{$near_page}</a></li>
 							{/if}
-							<!--search_content_end-->{/foreach}
+							{/foreach}
 							
 							<li><a href="{if $page_links.current_page lt $page_links.page_count}{$page_links.next_link}{else}javascript:;{/if}">下一页</a></li>
 							<li><a href="{if $page_links.current_page lt $page_links.page_count}{$page_links.last_link}{else}javascript:;{/if}">末页</a></li>

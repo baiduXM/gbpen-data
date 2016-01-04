@@ -38,7 +38,7 @@
               <ul class="newslist">
               {foreach item=article from=$search.data}<!--search_content_start-->
               <li><a href="search_$link"><h2>search_$title</h2><span datetime="search_$pubdate" pubdate="pubdate">search_$pubdate</span></a></li>
-              {/foreach}
+              <!--search_content_end-->{/foreach}
               </ul>               
 
 
@@ -52,7 +52,7 @@
                   {else}
                   <a href="{$near_link}">{$near_page}</a>
                   {/if}
-               <!--search_content_end-->{/foreach}
+               {/foreach}
                <a href="{$page_links.next_link}">下一页</a>
                <a href="{$page_links.last_link}">尾 页</a>
 
