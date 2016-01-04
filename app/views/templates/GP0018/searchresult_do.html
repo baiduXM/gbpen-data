@@ -46,14 +46,14 @@
                             <div class="nlist_word">search_$description<span><a href="search_$link">[查看更多]</a></span></div>
                             </li>            
                           {if $article@index+1 == 6} {break} {/if}
-                        {/foreach}
+                        <!--search_content_end-->{/foreach}
                      </ul>
                         <div class="module_page">
                             第{$page_links.current_page}页/共{$page_links.page_count} 页
                             <a href="{$page_links.first_link}">首页</a>
                             <a href="{$page_links.prev_link}">上一页</a> {foreach name=nears_link item=near_link key=near_page from=$page_links.nears_link} {if $near_page == $page_links.current_page}
                             <a class="current">{$near_page}</a> {else}
-                            <a href="{$near_link}">{$near_page}</a> {/if} <!--search_content_end-->{/foreach}
+                            <a href="{$near_link}">{$near_page}</a> {/if} {/foreach}
                             <a href="{$page_links.next_link}">下一页</a>
                             <a href="{$page_links.last_link}">尾页</a></div>
                       {/if}
