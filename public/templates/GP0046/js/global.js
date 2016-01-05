@@ -21,4 +21,5 @@ $(document).ready(function(){
 	$('.ny-prolist li:nth-child(3n)').css('marginRight',0)
 
     jQuery(".focusBox").slide({ mainCell:".pic",effect:"fold", autoPlay:true, delayTime:300});
+    jQuery("#slide").slide({mainCell:"ul",autoPlay:true,effect:"left"});
 });

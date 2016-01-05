@@ -23,7 +23,7 @@
                 {if $nav.childmenu}
                     <ul class="subnav">
                         {foreach key=key item=nav_list from=$nav.childmenu}
-                        <li class="{if $nav.current}current{/if}"><a href="{$nav_list.link}">{$nav_list.name}</a></li>
+                        <li><a href="{$nav_list.link}">{$nav_list.name}</a></li>
                         <li>|</li>
                         {/foreach}
                     </ul>
