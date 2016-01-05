@@ -2,7 +2,7 @@ $(document).ready(function($) {
     var a = $("nav li").children('a')
     a.click(function() {
         $(this).next().slideToggle(400,function(){
-        	$(this).is(':hidden') ? $(this).parent().addClass('on') : $(this).parent().removeClass('on');
+        	$(this).is(':hidden') ? $(this).parent().removeClass('on') : $(this).parent().addClass('on');
         })
     });
 
