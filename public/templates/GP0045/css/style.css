@@ -24,6 +24,13 @@ ul.nav li{ float:left;line-height:39px; height:39px;text-align:left; width:122px
 ul.nav li a{line-height:39px; height:39px; width:112px;display:block; margin-left:4px; text-decoration:none; text-align:center;  font-weight:bold; font-family:"微软雅黑"; font-size:15px;}
 ul.nav li a:link,ul.nav li a:visited{ color:#ffffff;}
 ul.nav li a:hover{ color:#ffffff;background:url(../images/m_hover.jpg) top center no-repeat;}
+ul.nav li .sub{position: absolute;z-index: 9;display: none}
+ul.nav li .sub li{
+    background: -webkit-linear-gradient(#A70B0F, #781416);
+    background: -o-linear-gradient(#A70B0F, #781416);
+    background: -moz-linear-gradient(#A70B0F, #781416);
+    background: linear-gradient(#A70B0F, #781416); 
+}
 .banners{ width:1000px; height:380px; margin:20px auto;overflow: hidden;}
 .focusBox { position: relative; width:100%; height:380px; overflow: hidden; }
 .focusBox .pic{ position:relative; z-index:0; }
