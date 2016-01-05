@@ -24,6 +24,7 @@
 <script type="text/javascript" src="{$site_url}js/function.js"></script>
 
 
+
 <title>{$title}</title> 
 
 </head>
@@ -31,24 +32,21 @@
 <body>
 
       {include file='./_header.html'}
-      
-        <div class="right-top"> </div>
-<div id="container" class="bg1">
-<div class="bottom_left"></div>
-<div class="bottom_right"></div>
-  <div class="container-inner1 wrapper clearfix">
- <div class="container-inner2 clearfix">
-         {include file='./_aside.html'}            	
-
-
-            <div class="main">
-                   <div class="crumb">
-                {$list.name}{$list.en_name}
-                <span>当前位置：<a href="{$site_url}">首页</a>
+<div id="sub_container" class=" clearfix">
+  <div class="sid_bg">
+    <div class="sidebar wrapper clearfix">
+      <div class="title">
+        <h2><span>{$list.en_name}</span><br />
+          <b>{$list.name}</b></h2>
+      </div>
+      <div class="crumb"><img src="{$site_url}images/ico5.jpg" width="19" height="24"class="pngFix" /><span>当前位置：<a href="{$site_url}">首页</a>
            {foreach item=nav from=$posnavs}
              &gt; <a href="{$nav.link}">{$nav.name}</a>
-           {/foreach}</span>
-            </div>  
+           {/foreach}</span> </div>
+    </div>
+  </div>
+  <div class="main wrapper clearfix">
+                    {include file='./_aside.html'}     
             <div class="article">
             
                 

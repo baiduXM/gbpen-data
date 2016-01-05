@@ -116,7 +116,7 @@
                                 </a>
                                 <div class="morejiac"><a href="search_$link">+</a></div>
                             </div>                   
-                                     {/foreach}   
+                                     <!--search_content_end-->{/foreach}   
   <div class="module_page"  >
                 第{$page_links.current_page}页/共{$page_links.page_count} 页      
               <a href="{$page_links.prev_link}">&laquo; 上一页</a>
@@ -126,7 +126,7 @@
                 {else}
                   <a href="{$near_link}">{$near_page}</a></li>
                 {/if}
-              <!--search_content_end-->{/foreach}
+              {/foreach}
 
 
               <a href="{$page_links.next_link}">下一页 &raquo;</a>
