@@ -47,14 +47,14 @@
 <div class="detal">
                     	<div class="detal_s">
 				   <h3><span>所在位置:
-                 {foreach item=nav from=$pagenavs}
+                 {foreach item=nav from=$posnavs}
                      &gt; <a href="{$nav.link}">{$nav.name}</a>
                  {/foreach}
                 </span> {$article.category.name}</h3>
 <div class="deteo">
             <div class="main_right_con" >
                 	 <h1 class="inner_news_tit">{$article.title} </h1>
-   <h2 class="inner_news_time">添加时间{$article.pubtimestamp|date_format:'%Y年%m月%d日 %r %H:%M:%S'} </h2>
+   <h2 class="inner_news_time">添加时间:{$article.pubdate}</h2>
    <div class="edit">
    {$article.content|unescape:"html"} 
 

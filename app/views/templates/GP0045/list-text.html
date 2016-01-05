@@ -46,7 +46,7 @@
 <div class="right">
 <div class="detal">
                     	<div class="detal_s">
-				   <h3><span>所在位置:{foreach item=nav from=$pagenavs}
+				   <h3><span>所在位置:{foreach item=nav from=$posnavs}
                      &gt; <a href="{$nav.link}">{$nav.name}</a>
                    {/foreach}
                </span> {$list.name}</h3>
@@ -67,7 +67,7 @@
                             <a href="{$near_link}">{$near_page}</a>
                         {/if}
                     {/foreach}                                                                                          
-                    <a href="{$page_links.next_link}#">下一页</a> 
+                    <a href="{$page_links.next_link}">下一页</a> 
                     <a href="{$page_links.last_link}">尾页</a>
                 </div>                                     
               </div>

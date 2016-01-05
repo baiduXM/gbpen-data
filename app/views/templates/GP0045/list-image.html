@@ -46,7 +46,7 @@
 <div class="right">
 <div class="detal">
                     	<div class="detal_s">
-				   <h3><span>所在位置:{foreach item=nav from=$pagenavs}
+				   <h3><span>所在位置:{foreach item=nav from=$posnavs}
                      &gt; <a href="{$nav.link}">{$nav.name}</a>
                    {/foreach}
                </span> {$list.name}</h3>
@@ -55,7 +55,7 @@
    <div class="main_right_con" style="padding:8px 0px 10px">
       <ul class="inner_pro">
         {foreach name=article item=article from=$list.data}
-            <li><a href="{$article.link}}"><img src="{$article.image}"  height="126" width="165" title="{$article.title}"/><p class="photo_title2">{$article.title}</p></a></li>
+            <li><a href="{$article.link}"><img src="{$article.image}"  height="126" width="165" /><p class="photo_title2">{$article.title}</p></a></li>
         {/foreach}
 
 
@@ -79,7 +79,7 @@
                             <a href="{$near_link}">{$near_page}</a>
                         {/if}
                     {/foreach}                                                                                          
-                    <a href="{$page_links.next_link}#">下一页</a> 
+                    <a href="{$page_links.next_link}">下一页</a> 
                     <a href="{$page_links.last_link}">尾页</a>
                     
 					</div>            			</div>

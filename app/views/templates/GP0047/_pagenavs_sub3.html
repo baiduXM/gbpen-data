@@ -7,7 +7,7 @@
 	<ul class="clearfix">
 		{foreach name=pagenavs item=nav from=$pagenavs}
 		<li class="{if $nav.current}current{/if}">
-			<a href="{if count($nav.childmenu) eq 0}{$nav.link}{else}javascript:;{/if}">{$nav.name}</a>
+			<a href="{if $nav.childmenu}javascript:;{else}{$nav.link}{/if}">{$nav.name}</a>
 			{if $nav.childmenu}
 			<ul class="clearfix" style="display: none;">
 				{foreach key=key item=nav_list from=$nav.childmenu}
@@ -34,7 +34,7 @@
 	<ul class="clearfix">
 		{foreach name=pagenavs item=nav from=$_pagenavs_sub3.pagenavs.childmenu}
 		<li class="{if $nav.current}current{/if}">
-			<a href="{if count($nav.childmenu) eq 0}{$nav.link}{else}javascript:;{/if}">{$nav.name}</a>
+			<a href="{if $nav.childmenu}javascript:;{else}{$nav.link}{/if}">{$nav.name}</a>
 			{if $nav.childmenu}
 			<ul class="clearfix" style="display: none;">
 				{foreach key=key item=nav_list from=$nav.childmenu}

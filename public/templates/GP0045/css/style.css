@@ -104,7 +104,7 @@ ul.nav li .sub li{
 .news_deta1 li a:link,.news_deta1 li a:visited{ color:#333;}
 .news_deta1 li a:hover{ color:#db1919;}
 
-.footes{ width:100%; height:114px; background:#ececec; margin-top:15px;}
+.footes{ width:100%; height:177px; background:#ececec; margin-top:15px;}
 .mid_ft{ background:url(../images/fobtw.jpg) no-repeat; height:114px; width:1000px; margin:0px auto; text-align:center; color:#666666; line-height:22px;}
 .mid_ft a:link,.mid_ft a:visited{ color:#666666;}
 .mid_ft a:hover{color:#db1919}
@@ -201,3 +201,6 @@ p.photo_title{height:30px; line-height:30px; text-align:center;}
 .text_p{ color:#db1919;padding:0px;width:90%; position:absolute; top:0px; left:16px; }
 .moule_edot{  color:#333;width:99%; margin-left:5px; clear:both;text-align:Justify;
 text-justify:inter-ideograph;}
+
+.photos-content.photo1{height:161px;}
+strong{text-overflow: ellipsis;overflow: hidden;white-space: nowrap;display:block;width:160px;}
