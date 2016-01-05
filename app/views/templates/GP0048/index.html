@@ -18,6 +18,7 @@
 <link href="{$site_url}css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="{$site_url}js/jquery1.42.min.js"></script>
 <script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.js"></script>
+<script type="text/javascript" src="{$site_url}js/jquery.msAccordion.js"></script>
 <script type="text/javascript" src="{$site_url}js/animation.js"></script>
 <script type="text/javascript" src="{$site_url}js/function.js"></script>
 <title>{$title}</title>
@@ -63,14 +64,21 @@
             <div class="jcsj">
             <div class="a_titles">{$index.wonderful.name}</div>
             <div class="borders2">
-<div id="box">
-  <ul>
-    {foreach name=won item=wonder from=$index.wonderful.data}
-    <li class="hove"><span class="hove"><div class="num">{$wonder@index+1}</div>{$wonder.title}</span><a href="{$wonder.link}"><img src="{$wonder.image}" height="108" width="165"  class="pimgs"></a></li>
-    {if $wonder@index+1 == 4}{break}{/if}
-    {/foreach}
-  </ul>
-</div>
+              <div id="box">
+                <div id="accordion">
+                  {foreach name=won item=wonder from=$index.wonderful.data}
+                  <div class="hove">
+                    <div class="hove accordion-title">
+                      <div class="num">{$wonder@index+1}</div>{$wonder.title}
+                    </div>
+                    <div href="{$wonder.link}" class="accordion-content">
+                      <img src="{$wonder.image}" height="108" width="165"  class="pimgs">
+                    </div>
+                  </div>
+                  {if $wonder@index+1 == 4}{break}{/if}
+                  {/foreach}
+                </div>
+              </div>
             </div>
             
             </div>

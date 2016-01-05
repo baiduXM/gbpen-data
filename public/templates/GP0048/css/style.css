@@ -22,12 +22,19 @@ body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, fo
 .logo{ width:701px; height:112px; float:left; display:inline; overflow:hidden;} 
 .menu{margin:0px auto 1px; background:url(../images/menubg.jpg) no-repeat; width:960px; padding:1px 20px;height:48px;}
 .nav {position:relative;width:950px;height:48px;overflow:hidden;line-height:48px;font-size:14px;margin:0px auto;}
-.menu ul{ width:950px; margin:0px auto; height:48px;line-height:48px;font-size:14px;margin:0px auto; overflow:hidden; }
-.menu ul li{float:left;position:relative;text-align:left;line-height:48px;height:48px;overflow:hidden; width:95px;}
+.menu ul{ width:950px; margin:0px auto; height:48px;line-height:48px;font-size:14px;margin:0px auto; }
+.menu ul li{float:left;position:relative;text-align:left;line-height:48px;height:48px;width:95px;}
 .menu ul li a{position:relative;/* 必要元素 */display:block;width:95px;height:48px; margin-left:0px; text-align:center;overflow:hidden;font-size:14px; text-decoration:none;cursor:pointer;}
 .menu ul li a span{position:absolute;/* 必要元素 */left:0;width:95px;}
 .menu ul li a span.out{top:0px;overflow: hidden;white-space: nowrap;}
 .menu ul li a span.over,.menu ul li a span.bg{top:-48px;white-space: nowrap;overflow: hidden;}
+.menu .sub{position: absolute;z-index: 9;display: none}
+.menu .sub li{
+  background: -webkit-linear-gradient(#79AF1D, #58830D);
+  background: -o-linear-gradient(#79AF1D, #58830D);
+  background: -moz-linear-gradient(#79AF1D, #58830D);
+  background: linear-gradient(#79AF1D, #58830D);
+}
 #menu ul li a{color:#fff;}
 #menu ul li a span.over{color:#fff; background:#94c939;}
 #menu ul li span.bg{height:48px;}
@@ -87,13 +94,18 @@ body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, fo
 .kecjs{ width:280px; float:right; display:inline; overflow:hidden; height:180px;}
 .borders3{  margin-left:0px; width:252px; height:auto;  border:1px solid #cccccc; padding:13px; height:122px; position:relative; }
 .borders3 strong {white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
-#box{width:308px; overflow:hidden;height:123px; border:1px solid #ccc; border-right:none;}
-#box li{width:29px;height:123px;overflow:hidden;position:relative; float:left; display:inline; border-right:1px solid #ccc;}
-#box li.hove{width:217px;text-align:right;}
+#box{width:308px; overflow:hidden;height:123px; border-right:none;}
+/*#box li{width:29px;height:123px;overflow:hidden;position:relative; float:left; display:inline; border-right:1px solid #ccc;}*/
 #box li span{width:20px;height:123px;top:0px; background:#fff; line-height:18px;left:0px;color:#90ba1c;cursor:pointer;text-align:center;padding:5px 4px 0 5px;position:absolute;}
-#box li span.hove{background:#fff;}
-#box li .num{ background:url(../images/yuan.jpg) no-repeat; padding:1px; text-align:center; width:13px; height:13px; line-height:13px; color:#fff; margin-left:3px;}
-#box .pimgs{ width:165px; height:108px; padding:10px 20px; margin-left:10px; }
+#box div.num{display: block; background:url(../images/yuan.jpg) no-repeat; padding:1px; text-align:center; width:13px; height:13px; line-height:13px; color:#fff; margin-left:3px;}
+#box .pimgs{ width:165px; height:108px; margin: 5px auto;}
+.accordionWrapper{display:inline-block; background-color:#fff; overflow:hidden;}
+.accordionWrapper img{vertical-align:top; border:0; margin:0; padding:0}
+.accordionWrapper div{display:inline; float:left; margin:auto;}
+.accordionWrapper div.accordion-title{cursor:pointer;width: 19px;line-height: 13px;margin: auto 1px;}
+.accordionWrapper div.accordion-content{display:none;}
+.accordionWrapper .num{float: none;}
+.accordionWrapper strong{ width: 14px;display: block;text-align: center;margin: 0 auto;}
 .cimgs{ width:134px; height:125px; overflow:hidden; float:left; display:inline;}
 .music{ width:101px; float:right; display:inline; overflow:hidden;}
 .music ul li{ border-bottom:1px solid #ccc; height:29px; line-height:29px; background:url(../images/mioc.jpg) left no-repeat;}
