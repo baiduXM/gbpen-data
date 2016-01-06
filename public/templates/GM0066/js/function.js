@@ -13,7 +13,7 @@ $(document).ready(function(){
 $(window).load(function(){
 /*美工专属区域*/
 $("#in_image ul li:last").css("margin-right",0)
-
+$("#in_image .inner").height($("#in_image ul li").height())
 
 /*美工专属区域*/
 	

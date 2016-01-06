@@ -69,9 +69,9 @@
         </div>
         
       {elseif $mIndexCat.type eq 1} 
-       <div class="wrapper insub_imagetext" >
+       <div class="wrapper insub_imagetext cc" >
       <h2 class="in_h2"><a href="{$mIndexCat.link}"><div class="in_en">{$mIndexCat.en_name}</div><div class="in_zh">{$mIndexCat.name}</div><div class="line"></div></a></h2>
-        <div class="inner  insub_imagetext">
+        <div class="inner">
           <ul class="clearfix">
             {foreach item=article from=$mIndexCat.data}
               <li>
@@ -86,9 +86,9 @@
         </div>
         </div>
       {elseif $mIndexCat.type eq 2} 
-      <div class="wrapper insub_image">
+      <div class="wrapper insub_image cc">
          <h2 class="in_h2"><a href="{$mIndexCat.link}"><div class="in_en">{$mIndexCat.en_name}</div><div class="in_zh">{$mIndexCat.name}</div><div class="line"></div></a></h2>
-        <div class="inner yc insub_image">
+        <div class="inner">
             <ul class="clearfix">
             {foreach item=article from=$mIndexCat.data}
               <li><a href="{$article.link}">

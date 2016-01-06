@@ -35,7 +35,7 @@ $(window).load(function(){
 		});
 		
 	$("section div.wrapper:odd").addClass("bg3")
-
+$(".in_h2 .iconfont").css({"font-size":30})
 /*美工专属区域*/
 	
 	

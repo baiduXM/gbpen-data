@@ -53,14 +53,14 @@
 #in_image .in_h1 .in_zh{ float:left;color:#333;font-size:22px;  text-align:center; margin:0 5px; text-align:center; }
 #in_image .in_h1 .in_en{  float:left;color:#e12735;font-weight:normal; font-size:15px; text-align:center; margin:auto; text-align:center;  }
 #in_image .inner{  overflow:hidden; line-height:25PX; font-size:13px; margin-top:0px; padding-bottom:20px;width:96%; margin:auto}
-#in_image .inner ul li{ width:30%; float:left; border:1px solid #fff; position:relative; }
+
 #in_image .inner ul li .more{ position:absolute; bottom:0px; width:100%; background:rgba(0,0,0,.3); text-align:center; color:#fff;}
 #in_image .inner ul li img{ width:100%}
 
 
 
 
-#in_image ul li{ float:left;  width:30%; margin:0 1.5%; margin-top:2%; background:url(../images/pro_libg.jpg) repeat-x bottom; padding-bottom:12px; }
+#in_image ul li{ float:left;  width:30%; margin:0 1.5%; margin-top:2%; background:url(../images/pro_libg.jpg) repeat-x bottom; padding-bottom:12px; border:1px solid #fff; position:relative;}
 #in_image ul li .in_proimg{ margin-bottom:5px; background-clip: border-box;}
 #in_image ul li .in_proimg img{border:solid 1px; border-color:rgba(0,0,0,0.2); }
 #in_image ul li .in_protitle{ text-align:center; border-radius:5px; color:#fff;opacity:0.5;filter:Alpha(opacity=50); }

@@ -28,9 +28,7 @@ $(window).load(function(){
 	  $(this).find(".inner ul li p").addClass("public_bg2")}
    })
     
-	
-   
-
+$(".insub_image .inner").height($(".insub_image .inner ul li").height())
 
 /*美工专属区域*/
 	

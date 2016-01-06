@@ -26,8 +26,8 @@
 @media screen and (min-width: 480px) {
 .in_page .inner p{ line-height:24px; height:72px; overflow:hidden; background-attachment:fixed}
 }
-
-
+.insub_image{ padding-bottom:20px;}
+.insub_image .inner{ overflow:hidden}
 
 /*#in_text ul li{ padding-bottom:20px;  margin-bottom:20px; border-bottom:dashed 1px; border-bottom-color:rgba(255,255,255,0.2)}
 #in_text ul li .in_title{font-size:1.2em;  line-height:26px; margin-top:5px;width:100%; display:block; white-space:nowrap; text-overflow:ellipsis; overflow:hidden;  height:26px; background:url(../images/sub2_ico.jpg) no-repeat 5px; padding-left:20px;}

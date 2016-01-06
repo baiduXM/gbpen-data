@@ -73,7 +73,8 @@
         <div class="inner">
             <ul>
               <li class="bg"><a href="{$mIndexCats[0].data[0].link}">
-              <div class="in_data"><div class="public_color2" >{$mIndexCats[0].data[0].pubtimestamp|date_format:"%d "}/{$mIndexCats[0].data[0].pubtimestamp|date_format:"%y "}</div></div> 
+              <div class="in_data"><div class="public_color2" >
+              {$mIndexCats[0].data[0].pubtimestamp|date_format:"%d "}/{$mIndexCats[0].data[0].pubtimestamp|date_format:"%y "}</div></div> 
               <div class="in_title"><div class="public_color2" >{$mIndexCats[0].data[0].title}</div></div>
                <div class="more"><div class="public_color2" >+</div></div>
                <div style="clear:both"></div>
@@ -82,7 +83,7 @@
                </li>
             {foreach item=article from=$mIndexCat.data}
               <li class="bg1 clearfix"><a href="{$article.link}">
-               <div class="in_data"><div class="public_color1" >{$article.pubtimestamp|date_format:"%d "}/{$article.pubtimestamp|date_format:"%m "}</div></div> 
+               <div class="in_data"><div class="public_color1" >{$article.pubtimestamp|date_format:"%d "}/{$article.pubtimestamp|date_format:"%m "}</div></div>
               <div class="in_title"><div class="public_color1" >{$article.title}</div></div>
                <div class="more bg2"><div class="public_color2" >+</div></div>
                 </a>
