@@ -61,7 +61,7 @@
                                   <ul>
                                     {foreach item=article from=$search.data}<!--search_content_start-->
                    <li><a href="search_$link"><span class="date"><time datetime="search_$pubdate" pubdate="pubdate">{$article.pubtimestamp|date_format:'%Y-%m-%d'} </time></span>search_$title</a></li>
-                                     {/foreach}
+                                     <!--search_content_end-->{/foreach}
                                   </ul>     
   <div class="module_page"  >
                 第{$page_links.current_page}页/共{$page_links.page_count} 页      
@@ -72,7 +72,7 @@
                 {else}
                   <a href="{$near_link}">{$near_page}</a></li>
                 {/if}
-              <!--search_content_end-->{/foreach}
+              {/foreach}
 
 
               <a href="{$page_links.next_link}">下一页 &raquo;</a>

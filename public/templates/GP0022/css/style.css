@@ -1,4 +1,4 @@
-/*重置*/
+﻿/*重置*/
 @charset "utf-8";
 *{ margin:0px; padding:0px;}
 a{ color: #505050; text-decoration:none}
@@ -113,7 +113,8 @@ figure{line-height: 0;}
 .top_pro span{float: right;color: #777777;font: 12px/48px "宋体";}
 .top_pro span a{color: #777777;font: 12px/48px "宋体";}
 .top_pro span a:hover{color: #e6ad27}
-.info{color: #797979;padding:10px;height: auto;overflow: hidden;font-size: 0;}
+.info{color: #797979;padding:10px;height: auto;overflow: hidden;}
+.info.pro ul{font-size: 0;}
 
  ul.module_news li a{line-height: 36px;height: 36px;display:block;background: url(../images/news_03.png) no-repeat left center;text-indent: 25px;overflow: hidden;border-bottom: 1px dashed #d5d5d5}
  ul.module_news li a:hover{color: #e6ad27;}
