@@ -69,10 +69,10 @@
                   {foreach name=won item=wonder from=$index.wonderful.data}
                   <div class="hove">
                     <div class="hove accordion-title">
-                      <div class="num">{$wonder@index+1}</div><a href="{$wonder.link}">{$wonder.title}</a>
+                      <div class="num">{$wonder@index+1}</div>{$wonder.title}
                     </div>
-                    <div class="accordion-content">
-                      <a href="{$wonder.link}"><img src="{$wonder.image}" height="108" width="165"  class="pimgs"></a>
+                    <div href="{$wonder.link}" class="accordion-content">
+                      <img src="{$wonder.image}" height="108" width="165"  class="pimgs">
                     </div>
                   </div>
                   {if $wonder@index+1 == 4}{break}{/if}

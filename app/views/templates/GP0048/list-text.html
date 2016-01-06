@@ -34,7 +34,7 @@
            {include file='./_pagenavs_sub3.html'}
             </div>
             <div class="inborder">
-               <div class="homkes"><span>您当前位置
+               <div class="homkes"><span>您当前位置：
                    {foreach item=nav from=$posnavs}
                      - <a href="{$nav.link}">{$nav.name}</a>
                    {/foreach}
@@ -49,7 +49,7 @@
                               <div class="ne_title"><a href="{$article.link}">{$article.title}</a></div>
                               <div class="ndate">[{$article.pubdate}]</div>
                               <div class="n_edit">
-                              {$article.description|truncate:115:"…"}<span><a href="{$article.link}">[查看详情]</a></span>
+                              {$article.description}<span><a href="{$article.link}">[查看详情]</a></span>
                               </div>
                           </div>
                         </div>
