@@ -43,12 +43,12 @@
                  </div>
              </div>
              <div class="col news fl">
-                 <h1 class="title">{$index.news.name}<span>{$index.news.en_name}</span><a href="{$index.news.link}">&gt;&gt;</a></h1>
+                 <h1 class="title">{$index.news.name}<span>{$index.news.en_name}</span><a href="{$index.news.link}">更多&gt;&gt;</a></h1>
                  <div class="col-nr">
                     <div class="focus">
                         <div id="pic">
                             <ul>
-                                {foreach item=pro from=$index.case.data}
+                                {foreach item=pro from=$index.news.data}
                                   <li><a href="{$pro.link}"><img src="{$pro.image}"><h2>{$pro.title|truncate:15:"…"}</h2></a></li>
                                 {/foreach}
                             </ul>
