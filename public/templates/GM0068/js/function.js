@@ -18,7 +18,7 @@ $(window).load(function(){
   $(".baner").css("margin-top",$(".logo").height()*0.7)
   $(".arrow-left,.arrow-right").css("margin-top",($(".navlist").height()-40)*0.5)
   $(".index div.wrapper:odd").addClass("public_bg2").css({"padding-top":15+"px","margin-top":20+"px"})
-   $(".index div.wrapper:even").css("margin-top",-13+"px")
+   $(".index div.wrapper:even").css("margin-top",10+"px")
     $('.index div.wrapper:odd').each(function(){
 	 if( $(this).attr("class")== 'wrapper insub_image public_bg2'){
 	  $(this).find(".inner ul li p").css({"background":"rgba(255,255,255,0.4)"})}

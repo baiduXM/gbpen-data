@@ -72,23 +72,28 @@
             <h2 class="in_h1 clearfix"><a href="{$mIndexCat.link}"><div class="in_zh">{$mIndexCat.name}</div><div class="in_en">{$mIndexCat.en_name}</div></a></h2>
         <div class="inner">
             <ul>
-              <li class="bg"><a href="{$mIndexCats[0].data[0].link}">
+             {foreach item=article from=$mIndexCat.data}
+              <li class="bg"><a href="{$article.link}">
               <div class="in_data"><div class="public_color2" >
-              {$mIndexCats[0].data[0].pubtimestamp|date_format:"%d "}/{$mIndexCats[0].data[0].pubtimestamp|date_format:"%y "}</div></div> 
-              <div class="in_title"><div class="public_color2" >{$mIndexCats[0].data[0].title}</div></div>
+             {$article.pubtimestamp|date_format:"%d "}/{$article.pubtimestamp|date_format:"%m "}</div></div> 
+              <div class="in_title"><div class="public_color2" >{$article.title}</div></div>
                <div class="more"><div class="public_color2" >+</div></div>
                <div style="clear:both"></div>
-               <div class="in_des">{$mIndexCats[0].data[0].description} </div>
+               <div class="in_des">{$article.description} </div>
                </a>
                </li>
+               {if $article@index+1 == 1}{break}{/if} 
+               {/foreach}
+               
             {foreach item=article from=$mIndexCat.data}
+             {if $article@index+1 gte 2 and $article@index+1 lte 3}
               <li class="bg1 clearfix"><a href="{$article.link}">
                <div class="in_data"><div class="public_color1" >{$article.pubtimestamp|date_format:"%d "}/{$article.pubtimestamp|date_format:"%m "}</div></div>
               <div class="in_title"><div class="public_color1" >{$article.title}</div></div>
                <div class="more bg2"><div class="public_color2" >+</div></div>
                 </a>
               </li>
-              {if $article@index+1 == 2}{break}{/if} {/foreach}
+              {/if} {/foreach}
             </ul>
             </div>
         </div>
