@@ -20,11 +20,7 @@
 <script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.js"></script>
 <script type="text/javascript" src="{$site_url}js/jquery.kinMaxShow-1.0.min.js"></script>
 <script type="text/javascript" src="{$site_url}js/function.js"></script>
-<style>
-.tx1 {
-	behavior: url(pie.htc);
-}
-</style>
+
 <title>{$title}</title>
 {$headscript}
 </head>
@@ -38,7 +34,7 @@
  <div class="inner clearfix">
  <div class="a_l">
  <h2>{$index.about.description}</h2>
-<span><a href="{$index.about.link}"><img src="images/mo.jpg" width="97" height="22" /></a></span>
+<span><a href="{$index.about.link}"><img src="{$site_url}images/mo.jpg" width="97" height="22" /></a></span>
  
  </div>
  <div class="a_r"><img src="{$index.about.image}" width="440" height="195" /></div>
@@ -54,7 +50,7 @@
  
  <div id="pro">
 
- <div class="title"><h1>{$index.pro.name}</h1><span><a href="{$index.pro.link}"><img src="images/mo2.png" width="79" height="17" /></a></span></div>
+ <div class="title"><h1>{$index.pro.name}</h1><span><a href="{$index.pro.link}"><img src="{$site_url}images/mo2.png" width="79" height="17" /></a></span></div>
 
  <div class="inner">
  <ul class="clearfix" id="MarqueeDiv1">
@@ -76,7 +72,7 @@
 
 {foreach name=news item=news from=$index.news.data}
     <div class="clearfix nw">
-<div class="np"><img src="{$index.news.image}"/></div>
+<div class="np"><img src="{$news.image}"/></div>
 <div class="wz">
 <h2><span><a href="{$news.link}">[2015-11-05]</a></span>{$news.title}</h2>
 <p><a href="{$news.link}">{$news.description}

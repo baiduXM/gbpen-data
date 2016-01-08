@@ -4,6 +4,7 @@ $("#case ul li .index_img").each(function(){
   	$(this).find("img").css("margin-top",hh1*0.5+"px")
 
 })
+
 }
 
 $(document).ready(function() {

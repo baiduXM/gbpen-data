@@ -1,5 +1,5 @@
-body{ color:#545454; font-family:Microsoft Yahei,Arial, Helvetica, sans-serif;   }
-body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,input,textarea,div{margin:0;padding:0; list-style:none; line-height:24px; font-size:12px; font-weight:normal}
+body{ color:#545454; font-family:Microsoft Yahei,Arial, Helvetica, sans-serif;  background:#fff }
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,input,textarea,div{margin:0;padding:0; list-style:none; line-height:24px; font-size:12px; font-weight:normal; }
 body,div,ul,li,dl,dt,dd{ font-size:12px;}
 .clearfix:after { content:'\20'; display:block; height:0; clear:both; }
 .clearfix { *zoom:1; font-size:0px;}
@@ -13,6 +13,16 @@ img{ border:none;}
 #nav ul li .cc a:hover{ color:red;}
 #nav ul li .cc a{height:30px; line-height: 30px; padding:0 8px; overflow:hidden; display:block}
 
+.shell{
+	background:url(/jscss/demoimg/200902/arrowb.gif) no-repeat 4px 5px;
+	border:1px solid #aaa; 
+	width:230px;
+	padding:3px 2px 2px 26px; 
+}
+#div1{
+	height:18px;
+	overflow:hidden;
+}
 
 .search{ position:absolute; top:20px; right:10px;}
 .search_area{ width:138px; height:24px; line-height:24px; color:#b2b2b2; text-indent:14px; float:left; border:1px solid #eadecf}
@@ -29,6 +39,7 @@ img{ border:none;}
 
 .nav_bg{ background:url(../images/nav_bg.jpg) top center repeat-x; height:45px; line-height:45px; width:100%}
 #nav ul li{ height:45px; line-height:45px; float:left; background:url(../images/navlibg.jpg) top right no-repeat}
+
 #nav ul li a{font-family:Microsoft Yahei; font-size:13px; color:#fff; padding: 0 15px; display:block; text-align:center}
 #nav ul li a:hover{ background:url(../images/navibg1.jpg) top center no-repeat}
 
@@ -52,7 +63,7 @@ img{ border:none;}
 
 #cn{ width:963px; margin-left:auto; margin-right:auto; margin-top:25px;}
 
-
+#div1 a { display:block;line-height:18px;text-decoration:none;color:#555;font-family:Arial;font-size:12px;} 
 #case{ width:294px; height:186px; background:#fff; border:1px solid #ded1c8; float:left}
 #case .title{ margin:auto; width:260px; margin-top:10px; background:url(../images/ico1.jpg) left no-repeat; height:28px; line-height:28px;}
 #case .title span a{ font-size:10px; color:#530f04}
