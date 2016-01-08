@@ -57,7 +57,7 @@
         <div class="squ_3"></div>
         <div class="squ_4"></div>         
     </div>
-    <div class="banerd">
+    <div class="banerd"> <div class="debg"></div>
     	<div class="datu">
 <div id="slideBox" class="slideBox">
            <div class="hd">
@@ -85,10 +85,10 @@
             
               {elseif $nav@index > 1}    
              
-               <dd class="{if $nav.current}current{/if} ddthird"><span><a href="{$nav.link}">{$nav.name}</a></span></dd>            
+               <dd class="ddthird"><span><a href="{$nav.link}">{$nav.name}</a></span></dd>            
           
-                   {if $nav@index+1 == 6}{break}{/if}
-                             {/if}
+                   {if $nav@index+1 == 7}{break}{/if}
+                  {/if}
                              
            {/foreach} 
            </dl>   

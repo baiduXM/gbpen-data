@@ -34,7 +34,7 @@
           <div class="news">
               <div class="ne_titles">{$index.news.name}</div>
                 <div class="xd_detalbg">
-                  <div class="nimgs"><a href="{$index.news.link}"><img src="{$index.news.image}" height="137" width="210" /></a></div>
+                  <div class="nimgs"><a href="{$index.news.link}"><img src="{$index.news.image}" /></a></div>
                     <div class="new_p">
                       <div class="news_titles"><a href="{$index.news.data[0].link}">{$index.news.data[0].title}</a></div>
                         <div class="news_edit">{$index.news.data[0].description}</div>
@@ -55,7 +55,7 @@
           <div class="left_about">
               <div class="a_titles">{$index.about_us.name}</div>
                 <div class="borders">
-<img src="{$index.about_us.image}" height="125" width="134"/>
+<img src="{$index.about_us.image}" />
                       <div class="anputt">
                              <a href="{$index.about_us.link}"> {$index.about_us.description}</a>
                       </div>                
@@ -72,7 +72,7 @@
                       <div class="num">{$wonder@index+1}</div><a href="{$wonder.link}">{$wonder.title}</a>
                     </div>
                     <div class="accordion-content">
-                      <a href="{$wonder.link}"><img src="{$wonder.image}" height="108" width="165"  class="pimgs"></a>
+                      <a href="{$wonder.link}"><img src="{$wonder.image}" class="pimgs"></a>
                     </div>
                   </div>
                   {if $wonder@index+1 == 4}{break}{/if}
@@ -85,7 +85,7 @@
             <div class="kecjs">
               <div class="a_titles">{$index.course.name}</div>
                 <div class="borders3">
-          <div class="cimgs"><a href="{$index.course.data[0].link}"><img src="{$index.course.data[0].image}" height="125" width="134" /></a></div>
+          <div class="cimgs"><a href="{$index.course.data[0].link}"><img src="{$index.course.data[0].image}" /></a></div>
                     <div class="music">
                       <ul>
                           {foreach name=cour item=article from=$index.course.data}
