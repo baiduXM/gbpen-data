@@ -38,7 +38,7 @@
  </div>
  
  <div id="news">
- <div class="title"><span><img src="images/mo.png" width="88" height="13" /></span><b>{$index.news.name}</b>{$index.news.en_name}</div>
+ <div class="title"><span><img src="{$site_url}images/mo.png" width="88" height="13" /></span><b>{$index.news.name}</b>{$index.news.en_name}</div>
  <div class="inner">
  <div class="np"><img src="{$index.news.image}" /></div>
  <div class="nz"> <h2><a href="{$index.news.data[0].link}">{$index.news.data[0].title}</a></h2>
@@ -46,7 +46,7 @@
  <div class="c"></div>
  <ul>
  {foreach name=news item=news from=$index.news.data}
-    {if $news@index+1 gte 1 and $news@index+1 lte 3}
+    {if $news@index+1 gte 2 and $news@index+1 lte 4}
      <li><span><a href="{$news.link}">[{$news.pubdate} ]</a></span><a href="#">{$news.title}</a></li>
 
      {/if}
@@ -77,7 +77,7 @@
  
  <div class="cn_r">
  <div id="pro">
- <div class="title"><span><a href="{$index.pro.link}"><img src="images/mo1.jpg" width="99" height="23" /></a></span>{$index.pro.name}</div>
+ <div class="title"><span><a href="{$index.pro.link}"><img src="{$site_url}images/mo1.jpg" width="99" height="23" /></a></span>{$index.pro.name}</div>
  <div class="inner">
  
  

@@ -5,7 +5,7 @@ strong{display: block;margin: 0 auto;overflow: hidden;text-overflow: ellipsis;wh
 .module_page{ width:100%;  line-height:20px;margin-top:30px;text-align:center; height:30px;}
 .module_page a{ text-decoration:none; color:#555454; /*color:#0c2d63;*/color:#633100; border:1px solid #b99e8b; background:#b99e8b;padding:3px 4px;}
 .module_page span{ padding-left:20px; padding-right:20px;}
-.module_page a:hover,.module_page a.current_near{ text-decoration:none; color:#fff; background:#8c8c8c}
+.module_page a:hover,.module_page a.current{ text-decoration:none; color:#fff; background:#8c8c8c}
 .module_page  select{ margin-left:5px; color:#000;}
 
 
@@ -18,7 +18,7 @@ strong{display: block;margin: 0 auto;overflow: hidden;text-overflow: ellipsis;wh
 }
 .list_image ul li .img{
 	position:relative;
-	width: 98%%;
+	width: 98%;
 	background-color: #fff;
 	text-align: center;
 	padding: 1%;

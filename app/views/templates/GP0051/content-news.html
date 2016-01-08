@@ -31,7 +31,7 @@
 {include file='./_aside.html'}
      
           <div class="main fr">
-          <div class="crumb "><span><a href="{$site_url}">首页</a>  {foreach item=nav from=$posnavs}&gt; <a href="{$nav.link}">{$nav.name}</a> {/foreach}</span><h2><img src="images/crumb_ico.png" width="16" height="15" />   {$article.category.name}</h2></div>
+          <div class="crumb "><span><a href="{$site_url}">首页</a>  {foreach item=nav from=$posnavs}&gt; <a href="{$nav.link}">{$nav.name}</a> {/foreach}</span><h2><img src="{$site_url}images/crumb_ico.png" width="16" height="15" />   {$article.category.name}</h2></div>
         <div class="article ">
                     <h1 class="inner_news_tit">{$article.title} </h1>
                     <h2 class="inner_news_time">{$article.pubtimestamp|date_format:'%Y-%m-%d %r '} </h2>

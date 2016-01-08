@@ -19,8 +19,8 @@ img{ border:none;}
 
 .nav_bg{ background:url(../images/nav_bg.jpg) top center repeat-x; height:39px; width:100%}
 
-#nav ul li{ height:39px; line-height:39px; float:left; background:url(../images/navlibg.jpg) top right no-repeat; text-align:center}
-#nav ul li a{font-family:Microsoft Yahei; font-size:13px; color:#fff; padding: 0 23px; display:block}
+#nav ul li{ height:39px; line-height:39px; float:left; background:url(../images/navlibg.jpg) top right no-repeat;}
+#nav ul li a{font-family:Microsoft Yahei; font-size:13px; color:#fff; padding: 0 23px; display:block;}
 #nav ul li a:hover{ background:url(../images/navibg1.jpg) top center no-repeat}
 #nav ul li .cc{background:#880002;height:40px; line-height: 40px;display: none; text-align:center; width:100%; position:relative; z-index:100; margin-top:0px; }
 #nav ul li .cc:hover{}
@@ -44,7 +44,7 @@ img{ border:none;}
 #about span{ float:right;}
 #about .title{ font-size:12px;font-family:Microsoft Yahei; color:#770c0c }
 #about .title b{ font-size:16px; color:#a31111; background:url(../images/ico1.jpg) center left no-repeat; padding-left:10px; }
-#about .inner{ height:177px; margin-top:8px; text-align:center; line-height:26px; text-indent:24px; overflow:hidden}
+#about .inner{ height:177px; margin-top:8px; text-align:left; line-height:26px; text-indent:24px; overflow:hidden}
 #about .inner img{ float:left; margin-right:5px;}
 
 
