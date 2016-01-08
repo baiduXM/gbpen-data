@@ -41,64 +41,12 @@
 		}
 
 	},
-	"list1": {
+	"second_navs": {
 		"value": {},
-		"description": "第二导航菜单",
-		"type": "list",
+		"description": "第二导航（底部）",
+		"type": "navs",
 		"config": {
-			"filter":"page,list",
-			"limit": 5,
-			"star_only": true
-		}
-	},
-	"list2": {
-		"value": {},
-		"description": "第二导航菜单",
-		"type": "list",
-		"config": {
-			"filter":"page,list",
-			"limit": 5,
-			"star_only": true
-		}
-	},
-	"list3": {
-		"value": {},
-		"description": "第二导航菜单",
-		"type": "list",
-		"config": {
-			"filter":"page,list",
-			"limit": 5,
-			"star_only": true
-		}
-	},
-	"list4": {
-		"value": {},
-		"description": "第二导航菜单",
-		"type": "list",
-		"config": {
-			"filter":"page,list",
-			"limit": 5,
-			"star_only": true
-		}
-	},
-	"list5": {
-		"value": {},
-		"description": "第二导航菜单",
-		"type": "list",
-		"config": {
-			"filter":"page,list",
-			"limit": 5,
-			"star_only": true
-		}
-	},
-	"list6": {
-		"value": {},
-		"description": "第二导航菜单",
-		"type": "list",
-		"config": {
-			"filter":"page,list",
-			"limit": 5,
-			"star_only": true
+			"limit": 8
 		}
 	}
 }

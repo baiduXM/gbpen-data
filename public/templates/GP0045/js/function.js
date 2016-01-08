@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	// banner
 	jQuery(".focusBox").slide({ mainCell:".pic",effect:"left", autoPlay:true, delayTime:500,interTime:4000,trigger:"click"});
-	jQuery(".pimgw").slide({mainCell:".bd ul",autoPlay:true,effect:"left"});
+	// jQuery(".pimgw").slide({mainCell:".bd ul",autoPlay:true,effect:"left"});
 	// 产品展示
 	$('#prizes .photo1').jCarouselLite({
 	      btnPrev: '#prizes a.photos-prev',
