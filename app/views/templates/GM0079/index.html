@@ -87,7 +87,7 @@
                  <div class="right_edit">
                    <div class="topxzc"></div>
                    <div class="rbger">
-					<div class="rbger_edit">{$mIndexCat.description}<span><a onclick="javascript:window.location.href='{$mIndexCat.link}'">[查看更多]</a></span> </div>   
+					<div class="rbger_edit"><p>{$mIndexCat.description}</p><span><a onclick="javascript:window.location.href='{$mIndexCat.link}'">[查看更多]</a></span> </div>   
                     <div class="a_tuxing"></div>               
                    </div>
                  </div>
@@ -143,18 +143,19 @@
                    <div class="new_list">
                    	 <div class="news_data">
                        <div class="topxzb"></div>
-                       <div class="data">
-                       {$article.pubtimestamp|date_format:'%y'}.{$article.pubtimestamp|date_format:'%m'}<b>{$article.pubtimestamp|date_format:'%d'}</b>
+                       <div class="data"><a href="{$article.link}">
+                       {$article.pubtimestamp|date_format:'%y'}.{$article.pubtimestamp|date_format:'%m'}<b>{$article.pubtimestamp|date_format:'%d'}</b></a>
                        </div>
                      	
                      </div>
                      <div class="news_word">
                        <div class="topxzb"></div>
-                   <div class="rbgerb">
+                   <div class="rbgerb"><a href="{$article.link}">
 					<div class="rbger_title">{$article.title}</div> 
                     <div class="rbger_editb">
                     {$article.description}
                     </div> 
+                    </a>
                      </div>
                    </div>           
                </div> 

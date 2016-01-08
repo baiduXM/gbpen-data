@@ -108,7 +108,8 @@ $(document).ready(function(){
 	
 	$(".class-close").click(function(){
 		$(this).parents(".class").animate({"right":-100+"%"})
-		 $(".class").css('display','nonoe')
+		 $(".class").css('display','none')
+		 $(".opacity2").hide()
 		})		
 	$("#daohang").click(function(){
 		$(".class").animate({
@@ -184,7 +185,7 @@ $(document).ready(function(){
 	})		
 	
 	//返回顶部开始
-	$(".back-top").click(function(){$(".index-wrap").animate({scrollTop :0}, 800)})
+	$(".top").click(function(){$(".index-wrap").animate({scrollTop :0}, 800)})
 	$("#share_btn").click(function(){
 		$(".newsclass").addClass("show")
 		$(".opacity2").show()
