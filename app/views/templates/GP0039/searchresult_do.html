@@ -65,9 +65,9 @@
                         <div class="module_page">
                             第{$page_links.current_page}页/共{$page_links.page_count} 页
                             <a href="{$page_links.first_link}">首页</a>
-                            <a href="{$page_links.prev_link}">上一页</a> {foreach name=nears_link item=near_link key=near_page from=$page_links.nears_link} {if $near_page == $page_links.current_page}
-                            <a class="current">{$near_page}</a> {else}
-                            <a href="{$near_link}">{$near_page}</a> {/if} {/foreach}
+                            <a href="{$page_links.prev_link}">上一页</a> {foreach name=nears_link item=near_link key=near_page from=$page_links.nears_link} {if $near_page == $page_links.current_page}<!--page_corrent_link_start-->
+                            <a class="current">{$near_page}</a> <!--page_corrent_link_end-->{else}<!--page_uncorrent_link_start-->
+                            <a href="{$near_link}">{$near_page}</a> <!--page_uncorrent_link_end-->{/if} {/foreach}
                             <a href="{$page_links.next_link}">下一页</a>
                             <a href="{$page_links.last_link}">尾页</a></div>
                       {/if}
