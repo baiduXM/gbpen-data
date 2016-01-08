@@ -79,11 +79,11 @@
 							<li><a href="{if $page_links.current_page gt 1}{$page_links.prev_link}{else}javascript:;{/if}">上一页</a></li>
 							
 							{foreach item=near_link key=near_page from=$page_links.nears_link}
-							{if $near_page == $page_links.current_page}
+							{if $near_page == $page_links.current_page}<!--page_corrent_link_start-->
 								<li class="cur"><a>{$near_page}</a></li>
-							{else}
+							<!--page_corrent_link_end-->{else}<!--page_uncorrent_link_start-->
 								<li><a href="{$near_link}">{$near_page}</a></li>
-							{/if}
+							<!--page_uncorrent_link_end-->{/if}
 							{/foreach}
 							
 							<li><a href="{if $page_links.current_page lt $page_links.page_count}{$page_links.next_link}{else}javascript:;{/if}">下一页</a></li>

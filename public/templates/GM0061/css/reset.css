@@ -8,14 +8,14 @@ a:hover{ text-decoration:none;}
 a img{ border:none;}
 img{ vertical-align:top; max-width:100%;}
 #clear{ clear:both;}
-body{font-size:14px; text-align:left;font-weight:normal; line-height:24px; font-family:"微软雅黑"; color:#000; background: #f9f9f9;display: -webkit-box;
+body{font-size:0.875em; text-align:left;font-weight:normal; line-height:24px; font-family:"微软雅黑"; color:#000; background: #f9f9f9;display: -webkit-box;
 -webkit-box-orient: vertical;
 -webkit-box-align: stretch; min-width:320px; max-width:640px; margin:0px auto;overflow-x: hidden;}
 a{blr:expression(this.onFocus=this.blur())} /* */
  /*a{ -webkit-tap-highlight-color:rgba(0,0,0,0);  }  去掉链接触摸高亮 */
 a{outline:none;} /*for Firefox*/
-ol,p,dl,li{margin:0;pading:0; list-style:none;}
-h1,h2,h3,h4,h5{font-size:14px;margin:0;padding:0; font-weight:normal;}
+ol,p,dl,li{margin:0;padding:0; list-style:none;}
+h1,h2,h3,h4,h5{font-size:0.875em;margin:0;padding:0; font-weight:normal;}
 button, input, optgroup, select, textarea { color: inherit; font: inherit; margin: 0; }
 button { overflow: visible; }
 button, select { text-transform: none; }
