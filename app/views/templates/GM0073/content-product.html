@@ -65,10 +65,10 @@
 		 		<p class="smail">小</p>
 			</div>
 		 	<div class="article">
-				 <div class="banner swiper-container">
+			<div class="banner swiper-container">
 	        <ul class="swiper-wrapper">
-	            {foreach name=slidepics item=slidepic from=$global.slidepics}
-	            <li class="swiper-slide"><a href="{$slidepic.link}"></a><img src="{$slidepic.image}" alt="{$slidepic.title}"></li>
+	            {foreach name=imagea item=imagea from=$article.images}
+	            <li class="swiper-slide"><a href="{$article.category.link}"></a><img src="{$imagea.image}" alt="{$imagea.title}"></li>
 
 	            {/foreach}
 	        </ul>

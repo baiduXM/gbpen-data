@@ -54,14 +54,14 @@
 	<section class="wrapper">
 	<div class="contant">
 	<header>
-		<span class="icon_n hd_icon fl" id="quickbar"><i class="iconfont icon" id="quickbar-navs-btn">&#xe60a;</i></span>
+		<span class="icon_n hd_icon fl" id="quickbar"><i class="iconfont icon" id="quickbar-navs-btn">&#xe603;</i></span>
 		<div class="logo"><i>{$article.category.name}</i></div>
-		<span class="ss go"><i class="iconfont icon">&#xe621;</i></span>
+		<span class="ss go"><i class="iconfont icon">&#xe641;</i></span>
 	</header>
 		 <div class="about">
 		 	<div class="article">
 		 		<div class="news_detail">
-                	<h1 class="Title"><i class="iconfont icon">&#xe604;</i>{$article.title}  </h1>
+                	<h1 class="Title"><i class="iconfont icon">&#xe60a;</i>{$article.title}  </h1>
                     <h2 class="Time"> 发布时间:{$article.pubdate}  <span class="go" >【返回】</span> 
 					</h2>
 					<span class="dt_size">
@@ -72,9 +72,17 @@
                 </div>
                 <div class="products_detail">
 					<div class="swiper-container">
-				        <div class="swiper-wrapper">
-				        {$article.image} 
-				        </div>
+				        <div class="banner swiper-container">
+					        <ul class="swiper-wrapper">
+					            {foreach name=imagea item=imagea from=$article.images}
+					            <li class="swiper-slide"><a href="{$article.category.link}"></a><img src="{$imagea.image}" alt="{$imagea.title}"></li>
+
+					            {/foreach}
+					        </ul>
+        <!-- Add Pagination -->
+        						<div class="swiper-pagination"></div>	 
+    					</div>
+    					<div class="products_nr1">    	{$article.content|unescape:"html"}  </div>
     				</div>
 		 		</div>
 		 		<ul class="next_pre">

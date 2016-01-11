@@ -44,7 +44,7 @@
 <script type="text/javascript">
     // 跳转手机页面
     {if $site_another_url}
-        if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+        if (!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
             location.href = '{$site_another_url}';
         }
     {/if}
@@ -73,12 +73,13 @@
 	    </nav>
 	    {foreach item=mIndexCat from=$mIndexCats}
 	      	{if $mIndexCat.type eq 2}
+	      	{if $mIndexCat.showtype eq 1}
 	    <div class="products">
 	    	<h3><a href=" {$mIndexCat.link}">MORE+</a> {$mIndexCat.name}</h3>
 	    	<div class="pro_top">
 	    		<img src="{$mIndexCat.image}">
 	    		<span class="pro_dt">
-	    			<b>{$mIndexCat.title}</b>
+	    			<b>{$mIndexCat.name}</b>
 	    			<p>
 	    				{$mIndexCat.description}
 	    			</p>
@@ -95,7 +96,9 @@
 	    	</div>
 		   <div class='more'><a href="{$article.link}">查看更多+</a></div>
 	    </div>
-	   {elseif $mIndexCat.type eq 1}
+	    {/if}
+	   {elseif $mIndexCat.type eq 3}
+
 	    <div class="products">
 	    	<h3><a href="{$mIndexCat.link}">MORE+</a>{$mIndexCat.name}</h3>
 	    	<ul class="news_list">

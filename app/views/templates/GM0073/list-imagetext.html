@@ -88,9 +88,9 @@
 				<ul class="news_list">
 				{foreach item=article from=$list.data}
             		<li>
-	            		<div class='img'><a href="{$article.link}"><img src="{$article.image}"/><em  datetime="{$article.pubdate}" pubdate="pubdate">{$article.pubdate}</em></a></div><div class="news_right"><h1><a href="news_detail.html">{$article.title} </a></h1><p class="article_01">{$article.description}</p></div>
+	            		<div class='img'><a href="{$article.link}"><img src="{$article.image}"/><em  datetime="{$article.pubdate}" pubdate="pubdate">{$article.pubdate}</em></a></div><div class="news_right"><h1><a href="{$article.link}">{$article.title} </a></h1><p class="article_01">{$article.description}</p></div>
 					</li>
-						 {if $article@index+1 == 8}{break}{/if}			
+								
                     {/foreach}                 
                 </ul>
 					<div class="munber">

@@ -59,7 +59,7 @@
 		 	<h3 class="title">
 			 <span class="font_s go fl size_3" ><</span>
 		 	<i>{$article.category.name}</i>
-		 	 <span id="quickbar"  class="fr btn"><a href="#" id="quickbar-navs-btn"><span><i class="iconfont icon">&#xe633;</i></span></a></span>
+		 	 <span id="quickbar"  class="fr btn"><a href="#" id="quickbar-navs-btn"><span><i class="iconfont icon">&#xe603;</i></span></a></span>
 		 	</h3>
 			<ul class="class_list">
 			{foreach name=pagenavs item=nav from=$pagenavs}
@@ -96,16 +96,16 @@
 				</div></h2>
                 </div>
                 <div class="products_detail">
-					 <div class="banner swiper-container">
-	        <ul class="swiper-wrapper">
-	            {foreach name=slidepics item=slidepic from=$global.slidepics}
-	            <li class="swiper-slide"><a href="{$slidepic.link}"></a><img src="{$slidepic.image}" alt="{$slidepic.title}"></li>
+					<div class="banner swiper-container">
+					        <ul class="swiper-wrapper">
+					            {foreach name=imagea item=imagea from=$article.images}
+					            <li class="swiper-slide"><a href="{$article.category.link}"></a><img src="{$imagea.image}" alt="{$imagea.title}"></li>
 
-	            {/foreach}
-	        </ul>
+					            {/foreach}
+					        </ul>
         <!-- Add Pagination -->
-        <div class="swiper-pagination"></div>
-    	</div>
+        						<div class="swiper-pagination"></div>	 
+    					</div>
 		 		
 		 		   {$article.content|unescape:"html"}
 		 		</div>

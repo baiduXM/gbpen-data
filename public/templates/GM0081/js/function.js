@@ -1,6 +1,5 @@
 
 jQuery(document).ready(function($) {
-
 	//根据设备窗口大小调整高度
 	resize();
 
@@ -77,22 +76,15 @@ jQuery(document).ready(function($) {
 			display: 'none'
 		});
 	});
-	//返回顶部
-		
 
-$('.home>a').click(function(event) {
-	$('.contant').animate({'scrollTop':0}, 800)
-});
-		//字体大中小
-	// $('.font_s').click(function() {
-	// 	if($('.f_size').is(':hidden')){
-	// 			$(this).html("字∨")	
-	// 	}else{
-	// 	$(this).html("字∧")
-			
-	// 	}
-	// 	$('.f_size').slideToggle('slow')	
-	// });
+
+	//返回顶部
+	//返回顶部
+		$('.home a').bind('click', function() {
+		 $('#quickbar-wrap-body').animate({scrollTop: 0}, 800)
+		
+		});
+		
 
 	$('.big').click(function() {
 				$('.article').css({

@@ -38,7 +38,7 @@ jQuery(document).ready(function($) {
 	});
 	function resize(){
 		$(".nav-menu").height($(window).outerHeight());
-		$(".contant").height($(window).outerHeight());
+		$(".contant").height($(window).outerHeight()-($('.footer').height()));
 	}
 	
 //快速导航的的下拉特效

@@ -59,7 +59,7 @@
 			<h3 class="title">
 				 <span class="class fl">分类∧</span>
 			 	<i>{$list.name}</i>
-			 	 <span id="quickbar"  class="fr btn"><a href="#" id="quickbar-navs-btn"><span><i class="iconfont icon">&#xe633;</i></span></a></span>
+			 	 <span id="quickbar"  class="fr btn"><a href="#" id="quickbar-navs-btn"><span><i class="iconfont icon">&#xe603;</i></span></a></span>
 			</h3>
 		<ul class="class_list">
 			{foreach name=pagenavs item=nav from=$pagenavs}
@@ -92,7 +92,7 @@
 	            		<div class='img'><a href="{$article.link}"><img src="{$article.image}"/></a></div><div class="news_right"><h1><a href="{$article.link}">{$article.title} </a></h1><p class="article_01">{$article.description}
 					 </p></div>
 					</li>
-					{if $article@index+1 == 8}{break}{/if}			
+							
                  {/foreach}                 
                 </ul>
 					<div class="munber">

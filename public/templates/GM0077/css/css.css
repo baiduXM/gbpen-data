@@ -185,7 +185,7 @@ transform:  rotate(45deg);}
 .pxq{margin-top: 1rem}
 .newsdet figure img{display: block;margin: 0 auto;}
 .s  .sos{font-size: 1rem;text-align: center;color: #27a0d8;}
-.pic li{width:33% !important;float: left;margin: 0 !important}
+.pic li{width:33% !important;float: left;margin: 0 .5rem !important}
 
 .pic li figcaption{width: 100%;text-align: center;line-height: 3rem;height: 3rem;overflow: hidden;color: #666666;  }
 form{padding: 1.5rem 0 1rem;width: 93%;margin: 0 auto;}
@@ -204,7 +204,7 @@ form input{-webkit-appearance: none;}
 .news .tit {float: left;background:url(../images/s_07.jpg) no-repeat center center;height: 100%;width: 28.9%;background-size: 100%;text-align: center;line-height: 665%;color: #333333;font-family: "微软雅黑";font-size: 1.2rem;}
  .tit  a{color: #333;}
 .news ul{float: right;width: 65%}
-.news ul li a{color: #333;font: 1rem/2rem "微软雅黑";height: 2rem;background:url(../images/y_10.jpg) no-repeat left center;text-indent: 1rem;display: block;border-bottom: 1px dotted #dddddd}
+.news ul li a{color: #333;font: 1rem/2rem "微软雅黑";height: 2rem;background:url(../images/y_10.jpg) no-repeat left center;text-indent: 1rem;display: block;border-bottom: 1px dotted #dddddd;overflow: hidden;}
 .news ul li span{float: right;}
 .b{margin-top: 3rem;}
 .pic{background:url(../images/ey_04.png) no-repeat right 15%;}

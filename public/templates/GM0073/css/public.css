@@ -59,7 +59,7 @@ body{position: relative;font: 0.9rem/1.8rem "微软雅黑";margin: 0 auto;overfl
 /*菜单end*/
 
 /*底部begin*/
-	.footer{ color: #5d5d5d; text-align: center; line-height: 30px; overflow: hidden;width: 100%;}
+	.footer{ color: #5d5d5d; text-align: center; line-height: 1.8rem; overflow: hidden;width: 100%;}
  	.footer a{color: #5d5d5d;}
  	.share-cance{margin-top: 0 !important;}
  /*底部end*/ 
@@ -98,7 +98,7 @@ body{position: relative;font: 0.9rem/1.8rem "微软雅黑";margin: 0 auto;overfl
 	.font_s em{display: block;}
 	.f_size{display: none;position: absolute;left: 30px;top:45px;z-index: 10;width: 7.8%;color: #5a5953;background: #F6F1DF;text-align: center;}
 	.title i{text-align: center;font-size: 1.25rem;background: url(../images/5.png) no-repeat left;padding:0  0 0.3rem 1.5rem;}
-	.article{padding:1.5rem;color: #51504f;line-height: 2rem;border-top: 1px solid #E6E4E0;height: auto;overflow: hidden;}
+	.article{padding:2%;color: #51504f;line-height: 2rem;border-top: 1px solid #E6E4E0;height: auto;overflow: hidden;}
 	.class{cursor: pointer;}
 	.class_list{ width: 100%;height: auto;overflow: hidden;background: #e9e5d4;position: relative;left: 0;top:0;z-index: 10;display: none;}
 	.class_list li{border-bottom: 1px solid #F1ECDB;}
@@ -111,11 +111,11 @@ body{position: relative;font: 0.9rem/1.8rem "微软雅黑";margin: 0 auto;overfl
 /*新闻图文begin*/
 	ul.news_list{ height:auto; overflow:hidden; width:100%;}
 	ul.news_list li{border-bottom:1px solid #e5e5e5; padding:10px 0; overflow:hidden;}
-	ul.news_list .img{float:left;padding:5px; border:1px solid #d7d7d7;  margin-right: 1rem;}
+	ul.news_list .img{float:left;padding:5px; border:1px solid #d7d7d7;  margin-right: 1%; width: 30%;}
 	ul.news_list .img a{display: block;width:100%;position: relative;}
 	ul.news_list .img img{display:block; width: 100%;background: #ffffff;}
 	ul.news_list .img em{ position: absolute; left:0; bottom:0; z-index: 10;font:1rem/1.2rem "微软雅黑"; height:1.2rem; overflow: hidden; background: rgba(0,0,0,.5); color: #ffffff;width: 100%;text-align: center;}
-	.news_right{ overflow: hidden;}
+	.news_right{ overflow: hidden; float: right; width: 65%;}
 	.news_right h1 a{color:#1d1d1d; display:block; font:1rem/1.5rem "宋体"; height: 1.5rem; overflow: hidden;}
 	.news_right h1 a:hover{color:#970f0f;}
 	.article_01{ color:#434343; overflow: hidden;line-height:1.5rem;height: 4.5rem}
@@ -144,7 +144,9 @@ body{position: relative;font: 0.9rem/1.8rem "微软雅黑";margin: 0 auto;overfl
 /*上下篇*/
 	.next_pre{ width:100%;color:#666;  padding:2rem 0;height:auto; overflow:hidden;}
 	.next_pre li {height: 1.5rem;overflow: hidden;}
-	.next_pre li a{color:#666;	}
+	.next_pre li a{color:#666;text-overflow: ellipsis;
+white-space: nowrap; text-indent:0px;
+word-break: keep-all; overflow:hidden	}
 	.next_pre li a:hover{ color:#af2d2b;}
 /*新闻详情页end*/
 /*产品列表开始*/
@@ -152,7 +154,7 @@ body{position: relative;font: 0.9rem/1.8rem "微软雅黑";margin: 0 auto;overfl
 	.pro_list  li{ float:left;width:30.33%; overflow:hidden; margin: 1rem 1.5%  0 }
 	.pro_list  li a{ text-align:center; color:#2c2b2a; display:block;  font-family:"宋体";overflow:hidden; }
 	.pro_list  li img{ display: block; }
-	.pro_list  li .case_title{display:block; width:100%; overflow:hidden;}
+	.pro_list  li .case_title{display:block; width:100%; height: 1.5rem; overflow: hidden;}
 	.pro_list  li  a img:hover{opacity:0.60;}
 	.pro_list  li  a:hover{color:#af2d2b;}
 /*产品列表结束*/

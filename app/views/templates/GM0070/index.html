@@ -66,10 +66,10 @@
 				<div class="menu">
 				
 			        <ul>
-			            <li><a href="{$site_url}"><img src="{$nav.image}"><span>首页</span></a></li>
+			           
 			             {foreach item=nav from=$navs}
 			            <li><a href="{$nav.link}"><img src="{$nav.image}"><span>{$nav.name}</span></a></li>
-			            	{if $nav@index+1 == 5}{break}{/if}
+			            	{if $nav@index+1 == 6}{break}{/if}
 			             {/foreach} 
 			        </ul>
 			       
