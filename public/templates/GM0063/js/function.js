@@ -208,4 +208,11 @@ $(document).ready(function(){
   	});
 	//分享取消按钮结束
 
-	
+	function focusTest()
+{
+　　var my=document.getElementById("strName");
+　　if(my.value="")
+　　{
+　　　　my.focus();//如果是onblur则执行，起作用；
+　　}
+} 

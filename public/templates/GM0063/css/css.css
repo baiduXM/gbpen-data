@@ -134,7 +134,7 @@ ul.third li a:hover{color:#5beaa0; }
 
 .ny_newslist{ padding:10px 0px; height:auto; overflow:hidden;}
 .ny_newslist ul{ width:100%; height:auto; overflow:hidden;}
-.ny_newslist ul li { height:30px; line-height:30px; border-bottom:1px solid #e5e5e5; position:relative; padding-left:12px;}
+.ny_newslist ul li { height:30px; line-height:30px; border-bottom:1px solid #e5e5e5; overflow:hidden; position:relative; padding-left:12px;}
 .ny_newslist ul li span{ color:#b0b0b0; float:right; display:inline;}
 .ny_newslist ul li a{ color:#8c8c8c; display:block; overflow:hidden; width:100%;}
 .ny_newslist ul li:before{ height:10px; width:10px; content:"◆"; position:absolute; left:0px; top:0px;color:#58cac2;text-align:center; line-height:30px; font-size:1em }
@@ -185,7 +185,7 @@ word-break: keep-all; overflow:hidden; display:block;
 .ss_btn{ width:60px; overflow:hidden; height:auto; background:#f2f2f2; margin-right:10px; height:40px; float:right; display:inline; color:#000;}
 .ss_input{-webkit-box-flex:1;-moz-box-flex:1;-o-box-flex:1;-ms-box-flex:1;box-flex:1;font-size:1.11em; background:url(../images/ss.jpg) 8px center no-repeat #f2f2f2; position:relative; padding-right:30px; margin:0px 10px;}
 .ss_btn .btn1{ border:none; text-align:center; width:60px;font-size:1.2em; height:40px; line-height:40px;}
-.txt1{ margin-left:45px; height:40px; border:none; background:none; width:80%}
+.txt1{ margin-left:45px; height:40px; border:none; background:none; width:80%; color:#000;}
 .searchresult{ padding:10px; height:auto; overflow:hidden;}
 .jieguo{ font-weight:bold; text-align:center; height:35px;}
 .seard_d{ width:100%; height:auto; overflow:hidden;}

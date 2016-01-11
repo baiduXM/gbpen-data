@@ -52,11 +52,11 @@ DD_belatedPNG.fix('div,ul,li,a,p,img');
 								<li ><a href="{$page_links.first_link}">首页</a></li>
 								<li ><a href="{$page_links.prev_link}">上一页</a></li>
 								{foreach item=near_link key=near_page from=$page_links.nears_link}
-								{if $near_page == $page_links.current_page}
+								{if $near_page == $page_links.current_page}<!--page_corrent_link_start-->
 									<li class=" current"><a>{$near_page}</a></li>
-								{else}
+								<!--page_corrent_link_end-->{else}<!--page_uncorrent_link_start-->
 									<li ><a href="{$near_link}">{$near_page}</a></li>
-								{/if}
+								<!--page_uncorrent_link_end-->{/if}
 								{/foreach}
 								<li><a href="{$page_links.next_link}">下一页</a></li>
 								<li><a href="{$page_links.last_link}">末页</a></li>
