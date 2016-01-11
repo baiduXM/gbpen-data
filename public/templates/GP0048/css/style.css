@@ -135,7 +135,7 @@ body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, fo
 .homkes span{ float:right; display:inline; overflow:hidden; color:#666; font-size:12px;}
 .homkes a:link,.homkes a:visited{ color:#666;}
 .homkes a:hover{ color:#90ba1c;}
-.deteo{ padding:0px 0px 0px; height:auto; overflow:hidden; height:auto; width:936px; padding-bottom:15px;min-height:500px; _height:expression(this.scrollHeight < 500? "500px" : "auto") ; margin:0px auto;}
+.deteo{ padding:0px 0px 0px; overflow:hidden; width:936px; padding-bottom:15px;min-height:500px; _height:expression(this.scrollHeight < 500? "500px" : "auto") ; margin:0px auto;}
 .about_edit{ color:#666; line-height:24px; margin-top:10px; padding-right:0px; margin-left:0px; margin-right:0px;text-align:Justify;text-justify:inter-ideograph;}
 .news_detal_d{ width:970px; height:auto; overflow:hidden;}
 .news_detal_d ul li{ width:440px; float:left; display:inline; overflow:hidden; margin-right:30px; margin-left:5px; height:auto; margin-bottom:25px; margin-top:15px;}
@@ -179,7 +179,8 @@ ul.inner_pro2 li a:hover img{ border:1px solid #90ba1c;}
 
 .main_right_con2{ padding:18px 0px 0px;color:#666; overflow:hidden; width:100%;}
 .description{ height:auto; overflow:hidden; width:100%; margin:0px 0px; }
-.pimgw{width:350px; height:230px; border:1px solid #C2C2C2; padding:1px; overflow:hidden; float:left; display:inline; margin-bottom:10px; margin-right:15px;margin-left: 30%;}
+.pimgw{width:350px; padding:1px; overflow:hidden; float:left; display:inline; margin-bottom:10px; margin-right:15px;margin-left: 30%;}
+.pimgw img{width:100%; overflow:hidden; position:relative;}
 .pimgw2{width:350px; height:230px; border:1px solid #ccc; padding:1px; overflow:hidden; float:left; display:inline; margin-bottom:10px; margin-right:15px;}
 
 .show_t{ color:#90ba1c;padding:0px;width:255px; text-align:left; line-height:20px; float:left; display:inline; }
