@@ -1,25 +1,30 @@
-<header>
-    <div class="top">
-         <div class="header">
-            <div class="logo"><img src="{$logo}" width="100%"></div>
-         </div> 
-         <div class="baner">
-             <div id="slideBox" class="slideBox">
-               <div class="hd">
-                 <ul>
-                   {foreach name=slidepics item=slidepic from=$global.slidepics}
-                     <li>{$slidepic@index+1}</li>
-                   {/foreach}                 
-                 </ul>
-               </div>
-               <div class="bd">
-                 <ul>
-                    {foreach name=slidepics item=slidepic from=$global.slidepics}
-                      <li><a class="pic" href="{$slidepics.link}"><img src="{$slidepic.image}" alt="{$slidepic.title}" /></a></li>
-                    {/foreach}
-                </ul>
-              </div>  
-            </div>
-         </div>                 
-       </div>
-</header>
+
+  <div class="class page-prev">
+  <h1 class="class-top"><span class="class-close">×</span>快速搜索</h1>
+  <div class="class-m">
+  <div class="swiper-container scroll-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+                        	<div class="search_all">
+                    	<form action="{$search_action}" method="GET">
+                 	<div class="suosuo">
+                       
+                           <div class="ss_input"><input type="text" name="s" value=""  class="txt1"></div>
+                             <div class="ss_btn"><input type="submit" class="btn1" value="搜索"> </div>
+                          
+                                                  
+                    </div>  </form>                          
+                            </div>
+  	
+    </div></div></div>
+  </div>
+</div>
+	<header>
+    	<div class="header">
+        	<div class="logo"><img src="{$logo}" width="100%"></div>
+           <div class="menu2" id="quickbar" ><a href="#" id="quickbar-navs-btn"><span></span></a></div>  
+           <div class="search" id="daohang">
+           	<a href="#"><span></span></a>
+           </div>    
+        </div>                   
+    </header>  

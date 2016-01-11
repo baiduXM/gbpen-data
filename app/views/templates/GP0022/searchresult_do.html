@@ -38,7 +38,22 @@
               <!--search_content_end-->{/foreach}
             </ul>
             {/if}
-           <div class="num">{include file="./_num.html"}</div>
+           <div class="num"><section>
+  
+              第{$page_links.current_page}页/共{$page_links.page_count} 页      
+              <a href="{$page_links.prev_link}">&laquo; 上一页</a>
+              {foreach item=near_link key=near_page from=$page_links.nears_link}
+                {if $near_page == $page_links.current_page}<!--page_corrent_link_start-->
+                  <a class="current">{$near_page}</a></li>
+                <!--page_corrent_link_end-->{else}<!--page_uncorrent_link_start-->
+                  <a href="{$near_link}">{$near_page}</a></li>
+                <!--page_uncorrent_link_end-->{/if}
+              {/foreach}
+
+
+              <a href="{$page_links.next_link}">下一页 &raquo;</a>
+            
+</section></div>
          </div>  
        </div>
      </div>

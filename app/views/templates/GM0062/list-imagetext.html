@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <!-- 实时预览调试代码，模板开发完成后删除 -->
-    
-    <!-- 调试代码 End -->
-    <script type="text/javascript">
-    // 跳转PC页面
-    {if $site_another_url}
-      if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
-        location.href = '{$site_another_url}';
-      }
-    {/if}
-    </script>
+	<head>
+		<!-- 实时预览调试代码，模板开发完成后删除 -->
+		
+		<!-- 调试代码 End -->
+		<script type="text/javascript">
+		// 跳转PC页面
+		{if $site_another_url}
+			if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+				location.href = '{$site_another_url}';
+			}
+		{/if}
+		</script>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width,minimum-scale=1.0, maximum-scale=1.5,user-scalable=no,minimal-ui">
 <meta name="keywords" content="{$keywords}" />
@@ -34,52 +34,91 @@
 <script type="text/javascript" src="{$site_url}js/jquery.min.js"></script>
 <script type="text/javascript" src="{$site_url}js/function.js"></script>
 <script type="text/javascript" src="{$site_url}js/share.js"></script>
+<link rel="stylesheet" href="{$site_url}css/animate.css"> 
 <script src="{$site_url}js/idangerous.swiper-2.0.min.js"></script>
 <script src="{$site_url}js/idangerous.swiper.3dflow-2.0.js"></script>
 <script src="{$site_url}js/simple-app.js"></script>
 <script type="text/javascript">
-  window.addEventListener('load', function(){
+	window.addEventListener('load', function(){
    setTimeout(function(){ window.scrollTo(0, 1); }, 100);
 });//safari浏览器可以通过此代码来隐藏地址栏
 </script>
+
 </head>
 <body>
-	{include file="./_header.html"}
-    <section>
-       <div class="box-m">
-          <div class="pro_title">
-                <span class="more2" id="first">分类
-                     <span id="down"> &darr;</span>
-                     <span id="up"> &uarr; </span>
-                </span>
-                <div class="lefttitleb">{$list.name}</div>
-          </div> 
-          <div class="hide-class">
-              {foreach name=pagenavs item=nav from=$pagenavs}
-                <dl><a href="{$nav.link}">{$nav.name}</a></dl>
+
+<div class="index-wrap">
+{include file="./_header.html"}
+<section>
+    	<div class="boxmain">
+        	<h1 class="boxmain-top">
+               <span class="more3 backb"><a href="javascript:window.history.back()">返回</a></span>
+               <span class="more3" id="first">分类<span id="down"> ∧</span><span id="up"> ∨ </span></span>
+               <div class="mind_title">
+                <span>{$list.name}</span>
+               </div>
+           </h1>
+<div class="hide-class">                
+             <ul>
+             {foreach name=pagenavs item=nav from=$pagenavs}
+                <li  class="{if $nav.current}current{/if}"><a href="{if $nav.childmenu}javascript:;{else}{$nav.link}{/if}" class="{if $nav.selected}selected{/if}">{$nav.name}</a>
+                {if $nav.childmenu}
+                    <ul class="second">
+                      {foreach key=key item=nav_list from=$nav.childmenu}
+                        <li class="{if $nav_list.current}current{/if}"><a href="{if $nav_list.childmenu}javascript:;{else}{$nav_list.link}{/if}"  class="{if $nav_list.selected}selected{/if}">{$nav_list.name}</a>
+                         {if $nav_list.childmenu}
+                            <ul class="third">
+                              {foreach key=key item=nav_listsec from=$nav_list.childmenu}
+                              <li class="{if $nav_listsec.current}current{/if}"><a href="{$nav_listsec.link}" class="{if $nav_listsec.selected}selected{/if}">{$nav_listsec.name}</a></li>
+                              {/foreach}
+                            </ul> 
+                           {/if}                                             
+                        </li>
+                      {/foreach}
+                    </ul>
+                    {/if}                            
+                </li>
+                {/foreach}                                                                                                                                           
+            </ul>                
+          </div>
+<div class="boxmain-ny-m">
+<div class="news_lista">
+                	<ul>
+                        
+                 {foreach name=article item=article from=$list.data}
+                	<li><a onclick="javascript:window.location.href='{$article.link}'">
+                    	<div class="xwzs_show">
+                            	<div class="nimg"><img src="{$article.image}" width="100%"></div>
+                                <div class="news_wprd"><div class="enter_fuhao">&gt;</div>
+                                 <div class="ntitle">{$article.title}</div>
+                                 <div class="nword">{$article.description}</div>
+                                 <div class="timer">{$article.pubtimestamp|date_format:'%Y-%m-%d'}</div>
+                               </div>
+                               
+                            </div></a>
+                    </li>
+				{/foreach}  
+                                                                                                                                 
+                    </ul>
+<div class="next1"><a href="{$page_links.first_link}" class="cu">首页</a><a href="{$page_links.prev_link}">上一页</a>
+              {foreach item=near_link key=near_page from=$page_links.nears_link}
+                {if $near_page == $page_links.current_page}
+                  <a class="current">{$near_page}</a></li>
+                {else}
+                  <a href="{$near_link}">{$near_page}</a></li>
+                {/if}
               {/foreach}
-          </div>    
-         <div class="boxmain-m">
-            <div class="newshow">
-              <ul>
-                  {foreach name=article item=article from=$list.data}
-                      <li><a href="{$article.link}">
-                          <div class="nimgs"><img src="{$article.image}" width="100%"></div>
-                          <div class="news_titles">
-                             <div class="c_city">{$article.title}</div>
-                              <div class="c_data">TIME：{$article.pubdate}</div>
-                              <div class="c_edits">{$article.description}</div>                                
-                          </div>
-                      </a></li>
-                   {if $article@index+1 == 5}{break}{/if}
-                  {/foreach}
-              </ul>   
-             <div class="next1"><a href="{$page_links.first_link}" class="cu">首页</a><a href="{$page_links.prev_link}">上一页</a><a href="{$page_links.next_link}" >下一页</a><a href="{$page_links.last_link}"  >尾页</a></div>           </div>
-         </div>                       
-        </div>   
-     </section>
-     <footer class="foot">{$footprint} </footer>
-     {$footscript}    
-  
+<a href="{$page_links.next_link}" >下一页</a><a href="{$page_links.last_link}"  >尾页</a></div>                 
+                    
+                </div>            		
+           </div>                  	
+        </div>
+    </section>
+
+        <footer class="foot"><a class="back-top"><span>TOP</span></a>{$footprint} </footer>
+        
+        {$footscript}        
+    </div>
+
 </body>
 </html>
