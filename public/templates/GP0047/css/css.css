@@ -10,8 +10,9 @@ em{font-style:normal;}
 img{border:none;}
 /*头部*/
 .head_outsild{width: 100%;height: 115px;overflow: hidden;background:#ffffff;}
-.head{width: 917px;height: 117px;margin: 0 auto;overflow: hidden;position: relative;}
-.head a.logo{display: block;width:438px;height: 100%;overflow: hidden;float: left;}
+.head{ max-width: 917px; height: 117px; margin: 0 auto; overflow: hidden; position: relative;}
+/* .head a.logo{display: block;width:438px;height: 100%;overflow: hidden;float: left;} */
+.head img{ height:100%; position:absolute; top:0; bottom:0; margin:0 auto; left:0;}
 .tel{position: absolute;right: 0;bottom: 6px;background:url(../images/tel_19.jpg) no-repeat center left;height:45px; text-indent: 51px;font-size: 18px;font-family: "微软雅黑";line-height: 38px;color: #b6520c;}
 .tel span{color: #409b2b;font-size: 20px;}
 .ss{position: absolute;right:0px;top:25px;color: #ffffff;z-index: 99999}
@@ -51,8 +52,10 @@ img{border:none;}
 /*产品滚动*/
 .gd{width:100%;height: 211px;margin: 0 auto;overflow: hidden;}
 .gd .picMarquee{width: 100%;height:100%;overflow: hidden;background:url(../images/cp_b_20.png) no-repeat center center;}
+.gd .picMarquee img {width:100%;overflow:hidden;}
 .gd .picMarquee .tempWrap{width: 100% !important;height:100%;overflow: hidden;}
-.gd .picMarquee li{float: left;width:133px;overflow: hidden;margin: 0 20px;border:1px solid #d5d5d5;}
+.gd .picMarquee li{float: left;width:133px;overflow: hidden;margin: 0 20px;border:1px solid #d5d5d5;font-size:0px;}
+.picMarquee strong {font-size:12px;}
 .gd .picMarquee li a.pic{width: 100%;height:147px;overflow: hidden;display: block;}
 .gd .picMarquee li a.title{width: 100%;display: block;text-align: center;}
 /*contant*/
@@ -87,7 +90,7 @@ h3.title span{color: #787878;font-size: 12px;padding-left: 15px;}
 h3.title a.more1{float: right;width: 35px;height: 11px;display: block;background:url(../images/more_07.png) no-repeat center center;padding: 20px 16px 0 0;}
 h3.left4_title{width: 247px;margin: 0 auto;}
 .about_xq{height: 189px;overflow: hidden;}
-.about_xq img{float: left;padding: 2px;border: 1px solid #cbc6bc;margin-right: 10px;}
+.about_xq img{float: left;padding: 2px;border: 1px solid #cbc6bc;margin-right: 10px; height:50%; overflow:hidden; position:relative;}
 .about_xq .ms{line-height: 23px;width:100%;height: 100%;}
 .right2{margin-top: 10px;width: 100%;height: auto;overflow: hidden;}
 .bottom{width:100%;height:100%;overflow: hidden;}
@@ -140,16 +143,17 @@ h3.about_title .more span{display: inline-block; background:url(../images/dqwz_0
 
 /*pro*/
 .inner_pro {height:auto; overflow:hidden;width:100%;}
-.inner_pro li{ float:left;width:195px; height:186px;overflow: hidden;margin: 0px 14px 0px;}
-.inner_pro li a.img{width: 187px;height: 140px;display: block;padding: 3px;border: 1px solid #5ca015;}
-.inner_pro li a.tit{display: block;line-height:38px;line-height:38px;width: 100%;overflow: hidden;text-align: center;}
+.inner_pro li{ float:left;width:195px; overflow: hidden;margin: 0px 14px 0px; font-size:0px;}
+.inner_pro li a.img{width: 195px; display: block;padding: 3px;}
+.inner_pro li a.tit{display: block;line-height:38px;line-height:38px;width: 100%;overflow: hidden;text-align: center; font-size:12px;}
+.inner_pro img{width:100%; overflow:hidden; position:relative;}
 
 
-
-.news_deta li{width: 100%;height: 109px;overflow: hidden;margin-bottom: 30px;}
+.news_deta li{height: 109px;overflow: hidden;margin-bottom: 30px;}
 .details{width: 100%;height:100%;overflow: hidden;}
-.details_img {width: 176px;height:100%;overflow: hidden;float: left;margin-right: 18px;}
-.details_img a{width: 100%;height: 100%;display: block;background:url(../images/sub4_03.png) no-repeat center 101%;}
+.details_img {height:100%;overflow: hidden;float: left;margin-right: 18px;}
+.details_img a{height: 100%;display: block;background:url(../images/sub4_03.png) no-repeat center 101%;}
+.details_img img{ height:100%; overflow:hidden; position:relative;}
 .details_text{width:459px;height: 100%;float: left;overflow: hidden;color: #cfcece;}
 .details_text h3 a{height: 27px;line-height: 27px;overflow: hidden;display: block;color: #636060;}
 .details_text h3 a:hover{color: #5ebd38;}
@@ -198,7 +202,7 @@ ul.list li a{display: block;line-height: 35px;height:35px; overflow:hidden;backg
 .pimgw{margin: 20px auto;}
 .inner_pages{margin-bottom: 30px;}
 #slide {width: 262px;margin: 0 auto;}
-#slide .bd img{width: 262px;height: auto;overflow: hidden;}
+#slide .bd img{width: 100%; overflow: hidden;}
 #slide .prev{width: 37px; height: 37px;margin: -18.5px 0 0;display: block;background:url(../images/slider-arrow.png) -110px 5px no-repeat;;position: absolute;top: 50%;z-index: 10;cursor: pointer;text-indent: -9999px;left:80px;}
 #slide .next {width: 37px; height: 37px;margin: -18.5px 0 0;display: block;background:url(../images/slider-arrow.png) 8px 5px no-repeat;;position: absolute;top: 50%;z-index: 10;cursor: pointer;text-indent: -9999px;right: 80px;}
 
