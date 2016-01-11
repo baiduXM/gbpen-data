@@ -149,15 +149,15 @@ ul.first>li>a:hover,.cu{background:#939393 url(../images/arrow2.png) 10px center
 .ny-prolist{overflow: hidden;}
 .ny-prolist li{width: 240px;margin-right: 22px;margin-bottom: 10px;display:inline;float: left;}
 .ny-prolist li a{display: block;width: 240px}
-.ny-prolist li a img{width: 240px;height: 151px;}
+.ny-prolist li a img{width: 100%;}
 .ny-prolist li a h2{height: 35px;line-height: 35px;text-align: center;color: #676767;font-size: 14px;font-weight: bold;}
 .ny-prolist li a:hover h2{ color:#cc1835;}
 
 /*list-imagetext*/
 .ny-list .list-item{border-bottom: 1px solid #e5e5e5;padding-bottom: 10px;height: 107px;margin-bottom: 10px;}
-.ny-list .list-item dl{width: 175px;height: 107px;float: left;margin-right: 12px;}
-.ny-list .list-item dl a{display: block;border: 1px solid #e8e8e8;padding: 1px;}
-.ny-list .list-item dl a img{width: 171px;height: 103px;}
+.ny-list .list-item dl{/* width: 175px; */height: 100%;float: left;margin-right: 12px;/* margin-bottom: 31px; */}
+.ny-list .list-item dl a{display: block;border: 1px solid #e8e8e8;padding: 1px;height: 100%;overflow: hidden;}
+.ny-list .list-item dl a img{/* width: 171px; */height: 100%;}
 .ny-list .list-item dt a{font-size: 14px;color: #777;font-weight: bold;line-height: 32px; overflow:hidden; word-wrap:normal; text-overflow:ellipsis; display:block; max-height:24px;}
 .ny-list .list-item dt a:hover{color:#cc1835;}
 .ny-list .list-item dd{height: 75px;overflow: hidden;color: #777;line-height: 25px;}
@@ -180,7 +180,7 @@ ul.first>li>a:hover,.cu{background:#939393 url(../images/arrow2.png) 10px center
 
 /*pro-det*/
 .det-img{width:358px;margin:0 auto;overflow: hidden;}
-.det-img img{width: 352px;height:272px;border: 3px solid #c2c2c2;}
+.det-img img{width: 100%; border: 3px solid #c2c2c2; overflow:hidden;position:relative;}
 .det-img h1{font-weight: bold;font-size: 14px;line-height: 30px;text-align: center;color: #535353;}
 
 
