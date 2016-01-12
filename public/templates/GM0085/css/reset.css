@@ -7,14 +7,14 @@ a:hover{ text-decoration:none;}
 a img{ border:none;}
 img{ vertical-align:top; max-width:100%;}
 #clear{ clear:both;}
-body{font-size:14px; text-align:left;font-weight:normal; line-height:24px; font-family:"微软雅黑";  color:#565757; background: #fff;}
-html {position: relative;height: 100%; width:100%; min-width:320px; max-width:640px; margin:0px auto; position:relative; overflow:hidden}
+body{font-size:14px; text-align:left;font-weight:normal; line-height:24px; font-family:"微软雅黑";  color:#333333; background: #fff;display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-box-align: stretch; min-width:320px; max-width:640px; margin:0px auto;overflow-x: hidden;}
 a{blr:expression(this.onFocus=this.blur())} /* */
  /*a{ -webkit-tap-highlight-color:rgba(0,0,0,0);  }  去掉链接触摸高亮 */
 a{outline:none;} /*for Firefox*/
 ol,p,dl,li{margin:0;pading:0; list-style:none;}
 h1,h2,h3,h4,h5{font-size:14px;margin:0;padding:0; font-weight:normal;}
-
 button, input, optgroup, select, textarea { color: inherit; font: inherit; margin: 0; }
 button { overflow: visible; }
 button, select { text-transform: none; }
@@ -33,3 +33,4 @@ optgroup { font-weight: bold; }
 input::-moz-placeholder, textarea::-moz-placeholder { color: #cccccc; }
 input:-ms-input-placeholder, textarea:-ms-input-placeholder { color: #cccccc; }
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { color: #cccccc; }
+

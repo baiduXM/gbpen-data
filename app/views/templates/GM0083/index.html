@@ -58,55 +58,42 @@
     <div class="index-wrap">
       {include file="./_header.html"}
       <section> 
+         <div class="index">
       {foreach name=mIndexCats item=mIndexCat from=$mIndexCats}
       {if $mIndexCat.type eq 4}
-      <div id="in_page" class="wrapper">
-          <h2 class="in_h1 clearfix"><div class="in_zh">{$mIndexCat.name}</div><div class="in_en">/ {$mIndexCat.en_name}</div></h2>
+   <div id="in_page" class="wrapper">
+                    <div class="in_h2"><div class="line"></div><div class="local public_bg1"><div class="in_zh">{$mIndexCat.name}</div></div></div>
         <div class="inner clearfix">
-           <div class="pic"><img src="{$mIndexCat.image}"></div>
-          <div class="txt"><p class="public_color">{$mIndexCat.description}</p></div>
+         <div class="page_img"><img src="{$mIndexCat.image}"></div>
+     <p>{$mIndexCat.description}</p>
        </div>
         </div>
-      {elseif $mIndexCat.type eq 1} 
-        <div id="in_text" class="wrapper clearfix">
-            <h2 class="in_h1 clearfix"><div class="in_zh">{$mIndexCat.name}</div><div class="in_en">{$mIndexCat.en_name}</div></h2>
-        <div class="inner">
-            <ul>
-              <li class="bg">
-              <div class="in_data"><a href="#" class="public_color2" >2015-9-29</a></div> 
-              <div class="in_title"><a href="#" class="public_color2" >新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新题新闻标题</a></div>
-               <div class="more"><a href="#" class="public_color2" >+</a></div>
-               <div style="clear:both"></div>
-               <div class="in_des">琥珀酒色，晶莹剔透，丽质清雅，米香纯正，闻之浓而不骤，香而不艳，入口绵甜醇厚，馥郁柔和，头甘尾净，圆润爽怡，无悬浮物，无沉淀、蜜香清</div>
-               </li>
+        
+      {elseif $mIndexCat.type eq 3} 
+       <div id="in_text" class="wrapper">
+       <div class="in_h2"><div class="line"></div><div class="local public_bg1"><div class="in_zh">{$mIndexCat.name}</div></div></div>
+        <div class="inner clearfix">
+          <ul class="clearfix">
             {foreach item=article from=$mIndexCat.data}
-              <li class="bg1 clearfix">
-               <div class="in_data"><a href="#" class="public_color1" >{$article.pubtimestamp|date_format:"%d "}/{$article.pubtimestamp|date_format:"%m "}</a></div> 
-              <div class="in_title"><a href="#" class="public_color1" >{$article.title}</a></div>
-               <div class="more bg2"><a href="#" class="public_color2" >+</a></div>
-                
+              <li class="clearfix">
+                <div class="pic"><img src="{$article.image}" ></div>
+                 <div class="in_textbox clearfix">
+                 <div class="in_title public_color">{$article.title}</div>
+                 <div class="in_des public_color">{$article.description}</div>
+                 </div>
               </li>
-              {if $article@index+1 == 2}{break}{/if} {/foreach}
-            </ul>
-            </div>
-        </div>
-        {elseif $mIndexCat.type eq 2} 
-        <div id="in_image" class="wrapper">
-               <h2 class="in_h1 clearfix"><div class="in_zh">{$mIndexCat.name}</div><div class="in_en">/ {$mIndexCat.en_name}</div></h2>
-        <div class="inner public_color">
-            <ul>
-            {foreach item=article from=$mIndexCat.data}
-              <li><a href="{$article.link}">
-               <img src="{$article.image}" width="100%" title="160*150"><div class="more">{$article.title}</div>
-                  </a>
-              </li>
-             {if $article@index+1 == 3}{break}{/if} {/foreach}
+              {if $article@index+1 == 3}{break}{/if} {/foreach}
             </ul>
         </div>
         </div>
+
+      
         {/if} 
-{/foreach}
+     {/foreach}
+</div>
       </section>
+      
+      
     <footer class="foot" ><a class="back-top">∧</a>{$footprint}</footer></div>
     </div>
   </div>
