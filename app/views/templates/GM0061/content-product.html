@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html manifest="huancun.manifest">
+<head>
       <script type="text/javascript">
       // 跳转PC页面
       {if $site_another_url}
@@ -52,12 +55,12 @@
 <body>
 
 <div class="index-wrap">
-    <header>
+  <header>
        <div class="nyheader">
            <i class="hicon2 iconfont" id="quickbar-showcats">&#xe603;</i>
            <span class="hicon1"><a href="javascript:window.history.back()">返回</a></span>
        </div>
-    </header>
+  </header>  
     <section>
        <div class="contentbox">
           <div class="nytop">
@@ -66,7 +69,7 @@
             <span class="more2">分类 <i><img src="{$site_url}images/classarrow.png" alt=""></i></span>
 
           </div>
-           <ul  class="hide-class">
+          <div class="hide-class">
                 {foreach name=pagenavs item=nav from=$pagenavs}
                   <li><a href="{if $nav.childmenu}javascript:;{else}{$nav.link}{/if}">{$nav.name}</a>
                       {if $nav.childmenu}
@@ -85,8 +88,8 @@
                       </ul>
                       {/if}
                   </li>
-                {/foreach}             
-           </ul>  
+                {/foreach}
+          </div>  
           <div class="font">
             <dl class="big">大</dl>
             <dl class="normal">中</dl>
@@ -94,8 +97,6 @@
           </div>              
             <div class="news_detail">
                 <div class="edit" >
-                   
-
                         <div id="slideBox" class="slideBox">
                             <div class="hd">
                                     <ul></ul>
@@ -110,8 +111,8 @@
                             <h2>{$article.images[0].title}</h2>
                         </div>
                       {$article.content|unescape:"html"}
+                
                 </div>
-  
                 <ul class="paging">
                     <li><a href="{$article.prev.link}">{$article.prev.title}</a></li>
                     <li><a href="{$article.next.link}">{$article.next.title}</a></li>
@@ -120,9 +121,9 @@
        </div>
 
     </section>
-                 
 
-   {include file='./_footer.html'}    
+
+   {include file='./_footer.html'}
     
     </div>
 </body>

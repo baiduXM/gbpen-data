@@ -247,7 +247,17 @@ $(document).ready(function(){
 	})
 
 	// index menu
+	// $('.menu ul li').height($('.menu ul li:nth-child(2)').width());
+	// $('.banner').height(($('.banner').width()*2)+3);
+	// $('.hicon1').css('top',($('.header').height()-$('.hicon1').height())/2);
+	// $('.hicon2').css('top',($('.header').height()-$('.hicon2').height())/2);
+	// $('.pro').height()
 
+	$(window).resize(function() {
+			
+		// $('.menu ul li').height($('.menu ul li:nth-child(2)').width());
+		// $('.banner').height(($('.banner').width()*2)+3);
+	});
 
 	// $("#search").click(function(){
 	// 	$(".search-wrap").removeClass("page-up");
@@ -259,22 +269,20 @@ $(document).ready(function(){
 		
 	// })
 
-// // 内页header
-	$('.news-desc').height($('.list-imgtxt ul li a img').height());
+//banner
+        TouchSlide(         
+        {slideCell:"#slideBox",
+        titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+        mainCell:".bd ul", 
+        effect:"leftLoop", 
+        prevCell:".slide_left",
+        nextCell:".slide_right",
+        autoPage:true,//自动分页
+        autoPlay:true,
+        interTime:10000,//自动播放)
+        pnLoop:"ture" // 前后按钮不循环
 
-    TouchSlide(         
-    {slideCell:"#slideBox",
-    titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
-    mainCell:".bd ul", 
-    effect:"leftLoop", 
-    prevCell:".slide_left",
-    nextCell:".slide_right",
-    autoPage:true,//自动分页
-    autoPlay:true,
-    interTime:10000,//自动播放)
-    pnLoop:"ture" // 前后按钮不循环
-
-    });
+        });
       $(".hide-class li a").click(function () {
           $(this).parent().siblings().find(".second").slideUp()
           $(this).siblings(".second").slideToggle()
@@ -283,18 +291,11 @@ $(document).ready(function(){
           $(this).parent().siblings().find(".third").slideUp()
           $(this).siblings(".third").slideToggle()
       }) 
-	$('.col').height($('.slideBox .bd li').height());
-	$('#search').click(function(){
-		$('.search-wrap').show();
-		$('.index-wrap').hide();
-	})
 
-	$("#search-back").click(function(){
-		$(".search-wrap").hide();
-		$('.index-wrap').show();
-		
-	})
+// // 内页header
+// $('.nyheader h2').height($('.nyheadbg img').height())
+	$('.news-desc').height($('.list-imgtxt ul li a img').height());
 
-          
+	$('.devicebox-item').height($('.devicebox-item').width())
 });
   

@@ -22,15 +22,15 @@ transform-style:preserve-3d;}
 .current1{background:rgba(255,255,255,0.2); }
 .arrow-right{ left:auto; right:0px;}
 .scroll-container .swiper-slide{ width:100%;}
-.swiper-nav .swiper-slide .menubox{ margin:0px 2px; height:100%; overflow: hidden; text-align:center; border-radius:5px; background:#f8fafb; }
-.swiper-nav .swiper-slide .menubox .icon{ width:50px; height:50px; overflow:hidden; margin:5px auto 3px;}
-.swiper-nav .swiper-slide .menubox .title{ height:30px; overflow:hidden; line-height:30px;}
-.swiper-nav .swiper-slide .menubox a{ display:block; color:#429fd9;}
-.menu1{ position:absolute; bottom:0px; left:0px; height:35px; background:rgba(0,85,131,0.7); z-index:7}
+.swiper-nav .swiper-slide .menubox{ margin:0px 2px; height:100%; overflow: hidden; text-align:center;}
+/*.swiper-nav .swiper-slide .menubox .icon{ width:50px; height:50px; overflow:hidden; margin:5px auto 3px;}
+.swiper-nav .swiper-slide .menubox .title{ height:30px; overflow:hidden; line-height:30px;}*/
+.swiper-nav .swiper-slide .menubox a{ display:block; color:#fefefe;font-size: 1.1em;}
+/*.menu1{ position:absolute; bottom:0px; left:0px; height:35px; background:rgba(0,85,131,0.7); z-index:7}
 .menu1 .swiper-nav span {cursor: pointer;display: block;color: #fff;text-align: center; height:40px; line-height:40px; font-size:15px;}
 .menu1 .swiper-nav span a{ color:#fff;display:block; -webkit-tap-highlight-color:rgba(0,0,0,0);  }
 .menu1 .swiper-nav span:active {background:rgba(0,0,0,0.2);}
-.menu1 .swiper-nav{ margin:0px 20px;}
+.menu1 .swiper-nav{ margin:0px 20px;}*/
 
 .thumbs-cotnainer {}
 .thumbs-cotnainer .swiper-slide {width: 80px; text-align:center}

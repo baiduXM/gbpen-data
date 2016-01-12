@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html manifest="huancun.manifest">
+<head>
       <script type="text/javascript">
       // 跳转PC页面
       {if $site_another_url}
@@ -51,155 +54,184 @@
 {$headscript}
 </head>
 <body>
-    <!-- index-search -->
-    <div class="search-wrap">
-      <div class="search-head">
-        
-       <h2>搜索</h2>
-       <span id="search-back">返回</span>
-      </div>
-      <div class="search-inner">
-
-        <div class="search-con">
-          <form action="{$search_action}" method="GET" class="search">
-            <input type="text" class="search-inp" name="s" value="请输入搜索关键字" />
-            <button type="submit" class="search-btn"><i class="iconfont">&#xe741;</i></button>
-          </form>
-        </div>
-      </div>
-    </div>
-      
 
       <div class="index-wrap">
           <header>
                <div class="header">
-            	     <div class="logo"><img src="{$logo}" width="100%"></div>
-                   <i class="hicon1 iconfont" id="search">&#xe741;</i>
-                   <i class="hicon2 iconfont" id="quickbar-showcats">&#xe603;</i>
+            	    <img src="{$logo}" width="100%">
                </div>
           </header>
-          <div class="index-cont">
-             <div class="col">
+          <nav>
+            <div class="nav">
               
-            
-                   <div id="slideBox" class="slideBox">
-                      <a href="javascript:void(0);" class="slide_left"></a>
-                      <a href="javascript:void(0);" class="slide_right"></a>
-                      <div class="hd">
-                       <span class="next"></span>
-                       <ul style="display:none"></ul>
-                       <span class="prev"></span>
-                      </div>
-                      <div class="bd">
-                          <ul>
-                          {foreach name=slidepics item=slidepic from=$global.slidepics}
-                            <li><a class="pic" href="{$slidepic.link}"><img src="{$slidepic.image}"/></a></li> 
-                          {/foreach}                              
+               <div class="swiper-nav swiper-container">
+                  <div class="swiper-wrapper">
+                    {foreach item=nav from=$navs}
 
-                          </ul>
-                      </div>
-                  
-                   </div>
-            
-                  {foreach item=mIndexCat from=$mIndexCats}
-                  {if $mIndexCat.type eq 4}
-                     <div class="pro">
-                       <a href="{$mIndexCat.link}">
-                         <img src="{$mIndexCat.image}" alt="">
-                         <h2>{$mIndexCat.name}</h2>
-                       </a>
-                     </div>                 
-                  <!-- 如果栏目类型是内容单页，输出此HTML代码块 -->
-                  {/if}
-                  {/foreach}
+                      <div class="swiper-slide">
+                          <div class="menubox allcolor"><a href="{$nav.link}">{$nav.name}</a></div>
+                      </div>                      
 
+                    {/foreach}                                                   
+                  </div>
                 </div>
-
-
-             </div>
-                  {foreach item=mIndexCat from=$mIndexCats}
-                  {if $mIndexCat.type eq 1}
-                  <!-- 如果栏目类型是文字列表，输出此HTML代码块 -->
-                     <div class="col01">
-                       <a class="index-tit news-tit">
-                           <h2>{$mIndexCat.name}</h2>
-                           <span>{$mIndexCat.en_name}</span>                    
-                       </a>
-                       <ul class="news">
-                        {$limit = 4}
-                         {foreach item=list from=$mIndexCat.data}
-                         <li><a href="{$list.link}">{$list.title}</a></li>
-                         {if $list@index+1 gte $limit}{break}{/if}
-                         {/foreach}
-                       </ul>
-                     </div>
-
-
-                  {/if}
-                  {/foreach}
-
-                  {foreach item=mIndexCat from=$mIndexCats}
-                  {if $mIndexCat.type eq 4}
-                  <!-- 如果栏目类型是内容单页，输出此HTML代码块 -->
-
-
-                   <div class="about">
-                     <a class="about-col" href="">
-                       <div class="about-img">
-                         <img src="{$mIndexCat.image}" alt="">
-                       </div>
-                       <div class="index-tit about-tit">
-                         <h2>{$mIndexCat.name}</h2>
-                          <span>{$mIndexCat.en_name}</span>
-                       </div>
-
-
-                     </a>
-                     <div class="about-desc">
-                       <span>
-                        {$mIndexCat.description}
-                       </span>
-                     </div>
-                   </div>
-
-                {/if}
-                {/foreach}
-
-
-             <div class="col01">
-
-                  {foreach item=mIndexCat from=$mIndexCats}
-
-                                
-                  {if $mIndexCat.type eq 4}
-               <div class="case">
-                 <a href="">
-                   <div class="case-img"><img src="{$mIndexCat.data[0].image}" alt=""></div>
-                   <div class="index-tit case-tit">
-                     <h2>{$mIndexCat.name}</h2>
-                      <span>{$mIndexCat.en_name}</span>                      
-                   </div>
-                 </a>
+            </div>
+          </nav>
+           <div class="banner">
+        
+               <div id="slideBox" class="slideBox">
+                  <a href="javascript:void(0);" class="slide_left"></a>
+                  <a href="javascript:void(0);" class="slide_right"></a>
+                  <div class="hd">
+                   <span class="next"></span>
+                   <ul style="display:none"></ul>
+                   <span class="prev"></span>
+                  </div>
+                  <div class="bd">
+                      <ul>
+                        {foreach name=slidepics item=slidepic from=$global.slidepics}
+                             <li><a class="pic" href="{$slidepic.link}"><img src="{$slidepic.image}"/></a></li> 
+                        {/foreach} 
+                      </ul>
+                  </div>
+              
                </div>
-                  {/if}
-                  {/foreach}
 
-   
-                  {foreach item=mIndexCat from=$mIndexCats}             
-                  {if $mIndexCat.type eq 4}
-                  <!-- 如果栏目类型是内容单页，输出此HTML代码块 -->
-                   <a class="index-tit serve" href="{$mIndexCat.link}">
-                       <h2>{$mIndexCat.name}</h2>
-                       <span>{$mIndexCat.en_name}</span>                     
+           </div>  
+           <section>
+              {foreach item=mIndexCat from=$mIndexCats}
+              {if $mIndexCat.type eq 1}
+              <!-- 如果栏目类型是文字列表，输出此HTML代码块 -->
+  
+  
+              {elseif $mIndexCat.type eq 2}
+              <!-- 如果栏目类型是图片列表，输出此HTML代码块 -->
+              {if $mIndexCat.showtype eq 1}
+                 <div class="index-cont">
+                   <div class="case">
+                    {$limit = 2}
+                    {foreach item=article from=$mIndexCat.data}
+                     <div class="casebox">
+                       <a href="{$article.link}">
+                         <img src="{$article.image}" alt="">
+                         <h2>{$article.title}</h2>
+                       </a>
+                     </div>
+
+            
+                    {if $article@index+1 gte $limit}{break}{/if}
+                    {/foreach}
+                
+                   </div>
+                 </div>
+              {/if}
+              {if $mIndexCat.showtype eq 2}
+<!--                  <div class="index-cont">
+                   <div class="case">
+                    {$limit = 4}
+                    {foreach item=article from=$mIndexCat.data}
+                     <div class="casebox">
+                       <a href="{$article.link}">
+                         <img src="{$article.image}" alt="">
+                         <h2>{$article.title}</h2>
+                       </a>
+                     </div>
+
+            
+                    {if $article@index+1 gte $limit}{break}{/if}
+                    {/foreach}
+                
+                   </div>
+                 </div> -->
+                 <div class="device">
+                   <div class="device-tit">
+                     <h2>{$mIndexCat.en_name}</h2>
+                    <span>{$mIndexCat.name}</span>
+                   </div>
+                   <div class="devicebox">
+                     <ul>
+       
+                      {$limit = 4}
+                      {foreach item=article from=$mIndexCat.data}
+ 
+                       <li><a href="{$article.link}"><img src="{$article.image}" alt=""></a></li>
+
+              
+                      {if $article@index+1 gte $limit}{break}{/if}
+                      {/foreach}
+                
+
+                     </ul>
+                   </div>
+
+                   <a class="showmore" href="{$mIndexCat.link}">查看更多</a>
+                 </div>
+
+
+              {/if}
+
+              {elseif $mIndexCat.type eq 3}
+              <!-- 如果栏目类型是图文列表，输出此HTML代码块 -->
+
+             <div class="device">
+               <div class="device-tit">
+                 <h2>{$mIndexCat.en_name}</h2>
+                <span>{$mIndexCat.name}</span>
+               </div>
+               <div class="news">
+                    {$limit = 2}
+                    {foreach item=article from=$mIndexCat.data}                  
+                   <a href="{$article.link}">
+                     <img src="{$article.image}" alt="">
+                     <div class="news-nr">
+                       <h2>{$article.title}</h2>
+                       <span>发布时间：{$article.pubtimestamp|date_format:'%Y-%m-%d'}</span>
+                       <div>
+                        {$article.description}
+                       </div>
+                     </div>
                    </a>
-                  {/if}
-                  {/foreach}
-                </div>
+                   {if $article@index+1 gte $limit}{break}{/if}
+                   {/foreach}
+  
+               </div>
+               <a class="showmore" href="{$mIndexCat.link}">查看更多</a>     
+             </div> 
 
 
-           {include file='./_footer.html'}    
+              {elseif $mIndexCat.type eq 4}
+              <!-- 如果栏目类型是内容单页，输出此HTML代码块 -->
+                 <div class="about">
+                  <div class="about-top">
+                    <div class="colname">
+                      <h2>{$mIndexCat.en_name}</h2>
+                      <span>{$mIndexCat.name}</span>
+
+                    </div>
+                    <div class="aboutbox">{$mIndexCat.description}</div>
+                  </div>
+                  <div class="about-btm">
+                    <div class="about-btm-left"></div>
+                    <a class="aboutimg" href="{$mIndexCat.link}">
+                      <img src="{$mIndexCat.image}" alt="">
+                    </a>
+                  </div>
+                 </div>
+              {/if}
+              {/foreach}
+
+
+
+
+
+
+           </section>        
+
+
+
+
+          {include file='./_footer.html'}  
         
         </div>
-
 </body>
 </html>
