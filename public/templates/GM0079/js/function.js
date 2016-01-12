@@ -204,8 +204,17 @@ $(document).ready(function(){
     $(".second li a").click(function () {
         $(this).parent().siblings().find(".third").slideUp()
         $(this).siblings(".third").slideToggle()
-    })  	
+    }) 
+	
+ 	
   	});
 	//分享取消按钮结束
 
+
+
 	
+$(function(){
+    $("input").click(function () {
+      $(this).focus();
+    }) 
+}); 	
