@@ -66,23 +66,23 @@ ul.nav>li>a:hover{background: url(../images/lihover.png) repeat-x;}
 .content{width: 100%;background: url(../images/contentbg.png) top repeat-x;height:260px;margin-top: -29px;padding-top: 20px;}
 .row{width: 1000px;margin: 0 auto;}
 /*关于我们*/
-.col{width: 320px;height: 243px;overflow: hidden;}
+.col{width: 320px;overflow: hidden;}
 .title{height: 18px;line-height:18px;margin-bottom: 10px;font-size: 16px;color: #000;font-family: Microsoft YaHei;border-left: 5px solid #c32e2a;padding-left: 5px;}
 .title span{color: #858585;font-size: 14px;padding-left:3px;}
 .title a{float: right;font-size: 12px;color: #666;}
 .title a:hover{color:#d30101}
-.col-nr{height: 215px;position: relative;background: url(../images/shadow.png) bottom center no-repeat;}
+.col-nr{position: relative;}
 .col-nr a{display:block;border-bottom:1px solid #fff;width: 320px; position: relative;}
 .col-nr a img{width: 100%; position:relative; overflow:hidden;}
 .col-nr a h2{width:300px;height: 37px;line-height: 37px;background: url(../images/navhoverbg.png) repeat;position: absolute;bottom: 0;padding: 0 10px;color: #fff;}
 .col-nr a h2 span{display: inline-block;width: 21px;height: 21px;background: url(../images/aboutico.png)  no-repeat;float: right;margin: 8px 0;}
 /*case*/
 .news{margin: 0 20px;}
-.focus{width:320px;height:199px;position:relative;}
-.focus #pic{width:320px;height:199px;overflow:hidden;}
-.focus #pic ul{/*width:1216px;*/height:199px;float:left;}
-.focus #pic li{width:320px;height:199px;float:left;}
-.focus #pic li img{width:320px;height:199px;float:left;}
+.focus{width:320px;position:relative;}
+.focus #pic{width:320px;overflow:hidden;}
+.focus #pic ul{/*width:1216px;*/float:left;}
+.focus #pic li{width:320px;float:left;}
+.focus #pic li img{width:100%;float:left;position:relative;overflow:hidden;}
 .focus #pic li a:hover h2{text-decoration: underline;}
 .focus .tip-bg{width:320px;height:37px;background:url(../images/navhoverbg.png) repeat;position:absolute;left:0;bottom:0;z-index:12;display: none;}
 .focus #tip{display:none;width:96px;height:14px;position:absolute;left:104px;bottom:3px;z-index:13;}
