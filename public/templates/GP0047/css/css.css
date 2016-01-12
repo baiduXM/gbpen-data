@@ -56,13 +56,13 @@ img{border:none;}
 .slideBox .nextStop{ display:none;  }
 /*产品滚动*/
 .gd{width:100%;height: 211px;margin: 0 auto;overflow: hidden;}
-.gd .picMarquee{height:120px;overflow: hidden;background:url(../images/cp_b_20.png) no-repeat center center;}
-.gd .picMarquee img {height:100%;overflow:hidden;}
-.gd .picMarquee .tempWrap{height:100%;overflow: hidden;}
-.gd .picMarquee li{overflow: hidden;margin: 0 20px;border:1px solid #d5d5d5;font-size:0px;}
-.picMarquee strong {font-size:12px;}
+.gd .picMarquee{width: 100%;height:100%;overflow: hidden;background:url(../images/cp_b_20.png) no-repeat center center;}
+.gd .picMarquee img {width:100%;overflow:hidden;}
+.gd .picMarquee .tempWrap{width: 100% !important;height:100%;overflow: hidden;}
+.gd .picMarquee li{float: left;width:133px;overflow: hidden;margin: 0 20px;border:1px solid #d5d5d5;font-size:0px;}
+.picMarquee strong {font-size:12px;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
 .gd .picMarquee li a.pic{width: 100%;height:147px;overflow: hidden;display: block;}
-.gd .picMarquee li a.title{display: block;text-align: center;}
+.gd .picMarquee li a.title{width: 100%;display: block;text-align: center;}
 /*contant*/
 .contant{width: 973px;height:auto;margin: 0 auto;overflow: hidden;background:url(../images/lb.jpg) repeat-y left top;}
 .contant_left{width: 260px;height: 466px;overflow: hidden;margin-right: 10px;float: left;background:url(../images/lb.jpg) repeat-y center top;}
