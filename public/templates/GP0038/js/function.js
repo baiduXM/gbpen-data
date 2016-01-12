@@ -54,8 +54,8 @@ $(document).ready(function(){
 			btnPrev: '#prizes a.photos-prev',
 			btnNext: '#prizes a.photos-next',
 			visible: 4,
-			auto: 3000,
-			speed: 1000
+			auto: 300,
+			speed: 100
 		}).css({visibility:"visible"});					
      
 

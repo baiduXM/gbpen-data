@@ -58,7 +58,7 @@
                         </div>
                         <div class="aboutedit fl">
                         	<div class="a_title">{$index.aboutedit.name} <b>· {$index.aboutedit.en_name}</b></div>
-<div class="border"><div class="aimg"><img src="{$index.aboutedit.image}" height="103" width="157"/></div>
+<div class="border"><div class="aimg"><img src="{$index.aboutedit.image}" height="103"/></div>
                     <div class="anputt">
                         <p>{$index.aboutedit.description}</p>
                          <span><a href="{$index.aboutedit.link}">[查看详情]</a></span>
@@ -70,7 +70,7 @@
    {foreach name=news item=article from=$index.newsedit.data}   
    {if  $article@index == 0}                              
                         <div class="n_tu">
-                         	<div class="n_img"><a href="{$article.link}"><img src="{$article.image}" height="75" width="115"/></a></div>
+                         	<div class="n_img"><a href="{$article.link}"><img src="{$article.image}" height="75"/></a></div>
                             <div class="n_word">
                             	<div class="n_title"><a href="{$article.link}">{$article.title}</a></div>
                                 <div class="huiyi_edit">
@@ -103,7 +103,7 @@
                                             <ul>           
                                                 {section name=key loop=$index.prodedit.data start=0 step=1}
                                                     <li>
-                                                     <a href="{$index.prodedit.data[key].link}"><img src="{$index.prodedit.data[key].image}"  height="158" width="190"/></a>
+                                                     <a href="{$index.prodedit.data[key].link}"><img src="{$index.prodedit.data[key].image}"/></a>
                                         
                                                     </li>                                                     
                                                 {/section}                                                                                                                                                         
