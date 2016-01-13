@@ -61,7 +61,7 @@
        
       {foreach name=mIndexCats item=mIndexCat from=$mIndexCats}
       {if $mIndexCat.type eq 4}
-       <div id="in_page" class="wrapper">
+       <div id="in_page" class="wrapper"><a href="{$mIndexCat.link}">
          <div class="in_h2 clearfix">
       <div class="bg"></div>
       <div class="in_more1">+</div>
@@ -73,12 +73,13 @@
          <div class="page_img"><img src="{$mIndexCat.image}"></div>
      <p class="public_color">{$mIndexCat.description}</p>
        </div>
+       </a>
         </div>
         
          {elseif $mIndexCat.type eq 2} 
          
          
-         <div id="in_image" class="wrapper">
+         <div id="in_image" class="wrapper"><a href="{$mIndexCat.link}">
       <div class="in_h2 clearfix">
       <div class="bg"></div>
       <div class="in_more1">+</div>
@@ -96,9 +97,10 @@
             {if $article@index+1 == 6}{break}{/if} {/foreach}
             </ul>
         </div>
+        </a>
         </div>
       {elseif $mIndexCat.type eq 1} 
-       <div id="in_text" class="wrapper">
+       <div id="in_text" class="wrapper"><a href="{$mIndexCat.link}">
        <div class="in_h2 clearfix">
       <div class="bg"></div>
       <div class="in_more1">+</div>
@@ -124,6 +126,7 @@
               {if $article@index+1 == 4}{break}{/if} {/foreach}
             </ul>
         </div>
+        </a>
         </div>
 
       
