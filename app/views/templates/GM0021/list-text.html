@@ -72,7 +72,7 @@
               <img src="{$list.image}" width="100%"></div>
             <ul class="news_list">
               {foreach name=article item=article from=$list.data}
-              <li onclick="javascript:window.location.href='{$article.link}'">
+              <li onClick="javascript:window.location.href='{$article.link}'">
                 <dl class="date">
                   {$article.pubtimestamp|date_format:'%m'}
                   <span>/{$article.pubtimestamp|date_format:'%d'}</span>
@@ -92,7 +92,6 @@
               {else}
               <a href="{$near_link}">{$near_page}</a>
               {/if}
-              {if $near_link@index+1 eq 2}{break}{/if}
               {/foreach}
               <a href="{$page_links.next_link}">&gt;&gt;</a>
               <a href="{$page_links.last_link}">尾页</a>
