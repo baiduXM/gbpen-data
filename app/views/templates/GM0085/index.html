@@ -69,11 +69,12 @@
       <div class="in_zh">{$mIndexCat.name}</div>
       <div class="in_en">{$mIndexCat.en_name}</div>
       </div>
+      </a>
         <div class="inner clearfix">
          <div class="page_img"><img src="{$mIndexCat.image}"></div>
      <p class="public_color">{$mIndexCat.description}</p>
        </div>
-       </a>
+       
         </div>
         
          {elseif $mIndexCat.type eq 2} 
@@ -87,6 +88,7 @@
       <div class="in_zh">{$mIndexCat.name}</div>
       <div class="in_en">{$mIndexCat.en_name}</div>
       </div>
+       </a>
         <div class="inner yc">
             <ul class="clearfix">
               {foreach item=article from=$mIndexCat.data}
@@ -97,7 +99,7 @@
             {if $article@index+1 == 6}{break}{/if} {/foreach}
             </ul>
         </div>
-        </a>
+       
         </div>
       {elseif $mIndexCat.type eq 1} 
        <div id="in_text" class="wrapper"><a href="{$mIndexCat.link}">
@@ -108,6 +110,7 @@
       <div class="in_zh">{$mIndexCat.name}</div>
       <div class="in_en">{$mIndexCat.en_name}</div>
       </div>
+      </a>
         <div class="inner clearfix">
           <ul class="clearfix">
             {foreach item=article from=$mIndexCat.data}
@@ -126,7 +129,7 @@
               {if $article@index+1 == 4}{break}{/if} {/foreach}
             </ul>
         </div>
-        </a>
+        
         </div>
 
       

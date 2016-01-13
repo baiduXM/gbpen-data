@@ -61,32 +61,34 @@
          <div class="index">
       {foreach name=mIndexCats item=mIndexCat from=$mIndexCats}
       {if $mIndexCat.type eq 4}
-   <div id="in_page" class="wrapper"><a href="{$mIndexCat.link}">
+   <div id="in_page" class="wrapper">
                     <div class="in_h2"><div class="line"></div><div class="local public_bg1"><div class="in_zh">{$mIndexCat.name}</div></div></div>
-        <div class="inner clearfix">
+        <div class="inner clearfix"><a href="{$mIndexCat.link}">
          <div class="page_img"><img src="{$mIndexCat.image}"></div>
      <p>{$mIndexCat.description}</p>
+     </a>
        </div>
-       </a>
+      
         </div>
         
       {elseif $mIndexCat.type eq 3} 
-       <div id="in_text" class="wrapper"><a href="{$mIndexCat.link}">
+       <div id="in_text" class="wrapper">
        <div class="in_h2"><div class="line"></div><div class="local public_bg1"><div class="in_zh">{$mIndexCat.name}</div></div></div>
         <div class="inner clearfix">
           <ul class="clearfix">
             {foreach item=article from=$mIndexCat.data}
-              <li class="clearfix">
+              <li class="clearfix"><a href="{$mIndexCat.link}">
                 <div class="pic"><img src="{$article.image}" ></div>
                  <div class="in_textbox clearfix">
                  <div class="in_title public_color">{$article.title}</div>
                  <div class="in_des public_color">{$article.description}</div>
                  </div>
+                 </a>
               </li>
               {if $article@index+1 == 3}{break}{/if} {/foreach}
             </ul>
         </div>
-        </a>
+        
         </div>
 
       
