@@ -17,7 +17,7 @@ img{border:none;}
 .tel span{color: #409b2b;font-size: 20px;}
 .ss{position: absolute;right:0px;top:25px;color: #ffffff;z-index: 99999}
 .ss span{float: left;font-weight: bold;font-size: 12px;color: #8e8b8b;padding-right: 10px;line-height: 28px;}
-.input_case{width: 161px;height: 28px;background:url(../images/ssc.jpg) repeat top left;float: left;color: #690000;padding-left: 10px;border: none;outline: none;}
+.input_case{width: 161px;height: 25px;/* background:url(../images/ssc.jpg) repeat top left; */float: left;/* color: #690000; */padding-left: 10px;border: none;outline: none;border:1px solid #DCDCDC;}
 ::-moz-placeholder { color: #8e8b8b;background: none; }
 ::-webkit-input-placeholder { color:#8e8b8b;background: none; }
 :-ms-input-placeholder { color:#8e8b8b; background: none;}
