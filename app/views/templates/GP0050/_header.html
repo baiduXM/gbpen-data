@@ -2,7 +2,7 @@
 <section>
 <div class="head_outsild">
       <div class="head">
-          <a href="{$site_url}" title="返回首页" class="logo"><img src="{$logo}" height="139" width="503" /></a>
+          <a href="{$site_url}" title="返回首页" class="logo"><img src="{$logo}" /></a>
           <div class="sz"><a href="{$site_url}"><img src="{$site_url}images/sz_03.png" height="10" width="11" alt="">&nbsp;返回首页</a>
           <a href="javascript:void(0);" onclick="SetHome(this, window.location)"><img src="{$site_url}images/sy_05.png" height="10" width="11" alt="">&nbsp;设为首页</a>
           <a href="javascript:void(0);" onclick="shoucang(document.title, window.location)"><img src="{$site_url}images/sy_05.png" height="10" width="11" alt="">&nbsp;收藏首页</a></div>
@@ -45,7 +45,7 @@
        <div class="bd">
         <ul>
                      {foreach item=slidepic from=$_header.slidepics}
-                              <li><a href="{$slidepic.link}" target="_blank"><img src="{$slidepic.image}" alt="{$slidepic.title}" height="458px" width="1600px" /></a></li>
+                              <li><a href="{$slidepic.link}" target="_blank"><img src="{$slidepic.image}" alt="{$slidepic.title}" /></a></li>
                      {/foreach}
                 </ul>
       </div>

@@ -38,7 +38,9 @@
         <span>/ {$index.list1.en_name}</span>
       </h3>
       <div class="bk">
+	  <div class="xk">
         <img src="{$index.list1.image}"/>
+		</div>
         <div class="xq">
           {$index.list1.description|truncate:80:"…"}<a href="{$index.list1.link}">【查看详情】</a>
         </div>
@@ -50,7 +52,9 @@
         <span>/ {$index.list2.en_name}</span>
       </h3>
       <div class="bk">
+	  <div class="xk2">
         <img src="{$index.list2.image}"/>
+		</div>
         <div class="xq">
           <ul>
             {foreach item=article from=$index.list2.data}
@@ -68,8 +72,11 @@
         <span>/ {$index.list3.en_name}</span>
       </h3>
       <div class="bk">
+	  
         <a href="{$index.list3.link}">
-          <img src="{$index.list3.image}" width="269" height="196" />
+		<div class="xk3">
+          <img src="{$index.list3.image}" />
+		  </div>
         </a>
       </div>
     </div>

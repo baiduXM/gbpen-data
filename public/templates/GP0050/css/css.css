@@ -11,7 +11,8 @@ img{border:none;}
 /*头部*/
 .head_outsild{width: 100%;height:140px;overflow: hidden;background:url(../images/head.png) repeat-x left center;}
 .head{width: 1003px;height:140px;margin: 0 auto;overflow: hidden;position: relative;}
-.head a.logo{display: block;width:438px;height: 100%;overflow: hidden;float: left;}
+.head a.logo{display: block;width:438px;overflow: hidden;float: left;top:0;margin:0 auto;top:0;margin-bottom:0;}
+.head a.logo img{width:100%;overflow:hidden;position:relative;}
 .sz{position: absolute;right: 10px;top:10px;}
 form img{float: left;}
 .ss{position: absolute;right: 33px;bottom: 28px;color: #ffffff;z-index: 99999;line-height: 35px;}
@@ -60,20 +61,24 @@ form img{float: left;}
 .clo{clear: both;}
 .contant{width: 1003px;height:308px;overflow: hidden;margin: 0 auto;position: relative;top:-49px;}
 .contant_xq{height:100%;overflow: hidden;float: left;}
-.bk{height:216px;border: 1px solid #c3c3c3;}
+.bk{height:179px;border: 1px solid #c3c3c3;}
+.xk{height:95px;margin-top:-13px;}
+.xk2{height:95px;margin-top:-13px;}
+.xk3{height:164.85px;}
+.xk3 img{height:100%;overflow:hidden;position:relative;}
 .left1{width: 334px;margin-right: 18px;}
 .left2{width: 336px;margin-right: 19px;}
-.left2 img{width: 314px;height: 86px;overflow: hidden;padding: 1px;border:1px solid #e6e5e5;margin: 13px auto 20px;display: block;}
+.left2 img{height: 100%;overflow: hidden;padding: 1px;border:1px solid #e6e5e5;margin: 13px auto 20px;display: block;}
 .left3{width: 296px;}
 .title{width: 100%;height: 90px;overflow: hidden;line-height: 81px;text-align: center;font-family: "微软雅黑";font-size: 18px;color: #ffffff;}
 .title span{font-size: 14px;}
 .left1 .title{background:url(../images/top1.png) repeat-x left center;}
-.left1 img{width: 314px;height: 86px;overflow: hidden;padding: 1px;border:1px solid #e6e5e5;margin: 13px auto 20px;display: block;}
+.left1 img{height: 100%;overflow: hidden;padding: 1px;border:1px solid #e6e5e5;margin: 13px auto 20px;display: block; position:relative;}
 .xq{line-height: 28px;width:316px;height: 85px;margin: 0 auto 10px;overflow: hidden;text-indent:2em;}
 .left2 .title{background:url(../images/top2.png) repeat-x left center;}
 .left2 ul li a{background:url(../images/yd_58.png) no-repeat left center;padding-left: 10px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
 .left3 .title{background:url(../images/top3.png) repeat-x left center;}
-.left3 a{width: 269px;height: 196px;overflow: hidden;margin: 13px auto 0px;display: block;}
+.left3 a{/* width: 269px;height: 196px;overflow: hidden;margin: 13px auto 0px; */display: block;}
 
 /*footer*/
 .footer{width: 100%;height:auto;text-align: center;line-height: 24px;margin: 0 auto;background: #4d4d4d; color: #919191;padding-top: 15px;padding-bottom: 10px}
