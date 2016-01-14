@@ -82,19 +82,19 @@
               </li>
               {/foreach}
             </ul>
-            <div class="next1">
-              <a href="{$page_links.first_link}">首页</a>
-              <a href="{$page_links.prev_link}">&lt;&lt;</a>
+             <div class="next1">
+              <a href="{if $page_links.current_page gt 1}{$page_links.first_link}{else}javascript:;{/if}">首页</a>
+              <a href="{if $page_links.current_page gt 1}{$page_links.prev_link}{else}javascript:;{/if}">&lt;&lt;</a>
               {foreach item=near_link key=near_page from=$page_links.nears_link}
-              {if $near_page lt $page_links.current_page}{continue}{/if}
+              
               {if $near_page eq $page_links.current_page}
               <a class="cu">{$near_page}</a>
               {else}
               <a href="{$near_link}">{$near_page}</a>
               {/if}
               {/foreach}
-              <a href="{$page_links.next_link}">&gt;&gt;</a>
-              <a href="{$page_links.last_link}">尾页</a>
+              <a href="{if $page_links.current_page lt $page_links.page_count}{$page_links.next_link}{else}javascript:;{/if}">&gt;&gt;</a>
+              <a href="{if $page_links.current_page lt $page_links.page_count}{$page_links.last_link}{else}javascript:;{/if}">尾页</a>
             </div>
           </section>
           <footer class="foot">{$footprint}</footer>
