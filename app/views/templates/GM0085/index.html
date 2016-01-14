@@ -116,7 +116,7 @@
             {foreach item=article from=$mIndexCat.data}
            
               
-              <li>
+              <li><a href="{$article.link}">
               <div class="in_top">
                    <div class="in_data">{$article.pubtimestamp|date_format:"%d "}/{$article.pubtimestamp|date_format:"%m "}</div>
                  <div class="in_title">{$article.title}</div>
@@ -125,6 +125,7 @@
                  <div class="in_textbox clearfix">
                  <div class="in_des">{$article.description}</div>
                  </div>
+                 </a>
               </li>
               {if $article@index+1 == 4}{break}{/if} {/foreach}
             </ul>

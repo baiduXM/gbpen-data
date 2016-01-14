@@ -72,12 +72,12 @@
         </div>
         
       {elseif $mIndexCat.type eq 3} 
-       <div id="in_text" class="wrapper">
-       <div class="in_h2"><div class="line"></div><div class="local public_bg1"><div class="in_zh">{$mIndexCat.name}</div></div></div>
+       <div id="in_text" class="wrapper"><a href="{$mIndexCat.link}"> 
+       <div class="in_h2"><div class="line"></div><div class="local public_bg1"><div class="in_zh">{$mIndexCat.name}</div></div></div></a>
         <div class="inner clearfix">
           <ul class="clearfix">
             {foreach item=article from=$mIndexCat.data}
-              <li class="clearfix"><a href="{$mIndexCat.link}">
+              <li class="clearfix"><a href="{$article.link}">
                 <div class="pic"><img src="{$article.image}" ></div>
                  <div class="in_textbox clearfix">
                  <div class="in_title public_color">{$article.title}</div>
