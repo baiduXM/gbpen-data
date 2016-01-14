@@ -51,7 +51,7 @@
                     <div class="edit">
                       <div class="ny-dettit">
                         <h2>{$article.title}</h2>
-                        <span>分类：行业动态 &nbsp;&nbsp; 发布日期:{$article.pubtimestamp|date_format:'%Y-%m-%d'}&nbsp;&nbsp;  浏览次数：{$article.viewcount}&nbsp;&nbsp;  <a href="{$site_url}">[返回]</a></span>
+                        <span>分类：{$article.category.name} &nbsp;&nbsp; 发布日期:{$article.pubtimestamp|date_format:'%Y-%m-%d'}&nbsp;&nbsp;  浏览次数：{$article.viewcount}&nbsp;&nbsp;  <a href="{$site_url}">[返回]</a></span>
                       </div>
                       <div class="ny-detcon">
                         {$article.content|unescape:"html"}
