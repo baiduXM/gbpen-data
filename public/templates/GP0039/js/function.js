@@ -1,67 +1,66 @@
-$(document).ready(function() {
-/*侧边栏*/
-		 $(".listbg li a").click(function () {
-     $(this).parent().siblings().find(".second").slideUp()
-     $(this).siblings(".second").slideToggle()
-    })  
-    $(".second li a").click(function () {
-        $(this).parent().siblings().find(".third").slideUp()
-        $(this).siblings(".third").slideToggle()
-    }) 
-	
-	
-/*导航*/
-   jQuery("#nav").slide({
-        type: "menu", // 效果类型，针对菜单/导航而引入的参数（默认slide）
-        titCell: ".aa", //鼠标触发对象
-        targetCell: ".cc", //titCell里面包含的要显示/消失的对象
-        effect: "slideDown", //targetCell下拉效果
-        delayTime: 300, //效果时间
-        triggerTime: 0, //鼠标延迟触发时间（默认150）
-        returnDefault: false //鼠标移走后返回默认状态，例如默认频道是"预告片"，鼠标移走后会返回"预告片"（默认false）
-    });
+
+$(document).ready(function(){
+
+//实例一
+	$("#menu li a").wrapInner('<span class="out"></span>' ).append('<span class="bg"></span>');
+	$("#menu li a").each(function(){
+		$('<span class="over">' +  $(this).text() + '</span>').appendTo(this);
+	});
+
+	$("#menu li a").hover(function(){
+		$(".out",this).stop().animate({'top':'48px'},250);
+		$(".over",this).stop().animate({'top':'0px'},250);
+		$(".bg",this).stop().animate({'top':'0px'},120);
+	},function(){
+		$(".out",this).stop().animate({'top':'0px'},250);
+		$(".over",this).stop().animate({'top':'-48px'},250);
+		$(".bg",this).stop().animate({'top':'-48px'},120);
+	});
 
 
-	
-	
-/*产品详细页*/
-    jQuery(".slideBoxb").slide({
-        mainCell: ".bd ul",
-        autoPlay: false,
-        effect: "leftLoop"
-    });
-	
-	
- // 兼容低版本IE
-    $(function() {
-        if (window.PIE) {
-            $('.rounded').each(function() {
-                PIE.attach(this);
-            });
-        }
-    });
 
-/*大图 100%*/	
-	$("#kinMaxShow").kinMaxShow({
-            height: 420,
-            button: {
-                showIndex: false,
-                normal: { background: 'url(images/button.png) no-repeat -14px 0', marginRight: '8px', border: '0', right: '40%', bottom: '20px' },
-                focus: { background: 'url(images/button.png) no-repeat 0 0', border: '0' }
-            }
-        });
+// banner
+/*鼠标移过，左右按钮显示*/
+		jQuery(".focusBox").hover(function(){ jQuery(this).find(".prev,.next").stop(true,true).fadeTo("show",0.2) },function(){ jQuery(this).find(".prev,.next").fadeOut() });
+		/*SuperSlide图片切换*/
+		jQuery(".focusBox").slide({ mainCell:".pic",effect:"fold", autoPlay:true, delayTime:600, trigger:"click"});
 	
-/*内页大图 100%*/	
-	$("#kinMaxShow1").kinMaxShow({
-            height: 288,
-            button: {
-                showIndex: false,
-                normal: { background: 'url(images/button.png) no-repeat -14px 0', marginRight: '8px', border: '0', right: '48%', bottom: '20px' },
-                focus: { background: 'url(images/button.png) no-repeat 0 0', border: '0' }
-            }
-        });
-	
-/*滚动js*/	
+
+})
 
 
-});
+
+
+window.onload = function(){
+	var oBox = document.getElementById('box')
+	var aSpan = oBox.getElementsByTagName('span');
+	var aLi = oBox.getElementsByTagName('li');
+	var playtime = null;
+	var iNow = 0;
+	for(i=0;i<aSpan.length;i++){
+		aSpan[i].index = i;
+		aSpan[i].onclick = function(){
+			for(var len=aLi.length,i=0;i<len;i++)doMove(aLi[i], {width:29});
+			for(var len=aSpan.length,i=0;i<len;i++)aSpan[i].className = '';
+			this.className = 'hove';
+			doMove(this.parentNode, {width:217});
+			iNow = this.index;
+		};
+	}
+	playtime = setInterval(tab,3000);
+	oBox.onmouseover = function(){
+		clearInterval(playtime);
+	}
+	oBox.onmouseout = function(){
+		playtime = setInterval(tab,3000);
+	}
+	function tab(){
+		iNow == aLi.length-1 ? iNow = 0 : iNow++;
+		aSpan[iNow].onclick();
+	}
+
+
+
+
+
+};

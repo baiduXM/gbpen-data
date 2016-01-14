@@ -38,7 +38,7 @@
                  <h1 class="title ico1">{$index.about_us.name}<a href="{$index.about_us.link}">点击查看更多</a></h1>
                  <div class="about-nr">
                      <a href="{$index.about_us.link}">
-                       <img src="{$index.about_us.image}" width="67" height="152">
+                       <img src="{$index.about_us.image}" />
                        <h2>{$index.about_us.description}<span></span></h2>
                      </a>
                  </div>
@@ -86,7 +86,7 @@
                         {/while}
                         {for $item=1 to 5}
                                    {foreach item=pro from=$index.pro.data}
-                                       <li><a href="{$pro.link}" class="choose"><img alt="" src="{$pro.image}" width="89" height="117" /><h2 class="xu_word">{$pro.title}</h2></a></li>
+                                       <li><a href="{$pro.link}" class="choose"><img alt="" src="{$pro.image}" /><h2 class="xu_word">{$pro.title}</h2></a></li>
                                     {/foreach}
                         {/for}
                         </ul>

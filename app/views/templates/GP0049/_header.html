@@ -37,7 +37,7 @@
           <div class="focusBox" style="margin:0 auto">
               <ul class="pic">
                         {foreach name=slidepics item=slidepic from=$global.slidepics}
-                              <li><a href="{$slidepic.link}" target="_blank"><img src="{$slidepic.image}" alt="{$slidepic.title}" width="1423px" height="379" /></a></li>       
+                              <li><a href="{$slidepic.link}" target="_blank"><img src="{$slidepic.image}" alt="{$slidepic.title}" /></a></li>       
                         {/foreach}
                       
               </ul>
@@ -55,7 +55,7 @@
          <div class="gebot"></div>
          <ul class="gecon">
             {foreach item=foot from=$global.footclass}
-            <li><h2>{$foot.title}</h2><a href="{$foot.link}"><img src="{$foot.image}" width="322"></a></li>
+            <li><h2>{$foot.title}</h2><a href="{$foot.link}"><img src="{$foot.image}" ></a></li>
             {/foreach}
          </ul>
      </div>

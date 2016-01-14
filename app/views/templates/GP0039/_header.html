@@ -1,42 +1,99 @@
 
-<div id="header" class="wrapper clearfix">
-    <div id="logo"><img src="{$logo}" alt="{$title}" width="178" height="77"/></div>
-     <div class="ser clearfix">
-       <form action="{$search_action}" method="GET">
-          <input type="text" name="s" value="" class="search_area" />
-       <input type="submit" class="search_btn"  value="搜索"/>
-        </form>
-</div>
+      <div class="headerbg">
+              <div class="logo"><a href="{$site_url}"><img src="{$logo}" height="112" width="710" /></a></div>
+              <div class="home"><span><a href="#">联系我们</a> | <a href="#">会员中心</a></span></div>    
+        </div> 
+<!-- <div class='nav-box'>
+    <ul id="nav" class="nav clearfix">
+      <li class="nLi on">
+        <h3><a href="#" target="_blank">网站首页</a></h3>
+      </li>
 
-<div id="nav">
-  <ul class="clearfix">
-            {$limit = 7}
-            {if $navs|count lt $limit}{$limit = $navs|count}{/if}
-            <li style="width:{100/($limit+1)-2}%">
-                <a href="{$site_url}"><b>网站首页</b><span>Home</span></a>
-            </li>
-            {foreach name=navs item=nav from=$navs}
-            <li class="fl{if $nav.current} current{/if} aa" style="width:{100/($limit+1)}%">
-                <a href="{$nav.link}"><b>{$nav.name}</b><span>{$nav.en_name}</span></a>
-                <ul class="sub clearfix">
-                    {if $nav.childmenu} {foreach key=key item=nav_list from=$nav.childmenu}
-                    <li class="{if $nav.current}current{/if} cc"><a href="{$nav_list.link}">{$nav_list.name}</a></li>
-                    {/foreach} {/if}
-                </ul>
-            </li>
-            {if $nav@index+1 eq $limit}{break}{/if}
+      {foreach item=nav from=$navs}
+      <li class="nLi {if $nav.current}current{/if}">
+        <h3><a href="{$nav.link}">{$nav.name}</a></h3>
+        {if $nav.childmenu}
+          <ul class="sub">
+            {foreach item=nav_list from=$nav.childmenu}
+            <li class="{if $nav_list.current}current{/if}"><a href="{$nav_list.link}">{$nav_list.name}</a></li>
             {/foreach}
-        </ul>
-</div>
-</div>
+          </ul>
+        {/if}
+      </li>
+      {/foreach}
+                                                    
+    </ul>
+
+</div> -->
 
 
+        <div class="menu" id="menu">    
+            <ul>
+            <li><a href="{$site_url}">首页</a></li>
+      {foreach item=nav from=$navs}
+      <li class="nLi {if $nav.current}current{/if}">
+        <h3><a href="{$nav.link}">{$nav.name}</a></h3>
+        {if $nav.childmenu}
+          <ul class="sub">
+            {foreach item=nav_list from=$nav.childmenu}
+            <li class="{if $nav_list.current}current{/if}"><a href="{$nav_list.link}">{$nav_list.name}</a></li>
+            {/foreach}
+          </ul>
+        {/if}
+      </li>
+      {/foreach}
+
+            
+           <!--  <li><a href="#">关于我们</a></li>
+            <li><a href="#">新闻中心</a></li>
+            <li><a href="#">课程介绍</a></li>
+            <li><a href="#">精彩瞬间</a></li>            
+            <li><a href="#">合作伙伴</a></li>
+            <li><a href="#">招商加盟</a></li>
+            <li><a href="#">下载中心</a></li>                
+            <li><a href="#">人才招聘</a></li>                
+            <li><a href="#">意见反馈</a></li>   -->                                      
+            </ul>               
+        </div> 
 
 
+    <!--     
+        <div class="menu" id="menu">    
+            <ul>
+            <li><a href="#">首页</a></li>
 
 
+            
+            <li><a href="#">关于我们</a></li>
+            <li><a href="#">新闻中心</a></li>
+            <li><a href="#">课程介绍</a></li>
+            <li><a href="#">精彩瞬间</a></li>            
+            <li><a href="#">合作伙伴</a></li>
+            <li><a href="#">招商加盟</a></li>
+            <li><a href="#">下载中心</a></li>                
+            <li><a href="#">人才招聘</a></li>                
+            <li><a href="#">意见反馈</a></li>                                        
+            </ul>               
+        </div> -->
+      <div class="banners">
+  <div class="focusBox" style="margin:0 auto">
+      <ul class="pic">
 
+          {foreach name=slidepics item=slidepic from=$global.slidepics}
+                      <li><a href="{$slidepic.link}" target="_blank"><img src="{$slidepic.image}" alt="{$slidepic.title}" /></a></li>
+                    
+          {/foreach}
+      </ul>
+      <a class="prev" href="javascript:void(0)"></a>
+      <a class="next" href="javascript:void(0)"></a>
+                <ul class="hd">        
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li> 
+                </ul>
 
-
-
-
+      </div>        
+      </div>      
+   
