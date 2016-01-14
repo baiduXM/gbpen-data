@@ -12,7 +12,7 @@ a{blr:expression(this.onFocus=this.blur())} /*a{ -webkit-tap-highlight-color:rgb
 a{outline:none;} /*for Firefox*/
 h1,h2,h3,h4,h5,input{font-size:12px; font-weight:normal;}
 body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td,i{ margin:0px; padding:0px;}
-ol,p,dl,li{list-style:none;}
+ol,p,dl,li{list-style:none;color:#333;}
 .clearfix:after {
   content: ".";
   font-size: 0;
@@ -47,9 +47,9 @@ ul.nav{width: 1000px;margin: 0 auto;height: 39px;}
 ul.nav li{display: inline;float: left;width: 78px;}
 ul.nav>li>a{display: block;height: 39px;line-height: 39px;text-align: center;font-size: 14px;color:#fff;overflow: hidden;white-space: nowrap;}
 ul.nav>li>a:hover{background: url(../images/lihover.jpg) center no-repeat;color: #fe7113}
-.subnav{background: url(../images/secondbd.png) repeat;position: absolute;width: 95px;display: none; }
+.subnav{background: url(../images/secondbg.png) repeat;position: absolute;width: 95px;display: none; }
 
-.subnav a{display: block;color: #fff;text-align: center;white-space: nowrap;margin-left: 30px;}
+.subnav a{display: block;color: #fff;text-align: center;white-space: nowrap;margin-left: 18px;}
 /*.nav .subnav{ display:none;background:url(../images/secondbg.png) repeat;position: absolute;}
 .nav .subnav li{ zoom:1;color: #909090;text-align: center;display: block;}
 .nav .subnav li a{display: block;text-align: center;color: #909090;}*/
@@ -166,7 +166,7 @@ ul.nav>li>a:hover{background: url(../images/lihover.jpg) center no-repeat;color:
 .paging{text-align: center;margin-top: 30px;}
 .side-right{width: 100px;overflow: hidden;}
 ul.first{width: 100px;padding-top:40px;font-size: 14px;}
-ul.first>li{line-height: 34px;background: url(../images/li1bg.jpg) no-repeat;margin-bottom: 1px;}
+ul.first>li{line-height: 34px;background: url(../images/li1bg.jpg) no-repeat;margin-bottom: 1px;width:106px;}
 ul.first>li>a{display: block;color: #fff;background: url(../images/arrow1.png) 10px center no-repeat;padding:0 10px 0 25px;line-height:34px;overflow: hidden;white-space: nowrap;margin-right: 25px;}
 ul.first>li>a:hover,.cu{/*background:#939393 url(../images/arrow2.png) 10px center no-repeat;*/color: #fff;}
 .second{display: none;margin-top: 10px;}

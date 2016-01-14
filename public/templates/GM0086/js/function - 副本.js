@@ -7,72 +7,17 @@ $(document).ready(function(){
 					autoPage:true,//自动分页
 					autoPlay:true,
 					interTime:6000 //自动播放
-				});	
+				});
 				TouchSlide({ 
-					slideCell:"#picScroll1",
+					slideCell:"#picScroll",
 					titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
 					autoPage:true, //自动分页
 					pnLoop:"false", // 前后按钮不循环
 					switchLoad:"_src" //切换加载，真实图片路径为"_src" 
-				});	
-				TouchSlide({ 
-					slideCell:"#picScroll2",
-					titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
-					autoPage:true, //自动分页
-					pnLoop:"false", // 前后按钮不循环
-					switchLoad:"_src" //切换加载，真实图片路径为"_src" 
-				});	
-				TouchSlide({ 
-					slideCell:"#picScroll3",
-					titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
-					autoPage:true, //自动分页
-					pnLoop:"false", // 前后按钮不循环
-					switchLoad:"_src" //切换加载，真实图片路径为"_src" 
-				});													
-				
-				TouchSlide({ 
-					slideCell:"#picScroll4",
-					titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
-					autoPage:true, //自动分页
-					pnLoop:"false", // 前后按钮不循环
-					switchLoad:"_src" //切换加载，真实图片路径为"_src" 
-				});	
-				TouchSlide({ 
-					slideCell:"#picScroll5",
-					titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
-					autoPage:true, //自动分页
-					pnLoop:"false", // 前后按钮不循环
-					switchLoad:"_src" //切换加载，真实图片路径为"_src" 
-				});	
-				TouchSlide({ 
-					slideCell:"#picScroll6",
-					titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
-					autoPage:true, //自动分页
-					pnLoop:"false", // 前后按钮不循环
-					switchLoad:"_src" //切换加载，真实图片路径为"_src" 
-				});													
+				});				
 	$(window).load(function(){
 	var img=new Image();		
 	img.src=$(".prolist img").attr("src");
-		console.log($('div[id^=picScroll]').length);
-	var img=new Image();
-	$(".index-wrap").height($(window).height()-$(".fixed").height()-$(".tell-icon").height())
-	$(".class-m").height($(".class").outerHeight()-$(".class-top").outerHeight())
-	$(".topxz").width($(".wrap-bg").width()-50)
-	$(".header").width($(".wrap-bg").width()-10)
-	$(".class-m").height($(".class").outerHeight()-$(".class-top").outerHeight())
-	$(".fixed-top").width($(".index-wrap").width()-10)
-	$(".menu").height($(".menulist dl").outerHeight())
-	$(".rbger").height($(".leftaimg").height()-5)
-	$(".topxze").width($(".wrap-bg").width()-60)	
-	$(".topxz").width($(".wrap-bg").width()-50)	
-	$(".c_wprd").height($(".cimg").height())
-	$(".prodshow dd:nth-child(2) .cimg").height($(".prodshow dd:nth-child(1) .cimg").height())
-	$(".left_clorbg").height($(".right_clorbg").height())		
-	});
-	$(window).resize(function(){
-	$(".index-wrap").height($(window).height()-$(".fixed").height()-$(".tell-icon").height())
-	$(".class-m").height($(".class").outerHeight()-$(".class-top").outerHeight())
 	$(".topxz").width($(".wrap-bg").width()-50)
 	$(".header").width($(".wrap-bg").width()-10)
 	$(".class-m").height($(".class").outerHeight()-$(".class-top").outerHeight())
@@ -80,10 +25,32 @@ $(document).ready(function(){
 	$(".menu").height($(".menulist dl").outerHeight())
 	$(".rbger").height($(".leftaimg").height()-5)
 	$(".topxze").width($(".wrap-bg").width()-60)
-	$(".c_wprd").height($(".cimg").height())
-	$(".prodshow dd:nth-child(2) .cimg").height($(".prodshow dd:nth-child(1) .cimg").height())
-	$(".left_clorbg").height($(".right_clorbg").height())			
-
+	});
+	$(window).resize(function(){
+		$(".class-m").height($(".class").outerHeight()-$(".class-top").outerHeight())
+		$(".menulist dl").height($(".menulist dl").width())
+		$(".menu").height($(".menulist dl").outerHeight())
+		$(".prolist .tielbox").height($(".prolist img").height())
+		
+	$("#about .nr dd").height($("#about img").height()-29)
+	if($(window).width()<400){
+		$("#about .nr dd").css({'line-height':$("#about .nr dd").height()/3+"px"})
+		}else{
+			if($(window).width()<540)
+			{$("#about .nr dd").css({'line-height':$("#about .nr dd").height()/5+"px"})}
+			else{$("#about .nr dd").css({'line-height':$("#about .nr dd").height()/6+"px"})}
+			}
+			
+			
+	$(".class-m").height($(".class").outerHeight()-$(".class-top").outerHeight())
+	$(".index-wrap").height($(".wrap").height()-$(".fixed").height()-$(".tell-icon").height())
+	//赖加载
+	$("img.lazy").lazyload({
+			 placeholder : "images/loading.gif",
+			 container:$(".index-wrap"),
+             effect: "slideDown",
+			 threshold : 140 
+          });
 	});
 	
 	
@@ -111,20 +78,16 @@ $(document).ready(function(){
 		pageSlideOver();
 		return false;
 	})
-	
-	$(".class-close").click(function(){
-		$(this).parents(".class").animate({"right":-100+"%"})
-		 $(".class").css('display','none')
-		 $(".opacity2").hide()
-		})		
-	$("#daohang").click(function(){
-		$(".class").animate({
-			"right":0+"%"
-			}) 
-	   $(".class").css('display','block')
-		})											
+									
 	
   //隐藏导航跟wrap的切换
+  $("#daohang").click(function(){
+		$(".class").removeClass("page-prev").addClass("page-in");
+		$(".wrap").removeClass("page-active").addClass("page-next page-in")
+		$(".opacity2").show()
+		pageSlideOver();
+		
+	})
 	$(".class-close,.opacity2").on('touchstart',function(){
 		$(".class").addClass("page-prev page-out")
 		$(".wrap").removeClass("page-next").addClass(" page-out")
@@ -191,7 +154,7 @@ $(document).ready(function(){
 	})		
 	
 	//返回顶部开始
-	$(".top").click(function(){$(".index-wrap").animate({scrollTop :0}, 800)})
+	$(".back-top").click(function(){$(".index-wrap").animate({scrollTop :0}, 800)})
 	$("#share_btn").click(function(){
 		$(".newsclass").addClass("show")
 		$(".opacity2").show()
@@ -203,24 +166,7 @@ $(document).ready(function(){
 		$(".newsclass").removeClass("show")
 		$(".opacity2").hide()
 	})
-    $(".hide-class li a").click(function () {
-        $(this).parent().siblings().find(".second").slideUp()
-        $(this).siblings(".second").slideToggle()
-    })  
-    $(".second li a").click(function () {
-        $(this).parent().siblings().find(".third").slideUp()
-        $(this).siblings(".third").slideToggle()
-    }) 
-	
- 	
   	});
 	//分享取消按钮结束
 
-
-
 	
-$(function(){
-    $("input").click(function () {
-      $(this).focus();
-    }) 
-}); 	
