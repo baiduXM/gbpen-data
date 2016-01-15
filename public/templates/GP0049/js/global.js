@@ -21,7 +21,7 @@ $(document).ready(function(){
 	$('.ny-prolist li:nth-child(4n)').css('marginRight',0)
 
     jQuery(".focusBox").slide({ mainCell:".pic",effect:"fold", autoPlay:true, delayTime:300});
-    jQuery(".det-img").slide({ mainCell:"ul",effect:"fold", autoPlay:true, delayTime:300});
+    jQuery(".det-img").slide({ mainCell:"ul",effect:"leftLoop", autoPlay:true, delayTime:300});
 });
 
 //设为首页

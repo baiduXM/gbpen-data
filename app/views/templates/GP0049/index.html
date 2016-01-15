@@ -38,8 +38,8 @@
                  <h1 class="title ico1">{$index.about_us.name}<a href="{$index.about_us.link}">点击查看更多</a></h1>
                  <div class="about-nr">
                      <a href="{$index.about_us.link}">
-                       <img src="{$index.about_us.image}" />
-                       <h2>{$index.about_us.description}<span></span></h2>
+                       <div class="about_img"><img src="{$index.about_us.image}" /></div>
+                       <div class="about_txt">{$index.about_us.description}</div>
                      </a>
                  </div>
              </div>
@@ -51,10 +51,10 @@
                      <dd>{$index.news.data[0].description}</dd>
                  </div>
                  <ul>
-                 {foreach item=new from=$index.news.data}{if $new@index+1 eq 1}{continue}{/if}
+                 {foreach item=new from=$index.news.data}
                      <li><a href="{$new.link}" class="clearfix">{$new.title}<span>{$new.pubdate}</span></a></li>
                  
-                 
+                 {if $new@index+1 eq 3}{break}{/if}
                  {/foreach}
                  </ul>
                    
