@@ -1,0 +1,18 @@
+<section>
+	<ul class="module_news">
+              {foreach name=article item=article from=$list.data}
+              
+                 <li>
+                        <img src="{$article.image}" height="135" width="172" alt="">
+                        <div class="news_img">
+                            <h3><a href="">{$article.title} <span>{$article.pubdate}  </span></a></h3>
+                           
+                            <p>{$article.description} <a href="{$article.link}">查看更多</a></p>
+                        </div>
+                    </li>
+                {/foreach}
+            </ul>
+
+
+
+</section>
