@@ -10,7 +10,8 @@ $(document).ready(function() {
 	 	$(this).removeClass('on')
 	 	
 	 });
-
+var scroller  = new jsScroller(document.getElementById("Scroller-1"), 440, 240);
+var scrollbar = new jsScrollbar (document.getElementById("Scrollbar-Container"), scroller, true);
 	// banner js
     
        /*鼠标移过，左右按钮显示*/

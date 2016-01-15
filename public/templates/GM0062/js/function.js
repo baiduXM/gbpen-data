@@ -143,4 +143,8 @@ $(document).ready(function(){
   	});
 	//分享取消按钮结束
 
-	
+	$(function(){
+    $("input").click(function () {
+      $(this).focus();
+    }) 
+}); 	

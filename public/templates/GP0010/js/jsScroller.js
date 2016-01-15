@@ -28,7 +28,7 @@ function jsScroller (o, w, h) {
 	};
 	
 	//Public Methods
-	this.reset = function () {
+	this.reset = function () {console.log(123)
 		this.content = o;
 		this.totalHeight = o.offsetHeight;
 		this.totalWidth	 = o.offsetWidth;

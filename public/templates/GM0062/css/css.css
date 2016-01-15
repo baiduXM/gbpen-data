@@ -243,12 +243,13 @@ auto}
 .menulist dl:nth-child(1){ width:180px; margin:0px auto;margin-bottom:5px; text-align:center;}
 .menulist dl dd a{width:55px; height:55px;background:#262626; border-radius:10px; text-align:center; line-height:60px; font-size:0.85em;margin:0px auto;  float:right; display:inline; color:#fff;}
 .menulist dl:nth-child(2){ width:180px; float:right; display:inline; margin-bottom:5px; clear:both; text-align:right;}
-.menulist dl:nth-child(2) dd:nth-child(1){ margin-left:16%;}
 .menulist dl:nth-child(2) dd{ width:50%; float:left; display:inline;}
 .menulist dl:nth-child(2) dd a{ margin-left:5px; float:right; text-align:center; }
 .menulist dl:nth-child(3){ width:180px; float:right; display:inline; margin-bottom:5px; clear:both;}
 .menulist dl:nth-child(3) dd{ width:33%; float:left; display:inline;}
 .menulist dl:nth-child(3) dd a{ margin-left:5px; }
+.menulist dl:nth-child(2) dd:nth-child(1){ margin-left:16%;}
+.menulist dl:nth-child(2) dd.ddthird:nth-child(1){width:50%; float:left; display:inline;}
 
 }
 
