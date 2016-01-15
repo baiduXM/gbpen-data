@@ -16,7 +16,6 @@ $(document).ready(function(){
 	var img=new Image();
 	$(".banerd").height($(".banerd").width())
 	$(".datu").height($(".banerd").height())
-	$(".class").height($(".header").height())
 	$(".banerd .datu img").height($(".banerd").height())
 
 	});
@@ -55,13 +54,18 @@ $(document).ready(function(){
 									
 	
   //隐藏导航跟wrap的切换
-  $("#daohang").click(function(){
-		$(".class").removeClass("page-prev").addClass("page-in");
-		$(".wrap").removeClass("page-active").addClass("page-next page-in")
-		$(".opacity2").show()
-		pageSlideOver();
-		
-	})
+	$(".class-close").click(function(){
+		$(this).parents(".class").animate({"right":-100+"%"})
+		 $(".class").css('display','none')
+		 $(".opacity2").hide()
+		})		
+	$("#daohang").click(function(){
+		$(".class").animate({
+			"right":0+"%"
+			}) 
+	   $(".class").css('display','block')
+		})											
+	
 	$(".class-close,.opacity2").on('touchstart',function(){
 		$(".class").addClass("page-prev page-out")
 		$(".wrap").removeClass("page-next").addClass(" page-out")
@@ -135,15 +139,27 @@ $(document).ready(function(){
 		return false
 	})
 	//返回顶部结束
-	//分享取消按钮开始
+//分享取消按钮开始
 	$(".share-cance").click(function(){
 		$(".newsclass").removeClass("show")
 		$(".opacity2").hide()
 	})
+    $(".hide-class li a").click(function () {
+        $(this).parent().siblings().find(".second").slideUp()
+        $(this).siblings(".second").slideToggle()
+    })  
+    $(".second li a").click(function () {
+        $(this).parent().siblings().find(".third").slideUp()
+        $(this).siblings(".third").slideToggle()
+    }) 
+	
+ 	
   	});
 	//分享取消按钮结束
+	
+	
 
-	$(function(){
+$(function(){
     $("input").click(function () {
       $(this).focus();
     }) 
