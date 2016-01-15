@@ -1,9 +1,5 @@
-var scroller  = null;
-var scrollbar = null;
-window.onload = function () {
-  scroller  = new jsScroller(document.getElementById("Scroller-1"), 440, 240);
-  scrollbar = new jsScrollbar (document.getElementById("Scrollbar-Container"), scroller, false);
-}
+
+
 //改变图大小
 function imgresize(thispic,P_w)
 {

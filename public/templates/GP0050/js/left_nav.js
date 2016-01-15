@@ -1,4 +1,12 @@
 $(document).ready(function($) {
+    var a = $(".current").children('a')
+
+
+    a.click(function() {
+
+        $(this).next().slideToggle()
+
+    });
     jQuery("#slideBox").slide({
         mainCell: ".bd ul",
         autoPlay: true,
@@ -14,13 +22,5 @@ $(document).ready(function($) {
         effect: "leftMarquee",
         vis: 5,
         interTime: 20
-    });
-    var a = $(".current").children('a')
-
-
-    a.click(function() {
-
-        $(this).next().slideToggle()
-
     });
 });
