@@ -1,124 +1,66 @@
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-
-    <!-- 调试代码 End -->
-    <script type="text/javascript">
-    // 跳转手机页面
-    {if $site_another_url}
-      if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
-        location.href = '{$site_another_url}';
-      }
-    {/if}
-    </script>
-    <!--[if lt IE 9]>
-		<script src="{$site_url}js/html5.js"></script>
-	<![endif]-->
-<meta http-equiv="x-ua-compatible" content="ie=7" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="{$keywords}" />
- <meta name="description" content="{$description}" />
-<link href="{$site_url}css/style.css" rel="stylesheet" type="text/css" />
+<meta name="description" content="{$description}" />
+<script type="text/javascript" src="http://common.mn.sina.com.cn/public/resource/lib/jquery.jcarousellite.js"></script>
+
+<link rel="stylesheet" rev="stylesheet" href="{$site_url}css/style_{$stylecolor}.css" type="text/css" />
 
 <title>{$title}</title>
+<link rel="stylesheet" type="text/css" href="{$site_url}css/style.css" />
+<link rel="stylesheet" type="text/css" href="{$site_url}css/nivo-slider.css" />
+<script src="{$site_url}js/dd_delatedpng.js" type="text/javascript"></script>
+<script src="{$site_url}js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script src="{$site_url}js/jquery.SuperSlide.2.1.js" type="text/javascript"></script>
+<script src="{$site_url}js/function.js" type="text/javascript"></script>
+<script type="text/javascript">
+	// 跳转手机页面
+	{if $site_another_url}
+		if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+			location.href = '{$site_another_url}';
+		}
+	{/if}
+	</script>
+
+<!--[if lt IE 9]>
+		<script src="js/html5.js"></script>
+	<![endif]-->
+<!--[if IE 6]>
+<script type="text/javascript" src="js/dd_delatedpng.js" ></script>
+<script type="text/javascript">//如果多个element使用PNG,则用','分隔
+DD_belatedPNG.fix('div,ul,li,a,p,img,h3');
+</script>
+<![endif]-->
 {$headscript}
 </head>
+
 <body>
-
-<div class="w_p p_r">
-    {include file="./_header.html"}
-  <div class="p_r w form">
-       <ul class="fo">
-
-       {foreach item=article from=$index.list1.data}
-                                 <li><a href="{$article.link}" ><img src="{$article.image}"  max-height="170" width="192" />
-                                 <p>{$article.title}</p> </a></li>
-                                 {if $article@index+1 == 3}{break}{/if}
-                  {/foreach}
-       	 
-       </ul>
-       <div class="tit p_r"><div class="z"><a href="{$index.list1.link}">{$index.list1.name}</br>{$index.list1.en_name}</br><span>+</span></a></div></div>
-       <div class="f p_a">
-  	 
-
-  	   <form action="{$search_action}" method="GET" class="hides f_r ">
-                 <input type="text" placeholder="请输入搜索关键词" class="input_case" name="s">
-                 <input type="submit" value="搜索" class="input_key">
-            </form>
-
-
-  	   <div class="tel">TEL: <span>{$contact.telephone}</span></div>
-  	  <!--  <div class="qq"><a href=""></a><a href=""></a><a href=""></a></div> -->
-  	   </div>
-  </div>
-  <div class="w cp p_r">
-   <ul class="fo">
-       	  {foreach item=article from=$index.list1.data}
-                                 <li><a href="{$article.link}" ><img src="{$article.image}"  max-height="170" width="192" />
-                                 <p>{$article.title}</p> </a></li>
-                                 {if $article@index+4 ==7 }{break}{/if}
-                  {/foreach} 
-    </ul>
-    </div>
-    <div class="new w">
-    	<div class="f_l p_r">
-    		<div class="ntop">
-    		    <div class="before"></div>
-    		    <div class="z"><a href="">{$index.list2.name}</br>{$index.list2.en_name}</br><span>+</span></a></div>
-    			<img src="{$index.list2.image}" height="135" width="172" alt="" class="f_l">
-    			<div class="f_r">
-    				<h3 class="t"><a href="">{$index.list1.title}</a></h3>
-    				{$index.list2.description} <a href="{$index.list2.link}" class="more">【查看更多】</a>
-    			</div>
-    		</div>
-    		<div class="bottom">
-    			<ul>
-    				
-    					
-    						{foreach item=article from=$index.list2.data}
-	
-	<li><i><span>15</span><em>{$article.pubdate}</em></i><div class="f_r"><a href="{$article.link}"><p>{$article.title}</p></a>{$article.description}<a href="{$article.link}" class="more">【查看更多】</a></div></li>
-
-	{if $article@index+1 == 3}{break}{/if}
-	{/foreach}
-    			</ul>
-    		</div>
-    	</div>
-    	<div class="f_r cps">
-    	    <p><a href=""><em>{$index.list3.name}<span>{$index.list3.en_name}</span></em></a></p>
-    		<ul>
-    		  {foreach item=article from=$index.list3.data}
-                                 <li><a href="{$article.link}" ><img src="{$article.image}"  max-height="192" width="218" />
-                               </a></li>
-                                 {if $article@index+1 == 4}{break}{/if}
-                  {/foreach}
-    			
-    		</ul>
-    	</div>
-    </div>
-    <div class="w_p ewm">
-      <div class="w">
-    	<div class="f_l wb">
-    		<div class="f_l"><img src="{$_global.img}" height="116" width="116" alt=""></div>
-    		<div class="f_l">
-    			{include file="./_global.html"} 
-
-    		</div>
-    	</div>
-    	<div class="f_r wb">
-    		<h3 class="abo">{$index.list4.name} / <span>{$index.list4.en_name}</span></h3>
-    		    {$index.list4.description}<a href="{$index.list4.link}" class="more">【查看更多】</a>
-
-    	</div>
-    	</div>
-    </div>
-{include file="./_footer.html"} 
-
-</div>
-
-<script type="text/javascript" src="{$site_url}js/jquery1.42.min.js"></script>
-<script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.js"></script>
-<script type="text/javascript" src="{$site_url}js/function.js"></script>
+	<div id="slideBox" class="slideBox">
+		<div class="sreach h_o">
+			<form action="{$search_action}" method="GET"><input type="text" class="text" name="s" /><button name="" type="submit" class="submit" ><img src="{$site_url}images/ss_02.png" height="25" width="31"></button></form>
+		</div>
+		<div class="header h_o">
+			<div class="logo fl"><img src="{$logo}"/></div>
+			<div class="mune fr">
+				<ul class="nav h_o">
+				  {foreach item=nav from=$navs}
+					<li class="li"><a href="{$nav.link}"><span>{$nav.en_name}</span><i>{$nav.name}</i></a></li>
+					{if $nav@index+1 == 6}{break}{/if}
+					{/foreach}
+				</ul>
+			</div>
+		</div>
+		<div class="bd">
+			<ul>
+			{foreach name=slidepics item=slidepic from=$global.slidepics}
+				<li><a href="{$slidepic.link}"><img src="{$slidepic.image}" alt="{$slidepic.title}"/></a></li>
+				{/foreach} 
+			</ul>
+		</div>
+		{include file="./_footer.html"}  
+	</div>
+	{$footscript}
 </body>
 </html>
