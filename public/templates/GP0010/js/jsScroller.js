@@ -33,7 +33,7 @@ function jsScroller (o, w, h) {
 		this.totalHeight = o.offsetHeight;
 		this.totalWidth	 = o.offsetWidth;
 		this._x = 0;
-		this._y = 0;console.log(this.totalHeight);console.log(this.totalHeight);
+		this._y = 0;
 		with (o.style) {
 			left = "0px";
 			top  = "0px";
@@ -75,7 +75,6 @@ function jsScroller (o, w, h) {
 	this.totalHeight = o.offsetHeight;
 	this.scrollTimer = null;
 	this.reset();
-	alert('T')
 };
 
 

@@ -3,7 +3,7 @@
 <nav>
 	<h3 class="tit">{$posnavs[0].name}&nbsp;<span>{$posnavs[0].en_name}</span></h3>
 
-	<ul class="clearfix">
+	<ul class="clearfix sub3nav">
 		{foreach name=pagenavs item=nav from=$pagenavs}
 		<li class="{if $nav.current}current{/if}">
 			<a href="{if count($nav.childmenu) eq 0}javascript:;{else}{$nav.link}{/if}">{$nav.name}</a>
