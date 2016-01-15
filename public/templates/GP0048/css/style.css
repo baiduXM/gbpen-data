@@ -104,15 +104,15 @@ body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, fo
 .accordionWrapper{display:inline-block; background-color:#fff; overflow:hidden;}
 .accordionWrapper img{vertical-align:top; border:0; margin:0; padding:0}
 .accordionWrapper div{display:inline; float:left; margin:auto;}
-.accordionWrapper div.accordion-title{cursor:pointer;width: 19px;line-height: 13px;margin: auto 1px;}
+.accordionWrapper div.accordion-title{cursor:pointer;width: 19px;line-height: 13px;margin: auto 1px;height: 119px;overflow: hidden;}
 .accordionWrapper div.accordion-content{display:none;}
 .accordionWrapper .num{float: none;}
-.accordionWrapper strong{ width: 14px;display: block;text-align: center;margin: 0 auto;text-overflow: ellipsis;overflow: hidden;height:96px;}
-.cimgs{ height:125px; overflow:hidden; float:left; }
+.accordionWrapper strong{ width: 14px;display: block;text-align: center;margin: 0 auto;text-overflow: ellipsis;overflow: hidden;height: 112px;}
+.cimgs{ height:125px; overflow:hidden; float:left;margin-right: 15px;max-width: 50%;}
 .cimgs img{ height:100px;}
-.music{ width:101px; float:right; display:inline; overflow:hidden;}
+.music{ overflow:hidden;}
 .music ul li{ border-bottom:1px solid #ccc; height:29px; line-height:29px; background:url(../images/mioc.jpg) left no-repeat;}
-.music ul li a{ padding-left:19px;}
+.music ul li a{ padding-left:19px;overflow: hidden;display: block;white-space: nowrap;text-overflow: ellipsis;}
 .music ul li a:link,.music ul li a:visited{ color:#666;}
 .music ul li a:hover{ color:#90ba1c;}
 .fobgs{ background:url(../images/fbg.jpg) repeat-x; padding-top:20px; margin:0px auto; width:100%; overflow:hidden;}
