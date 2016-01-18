@@ -32,7 +32,7 @@
             <div class="ind_left">
                 <div class="about_t">
                     <h3><span><a href="{$index.about_us.link}">更多&gt;&gt;</a></span>{$index.about_us.name}</h3>
-                    <div class="border"><img src="{$index.about_us.image}" height="116" width="178" />
+                    <div class="border"><img src="{$index.about_us.image}" />
                         <div class="about_p">
                             {$index.about_us.description}
                             <span><a href="{$index.about_us.link}">【了解更多】</a></span>
@@ -48,7 +48,7 @@
                                 <ul>
                                     {section name=key loop=$index.pro.data start=0 step=2}
                                     <li>
-                                        <a href="{$index.pro.data[key].link}"><img alt="" src="{$index.pro.data[key].image}" width="174" height="131" />
+                                        <a href="{$index.pro.data[key].link}"><img alt="" src="{$index.pro.data[key].image}" />
                                             <h2>{$index.pro.data[key].title}</h2></a>
                                     </li>
                                     {/section}
@@ -58,7 +58,7 @@
                                 <ul>
                                     {section name=key loop=$index.pro.data start=1 step=2}
                                     <li>
-                                        <a href="{$index.pro.data[key].link}"><img alt="" src="{$index.pro.data[key].image}" width="174" height="131" />
+                                        <a href="{$index.pro.data[key].link}"><img alt="" src="{$index.pro.data[key].image}" />
                                             <h2>{$index.pro.data[key].title}</h2></a>
                                     </li>
                                     {/section}
@@ -72,13 +72,13 @@
             <div class="right_index">
                 <div class="contct">
                     <h3><span></span>联系我们<b>CONTACT</b></h3>
-                    <div class="limg"><a href="{$global.contact_img.link}"><img src="{$global.contact_img.image}" height="89" width="219" /></a></div>
+                    <div class="limg"><a href="{$global.contact_img.link}"><img src="{$global.contact_img.image}" /></a></div>
                     <div class="lxw2">
                         {$global.contact_us}
                     </div>
                 </div>
                 <div class="xwzx">
-                    <h3><span><a href="{$index.news.link}"><img src="{$site_url}images/inbgw_06.jpg" height="22" width="55" /></a></span>{$index.news.name}<b>{$index.news.en_name}</b></h3>
+                    <h3><span><a href="{$index.news.link}"><img src="{$site_url}images/inbgw_06.jpg" /></a></span>{$index.news.name}<b>{$index.news.en_name}</b></h3>
                     <div class="news_deta1">
                         <ul>
                             {foreach name=new item=new from=$index.news.data}

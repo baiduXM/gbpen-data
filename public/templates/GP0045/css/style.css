@@ -4,6 +4,7 @@
 a{ color:#837e7a; text-decoration:none}
 a:hover{ color:#eab002;}
 a img{ border:none;}
+.logo img{ height:100%; overflow:hidden; position:relative;}
 table{border-collapse:collapse; border-spacing:0px;}
 body{font-size:12px; text-align:left; font-weight:normal; color:#837e7a; line-height:24px; background:url(../images/bg.jpg) repeat-x #fff;}
 ul,ol,p,dl,li{margin:0;pading:0; list-style:none;}
@@ -15,7 +16,7 @@ body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, fo
 .wappers{ width:100%; height:auto; overflow:hidden; }
 .headerbg{ width:1000px; height:116px; margin:0px auto; overflow:hidden;}
 .baozheng{ width:270px; height:116px; overflow:hidden; float:right; display:inline;}
-.logo{ width:462px; height:116px; float:left; display:inline; overflow:hidden;}
+.logo{height:116px; float:left; display:inline; overflow:hidden;}
 ./*baozheng ul{ width:325px; height:auto; overflow:hidden; margin-top:15px;}
 .baozheng ul li{ width:87px; height:87px; float:left; display:inline; overflow:hidden; margin-right:4px;}*/
 .menu{  width:1000px; height:39px; overflow:hidden; margin:0px auto 0px; }
@@ -32,9 +33,9 @@ ul.nav li .sub li{
     background: linear-gradient(#A70B0F, #781416); 
 }
 .banners{ width:1000px; height:380px; margin:20px auto;overflow: hidden;}
-.focusBox { position: relative; width:100%; height:380px; overflow: hidden; }
+.focusBox { position: relative; overflow: hidden; }
 .focusBox .pic{ position:relative; z-index:0; }
-.focusBox .pic img { width:100%; height:380px; display: block; }
+.focusBox .pic img { width:100%; display: block; }
 .focusBox .hd { width:100%; position: absolute; top:491px; text-align: center; font-size:0; z-index:1; height:35px; background:url(../images/banbbg.png) repeat-x; }
 .focusBox .hd li{margin:15px 8px; background: url(../images/dot.png) no-repeat 0 -14px; height: 10px; overflow: hidden; width: 10px; cursor: pointer;
   display:inline-block; *display:inline; zoom:1;  _background: url(../images/dot.gif) no-repeat 0 -14px;
@@ -55,8 +56,8 @@ ul.nav li .sub li{
 .ind_left h3 span { float:right; margin-top:0px; font-size:12PX; font-weight:normal; margin-right:10PX; margin-top:0px;}
 .ind_left h3 span a:link,.ind_left h3 span a:visited{ color:#333;}
 .ind_left h3 span a:hover{ color:#db1919}
-.border{  width:739px; height:120px; margin-right:5px; padding-top:10px; margin-left:11px; margin-right:10px; }
-.border img{ width:178px; height:116px; float:left;margin-right:10px; display:inline; overflow:hidden; margin-top:5px; padding:0px;}
+.border{ height:120px; margin-right:5px; padding-top:10px; margin-left:11px; margin-right:10px; }
+.border img{height:100%; float:left;margin-right:10px; display:inline; overflow:hidden; margin-top:5px; padding:0px;}
 .about_p{ color:#333; line-height:26px; margin-top:0px; padding-right:0px; margin-left:1px; margin-right:0px; margin-left:0px;text-align:Justify;text-justify:inter-ideograph;}
 .about_p  span{ text-align:right;}
 .about_p a:link,.about_p a:visited{ color:#333}
@@ -86,7 +87,8 @@ ul.nav li .sub li{
 .contct h3 span{ float:right; display:inline; margin-top:7px;}
 .contct h3 img{ vertical-align:top;_vertical-align:middle;}
 .contct h3 b{ margin-left:5px;padding-left:5px;font-weight: normal;color: #414141;border-left: 1px solid #dfdfdf;line-height: 20px;font-size: 14px;}
-.limg{ width:219px; height:89px; margin:0px auto 10px; overflow:hidden;}
+.limg{ width:219px; margin:0px auto 10px; overflow:hidden;}
+.limg img{width:100%; overflow:hidden; position:relative;}
 .lxw2{ padding-left:10px; color:#333333; line-height:24px; overflow:hidden;}
 .xwzx{ margin-top:10px; overflow:hidden;}
 .xwzx h3{ height:36px; line-height:36px; border-bottom:1px solid #dddddd; font-family:"微软雅黑"; color:#eb1313; font-size:16px; margin-bottom:11px;}
