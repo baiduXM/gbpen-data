@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	// banner
 	jQuery(".focusBox").slide({ mainCell:".pic",effect:"left", autoPlay:true, delayTime:500,interTime:4000,trigger:"click"});
-	// jQuery(".pimgw").slide({mainCell:".bd ul",autoPlay:true,effect:"left"});
+	jQuery(".pimgw").slide({mainCell:".bd ul",autoPlay:true,effect:"left"});
 	// 产品展示
 	$('#prizes .photo1').jCarouselLite({
 	      btnPrev: '#prizes a.photos-prev',
@@ -33,9 +33,9 @@ $(document).ready(function() {
         $(this).find('.sub').fadeOut();
     });
 // 内页
-	$(".listbg li a").click(function(){	
-	 	if($(this).next(".second").length > 0){
-	 		$(this).next(".second").slideToggle(300);
+	$(".listbg li a").click(function(){	 
+	 	if($(this).next().length > 0){
+	 		$(this).next().slideToggle(300);
 	 		return false;
 	 	}
 	})	

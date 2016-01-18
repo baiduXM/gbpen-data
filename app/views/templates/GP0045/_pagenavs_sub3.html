@@ -14,7 +14,16 @@
 				{if $nav.childmenu}
 				<ul class="second">
 					{foreach key=key item=nav_list from=$nav.childmenu}
-					<li class="{if $nav_list.current}current{/if}"><a href="{$nav_list.link}">{$nav_list.name}</a></li>
+					<li class="{if $nav_list.current}current{/if}">
+						<a href="{if $nav_list.childmenu}javascript:void(0);{else}{$nav_list.link}{/if}">{$nav_list.name}</a>
+						{if $nav_list.childmenu}
+						<ul class="third">
+							{foreach key=key item=nav_nlist from=$nav_list.childmenu}
+							<li class="{if $nav_nlist.current}current{/if}"><a href="{if $nav_nlist.childmenu}javascript:void(0);{else}{$nav_nlist.link}{/if}">{$nav_nlist.name}</a></li>
+							{/foreach}
+						</ul>
+						{/if}
+					</li>
 					{/foreach}
 				</ul>
 				{/if}
@@ -40,7 +49,16 @@
 				{if $nav.childmenu}
 				<ul class="second">
 					{foreach key=key item=nav_list from=$nav.childmenu}
-					<li class="{if $nav_list.current}current{/if}"><a href="{$nav_list.link}">{$nav_list.name}</a></li>
+					<li class="{if $nav_list.current}current{/if}">
+						<a href="{if $nav_list.childmenu}javascript:void(0);{else}{$nav_list.link}{/if}">{$nav_list.name}</a>
+						{if $nav_list.childmenu}
+						<ul class="third">
+							{foreach key=key item=nav_nlist from=$nav_list.childmenu}
+							<li class="{if $nav_nlist.current}current{/if}"><a href="{if $nav_nlist.childmenu}javascript:void(0);{else}{$nav_nlist.link}{/if}">{$nav_nlist.name}</a></li>
+							{/foreach}
+						</ul>
+						{/if}
+					</li>
 					{/foreach}
 				</ul>
 				{/if}
