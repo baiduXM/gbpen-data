@@ -1,18 +1,22 @@
-jQuery(document).ready(function($) {
-		//首页banner切换
-    var swiper = new Swiper('.banner.swiper-container', {
-        pagination: '.swiper-pagination',
-        paginationClickable: true
-    });
+$(document).ready(function(){
 
-	//首页产品切换
-    	  var swiper = new Swiper('.pro .swiper-container', {
-     
-        slidesPerView: 2,
+
+	var swiper = new Swiper('.banner.swiper-container', {
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        spaceBetween: 10,
+        centeredSlides: true,
+        autoplay: 2500,
+        autoplayDisableOnInteraction: false
+    });
+// 菜单
+ var swiper = new Swiper('.menu.swiper-container', {
+         pagination: '.swiper-pagination',
         paginationClickable: true,
-        spaceBetween: 30,
-        loop: true
+        slidesPerView: 4,
+
     });
 
 
-});
+
+  });

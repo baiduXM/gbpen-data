@@ -1,6 +1,48 @@
+<div class="headBanner  p_r">
+<header class="he">
+
+			    <h3 class="trapezoid"></h3>
+				<img src="{$logo}" class="logo" alt="">
+			
+				</header>
+				 <div class="banners p_r ">
+
+           
+				<div class="banner swiper-container margin">
+			        <ul class="swiper-wrapper">
+			         
+					{foreach name=slidepics item=slidepic from=$global.slidepics}
+					<li class="swiper-slide"><a class="pic" href="{$slidepic.link}"><figure><img src="{$slidepic.image}" alt="{$slidepic.title}" /></figure></a></li>
+					{/foreach}
+			        </ul>
+			      
+			        
+			      
+			    </div>
 
 
-    <header>
-			<span id="quickbar"  class="fr btn"><a href="#" id="quickbar-navs-btn"><span><i class="iconfont icon">&#xe633;</i></span></a></span>
-			<div class="logo"><img src="{$logo}"></div>
-		</header>
+            </div>
+
+
+
+            </div>
+
+
+
+
+            	<div class="menu swiper-container">
+					    <ul class="swiper-wrapper">
+					        {foreach item=nav from=$navs}
+						  
+						            <li class="swiper-slide"><a href="{$nav.link}">{$nav.name}</a></li>
+						            
+						           
+					
+						
+						     {/foreach}  
+				</ul>
+					     
+					   <!--  <div class="swiper-pagination"></div>      --> 
+					</div>
+
+

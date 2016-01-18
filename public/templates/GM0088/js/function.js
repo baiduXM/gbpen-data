@@ -1,180 +1,115 @@
-
-jQuery(document).ready(function($) {
-
-	//根据设备窗口大小调整高度
-	resize();
-
-	$(window).resize(function(){
-		resize();
-
-		
-	});
-	function resize(){
-		$(".nav-menu").height($(window).outerHeight());
-		
-		$(".quickbar-wrap-body").height($(window).outerHeight()-$('footer').outerHeight()-$('.tel').outerHeight());
-	}
+$(document).ready(function(){
 
 	
-  //导航li>a高度
-  function Nav_H(a){
-		$(a).css({
-			height:$(a).width()/1.5
-
-		});
-	};
-	Nav_H(".mune li a");
 
 	
-//快速导航的的下拉特效
+	
+
+    //底部咨询电话
+
+	//分享
+	$(".share").height($("footer").height())
+
+	//二级菜单下拉
+	nav("#left_nav");
+	nav(".aboutNav");
 	function nav(stair){
 		var stair=$(stair).children('li').children('a');
 		var obj=stair.next();
+		var erj=obj.children('li').children('a');
+        var sj=erj.next();
 		if (obj.length>0) {
+			
 			obj.prev().append('<span>+</span>')
 			stair.click(function(event) {
+
 				if($(this).children('span').text() == "+"){
-				$(this).attr('href', 'javascript:0;');
+					// event.preventDefault();
+                     $(this).attr('href', 'javascript:void(0)');
                  $(this).children('span').text('-')
              }else{
                  $(this).children('span').text('+')
              };
               $(this).next().slideToggle(200)
 			});
+            if (sj.length>0) {
+
+            	sj.prev().append('<span>+</span>')
+            	
+            	erj.click(function(event) {
+            		
+            		if($(this).children('span').text() == "+"){
+            			$(this).attr('href', 'javascript:void(0)');
+                 $(this).children('span').text('-')
+             }else{
+                 $(this).children('span').text('+')
+             };
+
+              $(this).next().slideToggle(200)
+            	});
+            };
 		};       
-	}
-	nav(".first")
- //快速导航与wrapper的切换
-	$('.icon_n').bind('click', function() {
-		$('.quick_nav').toggleClass('slateX');
-		$('.wrapper').toggleClass('w_slateX');
-		$('.wrapper').children('.show_bg').css({
-			display: 'block'
-		});
+    }
+
+  
+
+
+	
+
+	$(".qx").click(function() {
+		$(".share").hide();
 
 	});
-	$('.close').bind('click', function() {
-		$('.quick_nav').removeClass('slateX');
-		$('.wrapper').removeClass('w_slateX');
-		$('.wrapper').children('.show_bg').css({
-			display: 'none'
-		});
-	});
-	$('.show_bg').on('touchstart click', function() {
-		$('.quick_nav').removeClass('slateX');
-		$('.wrapper').removeClass('w_slateX');
-		$('.wrapper').children('.show_bg').css({
-			display: 'none'
+	$(".icon-flow-branch").click(function() {
+
+		$(".share").show(500, function() {
+			$(".share").height($("footer").outerHeight())
 		});
 	});
-
-//分享的显示隐藏
-	$('.share').bind('click', function() {
-		$('.bbs').slideDown('slow');
-	});
-	$('.cancel').bind('click', function() {
-		$('.bbs').css({
-			display: 'none'
-		});
-	});
-	//返回顶部
-		
-
-$('.home>a').click(function(event) {
-	$('.contant').animate({'scrollTop':0}, 800)
-});
-		//字体大中小
-	// $('.font_s').click(function() {
-	// 	if($('.f_size').is(':hidden')){
-	// 			$(this).html("字∨")	
-	// 	}else{
-	// 	$(this).html("字∧")
-			
-	// 	}
-	// 	$('.f_size').slideToggle('slow')	
-	// });
-
-	$('.big').click(function() {
-				$('.article').css({
-					fontSize: 1.25+"em"
-				});
-		});
-	$('.mormal').click(function() {
-				$('.article').css({
-					fontSize: 1+"em"
-				});
-	});
-	$('.smail').click(function() {
-			$('.article').css({
-				fontSize: 0.9+"em"
-			});
-	});
-		//分类的下拉菜单和分类
-		$('.class').click(function() {
-		if($('.class_list').is(':hidden')){
-				$(this).html("分类∨")	
-		}else{
-		$(this).html("分类∧")
-		}
-			$('.class_list').slideToggle('slow')
-		});
-
-		function mune(a){
-			var class_one=$(a).children('li').children('a');
-			var class_two=class_one.next();
-			if(class_two.length>0){
-				class_two.prev().append('<span>+</span>')
-				class_one.click(function() {
-					if($(this).children('span').text() == '+'){
-						$(this).attr('href', 'javascript:0;');
-						$(this).children('span').text('-')
-						
-					}else{
-						$(this).children('span').text('+');
-						
-					};
-					$(this).next().slideToggle('slow');
-					
-				});	
-
-			}
-			var class_third=$(class_two).children('li').children('a');
-			var class_fore=class_third.next();
-				if(class_fore.length>0){
-				class_fore.prev().append('<span>+</span>')
-				class_third.click(function() {
-					if($(this).children('span').text() == '+'){
-						$(this).attr('href', 'javascript:0;');
-						$(this).children('span').text('-')
-						
-					}else{
-						$(this).children('span').text('+');
-						
-					};
-					$(this).next().slideToggle('slow');
-					
-				});	
-
-			}
-		}
-		mune('.class_list');
-
-		//新闻图文列表的高度
-		$(".go").click(function() {
+ //返回上一页
+	$('.forword').click(function(){
 		window.history.go(-1);
-		});
+	
+	});
+	
+	
+		$('.type').click(function(){
+			if($('.aboutName').is(':hidden')){
+				$(this).html("分类↓");
+				
+			}else{
+				
+				$(this).html("分类↑");
+			}
+			$('.aboutName').slideToggle(200);
+			
+		})
 
-
-		//关闭电话
-		$('.tel').css({
-			bottom: $('footer').outerHeight()
-		});
-		$('.gb').click(function() {
-			$('.tel').hide();
-			$(".quickbar-wrap-body").height($(window).outerHeight()-$('footer').outerHeight());	
+	
+	$('.font-set').click(function(){
+		$('.font-list').slideToggle(200);
+		$('.type-list').slideUp(200);
+	});
+	
+	fontSize('.d','1.25rem');
+	fontSize('.x','.75rem');
+	fontSize('.z','1rem');
+	function fontSize(fontSiz,siz){
+		$(fontSiz).click(function() {
+		$('.infos').css('font-size',siz);
+		$('.font-sel').slideUp();
 		});
 		
-		//首页产品pro_top的高度
-		var abouth=Math.floor($(".pro_top>img").height());
-		$(".pro_dt").outerHeight(abouth*0.95)
-});
+	}
+	
+	//返回顶部
+	$('.icon-angle-circled-up').click(function(){
+		$('.main').animate({
+			'scrollTop' : 0
+
+		},1);
+
+	})
+
+
+  });
