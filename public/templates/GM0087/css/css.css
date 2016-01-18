@@ -5,9 +5,10 @@ span.hicon1 a{color: #fff;font-size: 1.1em;}
 .header .hicon1{font-size: 1.5em;}
 
 /*首页内容*/
-.index-cont{width: 94%;margin: 3%;height:auto;}
+.index-cont{width: 96%;margin: 3% auto 1px;height:auto;}
 .col01,.col{overflow: hidden;display: -webkit-box;display: box;margin-bottom: 1px;}
 .col{max-height: 10%;}
+.col01{width: 96%;margin: 0 auto;}
 .pro{width: 41.8%;/*height:10%;*/background: radial-gradient(center , circle cover , rgb(0, 126, 221) , rgb(38, 148, 229) 61%);
 background: -o-radial-gradient(center , circle cover , rgb(0, 126, 221) , rgb(38, 148, 229) 61%);
 background: -ms-radial-gradient(center , circle cover , rgb(0, 126, 221) , rgb(38, 148, 229) 61%);
@@ -20,6 +21,7 @@ background: -webkit-radial-gradient(center , circle cover , rgb(0, 126, 221) , r
 .pro h2{color: #fff;font-size:0.9em;}
 */
 /*about*/
+.about{width: 96%;margin: auto;}
 .about-col{display: box;display: -webkit-box;/*background: #44b57f;*/}
 .about-img{width: 58%;margin-right:0.2%}
 .about-img img{width: 100%;}
