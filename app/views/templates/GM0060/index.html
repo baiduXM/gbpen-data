@@ -46,65 +46,11 @@
 	{$headscript}
 </head>
 <body>
-    <div class="index-wrap">
-         <div class="class">
-  <h1 class="class-top"><span class="class-close">×</span>快速搜索</h1>
-  <div class="class-m">
-  <div class="swiper-container scroll-container">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide">
-                        	<div class="search_all">
-                    	<form action="{$search_action}" method="GET">
-                 	<div class="suosuo">
-                       
-                           <div class="ss_input"><input type="text" name="s" value=""  class="txt1"></div>
-                             <div class="ss_btn"><input type="submit" class="btn1" value="搜索"> </div>
-                          
-                                                  
-                    </div>  </form>                          
-                            </div>
-  	
-    </div></div></div>
-  </div>
-</div>        
-         <div class="headerbanner">
-               <div class="header_l">      
-              <div class="logo_l"><img src="{$logo}" width="100%"></div>     		
-                <div class="menu2"  id="quickbar" ><a href="#" id="quickbar-navs-btn"><span></span></a></div> 
-                <div class="search" id="daohang">
-                  <a href="#"><span></span></a>
-                </div>    
-        </div>
-        <div class="baner">
-            <div id="slideBox" class="slideBox">
-            <div class="hd">
-                    <ul></ul>
-                      </div>
-            <div class="bd">
-                <ul>
-          {foreach name=slidepics item=slidepic from=$global.slidepics}
-                            <li><a class="pic" href="{$slidepic.link}"><img src="{$slidepic.image}" alt="{$slidepic.title}" /></a></li>
-                        {/foreach}
-                </ul>
-            </div>
-            </div>
-            
-  	   </div>                   
-    </div>
-         <div class="menu">
-                    <div class="nav">
-                   <div class="swiper-nav swiper-container">
-<div class="swiper-wrapper">
-                   <div class="swiper-slide"><a href="{$site_url}"><i><span>网站首页</span></i></a></div>
-                        {foreach item=nav from=$navs}
-                       <div class="swiper-slide"><a href="{$nav.link}"><i><span>{$nav.name}</span></i></a></div>                          
-                        {/foreach}                                  
-                    </div>
-                    </div>
-                    </div>
-           </div>
-         <section>
-         <div class="indexbg_al">
+            <div class="index-wrap">
+          <div class="wrap-bg">
+            {include file="./_header.html"}
+             <div class="wpaers">
+             	<div class="indexbg_al">
            {foreach item=mIndexCat from=$mIndexCats}
                {if $mIndexCat.type eq 2} 
                 	<div class="picture2">
@@ -121,7 +67,7 @@
                       
           		   </ul>     
                      <div class="more"><a href="{$mIndexCat.link}">点击查看更多产品</a>             </div>
-                     </div>  
+                     </div>
               {elseif $mIndexCat.type eq 1} 
 				<div class="news">
 					<ul>
@@ -140,15 +86,18 @@
 					</div>
 					
 					<div class="more"><a href="{$mIndexCat.link}">点击查看更多内容</a>             </div>
-				</div>                                  
-               {/if}
-           {/foreach}                     	
-         </div>
-         </section>
-<div class="foot">
- <div class="top"><a href="#" class="back-top">∧</a></div>{$footprint} 
-</div>         
-   </div>
-{$footscript}  
+				</div>                                         
+                      {/if}
+           {/foreach}                 
+                </div>
+             </div>
+           
+           
+         </div>   
+          
+        
+        {$footscript}              
+        </div>
+
 </body>
 </html>

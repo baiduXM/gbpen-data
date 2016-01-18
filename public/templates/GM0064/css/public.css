@@ -21,10 +21,11 @@ body{position: relative;font: 0.9rem/1.8rem "微软雅黑";margin: 0 auto;overfl
 	.hd_icon{position: absolute;left: 1.5rem;top:0; height: 100%;}
 	header{width: 100%;height:auto;overflow: hidden;background: #F6F1DF;position: relative;}
 	.hd_icon .icon{font-size: 2.5rem;color: #3f3e3d;}
-	.logo{width: 30%;margin: 0 auto;}
+	.logo{width: 50%;margin: 0 auto;}
 	.logo img{display: block; width: 100%;}
-	.ss{height: 100%;position: absolute;right: 1.5rem;top:0;}
-	.ss .icon{font-size: 1.8rem;color: #3f3e3d;}
+	.ss{position: absolute;right: 5%;top:50%; height: 33px;margin-top: -15.5px}
+	.ss a{display: block;}
+	.ss  .icon{font-size: 1.8rem;color: #3f3e3d; line-height: 24px !important}
 /*banner begin*/
 	.banner{width: 100%; position: relative;}
 	.swiper-container {width: 100%; }
@@ -144,9 +145,7 @@ body{position: relative;font: 0.9rem/1.8rem "微软雅黑";margin: 0 auto;overfl
 /*上下篇*/
 	.next_pre{ width:100%;color:#666;  padding:2rem 0;height:auto; overflow:hidden;}
 	.next_pre li {height: 1.5rem;overflow: hidden;}
-	.next_pre li a{color:#666;text-overflow: ellipsis;
-white-space: nowrap; text-indent:0px;
-word-break: keep-all; overflow:hidden	}
+	.next_pre li a{color:#666;text-overflow: ellipsis; overflow:hidden	}
 	.next_pre li a:hover{ color:#af2d2b;}
 /*新闻详情页end*/
 /*产品列表开始*/
