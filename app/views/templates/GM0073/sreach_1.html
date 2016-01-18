@@ -1,7 +1,20 @@
+
 <!DOCTYPE html>
 <html manifest="huancun.manifest">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	
+		<!-- 调试代码 End -->
+		<script type="text/javascript">
+		// 跳转PC页面
+		{if $site_another_url}
+			if (!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+				location.href = '{$site_another_url}';
+			}
+		{/if}
+		</script>
+		<meta name="keywords" content="{$keywords}" />
+		<meta name="description" content="{$description}" />      
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<!-- 强制让文档的宽度与设备的宽度保持1:1，并且文档最大的宽度比例是1.0，且不允许用户点击屏幕放大浏览； -->
 <meta name="viewport" content="width=device-width,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no,minimal-ui">
 <!-- iphone设备中的safari私有meta标签，它表示：允许全屏模式浏览 -->
@@ -22,129 +35,46 @@
 <meta name="screen-orientation" content="portrait">
 <!-- QQ强制竖屏 -->
 <meta name="x5-orientation" content="portrait">
-	<title>Document</title>
-	<link rel="stylesheet" href="css/swiper.css">
-	<link rel="stylesheet" href="css/swiper.min.css">
-	<link rel="stylesheet" href="css/iconfont.css">
-	<link rel="stylesheet" href="css/public.css">
-	<script type="text/javascript" src="js/swiper.min.js"></script>
-	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
-	<script type="text/javascript" src="js/function.js"></script>
+	<title>{$title}</title>
+	<link rel="stylesheet" href="{$site_url}css/swiper.css">
+	<link rel="stylesheet" href="{$site_url}css/swiper.min.css">
+	<link rel="stylesheet" href="{$site_url}css/iconfont.css">
+	<link rel="stylesheet" href="{$site_url}css/public.css">
+	<script type="text/javascript" src="{$site_url}js/swiper.min.js"></script>
+	<script type="text/javascript" src="{$site_url}js/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="{$site_url}js/function.js"></script>
+	<script type="text/javascript">
+	window.addEventListener('load', function(){
+   setTimeout(function(){ window.scrollTo(0, 1); }, 100);
+});//safari浏览器可以通过此代码来隐藏地址栏
+</script>
 </head>
 <body>
-<section class="quick_nav">
-	<h1><span class="close">X</span>快速导航</h1>
-	<nav>
-		<ul class="first">
-			<li><a href="index.html">首页</a></li>
-			<li><a href="about.html">关于我们</a>
-				<ul class="second">
-					<li><a href="">二级分类</a></li>
-					<li><a href="">二级分类</a></li>
-					<li><a href="">二级分类</a></li>
-				</ul>
-			</li>
-			<li><a href="news.html">新闻资讯</a>
-				<ul class="second">
-					<li><a href="news1.html">二级分类</a></li>
-					<li><a href="news.html">二级分类</a></li>
-				</ul>
-			</li>
-			<li><a href="pro.html">产品中心</a>
-				<ul class="second">
-					<li><a href="pro.html">二级分类</a></li>
-					<li><a href="">二级分类</a></li>
-					<li><a href="">二级分类</a></li>
-					<li><a href="">二级分类</a></li>
-					<li><a href="">二级分类</a></li>
-					<li><a href="">二级分类</a></li>
-					<li><a href="">二级分类</a></li>
-					<li><a href="">二级分类</a></li>
-					<li><a href="">二级分类</a></li>
-					<li><a href="">二级分类</a></li>
-					<li><a href="">二级分类</a></li>
-					<li><a href="">二级分类</a></li>
-					<li><a href="">二级分类</a></li>
-					<li><a href="">二级分类</a></li>
-				</ul>
-			</li>
-			<li><a href="pro.html">案例展示</a>
-				<ul class="second">
-					<li><a href="pro.html">二级分类</a></li>
-					<li><a href="">二级分类</a></li>
-					<li><a href="">二级分类</a></li>
-					<li><a href="">二级分类</a></li>
-					<li><a href="">二级分类</a></li>
-					<li><a href="">二级分类</a></li>
-					<li><a href="">二级分类</a></li>
-					<li><a href="">二级分类</a></li>
-					<li><a href="">二级分类</a></li>
-					<li><a href="">二级分类</a></li>
-					<li><a href="">二级分类</a></li>
-					<li><a href="">二级分类</a></li>
-					<li><a href="">二级分类</a></li>
-					<li><a href="">二级分类</a></li>
-				</ul>
-			</li>
-			<li><a href="about.html">联系我们</a></li>
-		</ul>
-	</nav>
-</section>
+
 <section class="wrapper">
 	<div class="contant">
-		<header>
-			<span class="icon_n hd_icon fl"><i class="iconfont icon">&#xe633;</i></span>
-		    <div class="logo"><img src="images/logo.png" ></div>
-		    <span class="ss fr"><a href="sreach_1.html"><i class="iconfont icon">&#xf00ae;</i></a></span>
-		</header>
-		<div class="about">
+		{include file="./_header.html"} 
+		 <div class="about">
 		 	<h3 class="title">
-			 	<span class="font_s fl">字∧</span>
-			 	<i>搜索结果</i>
-			 	<span class="font_s go fr">返回</span>
-		 	</h3>
-			<div class="f_size">
-		 		<p class="big">大</p>
-		 		<p class="mormal">中</p>
-		 		<p class="smail">小</p>
-			</div>	
+			 	<span class="title_a go fl">返回</span>
+			 	<i>搜索</i>
+
+			</div>
+		 	</h3>	
 		 	<div class="article">
-				<form class='search'><input name="" type="text" class='text_01 fl' placeholder='请输入需要查询名称'><input name="" type="submit" class='submit_01' value="GO"></form>
-				<div class="search_art">
-					<em class="fl">热门搜索:</em>
-					<ul>
-						<li><a href="">百度</a></li>
-						<li><a href="">百度</a></li>
-						<li><a href="">百度</a></li>
-						<li><a href="">百度</a></li>
-						<li><a href="">百度</a></li>
-					</ul>
-				</div>
+					<form class='search' action="{$search_action}" method="GET" ><input type="text" name="s" value="" class='text_01 fl' placeholder='请输入需要查询名称'><input name="" type="submit" class='submit_01' value="GO"></form>
 		 	</div>	
 		 </div>
-	     <footer>
-	    <div class="home "><a href="javascript:0;">TOP</a></div>
-	    	Copyright C 2015 技术支持：G宝盆
+	      <footer>
+	      <div class="footer">
+	    	<div class="home "><a href="javascript:0;">TOP</a></div>
+	    	{$footprint} 
+	    </div>
 	    </footer> 
 	</div>
-	 <div class="foot_nav">
-		<ul>
-			<li class="icon_n"><a href="javascript:0;"><i class="iconfont icon">&#xe633;</i><span>导航</span></a></li>
-			<li><a href=""><i class="iconfont icon">&#xe606;</i><span>电话</span></a></li>
-			<li><a href=""><i class="iconfont icon">&#xe665;</i><span>短信</span></a></li>
-			<li><a href=""><i class="iconfont icon">&#xe62d;</i><span>咨询</span></a></li>
-			<li><a href=""><i class="iconfont icon">&#xe656;</i><span>地图</span></a></li>
-			<li class="share"><a href="javascript:0;"><i class="iconfont icon">&#xf000d;</i><span>分享</span></a></li>
-		</ul>
-		<div class="bbs">
-            <!-- JiaThis Button BEGIN -->
-			<div class="jiathis_style_m"></div>
-			<script type="text/javascript" src="http://v3.jiathis.com/code/jiathis_m.js" charset="utf-8"></script>
-				<!-- JiaThis Button END -->
-			<span class="cancel">取消</span>
-        </div>
-	</div>
+	
 	<div class="show_bg"></div> 
+	{$footscript}
 </section>
 </body>
 </html>
