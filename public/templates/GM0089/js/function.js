@@ -20,7 +20,7 @@ var n=($(".menulist .swiper-nav span .pic").height()-$(".menulist .swiper-nav sp
 $(".menulist .swiper-nav span .pic .iconfont").css({"top":n})
 
 var m=($(".menulist .swiper-nav span .pic").width()-$(".menulist .swiper-nav span .pic .iconfont").width())*0.45
-$(".menulist .swiper-nav span .pic .iconfont").css({"left":m,"font-size":25,"color":"#fff"})
+$(".menulist .swiper-nav span .pic .iconfont").css({"font-size":25,"left":m,"color":"#fff"})
 
 
 $(".swiper-slide,.swiper-wrapper,.navlist").height($(".menulist .swiper-nav span").height()+2+"px")

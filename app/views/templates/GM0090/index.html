@@ -61,7 +61,7 @@
         {foreach name=mIndexCats item=mIndexCat from=$mIndexCats}
       {if $mIndexCat.type eq 4}
         <div id="in_page" class="wrapper">
-      <div class="in_h2"><div class="pic"><img src="{$site_url}images/titbg.png"></div><div class="in_zh">{$mIndexCat.name}</div></div>
+      <div class="in_h2"><a href="{$mIndexCat.link}"><div class="pic"><img src="{$site_url}images/titbg.png"></div><div class="in_zh">{$mIndexCat.name}</div></a></div>
         <div class="inner">
         <div class="xx clearfix">
            <div class="txt"> <p>{$mIndexCat.description}</p>
@@ -75,16 +75,17 @@
         
          {elseif $mIndexCat.type eq 1} 
         <div id="in_text" class="wrapper">
-      <div class="in_h2"><div class="pic"><img src="{$site_url}images/titbg.png"></div><div class="in_zh">{$mIndexCat.name}</div></div>
+      <div class="in_h2"><a href="{$mIndexCat.link}"><div class="pic"><img src="{$site_url}images/titbg.png"></div><div class="in_zh">{$mIndexCat.name}</div></a></div>
         <div class="inner clearfix">
            <ul class="clearfix">
              {foreach item=article from=$mIndexCat.data}
-               <li>
+               <li><a href="{$article.link}">
               <div class="triangle"></div>
                  <div class="in_textbox clearfix">
-                 <div class="in_data">{$article.pubdate}</div>
+                 <div class="in_data">{$article.pubtimestamp|date_format:"%y "}/{$article.pubtimestamp|date_format:"%m "}/{$article.pubtimestamp|date_format:"%d "}</div>
                  <div class="in_title public_color">{$article.title}</div>
                </div>
+               </a>
               </li>
                {if $article@index+1 == 5}{break}{/if} {/foreach} 
             </ul>
@@ -95,14 +96,15 @@
      
          {elseif $mIndexCat.type eq 2} 
       <div id="in_image" class="wrapper">
-            <div class="in_h2"><div class="pic"><img src="{$site_url}images/titbg.png"></div><div class="in_zh">{$mIndexCat.name}</div></div>
+            <div class="in_h2"><a href="{$mIndexCat.link}"><div class="pic"><img src="{$site_url}images/titbg.png"></div><div class="in_zh">{$mIndexCat.name}</div></a></div>
         <div class="inner yc">
             <ul class="clearfix">
             
             {foreach item=article from=$mIndexCat.data}
-              <li>
+              <li><a href="{$article.link}">
              <div class="in_proimg"><img src="{$article.image}"></div>
              <div class="in_protitle">{$article.title}</div>
+             </a>
               </li>
               
               {if $article@index+1 == 6}{break}{/if} {/foreach}
