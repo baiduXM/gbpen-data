@@ -1,0 +1,33 @@
+{
+	"slidepics": {
+		"value": [{
+			"title": "banner",
+			"image": "images/banner.jpg",
+			"link": "article/1.html",
+			"description": "banner1"
+		}, {
+			"title": "测试图2",
+			"image": "images/banner2.jpg",
+			"link": "http://www.baidu.com"
+		},{
+			"title": "测试图3",
+			"image": "images/banner.jpg",
+			"link": "http://www.baidu.com"
+		}],
+		"description": "多图轮播",
+		"type": "images",
+		"config": {
+			"width": 2000,
+			"height": 420,
+			"limit": 3
+		}
+	},
+		"contact":{
+		"value": "固定电话：0123456",
+		"description": " 头部联系我们",
+		"type": "textarea"
+	}
+	
+	
+	
+}
