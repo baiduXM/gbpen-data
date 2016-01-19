@@ -61,7 +61,7 @@
                     <ul class="ny-prolist">
                             {foreach name=article item=article from=$list.data} 
                                 <li><a href="{$article.link}"><img src="{$article.image}" /><h2>{$article.title}</h2></a></li>
-                                {if $article@index+1 == 9} {break} {/if}
+                                
                                 
                             {/foreach}     
                     </ul>
