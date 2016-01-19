@@ -28,7 +28,7 @@
 <title>{$title}</title>
 <link rel="stylesheet" href="{$site_url}css/swiper.css">
 
-<link href="{$site_url}css/css.css" rel="stylesheet" type="text/css" />
+<link href="{$site_url}css/cs.css" rel="stylesheet" type="text/css" />
 
 <script type="text/javascript">
 	window.addEventListener('load', function(){
@@ -36,15 +36,15 @@
 });//safari浏览器可以通过此代码来隐藏地址栏
 </script>
 </head>
-<body>
-<div class="className p_r"><span class="type">分类↑</span>{$list.name}
+<body class="abo">
+<div class="className p_r"><span class="type">分类↑</span><em>{$list.name}</em>
 
-         <i class="iconfont demo-icon icon-th-list iconnav p_a">&#xe603;</i>
+         <i class="iconfont demo-icon icon-th-list slide-nav iconnav p_a">&#xe603;</i>
 </div>
    {include file="./_pagenavs_sub3.html"}
 
    <div class="aboutms info">
-            <figure><img src="{$list.image}" ></figure>
+          
             <div class="font">字体： <span class="d">大</span> | <span class="z">中</span> | <span class="x">小</span></div>
            <div class="infos">	 {$list.content|unescape:"html"}   </div> 
         </div> 

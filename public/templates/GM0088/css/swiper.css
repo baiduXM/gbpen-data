@@ -100,29 +100,45 @@
 .swiper-button-prev,
 .swiper-button-next {
   position: absolute;
-  top: 50%;
-  width: 35px;
-  height: 70px;
-  margin-top: -35px;
+  top: 64%;
+  left:4%;
+  width: 38px;
+  height: 38px;
+  transform:rotate(45deg);
+-ms-transform:rotate(45deg);   /* IE 9 */
+-moz-transform:rotate(45deg);  /* Firefox */
+-webkit-transform:rotate(45deg); /* Safari 和 Chrome */
+-o-transform:rotate(45deg);
   z-index: 10;
   cursor: pointer;
-  -moz-background-size: 35px 70px;
-  -webkit-background-size: 35px 70px;
-  background-size: 35px 70px;
-  background-position: center;
-  background-repeat: no-repeat;
+ 
 }
 .swiper-button-prev.swiper-button-disabled,
 .swiper-button-next.swiper-button-disabled {
-  opacity: 0.35;
-  cursor: auto;
-  pointer-events: none;
+background:#cc0011;
 }
+.swiper-button-prev:before{content: "";width: 68px;height: 20px;display: block;background: url(../images/jb_06.png) no-repeat center center;margin-top: 15px;margin-left: -9px; -webkit-animation:.5s spin infinite alternate linear;
+  -moz-animation:.5s spin infinite alternate linear;
+  animation:.5s spin infinite alternate linear; transform:rotate(-45deg);
+-ms-transform:rotate(-45deg);   /* IE 9 */
+-moz-transform:rotate(-45deg);  /* Firefox */
+-webkit-transform:rotate(-45deg); /* Safari 和 Chrome */
+-o-transform:rotate(-45deg);}
+  .swiper-button-next:before{content: "";width: 68px;height: 20px;display: block;background: url(../images/jt_03.png) no-repeat center center;margin-top: 4px;margin-left: -21px; -webkit-animation:.5s spin infinite alternate linear;
+  -moz-animation:.5s spin infinite alternate linear;
+  animation:.5s spin infinite alternate linear;background-size: 50%; transform:rotate(315deg);
+-ms-transform:rotate(315deg);   /* IE 9 */
+-moz-transform:rotate(315deg);  /* Firefox */
+-webkit-transform:rotate(315deg); /* Safari 和 Chrome */
+-o-transform:rotate(315deg);}
 .swiper-button-prev,
 .swiper-container-rtl .swiper-button-next {
-  background-image: url("../images/bl_08.png");
-  left: 0;
-  right: auto;
+width: 38px; height: 38px;background: #262a2d ; position: absolute; top: 75%; z-index: 99999999999; cursor: pointer;-webkit-transform: rotate(45deg) ;
+  -ms-transform:rotate(45deg) ;
+  -o-transform:rotate(45deg) ;
+  transform:rotate(45deg) ;-webkit-transition: all .5s linear;
+  -o-transition: all .5s linear;
+  transition: all .5s linear;left: 10%
 }
 .swiper-button-prev.swiper-button-black,
 .swiper-container-rtl .swiper-button-next.swiper-button-black {
@@ -134,8 +150,8 @@
 }
 .swiper-button-next,
 .swiper-container-rtl .swiper-button-prev {
-  background-image: url("../images/br_09.png");
-  right: 0px;
+  background:#262a2d;
+  left: 20px
   left: auto;
 }
 .swiper-button-next.swiper-button-black,

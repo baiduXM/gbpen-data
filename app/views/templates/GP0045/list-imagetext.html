@@ -33,7 +33,7 @@
                 {include file='./_pagenavs_sub3.html'}
                 <div class="contct">
                     <h3>联系我们<b>CONTACT</b></h3>
-                    <div class="limg"><a href="{$global.contact_img.link}"><img src="{$global.contact_img.image}" height="89" width="219" /></a></div>
+                    <div class="limg"><a href="{$global.contact_img.link}"><img src="{$global.contact_img.image}" /></a></div>
                     <div class="lxw2">
                         {$global.contact_us}
                     </div>
@@ -51,7 +51,7 @@
                                 <ul class="inner_pro">
                                     {foreach name=article item=article from=$list.data}
                                     <li>
-                                        <a href="{$article.link}"><img src="{$article.image}" height="126" width="165" />
+                                        <a href="{$article.link}"><img src="{$article.image}" />
                                             <p class="photo_title2">{$article.title}</p>
                                         </a>
                                     </li>
