@@ -139,11 +139,13 @@ $(document).ready(function(){
 		return false
 	})
 	//返回顶部结束
-//分享取消按钮开始
+	//分享取消按钮开始
 	$(".share-cance").click(function(){
 		$(".newsclass").removeClass("show")
 		$(".opacity2").hide()
 	})
+  	});
+	//分享取消按钮结束
     $(".hide-class li a").click(function () {
         $(this).parent().siblings().find(".second").slideUp()
         $(this).siblings(".second").slideToggle()
@@ -154,10 +156,6 @@ $(document).ready(function(){
     }) 
 	
  	
-  	});
-	//分享取消按钮结束
-	
-	
 
 $(function(){
     $("input").click(function () {
