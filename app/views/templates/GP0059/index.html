@@ -40,7 +40,7 @@
 <li>
 <div class="p1">
 <div class="pt"><img src="{$pro.image}"/></div>
-<div class="pz"><a href="#">LED panel light application<br />
+<div class="pz"><a href="{$pro.link}">
 {$pro.title}</a></div>
 </div>
 </li>
@@ -73,7 +73,7 @@
 
 
 <div id="about">
-<div class="title"><span><a href="#"><img src="{$site_url}images/mo3.jpg"  width="27" height="12" /></a></span><h2><b>{$index.about.name}</b>{$index.about.en_name}</h2></div>		
+<div class="title"><span><a href="{$index.about.link}"><img src="{$site_url}images/mo3.jpg"  width="27" height="12" /></a></span><h2><b>{$index.about.name}</b>{$index.about.en_name}</h2></div>		
 <div class="inner">
   <img src="{$index.about.image}" width="90" height="90" />{$index.about.description}<a href="{$index.about.link}">详细 >></a></div>
 
@@ -85,10 +85,7 @@
 <div class="inner">
 <div id="kinMaxShow1" style="display:none;">
  {foreach name=case item=case from=$index.case.data}
-      <div> <a href="{$case.link}" target="_blank"><img src="{$site_url}images/p1.jpg"  /></a></div>
-      <div> <a href="{$case.link}" target="_blank"><img src="{$site_url}images/libg2.png" /></a></div>]
-            <div> <a href="{$case.link}" target="_blank"><img src="{$site_url}images/footer_bg.jpg" /></a></div>
-      
+      <div> <a href="{$case.link}" target="_blank"><img src="{$case.image}"  /></a></div>
        {if $case@index+1 == 1}{break}{/if}
       {/foreach} </div>
 
