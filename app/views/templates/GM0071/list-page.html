@@ -45,22 +45,15 @@
 </script>
 </head>
 <body>              
-    <div class="index-wrap" style="background:#fff;">
-      {include file="./_header.html"} 
-      <div class="index_show">
-   	   <div class="boxmain_detal">
-         <div class="boxmain_d">
-        	<h1 class="boxmain-top">
-             <span class="more3" id="font"><b>字+</b></span>
-             <span class="more3" id="first"><b>分类<span id="down"> &darr;</span><span id="up"> &uarr; </span></b></span>
-             {$list.name}
-            </h1>
-            <div class="font">
-            	<dl class="big">大</dl>
-                <dl class="normal">中</dl>
-                <dl class="small">小</dl>
-            </div>
-            <div class="hide-class">
+    <div class="index-wrap" style=" background:#fff;">
+            <h1 class="fixed-topa">
+                  <div class="title_top">
+                  <span class="more2" id="first">分类<span id="down"> &darr;</span><span id="up"> &uarr; </span></span>
+                   <div class="menu3"  id="quickbar" ><a href="#" id="quickbar-navs-btn"><span></span></a></div>              
+                  <span class="l_name">{$list.name}</span>
+                 </div>
+                </h1>
+           <div class="hide-class">                
              <ul>
              {foreach name=pagenavs item=nav from=$pagenavs}
                 <li  class="{if $nav.current}current{/if}"><a href="{if $nav.childmenu}javascript:;{else}{$nav.link}{/if}" class="{if $nav.selected}selected{/if}">{$nav.name}</a>
@@ -81,19 +74,21 @@
                     {/if}                            
                 </li>
                 {/foreach}                                                                                                                                           
-            </ul>
-          </div>                      
-          <div class="boxmain-ny-m">
-           		<div class="edite">
-                 {$list.content|unescape:"html"}      
-            </div>    	
-           </div>
-    
-        </div>           	
-        </div>
+            </ul>                
+          </div>      
+    	<div class="boxmain-m">
+        <div class="d_titles2"><hl class="title2">字体 : <span class="smalld">小</span> | <span class="middled">中</span> | <span class="bigd">大</span></hl></div>
+                       	<div class="edite">
+                   {$list.content|unescape:"html"}      
        
-   </div>     
-   </div>  
+ 
+            </div>
+        </div>
+<div class="foot">
+ <div class="top"><a href="#" class="back-top">∧</a></div>{$footprint} 
+</div>      
+   </div>
+   {$footprint}  
 {$footscript}  
 </body>
 </html>
