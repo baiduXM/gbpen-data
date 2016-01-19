@@ -18,7 +18,7 @@
 .tell-icon .close{ width:35px; height:35px; overflow:hidden; line-height:35px;float:right; display: block; position:relative;  cursor:pointer; color:#a0bef9;  text-indent:0px; text-align:center}
 .tell-icon:before{ width:25px; height:25px; content:""; position:absolute; background:#ebf1fe; border-radius:100%; right:5px; top:5px;}
 /*panle导航开始*/
-.class{width:240px;  height:100%; z-index:7; background:#724b1d; position: absolute; top:0px; right:0px; color:#fff;  }
+.class{width:100%;  height:100%; z-index:7; background:#724b1d; position: absolute; top:0px; right:-100%; color:#fff;  }
 .class-top{ height:40px; overflow:hidden; line-height:40px; font-size:1.3em;  background:rgba(0,0,0,0.2);padding-right:15px; text-align:right;}
 .class-close{ width:40px; height:40px; float:left; display:inline; text-align:center; font-size:1.4em;} 
 .class-m{ height: auto; overflow:hidden;}
@@ -37,7 +37,7 @@ ul.class-list li.cur .icon2{ display:none;}
 ul.class-list li.menu_body{  height:0px; overflow:hidden; border-bottom:0px; background:#ec4e4e}
 ul.class-list li.cu{ height:auto; overflow:hidden;border-bottom:1px solid #ec4e4e; }
 /*panle导航结束*/
-
+.relative{ position:relative;}
 
 /*底部fixed开始*/
 .fixed{ width:100%; height:58px; overflow:hidden; background:#ff5c13;
