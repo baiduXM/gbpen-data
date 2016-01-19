@@ -35,24 +35,7 @@ $(document).ready(function(){
       $(this).removeClass('page-in');
     });
   }
-  //隐藏导航跟wrap的切换
-	$("#class").click(function(){
-		$(".class").removeClass("page-prev").addClass("page-in");
-		$(".wrap").removeClass("page-active").addClass("page-next page-in")
-		$(".opacity2").show()
-		pageSlideOver();
-		
-	})
-	$(".class-close,.opacity2").on('touchstart',function(){
-		$(".class").addClass("page-prev page-out")
-		$(".wrap").removeClass("page-next").addClass(" page-out")
-		$(".opacity2").hide()
-		$(".newsclass").removeClass("show")
-		pageSlideOver();
-		return false;
-	})
-									
-	
+
   //隐藏导航跟wrap的切换
 	$(".class-close").click(function(){
 		$(this).parents(".class").animate({"right":-100+"%"})
@@ -65,16 +48,7 @@ $(document).ready(function(){
 			}) 
 	   $(".class").css('display','block')
 		})											
-	
-	$(".class-close,.opacity2").on('touchstart',function(){
-		$(".class").addClass("page-prev page-out")
-		$(".wrap").removeClass("page-next").addClass(" page-out")
-		$(".opacity2").hide()
-		$(".newsclass").removeClass("show")
-		pageSlideOver();
-		return false;
-	})
-		
+
 	$(".tell-icon .close").click(function(){
 		$(".tell-icon").removeClass("display-block")
 		$(".index-wrap").height($(window).height()-$(".fixed").height())

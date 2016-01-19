@@ -16,7 +16,7 @@
 .tell-icon:before{ width:25px; height:25px; content:""; position:absolute; background:#ebf1fe; border-radius:100%; right:5px; top:5px;}
 
 /*panle导航开始*/
-.class{width:100%;  height:100%; z-index:7; background:#bc973e; position: absolute; top:0px; right:-100%; color:#fff;  }
+.class{width:100%;  height:100%; z-index:1000; background:#bc973e; position: absolute; top:0px; right:-100%; color:#fff;  }
 .class-top{ height:40px; overflow:hidden; line-height:40px; font-size:1.3em;  background:rgba(0,0,0,0.2);padding-right:15px; text-align:right;}
 .class-close{ width:40px; height:40px; float:left; display:inline; text-align:center; font-size:1.4em;} 
 .class-m{ height: auto; overflow:hidden;}

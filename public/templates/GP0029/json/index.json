@@ -25,18 +25,21 @@
 	"btn1":{
 		"description":"底部第一个按钮",
 		"value":{},
-		"type":"list"
+		"type": "nav",
+		"config": {
+			"filter": "feedback"
+		}
 	},
  
 	 "btn2":{
 		"description":"底部第二个按钮",
 		"value":{},
-		"type":"list"
+		"type":"page"
 	},
 	 "btn3":{
 		"description":"底部第三个按钮",
 		"value":{},
-		"type":"list"
+		"type":"page"
 	}			
 	
 	

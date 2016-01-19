@@ -55,9 +55,9 @@
           <div class="searchresult">
             <p class="public_color">共搜索到{$search.total}个结果</p>
             <ul>
-            	{foreach name=article item=article from=$search.data}
-                 <li><a href="{$article.link}" class="public_color">{$article.title}</a></li>
-				{/foreach}
+            	{foreach name=article item=article from=$search.data}<!--search_content_start-->
+                 <li><a href="search_$link" class="public_color">search_$title</a></li>
+				<!--search_content_end-->{/foreach}
               
             </ul>
             

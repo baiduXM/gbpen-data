@@ -52,16 +52,16 @@ $(document).ready(function(){
 		jQuery(".slideBoxc").slide({mainCell:".bd ul",autoPlay:true,effect:"leftLoop"});
 		jQuery(".m-slide").slide({ titCell:".tab li", mainCell:".img",effect:"fold", autoPlay:true});
 jQuery(".picScroll").slide({ mainCell:"ul", effect:"leftLoop", vis:3, scroll:1,  autoPage:true, switchLoad:"_src" });
-	
+		
 		$('#prizes .photos-content.enable').jCarouselLite({
 			btnPrev: '#prizes a.photos-prev',
 			btnNext: '#prizes a.photos-next',
 			visible: 3,
 			auto: 3000,
 			speed: 1000
-		}).css({visibility:"visible"});					
+		});					
      
-		
+		$('.photos .photos-content li').css('height', 'auto');
 });
 
 $(function() {
