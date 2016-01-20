@@ -12,7 +12,12 @@ $(document).ready(function(){
 				
 $(window).load(function(){
 /*美工专属区域*/
-  
+  $(".list_imagetext ul li").each(function(){
+if($(".list_imagetext ul li .img_box img").height()<$(".list_imagetext ul li .text_box").height()){
+	var z=($(".list_imagetext ul li .text_box").height()-$(".list_imagetext ul li .img_box img").height())*0.5
+	$(".list_imagetext ul li .img_box img").css({"margin-top":z})
+	}})
+
 
 /*美工专属区域*/
 	
