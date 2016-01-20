@@ -61,7 +61,7 @@
                     <ul class="ny-newlist">
                             {foreach name=article item=article from=$list.data} 
                                 <li><a href="{$article.link}"><span>{$article.pubtimestamp|date_format:'%Y - %m - %d'}</span> {$article.title}</a></li>
-                                {if $article@index+1 == 10} {break} {/if}
+                                
                                 
                             {/foreach}     
                     </ul>
