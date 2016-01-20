@@ -38,7 +38,7 @@ $(document).ready(function(){
 
   //隐藏导航跟wrap的切换
 	$(".class-close").click(function(){
-		$(this).parents(".class").animate({"right":-100+"%"})
+	$(".class").animate({"right":-100+"%"})
 		 $(".class").css('display','none')
 		 $(".opacity2").hide()
 		})		

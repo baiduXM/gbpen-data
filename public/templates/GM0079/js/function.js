@@ -3,6 +3,10 @@ $(document).ready(function(){
 		var img=new Image();
 
 		img.src=$("ul.newslist li img").attr("src");
+		
+	$(".banerd").height($(".banerd").width())
+	$(".col").height($(".slideBox img").height())
+	$(".about-col").height($(".about-img img").height())		
 
 		$("ul.newslist li .editbox .nr").height($("ul.newslist li img").height()-$("ul.newslist li .editbox .title").height()-10)
 		if($(window).width()<400){
@@ -19,6 +23,9 @@ $(document).ready(function(){
 	});
 
 	$(window).resize(function(){
+	$(".col").height($(".slideBox img").height())
+	$(".about-col").height($(".about-img img").height())		
+		
 		$("ul.newslist li .editbox .nr").height($("ul.newslist li img").height()-$("ul.newslist li .editbox .title").height()-10)
 		if($(window).width()<400){
 			$("ul.newslist li .editbox .nr").css({'line-height':$("ul.newslist li .editbox .nr").height()/2+"px"})
@@ -288,7 +295,6 @@ $(document).ready(function(){
           $(this).parent().siblings().find(".third").slideUp()
           $(this).siblings(".third").slideToggle()
       }) 
-	$('.col').height($('.slideBox .bd li').height());
 	$('#search').click(function(){
 		$('.search-wrap').show();
 		$('.index-wrap').hide();

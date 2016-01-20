@@ -9,18 +9,18 @@ $("#news .inner .nw").each(function(){
 
 })
 
+
+}
+
+$(document).ready(function() {
+
+
 $(".bd li").each(function(){
 	if($(this).find("img").width() > 580){
         $(this).find("img").width("99%");
 }
 
 		})
-}
-
-$(document).ready(function() {
-
-
-
 	
 /*侧边栏*/
 		$(".listbg li a").click(function () {
