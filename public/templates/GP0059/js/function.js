@@ -22,8 +22,8 @@ $("#case .inner .slideBox .bd ul li").each(function(i){
 
 $(document).ready(function() {
 
-	$(".bd li").each(function(){
-	if($(this).find("img").width() > 640){
+	$(".bd li").each(function(i){
+	if($(".bd li").eq(i).find("img").width() > 640){
         $(this).find("img").width("99%");
 }
 
