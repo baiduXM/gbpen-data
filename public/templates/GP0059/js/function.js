@@ -4,9 +4,12 @@ $("#pro .inner ul li").each(function(){
   	$(this).find("img").css("margin-top",hh1*0.5+"px")
 
 })
-$("#case .inner ul li").each(function(){
-  var hh1=200-$(this).find("img").height();
-  	$(this).find("img").css("margin-top",hh1*0.5+"px")
+
+
+$("#case .inner .slideBox .bd ul li").each(function(i){
+	var xx=$("#case .inner .slideBox .bd ul li").eq(i).height()												
+  var hh1=(200-xx)*0.5;
+  	$(this).find("img").css("margin-top",hh1+"px")
 
 })
 }
@@ -66,13 +69,7 @@ $(document).ready(function() {
                 focus: { background: 'url(images/button.png) no-repeat 0 0', border: '0' }
             }
         });
-		$("#kinMaxShow1").kinMaxShow({
-            height: 200,
-            button: {
-                showIndex: false,
-                normal: { background: 'url(images/button.png) no-repeat -14px 0', marginRight: '8px', border: '0', right: '35%', bottom: '20px' },
-                focus: { background: 'url(images/button.png) no-repeat 0 0', border: '0' }
-            }
-        });
+	jQuery(".slideBox").slide({mainCell:".bd ul",autoPlay:true});
+
 
 });

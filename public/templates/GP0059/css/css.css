@@ -113,8 +113,8 @@ ul.third li a.thirda:hover{color:#3c0a0e;}
 
 .main{float:right; width:733px; margin-top:15px; display:inline;  padding:8px; background:url(../images/main_top.jpg) top center no-repeat;}
 .article{ width:707px; border:1px solid #c2c2c2; border-top:none; margin-left:16px; padding-top:10px; padding-left:8px; padding-right:8px; background:#fff; padding-bottom:10px;}
-.sub_contact{  background:url(../images/contact_bg.jpg) top center no-repeat; height:129px; margin-top:25px; padding:45px 5px 0 5px; width:193px;}
-
+.sub_contact{  background:url(../images/contact_bg.jpg) bottom center no-repeat #f8f8f8; min-height:129px;_height:129px; margin-top:25px; padding:0px 0px 40px 0px; width:203px;}
+.sub_contact p{ padding:5px 8px 0 8px;}
 .crumb{ color:#fff;  height:34px; padding-top:7px; }
 .crumb h2{ color:#fff; font-size:14px;font-family:Microsoft Yahei; padding-left:18px;}
 .crumb h2 b{color:#fff; font-size:16px;font-family:Microsoft Yahei; margin-right:5px;}
@@ -123,3 +123,19 @@ ul.third li a.thirda:hover{color:#3c0a0e;}
 .crumb span a{ color:#afaeae}
 .alefttitle{ background:#1f3a61;height:62px; width:171px; color:#fff; font-family:Microsoft Yahei ; font-size:12px; padding:15px 0px 0px 32px; line-height:24px; }
 .alefttitle span{ color:#fff; font-size:20px; font-weight:bold;font-family:Microsoft Yahei}
+
+		.slideBox{ width:200px; height:200px; overflow:hidden; position:relative; border:1px solid #ddd;  }
+		.slideBox .hd{ height:15px; overflow:hidden; position:absolute; right:5px; bottom:5px; z-index:1; }
+		.slideBox .hd ul{ overflow:hidden; zoom:1; float:left;  }
+		.slideBox .hd ul li{ float:left; margin-right:2px;  width:15px; height:15px; line-height:14px; text-align:center; background:#fff; cursor:pointer; }
+		.slideBox .hd ul li.on{ background:#f00; color:#fff; }
+		.slideBox .bd{ position:relative; height:100%; z-index:0;   }
+		.slideBox .bd li{ zoom:1; vertical-align:middle; }
+		.slideBox .bd img{ width:100%; height:auto; display:block;  }
+		.slideBox .prev,
+		.slideBox .next{ position:absolute; left:3%; top:50%; margin-top:-25px; display:block; width:32px; height:40px; background:url(images/slider-arrow.png) -110px 5px no-repeat; filter:alpha(opacity=50);opacity:0.5;   }
+		.slideBox .next{ left:auto; right:3%; background-position:8px 5px; }
+		.slideBox .prev:hover,
+		.slideBox .next:hover{ filter:alpha(opacity=100);opacity:1;  }
+		.slideBox .prevStop{ display:none;  }
+		.slideBox .nextStop{ display:none;  }

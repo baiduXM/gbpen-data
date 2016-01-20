@@ -83,11 +83,26 @@
 
 <div id="case">
 <div class="inner">
-<div id="kinMaxShow1" style="display:none;">
- {foreach name=case item=case from=$index.case.data}
-      <div> <a href="{$case.link}" target="_blank"><img src="{$case.image}"  /></a></div>
-       {if $case@index+1 == 1}{break}{/if}
-      {/foreach} </div>
+<div id="slideBox" class="slideBox">
+			<div class="hd">
+				<ul><li>1</li><li>2</li><li>3</li></ul>
+			</div>
+			<div class="bd">
+				<ul>
+                 {foreach name=case item=case from=$index.case.data}
+
+					<li><a href="{$case.link}" target="_blank"><img src="{$case.image}" /></a></li>
+                     {if $case@index+1 == 3}{break}{/if}
+      {/foreach}
+				</ul>
+			</div>
+
+			<!-- 下面是前/后按钮代码，如果不需要删除即可 -->
+			<a class="prev" href="javascript:void(0)"></a>
+			<a class="next" href="javascript:void(0)"></a>
+
+		</div>
+
 
 </div>
 </div>
