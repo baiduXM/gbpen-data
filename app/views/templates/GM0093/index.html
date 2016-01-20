@@ -69,21 +69,22 @@
         
          {elseif $mIndexCat.type eq 1} 
         <div id="in_text" class="wrapper">
-        <div class="title clearfix"><div class="in_zh">{$mIndexCat.name}</div><div class="in_en">{$mIndexCat.en_name}</div></div>
-         <div class="more"><a href="{$mIndexCat.link}">查看更多</a><div class="triangle"></div></div>
+        <div class="title clearfix"><a href="{$mIndexCat.link}"><div class="in_zh">{$mIndexCat.name}</div><div class="in_en">{$mIndexCat.en_name}</div></div>
+         <div class="more">查看更多<div class="triangle"></div></a></div>
          
          
         <div class="inner clearfix">
           <div class="line"></div><div class="circle aa"></div><div class="circle1 aa"></div><div class="circle2 aa"></div><div class="circle3 aa"></div>
            <ul class="clearfix">
              {foreach item=article from=$mIndexCat.data}
-             <li>
+             <li><a href="{$article.link}">
               <div class="triangle"></div>
                  <div class="in_textbox clearfix">
                  <h2 class="public_color">{$article.title}</h2>
                  <div class="in_des">{$article.description}</div>
                <div class="in_data">{$article.pubdate}</div>
                </div>
+               </a>
               </li>
               
                {if $article@index+1 == 4}{break}{/if} {/foreach} 
@@ -95,11 +96,12 @@
      
          {elseif $mIndexCat.type eq 2} 
       <div id="in_image" class="wrapper">
-      <div class="in_h2">
+      <div class="in_h2"><a href="{$mIndexCat.link}">
       <div class="line"></div>
       <div class="local public_bg1">
       <div class="in_zh">{$mIndexCat.name}</div><div class="in_en">{$mIndexCat.en_name}</div>
       </div>
+      </a>
       </div>
       
         <div class="inner yc">

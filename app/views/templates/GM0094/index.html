@@ -75,11 +75,11 @@
         
          {elseif $mIndexCat.type eq 1} 
         <div id="in_text" class="wrapper">
-         <h2 class="in_h2"><div class="in_zh public_bg">{$mIndexCat.name}</div><div class="in_en public_bg">{$mIndexCat.en_name}</div></h2>
+         <h2 class="in_h2"><a href="{$mIndexCat.link}"><div class="in_zh public_bg">{$mIndexCat.name}</div><div class="in_en public_bg">{$mIndexCat.en_name}</div></a></h2>
         <div class="inner clearfix">
           <ul class="newslist">
              {foreach item=article from=$mIndexCat.data}
-                  <li>
+                  <li><a href="{$article.link}">
                 <div class="date public-color1">
                 <dd class="year">{$article.pubtimestamp|date_format:"%m "}/{$article.pubtimestamp|date_format:"%y "}</dd>
                 	<dd class="day">{$article.pubtimestamp|date_format:"%d "}</dd>
@@ -88,6 +88,7 @@
                 	<dt>{$article.title}</dt>
                     <dd>{$article.description}</dd>
                 </div>
+                </a>
              </li> 
                {if $article@index+1 == 5}{break}{/if} {/foreach} 
             </ul>
@@ -96,7 +97,7 @@
       
          {elseif $mIndexCat.type eq 2} 
       <div id="in_image" class="wrapper">
-              <h2 class="in_h2"><div class="in_zh public_bg">{$mIndexCat.name}</div><div class="in_en public_bg">{$mIndexCat.en_name}</div></h2>
+              <h2 class="in_h2"><A href="{$mIndexCat.link}"><div class="in_zh public_bg">{$mIndexCat.name}</div><div class="in_en public_bg">{$mIndexCat.en_name}</div></A></h2>
        <div class="inner insub_image wrapper">
             <ul class="clearfix">
             {foreach item=article from=$mIndexCat.data}

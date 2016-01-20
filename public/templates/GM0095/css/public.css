@@ -3,7 +3,7 @@
 .body{ position: absolute; width:100%; height:100%; min-width:320px; max-width:640px; overflow:hidden; background:#e2e6e8}
 .wrap{ width:100%; height:100%; position: absolute; top:0px; left:0px; z-index:5; }
 .index-wrap{width:100%; overflow:hidden;overflow-y:scroll; position:absolute; top:0px; left:0px;  }
-.main{ margin:20px 0px 10px; height:auto; overflow:hidden; animation:opacity 1.5s linear;-webkit-animation:opacity 1.5s linear; }
+.main{ margin:20px 0px 10px; height:auto; overflow:hidden; animation:opacity 1.5s linear;-webkit-animation:opacity 1.5s linear; width:96%; margin:auto; }
 a{ color:#333}
 
 .yc  ul li  p {width:100%; display:block; white-space:nowrap; text-overflow:ellipsis; overflow:hidden;  height:100%;}
@@ -184,7 +184,7 @@ a{ color:#333}
 .list_image ul li .imgpic,.insub_image ul li .in_proimg{margin-bottom:5px; }
 .list_image ul li .imgword,.insub_image ul li .in_protitle{ height:40px; line-height:40px;text-align:center}
 @media screen and (min-width: 320px) and (max-width: 480px){
-.list_image ul li,.insub_image ul li{ width:42%; margin:0 2%; padding:1% 1% 0 1%;margin-bottom:20px;}
+.list_image ul li,.insub_image ul li{ width:42%; margin:2%; padding:1% 1% 0 1%;margin-bottom:20px;}
 }
 @media screen and (min-width: 480px) {
 .list_image ul li,.insub_image ul li{ width:27%; margin:0 2%; padding:1% 1% 0 1%;margin-bottom:15px;}
@@ -193,7 +193,7 @@ a{ color:#333}
 
 
 /*list-imagetext*/
-.list_imagetext ul li,.insub_imagetext ul li {  padding-bottom:15px; margin-bottom:15px;  border-bottom:dashed 1px; border-bottom-color:rgba(0,0,0,0.2);  }
+.list_imagetext ul li,.insub_imagetext ul li {  padding-bottom:15px; margin:15px 0;  border-bottom:dashed 1px; border-bottom-color:rgba(0,0,0,0.2);  }
 .list_imagetext ul li .img_box,.insub_imagetext ul li .in_imgbox{ float:left; width:25%;border:solid 3px; border-color:rgba(255,255,255,0.2);background-clip: border-box;box-shadow: 2px 2px 5px #888888; }
 .list_imagetext ul li .img_box img,.insub_imagetext ul li .in_imgbox img{ }
 .list_imagetext ul li .text_box,.insub_imagetext ul li .in_textbox{ float:right; width:70%;}
@@ -202,7 +202,6 @@ a{ color:#333}
 .list_imagetext ul li .text_box .text_des,.insub_imagetext ul li .in_des{ padding-top:7px; line-height:20px; height:40px; overflow:hidden;opacity:0.5;filter:Alpha(opacity=50);}
 @media screen and (min-width: 320px) and (max-width: 480px){
 .list_imagetext ul li .text_box .text_title,.insub_imagetext ul li .in_title{ font-size:14px;  } 
-.list_imagetext ul li .text_box .text_des,.insub_imagetext ul li .in_des{ display:none}
 }
 /*list_imagetext*/
 

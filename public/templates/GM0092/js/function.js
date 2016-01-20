@@ -21,10 +21,15 @@ $(".swiper-slide,.swiper-wrapper,.navlist,.menulist").height($(".menulist .swipe
 var n=$(".menulist").height()*0.5
 $(".menulist").css({"margin-top":-n})
 $(".menulist .swiper-nav span .bg").height($(".menulist .swiper-nav span .bg").width())
-var m=($(".menulist .swiper-nav span").width()-$(".menulist .swiper-nav span .bg").width())*0.5
+var m=($(".menulist .swiper-nav span").width()-$(".menulist .swiper-nav span .bg").width())*0.45
 $(".menulist .swiper-nav span .bg").css({"top":m,"left":m})
 $(".iconfont").css({"font-size":"20px"})
 $(".menulist .swiper-nav span .pic").css({"margin-left":$(".menulist .swiper-nav span .bg").width()*0.4})
+           
+		   if (screen.width < 480){
+$(".iconfont").css({"font-size":"16px"})
+          }
+
 
 var h=$(".in_h2 .in_zh").height()+$(".in_h2 .in_en").height()
 $(".in_h2").height(h)
