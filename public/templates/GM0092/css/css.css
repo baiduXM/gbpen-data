@@ -52,10 +52,10 @@
 
 
 
-#in_image{width:98%; margin:auto; position:relative}
-#in_image .inner{  color:#8e8888; line-height:30px; position:relative; overflow:hidden}
+#in_image{width:98%; margin:auto; position:relative; }
+#in_image .inner{  color:#8e8888; line-height:30px; position:relative; overflow:hidden; margin:20px 0}
 #in_image .inner ul { width:100%;}
-#in_image .inner ul li{ float:left;  overflow:hidden; margin:2%; width:29%}
+#in_image .inner ul li{ float:left;  overflow:hidden; margin:0 2%; width:29%}
 #in_image .inner ul li .in_proimg{overflow:hidden; border:1px solid rgba(0,0,0,.3); padding:2px }
 #in_image .inner ul li .in_proimg img{ }
 #in_image .inner ul li .in_protitle{ text-align:center; line-height:30px;  font-size:15px;  }

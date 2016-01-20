@@ -12,8 +12,6 @@ $(document).ready(function(){
 				
 $(window).load(function(){
 /*美工专属区域*/
-var n=($(".logo").width()-$(".logo img").width())*0.5
-$(".logo img").css({"margin-left":n})
 
 $(".home,.header_menu").css({"top":$(".header").height()*0.25})
 $(".menulist .swiper-nav span").height($(".menulist .swiper-nav span").width())
@@ -36,6 +34,14 @@ $(".in_h2").height(h)
 
 $("section div.wrapper:odd .local ").css({"right":"10%","left":"auto"})
 $("section div.wrapper:odd .more ").css({"left":"20%"})
+
+
+$("#in_image .inner").height($("#in_image .inner ul li").height())
+ 
+	
+
+
+
 
 /*美工专属区域*/
 	
