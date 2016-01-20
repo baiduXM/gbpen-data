@@ -22,6 +22,11 @@ $(".menulist .swiper-nav span .pic .iconfont").css({"top":n})
 var m=($(".menulist .swiper-nav span .pic").width()-$(".menulist .swiper-nav span .pic .iconfont").width())*0.45
 $(".menulist .swiper-nav span .pic .iconfont").css({"font-size":25,"left":m,"color":"#fff"})
 
+ if (screen.width < 600){
+            $(".menulist .swiper-nav span .pic .iconfont").css({"font-size":20,"left":m,"color":"#fff"})
+
+          }
+
 
 $(".swiper-slide,.swiper-wrapper,.navlist").height($(".menulist .swiper-nav span").height()+2+"px")
 
@@ -252,4 +257,3 @@ $("#daohang,#header_menu,#fixed_menu").click(function(){
   	});
 	//分享取消按钮结束
 
-	
