@@ -3,12 +3,7 @@ window.onload=function(){
 		 var ww=$(this).find("img").width();
    $(this).find("p").width(ww);
   });
-	$(".bd li").each(function(){
-	if($(this).find("img").width() > 640){
-        $(this).find("img").width("99%");
-}
 
-		})
 
 $("#pro .inner ul li").each(function(){
   var hh1=280-$(this).find("img").height();
@@ -27,7 +22,12 @@ $("#case .inner .slideBox .bd ul li").each(function(i){
 
 $(document).ready(function() {
 
+	$(".bd li").each(function(){
+	if($(this).find("img").width() > 640){
+        $(this).find("img").width("99%");
+}
 
+		})
 
 	
 /*侧边栏*/
