@@ -34,11 +34,11 @@
 </nav>
 {else}	<!-- 让客服自己选择，如果当前无子栏目 展现的目标栏目 -->
 <nav>
-	 <div class="title">{$posnavs[0].name}</div>
+	 <div class="title">{$_pagenavs_sub3.pagenavs.name}</div>
      <div class="list">
 	 	<!-- 下表为0的面包屑导航正好是一级栏目的当前栏目 -->
 		<ul>
-			{foreach name=pagenavs item=nav from=$pagenavs}
+			{foreach name=pagenavs item=nav from=$_pagenavs_sub3.pagenavs.childmenu}
 			<li>
 				<a href="{$nav.link}">{$nav.name}</a>
 				{if $nav.childmenu}
