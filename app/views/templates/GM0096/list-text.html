@@ -55,27 +55,8 @@
 <div class="body">
 <div class="wrap page-active">
     <div class="index-wrap"> 
-<header>
-    <div class="header">
-      <div class="logo"><img src="images/logo.png" width="80%" ></div>
-      <div class="baner">
-        <div id="slideBox" class="slideBox">
-          <div class="hd">
-            <ul>
-            </ul>
-          </div>
-          <div class="bd">
-            <ul>
-              {foreach name=slidepics item=slidepic from=$global.slidepics}
-              <li><a class="pic" href="{$slidepic.link}"><img src="{$slidepic.image}" title="640*316" /></a></li>
-       {/foreach} 
-            </ul>
-          </div>
-        </div>
-      </div>
-      
-    </div>
-  </header>  <section>
+ {include file="./_header.html"}
+   <section>
     <div class="boxmaind">
       <div class="boxmain_d">
       

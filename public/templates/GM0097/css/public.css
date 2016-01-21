@@ -198,8 +198,8 @@ a{ color:#333}
 
 /*list-imagetext*/
 .list_imagetext ul li,.insub_imagetext ul li {  padding-bottom:15px; margin:15px 0;  border-bottom:dashed 1px; border-bottom-color:rgba(0,0,0,0.2);  }
-.list_imagetext ul li .img_box,.insub_imagetext ul li .in_imgbox{ float:left; width:25%;border:solid 3px; border-color:rgba(255,255,255,0.2);background-clip: border-box;box-shadow: 2px 2px 5px #888888; }
-.list_imagetext ul li .img_box img,.insub_imagetext ul li .in_imgbox img{ }
+.list_imagetext ul li .img_box,.insub_imagetext ul li .in_imgbox{ float:left; width:25%; }
+.list_imagetext ul li .img_box img,.insub_imagetext ul li .in_imgbox img{ border:solid 3px; border-color:rgba(255,255,255,0.2);background-clip: border-box;box-shadow: 2px 2px 5px #888888;}
 .list_imagetext ul li .text_box,.insub_imagetext ul li .in_textbox{ float:right; width:70%;}
 
 .list_imagetext ul li .text_box .text_title,.insub_imagetext ul li .in_title{ font-size:1.2em;  line-height:26px; margin-top:5px;width:100%; display:block; white-space:nowrap; text-overflow:ellipsis; overflow:hidden;  height:26px;}

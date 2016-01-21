@@ -12,7 +12,7 @@
                         {/while}
                         {for $item=1 to 5}
 					{foreach  name=list2 item=article from=$index.list2.data}
-                         <li><a href="{$article.link}" class="pic"><img src="{$article.image}"  height="147" width="160" /></a>
+                         <li><a href="{$article.link}" class="pic"><img src="{$article.image}" /></a>
                          <a href="{$article.link}" class="title">{$article.title} </a></li>
                     {/foreach}
                     {/for}

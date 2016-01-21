@@ -20,8 +20,8 @@
 #in_page .in_h2 .in_zh:before,#in_image .in_h2 .in_zh:before{left:130px;}
 #in_page .in_h2 .in_zh{ background:url(../images/about_icon.png) no-repeat 5px;}
 
-#in_page .inner img{ float:left;  margin:0 10px;}
-#in_page .inner p{ float:right; width:94%; padding-right:4%; line-height:24px; height:212px; overflow:hidden;}
+#in_page .inner .pic{ float:left;  margin:0 10px; width:25%}
+#in_page .inner p{ float:right; width:68%; line-height:24px; height:212px; overflow:hidden;}
 
 #in_imagetext .in_h2{ padding-left:0; position:relative}
 #in_imagetext .in_h2:before{bottom:2px; right:0;width:140px; height:1px; line-height:1px; background:#a80f24}
@@ -57,7 +57,7 @@ ul.newslist li:nth-child(2n) .list:before{width:0px;  height:0px;  width:0px; he
 #in_image ul li .in_protitle{ position:absolute; bottom:0; left:0; width:100%; z-index:110; background:rgba(0,0,0,0.6); color:#db9922}
 
 @media screen and (min-width: 320px) and (max-width: 479px){
-#in_page .inner p{ line-height:20px; height:140px; overflow:hidden; font-size:12px;}
+#in_page .inner p{ line-height:20px; height:80px; overflow:hidden; font-size:12px;}
 }
 @media screen and (min-width: 480px) {
 #in_page .inner p{ line-height:24px;  overflow:hidden; background-attachment:fixed}

@@ -11,13 +11,15 @@ img{border:none;}
 /*头部*/
 .head_outsild{width: 100%;height: 117px;overflow: hidden;background:url(../images/index_02.png) repeat-x left center;}
 .head{width: 1003px;height: 117px;margin: 0 auto;overflow: hidden;position: relative;}
-.head h1.logo{position: relative; display: block;width:438px;height: 100%;overflow: hidden;float: left;}
+.head h1.logo{height: 116px;overflow: hidden;}
 h1.logo img {
     position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
     margin: auto 0;
+	height:100%;
+	overflow:hidden;
 }
 .ss{position: absolute;right: 33px;bottom: 28px;color: #ffffff;z-index: 99999}
 .ss span{float: left;font-weight: bold;font-size: 14px;color: #fff4bf;padding-right: 15px;}
@@ -40,8 +42,10 @@ h1.logo img {
 .nav .sub a{color: #f7ead2;height:30px;line-height: 30px;width:100%;display: block;margin: 0 auto;}
 .nav .sub a:hover{color: #fbe084;}
 /*切换大图banner*/
-.slideBox{ width:1003px; height:341px; overflow:hidden; position:relative;margin:2px auto 0;background: #fdefd5;}
-.slideBox .bd{ position:relative; height:311px; z-index:0;width: 979px;padding: 15px 12px;margin: 0 auto;overflow: hidden;tempWrap}
+.slideBox{ width:1003px;overflow:hidden; position:relative;margin:2px auto 0;background: #fdefd5;}
+.slideBox img{width:100%; overflow:hidden; position:relative;}
+.slideBox .bd{ position:relative; z-index:0;width: 979px;padding: 15px 12px;margin: 0 auto;overflow: hidden;tempWrap}
+
 .slideBox .bd li{ zoom:1; vertical-align:middle; }
 /* 下面是前/后按钮代码，如果不需要删除即可 */
 .slideBox .prev,
