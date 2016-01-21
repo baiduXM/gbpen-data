@@ -56,8 +56,8 @@ h1.logo img {
 .slideBox .prevStop{ display:none;  }
 .slideBox .nextStop{ display:none;  }
 /*产品滚动*/
-.gd{width: 1003px;height: 267px;background: #fdefd5;margin: 0 auto;overflow: hidden;}
-.gd .picMarquee{width: 973px;height:257px;overflow: hidden;margin: 0 auto;background:url(../images/cp_b_20.png) no-repeat center center;}
+.gd{width: 1003px;background: #fdefd5;margin: 0 auto;overflow: hidden;}
+.gd .picMarquee{width: 973px;overflow: hidden;margin: 0 auto;/* background:url(../images/cp_b_20.png) no-repeat center center; */}
 .gd .picMarquee .tempWrap{width: 923px !important;overflow: hidden;margin: 43px auto 20px;}
 .gd .picMarquee li{float: left;width:160px;overflow: hidden;margin: 0.2% 12px;}
 .gd .picMarquee li a.pic{width: 160px;overflow: hidden;}
@@ -85,7 +85,7 @@ h3.title span{padding: 0 15px;}
 h3.title a.more1{float: right;width: 35px;height: 11px;display: block;background:url(../images/more_07.png) no-repeat center center;padding: 20px 16px 0 0;}
 .about_xq{height: 149px;overflow: hidden;padding:15px 18px;border: 1px solid #e2c898;background: #fef4e2;}
 .about_xq img{float: left;padding: 1px;border: 1px solid #cbc6bc;margin-right: 10px; height:100%;}
-.about_xq .ms{line-height: 23px;float: right;width: 525px;height: 143px;}
+.about_xq .ms{line-height: 23px;width: 525px;height: 143px;}
 .right2{margin-top: 10px;width: 100%;height: auto;overflow: hidden;}
 .anli{border: 1px solid #e2c898;padding: 0 18px;background: #fef4e2;}
 .anli .picMarquee{width:100%;height:427px;overflow: hidden;}
