@@ -9,7 +9,7 @@
 		<ul>
 			{foreach name=pagenavs item=nav from=$pagenavs}
 			<li class="{if $nav.current}current{/if}">
-				<a href="{if count($nav.childmenu) eq 0}javascript:;{else}{$nav.link}{/if}">{$nav.name}</a>
+				<a href="{$nav.link}">{$nav.name}</a>
 				{if $nav.childmenu}
 				<ul class="left_list">
 					{foreach key=key item=nav_list from=$nav.childmenu}
