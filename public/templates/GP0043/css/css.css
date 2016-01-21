@@ -57,7 +57,7 @@ h1.logo img {
 .slideBox .nextStop{ display:none;  }
 /*产品滚动*/
 .gd{width: 1003px;background: #fdefd5;margin: 0 auto;overflow: hidden;}
-.gd .picMarquee{width: 973px;overflow: hidden;margin: 0 auto;/* background:url(../images/cp_b_20.png) no-repeat center center; */}
+.gd .picMarquee{width: 973px;overflow: hidden;margin: 0 auto; background:url(../images/cp_b_20.png) no-repeat center center; background-size:100% 100%;}
 .gd .picMarquee .tempWrap{width: 923px !important;overflow: hidden;margin: 43px auto 20px;}
 .gd .picMarquee li{float: left;width:160px;overflow: hidden;margin: 0.2% 12px;}
 .gd .picMarquee li a.pic{width: 160px;overflow: hidden;}
