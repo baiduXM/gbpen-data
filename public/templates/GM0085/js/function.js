@@ -12,25 +12,12 @@ $(document).ready(function(){
 				
 $(window).load(function(){
 /*美工专属区域*/
-  $(".logo").height($(".logo").width()*0.2)
-  $(".nav_ico").height($(".nav_ico").width()*0.58)
-  $(".menulist .swiper-nav,.swiper-wrapper,.swiper-slide").height($(".nav_ico").height()+30)
-  $(".baner").css("margin-top",$(".logo").height()*0.7)
-  $(".arrow-left,.arrow-right").css("margin-top",($(".navlist").height()-40)*0.5)
-  $(".index div.wrapper:odd").addClass("public_bg2").css({"padding-top":15+"px","margin-top":20+"px"})
-   $(".index div.wrapper:even").css("margin-top",-13+"px")
-    $('.index div.wrapper:odd').each(function(){
-	 if( $(this).attr("class")== 'wrapper insub_image public_bg2'){
-	  $(this).find(".inner ul li p").css({"background":"rgba(255,255,255,0.4)"})}
-   })
-   $('.index div.wrapper:even').each(function(){
-	 if( $(this).attr("class")== 'wrapper insub_image'){
-	  $(this).find(".inner ul li p").addClass("public_bg2")}
-   })
-    
-	
-   
-
+  
+$(".list_imagetext ul li").each(function(){
+if($(".list_imagetext ul li .img_box img").height()<$(".list_imagetext ul li .text_box").height()){
+	var z=($(".list_imagetext ul li .text_box").height()-$(".list_imagetext ul li .img_box img").height())*0.5
+	$(".list_imagetext ul li .img_box img").css({"margin-top":z})
+	}})
 
 /*美工专属区域*/
 	
@@ -38,7 +25,7 @@ $(window).load(function(){
 /*标题自适应宽度*/		
 	$(".yc ul li").each(function(){
 		 var ww=$(this).find("img").width();
-   $(this).find("p").width(ww*0.8).css({"padding-left":ww*0.1,"padding-right":ww*0.1});
+   $(this).find("p").width(ww);
   });
  /*标题自适应宽度*/
  
@@ -152,7 +139,7 @@ $(window).load(function(){
 		$("#up").hide()
 		$("#down").show()
 		$(".hide-class").removeClass("hide-class1")
-		$(".font,.font1").slideToggle()
+		$(".font").slideToggle()
 		$(".hide-class").slideUp()	
 	})
 	$(".font dl.big").click(function(){
