@@ -1,7 +1,6 @@
-$(document).ready(function() {   
-
+$(document).ready(function() {  
+    loader(); 
     $(window).load(function() {
-        var img = new Image();
         img.src = $("ul.nav li img").attr("src");
 
         $(".class-m").height($(".class").outerHeight() - $(".class-top").outerHeight())
@@ -163,3 +162,9 @@ $(document).ready(function() {
         autoplay : 3000
     });
 });
+function loader (argument) {
+    setTimeout(function(){
+        $('#quickbar').addClass('loaded');
+        $(".fakeloader").fadeOut();
+    }, 300);
+}
