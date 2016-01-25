@@ -57,7 +57,7 @@
             <div class="right1">
                 <h3 class="title"><img src="{$site_url}images/tit_l_27.png" height="5" width="28" alt="" /><span>{$index.list3.name}</span><img src="{$site_url}images/tit_r_29.png" height="5" width="28" /></h3>
                 <div class="about_xq">
-                    <img src="{$index.list3.image}" height="142" width="171" alt="" />
+                    <img src="{$index.list3.image}" alt="" />
                     <div class="ms"><a href="{$index.list3.link}">{$index.list3.description}</a></div>
                 </div>
             </div>
@@ -69,14 +69,14 @@
                         <ul class="picList">
                             {foreach item=article from=$index.list4.data} {if $article@index % 2 == 0}
                             <li>
-                                <a href="{$article.link}" class="pic"><img src="{$article.image}" height="147" width="160" /></a>
+                                <a href="{$article.link}" class="pic"><img src="{$article.image}" /></a>
                                 <a href="{$article.link}" class="title">{$article.title}</a></li>
                             {/if} {/foreach}
                         </ul>
                         <ul class="picList">
                             {foreach item=article from=$index.list4.data} {if $article@index % 2 != 0}
                             <li>
-                                <a href="{$article.link}" class="pic"><img src="{$article.image}" height="147" width="160" /></a>
+                                <a href="{$article.link}" class="pic"><img src="{$article.image}" /></a>
                                 <a href="{$article.link}" class="title">{$article.title}</a></li>
                             {/if} {/foreach}
                         </ul>

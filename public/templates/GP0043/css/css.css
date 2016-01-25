@@ -11,13 +11,15 @@ img{border:none;}
 /*头部*/
 .head_outsild{width: 100%;height: 117px;overflow: hidden;background:url(../images/index_02.png) repeat-x left center;}
 .head{width: 1003px;height: 117px;margin: 0 auto;overflow: hidden;position: relative;}
-.head h1.logo{position: relative; display: block;width:438px;height: 100%;overflow: hidden;float: left;}
+.head h1.logo{height: 116px;overflow: hidden;}
 h1.logo img {
     position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
     margin: auto 0;
+	height:100%;
+	overflow:hidden;
 }
 .ss{position: absolute;right: 33px;bottom: 28px;color: #ffffff;z-index: 99999}
 .ss span{float: left;font-weight: bold;font-size: 14px;color: #fff4bf;padding-right: 15px;}
@@ -40,8 +42,10 @@ h1.logo img {
 .nav .sub a{color: #f7ead2;height:30px;line-height: 30px;width:100%;display: block;margin: 0 auto;}
 .nav .sub a:hover{color: #fbe084;}
 /*切换大图banner*/
-.slideBox{ width:1003px; height:341px; overflow:hidden; position:relative;margin:2px auto 0;background: #fdefd5;}
-.slideBox .bd{ position:relative; height:311px; z-index:0;width: 979px;padding: 15px 12px;margin: 0 auto;overflow: hidden;tempWrap}
+.slideBox{ width:1003px;overflow:hidden; position:relative;margin:2px auto 0;background: #fdefd5;}
+.slideBox img{width:100%; overflow:hidden; position:relative;}
+.slideBox .bd{ position:relative; z-index:0;width: 979px;padding: 15px 12px;margin: 0 auto;overflow: hidden;tempWrap}
+
 .slideBox .bd li{ zoom:1; vertical-align:middle; }
 /* 下面是前/后按钮代码，如果不需要删除即可 */
 .slideBox .prev,
@@ -52,13 +56,14 @@ h1.logo img {
 .slideBox .prevStop{ display:none;  }
 .slideBox .nextStop{ display:none;  }
 /*产品滚动*/
-.gd{width: 1003px;height: 267px;background: #fdefd5;margin: 0 auto;overflow: hidden;}
-.gd .picMarquee{width: 973px;height:257px;overflow: hidden;margin: 0 auto;background:url(../images/cp_b_20.png) no-repeat center center;}
-.gd .picMarquee .tempWrap{width: 923px !important;height:188px;overflow: hidden;margin: 43px auto 20px;}
-.gd .picMarquee li{float: left;width:160px;height:100%;overflow: hidden;margin: 0.2% 12px;}
-.gd .picMarquee li a.pic{width: 100%;height:147px;overflow: hidden;display: block;}
+.gd{width: 1003px;background: #fdefd5;margin: 0 auto;overflow: hidden;}
+.gd .picMarquee{width: 973px;overflow: hidden;margin: 0 auto; background:url(../images/cp_b_20.png) no-repeat center center; background-size:100% 100%;}
+.gd .picMarquee .tempWrap{width: 923px !important;overflow: hidden;margin: 43px auto 20px;}
+.gd .picMarquee li{float: left;width:160px;overflow: hidden;margin: 0.2% 12px;}
+.gd .picMarquee li a.pic{width: 160px;overflow: hidden;}
+.picMarquee img{width:100%; position:relative; overflow:hidden;}
 .gd .picMarquee li a.title{width: 100%;height: 42px;line-height: 42px;display: block;text-align: center;}
-.picList{margin-left: 10px;}
+.picList1 {margin-top:-31px !important;}
 /*contant*/
 .contant{width: 973px;height:auto;margin: 0 auto;overflow: hidden;background: #fceed5;padding: 0 15px 37px;}
 .contant_left{width: 214px;height: 682px;overflow: hidden;margin-right: 11px;float: left;}
@@ -79,8 +84,8 @@ h3.title{width: 100%;height: 31px;line-height: 31px;background:url(../images/tit
 h3.title span{padding: 0 15px;}
 h3.title a.more1{float: right;width: 35px;height: 11px;display: block;background:url(../images/more_07.png) no-repeat center center;padding: 20px 16px 0 0;}
 .about_xq{height: 149px;overflow: hidden;padding:15px 18px;border: 1px solid #e2c898;background: #fef4e2;}
-.about_xq img{float: left;padding: 1px;border: 1px solid #cbc6bc;margin-right: 10px;}
-.about_xq .ms{line-height: 23px;float: right;width: 525px;height: 143px;}
+.about_xq img{float: left;padding: 1px;border: 1px solid #cbc6bc;margin-right: 10px; height:100%;}
+.about_xq .ms{line-height: 23px;width: 525px;height: 143px;}
 .right2{margin-top: 10px;width: 100%;height: auto;overflow: hidden;}
 .anli{border: 1px solid #e2c898;padding: 0 18px;background: #fef4e2;}
 .anli .picMarquee{width:100%;height:427px;overflow: hidden;}
@@ -131,16 +136,18 @@ h3.title a.more1{float: right;width: 35px;height: 11px;display: block;background
 
 /*pro*/
 .inner_pro {height:auto; overflow:hidden;width:100%;}
-.inner_pro li{ float:left;width:164px; height:188px;overflow: hidden;margin: 0px 7px 0px;}
-.inner_pro li a.img{width: 162px;height: 148px;display: block;border: 1px solid #b8b1a4;}
+.inner_pro li{ float:left;width:164px; overflow: hidden;margin: 0px 7px 0px;}
+.inner_pro li a.img{width: 162px;display: block;border: 1px solid #b8b1a4;}
+.inner_pro img{width:100%;overflow:hidden;position:relative;}
 .inner_pro li a.tit{display: block;line-height:38px;line-height:38px;width: 100%;overflow: hidden;text-align: center;white-space: nowrap;text-overflow: ellipsis;}
 
 
 
-.news_deta li{width: 100%;height: 108px;overflow: hidden;margin-top:14px;line-height: 22px;}
+.news_deta li{height: 108px;overflow: hidden;margin-top:14px;line-height: 22px;}
 .details{width: 100%;height:100%;overflow: hidden;}
-.details_img {width: 161px;height:100%;overflow: hidden;float: left;margin-right: 18px;}
-.details_img a{width: 100%;height: 100%;display: block;background:url(../images/sub4_03.png) no-repeat center 101%;}
+.details_img {height:100%;overflow: hidden;float: left;margin-right: 18px;}
+.details_img a{height: 100%;background:url(../images/sub4_03.png) no-repeat center 101%;}
+.details_img img{height:100%;overflow:hidden;position:relative;}
 .details_text{width:517px;height: 88px;float: left;background: #fdefd5;padding: 10px;overflow: hidden;}
 .details_text h3 a{height: 27px;line-height: 27px;overflow: hidden;font-weight: bold;display: block;background: #ffe1a8;padding: 0 10px;}
 .details_text .xq{height: 61px;overflow: hidden;color: #515151;padding: 0 10px;}
@@ -165,7 +172,8 @@ h3.title a.more1{float: right;width: 35px;height: 11px;display: block;background
 
 
 .show_t{color: #5c666b;width:100%;height:auto;overflow: hidden;text-align: center;}
-.pimgw{width:404px;height: 324px;overflow: hidden;margin: 10px auto 0;padding: 1px;border: 1px solid #777777;}
+.pimgw{width:404px;overflow: hidden;margin: 10px auto 0;padding: 1px;}
+.pimgw img{width:100%;overflow:hidden;position:relative;}
 .neir{width: 100%;height: auto;padding-top: 20px;color: #757575;}
 h3.xq{width: 79px;height: 26px;background: #c7c7c7;line-height: 26px;text-align: center;}
 .clear{border-top: 1px dotted #303538;padding-top: 20px;}
