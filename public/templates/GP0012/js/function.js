@@ -3,8 +3,22 @@ window.onload=function(){
 		 var ww=$(this).find("img").width();
    $(this).find("p").width(ww);
   });
-
-	
+function adaption(selector,li_w,li_h){
+		$(selector).each(function(i){
+		img_i=$(selector).eq(i).find("img")
+	    if(img_i.width() >= li_w&&img_i.width()>=img_i.height()){
+          img_i.width("99%");}
+        else if(img_i.height() > li_h){
+         img_i.height("99%");}
+	   var img_h=img_i.height()	
+       var img_w=img_i.width()												
+       var mar_t=(li_h-img_h)*0.5;
+       var mar_l=(li_w-img_w)*0.5;
+  	   $(this).find("img").css({"margin-top":mar_t+"px","margin-left":mar_l+"px"})
+		})
+	}
+	/*图文列表图片自适应*/
+   adaption(".list_imagetext ul li",150,110)
 	}
 
 $(document).ready(function() {
