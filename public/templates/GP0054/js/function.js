@@ -1,13 +1,46 @@
 window.onload=function(){
-$("#case ul li .index_img").each(function(){
-  var hh1=115-$(this).find("img").height();
+	
+function adaption(selector,li_w,li_h){
+		$(selector).each(function(i){
+		img_i=$(selector).eq(i).find("img")
+	    if(img_i.width() > li_w){
+          img_i.width("99%");}
+        else if(img_i.height() > li_h){
+         img_i.height("99%");}
+	   var img_h=img_i.height()	
+       var img_w=img_i.width()												
+       var mar_t=(li_h-img_h)*0.5;
+       var mar_l=(li_w-img_w)*0.5;
+  	   $(this).find("img").css({"margin-top":mar_t+"px","margin-left":mar_l+"px"})
+		})
+	}
+	
+ adaption("#product ul li",145,115)
+  adaption(".list_imagetext ul li",120,110)
+	 $(".yc ul li").each(function(){
+		 var ww=$(this).find("img").width();
+   $(this).find("p").width(ww);
+  });
+
+$("#pro .inner ul li").each(function(){
+  var hh1=280-$(this).find("img").height();
   	$(this).find("img").css("margin-top",hh1*0.5+"px")
 
 })
+$("#case .inner ul li").each(function(){
+  var hh1=200-$(this).find("img").height();
+  	$(this).find("img").css("margin-top",hh1*0.5+"px")
 
+})
+$(".bd li").each(function(){
+	if($(this).find("img").width() > 580){
+        $(this).find("img").width("99%");
+}
+		})
 }
 
 $(document).ready(function() {
+
 
 
 
@@ -21,12 +54,7 @@ $(document).ready(function() {
         $(this).parent().siblings().find(".third").slideUp()
         $(this).siblings(".third").slideToggle()
     }) 
-	$(".bd li").each(function(){
-	if($(this).find("img").width() > 580){
-        $(this).find("img").width("99%");
-}
-
-		})
+	
 /*导航*/
    jQuery("#nav").slide({
         type: "menu", // 效果类型，针对菜单/导航而引入的参数（默认slide）
@@ -37,7 +65,6 @@ $(document).ready(function() {
         triggerTime: 0, //鼠标延迟触发时间（默认150）
         returnDefault: false //鼠标移走后返回默认状态，例如默认频道是"预告片"，鼠标移走后会返回"预告片"（默认false）
     });
-
 
 	
 	
@@ -60,29 +87,20 @@ $(document).ready(function() {
 
 /*大图 100%*/	
 	$("#kinMaxShow").kinMaxShow({
-            height: 640,
-            button: {
-                showIndex: false,
-                normal: { background: 'url(images/button.png) no-repeat -14px 0', marginRight: '8px', border: '0', right: '48%', bottom: '-20px' },
-                focus: { background: 'url(images/button.png) no-repeat 0 0', border: '0' }
-            }
-        });
-		$("#kinMaxShow1").kinMaxShow({
-            height: 250,
+            height: 260,
             button: {
                 showIndex: false,
                 normal: { background: 'url(images/button.png) no-repeat -14px 0', marginRight: '8px', border: '0', right: '48%', bottom: '20px' },
                 focus: { background: 'url(images/button.png) no-repeat 0 0', border: '0' }
             }
         });
-	var MarqueeDiv1Control=new Marquee("MarqueeDiv1");		//箭头控制滚动方向、加速及鼠标拖动实例
-MarqueeDiv1Control.Direction="left";
-MarqueeDiv1Control.Step=1;
-MarqueeDiv1Control.Width=270;
-//MarqueeDiv1Control.Height=167;
-MarqueeDiv1Control.Timer=20;
-MarqueeDiv1Control.ScrollStep=1;				//若为-1则禁止鼠标控制实例
-MarqueeDiv1Control.Start();
-MarqueeDiv1Control.BakStep=MarqueeDiv1Control.Step;
+		
+		$('#prizes .photos-content.enable').jCarouselLite({
+			btnPrev: '#prizes a.photos-prev',
+			btnNext: '#prizes a.photos-next',
+			visible: 5,
+			auto: 3000,
+			speed: 1000
+		}).css({visibility:"visible"});
 
 });

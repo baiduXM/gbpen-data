@@ -22,24 +22,23 @@
     <script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.js"></script>
     <script type="text/javascript" src="{$site_url}js/jquery.kinMaxShow-1.0.min.js"></script>
     <script type="text/javascript" src="{$site_url}js/function.js"></script>
-    <style>
-    .tx1 {
-        behavior: url(pie.htc);
-    }
-    </style>
+
     <title>{$title}</title>
 </head>
 
 <body>
-    {include file='./_header.html'}
-<div id="sub_container" class="wrapper clearfix">
-{include file='./_aside.html'} 
+<div class="bg">
+ 
+ 
+     {include file='./_header.html'}
+
+ <div id="container" class="clearfix wrapper">
+   {include file='./_aside.html'} 
 
 
-         <div class="main fr"> 
+<div class="main fr">
 
-
-           <div class="crumb "><span><a href="{$site_url}">首页</a>  {foreach item=nav from=$posnavs}&gt; <a href="{$nav.link}">{$nav.name}</a> {/foreach}</span><h2><img src="{$site_url}images/crumb_ico.png" width="16" height="15" /> {$list.name}</h2></div>
+             <div class="crumb ">{$list.name}<span><div class="xx">当前所在位置:</div><a href="{$site_url}">首页</a> {foreach item=nav from=$posnavs}<div class="xx">></div><a href="{$nav.link}">{$nav.name}</a> {/foreach}</span></div>
 
             <div class="article">
       <div class="list_image">
@@ -60,11 +59,13 @@
                 
             </div>
         </div>
-        
-         
+   
+   
+ </div>
+     {include file='./_footer.html'}
 
-    </div>
-    {include file='./_footer.html'}
+ </div>
+
 </body>
 
 </html>

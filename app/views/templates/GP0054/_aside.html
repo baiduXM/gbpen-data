@@ -1,12 +1,12 @@
-
-
 <div class="sidebar">
   <div class="subnav">
     <div class="list_class"> 
 <!-- 二级栏目列表（展示到三级子栏目） -->
 {if $pagenavs}
 <nav>
-   <div class="alefttitle"><span>{$posnavs[0].en_name}</span><br />{$posnavs[0].name}</div>	
+
+
+   <div class="alefttitle">{$posnavs[0].name}</div>	
     <div class="category">	
 
 	<ul class="listbg clearfix">
@@ -38,7 +38,7 @@
         
 {else}	<!-- 让客服自己选择，如果当前无子栏目 展现的目标栏目 -->
 <nav>
-   <div class="alefttitle"><span>{$_aside.pagenavs.en_name}</span><br />{$_aside.pagenavs.name}</div>	
+   <div class="alefttitle">{$_aside.pagenavs.name}</div>	
      <div class="category"> 
 	<ul class="listbg clearfix">
 		{foreach name=pagenavs2 item=nav from=$_aside.pagenavs.childmenu}
@@ -68,10 +68,15 @@
 </nav>
 
 {/if}
-<div class="sub_contact"> 
 
-   {$_aside.contact}
-    </div>
+
+     <div class="sub_contact"><A href="{$_aside.list1.link}"><img src="{$site_url}images/sub_contact.png" /></A></div>   
+      
+      
+
+    
+    
+
  </div>
 
   </div>

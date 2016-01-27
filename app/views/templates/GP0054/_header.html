@@ -1,26 +1,20 @@
-<div id="header" class="wrapper clearfix">
-<h1><a href="{$site_url}"><img src="{$logo}" alt="{$title}"/></a></h1>
-
-
-<div class="top_tel">{$contact.telephone}</div>
-<div class="search">  <form action="{$search_action}" method="GET">
+ <div id="header" class="wrapper">
+     <h1><a href="{$site_url}"><img src="{$site_url}images/logo.png" /></a></h1>
+     <div class="top_l">
+       <div class="search">
+       
+       
+       <form action="{$search_action}" method="GET">
   <input type="text" name="s" value="" class="search_area" />
-  <input type="submit" class="search_btn"  value=" "/>
-</form>
-</div>
- </div>
- 
- 
- 
-
-<div class="nav_bg">
-<div id="nav" class="wrapper">
-<ul class="clearfix">
-            {$limit = 8}
+  <input type="submit" class="search_btn"  value="搜索"/>
+</form></div>
+     </div>
+     
+     <div id="nav" class="wrapper">
+ <ul class="clearfix">
+            {$limit = 7}
             {if $navs|count lt $limit}{$limit = $navs|count}{/if}
-            <li class="aa" style="width:{100/($limit+1)}%">
-                <a href="{$site_url}">网站首页</a>
-            </li>
+           
             {foreach name=navs item=nav from=$navs}
             <li class="fl{if $nav.current} current{/if} aa" style="width:{100/($limit+1)}%">
                 <a href="{$nav.link}">{$nav.name}</a>
@@ -33,18 +27,15 @@
             {if $nav@index+1 eq $limit}{break}{/if}
             {/foreach}
         </ul>
-
-</div></div>
-
-
- <div id="sub_banner"><div class="banner_box">
-    <div id="kinMaxShow1" style="display:none;"> {foreach name=slidepics item=slidepic from=$global.slidepics}
+ 
+ </div>
+ </div>
+ 
+ <div id="banner" class="wrapper">
+<div id="kinMaxShow" style="display:none;"> {foreach name=slidepics item=slidepic from=$global.slidepics}
       <div> <a href="{$slidepic.link}" target="_blank"><img src="{$slidepic.image}" alt="{$slidepic.title}"  /></a></div>
-      {/foreach} </div>
-  </div></div>
-
- 
- 
+      {/foreach} </div>   
+ </div>
 
 
 

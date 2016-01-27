@@ -1,8 +1,9 @@
-<div id="footer" style="border-top:solid 1px #CCC; margin-top:10px; padding:10px 0">
-<div class=" wrapper clearfix">
-      <div class="cty">{$footprint}</div>
-      <div class="links">
-        <form name="form1" id="form1">
+<div id="footer" class="clearfix">
+ <div id="footer_logo"><img src="{$site_url}images/footer_logo.png" /></div>
+ <div class="copyright">{$footprint}
+ </div>
+    <div id="footer_links">
+      <form name="form1" id="form1">
           <select name="menu1" onchange="MM_jumpMenu('parent',this,0)">
           {foreach name=friend item=friend from=$global.links}
 <option>{$friend.title}</option>
@@ -11,8 +12,9 @@
           </select>
         </form>
       </div>
-    </div>
-</div>
+ </div>
+
+
 
 
 {$footscript}
