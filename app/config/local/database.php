@@ -54,7 +54,7 @@ return array(
 
 		'mysql' => array(
 			'driver'    => 'mysql',
-			'host'      => '59.56.69.154',
+			'host'      => '182.61.21.188',
 			'database'  => 'unify',
 			'username'  => 'admin',
 			'password'  => 'admin12t',
