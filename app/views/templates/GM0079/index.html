@@ -1,44 +1,36 @@
 <!DOCTYPE html>
-<html manifest="huancun.manifest">
-<head>
-      <script type="text/javascript">
-      // 跳转PC页面
-      {if $site_another_url}
-          if (!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
-              location.href = '{$site_another_url}';
-          }
-      {/if}
-      </script>
-      <!-- 实时预览调试代码，模板开发完成后删除 -->
-      
-      <meta name="x5-orientation" content="portrait">
-      <meta name="keywords" content="{$keywords}" />
-      <meta name="description" content="{$description}" />
-      <link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
-
-      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-      <meta name="viewport" content="width=device-width,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no,minimal-ui">
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-      <meta content="telephone=no, email=no" name="format-detection">
-      <!-- 启用360浏览器的极速模式(webkit) -->
-      <meta name="renderer" content="webkit">
-      <!-- 避免IE使用兼容模式 -->
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
-      <meta name="HandheldFriendly" content="true">
-      <!-- 微软的老式浏览器 -->
-      <meta name="MobileOptimized" content="320">
-      <!-- uc强制竖屏 -->
-      <meta name="screen-orientation" content="portrait">
-      <!-- QQ强制竖屏 -->
-      <meta name="x5-orientation" content="portrait">
-      <title>{$title}</title>
+<html>
+	<head>
+		<!-- 实时预览调试代码，模板开发完成后删除 -->
+		
+		<!-- 调试代码 End -->
+		<script type="text/javascript">
+		// 跳转PC页面
+		{if $site_another_url}
+			if (!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+				location.href = '{$site_another_url}';
+			}
+		{/if}
+		</script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,minimum-scale=1.0, maximum-scale=1.5,user-scalable=no,minimal-ui">
+<meta name="keywords" content="{$keywords}" />
+<meta name="description" content="{$description}" />        
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta content="telephone=no, email=no" name="format-detection">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="HandheldFriendly" content="true">
+<meta name="MobileOptimized" content="320">
+<meta name="screen-orientation" content="portrait">
+<meta name="x5-orientation" content="portrait">
+<title>{$title}</title>
 <link rel="stylesheet" href="{$site_url}css/reset.css" /> 
 <link rel="stylesheet" href="{$site_url}css/public.css" /> 
 <link href="{$site_url}css/css.css" rel="stylesheet" type="text/css" />
+<link href="{$site_url}css/animate.css" rel="stylesheet" type="text/css" />
 <link href="{$site_url}css/swipe.css" rel="stylesheet" type="text/css" />
-<link href="{$site_url}css/iconfont.css" rel="stylesheet" type="text/css" />
 <script src="{$site_url}js/TouchSlide.1.1.js"></script>
 <script type="text/javascript" src="{$site_url}js/jquery.min.js"></script>
 <script type="text/javascript" src="{$site_url}js/function.js"></script>
@@ -51,168 +43,37 @@
    setTimeout(function(){ window.scrollTo(0, 1); }, 100);
 });//safari浏览器可以通过此代码来隐藏地址栏
 </script>
-{$headscript}
+	{$headscript}
 </head>
 <body>
-    <!-- index-search -->
-    <div class="search-wrap">
-      <div class="search-head">
-        
-       <h2>搜索</h2>
-       <span id="search-back">返回</span>
-      </div>
-      <div class="search-inner">
 
-        <div class="search-con">
-          <form action="{$search_action}" method="GET" class="search">
-            <input type="text" class="search-inp" name="s" value="请输入搜索关键字" />
-            <button type="submit" class="search-btn"><i class="iconfont">&#xe741;</i></button>
-          </form>
-        </div>
-      </div>
+        <div class="index-wrap">
+          <div class="wrap-bg">
+           {include file="./_header.html"} 
+           <div class="topxzb"></div>
+           <div class="baner">
+	<div id="slideBox" class="slideBox">
+    <div class="hd">
+            <ul></ul>
+              </div>
+	<div class="bd">
+		<ul>
+                {foreach name=slidepics item=slidepic from=$global.slidepics}
+                    <li><a class="pic" href="{$slidepic.link}"><img src="{$slidepic.image}" alt="{$slidepic.title}" /></a></li>
+                {/foreach}                
+		</ul>
+	</div>
     </div>
-      
-
-      <div class="index-wrap">
-          <header>
-               <div class="header">
-            	     <div class="logo"><img src="{$logo}" width="100%"></div>
-                   <i class="hicon1 iconfont" id="search">&#xe741;</i>
-                   <i class="hicon2 iconfont" id="quickbar-showcats">&#xe603;</i>
-               </div>
-          </header>
-          <div class="index-cont">
-             <div class="col">
-              
             
-                   <div id="slideBox" class="slideBox">
-                      <a href="javascript:void(0);" class="slide_left"></a>
-                      <a href="javascript:void(0);" class="slide_right"></a>
-                      <div class="hd">
-                       <span class="next"></span>
-                       <ul style="display:none"></ul>
-                       <span class="prev"></span>
-                      </div>
-                      <div class="bd">
-                          <ul>
-                          {foreach name=slidepics item=slidepic from=$global.slidepics}
-                            <li><a class="pic" href="{$slidepic.link}"><img src="{$slidepic.image}"/></a></li> 
-                          {/foreach}                              
-
-                          </ul>
-                      </div>
-                  
-                   </div>
-            
-                  {foreach item=mIndexCat from=$mIndexCats}
-                  {if $mIndexCat.type eq 2}
-                     <div class="pro">
-                       <a href="{$mIndexCat.link}">
-                         <img src="{$mIndexCat.image}" alt="">
-                         <h2>{$mIndexCat.name}</h2>
-                       </a>
-                     </div>                 
-                  
-                  {/if}
-                  {/foreach}
-
-                </div>
-
-
-             </div>
-
-
-                  {foreach item=mIndexCat from=$mIndexCats}
-                  {if $mIndexCat.type eq 4}
-                  <!-- 如果栏目类型是内容单页，输出此HTML代码块 -->
-
-
-                   <div class="about">
-                     <a class="about-col" href="{$mIndexCat.link}">
-                       <div class="about-img">
-                         <img src="{$mIndexCat.image}" alt="">
-                       </div>
-                       <div class="index-tit about-tit">
-                         <h2>{$mIndexCat.name}</h2>
-                          <span>{$mIndexCat.en_name}</span>
-                       </div>
-
-
-                     </a>
-                     <div class="about-desc">
-                       <span>
-                        {$mIndexCat.description}
-                       </span>
-                     </div>
-                   </div>
-
-                {/if}
-                {/foreach}
-
-                  {foreach item=mIndexCat from=$mIndexCats}
-                  {if $mIndexCat.type eq 1}
-                  <!-- 如果栏目类型是文字列表，输出此HTML代码块 -->
-                  {if $mIndexCat.showtype eq 1}
-                     <div class="col01">
-                       <a class="index-tit news-tit">
-                           <h2>{$mIndexCat.name}</h2>
-                           <span>{$mIndexCat.en_name}</span>                    
-                       </a>
-                       <ul class="news">
-                        {$limit = 4}
-                         {foreach item=list from=$mIndexCat.data}
-                         <li><a href="{$list.link}">{$list.title}</a></li>
-                         {if $list@index+1 gte $limit}{break}{/if}
-                         {/foreach}
-                       </ul>
-                     </div>
-
-                  {/if}
-                  {/if}
-                  {/foreach}
-
-
-             <div class="col01">
-
-                  {foreach item=mIndexCat from=$mIndexCats}
-
-                                
-                  {if $mIndexCat.type eq 2}
-                  {if $mIndexCat.showtype eq 1}
-                {foreach item=article from=$mIndexCat.data}
-                   <div class="case">
-                     <a href="{$mIndexCat.link}">
-                       <div class="case-img"><img src="{$mIndexCats[0].image}" alt=""></div>
-                       <div class="index-tit case-tit">
-                         <h2>{$mIndexCat.name}</h2>
-                          <span>{$mIndexCat.en_name}</span>                      
-                       </div>
-                     </a>
-                   </div>
-                     {if $article@index+1 == 1}{break}{/if} 
-                        {/foreach} 
-                  {/if}
-                  {/if}
-                  {/foreach}
-
-   
-                  {foreach item=mIndexCat from=$mIndexCats}             
-                  {if $mIndexCat.type eq 5}
-
-
-                  <!-- 如果栏目类型是内容单页，输出此HTML代码块 -->
-                   <a class="index-tit serve" href="{$mIndexCat.link}">
-                       <h2>{$mIndexCat.name}</h2>
-                       <span>{$mIndexCat.en_name}</span>                     
-                   </a>
-                  {/if}
-                  {/foreach}
-                </div>
-
-
-           {include file='./_footer.html'}    
+   </div>  
+           
+           
+         </div>   
+          
         
+        {$footscript}              
         </div>
+
 
 </body>
 </html>

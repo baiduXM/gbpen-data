@@ -13,10 +13,13 @@ $(document).ready(function(){
 $(window).load(function(){
 /*美工专属区域*/
 $("#in_image ul li:last").css("margin-right",0)
-
 $("#in_image ul li").height($("#in_image ul li").width())
 $("#in_image ul li .in_proimg").height($("#in_image ul li").width())
 
+
+$("section div.wrapper .in_h1 .circle").each(function (i) {
+        $(this).text(i+1);
+      });
 
 /*美工专属区域*/
 	
