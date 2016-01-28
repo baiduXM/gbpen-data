@@ -18,7 +18,7 @@ function adaption(selector,li_w,li_h){
 		})
 	}
 	/*图文列表图片自适应*/
-   adaption(".list_imagetext ul li",150,110)
+   adaption(".list_imagetext ul li",110,110)
 	}
 
 $(document).ready(function() {

@@ -1,53 +1,33 @@
-     <div class="header">
-         <div class="public">
-            <div class="logo"><a href="{$site_url}"><img src="{$logo}"></a></div>
-            <div class="home">
-                 <span>
-                     <a href="{$site_url}">设为首页</a> |
-                     <a href="{$site_url}">加入收藏</a>
-                 </span>
-                 <form action="{$search_action}" method="GET" class="search">
-                        <input class="searchbox" type="text" value="请输入关键字" />
-                        <input class="searchbtn" type="submit" value="" />
-                 </form>
-            </div>                     
-         </div>
-     </div>
-
-     <div class="menu">
-        <ul class="nav">
-            <li class="nLi" style="width:{100/(($navs|count)+1)}%"><a href="{$site_url}">网站首页</a></li>
-            {foreach name=navs item=nav from=$navs}
-            <li class="{if $nav.current} current{/if} nLi" style="width:{100/(($navs|count)+1)}%">
-                <a href="{$nav.link}">{$nav.name}</a>
-                {if $nav.childmenu}
-                    <ul class="subnav">
-                        {foreach key=key item=nav_list from=$nav.childmenu}
-                        <li><a href="{$nav_list.link}">{$nav_list.name}</a></li>
-                        <li>|</li>
-                        {/foreach}
-                    </ul>
-                {/if}
-            </li>
-            {/foreach}
-        </ul>
-
-     </div>        
-     <div class="banner">
-
-          <div class="focusBox" style="margin:0 auto">
-              <ul class="pic">
-                        {foreach name=slidepics item=slidepic from=$global.slidepics}
-                              <li><a href="{$slidepic.link}" target="_blank"><img src="{$slidepic.image}" alt="{$slidepic.title}" /></a></li>       
-                        {/foreach}
-                      
-              </ul>
-              <ul class="hd">
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul>
-          </div>
-
-     {100/(($navs|count)+1)}
-     </div>
+<header class="public-bg1">
+      	<div class="logo1"><img src="{$logo}" width="100%"></div>
+        <div class="menu public-bg2">
+            	<div class="nav">
+            	<a class="arrow-left" href="#">&lt;</a> 
+   				 <a class="arrow-right" href="#">&gt;</a>
+               <div class="swiper-nav swiper-container">
+                  <div class="swiper-wrapper">
+                      <div class="swiper-slide"><span><a href="{$site_url}">网站首页</a></span></div>
+					  {foreach name=key item=nav from=$navs}
+                      <div class="swiper-slide"><span><a href="{$nav.link}">{$nav.name}</a></span></div>
+                      {/foreach}
+                  </div>
+				</div>
+                </div></div>
+            <div class="baner">
+	<div id="slideBox" class="slideBox1">
+    <div class="hd">
+            <ul></ul>
+      </div>
+      <span class="next">&gt;</span>
+      <span class="prev">&lt;</span>
+	<div class="bd">
+		<ul>
+			{foreach name=slidepics item=slidepic from=$global.slidepics}
+			<li><a class="pic" href="{$slidepic.link}"><img src="{$slidepic.image}" /></a></li>
+			{/foreach}
+		</ul>
+	</div>
+			</div>
+			
+   </div>    
+    </header>
