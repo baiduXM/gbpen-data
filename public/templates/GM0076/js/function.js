@@ -20,9 +20,6 @@ var m=$(".menulist .swiper-nav span").height()+"px"
 $(".menulist .swiper-nav span a").css({"line-height":m})
 
 $(".in_image1 .inner").height($(".in_image1 .inner").width())
-$(".in_image1 ul li ").height(($(".in_image1 .inner").height())*0.5)
-
-
 
 /*美工专属区域*/
 	
