@@ -16,6 +16,7 @@ a{ color:#666}
 header{ position:relative}
 .header{ width:100%; height: auto; overflow:hidden; position: absolute; top:0px;  z-index:100;background:url(../images/header_bg.png) no-repeat; background-size:100% auto;}
 .logo{width:26%; height: auto; overflow:hidden; background:url(../images/logo_bg.png) no-repeat;background-size:100% auto; margin-left:40px;}
+ .logo img{ margin-top:8%}
 .header_menu{width:13%; font-size:25px; position:absolute; right:0px; top:20px; z-index:1000 }
 .header_menu img{ width:50%;}
 

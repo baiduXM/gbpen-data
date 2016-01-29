@@ -75,21 +75,21 @@
 
 .in_image1{ background:url(../images/pro_bg.png) no-repeat; background-size:cover;padding-bottom:30%}
 .in_image1 .inner{ width:70%; margin:auto; background:red; border-radius:50%; overflow:hidden}
-.in_image1 ul li{ height:50%;background:#0158b5;}
+.in_image1 ul li{height:100%;background:#0158b5; overflow:hidden}
 .in_image1 ul li .in_title{ width:50%; float:left; background:#0158b5; }
-.in_image1 ul li .in_title .ch{ font-size:24px; color:#fff; margin-top:50%; text-align:center; width:50%; margin-left:30% }
+.in_image1 ul li .in_title .ch{ font-size:24px; color:#fff; margin-top:50%; text-align:center;  margin-left:20%; font-size:14px; width:80%; height:50px; line-height:25px;overflow:hidden }
 .in_image1 ul li .in_title .en{ font-size:18px; color:#fff; text-transform:uppercase;text-align:center}
 
 .in_image1 ul li:nth-child(even) .in_title{ width:50%; float:right; background:#0158b5; }
-.in_image1 ul li:nth-child(even) .in_title .ch{ font-size:24px; color:#fff; margin-top:30%; text-align:center; margin-left:15%}
+.in_image1 ul li:nth-child(even) .in_title .ch{ font-size:24px; color:#fff; margin-top:30%; text-align:center; margin-left:2%}
 .in_image1 ul li:nth-child(even) .in_title .en{ font-size:18px; color:#fff; text-transform:uppercase;text-align:center}
 .in_image1 ul li:nth-child(even) .pic{ width:50%; float:left;}
 
 
 
 
-.in_image1 ul li .pic{ width:50%; float:left;}
-
+.in_image1 ul li .pic{ width:50%; float:left; height:100%;}
+.in_image1 ul li .pic img{ width:100%; }
 
 @media screen and (min-width: 320px) and (max-width: 480px){
 	

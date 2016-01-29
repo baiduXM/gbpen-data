@@ -12,6 +12,7 @@ $(document).ready(function(){
 				
 $(window).load(function(){
 /*美工专属区域*/
+
 var ww=$(".in_h2 .in_zh").height()+$(".in_h2 .in_en").height();
 $("#in_image ul li:last").css("margin-right",0)
 
@@ -21,8 +22,8 @@ var m=$(".menulist .swiper-nav span .pic").height()+$(".menulist .swiper-nav spa
 $(".menulist .swiper-nav span").height(m)
 
 $(".menulist .navlist,.swiper-wrapper,.swiper-slide").height($(".menulist .swiper-nav span").height())
-
-var m=$(".menulist .swiper-nav span .pic").height()*0.3
+$(".menulist .swiper-nav span .iconfont").css({"font-size":"25px"})
+var m=$(".menulist .swiper-nav span .pic").height()*0.2
 $(".menulist .swiper-nav span .pic").css({"padding-top":m})
 
 var m1=$(".menulist .swiper-nav span .pic").height()-m
@@ -34,8 +35,8 @@ $("#baner").css({"padding-top":n})
 
 
 
-/*var m=$(".menulist .swiper-nav span .pic").height()*0.5
-$(".menulist .swiper-nav span .pic .iconfont").css({"margin-top":m})*/
+
+
 
 
 $("#in_text .inner .line").height($("#in_text .inner ul").height()-15+"px")
