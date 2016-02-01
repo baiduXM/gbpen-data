@@ -73,8 +73,6 @@
                                          <div class="photos-content {if $index.pro.data|count>4} enable{/if}" >
                                             <ul>           
  {foreach name=pro item=pro from=$index.pro.data}
- <li><a href="{$pro.link}"><img src="images/banner.jpg"/></a></li>
- <li><a href="{$pro.link}"><img src="images/2.jpg"/></a></li>
  <li><a href="{$pro.link}"><img src="{$pro.image}" /></a></li>
 {/foreach}
                                               </ul>

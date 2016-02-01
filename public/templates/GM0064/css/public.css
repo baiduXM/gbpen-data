@@ -21,8 +21,11 @@ body{position: relative;font: 0.9rem/1.8rem "微软雅黑";margin: 0 auto;overfl
 	.hd_icon{position: absolute;left: 1.5rem;top:0; height: 100%;}
 	header{width: 100%;height:auto;overflow: hidden;background: #F6F1DF;position: relative;}
 	.hd_icon .icon{font-size: 2.5rem;color: #3f3e3d;}
-	.logo{width: 50%;margin: 0 auto;}
-	.logo img{display: block; width: 100%;}
+	.logo{width: 50%;margin: 0 auto;padding: 12px 0;height: 75px;overflow: hidden;text-align: center;}
+	.logo img{
+    height: 100%;
+    max-width: 100%;
+}
 	.ss{position: absolute;right: 5%;top:50%; height: 33px;margin-top: -15.5px}
 	.ss a{display: block;}
 	.ss  .icon{font-size: 1.8rem;color: #3f3e3d; line-height: 24px !important}
@@ -190,3 +193,5 @@ body{position: relative;font: 0.9rem/1.8rem "微软雅黑";margin: 0 auto;overfl
 	.search_art li{display: inline; float: left;  width:22%;padding: 1rem 1.5% 0 1.5%; }
 	.search_art li a{ background: #e6e3d1; display: block;text-align: center;color: #5f5e5b;height:2rem; line-height: 2rem; overflow: hidden;}
 /*搜索end*/
+
+#quickbar-navs ul.quickbar-navs-list li a{height: 35px;}

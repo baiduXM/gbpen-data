@@ -85,7 +85,7 @@
 		 	<div class="article">
 				<ul class='news_ls'>
 				 {foreach item=article from=$list.data}
-					<li><a href="{$article.link}"><span class='fr'>({$article.pubdatestamp|date_format:"%y "}/{$article.pubdatestamp|date_format:"%m "}/{$article.pubdatestamp|date_format:"%d "})</span>{$article.title}</a></li>
+					<li><a href="{$article.link}"><span class='fr'>(<span>{$article.pubdatestamp|date_format:"%Y/%m/%d"}</span>)</span>{$article.title}</a></li>
 				{/foreach} 	
 				</ul>
 					<div class="munber">

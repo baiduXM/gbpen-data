@@ -54,29 +54,40 @@
 <section class="wrapper">
 	<div class="contant">
 		 {include file="./_header.html"} 
-		 <div class="banner swiper-container">
-	        <ul class="swiper-wrapper">
-	            {foreach name=slidepics item=slidepic from=$global.slidepics}
-	            <li class="swiper-slide"><a href="{$slidepic.link}"></a><img src="{$slidepic.image}" alt="{$slidepic.title}"></li>
+		 <div class="wrap">
+			 <div class="banner swiper-container">
+		        <ul class="swiper-wrapper">
+		            {foreach name=slidepics item=slidepic from=$global.slidepics}
+		            <li class="swiper-slide"><a href="{$slidepic.link}"></a><img src="{$slidepic.image}" alt="{$slidepic.title}"></li>
 
-	            {/foreach}
-	        </ul>
-        <!-- Add Pagination -->
-        <div class="swiper-pagination"></div>
-    	</div>
-	    <nav>
-	    	<ul class="mune">
-	    		 {foreach item=nav from=$navs}
-	    		<li><a href="{$nav.link}">{$nav.name}</a></li>
-	    		 {if $nav@index+1 == 6}{break}{/if}
-	    		 {/foreach}
-	    	</ul>
-	    </nav>
-	    <footer>
-	     <div class="footer">
-	    	{$footprint} 
+		            {/foreach}
+		        </ul>
+	        <!-- Add Pagination -->
+	        <div class="swiper-pagination"></div>
+	    	</div>
+		    <nav>
+		    	<ul class="mune">
+		    		 {foreach item=nav from=$navs}
+		    		<li><a href="{$nav.link}">{$nav.name}</a></li>
+		    		 {if $nav@index+1 == 6}{break}{/if}
+		    		 {/foreach}
+		    	</ul>
+		    </nav>
+		    <footer>
+		     <div class="footer">
+		    	{$footprint} 
+		    </div>
+		    </footer> 
 	    </div>
-	    </footer> 
+	    <div class="search_page">
+		 	<h3 class="title">
+			 	<span class="title_a go fl">返回</span>
+			 	<i>搜索</i>
+		 	</h3>
+		 	<div class="article">
+					<form class='search' action="{$search_action}" method="GET" ><input type="text" name="s" value="" class='text_01 fl' placeholder='请输入需要查询名称'><input name="" type="submit" class='submit_01' value="GO"></form>
+		 	</div>	
+		 </div>
 	</div>
 	
 	
