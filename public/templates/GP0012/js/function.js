@@ -18,12 +18,17 @@ function adaption(selector,li_w,li_h){
 		})
 	}
 	/*图文列表图片自适应*/
-   adaption(".list_imagetext ul li",110,110)
+   adaption(".list_imagetext ul li",100,100)
 	}
 
 $(document).ready(function() {
 /*侧边栏*/
+	$(".bd li").each(function(){
+	if($(this).find("img").width() > 580){
+        $(this).find("img").width("99%");
+}
 
+		})
 		$(".listbg li a").click(function () {
         $(this).parent().siblings().find(".second").slideUp()
         $(this).siblings(".second").slideToggle()
