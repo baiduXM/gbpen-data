@@ -15,12 +15,17 @@ function adaption(selector,li_w,li_h){
 		})
 	}
 
-/*图文列表图片自适应*/
-   adaption(".list_imagetext ul li",110,110)
+
 /*其他图片自适应*/
  adaption("#product ul li",115,115)
  
- 
+ $(".list_imagetext ul li").each(
+ function(){
+	 var wid1=$(this).find(".img_box img").width();
+	 var wid2=$(this).width();
+	 $(this).find(".text_box").width(wid2-wid1-10)
+	 }
+ )
    
 /*	 $(".yc ul li").each(function(){
 		 var ww=$(this).find("img").width();

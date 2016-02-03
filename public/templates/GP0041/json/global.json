@@ -1,28 +1,24 @@
 {
-	"left2": {
-		"value": {
-			"title": "XXX企业",
-			"image": "images/fuw_34.png",
-			"link": "http://www.baidu.com/"
-		},
-		"description": "侧边第二个导航",
-		"type": "image",
+	"slidepicss": {
+		"value": [{
+			"title": "banner",
+			"image": "images/banner.jpg",
+			"link": "#",
+			"description": "banner1"
+		}, {
+			"title": "测试图2",
+			"image": "images/banner2.jpg",
+			"link": "#"
+		},{
+			"title": "测试图3",
+			"image": "images/banner.jpg",
+			"link": "#"
+		}],
+		"description": "内页多图轮播",
+		"type": "images",
 		"config": {
-			"width": 211,
-			"height": 79
+			"width":1680,
+			"height": 484
 		}
-	},
-		"left3": {
-		"value": {
-			"title": "XXX企业",
-			"image": "images/hez_37.png",
-			"link": "http://www.baidu.com/"
-		},
-		"description": "侧边第三个导航",
-		"type": "image",
-		"config": {
-			"width": 211,
-			"height": 79
-		}
-	}
+	}	
 }

@@ -41,18 +41,17 @@ strong{display: block;margin: 0 auto;overflow: hidden;text-overflow: ellipsis;wh
 .list_imagetext ul li .img_box {
 	position:relative;
 	
-	margin-right:3%;
-	display: inline-block; 
-	width: 19%; height:110px;
+	margin-right:10px; display: inline-block; 
+	height:110px;
 }
 
 .list_imagetext ul li .img_box img{
 	
-	height: auto;border:solid 1px #999;
+	height: 100%;
 }
 
 .list_imagetext ul li { padding:0 2% 15px 0; margin-bottom:20px; border-bottom:dashed 1px #ccc; }
-.list_imagetext ul li .text_box{ display: inline-block; width:77%;vertical-align:top;}
+.list_imagetext ul li .text_box{ display: inline-block;vertical-align:top;}
 /*.list_imagetext ul li .img_box{ float:left; }
 .list_imagetext ul li .img_box img{ padding:2px; border:solid 1px #CCC}*/
 .list_imagetext ul li .text_box .text_title{ border-bottom:dashed 1px #CCC; padding:5px}

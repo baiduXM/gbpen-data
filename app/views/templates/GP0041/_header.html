@@ -1,55 +1,32 @@
-<header>
-<section>
-<div class="head_outsild">
-      <div class="head">
-          <a href="{$site_url}" title="返回首页" class="logo"><img src="{$logo}" height="116" width="438" /></a>
-          <form action="{$search_action}" method="GET" class="ss"> 
-              <span>全网搜索</span> 
-              <input type="text" placeholder="请输入关键词" class="input_case" name="s">
-              <input type="submit" value="" class="input_key">
-          </form>
-      </div>
-</div>    
-</section>
-<section>
-    <div class="header_menu">   
-       <ul class="nav">
-	  <h3><a href="{$site_url}" class="current">网站首页</a></h3>
-      {foreach item=nav from=$navs}
-      <li class="nLi {if $nav.current}current{/if}">
-       <h3><a href="{$nav.link}" class="">{$nav.name}</a></h3>
-      
-        {if $nav.childmenu}
-          <ul class="sub">
-
-            {foreach item=nav_list from=$nav.childmenu}
-            <li class="{if $nav_list.current}current{/if}"><a href="{$nav_list.link}">{$nav_list.name}</a></li>
-            {/foreach}
-          </ul>
-        {/if}
-      </li>
-      {/foreach}
-    </ul>
+<div class="top">
+    <div class="logo"><a href="{$site_url}"><img src="{$logo}"></a></div>
+    <div class="public search">
+        <form action="{$search_action}" method="GET">
+            <input type="text"  value="请输入关键字" class="txta"  id="searchkey" />
+            <input type="submit" class="bta" />
+        </form>
     </div>
-</section>
- <section>
-
-    <div id="slideBox" class="slideBox">
-
-       <div class="bd">
-        <ul>
-                     {foreach item=slidepic from=$_header.slidepics}
-                              <li><a href="{$slidepic.link}" target="_blank"><img src="{$slidepic.image}" alt="{$slidepic.title}" height="311" width="979"/></a></li>
-                     {/foreach}
-                </ul>
-      </div>
-
-
-      <!-- 下面是前/后按钮代码，如果不需要删除即可 -->
-      <a class="prev" href="javascript:void(0)"></a>
-      <a class="next" href="javascript:void(0)"></a>
-
+    <div class="menu">
+        <ul id="nav" class="nav clearfix">
+        {$litmit = 8}
+            {if $navs|count lt $litmit}{$litmit = $navs|count}{/if}
+            <li class="nLi" style="width:{100/($litmit+1)-1}%">
+                <h3><a href="{$site_url}">首页</a></h3>
+            </li>
+             {foreach name=navs item=nav from=$navs}
+            <li  class="fl {if $nav.current}current{/if} nLi" style="width:{100/($litmit+1)}%">
+                <h3><a href="{$nav.link}">{$nav.name}</a></h3>
+                {if $nav.childmenu}
+                     <ul class="sub clearfix">
+                        {foreach key=key item=nav_list from=$nav.childmenu}
+                             <li class="{if $nav.current}current{/if}"><a href="{$nav_list.link}">{$nav_list.name}</a></li>
+                         {/foreach}                         
+                    </ul>
+                {/if}
+             </li>
+            {if $nav@index+1 gte $litmit}{break}{/if}
+             {/foreach}
+        </ul>
     </div>
-
-    </section>
-</header>
+</div>
+            

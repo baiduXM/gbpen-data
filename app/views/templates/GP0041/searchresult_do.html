@@ -40,19 +40,32 @@
     <div class="right_title"><span>当前位置：<a href="{$site_url}">首页</a>
     {foreach item=nav from=$posnavs}
     &gt; <a href="{$nav.link}">{$nav.name}</a>
-    {/foreach}</span><b>{$article.category.name}</b></div>                    
+    {/foreach}</span><b>{$list.name}</b></div>                    
     <div class="deteo">
-      <div class="main_right_con">
-        <h1 class="inner_news_tit">{$article.title}</h1>
-        <h2 class="inner_news_time"> 发布日期：{$article.pubdate} <a href="javascript:window.history.back()">【返回】</a></h2>
-        <div class="edit">{$article.content|unescape:"html"}</div>
-        <div class="share" style="float:right;">
-          {shareExt shareText=$article.content|unescape:"html"|strip_tags|truncate:140:"…" sharePic=$article.image}
-        </div>
-        <ul class="inner_pages">
-          <li><a href="{$article.prev.link}">上一篇：{$article.prev.title}</a></li>
-          <li><a href="{$article.next.link}">下一篇：{$article.next.title}</a></li>
-        </ul>
+      <div class="news_deta5">
+        {if $search.total eq 0}
+          <p class="search_res">以下是您输入的关键字<span>“{$search.keyword}”</span>，搜索的结果有<span>{$search.total}</span>条。</p>
+          {else}
+          <ul class="resultbox">
+              <p class="search_res">以下是您输入的关键字<span>“{$search.keyword}”</span>，搜索的结果有<span>{$search.total}</span>条。</p>
+              {foreach item=article from=$search.data}<!--search_content_start-->
+                <li>
+                  <div class="right_newsb">
+                    <div class="nlist_a">
+                      <a href="{$search.data[0].category.link}">
+                        <span class="date">
+                          <time class="right" datetime="search_$pubdate" pubdate="pubdate">{$article.pubtimestamp|date_format:'%Y-%m-%d'}</time>
+                        </span>
+                        search_$title
+                      </a>
+                    </div>
+                  </div>
+                </li>            
+              
+              <!--search_content_end-->{/foreach}
+          </ul>
+        {include file='./_paging.html'}
+        {/if}
       </div>
     </div>
   </div>
