@@ -1,33 +1,63 @@
 window.onload=function(){
-		 $(".yc ul li").each(function(){
+		 $(".list_imagetext ul li").each(
+ function(){
+	 var wid1=$(this).find(".img_box img").width();
+	 var wid2=$(this).width();
+	 $(this).find(".text_box").width(wid2-wid1-10)
+	 }
+ )
+	var w=0;
+	var n=$("#sw .inner ul").children().length;
+	for(var i=0;i<n-1;i++){
+	  var w1=$("#sw .inner ul li").eq(i).find("img").height()
+	  var w2=$("#sw .inner ul li").eq(i+1).find("img").height()
+	
+		 if(w1>w2){
+			 w=w1;
+			 }
+			 else{w=w2}
+				
+		}	 
+		$("#sw .inner ul li .inpro_img").height(w+16)
+		$("#sw .inner ul li").each(function(i){
+			if($("#sw .inner ul li img").eq(i).height()<w){
+				$(this).find("img").css("margin-top",w-$(this).find("img").height())
+				}
+			})
+	$("#container .bg").each(function(n){
+
+			if((n+1)%4==0){
+			$(this).addClass("bg1");
+			   }
+			
+		  if((n+1)%2==0&&(n+1)%4!=0){
+			$(this).addClass("bg2");
+			   }
+					   })
+	 $(".yc ul li").each(function(){
 		 var ww=$(this).find("img").width();
    $(this).find("p").width(ww);
   });
-
+$(".bg2").wrapInner('<div class="bg2_1"></div>')
+$(".bg2_1").wrapInner('<div class="bg2_2"></div>')
+$(".bg1").wrapInner('<div class="bg1_1"></div>')
+$(".bg1_1").wrapInner('<div class="bg1_2"></div>')
 
 $("#pro .inner ul li").each(function(){
   var hh1=280-$(this).find("img").height();
   	$(this).find("img").css("margin-top",hh1*0.5+"px")
 
 })
-
-
-$("#case .inner .slideBox .bd ul li").each(function(i){
-	var xx=$("#case .inner .slideBox .bd ul li").eq(i).height()												
-  var hh1=(200-xx)*0.5;
-  	$(this).find("img").css("margin-top",hh1+"px")
+$("#case .inner ul li").each(function(){
+  var hh1=200-$(this).find("img").height();
+  	$(this).find("img").css("margin-top",hh1*0.5+"px")
 
 })
 }
 
 $(document).ready(function() {
 
-	$(".bd li").each(function(i){
-	if($(".bd li").eq(i).find("img").width() > 640){
-        $(this).find("img").width("99%");
-}
 
-		})
 
 	
 /*侧边栏*/
@@ -73,14 +103,28 @@ $(document).ready(function() {
 
 /*大图 100%*/	
 	$("#kinMaxShow").kinMaxShow({
-            height: 420,
+            height: 560,
             button: {
                 showIndex: false,
                 normal: { background: 'url(images/button.png) no-repeat -14px 0', marginRight: '8px', border: '0', right: '48%', bottom: '20px' },
                 focus: { background: 'url(images/button.png) no-repeat 0 0', border: '0' }
             }
         });
-	jQuery(".slideBox").slide({mainCell:".bd ul",autoPlay:true});
-
+		$("#kinMaxShow1").kinMaxShow({
+            height: 380,
+            button: {
+                showIndex: false,
+                normal: { background: 'url(images/button.png) no-repeat -14px 0', marginRight: '8px', border: '0', right: '48%', bottom: '20px' },
+                focus: { background: 'url(images/button.png) no-repeat 0 0', border: '0' }
+            }
+        });
+		
+		$('#prizes .photos-content.enable').jCarouselLite({
+			btnPrev: '#prizes a.photos-prev',
+			btnNext: '#prizes a.photos-next',
+			visible: 4,
+			auto: 3000,
+			speed: 1000
+		}).css({visibility:"visible"});
 
 });

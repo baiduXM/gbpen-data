@@ -31,10 +31,8 @@
 {include file='./_aside.html'}
      
           <div class="main fr">
-          
-          
-          
-    <div class="crumb "><span><a href="{$site_url}">首页</a>  {foreach item=nav from=$posnavs}&gt; <a href="{$nav.link}">{$nav.name}</a> {/foreach}</span><h2><img src="{$site_url}images/ico.jpg"  /> <b>{$article.category.name}</b>{$article.category.en_name}</h2></div>
+    <div class="crumb "><span><a href="{$site_url}">首页</a>  {foreach item=nav from=$posnavs}&gt; <a href="{$nav.link}">{$nav.name}</a> {/foreach}</span>
+    <h2>{$article.category.en_name}<br /><b>{$article.category.name}</b></h2></div>
 
           
         <div class="article ">

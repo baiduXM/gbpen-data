@@ -34,22 +34,22 @@ strong{display: block;margin: 0 auto;overflow: hidden;text-overflow: ellipsis;wh
 .list_image ul li img{ display:block; padding:2px; border:solid 1px #ccc; }
 */
 
-.list_text ul li{ border-bottom:dashed 1px #ccc; height:30px; line-height:30px; background:url(../images/ico1.png) no-repeat 12px 10px; background-size:auto 40%; padding:0 10px 0 30px;}
+.list_text ul li{ border-bottom:dashed 1px #ccc; height:30px; line-height:30px; background:url(../images/95.gif) no-repeat 12px 10px; background-size:auto 40%; padding:0 10px 0 30px;}
 .list_text ul li span{ float:right; }
 
 
 .list_imagetext ul li .img_box {
 	position:relative;
-	overflow:hidden;
-	margin-right:3%;
-	display: inline-block; border:solid 1px #999;
-	width: 19%; 
+	
+	margin-right:10px; display: inline-block; 
+	height:110px;
 }
 
 .list_imagetext ul li .img_box img{
-	width: 100%;
-	height: auto;
+	
+	height: 100%;
 }
+
 
 .list_imagetext ul li { padding:0 2% 15px 0; margin-bottom:20px; border-bottom:dashed 1px #ccc; }
 .list_imagetext ul li .text_box{ display: inline-block; width:77%;vertical-align:top;}
@@ -99,7 +99,7 @@ h2.inner_news_time span{ float:right; text-align:right; padding-right:10px;}
 .search_res{ height:50px; line-height:50px; color:#4e3012; font-weight:bold; font-size:16px; text-align:center; margin:20px auto;}
 ul.resultbox{ width:100%; height:auto; overflow:hidden;}
 ul.resultbox li{ margin-bottom:10px;  }
-ul.resultbox .nlist_a{padding-left:20px;  border-bottom:none; line-height:30px; height:30px;  border-bottom:dashed 1px #999 ;background:url(../images/ico1.png) no-repeat 12px 10px;background-size:auto 40%; padding:0 10px 0 30px; }
+ul.resultbox .nlist_a{padding-left:20px;  border-bottom:none; line-height:30px; height:30px;  border-bottom:dashed 1px #999 ;background:url(../images/95.gif) no-repeat 12px 10px;background-size:auto 40%; padding:0 10px 0 30px; }
 ul.resultbox .nlist_a span{ float:right}
 ul.resultbox .nlist_a b{ height:30px; line-height:30px; overflow:hidden; display:inline-block; width:600px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
 ul.resultbox  .nlist_word{ padding:7px 0 0 0 }

@@ -29,87 +29,104 @@
 {$headscript}
 </head>
 <body>
-    {include file='./_header.html'}
-<div class="container_bg">
-<div id="container" class="wrapper clearfix">
-<div id="pro">
-<div class="title"><a href="{$index.pro.link}"><span>{$index.pro.en_name}</span><br />{$index.pro.name}</a></div>
+ <div class="header_bg">
+<div id="header" class="wrapper clearfix">
+<div class="logo"><a href="{$site_url}"><img src="images/logo.png" /></a></div>
+<div class="header_inter">
+<div class="top_tel"><b>服务热线：</b>{$contact.telephone}</div>
+<div class="search"><form action="{$search_action}" method="GET">
+  <input type="text" name="s" value="" class="search_area" />
+  <input type="submit" class="search_btn"  value=" "/>
+</form></div>
+
+</div>
+</div>
+</div>
+ 
+ 
+<div class="nav_bg">
+<div id="nav" class="wrapper">
+ <ul class="clearfix">
+            {$limit = 8}
+            {if $navs|count lt $limit}{$limit = $navs|count}{/if}
+            {foreach name=navs item=nav from=$navs}
+            <li class="fl{if $nav.current} current{/if} aa" style="width:{100/($limit)}%">
+                <a href="{$nav.link}">{$nav.name}<br /><span>{$nav.en_name}</span></a>
+                <ul class="sub clearfix">
+                    {if $nav.childmenu} {foreach key=key item=nav_list from=$nav.childmenu}
+                    <li class="{if $nav.current}current{/if} cc"><a href="{$nav_list.link}">{$nav_list.name}</a></li>
+                    {/foreach} {/if}
+                </ul>
+            </li>
+            {if $nav@index+1 eq $limit}{break}{/if}
+            {/foreach}
+        </ul>
+</div>
+</div>
+
+
+<div id="sub_banner"><div id="kinMaxShow" style="display:none;"> {foreach name=slidepics item=slidepic from=$index.slidepics1}
+      <div> <a href="{$slidepic.link}" target="_blank"><img src="{$slidepic.image}" alt="{$slidepic.title}"  /></a></div>
+      {/foreach} </div></div>
+
+
+
+
+<div id="container" class="clearfix">
+
+
+
+<div id="about" class="wrapper bg">
+<div class="title"><span><a href="{$index.about.link}"><img src="{$site_url}images/MO.png" width="97" height="23" /></a></span><h2>{$index.about.name}</h2></div>
 <div class="inner">
-<ul class="clearfix">
- {foreach name=pro item=pro from=$index.pro.data}
-<li>
-<div class="p1">
-<div class="pt"><img src="{$pro.image}"/></div>
-<div class="pz"><a href="{$pro.link}">
-{$pro.title}</a></div>
-</div>
-</li>
- {/foreach}
-</ul>
-
-
+  <div class="in_aboutimg"><img src="{$index.about.image}" width="100%"/> </div><div class="in_text">{$index.about.description}</div></div>
 
 </div>
-</div>
 
 
 
-<div id="news">
-<div class="title"><span><a href="{$index.news.link}"><img src="{$site_url}images/mo3.jpg" width="27" height="12" /></a></span><h2><b>{$index.news.name} </b>{$index.news.en_name}</h2></div>		
+<div class="sw_bg bg">
+<div id="sw" class="wrapper">
+<div class="title"><a href="{$index.pro.link}"><h2><b>{$index.pro.name}</b><br />{$index.pro.en_name}<br /></h2></a></div>
 <div class="inner">
+
+<div id="prizes">
+					                <div class="photos">                        
+                                         <div class="photos-content {if $index.pro.data|count>4} enable{/if}" >
+                                            <ul>           
+{foreach name=pro item=pro from=$index.pro.data}
+<li><a href="{$pro.link}"><img src="{$pro.image}" /><p>{$pro.title}</p></a></li>
+{/foreach}
+                                              </ul>
+                                        </div>                
+                                    </div>
+                                </div>
+
+
+</div>
+</div>
+</div>
+
+
+<div id="news" class="wrapper clearfix bg">
+<div class="title"><a href="{$index.news.link}"><h2><b>{$index.news.name}</b><br />{$index.news.en_name}<br />{$index.news.description}</h2></a></div>
+<div class="inner clearfix">
+<div class=" nb"><img src="{$index.news.image}"  /></div>
+<div class=" nt">
+<h1>{$index.news.data[0].title}</h1>
+<div class="nt_wz">{$index.news.data[0].description}</div>
 <ul>
 {foreach name=news item=news from=$index.news.data}
-<li><span><a href="{$news.link}">{$news.pubdate} </a></span><a href="{$news.link}">{$news.title}</a></li>
- {if $news@index+1 == 5}{break}{/if}
+    {if $news@index+1 gte 1 and $news@index+1 lte 6}
+<li><span>{$news.pubdate}</span><a href="{$news.link}">{$news.title}</a></li>
+  {/if}
 {/foreach}
 </ul>
-
-
 </div>
-
-</div>
-
-
-
-
-<div id="about">
-<div class="title"><span><a href="{$index.about.link}"><img src="{$site_url}images/mo3.jpg"  width="27" height="12" /></a></span><h2><b>{$index.about.name}</b>{$index.about.en_name}</h2></div>		
-<div class="inner">
-  <img src="{$index.about.image}" width="90" height="90" />{$index.about.description}<a href="{$index.about.link}">详细 >></a></div>
-
-</div>
-
-
-
-<div id="case">
-<div class="inner">
-<div id="slideBox" class="slideBox">
-			<div class="hd">
-				<ul><li>1</li><li>2</li><li>3</li></ul>
-			</div>
-			<div class="bd">
-				<ul>
-                 {foreach name=case item=case from=$index.case.data}
-
-					<li><a href="{$case.link}" target="_blank"><img src="{$case.image}" /></a></li>
-                     {if $case@index+1 == 3}{break}{/if}
-      {/foreach}
-				</ul>
-			</div>
-
-			<!-- 下面是前/后按钮代码，如果不需要删除即可 -->
-			<a class="prev" href="javascript:void(0)"></a>
-			<a class="next" href="javascript:void(0)"></a>
-
-		</div>
-
-
 </div>
 </div>
 
 
-
-</div>
 
 
 </div>
