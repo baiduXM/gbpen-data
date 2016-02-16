@@ -1,7 +1,9 @@
-<header>
+
+  <header>
     <div class="header">
-      <div class="logo"><img src="{$logo}" width="100%"></div>
       <div class="baner">
+            <div class="logo"><img src="{$logo}" width="100%"></div>
+            <div class="header_menu" id="header_menu"><a href="#"><img src="{$site_url}icon/6.png" width="100%"></a></div>
         <div id="slideBox" class="slideBox">
           <div class="hd">
             <ul>
@@ -9,25 +11,17 @@
           </div>
           <div class="bd">
             <ul>
-             {foreach name=slidepics item=slidepic from=$global.slidepics}
-              <li><a class="pic" href="{$slidepic.link}"><img src="{$slidepic.image}" title="640*316" /></a></li>
-   {/foreach} 
+            {foreach name=slidepics item=slidepic from=$global.slidepics}
+              <li><a class="pic" href="{$slidepic.link}"><img src="{$slidepic.image}" title="640*200" /></a></li>
+            {/foreach}
+            
             </ul>
           </div>
         </div>
       </div>
-      <div class="menulist">
-        <div class="navlist"> <a class="arrow-left" href="#">&lt;</a> <a class="arrow-right" href="#">&gt;</a>
-          <div class="swiper-nav swiper-container">
-            <div class="swiper-wrapper">
-             
-              {foreach item=nav from=$navs}
-              <div class="swiper-slide"><span><a href="{$nav.link}"><div class="snumber"></div><div class="text">{$nav.name}</div></a></span></div>
-     {/foreach}  
+            <div class="zhongguo"><img src="{$site_url}images/zhonguo-.png"></div>
 
-            </div>
-          </div>
-        </div>
-      </div>
+      <div class="bg"><img src="{$site_url}images/baner_bg.png"></div>
+      
     </div>
   </header>

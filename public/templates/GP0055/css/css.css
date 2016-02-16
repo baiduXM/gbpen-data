@@ -44,11 +44,11 @@ img{ border:none;}
 
 
 #about .title h2{ background:url(../images/about_title.png) top left no-repeat; width:244px; height:59px; font-size:18px;font-family:Microsoft Yahei; color:#fff; padding-top:15px; padding-left:34px; }
-.in_aboutimg{ width:250px; display:inline-block}
-.in_aboutimg img{ display:block}
-.in_text{ display:inline-block; width:800px; vertical-align: top; line-height:30px; height:150px; margin-left:30px;font-size:14px;}
+.in_aboutimg{ height:200px; display:inline-block}
+.in_aboutimg img{ }
+.in_text{ display:inline-block;  vertical-align: top; line-height:30px; height:200px; margin-left:30px;font-size:14px;}
 #about .title span{ float:right; margin-top:35px;}
-#about .inner{ height:257px; margin-top:25px;  line-height:35px; }
+#about .inner{ margin-top:25px; }
 
 
 .sw_bg{ }

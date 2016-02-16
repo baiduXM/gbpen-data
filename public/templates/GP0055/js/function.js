@@ -1,5 +1,9 @@
 window.onload=function(){
-		 $(".list_imagetext ul li").each(
+	 var wid3=$("#about .in_aboutimg img").width();
+	 var wid4=$("#about .inner").width();
+	 $("#about .in_text").width(wid4-wid3-30)
+	 
+$(".list_imagetext ul li").each(
  function(){
 	 var wid1=$(this).find(".img_box img").width();
 	 var wid2=$(this).width();
@@ -58,7 +62,13 @@ $("#case .inner ul li").each(function(){
 $(document).ready(function() {
 
 
+/*产品详细页图片自适应*/
+	$(".bd li").each(function(i){
+	if($(".bd li").eq(i).find("img").width() > 640){
+       $(".bd li").eq(i).find("img").width("99%");
+}
 
+		})
 	
 /*侧边栏*/
 		$(".listbg li a").click(function () {

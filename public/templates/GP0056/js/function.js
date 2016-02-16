@@ -51,7 +51,12 @@ $("#case .inner ul li").each(function(){
 }
 
 $(document).ready(function() {
+	$(".bd li").each(function(i){
+	if($(".bd li").eq(i).find("img").width() > 640){
+       $(".bd li").eq(i).find("img").width("99%");
+}
 
+		})
 function apartNav(selector,middle){
     var navs = $(selector).children().length; 
     var rightNav = Math.ceil(navs/2),

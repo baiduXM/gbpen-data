@@ -31,7 +31,7 @@
 <body>
  <div class="header_bg">
 <div id="header" class="wrapper clearfix">
-<div class="logo"><a href="{$site_url}"><img src="images/logo.png" /></a></div>
+<div class="logo"><a href="{$site_url}"><img src="{$logo}" alt="{$title}"></a></div>
 <div class="header_inter">
 <div class="top_tel"><b>服务热线：</b>{$contact.telephone}</div>
 <div class="search"><form action="{$search_action}" method="GET">
@@ -79,7 +79,7 @@
 <div id="about" class="wrapper bg">
 <div class="title"><span><a href="{$index.about.link}"><img src="{$site_url}images/MO.png" width="97" height="23" /></a></span><h2>{$index.about.name}</h2></div>
 <div class="inner">
-  <div class="in_aboutimg"><img src="{$index.about.image}" width="100%"/> </div><div class="in_text">{$index.about.description}</div></div>
+  <div class="in_aboutimg"><img src="{$index.about.image}" height="100%"/> </div><div class="in_text">{$index.about.description}</div></div>
 
 </div>
 
@@ -111,9 +111,9 @@
 <div id="news" class="wrapper clearfix bg">
 <div class="title"><a href="{$index.news.link}"><h2><b>{$index.news.name}</b><br />{$index.news.en_name}<br />{$index.news.description}</h2></a></div>
 <div class="inner clearfix">
-<div class=" nb"><img src="{$index.news.image}"  /></div>
+<div class=" nb"><a href="{$index.news.data[0].link}"><img src="{$index.news.data[0].image}"  /></a></div>
 <div class=" nt">
-<h1>{$index.news.data[0].title}</h1>
+<h1><a href="{$index.news.data[0].link}">{$index.news.data[0].title}</a></h1>
 <div class="nt_wz">{$index.news.data[0].description}</div>
 <ul>
 {foreach name=news item=news from=$index.news.data}

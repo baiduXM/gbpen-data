@@ -55,12 +55,12 @@
 <div class="body">
 <div class="wrap page-active">
     <div class="index-wrap"> 
-    {include file="./_header.html"} 
+   {include file='./_header.html'}
   <section>
     <div class="boxmaind">
       <div class="boxmain_d">
           <h1 class="boxmain-top">
-        <span class="more3" id="first">分类<span id="down"> ∧</span><span id="up"> ∨ </span></span>
+          <span class="more3" id="first">分类<span id="down"> ∧</span><span id="up"> ∨ </span></span>
          <div class="sub_zh public_color">{$list.name}</div><div class="sub_en public_color">{$list.en_name}</div></h1>
          
      
@@ -69,14 +69,12 @@
           <div class="list_imagetext">
             <ul class="clearfix">
              {foreach name=article item=article from=$list.data}           
-            
-                 
-                  <li class="clearfix">
-                <div class="img_box"><a href="{$article.link}"><img src="images/1.jpg" width="100%" title="120*88" /></a></div>
+              <li class="clearfix">
+                <div class="img_box"><a href="{$article.link}"><img src="{$article.image}" width="100%" title="120*88" /></a></div>
                 <div class="text_box"><a href="{$article.link}">
-                 <div class="text_title">{$article.title}</div>
-                 <div class="text_data">{$article.pubdate}</div>
-                 <div class="text_des">{$article.description}</div></a>
+                 <div class="text_title public_color">{$article.title}</div>
+                 <div class="text_data public_color">{$article.pubdate}</div>
+                 <div class="text_des public_color">{$article.description}</div></a>
                 </div>
                  </li>
                {if $article@index+1 == 10} {break} {/if}

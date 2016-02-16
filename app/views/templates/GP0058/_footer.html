@@ -1,0 +1,40 @@
+<div class="footer_bg1">
+<div class="footer_bg">
+<div id="footer" class="clearfix wrapper" >
+<div  class="cpt">{$footprint}</div>
+
+
+<div class="fr footer-links">
+				<div class="footer-links-p">友情链接</div>
+				
+				<div class="footer-links-box" style="display: none; overflow: hidden; height: 108px; padding-top: 0px; margin-top: 0px; padding-bottom: 0px; margin-bottom: 0px;">
+				{foreach name=friend item=friend from=$global.links}				
+				<p><a target="_blank" href="{$friend.link}">{$friend.title}</a></p>
+                	
+			{/foreach}
+								</div>
+                                
+
+   
+				
+			</div>
+
+</div>
+</div>
+
+</div>
+
+
+{$footscript}
+
+
+
+<!--#*
+{foreach name=navs item=nav from=$navs}
+<a href="{$nav.link}" >{$nav.name}</a> |{/foreach}
+
+<a href="index.html" target="_blank">首页</a> | {foreach name=navs item=nav from=$navs}<a href="{$nav.link}">{$nav.name}</a> | {/foreach}
+
+{$footprint}
+*#-->
+
