@@ -80,13 +80,11 @@
 <div class="inner">
 <div id="prizes">
 					                <div class="photos">                        
-                                         <div class="photos-content {if $index.pro.data|count>4} 
-
-enable{/if}" >
+                                         <div class="photos-content enable" >
                                             <ul>           
  {foreach name=pro item=pro from=$index.pro.data}
  <li><a href="{$pro.link}"><img src="{$pro.image}" /></a></li>
- {if $pro@index+1 == 11}{break}{/if}
+ {if $pro@index+1 == 3}{break}{/if}
 {/foreach}
                                               </ul>
                                         </div>                
