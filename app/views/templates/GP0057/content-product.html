@@ -40,7 +40,7 @@
           <div class="main fr">
           
 
-    <div class="crumb"><span><a href="{$site_url}">首页</a> > {foreach item=nav from=$posnavs}<a href="{$nav.link}">{$nav.name}</a> {/foreach}</span></div>
+    <div class="crumb"><span><a href="{$site_url}">首页</a>{foreach item=nav from=$posnavs} > <a href="{$nav.link}">{$nav.name} </a> {/foreach}</span></div>
 
           
         <div class="article ">
@@ -56,7 +56,7 @@
                                 <div class="bd" style="width:640px;">
                                     <ul>
                                         {foreach item=proshowb from=$article.images}
-                                        <li><img src="{$proshowb.image}" alt="{$proshowb.title}"/></li> 
+                                        <li><img src="{$proshowb.image}" alt="{$proshowb.title}"/></li>
                                         {/foreach}
                                     </ul>
                                 </div>

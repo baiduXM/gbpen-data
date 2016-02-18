@@ -38,8 +38,8 @@
           <div class="main fr">
           
 
-    <div class="crumb "><span><a href="{$site_url}">首页</a>  {foreach item=nav from=$posnavs}&gt; <a href="{$nav.link}">{$nav.name}</a> {/foreach}</span>
-    <h2>{$article.category.en_name}<br /><b>{$article.category.name}</b></h2></div>
+        <div class="crumb ">{$article.category.name}<span><div class="xx">当前所在位置:</div><a href="{$site_url}">首页</a> {foreach item=nav from=$posnavs}<div class="xx">></div><a href="{$nav.link}">{$nav.name}</a> {/foreach}</span></div>
+
           
         <div class="article ">
 <div class="descripimg">

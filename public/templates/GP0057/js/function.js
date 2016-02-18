@@ -31,13 +31,6 @@ $("#about .abouttext").width(wid4-wid3-20)
 	 }
  )
  
-/*产品详细页图片自适应*/
-	$(".bd li").each(function(i){
-	if($(".bd li").eq(i).find("img").width() > 640){
-       $(".bd li").eq(i).find("img").width("99%");
-}
-
-		})
   
 /*	 $(".yc ul li").each(function(){
 		 var ww=$(this).find("img").width();
@@ -48,6 +41,13 @@ $("#about .abouttext").width(wid4-wid3-20)
 }
 
 $(document).ready(function() {
+/*产品详细页图片自适应*/
+	$(".bd li").each(function(i){
+	if($(".bd li").eq(i).find("img").width() > 640){
+       $(".bd li").eq(i).find("img").width("99%");
+}
+
+		})
 	
 /*美工js*/
  $("#nav ul li:odd").addClass("odd")

@@ -1,4 +1,4 @@
-body{ color:#3c3b3b; font-family:Microsoft Yahei,Arial, Helvetica, sans-serif;  }
+body{ color:#3c3b3b; font-family:Microsoft Yahei,Arial, Helvetica, sans-serif; background:#fff; }
 body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,input,textarea,div{margin:0;padding:0; list-style:none; line-height:24px; font-size:12px; font-weight:normal}
 body,div,ul,li,dl,dt,dd{ font-size:12px;}
 .clearfix:after { content:'\20'; display:block; height:0; clear:both; }
@@ -16,7 +16,7 @@ strong{display: block;margin: 0 auto;overflow: hidden;text-overflow: ellipsis;wh
 
 
 .header_bg{ width:100%; background:url(../images/header_bg.jpg) top center repeat-x; height:72px; }
-#header h2{ padding-top:10px; float:left; width:300px;}
+#header .logo{ padding-top:10px; float:left;}
 
 #header{ position:relative;}
 #nav{ float:right; width:730px;}

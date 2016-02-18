@@ -49,7 +49,7 @@
 
 {foreach name=news item=news from=$index.news.data}
  <li>
-<div class="time"><b>{$news.pubtimestamp|date_format:'%d'}</b><br />{$news.pubtimestamp|date_format:'%y-%m'}</div>
+<div class="time"><b>{$news.pubtimestamp|date_format:'%d'}</b><br />{$news.pubtimestamp|date_format:'%Y-%m'}</div>
 <div class="text"><a href="{$index.news.link}"><h1>{$news.title} </h1><strong>{$news.description}</strong></a></div>
 </li>
   {if $news@index+1 == 3}{break}{/if}
@@ -85,7 +85,7 @@
 
 <div id="pro">
 <div class="title">
-<h2><b>{$index.pro.name}</b><span>{$index.pro.en_name}</span></h2>
+<h2><a href="{$index.pro.link}"><b>{$index.pro.name}</b><span>{$index.pro.en_name}</span></a></h2>
 </div>
 
 <div class="inner">

@@ -39,7 +39,7 @@
   {include file='./_aside.html'}
   <div class="main fr"> 
 
-<div class="crumb"><span><a href="{$site_url}">首页</a> > {foreach item=nav from=$posnavs}<a href="{$nav.link}">{$nav.name}</a> {/foreach}</span></div>
+<div class="crumb"><span><a href="{$site_url}">首页</a>{foreach item=nav from=$posnavs} > <a href="{$nav.link}">{$nav.name}</a> {/foreach}</span></div>
 
     <div class="article "> {$list.content|unescape:"html"} </div>
   </div>
