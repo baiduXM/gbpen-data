@@ -4,20 +4,16 @@
 <div  class="cpt">{$footprint}</div>
 
 
-<div class="fr footer-links">
-				<div class="footer-links-p">友情链接</div>
-				
-				<div class="footer-links-box" style="display: none; overflow: hidden; height: 108px; padding-top: 0px; margin-top: 0px; padding-bottom: 0px; margin-bottom: 0px;">
-				{foreach name=friend item=friend from=$global.links}				
-				<p><a target="_blank" href="{$friend.link}">{$friend.title}</a></p>
-                	
-			{/foreach}
-								</div>
-                                
+<div id="footer_links" class="fr">
+      <form name="form1" id="form1">
+          <select name="menu1" onchange="MM_jumpMenu('parent',this,0)">
+            {foreach name=friend item=friend from=$global.links}
+<option>{$friend.title}</option>
+{/foreach}
 
-   
-				
-			</div>
+          </select>
+        </form>
+      </div>
 
 </div>
 </div>

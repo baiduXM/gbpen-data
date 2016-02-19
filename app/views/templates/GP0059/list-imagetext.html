@@ -35,7 +35,7 @@
                     	
  <div class="main fr"> 
 
-<div class="crumb"><span><a href="{$site_url}">首页</a> > {foreach item=nav from=$posnavs}<a href="{$nav.link}">{$nav.name}</a> {/foreach}</span></div>
+<div class="crumb"><span><a href="{$site_url}">首页</a>{foreach item=nav from=$posnavs} > <a href="{$nav.link}">{$nav.name}</a> {/foreach}</span></div>
 
   <div class="article">
   <div class="list_imagetext">

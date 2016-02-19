@@ -5,13 +5,14 @@ a{ color:#666; text-decoration:none}
 a:hover{ color:#0050bf;}
 a img{ border:none;}
 table{border-collapse:collapse; border-spacing:0px;}
-body{font-size:12px; text-align:left; font-weight:normal; color:#4a4a4a; line-height:24px; background:url(../images/bbg.jpg) repeat-x #ffffff; font-family:"微软雅黑";}
+body{font-size:12px; text-align:left; font-weight:normal; color:#4a4a4a; line-height:24px; ont-family:"微软雅黑";}
 ul,ol,p,dl,li,font{margin:0;pading:0; list-style:none;}
 ul,ol,dl{list-style:none;}
 h1,h2,h3,h4,h5{font-size:12px;margin:0;padding:0; font-weight:normal;}
 input {font:12px;}
 
 body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td{ margin:0px; padding:0px;}
+.body{ width:100%; height:auto; overflow:hidden;background:url(../images/bbg.jpg) repeat-x #ffffff; }
 .wappers{ width:100%; height:auto; font-family:"微软雅黑"; }
 .topshow{  background:url(../images/heaersbg.jpg) no-repeat; width:1000px; height:auto; margin:0px auto;}
 .header{ width:1000px; margin:0px auto; overflow:hidden; height:117px; overflow:hidden;}
