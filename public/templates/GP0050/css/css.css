@@ -25,6 +25,7 @@ ol,p,dl,li{list-style:none;color:#333;}
 
 .wrap{ width:100%; height: auto;overflow:hidden;  position: relative; min-width:1000px;}
 .public{ width:1000px; height:auto;margin:0px auto; position:relative;bottom: 5px;}/*公用标签*/
+.public a{color:#fbab24;}
 .fl{ float:left; display:inline;}/*左浮动标签*/
 .fr{ float:right; display:inline;}/*右浮动标签*/
 .boxmain{ width:100%; height:auto; overflow:hidden;}/*模块公用*/
@@ -135,11 +136,11 @@ ul.nav li ul.subnav li {width: 100%;}
 
 /*foot*/
 .foot{width:100%;background:url(../images/footbg.jpg) repeat-x;padding:25px 0 0;height:auto;overflow: hidden;background-color: #272727;}
-.foot p{width: 659px;float: left;color: #fff;font-size: 13px;}
+.foot p{width: 675px;float: left;color: #fff;font-size: 13px;}
 .foot p span a,.footlink a{color: #fff;}
 .foot p span a:hover/*,.footlink a:hover*/{color:#f00;}
 
-.footr{width: 341px;float: right;height: 35px;font-family: Microsoft YaHei; }
+.footr{width: 341px;float: right;height: 35px;font-family: Microsoft YaHei;margin-top:-36px;}
 .footr a{display: block;width:100px;height: 35px;background: url(../images/sc.png) left center no-repeat;padding-left: 35px;color: #e6a233;float: left;border-right: 1px dashed #8b8b8b;margin-left: 15px;line-height: 18px;}
 .footr a span{display: block;color: #969696;}
 .footr .tel{font-size: Microsoft YaHei;float: right;width:140px;height: 35px;background: url(../images/phone.png) left center no-repeat;padding-left: 25px;margin-left: 15px;line-height: 18px;}
