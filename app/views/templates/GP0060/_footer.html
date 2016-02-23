@@ -1,0 +1,21 @@
+<div class="footer">
+      	<div class="publicfoote">
+                <div class="ficon">
+                	<ul>
+                    	<li><a href="{$global.icona.link}"><img src="{$site_url}images/icon1.png" height="39" width="39" /></a></li>
+                    	<li><a href="{$global.iconb.link}"><img src="{$site_url}images/icon2.png" height="39" width="39" /></a></li>
+                    	<li><a href="{$global.iconc.link}"><img src="{$site_url}images/icon3.png" height="39" width="39" /></a></li>
+                    	<li><a href="{$global.icond.link}"><img src="{$site_url}images/icon4.png" height="39" width="39" /></a></li>                                                                     
+                    </ul>
+                </div>        
+                <div class="fpwprd">
+                               <a href="{$site_url}">首页</a> |
+            {foreach name=navs item=nav from=$navs}
+				<a href="{$nav.link}" >{$nav.name}</a> |
+    {/foreach} <br />            
+{$contact.company}  
+	 {$footprint}           
+            
+                </div>        
+        </div>
+      </div>
