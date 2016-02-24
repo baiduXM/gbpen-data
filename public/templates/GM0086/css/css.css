@@ -23,7 +23,7 @@
 #in_page .inner .in_more a:after,#in_page .inner .in_more a:before {  border: 5px solid transparent;  border-left: 5px solid #58ab26;  width: 0;  height: 0;  position: absolute;  right: 0px;  top: 0px; left:8px; bottom:0; margin:auto;  content: ' '; }
 #in_page .inner .in_more a:before { border-left-color: #fff; left: 9px;}
 
-#in_page .inner img{ float:left; width:30%}
+#in_page .inner .page_img { float:left; width:30%; height:142px; overflow:hidden; margin-top:10px; display:inline}
 #in_page .inner p{ float:right; width:60%; margin-right:7%; line-height:24px; height:142px; margin-top:10px; overflow:hidden;}
 
 #in_text .inner ul{ position:relative}
@@ -44,18 +44,25 @@
 #in_image .inner ul{ margin-top:0; overflow:hidden}
 #in_image .inner ul li img{ border: solid 1px #767e73;border-radius:20px;}
 
-@media screen and (min-width: 320px) and (max-width: 479px){
-#in_page .inner p{ line-height:20px; height:80px; overflow:hidden; font-size:12px; margin-top:5px;}
+@media screen and (min-width: 320px) and (max-width: 370px){
+#in_page .inner p{ line-height:20px; height:60px; overflow:hidden; font-size:12px; margin-top:5px;}
 #in_text .inner ul li:before{ right:-17px;  }
 #in_text .inner ul li:after{ right:-23px;  }
 #in_image .inner ul li{ width:42%; margin:0 2% 20px}
 #in_image .inner ul{ height:135px; padding-bottom:15px; overflow:hidden}
+#in_page .inner .page_img { height:60px; overflow:hidden;}
+
+}
+@media screen and (min-width: 371px) and (max-width: 420px){
+#in_page .inner p{ line-height:20px; height:80px; overflow:hidden; font-size:12px; margin-top:5px;}
+#in_page .inner .page_img { height:80px; overflow:hidden; margin-top:0}
 
 }
 @media screen and (min-width: 480px) and (max-width: 639px){
 #in_page .inner p{ line-height:24px; height:102px;overflow:hidden;margin-top:10px; }
 #in_text .inner ul li:before{ right:-24px; }
 #in_text .inner ul li:after{ right:-30px;  }
+#in_page .inner .page_img { height:102px; overflow:hidden;margin-top:0}
 }
 
 
