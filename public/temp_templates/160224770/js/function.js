@@ -19,6 +19,13 @@ if($(".list_imagetext ul li .img_box img").height()<$(".list_imagetext ul li .te
 	}})
 
 
+            if (screen.width <=480){
+            $("#in_image .inner ul").height($("#in_image .inner ul li").height())
+          }
+
+
+
+
 /*美工专属区域*/
 	
 	

@@ -2,9 +2,9 @@
 <html manifest="huancun.manifest">
 <head>
 <!-- 实时预览调试代码，模板开发完成后删除 -->
-
-<!-- 调试代码 End -->
-<script type="text/javascript">
+		<script type="text/javascript" src="http://chanpin.xm12t.com.cn/js/preview.js"></script>
+		<!-- 调试代码 End -->
+		<script type="text/javascript">
 		// 跳转PC页面
 		{if $site_another_url}
 			if (!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
@@ -33,8 +33,8 @@
 <meta name="description" content="{$description}" />
 <link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
 <title>{$title}</title>
-<link rel="stylesheet" href="{$site_url}css/reset.css" />
-<link rel="stylesheet" href="{$site_url}css/public.css" />
+<link rel="stylesheet" href="{$site_url}css/reset.css" /> 
+<link rel="stylesheet" href="{$site_url}css/public.css" /> 
 <link href="{$site_url}css/css.css" rel="stylesheet" type="text/css" />
 <link href="{$site_url}css/swipe.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" rev="stylesheet" href="{$site_url}css/style_{$stylecolor}.css" type="text/css" />
@@ -55,47 +55,32 @@
 <div class="body">
 <div class="wrap page-active">
     <div class="index-wrap"> 
-    {include file="./_header.html"} 
-  <section>
+ {include file="./_header.html"} 
+   <section>
     <div class="boxmaind">
       <div class="boxmain_d">
-          <h1 class="boxmain-top">
-        <span class="more3" id="first">分类<span id="down"> ∧</span><span id="up"> ∨ </span></span>
-         <div class="sub_zh public_color public_bg">{$list.name}</div><div class="sub_en public_color public_bg">{$list.en_name}</div></h1>
-         
-     
-         {include file='./_nav.html'}
+        <h1 class="boxmain-top">
+         <span class="more3" id="font">字+</span> <span class="more3" id="first">分类<span id="down"> ∧</span><span id="up"> ∨ </span></span><div class="sub_zh public_bg">{$list.name}</div><div class="sub_en public_bg">{$list.en_name}</div></h1>
+          <div class="font">
+            	<dl class="big">大</dl>
+                <dl class="normal">中</dl>
+                <dl class="small">小</dl>
+            	</div>
+         {include file='./_nav.html'}  
         <div class="main">
-          <div class="list_imagetext">
-            <ul class="clearfix">
-             {foreach name=article item=article from=$list.data}           
+          <div class="list_page">
             
-                 <li class="clearfix"><a href="{$article.link}">
-                <div class="img_box"><img src="{$article.image}" width="100%" title="120*88" /></div>
-                <div class="text_box">
-                 <div class="text_title">{$article.title}</div>
-                 <div class="text_data">{$article.pubdate}</div>
-                 <div class="text_des">{$article.description}</div>
-                </div></a>
-                 </li>
-                 
-                 
-                 
-                  
-               {if $article@index+1 == 10} {break} {/if}
-  
-              {/foreach}
-            </ul>
-                <div class="next1 public_color"><a href="{$page_links.first_link}" class="public_color">首页</a><a href="{$page_links.prev_link}" class="public_color">上一页</a>{$page_links.current_page}/{$page_links.page_count}　<a href="{$page_links.next_link}" class="public_color">下一页</a><a href="{$page_links.last_link}" class="public_color">尾页</a></div>
+      {$list.content|unescape:"html"}
             
           </div>
         </div>
       </div>
     </div>
   </section>
-      <footer class="foot bg1" ><a class="back-top">∧</a>{$footprint}</footer>
+   <footer class="foot" ><a class="back-top">∧</a>{$footprint}</footer>
 </div>
 </div>
-{$footscript} </div>
+ {$footscript}
+</div>
 </body>
 </html>
