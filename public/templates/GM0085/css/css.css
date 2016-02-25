@@ -1,10 +1,10 @@
 
 /*标题样式*/
 .in_h2{ height:55px; margin-top:25px;   padding:0px 0px;  position:relative; text-align:center; z-index:100;  margin-bottom:15px;}
-.in_h2 .in_zh{color:#333;line-height:24px;font-size:1.5em;font-weight:normal;  width:170px; margin:auto; text-align:center; position:relative;  }
+.in_h2 .in_zh{color:#333;line-height:24px; min-height:24px;font-size:1.5em;font-weight:normal;  width:170px; margin:auto; text-align:center; position:relative;  }
 .in_h2 .in_zh:before{ content:""; position:absolute; right:0; top:-4px; border-right: solid 4px #282828; border-top: solid 4px #282828; width:21px; height:21px; z-index:100;}
 
-.in_h2 .in_en{ color:#ce252a; line-height:16px;  font-size:1.3em; width:120px;  padding-left:14%; margin:auto; text-align:center; position:relative  }
+.in_h2 .in_en{ color:#ce252a; line-height:16px;  font-size:1.3em; width:120px; min-height:24px;  padding-left:14%; margin:auto; text-align:center; position:relative; text-transform:capitalize }
 .in_h2 .in_en:after{ content:""; position:absolute; left:10%; bottom:-4px; border-left: solid 4px #282828; border-bottom: solid 4px #282828; width:21px; height:42px; z-index:101;}
 
 @media screen and (min-width: 320px) and (max-width: 480px){
@@ -17,12 +17,14 @@
 
 
 #in_page .inner .page_img{ position:absolute; left:0; top:0;z-index:99; height:100%;}
+#in_page .inner .page_img img{ max-height:100%;}
 #in_page .inner .in_in{ float:right; width:75%; padding-right:2%; margin:15px 0; padding-left:8%; padding-top:15px; padding-bottom:30px; background:rgba(255,255,255,0.8);  position:relative; z-index:100}
 #in_page .inner .in_in p{ line-height:24px; height:102px;overflow:hidden;}
 #in_page .inner .in_more{ position:absolute; left:9%; bottom:10px; display:block; border:solid 1px #F00; color:#F00; padding:0 2%;}
 
 ul.newslist{ margin-top:10px; padding:0px;}
-ul.newslist li{ margin: 0px; display:-webkit-box;display:-moz-box;display:-o-box;display:-ms-box;display:box; width:100%; margin:10px 0}
+ul.newslist li{ margin: 0px;  margin:10px 0}
+ul.newslist li a{display:-webkit-box;display:-moz-box;display:-o-box;display:-ms-box;display:box; width:100%;}
 ul.newslist li .newsimg{ border-radius:50%; margin:0 2%;overflow:hidden; float:left; width:70px; margin-top:-2%; border:solid 2px #FFF;box-shadow:2px 2px 2px #000 }
 
 ul.newslist li .newsimg img{ width:100%}
@@ -46,7 +48,8 @@ ul.newslist li .list dd a{ color:#999}
 @media screen and (min-width: 320px) and (max-width: 380px){
 #in_page .inner .in_in{ padding-top:2%;}
 #in_page .inner .in_more{ left:8%; bottom:5px; font-size:12px; }
-#in_page .inner .page_img{ width:80%;}
+#in_page .inner .page_img{ width:50%;}
+
 #in_page .inner .in_in p{ line-height:20px; height:60px; overflow:hidden; font-size:12px;}
 #in_image .inner{ height:200px; overflow:hidden}
 
