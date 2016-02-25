@@ -3,7 +3,7 @@
 
 
 
-.menu{ height:90px; overflow:hidden; padding:0px 10px; margin:10px auto 10px; position:relative;}
+.menu{  overflow:hidden; padding:0px 10px; margin:10px auto 10px; position:relative;}
 .menu .nav{height:100%; overflow:hidden; position:relative; }
 .menu .swiper-nav {height:100%;}
 .menu .swiper-nav .swiper-wrapper {margin: 0 auto;}
@@ -18,7 +18,7 @@
 .menu .scroll-container .swiper-slide{ width:100%;}
 
 .menu .swiper-nav .swiper-slide .menubox{ margin:0px; height:100%; overflow: hidden; text-align:center;background:#88ceda; }
-.menu  .swiper-nav .swiper-slide .icon{ width:40px; height:40px; overflow:hidden; margin:10px auto 3px;}
+.menu  .swiper-nav .swiper-slide .icon{ width:40px;  overflow:hidden; margin:10px auto 3px;}
 .menu  .swiper-nav .swiper-slide .title{ height:30px; overflow:hidden; line-height:30px;}
 .menu .swiper-nav .swiper-slide  a{ display:block; color:#fff; font-size:1.14em;}
 .menu1{ position:absolute; bottom:0px; left:0px; height:35px; background:rgba(0,85,131,0.7); z-index:7}
@@ -32,7 +32,7 @@
 
 
 /*.menulist{ position:relative; height:40px; overflow:hidden; width:100%; background:#6794f1;  line-height:40px; box-shadow:1px 2px 3px #c6c6c6;}*/
-.menulist{ position:relative; height:80px; overflow:hidden; width:100%;   box-shadow:1px 2px 3px #c6c6c6; margin-top:15px;}
+.menulist{ position:relative;  overflow:hidden; width:100%;   box-shadow:1px 2px 3px #c6c6c6; margin-top:15px;}
 .menulist .navlist{ padding:0px 25px 0px 25px; height:80px; overflow:hidden;}
 .menulist .swiper-nav {height:80px;width: 100%; z-index:999;}
 .menulist .swiper-nav .swiper-wrapper {
@@ -40,13 +40,15 @@
 }
 /*.menulist .swiper-nav span {cursor: pointer;display: block;color: #fff;text-align: center; height:40px; line-height:40px; font-size:1.1em;}
 .menulist .swiper-nav span a{ color:#fff;padding:0px 0px; display:block; -webkit-tap-highlight-color:rgba(0,0,0,0);  }*/
-.menulist .swiper-nav span {cursor: pointer;display: block;color: #fff;text-align: center; height:78px; font-size:1.1em;width:90%; overflow:hidden; border:solid 1px #479e3f; margin:auto}
-.menulist .swiper-nav span a{ padding:0px 0px; display:block;overflow:hidden; width:100%; height:78px; position:relative;}
+.menulist .swiper-nav span {cursor: pointer;display: block;color: #fff;text-align: center;  font-size:1.1em;width:90%; overflow:hidden; border:solid 1px #479e3f; margin:auto; height:80px;}
+.menulist .swiper-nav span a{ padding:0px 0px; display:block;overflow:hidden; width:100%;  position:relative; height:80px;}
 .menulist .swiper-nav span a:before{width:0px;  height:0px;  width:0px; height:0px;  border-top:15px solid transparent;  border-right:15px solid #479e3f;content:" ";position:absolute; right:1px; bottom:1px;  }
-.menulist .swiper-nav span a .icon{ width:30%; display:block; margin:auto; margin-top:10px;}
+.menulist .swiper-nav span a .icon{ width:30%; display:block; margin:auto; margin-top:15px;}
 @media screen and (min-width: 320px) and (max-width: 480px){
-.menulist .swiper-nav span a{ font-size:12px;}
-.menulist .swiper-nav span a .icon{  margin-top:15px;}
+.menulist .swiper-nav span{ height:40px;}
+.menulist .swiper-nav span a{ font-size:12px; line-height:20px;}
+.menulist .swiper-nav span a .icon{ margin-top:0px }
+.menulist .swiper-nav span a:before{width:0px;  height:0px;  width:0px; height:0px;  border-top:10px solid transparent;  border-right:10px solid #479e3f;content:" ";position:absolute; right:1px; bottom:1px;  }
 
 
 }
@@ -55,7 +57,7 @@
 .menulist .swiper-nav span:active {background:rgba(0,0,0,0.2);}
 .menulist .swiper-pages {height: 100%;}
 .menulist .scroll-container {height: 100%;width: 100%;}
-.menulist .arrow-left,.menulist .arrow-right{ position:absolute; top:0px; left:0px; height:100%;color:#ff6785; width:25px; height:80px; text-align:center; line-height:80px; cursor:pointer; z-index:999999999;}
+.menulist .arrow-left,.menulist .arrow-right{ position:absolute; top:0px; left:0px; height:100%;color:#ff6785; width:25px; height:80px; text-align:center; line-height:80px; cursor:pointer; z-index:999999999; }
 .menulist .arrow-right{ background:rgba(0,0,0,0.1); font-size:20px; margin-right:0px;color:#fff;}
 /*.menulist .arrow-left{  background:rgba(255,255,255,0.2); font-size:20px; margin-left:0px; color:#fff;}*/
 .menulist .arrow-left{  background:rgba(0,0,0,0.1); font-size:20px; margin-left:0px; color:#fff;}
@@ -64,7 +66,7 @@
 .menulist .arrow-right{ left:auto; right:0px;}
 .menulist .arrow-left:hover,.menulist .arrow-right:hover{ color:#fff;}
 @media screen and (min-width: 320px) and (max-width: 480px){
-
+	.menulist .arrow-left, .menulist .arrow-right{ height:42px; line-height:42px}
 }
 @media screen and (min-width: 480px) {
 

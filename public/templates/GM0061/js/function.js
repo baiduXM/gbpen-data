@@ -30,6 +30,9 @@ $(document).ready(function(){
 	
 		$(".class-m").height($(".class").outerHeight()-$(".class-top").outerHeight())
 		// $(".index-wrap").height($(".wrap").height()-$(".fixed").height()-$(".tell-icon").height())
+
+			$('.devicebox').height($('.devicebox').width());
+			$('.devicebox ul li').height($('.devicebox ul li').width());
 	})
 
 	// 
@@ -297,5 +300,8 @@ $(document).ready(function(){
 	$('.news-desc').height($('.list-imgtxt ul li a img').height());
 
 	$('.devicebox-item').height($('.devicebox-item').width())
+	$('.devicebox').height($('.devicebox').width());
+	$('.devicebox ul li').height($('.devicebox ul li').width());
+
 });
   

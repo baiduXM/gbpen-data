@@ -15,7 +15,6 @@ a{ color:#333}
 
 .header{ width:100%; height: auto; overflow:hidden;  position:relative; padding-bottom:30px}
 .logo{width:100%; height: auto; overflow:hidden;   top:0;background-size:100% auto; left:0; z-index:100}
-.logo img{ margin-left:10%;}
 .header_menu{  position:absolute; top:50%; -webkit-transform:translate(0,-50%); right:15px; background:#80d1e4;-webkit-mask-repeat:no-repeat; -webkit-mask-image: url(../icon/zz1.png);-webkit-mask-size:23px auto;width:23px; height:23px;}
 .boxmaind{ width:100%; margin:auto; } 
 
@@ -43,6 +42,7 @@ a{ color:#333}
 /*banner结束*/
 
 .nav_list ul li{ float:left; width:29%; margin:1% 2%; padding:15px 0; text-align:center; background:rgba(0,0,0,0.3);border-radius:10px;}
+.nav_list ul li .iconfont{ display:block;}
 .nav_list ul li img{ width:30%; margin:auto; display:block}
 .nav_list ul li a{ color:#fff}
 
@@ -116,7 +116,7 @@ a{ color:#333}
 /*list-image*/
 .list_image ul li,.insub_image ul li{  float:left; display: inline-block; text-align:center;width:42%; margin:0 2%; padding:1% 1% 0 1%;margin-bottom:10px; }
 .list_image ul li .imgpic,.insub_image ul li .in_proimg{margin-bottom:5px; }
-.list_image ul li .imgword,.insub_image ul li .in_protitle{ height:25px; line-height:25px;text-align:center}
+.list_image ul li .in_protitle,.insub_image ul li .in_protitle{ height:25px; line-height:25px;text-align:center}
 /*list-image*/
 
 

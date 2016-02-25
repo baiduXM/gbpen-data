@@ -72,7 +72,7 @@
                   {foreach name=article item=article from=$list.data}                    
                      <li><a href="{$article.link}">
                    <div class="in_proimg"><img src="{$article.image}" width="100%" title="160*150"></div>
-                  <div class="in_protitle"> {$article.title}</div>
+                  <div class="in_protitle"><p> {$article.title}</p></div>
                 </a> </li>
                       {if $article@index+1 == 12} {break} {/if}
                     {/foreach}

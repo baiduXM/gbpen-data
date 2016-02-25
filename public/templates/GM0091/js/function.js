@@ -13,19 +13,18 @@ $(document).ready(function(){
 $(window).load(function(){
 /*美工专属区域*/
   var pw,mw;
-  $(".in_home").each(function() {
+  $(".in_home, .in_home1").each(function() {
   pw = $(this).find(".in_h2").width()/2;
   mw = $(this).find(".in_more").width()+ 15;
   	$(this).find(".in_h2 .in_more").css({"margin-left":pw-mw})
 	});
 $(window).resize(function(){
 	 var pw,mw;
-  $(".in_home").each(function() {
+  $(".in_home,.in_home1").each(function() {
   pw = $(this).find(".in_h2").width()/2;
   mw = $(this).find(".in_more").width()+ 15;
   	$(this).find(".in_h2 .in_more").css({"margin-left":pw-mw})
 	});
-	
 	})
 
 $(".list_imagetext ul li").each(function(){
@@ -33,6 +32,18 @@ if($(".list_imagetext ul li .img_box img").height()<$(".list_imagetext ul li .te
 	var z=($(".list_imagetext ul li .text_box").height()-$(".list_imagetext ul li .img_box img").height())*0.5
 	$(".list_imagetext ul li .img_box img").css({"margin-top":z})
 	}})
+
+
+
+$(".swiper-slide,.menulist .swiper-nav,.menulist,.navlist,menulist,.swiper-wrapper").height($(".menulist .swiper-nav span").height()+2+"px")
+$(".menulist .swiper-nav span .iconfont").css({"color":"#47a042"})
+
+ $("section div .number").each(function (i) {
+        $(this).text("0"+(i+1));
+		if( i>8 ) { $(this).text(i+1);}
+      });
+ 
+ 
 
 /*美工专属区域*/
 	

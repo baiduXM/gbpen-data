@@ -19,7 +19,7 @@
       <div class="nav_list">
        <ul>
          {foreach item=nav from=$navs}
-              <li><a href="{$nav.link}"><img src="{$nav.image}" >{$nav.name}</a></li>
+              <li><a href="{$nav.link}">{$nav.icon}{$nav.name}</a></li>
          {/foreach}  
 
        </ul>

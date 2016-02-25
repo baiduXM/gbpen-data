@@ -20,7 +20,7 @@ if($(".list_imagetext ul li .img_box img").height()<$(".list_imagetext ul li .te
 	$(".list_imagetext ul li .img_box img").css({"margin-top":z})
 	}})
 
-
+$(".nav_list ul li .iconfont").css({"font-size":"25px"})
 /*美工专属区域*/
 	
 	

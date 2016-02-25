@@ -62,22 +62,17 @@
       {if $mIndexCat.type eq 4}
         <div id="in_page" class="wrapper in_home">
       <div class="in_in">
-        <h2 class="in_h2"><a href="{$mIndexCat.link}"><div class="in_more"></div><div class="in_en">{$mIndexCat.en_name}</div><div class="in_zh">{$mIndexCat.name}</div></a></h2>
+        <h2 class="in_h2"><a href="{$mIndexCat.link}"><div class="in_more"><span></span></div><div class="in_en">{$mIndexCat.en_name}</div><div class="in_zh">{$mIndexCat.name}</div></a></h2>
         <div class="inner clearfix">
           <div class="page_img"><img src="{$mIndexCat.image}"></div><p>{$mIndexCat.description}</p>
        </div>
         </div>
         </div>
         
-        
-        
          {elseif $mIndexCat.type eq 1} 
-          
-              
-        
-        <div id="in_text" class="wrapper in_home">
+        <div id="in_text" class="wrapper in_home1 ">
       <div class="in_in">
-        <h2 class="in_h2"><a href="{$mIndexCat.link}"><div class="in_more"></div><div class="in_en">{$mIndexCat.en_name}</div><div class="in_zh">{$mIndexCat.name}</div></a></h2>
+        <h2 class="in_h2"><a href="{$mIndexCat.link}"><div class="in_more"><span></span></div><div class="in_en">{$mIndexCat.en_name}</div><div class="in_zh">{$mIndexCat.name}</div></a></h2>
         <ul class="newslist">
          {foreach item=article from=$mIndexCat.data}
              <li><a href="{$article.link}">
@@ -92,7 +87,7 @@
                 </div>
                 </a>
              </li> 
-                {if $article@index+1 == 3}{break}{/if} {/foreach}         
+                {if $article@index+1 == 4}{break}{/if} {/foreach}         
           </ul>
           </div>
         </div>
@@ -101,9 +96,10 @@
      
          {elseif $mIndexCat.type eq 3} 
        
-      <div id="in_image" class="wrapper">
-          <h2 class="in_h2"><a href="{$mIndexCat.link}"><div class="in_more"></div><div class="in_en">{$mIndexCat.en_name}</div><div class="in_zh">{$mIndexCat.name}</div></a></h2>
-       <div class="inner yc insub_image">
+      <div id="in_image" class="wrapper in_home1">
+      <div class="in_in">
+          <h2 class="in_h2"><a href="{$mIndexCat.link}"><div class="in_more"><span></span></div><div class="in_en">{$mIndexCat.en_name}</div><div class="in_zh">{$mIndexCat.name}</div></a></h2>
+         <div class="inner yc insub_image">
             <ul class="clearfix">
             {foreach item=article from=$mIndexCat.data}
               
@@ -115,8 +111,9 @@
                   <div class="in_text">{$article.description}</div></div></a>
               </li>
               
-                  {if $article@index+1 == 3}{break}{/if} {/foreach}
+                  {if $article@index+1 == 4}{break}{/if} {/foreach}
             </ul>
+        </div>
         </div>
         </div>
       
