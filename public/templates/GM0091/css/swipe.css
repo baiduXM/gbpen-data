@@ -41,7 +41,7 @@
 /*.menulist .swiper-nav span {cursor: pointer;display: block;color: #fff;text-align: center; height:40px; line-height:40px; font-size:1.1em;}
 .menulist .swiper-nav span a{ color:#fff;padding:0px 0px; display:block; -webkit-tap-highlight-color:rgba(0,0,0,0);  }*/
 .menulist .swiper-nav span {cursor: pointer;display: block;color: #fff;text-align: center;  font-size:1.1em;width:90%; overflow:hidden; border:solid 1px #479e3f; margin:auto; height:80px;}
-.menulist .swiper-nav span a{ padding:0px 0px; display:block;overflow:hidden; width:100%;  position:relative; height:80px;}
+.menulist .swiper-nav span a{ padding:0px 0px; display:block;overflow:hidden; width:100%;  position:relative; }
 .menulist .swiper-nav span a:before{width:0px;  height:0px;  width:0px; height:0px;  border-top:15px solid transparent;  border-right:15px solid #479e3f;content:" ";position:absolute; right:1px; bottom:1px;  }
 .menulist .swiper-nav span a .icon{ width:30%; display:block; margin:auto; margin-top:15px;}
 @media screen and (min-width: 320px) and (max-width: 480px){

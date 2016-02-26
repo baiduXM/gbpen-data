@@ -35,7 +35,7 @@ if($(".list_imagetext ul li .img_box img").height()<$(".list_imagetext ul li .te
 
 
 
-$(".swiper-slide,.menulist .swiper-nav,.menulist,.navlist,menulist,.swiper-wrapper").height($(".menulist .swiper-nav span").height()+2+"px")
+$(".swiper-slide,.menulist .swiper-nav,.menulist,.navlist,menulist,.swiper-wrapper,.menulist .swiper-nav span a").height($(".menulist .swiper-nav span").height()+2+"px")
 $(".menulist .swiper-nav span .iconfont").css({"color":"#47a042"})
 
  $("section div .number").each(function (i) {
