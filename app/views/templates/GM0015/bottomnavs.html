@@ -5,10 +5,10 @@
             <img src="{$site_url}icon/G.png" width="33" height="33"></span>
         </div>
         {foreach item=bottom from=$global.bottom_navs}
-        <div class="PathItem">
+        <div class="PathItem" onclick="javascript:window.location.href='{$bottom.link}'">
           <span class="item">
           {if $bottom.icon}<div class="icon"><i class="iconfont">{$bottom.icon}</i></div>{else}<img src="{$bottom.image}" height="20">{/if}
-            <dt class="title"><a href="{$bottom.link}">{$bottom.name}</a></dt>
+            <dt class="title">{$bottom.name}</dt>
           </span>
         </div>
         {if $bottom@index eq 2}{break}{/if}
