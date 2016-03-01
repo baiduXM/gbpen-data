@@ -1,22 +1,24 @@
-      <div class="opacity2"></div>
+﻿      <div class="opacity2"></div>
       <div class="PathInner" id="PathMenu">
         <div class="PathMain" onclick="PathRun();">
           <span class="pathbox2">
             <img src="{$site_url}icon/G.png" width="33" height="33"></span>
         </div>
-        {foreach item=bottom from=$global.bottom_navs}
-        <div class="PathItem">
+         {foreach item=bottomnav from=$global.bottom_navs}
+        <div class="PathItem" onclick="javascript:window.location.href='{$bottomnav.link}'">
           <span class="item">
-          {if $bottom.icon}<div class="icon"><i class="iconfont">{$bottom.icon}</i></div>{else}<img src="{$bottom.image}" height="20">{/if}
-            <dt class="title"><a href="{$bottom.link}">{$bottom.name}</a></dt>
+          <div class="icon">{if $bottomnav.icon}<i class="iconfont">{$bottomnav.icon}</i>{else}<img src="{$bottomnav.image}" width="30">{/if}</div>
+            <dt class="title">{$bottomnav.name}</dt>
           </span>
         </div>
-        {if $bottom@index eq 2}{break}{/if}
+        {if $bottomnav@index eq 2}{break}{/if}
         {/foreach}
-        <div class="PathItem" onclick="javascript:window.location.href='{$site_url}'">
+        <div class="PathItem" onclick="javascript:window.location.href='{$bottomnav.link}'">
           <dl class="item">
             <img src="{$site_url}icon/f_i2.png" height="20">
             <dt class="title">首页</dt>
           </dl>
         </div>
       </div>
+	  
+	  

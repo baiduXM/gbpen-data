@@ -26,34 +26,20 @@
 			"enable": 1
 		}, {
 			"name": "短信",
-			"icon": "&#xe601;",
+			"icon": "&#xe604;",
 			"image": "icon/f_i4.png",
 			"data": "13489990000",
 			"type": "sms",
 			"enable": 1
 		}, {
 			"name": "咨询",
-			"icon": "&#xe61b;",
+			"icon": "&#xe606;",
 			"image": "icon/f_i5.png",
-			"data": "0000001@53kf",
+			"data": "小E:156568451@QQ|客服-XX:10000@QQ",
 			"type": "im",
 			"enable": 1
 		}],
 		"description": "自定义底部导航",
 		"type": "quickbar"
-	},
-	"bgimg": {
-		"value": [{
-			"title": "背景图1",
-			"image": "images/bg.jpg",
-			"link": "http://www.baidu.com"
-		}],
-		"description": "首页背景图",
-		"type": "images",
-		"config": {
-			"width": 640,
-			"height": 1088,
-			"limit": 1
-		}
 	}
 }

@@ -1,8 +1,20 @@
 {
-	"headtext":{
-		"value":"稀世典藏巨著 · 华丽古典气度<br />—— Rare collection classical bearing ——<br />坐享一站式的居家生活",
-		"description":"首页文本",
-		"type": "text"
+	"slidepics": {
+		"value": [{
+			"title": "测试图1",
+			"image": "images/baner.jpg",
+			"link": "http://www.baidu.com"
+		}, {
+			"title": "测试图2",
+			"image": "images/baner.jpg",
+			"link": "http://www.baidu.com"
+		}],
+		"description": "大轮滚图",
+		"type": "images",
+		"config": {
+			"width": 640,
+			"height": 360
+		}
 	},
 	"bottom_navs": {
 		"value": [{
@@ -14,34 +26,20 @@
 			"enable": 1
 		}, {
 			"name": "短信",
-			"icon": "&#xe601;",
+			"icon": "&#xe604;",
 			"image": "icon/f_i4.png",
 			"data": "13489990000",
 			"type": "sms",
 			"enable": 1
 		}, {
 			"name": "咨询",
-			"icon": "&#xe647;",
+			"icon": "&#xe606;",
 			"image": "icon/f_i5.png",
-			"data": "0000001@53kf",
+			"data": "小E:156568451@QQ|客服-XX:10000@QQ",
 			"type": "im",
 			"enable": 1
 		}],
 		"description": "自定义底部导航",
 		"type": "quickbar"
-	},
-	"bgimg": {
-		"value": [{
-			"title": "背景图1",
-			"image": "images/bg.jpg",
-			"link": "http://www.baidu.com"
-		}],
-		"description": "首页背景图",
-		"type": "images",
-		"config": {
-			"width": 640,
-			"height": 1138,
-			"limit": 1
-		}
 	}
 }

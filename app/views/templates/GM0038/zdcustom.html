@@ -5,7 +5,7 @@
             <img src="{$site_url}images/G.png" width="33" height="33"></span>
         </div>
         {foreach item=bottomnav from=$global.bottom_navs}
-        <div class="PathItem">
+        <div class="PathItem" onclick="javascript:window.location.href='{$bottomnav.link}'">
           <span class="item">
           <div class="icon">{if $bottomnav.icon}<i class="iconfont">{$bottomnav.icon}</i>{else}<img src="{$bottomnav.image}" width="30">{/if}</div>
             <dt class="title">{$bottomnav.name}</dt>
