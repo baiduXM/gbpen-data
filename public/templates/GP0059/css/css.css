@@ -21,8 +21,9 @@ strong{display: block;margin: 0 auto;overflow: hidden;text-overflow: ellipsis;wh
 
 
 
-
-.logo{ float:left}
+.logo{width: 310px;height: 80px;float:left; position:relative }
+.logo a{display: block;height:80px;width: 310px;position: absolute;bottom: 0px; left:0;}
+.logo img{max-width:310px; max-height:80px; position:absolute; top:0; left:0; right:0; bottom:0; margin:auto}
 #nav{ float:right; width:650px; margin-top:40px; height:30px;}
 #nav ul li{ float:left;height:30px; line-height:30px;}
 #nav ul li a{font-family:Microsoft Yahei; font-size:14px; color:#333333; text-align:center; overflow:hidden;display:block; font-weight:bold;}

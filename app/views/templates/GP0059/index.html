@@ -40,7 +40,7 @@
 <ul class="clearfix">
 {foreach name=news item=news from=$index.news.data}
 <li>
-<div class="ser_img"><b class="news_data">{$article.pubtimestamp|date_format:'%d'} </b><b class="news_mou">{$article.pubtimestamp|date_format:'%m'} 月</b></div>
+<div class="ser_img"><b class="news_data">{$news.pubtimestamp|date_format:'%d'} </b><b class="news_mou">{$news.pubtimestamp|date_format:'%m'} 月</b></div>
 <div class="ser_wz"><a href="{$news.link}"><h1><strong>{$news.title}</strong></h1><p>{$news.description}</p> </a></div>
 </li>
   {if $news@index+1 == 4}{break}{/if}
