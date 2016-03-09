@@ -63,4 +63,14 @@ jQuery(".slideBoxb").slide({mainCell:".bd ul",autoPlay:false,effect:"leftLoop"})
     }).css({
         visibility: "visible"
     });
+	/*大图 100%*/	
+	$("#kinMaxShow").kinMaxShow({
+            height: 447,
+            button: {
+                showIndex: false,
+                normal: { background: 'url(images/button.png) no-repeat -14px 0', marginRight: '8px', border: '0', right: '48%', bottom: '20px' },
+                focus: { background: 'url(images/button.png) no-repeat 0 0', border: '0' }
+            }
+        });
+
 });

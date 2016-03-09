@@ -42,20 +42,8 @@
 
 
 <div id="banner" class="wrapper">
-    <div class="focusBox" style="margin:0 auto">
-        <ul class="pic">
-            {foreach name=slidepics item=slidepic from=$global.slidepics}
-            <li>
-                <a href="{$slidepic.link}" target="_blank"><img src="{$slidepic.image}" alt="{$slidepic.title}" /></a>
-            </li>
-            {/foreach}
-        </ul>
-        <a class="prev" href="javascript:void(0)"></a>
-        <a class="next" href="javascript:void(0)"></a>
-        <ul class="hd">
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
-    </div>
+    <div id="kinMaxShow" style="display:none;"> 
+{foreach name=slidepics item=slidepic from=$global.slidepics}
+      <div> <a href="{$slidepic.link}" target="_blank"><img src="{$slidepic.image}" alt="{$slidepic.title}"  /></a></div>
+      {/foreach} </div>
 </div>
