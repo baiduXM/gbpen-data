@@ -411,7 +411,7 @@ img {
 	display:block;
 	width:160px;
 	padding-left:16px;
-	transition:all 0.5s ease-in-out; color:#FFF; font-size:14px;}
+	transition:all 0.5s ease-in-out; color:#FFF; font-size:14px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
 .category ul li a:hover{ text-decoration:underline}
 
 ul.second{ width:100%; height:auto; overflow:hidden; margin-bottom:8px;}
