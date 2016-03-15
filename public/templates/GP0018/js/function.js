@@ -68,7 +68,7 @@ $(document).ready(function() {
 
 /*大图 100%*/	
 	$("#kinMaxShow").kinMaxShow({
-            height: 420,
+            height: 630,
             button: {
                 showIndex: false,
                 normal: { background: 'url(../web/images/button.png) no-repeat -14px 0', marginRight: '8px', border: '0', right: '48%', bottom: '20px' },

@@ -36,7 +36,7 @@ form{ margin:0; padding:0; }
 .sub li.nav2{ display:none; background:#e3cdaa;text-align:center; padding:0; line-height:25px;}
 #nav ul .sub li.nav2 a{ color:#654136; font-weight:normal; font-size:12px;}
 
-#contain{ position:relative;margin-top:-22px;width:100%; }
+#contain{ position:relative;margin-top:-22px;width:100%; z-index:1000}
 
 .des {  background:url(../images/box_bg.png) no-repeat center top; }
 .des h2{ height:64px;padding-top:40px; }
