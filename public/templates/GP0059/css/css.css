@@ -65,8 +65,8 @@ strong{display: block;margin: 0 auto;overflow: hidden;text-overflow: ellipsis;wh
 #ab_text{ width:317px; height:144px; overflow:hidden; float:left; margin-right:95px; margin-left:35px; margin-bottom:25px;}
 #ab_text .ab_title{  font-weight:bold; font-size:13px; color:#fff}
 #ab_text .ab_title img{ margin-right:8px;margin-left: 5px;margin-right: 5px;margin-bottom:5px;vertical-align:bottom;}
-#ab_text .ab_inner{ color:#cccccc; margin-top:10px; height:95px; overflow:hidden}
-#about .inner{ color:#ddd; width:970px; margin:auto; margin-top:55px; line-height:22px; max-height:88px;}
+#ab_text .ab_inner{ color:#cccccc; margin-top:10px; height:95px; overflow:hidden; padding-bottom:15px;}
+#about .inner{ color:#ddd; width:970px; margin:auto; margin-top:55px; line-height:22px; height:110px; overflow:hidden}
 
 
 #pro{ margin-top:35px;}
@@ -103,7 +103,8 @@ strong{display: block;margin: 0 auto;overflow: hidden;text-overflow: ellipsis;wh
 	margin-top:20px;
 	
 }
-
+#footer .links a{ color:#fff}
+#footer .links a:hover{ color:#ccc}
 .footer_bg{ background:#333333; line-height:55px; padding:15px 0 15px 0}
 
 

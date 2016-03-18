@@ -2,14 +2,11 @@
 <div id="footer" class=" wrapper clearfix">
       <div class="cty">{$footprint}</div>
       <div class="links">
-         <form name="form1" id="form1">
-          <select name="menu1" onchange="MM_jumpMenu('parent',this,0)">
-          {foreach name=friend item=friend from=$global.links}
-<option>{$friend.title}</option>
+
+{foreach name=friend item=friend from=$global.links}
+<a href="{$friend.link}">{$friend.title}</a>
 {/foreach}
-           
-          </select>
-        </form>  
+ 
       </div>
     </div>
 </div>

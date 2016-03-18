@@ -101,7 +101,7 @@ $("#container .bg").each(function(n){
 
 /*大图 100%*/	
 	$("#kinMaxShow").kinMaxShow({
-            height: 280,
+            height: 282,
             button: {
                 showIndex: false,
                 normal: { background: 'url(images/button.png) no-repeat -14px 0', marginRight: '8px', border: '0', right: '48%', bottom: '20px' },
