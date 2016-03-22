@@ -2,7 +2,7 @@
 	  
 	  <div class="heaer">
     <div class="baner">
-          	<div class="logo"><img src="{$logo}" width="100%"></div>
+          	{if $logo|strrchr:'/'|strlen gt 1}<div class="logo"><img src="{$logo}" width="100%"></div>{/if}
             <div class="quickbar-showcats"><a href="#" id="quickbar-showcats"><img src="{$site_url}icon/66.png"></a></div>
             
 	<div id="slideBox" class="slideBox1">
