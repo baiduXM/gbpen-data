@@ -43,8 +43,9 @@ strong{display: block;margin: 0 auto;overflow: hidden;text-overflow: ellipsis;wh
 /*banner结束*/
 
 
-.foot{ padding:8px 58px 8px 8px; margin:0px 0px 0px; height:auto; background:#000; overflow:hidden; color:#fff; text-align:left;  position:relative; margin-top:15px;opacity:0.6;filter:Alpha(opacity=60);}
-.back-top{ height:25px; width:25px; text-align:center;  overflow:hidden; right:5px; top:5px; border:1px solid; border-color:rgba(0,0,0,0.2); border-radius:100%;  position:absolute;color:#fff; font-weight:normal; display:block;animation: lightheight 1s linear 2s infinite alternate;-webkit-animation: lightheight 1s linear infinite alternate; font-size:1.3em;}
+.foot{ padding:8px 58px 8px 8px; margin:0px 0px 0px; height:auto; background:#cc2326; overflow:hidden; color:#fff; text-align:left;  position:relative; margin-top:15px;opacity:0.8;filter:Alpha(opacity=80);}
+.foot a{ color:#fff}
+.back-top{ height:25px; width:25px; text-align:center;  overflow:hidden; right:5px; top:5px; border:1px solid; border-color:rgba(255,255,255,0.2); border-radius:100%;  position:absolute;color:#fff; font-weight:normal; display:block;animation: lightheight 1s linear 2s infinite alternate;-webkit-animation: lightheight 1s linear infinite alternate; font-size:1.3em;}
 
 
 
