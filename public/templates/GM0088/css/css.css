@@ -35,7 +35,7 @@
 #in_text .inner ul{  width:96%; margin:auto}
 #in_text ul li{ border-radius:5px;  width:98%; margin-bottom:15px; position:relative; padding:10px 0; }
 #in_text ul li .pic{ width:17%; border-radius:50%; border:2px solid #36a6d9; overflow:hidden; float:left; margin-right:2%;}
-#in_text ul li .in_textbox{ width:80%; overflow:hidden; margin:auto; }
+#in_text ul li .in_textbox{ width:80%; overflow:hidden; margin:auto; float:left; margin-left:1%; display:inline }
 #in_text ul li .in_textbox h2{overflow:hidden; margin:auto; border-bottom:1px dashed #cfcfd0; font-size:16px; line-height:30px; height:30px; }
 #in_text ul li .in_textbox .in_title{ height:22px; line-height:22px; display:block; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; font-size:1.1em; color:#171717;float:left; margin-top:5px;}
 #in_text ul li .in_textbox .in_data{font-size:14px; color:#b0b0b0;  font-size:12px; }
