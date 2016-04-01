@@ -178,7 +178,9 @@ strong{display: block;margin: 0 auto;overflow: hidden;text-overflow: ellipsis;wh
 /*分页*/
 
 /*list-page*/
-.list_page{}
+.list_page strong{
+    display: inline;
+}
 /*list-page*/
 
 /*list-image*/
