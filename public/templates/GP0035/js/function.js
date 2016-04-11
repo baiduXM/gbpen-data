@@ -8,6 +8,13 @@ window.onload=function(){
 	
 	}
 $(document).ready(function() {
+	$(".bd li").each(function(){
+	if($(this).find("img").width() > 640){
+        $(this).find("img").width("99%");
+}
+
+		})
+	
 /*侧边栏*/
 		$(".listbg li a").click(function () {
         $(this).parent().siblings().find(".second").slideUp()
