@@ -131,14 +131,10 @@ strong{display: block;margin: 0 auto;overflow: hidden;text-overflow: ellipsis;wh
 	width:165px;
 	position: relative;
 }
-h1.logo {
-	position:absolute;
-	left:300px;
-	top:10px;
-	
-	height:88px;
-	z-index:100;
-}
+
+.logo{width:230px;height: 88px; position:relative;position:absolute; left:250px;top:10px;z-index:100;}
+.logo a{display: block;height:88px;width: 230px;position: absolute;bottom: 0px; left:0;}
+.logo img{max-width:230px; max-height:88px; position:absolute; top:0; left:0; right:0; bottom:0; margin:auto}
 .nav {
 	position: relative;
 	width: 100%;
