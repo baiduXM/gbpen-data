@@ -81,7 +81,7 @@ $(document).ready(function() {
 $("#header").slideDown("slow")
 $("#banner").slideDown("slow")
 	$("#kinMaxShow").kinMaxShow({
-            height: 450,
+            height: 582,
             button: {
                 showIndex: false,
                 normal: { background: 'url(images/button.png) no-repeat -14px 0', marginRight: '8px', border: '0', right: '48%', bottom: '20px' },
