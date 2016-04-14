@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html manifest="huancun.manifest">
-<head>
-<!-- 实时预览调试代码，模板开发完成后删除 -->
+<html>
+	<head>
+		<!-- 实时预览调试代码，模板开发完成后删除 -->
 		
 		<!-- 调试代码 End -->
 		<script type="text/javascript">
@@ -13,38 +13,23 @@
 		{/if}
 		</script>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no,minimal-ui">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0, maximum-scale=1.5,user-scalable=no,minimal-ui">
+<meta name="keywords" content="{$keywords}" />
+<meta name="description" content="{$description}" />        
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 <meta content="telephone=no, email=no" name="format-detection">
-<!-- 启用360浏览器的极速模式(webkit) -->
 <meta name="renderer" content="webkit">
-<!-- 避免IE使用兼容模式 -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
 <meta name="HandheldFriendly" content="true">
-<!-- 微软的老式浏览器 -->
 <meta name="MobileOptimized" content="320">
-<!-- uc强制竖屏 -->
 <meta name="screen-orientation" content="portrait">
-<!-- QQ强制竖屏 -->
 <meta name="x5-orientation" content="portrait">
-<meta name="keywords" content="{$keywords}" />
-<meta name="description" content="{$description}" />
-<link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
 <title>{$title}</title>
-<link rel="stylesheet" href="{$site_url}css/reset.css" /> 
-<link rel="stylesheet" href="{$site_url}css/public.css" /> 
+
+<link rel="stylesheet" href="{$site_url}css/swiper.css">
+<link href="{$site_url}css/iconfont.css" rel="stylesheet" type="text/css" />
 <link href="{$site_url}css/css.css" rel="stylesheet" type="text/css" />
-<link href="{$site_url}css/swipe.css" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" rev="stylesheet" href="{$site_url}css/style_{$stylecolor}.css" type="text/css" />
-<script src="{$site_url}js/TouchSlide.1.1.js"></script>
-<script type="text/javascript" src="{$site_url}js/jquery.min.js"></script>
-<script type="text/javascript" src="{$site_url}js/function.js"></script>
-<script type="text/javascript" src="{$site_url}js/share.js"></script>
-<script src="{$site_url}js/idangerous.swiper-2.0.min.js"></script>
-<script src="{$site_url}js/idangerous.swiper.3dflow-2.0.js"></script>
-<script src="{$site_url}js/simple-app.js"></script>
 <script type="text/javascript">
 	window.addEventListener('load', function(){
    setTimeout(function(){ window.scrollTo(0, 1); }, 100);
@@ -52,104 +37,67 @@
 </script>
 </head>
 <body>
-<div class="body">
-<div class="class page-prev">
-
-</div>
-<div class="wrap page-active">
-<div class="opacity2"></div>
 
 
-
-<div class="index-wrap">
-	<header>    
-    	<div class="headerd">
-        	<div class="logo" align="center"><img src="{$logo}" width="190px" height="115px"></div>
-        </div>
-		
-     <div class="menu">
-            	<div class="nav">
-            	<a class="arrow-left" href="#">&lt;</a> 
-   				 <a class="arrow-right" href="#">&gt;</a>
-               <div class="swiper-nav swiper-container">
-                  <div class="swiper-wrapper">
-				<div class="swiper-slide"><span><a href="{$site_url}">网站首页</a></span></div>				  
-			   {foreach item=nav from=$navs}
-                      <div class="swiper-slide"><span><a href="{$nav.link}">{$nav.name}</a></span></div>
-					  {/foreach}
-                  </div>
-				</div>
-                </div>
-    </div> 
-<div class="baner_d">
-	<div id="slideBox" class="slideBox">
-    <div class="hd">
-            <ul></ul>
-              </div>
-	<div class="bd">
-		<ul>
-			{foreach name=slidepics item=slidepic from=$global.slidepics}
-            <li><a class="pic" href="{$slidepic.link}"><img src="{$slidepic.image}" title="638*484" /></a></li>
-			{/foreach}
-		</ul>
-	</div>
-	
+    <div class="wrap transition p_a">
+		<div class="main">
+		    <div class="aboutheader p_r">
+			   	 <i class="icon iconfont ss p_a">&#xe601;</i>
+			     <a href=""><img src="{$logo}" alt=""></a>
+				 <i class="icon iconfont slide-nav p_a">&#xe60f;</i>
+			 </div>
+		 	 <div class="aboutment swiper-container">
+		 	    <div  class="swiper-wrapper">
+			        
+				   {foreach item=nav from=$navs}
+						    <div class="swiper-slide">
+						        <ul>
+						        
+						            <li><a href="{$nav.link}">{$nav.name}</a></li>
+						            
+						           
+						        </ul>
+						    </div>
+						     {/foreach} 
+	             
+			    </div>   
 			</div>
-			
-   </div>          
-    </header>
-    <section>
-    	<div class="boxmain">
-        	<h1 class="boxmain-top"><span class="more3" id="font">字+</span><span class="more3" id="first">分类<span id="down"> &darr;</span><span id="up"> &uarr; </span></span>{$list.name}</h1>
-            <div class="font">
-            	<dl class="big">大</dl>
-                <dl class="normal">中</dl>
-                <dl class="small">小</dl>
-            	</div>
-            <div class="hide-class">
-              <div class="classbox">
-			  {foreach name=pagenavs item=nav from=$pagenavs}
-			<dl><a href="{$nav.link}"><span class="icon">&bull;</span>{$nav.name}</a></dl>
-			{if $nav.childmenu}
+            
+            <div class="about">
+            	<div class="className p_r">
+			     <div class="tit">{$list.name}<div class="font"><span class="type">分类∧</span><em class="font-set">字体+</em></div>
+				</div>
+                 <ul class="font-list font-sel" style="display: none;">
+				<li class="d">大</li>
+				<li class="z">中</li>
+				<li class="x">小</li>
+			</ul>
+				</div>
+				
+			  {include file="./_pagenavs_sub3.html"}
+		        <div class="aboutms info">
+		          
+		            <div class="infos">
+			           {$list.content|unescape:"html"}
+			        </div> 
+		        </div> 
+	        </div>  
+			 
+		    <p class="aboutbq">{$footprint}</p>
+		</div>
 	
-			{foreach key=key item=nav_list from=$nav.childmenu}
-        
-          <dl><a href="{$nav_list.link}"><span class="icon">&bull;</span>->{$nav_list.name}</a></dl>
-          {if $nav_list.childmenu}
-          
-            {foreach key=key item=nav_listsec from=$nav_list.childmenu}
-           
-             <dl><a href="{$nav_listsec.link}"><span class="icon">&bull;</span>-->{$nav_listsec.name}</a></dl>
-           
-            {/foreach}
-          
-          {/if}
-        
-        {/foreach}
-     
-      {/if}
-  
-    {/foreach}
-			  
-              </div>
-            </div>                     
-<div class="boxmain-ny-m">
-           		<div class="edite">
-					{$list.content|unescape:"html"}
-				</div>    	
-           </div>
-    
-        </div>
-    </section>
-	<div class="foot">
-        <!--底部版权-->
-        <div class="text">{$footprint}</div>
-      </div>
-	  <!--底部脚本(导航)-->
-    {$footscript}
-</div>
-</div>
-</div>
+		
+		
+		
 
+    </div>	
+		 {$footscript}
+
+
+<script src="{$site_url}js/jquery.min.js"></script>
+<script type="text/javascript" src="{$site_url}js/function.js"></script>
+<script type="text/javascript" src="{$site_url}js/lazyload.js"></script>
+<script type="text/javascript" src="{$site_url}js/swiper.min.js"></script>
+<script type="text/javascript" src="{$site_url}js/about.js"></script>
 </body>
 </html>
