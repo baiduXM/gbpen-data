@@ -22,8 +22,8 @@ $(document).ready(function() {
 			btnPrev: '#prizes a.photos-prev',
 			btnNext: '#prizes a.photos-next',
 			visible: 7,
-			auto: 3000,
-			speed: 10000000
+			auto: 30,
+			speed: 2000
 		}).css({visibility:"visible"});
         
 

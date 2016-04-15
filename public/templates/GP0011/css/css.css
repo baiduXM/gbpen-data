@@ -1,4 +1,4 @@
-body{ margin:0px; padding:0px; font-size:12px; background:#fff }
+﻿body{ margin:0px; padding:0px; font-size:12px; background:#fff }
 body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,input,textarea,div{margin:0;padding:0; list-style:none; line-height:24px;}
 *{ font-size:12px;color:#333; font-family:Microsoft Yahei;}
 .clearfix:after { content:'\20'; display:block; height:0; clear:both; }
@@ -7,7 +7,7 @@ a{ color:#eee8ba; text-decoration:none; font-family:Microsoft Yahei;}
 a:hover{  color:#eee8ba; } 
 .wrapper{width:920px; margin:0 auto;}
 img{ border:none;}
-strong{display: block;margin: 0 auto;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+strong{/*display: block;*/margin: 0 auto;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
 
 
 #header_bg{ height:126px; background:#e3e0dd; border-bottom:1px solid #fff;}
