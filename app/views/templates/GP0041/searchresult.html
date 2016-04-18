@@ -18,10 +18,10 @@
 <link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
 
 <script type="text/javascript" src="{$site_url}js/jquery-1.9.1.min.js"></script>
-<script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.js"></script>
-<script type="text/javascript" src="http://common.mn.sina.com.cn/public/resource/lib/jquery.jcarousellite.js">
-</script>
 <script type="text/javascript" src="{$site_url}js/function.js"></script>
+<script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.js"></script>
+<script type="text/javascript" src="{$site_url}js/function_main.js"></script>
+
 <title>{$title}</title> 
 
 </head>
@@ -61,7 +61,7 @@
                     </div>
                   </div>
                 </li>            
-              
+                {if $article@index+1 == 6} {break} {/if}
               {/foreach}
           </ul>
         {include file='./_paging.html'}

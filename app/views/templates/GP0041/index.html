@@ -19,9 +19,8 @@
 
 <script type="text/javascript" src="{$site_url}js/jquery-1.9.1.min.js"></script>
 <script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.js"></script>
-<script type="text/javascript" src="http://common.mn.sina.com.cn/public/resource/lib/jquery.jcarousellite.js">
-</script>
 <script type="text/javascript" src="{$site_url}js/function.js"></script>
+
 <title>{$title}</title> 
 {$headscript}
 </head>
@@ -33,7 +32,7 @@
     
     <div class="contact">
         <div class="con">
-            <h3 class="time"><span>{$contact.telephone}</span><i>客服热线:(工作时间9:00-16:00)</i></h3>
+            <h3 class="time"><span>{$contact.telephone}</span><i>{$index.tell1}</i></h3>
             <h3 class="address">{$contact.address}</h3>
         </div>
     </div> 
@@ -41,11 +40,9 @@
 <div class="public main">
     <div class="service">
         <div class="p_title"><span><a href="{$index.service.link}">{$index.service.name}</a></span></div>
-        <div id="prizes">
-            <div class="photos">
-                <a class="photos-button photos-prev" href="javascript:;"><i></i></a>
-                <div class="photos-content enable">
-                    <ul>                
+        <div class="photos picScroll-left">
+            <div class="bd">
+                    <ul>       
                         {foreach item=nav from=$index.service.childmenu}
                          <li>
                             <a href="{$nav.link}"><img src="{$nav.image}"></a>
@@ -55,9 +52,9 @@
                          </li>
                         {/foreach}
                     </ul>
-                </div>
-                <a class="photos-button photos-next" href="javascript:;"><i></i></a>
             </div>
+            <a class="photos-button prev" href="javascript:;"><i></i></a>
+            <a class="photos-button next" href="javascript:;"><i></i></a>
         </div>
     </div>
     <div class="main_bottom">
@@ -71,7 +68,7 @@
         <div class="new right">
             <h2>{$index.new.name}</h2>
             <div class="new_hot">
-            {foreach item=article from=$index.new.data} 
+            {foreach item=article from=$index.new.data}
                 {if $article@index == 0}
                 <a href="{$article.link}"><img src="{$article.image}"></a>
                 <div class="new_hot_con">

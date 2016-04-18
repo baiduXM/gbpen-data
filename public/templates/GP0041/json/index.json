@@ -22,7 +22,7 @@
 		}
 	},	
 	"service":{
-		"description": "banner下的分类滚动",
+		"description": "banner下的一级分类滚动",
 		"value": {},
 		"type": "list",
 		"config": {
@@ -32,13 +32,20 @@
 			"mustchild": true
 		}	
 	},
+	"tell1": {
+		"description": "服务热线下方的文字说明",
+		"value":"服务热线:(工作时间9:00-16:00)",
+		"type": "text"
+	},
+
+
     "about": {
 	"description": "版权左上方单页面",
 	"value": {},
 	"type": "page",
 	"config": {
-		"nav_width": 193,
-		"nav_ height": 193
+		"nav_width": 192,
+		"nav_ height": 192
 		}
 	},
 	"new": {
