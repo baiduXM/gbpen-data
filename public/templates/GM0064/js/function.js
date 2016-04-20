@@ -183,4 +183,24 @@ window.history.go(-1);
 		lineHeight:lineHeight+"px" 
 	});
 
+$('#search').click(function(){
+		$('.search_page').show();
+		$('.wrap').hide();
+	})
+
+	$("#search-back").click(function(){
+		$(".search_page").hide();
+		$('.wrap').show();
+		
+	})
+	$('#search').click(function(){
+		$('.search_page').show();
+		$('.about').hide();
+	})
+
+	$("#search-back").click(function(){
+		$(".search_page").hide();
+		$('.about').show();
+		
+	})
 });

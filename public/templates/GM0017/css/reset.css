@@ -1,4 +1,4 @@
-@charset "utf-8";
+﻿@charset "utf-8";
 *{ margin:0px; padding:0px;}
 a{ text-decoration:none}
 li{list-style:none;}
@@ -34,4 +34,4 @@ input::-moz-placeholder, textarea::-moz-placeholder { color: #cccccc; }
 input:-ms-input-placeholder, textarea:-ms-input-placeholder { color: #cccccc; }
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { color: #cccccc; }
 
-div{ z-index:1; position:relative}
+div{ z-index:1; position:relative;color: #ffda29;line-height: 30px;}
