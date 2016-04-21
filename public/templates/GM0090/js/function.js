@@ -1,4 +1,4 @@
-$(document).ready(function(){
+﻿$(document).ready(function(){
 	/*大图js效果*/
 	TouchSlide({ 
 					slideCell:"#slideBox",
@@ -17,7 +17,7 @@ $("#in_image ul li:last").css("margin-right",0)
 $("#in_image ul li").height($("#in_image ul li").width())
 $("#in_image ul li .in_proimg").height($("#in_image ul li").width())
 $("#in_page .pic").height($("#in_page .pic").width())
-$(".all div.wrapper:odd").css({"marginRight":"0","marginLeft":"auto"})
+
 $(".all div.wrapper:odd").find(".pic").css({"left":"-43%","right":"auto"})
 
 
