@@ -65,13 +65,17 @@
       <div class="all">
       {foreach name=mIndexCats item=mIndexCat from=$mIndexCats}
        {if $mIndexCat.type eq 4}
-      <div id="in_page" class="wrapper clearfix"><a href="{$mIndexCat.link}">
-        <div class="inner public_color">{$mIndexCat.description}</div>
-         <h2 class="in_h1 public_color1"><div class="in_zh">{$mIndexCat.name}</div></h2>
-        <div class="pic"><img src="{$mIndexCat.image}"></div>
-        </a>
-        </div>
+       <div class="all-item">
+        <div id="in_text" class="wrapper clearfix"><a href="{$mIndexCat.link}">
+          <div class="inner public_color">{$mIndexCat.description}</div>
+           <h2 class="in_h1 public_color1"><div class="in_zh">{$mIndexCat.name}</div></h2>
+          <div class="pic"><img src="{$mIndexCat.image}"></div>
+          </a>
+        </div>         
+       </div>
+
      {elseif $mIndexCat.type eq 1} 
+     <div class="all-item">
        <div id="in_text" class="wrapper clearfix">
          <div class="inner public_color">
             <ul>
@@ -83,7 +87,9 @@
              <h2 class="in_h1 public_color1"><a href="{$mIndexCat.link}">
              <div class="in_zh">{$mIndexCat.name}</div></a></h2>
              <div class="pic"><img src="{$mIndexCat.image}"></div>
-        </div>
+        </div>       
+     </div>
+
      
         {/if} 
 {/foreach}
