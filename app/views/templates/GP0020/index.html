@@ -49,8 +49,8 @@
 			
             {foreach name=prizesa item=article from=$index.prizesa.data}
 				<li>
-					<div class="pic"><a href="{$article.link}"><img width='158' height='158' src="{$article.image}" /></a></div>
-					<div class="title"><a href="###">{$article.title}</a></div>
+					<div class="pic"><a href="{$article.link}"><img src="{$article.image}" /></a></div>
+					<div class="title"><a href="{$article.link}">{$article.title}</a></div>
 				</li>
                   {if $article@index+1 == 8}{break}{/if}  
              {/foreach}   
