@@ -60,16 +60,16 @@
           </strong>{$article.category.name} \ <span class="en">{$article.category.en_name}</span></h1>
           <div class="right-m">
               <div class="bigimg">
-<!--                     <img src="{$article.images[0].image}" width="345" height="263" />
-                    <dt>{$article.title}</dt> -->
-                  <div  id="slideBoxb" class="slideBoxb" style="margin:0 auto">
-                    <div class="hd">
-                          <ul>
-                                  {foreach  item=proshowb from=$article.images}
-                                   <li>{$proshowb@index+1}</li>
-                                     {/foreach}
-                                   </ul>
-                           </div>
+                <div class="prodetimg fl">
+                  
+                  <div  id="slideBoxb" class="slideBoxb">
+                        <div class="hd">
+                              <ul>
+                                      {foreach  item=proshowb from=$article.images}
+                                       <li>{$proshowb@index+1}</li>
+                                         {/foreach}
+                                       </ul>
+                        </div>
                         <div class="bd">
                           <ul>
                                   {foreach item=proshowb from=$article.images}
@@ -77,14 +77,17 @@
                                       
                                   {/foreach}               
                           </ul>
-                          <h3>{$article.images[0].title}</h3>
+
                         </div>      
                         <!-- 下面是前/后按钮代码，如果不需要删除即可 -->
                         <a class="prev" href="javascript:void(0)"></a>
                         <a class="next" href="javascript:void(0)"></a>                  
 
-                  </div>                
-          
+                  </div>  
+                  <h3>{$article.images[0].title}</h3>                      
+                </div>
+              
+      
                   <dl style="padding-top:7px; float:left;margin:20px 10px;"><a href="{$article.category.link}"><img src="{$site_url}images/backbtn.jpg" /></a></dl>  
               </div>
  

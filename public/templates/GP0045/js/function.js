@@ -65,6 +65,5 @@ $(document).ready(function() {
         autoPlay: true,
         effect: "left"
     });
-	// 手风琴效果
-	$("#accordion").msAccordion({defaultid:2, autodelay:3});
+
 })

@@ -21,6 +21,7 @@
     <script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.1.js"></script>
     <script type="text/javascript" src="{$site_url}js/MSClass.js"></script>
     <script type="text/javascript" src="{$site_url}js/function.js"></script>
+    <script type="text/javascript" src="{$site_url}js/index.js"></script>
     <title>{$title}</title>
     {$headscript}
 </head>
@@ -89,7 +90,7 @@
                                     <ul id="MarqueeDiv1">
                                         {section name=key loop=$index.pro.data start=0 step=2}
                                         <li>
-                                            <a href="{$index.pro.data[key].link}"><img alt="" src="{$index.pro.data[key].image}" width="174" height="131" />
+                                            <a href="{$index.pro.data[key].link}"><img alt="" src="{$index.pro.data[key].image}" />
                                                 <h2>{$index.pro.data[key].title}</h2></a>
                                         </li>
                                         {if $smarty.section.key.rownum gt 2}{break}{/if} {/section}
@@ -99,7 +100,7 @@
                                     <ul id="MarqueeDiv2">
                                         {section name=key loop=$index.pro.data start=1 step=2}
                                         <li>
-                                            <a href="{$index.pro.data[key].link}"><img alt="" src="{$index.pro.data[key].image}" width="174" height="131" />
+                                            <a href="{$index.pro.data[key].link}"><img alt="" src="{$index.pro.data[key].image}"  />
                                                 <h2>{$index.pro.data[key].title}</h2></a>
                                         </li>
                                         {if $smarty.section.key.rownum gt 1}{break}{/if} {/section}

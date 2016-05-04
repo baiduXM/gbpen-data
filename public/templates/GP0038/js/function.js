@@ -50,13 +50,7 @@ $(document).ready(function(){
 			$(this).attr('id','sidetopa');
 			$('#code_img').hide();
 		})									
-		$('#prizes .photos-content.enable').jCarouselLite({
-			btnPrev: '#prizes a.photos-prev',
-			btnNext: '#prizes a.photos-next',
-			visible: 4,
-			auto: 300,
-			speed: 100
-		}).css({visibility:"visible"});					
+			
      
 
 

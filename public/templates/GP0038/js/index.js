@@ -76,3 +76,12 @@ document.write('<embed src="'+fileurl+'/images/bcastr3.swf" wmode="opaque" Flash
 }
 
 
+jQuery(document).ready(function($) {
+		$('#prizes .photos-content.enable').jCarouselLite({
+			btnPrev: '#prizes a.photos-prev',
+			btnNext: '#prizes a.photos-next',
+			visible: 4,
+			auto: 300,
+			speed: 1000
+		}).css({visibility:"visible"});		
+});
