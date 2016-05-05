@@ -262,7 +262,7 @@ h2.inner_news_time a:hover{ color:#ff9000; text-decoration:underline;}
 .slideBox .hd ul li.on{ background:#f00; color:#fff; }
 .slideBox .bd{ position:relative;z-index:0; width:500px;margin:0px auto; text-align:center;   }
 .slideBox .bd li{ zoom:1; vertical-align:middle; }
-.slideBox .bd img{ width:500px; display:block; margin:0px auto; text-align:center; }
+.slideBox .bd img{ display:block; margin:0px auto; text-align:center; }
 /* 下面是前/后按钮代码，如果不需要删除即可 */
 .slideBox .prev,
 .slideBox .next{ position:absolute; left:3%; top:50%; margin-top:-25px; display:block; width:32px; height:40px; background:url(../images/prev.png) left no-repeat;}

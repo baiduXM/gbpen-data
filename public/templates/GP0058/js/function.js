@@ -68,8 +68,8 @@ $(document).ready(function() {
 
 /*产品详细页图片自适应*/
 	$(".bd li").each(function(i){
-	if($(".bd li").eq(i).find("img").width() > 640){
-       $(".bd li").eq(i).find("img").width("99%");
+	if($(".bd li").eq(i).find("img").width() > 580){
+       $(".bd li").eq(i).find("img").width("50%");
 }
 
 		})
