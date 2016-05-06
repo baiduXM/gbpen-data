@@ -90,7 +90,7 @@
                     {else}            
 					<h3>  以下是您输入的关键字"{$search.keyword}"，共搜索到{$search.total}个结果</h3>
 					  {foreach item=article from=$search.data}<!--search_content_start-->
-					<li><a href="search_$link"><span class='fr'>({$article.pubdatestamp|date_format:"%y "}/{$article.pubdatestamp|date_format:"%d "}/{$article.pubdatestamp|date_format:"%m "})</span>search_$title </a></li>
+					<li><a href="search_$link"><span class='fr'></span>search_$title </a></li>
 					   <!--search_content_end-->{/foreach}
 					{/if}
 				</ul>

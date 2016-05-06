@@ -46,7 +46,7 @@
 	<body>
 	<div class="body">
 	<!-- 导航 -->
-	
+	{include file="./_nav.html"}
 	<div class="wrap page-active">
 	<div class="index-wrap">
 	<!-- 头部 -->
@@ -59,9 +59,9 @@
 			<p>共搜索到{$search.total}个结果</p>
                           <div class="lvyoudetal">
             	<ul>
-				{foreach name=article item=article from=$search.data}
-                	<li><a href="{$article.link}">{$article.title}</a></li>
-				{/foreach}
+				{foreach name=article item=article from=$search.data}<!--search_content_start-->
+                	<li><a href="search_$link">search_$title</a></li>
+				<!--search_content_end-->{/foreach}
                 </ul>
                 <div class="next1">
 					<a href="{$page_links.prev_link}">上一页</a>
