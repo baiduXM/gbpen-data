@@ -1,163 +1,38 @@
 {
-	"site_url": "",
+	"site_url": "./",
 	"site_another_url": "#此刻已跳转到与viewport相符的显示界面",
 	"search_action": "searchresult.html",
-	"title": "厦门纽巴客汽车设备有限公司",
+	"title": "网站标题",
 	"keywords": "关键词A,关键词B,关键词C",
 	"description": "这是这个页面的描述，这是一大段的描述语句，里面有很多的内容，多写点 多写点...",
-	"logo": "images/logo.png",
+	"logo": "http://chanpin.xm12t.com.cn/images/logo.png",
 	"favicon": "images/favicon.ico",
-	"stylecolor": "green",
-	"footprint": "copyright 2014-2015",
-	"footscript": "<!-- 这里将会输出底部脚本代码 -->",
+	"stylecolor": "red",
+	"footprint": "<p>copyright 2014-2015  备案号：闽ICP备******号<br />多输出一行调试</p><p class=\"techsupport\">技术支持：<a href=\"#\">厦门易尔通网络科技有限公司</a> 人才支持：<a href=\"#\">厦门人才网</a></p>",
+	"footscript": "<!-- 这里将会输出底部脚本代码 -->\n<script type=\"text/javascript\" src=\"http://chanpin.xm12t.com.cn/js/quickbar.js?debug\"></script>",
 	"headscript": "<!-- 这里将会输出头部脚本代码 -->",
 	"navs": [
 		{
-
-			"name": "关于我们",
-			"en_name": "ABOUT US",
-			"link": "list-page.html?id=1",
+			"name": "新闻列表",
+			"en_name": "News",
+			"link": "list-text.html?id=1",
+			"icon": "<i class=\"iconfont\">&#xe608;</i>",
 			"image": "http://chanpin.xm12t.com.cn/images/cat_01.jpg",
-			"description": "我司是国内最早从事汽车玻璃钢配件研发及制作的企业厂商之一，现为金龙联合汽车工业有限公司、金龙旅行车有限公司等整车制造企业玻璃钢配件的主要供应商。公司已先后通过ISO9001：2008质量管理体系认证、中国船级社的CCS工厂认证及产品CE认证，2011年被认定为“高新技术企业”。 2013年起我司成立了专用车事业部，专业从事冷藏车、房车、商务车、采血车等的改装和销售，现已和国内多家知名供应商合作....",
+			"description": "这是栏目的一段描述...",
 			"current": 0,
-			"lastest": null,
-			"type": 4,
-			"childmenu":null
-		},
-		{
-			"name": "新闻中心",
-			"en_name": "NEWS",
-			"link": "list-text.html?id=2",
-			"image": "http://chanpin.xm12t.com.cn/images/cat_01.jpg",
-			"current": 0,
+			"selected": 0,
 			"lastest": [
 				{
-					"title": "[台湾自由行4天3夜]",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img1.jpg",
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
 					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
+					"description": "今天天气不错，挺风和日丽的...",
 					"pubdate": "2014-12-25",
 					"pubtimestamp": 1419487200,
 					"category": {
 						"name": "导航A",
 						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "[曼谷-芭提雅-泰国双飞5日游]",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img2.jpg",
-					"link": "content-news.html",
-					"description": "暹罗剧场表演（列入金氏世界記錄的舞台）暹罗梦幻剧场是泰国规模最大的宏伟华丽剧院，剧场设",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "[雅加达-巴厘岛6日游]",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img3.jpg",
-					"link": "content-news.html",
-					"description": "第一天下午3点福州长乐国际机场集中，度假去喽！怀着一颗期待已",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "[台湾自由行4天3夜]",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img4.jpg",
-					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "[台湾自由行4天3夜]",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img5.jpg",
-					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "[台湾自由行4天3夜]",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img6.jpg",
-					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "[台湾自由行4天3夜]",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img7.jpg",
-					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "[台湾自由行4天3夜]",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img8.jpg",
-					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "[台湾自由行4天3夜]",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img9.jpg",
-					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "[台湾自由行4天3夜]",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img10.jpg",
-					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
 						"link": "list-imagetext.html"
 					}
 				},
@@ -171,6 +46,7 @@
 					"category": {
 						"name": "导航A",
 						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
 						"link": "list-imagetext.html"
 					}
 				},
@@ -184,6 +60,353 @@
 					"category": {
 						"name": "导航A",
 						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				}
+			],
+			"type": 1,
+			"childmenu": [
+				{
+					"name": "公司动态",
+					"en_name": "Company News",
+					"link": "list-text.html",
+					"icon": "<i class=\"iconfont\">&#xe608;</i>",
+					"image": "http://chanpin.xm12t.com.cn/images/cat_01.jpg",
+					"description": "这是栏目的一段描述...",
+					"current": 0,
+					"selected": 0,
+					"type": 1,
+					"childmenu": [
+						{
+							"name": "最新动态",
+							"en_name": "Hot News",
+							"link": "list-text.html",
+							"icon": "<i class=\"iconfont\">&#xe608;</i>",
+							"image": "http://chanpin.xm12t.com.cn/images/cat_01.jpg",
+							"description": "这是栏目的一段描述...",
+							"current": 0,
+							"selected": 0,
+							"type": 1,
+							"childmenu": null
+						}
+					]
+				},
+				{
+					"name": "业内新闻",
+					"en_name": "Industry News",
+					"link": "list-text.html",
+					"icon": "<i class=\"iconfont\">&#xe608;</i>",
+					"image": "http://chanpin.xm12t.com.cn/images/cat_01.jpg",
+					"description": "这是栏目的一段描述...",
+					"current": 0,
+					"selected": 0,
+					"type": 1,
+					"childmenu": null
+				}
+			]
+		},
+		{
+			"name": "产品中心",
+			"en_name": "Products",
+			"link": "list-imagetext.html?id=3",
+			"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+			"image": "http://chanpin.xm12t.com.cn/images/cat_01.jpg",
+			"description": "这是栏目的一段描述...",
+			"current": 1,
+			"selected": 0,
+			"lastest": [
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
 						"link": "list-imagetext.html"
 					}
 				}
@@ -191,489 +414,350 @@
 			"type": 3,
 			"childmenu": [
 				{
-					"name": "精选景点",
-					"en_name": "Seleted Attractions",
-					"link": "list-image.html?id=8",
+					"name": "A类产品",
+					"en_name": "Class A",
+					"link": "list-imagetext.html",
+					"icon": "<i class=\"iconfont\">&#xe60a;</i>",
 					"image": "http://chanpin.xm12t.com.cn/images/cat_01.jpg",
 					"description": "这是栏目的一段描述...",
 					"current": 0,
-					"lastest": [
-						{
-							"title": "[台湾自由行4天3夜]",
-							"image": "http://chanpin.xm12t.com.cn/images/tourlist/img1.jpg",
-							"link": "content-news.html",
-							"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-							"pubdate": "2014-12-25",
-							"pubtimestamp": 1419487200,
-							"category": {
-								"name": "导航A",
-								"en_name": "Nav A",
-								"link": "list-imagetext.html"
-							}
-						},
-						{
-							"title": "[曼谷-芭提雅-泰国双飞5日游]",
-							"image": "http://chanpin.xm12t.com.cn/images/tourlist/img2.jpg",
-							"link": "content-news.html",
-							"description": "暹罗剧场表演（列入金氏世界記錄的舞台）暹罗梦幻剧场是泰国规模最大的宏伟华丽剧院，剧场设",
-							"pubdate": "2014-12-25",
-							"pubtimestamp": 1419487200,
-							"category": {
-								"name": "导航A",
-								"en_name": "Nav A",
-								"link": "list-imagetext.html"
-							}
-						},
-						{
-							"title": "[雅加达-巴厘岛6日游]",
-							"image": "http://chanpin.xm12t.com.cn/images/tourlist/img3.jpg",
-							"link": "content-news.html",
-							"description": "第一天下午3点福州长乐国际机场集中，度假去喽！怀着一颗期待已",
-							"pubdate": "2014-12-25",
-							"pubtimestamp": 1419487200,
-							"category": {
-								"name": "导航A",
-								"en_name": "Nav A",
-								"link": "list-imagetext.html"
-							}
-						},
-						{
-							"title": "[台湾自由行4天3夜]",
-							"image": "http://chanpin.xm12t.com.cn/images/tourlist/img4.jpg",
-							"link": "content-news.html",
-							"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-							"pubdate": "2014-12-25",
-							"pubtimestamp": 1419487200,
-							"category": {
-								"name": "导航A",
-								"en_name": "Nav A",
-								"link": "list-imagetext.html"
-							}
-						},
-						{
-							"title": "[台湾自由行4天3夜]",
-							"image": "http://chanpin.xm12t.com.cn/images/tourlist/img5.jpg",
-							"link": "content-news.html",
-							"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-							"pubdate": "2014-12-25",
-							"pubtimestamp": 1419487200,
-							"category": {
-								"name": "导航A",
-								"en_name": "Nav A",
-								"link": "list-imagetext.html"
-							}
-						},
-						{
-							"title": "[台湾自由行4天3夜]",
-							"image": "http://chanpin.xm12t.com.cn/images/tourlist/img6.jpg",
-							"link": "content-news.html",
-							"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-							"pubdate": "2014-12-25",
-							"pubtimestamp": 1419487200,
-							"category": {
-								"name": "导航A",
-								"en_name": "Nav A",
-								"link": "list-imagetext.html"
-							}
-						},
-						{
-							"title": "[台湾自由行4天3夜]",
-							"image": "http://chanpin.xm12t.com.cn/images/tourlist/img7.jpg",
-							"link": "content-news.html",
-							"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-							"pubdate": "2014-12-25",
-							"pubtimestamp": 1419487200,
-							"category": {
-								"name": "导航A",
-								"en_name": "Nav A",
-								"link": "list-imagetext.html"
-							}
-						},
-						{
-							"title": "[台湾自由行4天3夜]",
-							"image": "http://chanpin.xm12t.com.cn/images/tourlist/img8.jpg",
-							"link": "content-news.html",
-							"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-							"pubdate": "2014-12-25",
-							"pubtimestamp": 1419487200,
-							"category": {
-								"name": "导航A",
-								"en_name": "Nav A",
-								"link": "list-imagetext.html"
-							}
-						},
-						{
-							"title": "[台湾自由行4天3夜]",
-							"image": "http://chanpin.xm12t.com.cn/images/tourlist/img9.jpg",
-							"link": "content-news.html",
-							"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-							"pubdate": "2014-12-25",
-							"pubtimestamp": 1419487200,
-							"category": {
-								"name": "导航A",
-								"en_name": "Nav A",
-								"link": "list-imagetext.html"
-							}
-						},
-						{
-							"title": "[台湾自由行4天3夜]",
-							"image": "http://chanpin.xm12t.com.cn/images/tourlist/img10.jpg",
-							"link": "content-news.html",
-							"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-							"pubdate": "2014-12-25",
-							"pubtimestamp": 1419487200,
-							"category": {
-								"name": "导航A",
-								"en_name": "Nav A",
-								"link": "list-imagetext.html"
-							}
-						},
-						{
-							"title": "这是一篇测试文章",
-							"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
-							"link": "content-news.html",
-							"description": "今天天气不错，挺风和日丽的...",
-							"pubdate": "2014-12-25",
-							"pubtimestamp": 1419487200,
-							"category": {
-								"name": "导航A",
-								"en_name": "Nav A",
-								"link": "list-imagetext.html"
-							}
-						},
-						{
-							"title": "这是一篇测试文章",
-							"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
-							"link": "content-news.html",
-							"description": "今天天气不错，挺风和日丽的...",
-							"pubdate": "2014-12-25",
-							"pubtimestamp": 1419487200,
-							"category": {
-								"name": "导航A",
-								"en_name": "Nav A",
-								"link": "list-imagetext.html"
-							}
-						}
-					],
-					"type": 2,
+					"selected": 0,
+					"type": 3,
 					"childmenu": null
 				},
 				{
-					"name": "当季热门景点",
-					"en_name": "Hot Attractions",
-					"link": "list-imagetext.html?id=9",
+					"name": "B类产品",
+					"en_name": "Class B",
+					"link": "list-imagetext.html",
+					"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+					"image": "http://chanpin.xm12t.com.cn/images/cat_01.jpg",
+					"description": "这是栏目的一段描述...",
+					"current": 1,
+					"selected": 0,
+					"type": 3,
+					"childmenu": [
+						{
+							"name": "B1类产品",
+							"en_name": "Class B1",
+							"link": "list-text.html",
+							"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+							"image": "http://chanpin.xm12t.com.cn/images/cat_01.jpg",
+							"description": "这是栏目的一段描述...",
+							"current": 1,
+							"selected": 0,
+							"type": 3,
+							"childmenu": [
+								{
+									"name": "B1a类产品",
+									"en_name": "Class B1a",
+									"link": "list-text.html",
+									"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+									"image": "http://chanpin.xm12t.com.cn/images/cat_01.jpg",
+									"description": "这是栏目的一段描述...",
+									"current": 1,
+									"selected": 1,
+									"type": 3,
+									"childmenu": null
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "C类产品",
+					"en_name": "Class C",
+					"link": "list-imagetext.html",
+					"icon": "<i class=\"iconfont\">&#xe60a;</i>",
 					"image": "http://chanpin.xm12t.com.cn/images/cat_01.jpg",
 					"description": "这是栏目的一段描述...",
 					"current": 0,
-					"lastest": [
-						{
-							"title": "[台湾自由行4天3夜]",
-							"image": "http://chanpin.xm12t.com.cn/images/tourlist/img1.jpg",
-							"link": "content-news.html",
-							"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-							"pubdate": "2014-12-25",
-							"pubtimestamp": 1419487200,
-							"category": {
-								"name": "导航A",
-								"en_name": "Nav A",
-								"link": "list-imagetext.html"
-							}
-						},
-						{
-							"title": "[曼谷-芭提雅-泰国双飞5日游]",
-							"image": "http://chanpin.xm12t.com.cn/images/tourlist/img2.jpg",
-							"link": "content-news.html",
-							"description": "暹罗剧场表演（列入金氏世界記錄的舞台）暹罗梦幻剧场是泰国规模最大的宏伟华丽剧院，剧场设",
-							"pubdate": "2014-12-25",
-							"pubtimestamp": 1419487200,
-							"category": {
-								"name": "导航A",
-								"en_name": "Nav A",
-								"link": "list-imagetext.html"
-							}
-						},
-						{
-							"title": "[雅加达-巴厘岛6日游]",
-							"image": "http://chanpin.xm12t.com.cn/images/tourlist/img3.jpg",
-							"link": "content-news.html",
-							"description": "第一天下午3点福州长乐国际机场集中，度假去喽！怀着一颗期待已",
-							"pubdate": "2014-12-25",
-							"pubtimestamp": 1419487200,
-							"category": {
-								"name": "导航A",
-								"en_name": "Nav A",
-								"link": "list-imagetext.html"
-							}
-						},
-						{
-							"title": "[台湾自由行4天3夜]",
-							"image": "http://chanpin.xm12t.com.cn/images/tourlist/img4.jpg",
-							"link": "content-news.html",
-							"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-							"pubdate": "2014-12-25",
-							"pubtimestamp": 1419487200,
-							"category": {
-								"name": "导航A",
-								"en_name": "Nav A",
-								"link": "list-imagetext.html"
-							}
-						},
-						{
-							"title": "[台湾自由行4天3夜]",
-							"image": "http://chanpin.xm12t.com.cn/images/tourlist/img5.jpg",
-							"link": "content-news.html",
-							"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-							"pubdate": "2014-12-25",
-							"pubtimestamp": 1419487200,
-							"category": {
-								"name": "导航A",
-								"en_name": "Nav A",
-								"link": "list-imagetext.html"
-							}
-						},
-						{
-							"title": "[台湾自由行4天3夜]",
-							"image": "http://chanpin.xm12t.com.cn/images/tourlist/img6.jpg",
-							"link": "content-news.html",
-							"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-							"pubdate": "2014-12-25",
-							"pubtimestamp": 1419487200,
-							"category": {
-								"name": "导航A",
-								"en_name": "Nav A",
-								"link": "list-imagetext.html"
-							}
-						},
-						{
-							"title": "[台湾自由行4天3夜]",
-							"image": "http://chanpin.xm12t.com.cn/images/tourlist/img7.jpg",
-							"link": "content-news.html",
-							"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-							"pubdate": "2014-12-25",
-							"pubtimestamp": 1419487200,
-							"category": {
-								"name": "导航A",
-								"en_name": "Nav A",
-								"link": "list-imagetext.html"
-							}
-						},
-						{
-							"title": "[台湾自由行4天3夜]",
-							"image": "http://chanpin.xm12t.com.cn/images/tourlist/img8.jpg",
-							"link": "content-news.html",
-							"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-							"pubdate": "2014-12-25",
-							"pubtimestamp": 1419487200,
-							"category": {
-								"name": "导航A",
-								"en_name": "Nav A",
-								"link": "list-imagetext.html"
-							}
-						},
-						{
-							"title": "[台湾自由行4天3夜]",
-							"image": "http://chanpin.xm12t.com.cn/images/tourlist/img9.jpg",
-							"link": "content-news.html",
-							"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-							"pubdate": "2014-12-25",
-							"pubtimestamp": 1419487200,
-							"category": {
-								"name": "导航A",
-								"en_name": "Nav A",
-								"link": "list-imagetext.html"
-							}
-						},
-						{
-							"title": "[台湾自由行4天3夜]",
-							"image": "http://chanpin.xm12t.com.cn/images/tourlist/img10.jpg",
-							"link": "content-news.html",
-							"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-							"pubdate": "2014-12-25",
-							"pubtimestamp": 1419487200,
-							"category": {
-								"name": "导航A",
-								"en_name": "Nav A",
-								"link": "list-imagetext.html"
-							}
-						},
-						{
-							"title": "这是一篇测试文章",
-							"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
-							"link": "content-news.html",
-							"description": "今天天气不错，挺风和日丽的...",
-							"pubdate": "2014-12-25",
-							"pubtimestamp": 1419487200,
-							"category": {
-								"name": "导航A",
-								"en_name": "Nav A",
-								"link": "list-imagetext.html"
-							}
-						},
-						{
-							"title": "这是一篇测试文章",
-							"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
-							"link": "content-news.html",
-							"description": "今天天气不错，挺风和日丽的...",
-							"pubdate": "2014-12-25",
-							"pubtimestamp": 1419487200,
-							"category": {
-								"name": "导航A",
-								"en_name": "Nav A",
-								"link": "list-imagetext.html"
-							}
-						}
-					],
+					"selected": 0,
+					"type": 3,
+					"childmenu": null
+				},
+				{
+					"name": "D类产品",
+					"en_name": "Class D",
+					"link": "list-imagetext.html",
+					"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+					"image": "http://chanpin.xm12t.com.cn/images/cat_01.jpg",
+					"description": "这是栏目的一段描述...",
+					"current": 0,
+					"selected": 0,
+					"type": 3,
+					"childmenu": null
+				},
+				{
+					"name": "E类产品",
+					"en_name": "Class E",
+					"link": "list-imagetext.html",
+					"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+					"image": "http://chanpin.xm12t.com.cn/images/cat_01.jpg",
+					"description": "这是栏目的一段描述...",
+					"current": 0,
+					"selected": 0,
 					"type": 3,
 					"childmenu": null
 				}
 			]
 		},
 		{
-			"name": "产品中心",
-			"en_name": "PRODUCTS",
-			"link": "list-image.html?id=3",
+			"name": "最新产品",
+			"en_name": "Lastest Products",
+			"link": "list-image.html?id=4",
+			"icon": "<i class=\"iconfont\">&#xe60a;</i>",
 			"image": "http://chanpin.xm12t.com.cn/images/cat_01.jpg",
 			"description": "这是栏目的一段描述...",
 			"current": 0,
+			"selected": 0,
+			"lastest": [
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				}
+			],
+			"type": 2,
+			"childmenu": null
+		},
+		{
+			"name": "关于我们",
+			"en_name": "About Us",
+			"link": "list-page.html?id=7",
+			"icon": "<i class=\"iconfont\">&#xe60f;</i>",
+			"image": "http://chanpin.xm12t.com.cn/images/cat_01.jpg",
+			"description": "这是栏目的一段描述...",
+			"content": "&lt;p&gt;这里是页面内容，可以使用html&lt;/p&gt;",
+			"current": 0,
+			"selected": 0,
+			"lastest": null,
+			"type": 4,
+			"childmenu": [
+				{
+					"name": "公司简介",
+					"en_name": "Company Intro",
+					"link": "list-page.html",
+					"icon": "<i class=\"iconfont\">&#xe60f;</i>",
+					"image": "http://chanpin.xm12t.com.cn/images/cat_01.jpg",
+					"description": "这是栏目的一段描述...",
+					"current": 0,
+					"selected": 0,
+					"type": 4,
+					"childmenu": null
+				},
+				{
+					"name": "公司荣誉",
+					"en_name": "Industry News",
+					"link": "list-image.html",
+					"icon": "<i class=\"iconfont\">&#xe60d;</i>",
+					"image": "http://chanpin.xm12t.com.cn/images/cat_01.jpg",
+					"description": "这是栏目的一段描述...",
+					"current": 0,
+					"selected": 0,
+					"type": 2,
+					"childmenu": null
+				}
+			]
+		},
+		{
+			"name": "联系我们",
+			"en_name": "Contact Us",
+			"link": "list-page.html?id=8",
+			"icon": "<i class=\"iconfont\">&#xe611;</i>",
+			"image": "http://chanpin.xm12t.com.cn/images/cat_01.jpg",
+			"description": "公司名称：XXX企业<br />公司电话：0592-2323232<br />公司地址：xxxxxxxxxx",
+			"content": "&lt;p&gt;这里是页面内容，可以使用html&lt;/p&gt;",
+			"current": 0,
+			"selected": 0,
 			"lastest": null,
 			"type": 4,
 			"childmenu": null
 		},
 		{
-			"name": "案例展示",
-			"en_name": "Trip Around",
-			"link": "list-text.html?id=4",
+			"name": "团队风采",
+			"en_name": "About Us",
+			"link": "list-image.html?id=9",
+			"icon": "<i class=\"iconfont\">&#xe60d;</i>",
 			"image": "http://chanpin.xm12t.com.cn/images/cat_01.jpg",
 			"description": "这是栏目的一段描述...",
+			"content": "&lt;p&gt;这里是页面内容，可以使用html&lt;/p&gt;",
 			"current": 0,
+			"selected": 0,
 			"lastest": [
 				{
-					"title": "[台湾自由行4天3夜]",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img1.jpg",
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
 					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
+					"description": "今天天气不错，挺风和日丽的...",
 					"pubdate": "2014-12-25",
 					"pubtimestamp": 1419487200,
 					"category": {
 						"name": "导航A",
 						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "[曼谷-芭提雅-泰国双飞5日游]",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img2.jpg",
-					"link": "content-news.html",
-					"description": "暹罗剧场表演（列入金氏世界記錄的舞台）暹罗梦幻剧场是泰国规模最大的宏伟华丽剧院，剧场设",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "[雅加达-巴厘岛6日游]",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img3.jpg",
-					"link": "content-news.html",
-					"description": "第一天下午3点福州长乐国际机场集中，度假去喽！怀着一颗期待已",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "[台湾自由行4天3夜]",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img4.jpg",
-					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "[台湾自由行4天3夜]",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img5.jpg",
-					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "[台湾自由行4天3夜]",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img6.jpg",
-					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "[台湾自由行4天3夜]",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img7.jpg",
-					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "[台湾自由行4天3夜]",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img8.jpg",
-					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "[台湾自由行4天3夜]",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img9.jpg",
-					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "[台湾自由行4天3夜]",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img10.jpg",
-					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
 						"link": "list-imagetext.html"
 					}
 				},
@@ -687,6 +771,7 @@
 					"category": {
 						"name": "导航A",
 						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
 						"link": "list-imagetext.html"
 					}
 				},
@@ -700,148 +785,212 @@
 					"category": {
 						"name": "导航A",
 						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
 						"link": "list-imagetext.html"
 					}
 				}
 			],
-			"type": 1,
+			"type": 2,
+			"childmenu": [
+				{
+					"name": "活动公告",
+					"en_name": "Company Intro",
+					"link": "list-text.html",
+					"icon": "<i class=\"iconfont\">&#xe608;</i>",
+					"image": "http://chanpin.xm12t.com.cn/images/cat_01.jpg",
+					"description": "这是栏目的一段描述...",
+					"current": 0,
+					"selected": 0,
+					"type": 1,
+					"childmenu": null
+				},
+				{
+					"name": "XXX活动",
+					"en_name": "Act XXX",
+					"link": "list-image.html",
+					"icon": "<i class=\"iconfont\">&#xe60d;</i>",
+					"image": "http://chanpin.xm12t.com.cn/images/cat_01.jpg",
+					"description": "这是栏目的一段描述...",
+					"current": 0,
+					"selected": 0,
+					"type": 2,
+					"childmenu": null
+				},
+				{
+					"name": "XX活动",
+					"en_name": "Act XX",
+					"link": "list-image.html",
+					"icon": "<i class=\"iconfont\">&#xe60d;</i>",
+					"image": "http://chanpin.xm12t.com.cn/images/cat_01.jpg",
+					"description": "这是栏目的一段描述...",
+					"current": 0,
+					"selected": 0,
+					"type": 2,
+					"childmenu": null
+				}
+			]
+		},
+		{
+			"name": "留言板",
+			"en_name": "Feed Back",
+			"link": "list-page.html?id=10",
+			"icon": "<i class=\"iconfont\">&#xe610;</i>",
+			"image": "http://chanpin.xm12t.com.cn/images/cat_01.jpg",
+			"description": "这是栏目的一段描述...",
+			"content": "&lt;img src=\"http://chanpin.xm12t.com.cn/images/guestbook.jpg\" width=\"90%\" /&gt;",
+			"current": 0,
+			"selected": 0,
+			"lastest": null,
+			"type": 5,
 			"childmenu": null
 		},
 		{
-			"name": "合作伙伴",
-			"en_name": "Trip Internal",
-			"link": "list-text.html?id=5",
+			"name": "企业动态",
+			"en_name": "Company News",
+			"link": "list-text.html?id=2",
+			"icon": "<i class=\"iconfont\">&#xe608;</i>",
 			"image": "http://chanpin.xm12t.com.cn/images/cat_01.jpg",
 			"description": "这是栏目的一段描述...",
 			"current": 0,
+			"selected": 0,
 			"lastest": [
 				{
-					"title": "[台湾自由行4天3夜]",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img1.jpg",
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
 					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
+					"description": "今天天气不错，挺风和日丽的...",
 					"pubdate": "2014-12-25",
 					"pubtimestamp": 1419487200,
 					"category": {
 						"name": "导航A",
 						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "[曼谷-芭提雅-泰国双飞5日游]",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img2.jpg",
-					"link": "content-news.html",
-					"description": "暹罗剧场表演（列入金氏世界記錄的舞台）暹罗梦幻剧场是泰国规模最大的宏伟华丽剧院，剧场设",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "[雅加达-巴厘岛6日游]",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img3.jpg",
-					"link": "content-news.html",
-					"description": "第一天下午3点福州长乐国际机场集中，度假去喽！怀着一颗期待已",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "[台湾自由行4天3夜]",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img4.jpg",
-					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "[台湾自由行4天3夜]",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img5.jpg",
-					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "[台湾自由行4天3夜]",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img6.jpg",
-					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "[台湾自由行4天3夜]",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img7.jpg",
-					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "[台湾自由行4天3夜]",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img8.jpg",
-					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "[台湾自由行4天3夜]",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img9.jpg",
-					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "[台湾自由行4天3夜]",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img10.jpg",
-					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
 						"link": "list-imagetext.html"
 					}
 				},
@@ -855,6 +1004,7 @@
 					"category": {
 						"name": "导航A",
 						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
 						"link": "list-imagetext.html"
 					}
 				},
@@ -868,347 +1018,211 @@
 					"category": {
 						"name": "导航A",
 						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
 						"link": "list-imagetext.html"
 					}
 				}
 			],
 			"type": 1,
-			"childmenu": null
+			"childmenu": [
+				{
+					"name": "导航F1",
+					"en_name": "Nav F1",
+					"link": "list-text.html",
+					"icon": "<i class=\"iconfont\">&#xe608;</i>",
+					"image": "http://chanpin.xm12t.com.cn/images/cat_01.jpg",
+					"description": "这是栏目的一段描述...",
+					"current": 0,
+					"selected": 0,
+					"type": 1,
+					"childmenu": null
+				},
+				{
+					"name": "导航F2",
+					"en_name": "Nav F2",
+					"link": "list-text.html",
+					"icon": "<i class=\"iconfont\">&#xe608;</i>",
+					"image": "http://chanpin.xm12t.com.cn/images/cat_01.jpg",
+					"description": "这是栏目的一段描述...",
+					"current": 0,
+					"selected": 0,
+					"type": 1,
+					"childmenu": null
+				},
+				{
+					"name": "导航F3",
+					"en_name": "Nav F3",
+					"link": "list-text.html",
+					"icon": "<i class=\"iconfont\">&#xe608;</i>",
+					"image": "http://chanpin.xm12t.com.cn/images/cat_01.jpg",
+					"description": "这是栏目的一段描述...",
+					"current": 0,
+					"selected": 0,
+					"type": 1,
+					"childmenu": [
+						{
+							"name": "导航F3a",
+							"en_name": "Nav F3a",
+							"link": "list-imagetext.html",
+							"icon": "<i class=\"iconfont\">&#xe608;</i>",
+							"image": "http://chanpin.xm12t.com.cn/images/cat_01.jpg",
+							"description": "这是栏目的一段描述...",
+							"current": 0,
+							"selected": 0,
+							"type": 3
+						},
+						{
+							"name": "导航F3b",
+							"en_name": "Nav F3b",
+							"link": "list-imagetext.html",
+							"icon": "<i class=\"iconfont\">&#xe608;</i>",
+							"image": "http://chanpin.xm12t.com.cn/images/cat_01.jpg",
+							"description": "这是栏目的一段描述...",
+							"current": 0,
+							"selected": 0,
+							"type": 3
+						}
+					]
+				}
+			]
 		},
 		{
-			"name": "意见反馈",
-			"en_name": "Trip International",
-			"link": "list-text.html?id=6",
+			"name": "论坛",
+			"en_name": "Forums",
+			"link": "http://tieba.baidu.com/",
+			"icon": "<i class=\"iconfont\">&#xe606;</i>",
 			"image": "http://chanpin.xm12t.com.cn/images/cat_01.jpg",
 			"description": "这是栏目的一段描述...",
 			"current": 0,
-			"lastest": [
-				{
-					"title": "[台湾自由行4天3夜]",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img1.jpg",
-					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "[曼谷-芭提雅-泰国双飞5日游]",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img2.jpg",
-					"link": "content-news.html",
-					"description": "暹罗剧场表演（列入金氏世界記錄的舞台）暹罗梦幻剧场是泰国规模最大的宏伟华丽剧院，剧场设",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "[雅加达-巴厘岛6日游]",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img3.jpg",
-					"link": "content-news.html",
-					"description": "第一天下午3点福州长乐国际机场集中，度假去喽！怀着一颗期待已",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "[台湾自由行4天3夜]",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img4.jpg",
-					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "[台湾自由行4天3夜]",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img5.jpg",
-					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "[台湾自由行4天3夜]",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img6.jpg",
-					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "[台湾自由行4天3夜]",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img7.jpg",
-					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "[台湾自由行4天3夜]",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img8.jpg",
-					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "[台湾自由行4天3夜]",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img9.jpg",
-					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "[台湾自由行4天3夜]",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img10.jpg",
-					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "这是一篇测试文章",
-					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
-					"link": "content-news.html",
-					"description": "今天天气不错，挺风和日丽的...",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "这是一篇测试文章",
-					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
-					"link": "content-news.html",
-					"description": "今天天气不错，挺风和日丽的...",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				}
-			],
-			"type": 1,
-			"childmenu": null
-		},
-		{
-			"name": "联系我们",
-			"en_name": "Trip Drive",
-			"link": "list-text.html?id=7",
-			"image": "http://chanpin.xm12t.com.cn/images/cat_01.jpg",
-			"description": "这是栏目的一段描述...",
-			"current": 0,
-			"lastest": [
-				{
-					"title": "[台湾自由行4天3夜]",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img1.jpg",
-					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "[曼谷-芭提雅-泰国双飞5日游]",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img2.jpg",
-					"link": "content-news.html",
-					"description": "暹罗剧场表演（列入金氏世界記錄的舞台）暹罗梦幻剧场是泰国规模最大的宏伟华丽剧院，剧场设",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "[雅加达-巴厘岛6日游]",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img3.jpg",
-					"link": "content-news.html",
-					"description": "第一天下午3点福州长乐国际机场集中，度假去喽！怀着一颗期待已",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "[台湾自由行4天3夜]",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img4.jpg",
-					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "[台湾自由行4天3夜]",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img5.jpg",
-					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "[台湾自由行4天3夜]",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img6.jpg",
-					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "[台湾自由行4天3夜]",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img7.jpg",
-					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "[台湾自由行4天3夜]",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img8.jpg",
-					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "[台湾自由行4天3夜]",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img9.jpg",
-					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "[台湾自由行4天3夜]",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img10.jpg",
-					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "这是一篇测试文章",
-					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
-					"link": "content-news.html",
-					"description": "今天天气不错，挺风和日丽的...",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "这是一篇测试文章",
-					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
-					"link": "content-news.html",
-					"description": "今天天气不错，挺风和日丽的...",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				}
-			],
-			"type": 1,
+			"selected": 0,
+			"lastest": null,
+			"type": 6,
 			"childmenu": null
 		}
 	],
@@ -1217,41 +1231,67 @@
 			"name": "导航F1",
 			"en_name": "Nav F1",
 			"link": "list-text.html",
+			"icon": "<i class=\"iconfont\">&#xe60a;</i>",
 			"image": "http://chanpin.xm12t.com.cn/images/cat_01.jpg",
 			"description": "这是栏目的一段描述...",
-			"current": 0
+			"current": 0,
+			"selected": 0,
+			"childmenu": null
 		},
 		{
 			"name": "导航F2",
 			"en_name": "Nav F2",
 			"link": "list-text.html",
+			"icon": "<i class=\"iconfont\">&#xe60a;</i>",
 			"image": "http://chanpin.xm12t.com.cn/images/cat_01.jpg",
 			"description": "这是栏目的一段描述...",
-			"current": 0
+			"current": 0,
+			"selected": 0,
+			"childmenu": null
 		},
 		{
 			"name": "导航F3",
 			"en_name": "Nav F3",
 			"link": "list-text.html",
+			"icon": "<i class=\"iconfont\">&#xe60a;</i>",
 			"image": "http://chanpin.xm12t.com.cn/images/cat_01.jpg",
 			"description": "这是栏目的一段描述...",
 			"current": 1,
+			"selected": 0,
 			"childmenu": [
 				{
 					"name": "导航F3a",
 					"en_name": "Nav F3a",
 					"link": "list-imagetext.html",
+					"icon": "<i class=\"iconfont\">&#xe60a;</i>",
 					"image": "http://chanpin.xm12t.com.cn/images/cat_01.jpg",
 					"description": "这是栏目的一段描述...",
-					"current": 1
+					"current": 1,
+					"selected": 0,
+					"childmenu": [
+						{
+							"name": "导航F3aa",
+							"en_name": "Nav F3aa",
+							"link": "list-imagetext.html",
+							"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+							"image": "http://chanpin.xm12t.com.cn/images/cat_01.jpg",
+							"description": "这是栏目的一段描述...",
+							"current": 1,
+							"selected": 1,
+							"childmenu": null
+						}
+					]
 				},
 				{
 					"name": "导航F3b",
 					"en_name": "Nav F3b",
 					"link": "list-imagetext.html",
+					"icon": "<i class=\"iconfont\">&#xe60a;</i>",
 					"image": "http://chanpin.xm12t.com.cn/images/cat_01.jpg",
 					"description": "这是栏目的一段描述...",
-					"current": 0
+					"current": 0,
+					"selected": 0,
+					"childmenu": null
 				}
 			]
 		}
@@ -1260,21 +1300,24 @@
 		{
 			"name": "导航F",
 			"en_name": "Nav F",
+			"icon": "<i class=\"iconfont\">&#xe60a;</i>",
 			"link": "list-text.html"
 		},
 		{
 			"name": "导航F3",
 			"en_name": "Nav F3",
+			"icon": "<i class=\"iconfont\">&#xe60a;</i>",
 			"link": "list-text.html"
 		},
 		{
 			"name": "导航F3a",
 			"en_name": "Nav F3a",
+			"icon": "<i class=\"iconfont\">&#xe60a;</i>",
 			"link": "list-imagetext.html"
 		}
 	],
 	"contact": {
-		"company": "厦门纽巴客汽车设备有限公司",
+		"company": "XXX有限公司",
 		"name": "X先生",
 		"mobile": 13489990000,
 		"telephone": "0592-23232232",
@@ -1297,12 +1340,14 @@
 			}
 		],
 		"description": "今天天气不错，挺风和日丽的...",
-		"content": "<p>外景照片更加自然更加美丽，是婚纱照不可或缺的，涉及外景车，燃油，工餐，饮水等费用都是由蒙娜丽莎来担负的。一些高端套系比如万元以上是没有任何场地费用的，但是一些低端套系，如果您想去特殊景点如非常勿扰2、蜈支洲岛等，要有相应的场地费。</p><p>完全不用携带多余的东西，下列物品需携带：防晒霜、太阳伞、防蚊液、隐形文胸，如果有条件自己带几件便装，可以让挑选的余地更大，太多的东西反而累赘。</p><p>您选择的游艇套系所需要的一些小道具我们蒙娜丽莎工作室都有相应的安排，请不必担心。再有特殊细节注意事项，客服会在拍摄日期之前一一通知到位。</p><p>您选择的游艇套系所需要的一些小道具我们蒙娜丽莎工作室都有相应的安排，请不必担心。再有特殊细节注意事项，客服会在拍摄日期之前一一通知到位。</p><p>在拍婚纱照前几天一定要休息好，保证皮肤状况良好，因为蒙娜丽莎倡导淡妆的真实美，如果恰好皮肤问题集中爆发，只能让化妆师的妙手来帮你啦，呵呵。蒙娜丽莎的化妆师造型师会把你打扮的美美的。</p><p>选片方面蒙娜丽莎也有人性化的服务，首先确定是否加选照片，明确挑片所需时间，我们会有专人陪同选片的，以严苛的角度来挑选，注意表情、光线、美感搭配度、动作、小细节等标准。您也可将自己喜欢的排版方式和精修片风格传达给后期数码师，数码师会酌情处理。另外，蒙娜丽莎的底片是全送的，您拿到照片后也可在当地另行加工。<br />在修片环节，蒙娜丽莎倡导调整光线美感和明显瑕疵的修复，会尽量完整的保留原始图片美感。如果修的太厉害，难免会失真的。尺度的把握数码师会从专业角度处理。其实就算一点没有精修的原图片就已经很惊艳了，蒙娜丽莎摄影师在外景拍摄上不会让您失望的。</p>",
+		"content": "&lt;p&gt;文章内容...&lt;/p&gt;&lt;p&gt;一大段文章内容...&lt;/p&gt;",
 		"pubdate": "2014-12-25",
 		"pubtimestamp": 1419487200,
+		"viewcount": "<em id=\"article-viewcount\">99</em>",
 		"category": {
 			"name": "导航A",
 			"en_name": "Nav A",
+			"icon": "<i class=\"iconfont\">&#xe60a;</i>",
 			"link": "list-imagetext.html"
 		},
 		"prev": {
@@ -1316,132 +1361,16 @@
 	},
 	"related": [
 		{
-			"title": "[台湾自由行4天3夜]",
-			"image": "http://chanpin.xm12t.com.cn/images/tourlist/img1.jpg",
+			"title": "这是一篇测试文章",
+			"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
 			"link": "content-news.html",
-			"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
+			"description": "今天天气不错，挺风和日丽的...",
 			"pubdate": "2014-12-25",
 			"pubtimestamp": 1419487200,
 			"category": {
 				"name": "导航A",
 				"en_name": "Nav A",
-				"link": "list-imagetext.html"
-			}
-		},
-		{
-			"title": "[曼谷-芭提雅-泰国双飞5日游]",
-			"image": "http://chanpin.xm12t.com.cn/images/tourlist/img2.jpg",
-			"link": "content-news.html",
-			"description": "暹罗剧场表演（列入金氏世界記錄的舞台）暹罗梦幻剧场是泰国规模最大的宏伟华丽剧院，剧场设",
-			"pubdate": "2014-12-25",
-			"pubtimestamp": 1419487200,
-			"category": {
-				"name": "导航A",
-				"en_name": "Nav A",
-				"link": "list-imagetext.html"
-			}
-		},
-		{
-			"title": "[雅加达-巴厘岛6日游]",
-			"image": "http://chanpin.xm12t.com.cn/images/tourlist/img3.jpg",
-			"link": "content-news.html",
-			"description": "第一天下午3点福州长乐国际机场集中，度假去喽！怀着一颗期待已",
-			"pubdate": "2014-12-25",
-			"pubtimestamp": 1419487200,
-			"category": {
-				"name": "导航A",
-				"en_name": "Nav A",
-				"link": "list-imagetext.html"
-			}
-		},
-		{
-			"title": "[台湾自由行4天3夜]",
-			"image": "http://chanpin.xm12t.com.cn/images/tourlist/img4.jpg",
-			"link": "content-news.html",
-			"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-			"pubdate": "2014-12-25",
-			"pubtimestamp": 1419487200,
-			"category": {
-				"name": "导航A",
-				"en_name": "Nav A",
-				"link": "list-imagetext.html"
-			}
-		},
-		{
-			"title": "[台湾自由行4天3夜]",
-			"image": "http://chanpin.xm12t.com.cn/images/tourlist/img5.jpg",
-			"link": "content-news.html",
-			"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-			"pubdate": "2014-12-25",
-			"pubtimestamp": 1419487200,
-			"category": {
-				"name": "导航A",
-				"en_name": "Nav A",
-				"link": "list-imagetext.html"
-			}
-		},
-		{
-			"title": "[台湾自由行4天3夜]",
-			"image": "http://chanpin.xm12t.com.cn/images/tourlist/img6.jpg",
-			"link": "content-news.html",
-			"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-			"pubdate": "2014-12-25",
-			"pubtimestamp": 1419487200,
-			"category": {
-				"name": "导航A",
-				"en_name": "Nav A",
-				"link": "list-imagetext.html"
-			}
-		},
-		{
-			"title": "[台湾自由行4天3夜]",
-			"image": "http://chanpin.xm12t.com.cn/images/tourlist/img7.jpg",
-			"link": "content-news.html",
-			"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-			"pubdate": "2014-12-25",
-			"pubtimestamp": 1419487200,
-			"category": {
-				"name": "导航A",
-				"en_name": "Nav A",
-				"link": "list-imagetext.html"
-			}
-		},
-		{
-			"title": "[台湾自由行4天3夜]",
-			"image": "http://chanpin.xm12t.com.cn/images/tourlist/img8.jpg",
-			"link": "content-news.html",
-			"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-			"pubdate": "2014-12-25",
-			"pubtimestamp": 1419487200,
-			"category": {
-				"name": "导航A",
-				"en_name": "Nav A",
-				"link": "list-imagetext.html"
-			}
-		},
-		{
-			"title": "[台湾自由行4天3夜]",
-			"image": "http://chanpin.xm12t.com.cn/images/tourlist/img9.jpg",
-			"link": "content-news.html",
-			"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-			"pubdate": "2014-12-25",
-			"pubtimestamp": 1419487200,
-			"category": {
-				"name": "导航A",
-				"en_name": "Nav A",
-				"link": "list-imagetext.html"
-			}
-		},
-		{
-			"title": "[台湾自由行4天3夜]",
-			"image": "http://chanpin.xm12t.com.cn/images/tourlist/img10.jpg",
-			"link": "content-news.html",
-			"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-			"pubdate": "2014-12-25",
-			"pubtimestamp": 1419487200,
-			"category": {
-				"name": "导航A",
-				"en_name": "Nav A",
+				"icon": "<i class=\"iconfont\">&#xe60a;</i>",
 				"link": "list-imagetext.html"
 			}
 		},
@@ -1455,6 +1384,7 @@
 			"category": {
 				"name": "导航A",
 				"en_name": "Nav A",
+				"icon": "<i class=\"iconfont\">&#xe60a;</i>",
 				"link": "list-imagetext.html"
 			}
 		},
@@ -1468,6 +1398,133 @@
 			"category": {
 				"name": "导航A",
 				"en_name": "Nav A",
+				"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+				"link": "list-imagetext.html"
+			}
+		},
+		{
+			"title": "这是一篇测试文章",
+			"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+			"link": "content-news.html",
+			"description": "今天天气不错，挺风和日丽的...",
+			"pubdate": "2014-12-25",
+			"pubtimestamp": 1419487200,
+			"category": {
+				"name": "导航A",
+				"en_name": "Nav A",
+				"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+				"link": "list-imagetext.html"
+			}
+		},
+		{
+			"title": "这是一篇测试文章",
+			"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+			"link": "content-news.html",
+			"description": "今天天气不错，挺风和日丽的...",
+			"pubdate": "2014-12-25",
+			"pubtimestamp": 1419487200,
+			"category": {
+				"name": "导航A",
+				"en_name": "Nav A",
+				"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+				"link": "list-imagetext.html"
+			}
+		},
+		{
+			"title": "这是一篇测试文章",
+			"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+			"link": "content-news.html",
+			"description": "今天天气不错，挺风和日丽的...",
+			"pubdate": "2014-12-25",
+			"pubtimestamp": 1419487200,
+			"category": {
+				"name": "导航A",
+				"en_name": "Nav A",
+				"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+				"link": "list-imagetext.html"
+			}
+		},
+		{
+			"title": "这是一篇测试文章",
+			"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+			"link": "content-news.html",
+			"description": "今天天气不错，挺风和日丽的...",
+			"pubdate": "2014-12-25",
+			"pubtimestamp": 1419487200,
+			"category": {
+				"name": "导航A",
+				"en_name": "Nav A",
+				"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+				"link": "list-imagetext.html"
+			}
+		},
+		{
+			"title": "这是一篇测试文章",
+			"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+			"link": "content-news.html",
+			"description": "今天天气不错，挺风和日丽的...",
+			"pubdate": "2014-12-25",
+			"pubtimestamp": 1419487200,
+			"category": {
+				"name": "导航A",
+				"en_name": "Nav A",
+				"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+				"link": "list-imagetext.html"
+			}
+		},
+		{
+			"title": "这是一篇测试文章",
+			"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+			"link": "content-news.html",
+			"description": "今天天气不错，挺风和日丽的...",
+			"pubdate": "2014-12-25",
+			"pubtimestamp": 1419487200,
+			"category": {
+				"name": "导航A",
+				"en_name": "Nav A",
+				"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+				"link": "list-imagetext.html"
+			}
+		},
+		{
+			"title": "这是一篇测试文章",
+			"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+			"link": "content-news.html",
+			"description": "今天天气不错，挺风和日丽的...",
+			"pubdate": "2014-12-25",
+			"pubtimestamp": 1419487200,
+			"category": {
+				"name": "导航A",
+				"en_name": "Nav A",
+				"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+				"link": "list-imagetext.html"
+			}
+		},
+		{
+			"title": "这是一篇测试文章",
+			"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+			"link": "content-news.html",
+			"description": "今天天气不错，挺风和日丽的...",
+			"pubdate": "2014-12-25",
+			"pubtimestamp": 1419487200,
+			"category": {
+				"name": "导航A",
+				"en_name": "Nav A",
+				"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+				"link": "list-imagetext.html"
+			}
+		},
+		{
+			"title": "这是一篇测试文章",
+			"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+			"link": "content-news.html",
+			"description": "今天天气不错，挺风和日丽的...",
+			"pubdate": "2014-12-25",
+			"pubtimestamp": 1419487200,
+			"category": {
+				"name": "导航A",
+				"en_name": "Nav A",
+				"icon": "<i class=\"iconfont\">&#xe60a;</i>",
 				"link": "list-imagetext.html"
 			}
 		}
@@ -1475,138 +1532,23 @@
 	"list": {
 		"name": "栏目A",
 		"en_name": "Nav A",
-		"image": "http://chanpin.xm12t.com.cn/images/tourlist/img1.jpg",
+		"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+		"image": "http://chanpin.xm12t.com.cn/images/cat_01.jpg",
 		"link": "list-text.html",
 		"description": "这是栏目A的一段描述...",
-		"content": "<p>外景照片更加自然更加美丽，是婚纱照不可或缺的，涉及外景车，燃油，工餐，饮水等费用都是由蒙娜丽莎来担负的。一些高端套系比如万元以上是没有任何场地费用的，但是一些低端套系，如果您想去特殊景点如非常勿扰2、蜈支洲岛等，要有相应的场地费。</p><p>完全不用携带多余的东西，下列物品需携带：防晒霜、太阳伞、防蚊液、隐形文胸，如果有条件自己带几件便装，可以让挑选的余地更大，太多的东西反而累赘。</p><p>您选择的游艇套系所需要的一些小道具我们蒙娜丽莎工作室都有相应的安排，请不必担心。再有特殊细节注意事项，客服会在拍摄日期之前一一通知到位。</p><p>您选择的游艇套系所需要的一些小道具我们蒙娜丽莎工作室都有相应的安排，请不必担心。再有特殊细节注意事项，客服会在拍摄日期之前一一通知到位。</p><p>在拍婚纱照前几天一定要休息好，保证皮肤状况良好，因为蒙娜丽莎倡导淡妆的真实美，如果恰好皮肤问题集中爆发，只能让化妆师的妙手来帮你啦，呵呵。蒙娜丽莎的化妆师造型师会把你打扮的美美的。</p><p>选片方面蒙娜丽莎也有人性化的服务，首先确定是否加选照片，明确挑片所需时间，我们会有专人陪同选片的，以严苛的角度来挑选，注意表情、光线、美感搭配度、动作、小细节等标准。您也可将自己喜欢的排版方式和精修片风格传达给后期数码师，数码师会酌情处理。另外，蒙娜丽莎的底片是全送的，您拿到照片后也可在当地另行加工。<br />在修片环节，蒙娜丽莎倡导调整光线美感和明显瑕疵的修复，会尽量完整的保留原始图片美感。如果修的太厉害，难免会失真的。尺度的把握数码师会从专业角度处理。其实就算一点没有精修的原图片就已经很惊艳了，蒙娜丽莎摄影师在外景拍摄上不会让您失望的。</p>",
+		"content": "&lt;p&gt;这里是页面内容，可以使用html&lt;/p&gt;",
 		"data": [
 			{
-				"title": "[台湾自由行4天3夜]",
-				"image": "http://chanpin.xm12t.com.cn/images/tourlist/img1.jpg",
+				"title": "这是一篇测试文章",
+				"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
 				"link": "content-news.html",
-				"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
+				"description": "今天天气不错，挺风和日丽的...",
 				"pubdate": "2014-12-25",
 				"pubtimestamp": 1419487200,
 				"category": {
 					"name": "导航A",
 					"en_name": "Nav A",
-					"link": "list-imagetext.html"
-				}
-			},
-			{
-				"title": "[曼谷-芭提雅-泰国双飞5日游]",
-				"image": "http://chanpin.xm12t.com.cn/images/tourlist/img2.jpg",
-				"link": "content-news.html",
-				"description": "暹罗剧场表演（列入金氏世界記錄的舞台）暹罗梦幻剧场是泰国规模最大的宏伟华丽剧院，剧场设",
-				"pubdate": "2014-12-25",
-				"pubtimestamp": 1419487200,
-				"category": {
-					"name": "导航A",
-					"en_name": "Nav A",
-					"link": "list-imagetext.html"
-				}
-			},
-			{
-				"title": "[雅加达-巴厘岛6日游]",
-				"image": "http://chanpin.xm12t.com.cn/images/tourlist/img3.jpg",
-				"link": "content-news.html",
-				"description": "第一天下午3点福州长乐国际机场集中，度假去喽！怀着一颗期待已",
-				"pubdate": "2014-12-25",
-				"pubtimestamp": 1419487200,
-				"category": {
-					"name": "导航A",
-					"en_name": "Nav A",
-					"link": "list-imagetext.html"
-				}
-			},
-			{
-				"title": "[台湾自由行4天3夜]",
-				"image": "http://chanpin.xm12t.com.cn/images/tourlist/img4.jpg",
-				"link": "content-news.html",
-				"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-				"pubdate": "2014-12-25",
-				"pubtimestamp": 1419487200,
-				"category": {
-					"name": "导航A",
-					"en_name": "Nav A",
-					"link": "list-imagetext.html"
-				}
-			},
-			{
-				"title": "[台湾自由行4天3夜]",
-				"image": "http://chanpin.xm12t.com.cn/images/tourlist/img5.jpg",
-				"link": "content-news.html",
-				"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-				"pubdate": "2014-12-25",
-				"pubtimestamp": 1419487200,
-				"category": {
-					"name": "导航A",
-					"en_name": "Nav A",
-					"link": "list-imagetext.html"
-				}
-			},
-			{
-				"title": "[台湾自由行4天3夜]",
-				"image": "http://chanpin.xm12t.com.cn/images/tourlist/img6.jpg",
-				"link": "content-news.html",
-				"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-				"pubdate": "2014-12-25",
-				"pubtimestamp": 1419487200,
-				"category": {
-					"name": "导航A",
-					"en_name": "Nav A",
-					"link": "list-imagetext.html"
-				}
-			},
-			{
-				"title": "[台湾自由行4天3夜]",
-				"image": "http://chanpin.xm12t.com.cn/images/tourlist/img7.jpg",
-				"link": "content-news.html",
-				"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-				"pubdate": "2014-12-25",
-				"pubtimestamp": 1419487200,
-				"category": {
-					"name": "导航A",
-					"en_name": "Nav A",
-					"link": "list-imagetext.html"
-				}
-			},
-			{
-				"title": "[台湾自由行4天3夜]",
-				"image": "http://chanpin.xm12t.com.cn/images/tourlist/img8.jpg",
-				"link": "content-news.html",
-				"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-				"pubdate": "2014-12-25",
-				"pubtimestamp": 1419487200,
-				"category": {
-					"name": "导航A",
-					"en_name": "Nav A",
-					"link": "list-imagetext.html"
-				}
-			},
-			{
-				"title": "[台湾自由行4天3夜]",
-				"image": "http://chanpin.xm12t.com.cn/images/tourlist/img9.jpg",
-				"link": "content-news.html",
-				"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-				"pubdate": "2014-12-25",
-				"pubtimestamp": 1419487200,
-				"category": {
-					"name": "导航A",
-					"en_name": "Nav A",
-					"link": "list-imagetext.html"
-				}
-			},
-			{
-				"title": "[台湾自由行4天3夜]",
-				"image": "http://chanpin.xm12t.com.cn/images/tourlist/img10.jpg",
-				"link": "content-news.html",
-				"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-				"pubdate": "2014-12-25",
-				"pubtimestamp": 1419487200,
-				"category": {
-					"name": "导航A",
-					"en_name": "Nav A",
+					"icon": "<i class=\"iconfont\">&#xe60a;</i>",
 					"link": "list-imagetext.html"
 				}
 			},
@@ -1620,6 +1562,7 @@
 				"category": {
 					"name": "导航A",
 					"en_name": "Nav A",
+					"icon": "<i class=\"iconfont\">&#xe60a;</i>",
 					"link": "list-imagetext.html"
 				}
 			},
@@ -1633,6 +1576,133 @@
 				"category": {
 					"name": "导航A",
 					"en_name": "Nav A",
+					"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+					"link": "list-imagetext.html"
+				}
+			},
+			{
+				"title": "这是一篇测试文章",
+				"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+				"link": "content-news.html",
+				"description": "今天天气不错，挺风和日丽的...",
+				"pubdate": "2014-12-25",
+				"pubtimestamp": 1419487200,
+				"category": {
+					"name": "导航A",
+					"en_name": "Nav A",
+					"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+					"link": "list-imagetext.html"
+				}
+			},
+			{
+				"title": "这是一篇测试文章",
+				"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+				"link": "content-news.html",
+				"description": "今天天气不错，挺风和日丽的...",
+				"pubdate": "2014-12-25",
+				"pubtimestamp": 1419487200,
+				"category": {
+					"name": "导航A",
+					"en_name": "Nav A",
+					"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+					"link": "list-imagetext.html"
+				}
+			},
+			{
+				"title": "这是一篇测试文章",
+				"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+				"link": "content-news.html",
+				"description": "今天天气不错，挺风和日丽的...",
+				"pubdate": "2014-12-25",
+				"pubtimestamp": 1419487200,
+				"category": {
+					"name": "导航A",
+					"en_name": "Nav A",
+					"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+					"link": "list-imagetext.html"
+				}
+			},
+			{
+				"title": "这是一篇测试文章",
+				"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+				"link": "content-news.html",
+				"description": "今天天气不错，挺风和日丽的...",
+				"pubdate": "2014-12-25",
+				"pubtimestamp": 1419487200,
+				"category": {
+					"name": "导航A",
+					"en_name": "Nav A",
+					"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+					"link": "list-imagetext.html"
+				}
+			},
+			{
+				"title": "这是一篇测试文章",
+				"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+				"link": "content-news.html",
+				"description": "今天天气不错，挺风和日丽的...",
+				"pubdate": "2014-12-25",
+				"pubtimestamp": 1419487200,
+				"category": {
+					"name": "导航A",
+					"en_name": "Nav A",
+					"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+					"link": "list-imagetext.html"
+				}
+			},
+			{
+				"title": "这是一篇测试文章",
+				"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+				"link": "content-news.html",
+				"description": "今天天气不错，挺风和日丽的...",
+				"pubdate": "2014-12-25",
+				"pubtimestamp": 1419487200,
+				"category": {
+					"name": "导航A",
+					"en_name": "Nav A",
+					"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+					"link": "list-imagetext.html"
+				}
+			},
+			{
+				"title": "这是一篇测试文章",
+				"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+				"link": "content-news.html",
+				"description": "今天天气不错，挺风和日丽的...",
+				"pubdate": "2014-12-25",
+				"pubtimestamp": 1419487200,
+				"category": {
+					"name": "导航A",
+					"en_name": "Nav A",
+					"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+					"link": "list-imagetext.html"
+				}
+			},
+			{
+				"title": "这是一篇测试文章",
+				"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+				"link": "content-news.html",
+				"description": "今天天气不错，挺风和日丽的...",
+				"pubdate": "2014-12-25",
+				"pubtimestamp": 1419487200,
+				"category": {
+					"name": "导航A",
+					"en_name": "Nav A",
+					"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+					"link": "list-imagetext.html"
+				}
+			},
+			{
+				"title": "这是一篇测试文章",
+				"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+				"link": "content-news.html",
+				"description": "今天天气不错，挺风和日丽的...",
+				"pubdate": "2014-12-25",
+				"pubtimestamp": 1419487200,
+				"category": {
+					"name": "导航A",
+					"en_name": "Nav A",
+					"icon": "<i class=\"iconfont\">&#xe60a;</i>",
 					"link": "list-imagetext.html"
 				}
 			}
@@ -1653,6 +1723,7 @@
 				"category": {
 					"name": "导航A",
 					"en_name": "Nav A",
+					"icon": "<i class=\"iconfont\">&#xe60a;</i>",
 					"link": "list-imagetext.html"
 				}
 			},
@@ -1666,6 +1737,7 @@
 				"category": {
 					"name": "导航A",
 					"en_name": "Nav A",
+					"icon": "<i class=\"iconfont\">&#xe60a;</i>",
 					"link": "list-imagetext.html"
 				}
 			},
@@ -1679,6 +1751,7 @@
 				"category": {
 					"name": "导航A",
 					"en_name": "Nav A",
+					"icon": "<i class=\"iconfont\">&#xe60a;</i>",
 					"link": "list-imagetext.html"
 				}
 			},
@@ -1692,6 +1765,7 @@
 				"category": {
 					"name": "导航A",
 					"en_name": "Nav A",
+					"icon": "<i class=\"iconfont\">&#xe60a;</i>",
 					"link": "list-imagetext.html"
 				}
 			},
@@ -1705,6 +1779,7 @@
 				"category": {
 					"name": "导航A",
 					"en_name": "Nav A",
+					"icon": "<i class=\"iconfont\">&#xe60a;</i>",
 					"link": "list-imagetext.html"
 				}
 			},
@@ -1718,6 +1793,7 @@
 				"category": {
 					"name": "导航A",
 					"en_name": "Nav A",
+					"icon": "<i class=\"iconfont\">&#xe60a;</i>",
 					"link": "list-imagetext.html"
 				}
 			},
@@ -1731,6 +1807,7 @@
 				"category": {
 					"name": "导航A",
 					"en_name": "Nav A",
+					"icon": "<i class=\"iconfont\">&#xe60a;</i>",
 					"link": "list-imagetext.html"
 				}
 			},
@@ -1744,6 +1821,7 @@
 				"category": {
 					"name": "导航A",
 					"en_name": "Nav A",
+					"icon": "<i class=\"iconfont\">&#xe60a;</i>",
 					"link": "list-imagetext.html"
 				}
 			},
@@ -1757,6 +1835,7 @@
 				"category": {
 					"name": "导航A",
 					"en_name": "Nav A",
+					"icon": "<i class=\"iconfont\">&#xe60a;</i>",
 					"link": "list-imagetext.html"
 				}
 			},
@@ -1770,6 +1849,7 @@
 				"category": {
 					"name": "导航A",
 					"en_name": "Nav A",
+					"icon": "<i class=\"iconfont\">&#xe60a;</i>",
 					"link": "list-imagetext.html"
 				}
 			},
@@ -1783,6 +1863,7 @@
 				"category": {
 					"name": "导航A",
 					"en_name": "Nav A",
+					"icon": "<i class=\"iconfont\">&#xe60a;</i>",
 					"link": "list-imagetext.html"
 				}
 			},
@@ -1796,6 +1877,7 @@
 				"category": {
 					"name": "导航A",
 					"en_name": "Nav A",
+					"icon": "<i class=\"iconfont\">&#xe60a;</i>",
 					"link": "list-imagetext.html"
 				}
 			}
@@ -1820,159 +1902,24 @@
 	},
 	"mIndexCats": [
 		{
-			"name": "关于我们",
-			"en_name": "About Us",
-			"link": "list-page.html?id=1",
-			"image": "images/about.jpg",
-			"description": "这是栏目的一段描述...",
-			"content": "&lt;p&gt;这里是页面内容，可以使用html&lt;/p&gt;",
-			"type": 4,
-			"showtype": 1
-		},
-		{
-			"name": "旅游资讯",
-			"en_name": "Trip News",
-			"link": "list-page.html?id=2",
-			"image": "http://chanpin.xm12t.com.cn/images/tourlist/navicon3.png",
-			"description": "这是栏目的一段描述...",
-			"content": "&lt;p&gt;这里是页面内容，可以使用html&lt;/p&gt;",
-			"type": 4,
-			"showtype": 1
-		},
-		{
-			"name": "精选景点",
-			"en_name": "Seleted Attractions",
-			"link": "list-image.html?id=8",
+			"name": "新闻列表",
+			"en_name": "News",
+			"link": "list-text.html?id=1",
+			"icon": "<i class=\"iconfont\">&#xe608;</i>",
 			"image": "http://chanpin.xm12t.com.cn/images/cat_01.jpg",
 			"description": "这是栏目的一段描述...",
 			"data": [
 				{
-					"title": "精品日本游",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img1.jpg",
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
 					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
+					"description": "今天天气不错，挺风和日丽的...",
 					"pubdate": "2014-12-25",
 					"pubtimestamp": 1419487200,
 					"category": {
 						"name": "导航A",
 						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "文艺欧洲行",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img2.jpg",
-					"link": "content-news.html",
-					"description": "暹罗剧场表演（列入金氏世界記錄的舞台）暹罗梦幻剧场是泰国规模最大的宏伟华丽剧院，剧场设",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "风情东南亚",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img3.jpg",
-					"link": "content-news.html",
-					"description": "第一天下午3点福州长乐国际机场集中，度假去喽！怀着一颗期待已",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "激情美洲游",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img4.jpg",
-					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "[台湾自由行4天3夜]",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img5.jpg",
-					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "[台湾自由行4天3夜]",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img6.jpg",
-					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "[台湾自由行4天3夜]",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img7.jpg",
-					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "[台湾自由行4天3夜]",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img8.jpg",
-					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "[台湾自由行4天3夜]",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img9.jpg",
-					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "[台湾自由行4天3夜]",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img10.jpg",
-					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
 						"link": "list-imagetext.html"
 					}
 				},
@@ -1986,6 +1933,7 @@
 					"category": {
 						"name": "导航A",
 						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
 						"link": "list-imagetext.html"
 					}
 				},
@@ -1999,147 +1947,7 @@
 					"category": {
 						"name": "导航A",
 						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				}
-			],
-			"type": 2,
-			"showtype": 1
-		},
-		{
-			"name": "当季热门景点",
-			"en_name": "Hot Attractions",
-			"link": "list-imagetext.html?id=9",
-			"image": "http://chanpin.xm12t.com.cn/images/cat_01.jpg",
-			"description": "这是栏目的一段描述...",
-			"data": [
-				{
-					"title": "[台湾自由行4天3夜]",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img5.jpg",
-					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "[曼谷-芭提雅-泰国双飞5日游]",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img6.jpg",
-					"link": "content-news.html",
-					"description": "暹罗剧场表演（列入金氏世界記錄的舞台）暹罗梦幻剧场是泰国规模最大的宏伟华丽剧院，剧场设",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "[雅加达-巴厘岛6日游]",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img7.jpg",
-					"link": "content-news.html",
-					"description": "第一天下午3点福州长乐国际机场集中，度假去喽！怀着一颗期待已",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "[台湾自由行4天3夜]",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img8.jpg",
-					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "[台湾自由行4天3夜]",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img5.jpg",
-					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "[台湾自由行4天3夜]",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img6.jpg",
-					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "[台湾自由行4天3夜]",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img7.jpg",
-					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "[台湾自由行4天3夜]",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img8.jpg",
-					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "[台湾自由行4天3夜]",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img9.jpg",
-					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "[台湾自由行4天3夜]",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img10.jpg",
-					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
 						"link": "list-imagetext.html"
 					}
 				},
@@ -2153,6 +1961,7 @@
 					"category": {
 						"name": "导航A",
 						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
 						"link": "list-imagetext.html"
 					}
 				},
@@ -2166,162 +1975,12 @@
 					"category": {
 						"name": "导航A",
 						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				}
-			],
-			"type": 3,
-			"showtype": 1
-		},
-		{
-			"name": "联系我们",
-			"en_name": "Contacts",
-			"link": "list-page.html?id=3",
-			"image": "http://chanpin.xm12t.com.cn/images/tourlist/navicon4.png",
-			"description": "这是栏目的一段描述...",
-			"content": "&lt;p&gt;这里是页面内容，可以使用html&lt;/p&gt;",
-			"type": 4,
-			"showtype": 1
-		},
-		{
-			"name": "周边游",
-			"en_name": "Trip Around",
-			"link": "list-text.html?id=4",
-			"image": "http://chanpin.xm12t.com.cn/images/tourlist/navicon5.png",
-			"description": "这是栏目的一段描述...",
-			"data": [
-				{
-					"title": "鼓浪屿",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img1.jpg",
-					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
 						"link": "list-imagetext.html"
 					}
 				},
 				{
-					"title": "金光湖",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img2.jpg",
-					"link": "content-news.html",
-					"description": "暹罗剧场表演（列入金氏世界記錄的舞台）暹罗梦幻剧场是泰国规模最大的宏伟华丽剧院，剧场设",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "野山谷",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img3.jpg",
-					"link": "content-news.html",
-					"description": "第一天下午3点福州长乐国际机场集中，度假去喽！怀着一颗期待已",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "大嶝",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img4.jpg",
-					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "漳州",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img5.jpg",
-					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "龙岩",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img6.jpg",
-					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "福建土楼",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img7.jpg",
-					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "武夷山",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img8.jpg",
-					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "福州",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img9.jpg",
-					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "连城",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img10.jpg",
-					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "永泰",
+					"title": "这是一篇测试文章",
 					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
 					"link": "content-news.html",
 					"description": "今天天气不错，挺风和日丽的...",
@@ -2330,11 +1989,12 @@
 					"category": {
 						"name": "导航A",
 						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
 						"link": "list-imagetext.html"
 					}
 				},
 				{
-					"title": "连江",
+					"title": "这是一篇测试文章",
 					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
 					"link": "content-news.html",
 					"description": "今天天气不错，挺风和日丽的...",
@@ -2343,6 +2003,77 @@
 					"category": {
 						"name": "导航A",
 						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
 						"link": "list-imagetext.html"
 					}
 				}
@@ -2351,144 +2082,15 @@
 			"showtype": 1
 		},
 		{
-			"name": "国内游",
-			"en_name": "Trip Internal",
-			"link": "list-text.html?id=5",
-			"image": "http://chanpin.xm12t.com.cn/images/tourlist/navicon6.png",
+			"name": "企业动态",
+			"en_name": "Company News",
+			"link": "list-text.html?id=2",
+			"icon": "<i class=\"iconfont\">&#xe608;</i>",
+			"image": "http://chanpin.xm12t.com.cn/images/cat_01.jpg",
 			"description": "这是栏目的一段描述...",
 			"data": [
 				{
-					"title": "三亚",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img1.jpg",
-					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "天涯海角",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img2.jpg",
-					"link": "content-news.html",
-					"description": "暹罗剧场表演（列入金氏世界記錄的舞台）暹罗梦幻剧场是泰国规模最大的宏伟华丽剧院，剧场设",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "蜈支洲岛",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img3.jpg",
-					"link": "content-news.html",
-					"description": "第一天下午3点福州长乐国际机场集中，度假去喽！怀着一颗期待已",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "南山文化苑",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img4.jpg",
-					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "昆明",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img5.jpg",
-					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "大理",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img6.jpg",
-					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "丽江",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img7.jpg",
-					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "香格里拉",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img8.jpg",
-					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "北京",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img9.jpg",
-					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "九寨沟",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img10.jpg",
-					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "峨眉山",
+					"title": "这是一篇测试文章",
 					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
 					"link": "content-news.html",
 					"description": "今天天气不错，挺风和日丽的...",
@@ -2497,11 +2099,12 @@
 					"category": {
 						"name": "导航A",
 						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
 						"link": "list-imagetext.html"
 					}
 				},
 				{
-					"title": "桂林",
+					"title": "这是一篇测试文章",
 					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
 					"link": "content-news.html",
 					"description": "今天天气不错，挺风和日丽的...",
@@ -2510,6 +2113,147 @@
 					"category": {
 						"name": "导航A",
 						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
 						"link": "list-imagetext.html"
 					}
 				}
@@ -2518,144 +2262,15 @@
 			"showtype": 2
 		},
 		{
-			"name": "境外游",
-			"en_name": "Trip International",
-			"link": "list-text.html?id=6",
-			"image": "http://chanpin.xm12t.com.cn/images/tourlist/navicon7.png",
+			"name": "产品列表",
+			"en_name": "Products",
+			"link": "list-image.html?id=3",
+			"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+			"image": "http://chanpin.xm12t.com.cn/images/cat_01.jpg",
 			"description": "这是栏目的一段描述...",
 			"data": [
 				{
-					"title": "法国",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img1.jpg",
-					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "瑞士",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img2.jpg",
-					"link": "content-news.html",
-					"description": "暹罗剧场表演（列入金氏世界記錄的舞台）暹罗梦幻剧场是泰国规模最大的宏伟华丽剧院，剧场设",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "德国",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img3.jpg",
-					"link": "content-news.html",
-					"description": "第一天下午3点福州长乐国际机场集中，度假去喽！怀着一颗期待已",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "英国",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img4.jpg",
-					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "俄罗斯",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img5.jpg",
-					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "意大利",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img6.jpg",
-					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "奥地利",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img7.jpg",
-					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "希腊",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img8.jpg",
-					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "马尔代夫",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img9.jpg",
-					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "斯里兰卡",
-					"image": "http://chanpin.xm12t.com.cn/images/tourlist/img10.jpg",
-					"link": "content-news.html",
-					"description": "意大利（庞贝古城 卡普里岛 奥尔维耶托 亚西西）欧洲深度探索漫游之旅10天",
-					"pubdate": "2014-12-25",
-					"pubtimestamp": 1419487200,
-					"category": {
-						"name": "导航A",
-						"en_name": "Nav A",
-						"link": "list-imagetext.html"
-					}
-				},
-				{
-					"title": "澳大利亚",
+					"title": "这是一篇测试文章",
 					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
 					"link": "content-news.html",
 					"description": "今天天气不错，挺风和日丽的...",
@@ -2664,11 +2279,12 @@
 					"category": {
 						"name": "导航A",
 						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
 						"link": "list-imagetext.html"
 					}
 				},
 				{
-					"title": "新西兰",
+					"title": "这是一篇测试文章",
 					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
 					"link": "content-news.html",
 					"description": "今天天气不错，挺风和日丽的...",
@@ -2677,22 +2293,732 @@
 					"category": {
 						"name": "导航A",
 						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
 						"link": "list-imagetext.html"
 					}
 				}
 			],
-			"type": 1,
+			"type": 2,
+			"showtype": 1
+		},
+		{
+			"name": "最新产品",
+			"en_name": "Lastest Products",
+			"link": "list-image.html?id=4",
+			"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+			"image": "http://chanpin.xm12t.com.cn/images/cat_01.jpg",
+			"description": "这是栏目的一段描述...",
+			"data": [
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				}
+			],
+			"type": 2,
+			"showtype": 2
+		},
+		{
+			"name": "当期热卖",
+			"en_name": "Hot Products",
+			"link": "list-image.html?id=5",
+			"icon": "<i class=\"iconfont\">&#xe614;</i>",
+			"image": "http://chanpin.xm12t.com.cn/images/cat_01.jpg",
+			"description": "这是栏目的一段描述...",
+			"data": [
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				}
+			],
+			"type": 2,
 			"showtype": 3
+		},
+		{
+			"name": "企业风采",
+			"en_name": "Company Photos",
+			"link": "list-imagetext.html?id=6",
+			"icon": "<i class=\"iconfont\">&#xe60d;</i>",
+			"image": "http://chanpin.xm12t.com.cn/images/cat_01.jpg",
+			"description": "这是栏目的一段描述...",
+			"data": [
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				},
+				{
+					"title": "这是一篇测试文章",
+					"image": "http://chanpin.xm12t.com.cn/images/art_02.jpg",
+					"link": "content-news.html",
+					"description": "今天天气不错，挺风和日丽的...",
+					"pubdate": "2014-12-25",
+					"pubtimestamp": 1419487200,
+					"category": {
+						"name": "导航A",
+						"en_name": "Nav A",
+						"icon": "<i class=\"iconfont\">&#xe60a;</i>",
+						"link": "list-imagetext.html"
+					}
+				}
+			],
+			"type": 3,
+			"showtype": 1
+		},
+		{
+			"name": "关于我们",
+			"en_name": "About Us",
+			"link": "list-page.html?id=7",
+			"icon": "<i class=\"iconfont\">&#xe60f;</i>",
+			"image": "http://chanpin.xm12t.com.cn/images/cat_01.jpg",
+			"description": "这是栏目的一段描述...",
+			"content": "&lt;p&gt;这里是页面内容，可以使用html&lt;/p&gt;",
+			"type": 4,
+			"showtype": 1
+		},
+		{
+			"name": "双十二活动",
+			"en_name": "Double 12 Act",
+			"link": "http://wx.dn160.com.cn/index.php?g=Wap&m=Guajiang&a=index&token=fwpmnq1407894165&type=2&wecha_id=ok6CKuN_fX__XeXCn&id=156",
+			"icon": "<i class=\"iconfont\">&#xe615;</i>",
+			"image": "http://chanpin.xm12t.com.cn/images/cat_01.jpg",
+			"description": "这是栏目的一段描述...",
+			"type": 7
 		},
 		{
 			"name": "留言板",
 			"en_name": "Guest Book",
-			"link": "guestbook.html",
-			"image": "http://chanpin.xm12t.com.cn/images/tourlist/navicon1.png",
+			"link": "list-page.html?id=10",
+			"icon": "<i class=\"iconfont\">&#xe610;</i>",
+			"image": "http://chanpin.xm12t.com.cn/images/cat_01.jpg",
 			"description": "这是栏目的一段描述...",
-			"content": "&lt;p&gt;这里是页面内容，可以使用html&lt;/p&gt;",
-			"type": 5,
-			"showtype": 1
+			"content": "&lt;img src=\"http://chanpin.xm12t.com.cn/images/guestbook.jpg\" width=\"90%\" /&gt;",
+			"type": 5
+		},
+		{
+			"name": "友情链接",
+			"en_name": "Friends Links",
+			"link": "http://www.baidu.com",
+			"icon": "<i class=\"iconfont\">&#xe612;</i>",
+			"image": "http://chanpin.xm12t.com.cn/images/cat_01.jpg",
+			"description": "这是栏目的一段描述...",
+			"type": 6
 		}
 	]
 }

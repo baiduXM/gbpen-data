@@ -46,11 +46,11 @@
 
      var ul = $(".sub3nav li").children('ul')
      var a = $(".sub3nav li").children('a')
-     console.log('step3')
+     // console.log('step3')
      a.click(function() {
-         if (ul.length > 0) {
-             a.attr("href", "javascript:void(0)")
-         };
+         // if (ul.length > 0) {
+         //     a.attr("href", "javascript:void(0)")
+         // };
          $(this).toggleClass('cu');
      });
 

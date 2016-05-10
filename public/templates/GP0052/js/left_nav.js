@@ -17,9 +17,9 @@ $(document).ready(function($) {
     });
     var a = $(".sub3nav li").children('a')
 
-    console.log('step1')
+    // console.log('step1')
     a.click(function() {
-        console.log('step2')
+        // console.log('step2')
         $(this).next().slideToggle()
 
     });

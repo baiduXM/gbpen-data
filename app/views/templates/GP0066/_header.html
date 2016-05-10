@@ -1,48 +1,51 @@
-  <div class="top_l">
-    <div class="header_inner">
-       <div class="top">
-        <h1 class="logo"><a href="{$site_url}"><img src="../同乡会LOGO.JPEG" alt="{$title}" /></a></h1>
-      </div>    
-      
-       <div class="nav">
-       <ul>
-    {foreach item=nav from=$navs}
-    <li class="nav1 {if $nav.current}current{/if}"><a href="{$nav.link}">{$nav.name}</a>
-	<span class="hoverview">
-		<ul>
-		  {if $nav.childmenu} {foreach item=nav_list from=$nav.childmenu}
-		  <li class="{if $nav.current}current{/if}"><a href="{$nav_list.link}">{$nav_list.name}</a></li>
-          {/foreach} {/if}
-          
-		</ul>
-	</span>
-		  </li>
-{if $nav@index+1 eq 7}{break}{/if}
-{/foreach}
-  </ul>
-      </div>
-      
-      <div class="ser_zt">
-    <div class="ser clearfix">
-       <form action="{$search_action}" method="GET">
-                <input type="text" name="s" value="" class="sa" />
-                <input type="submit" class="bta" />
-            </form>
-    </div>
-  </div>
-   
+<div class="header wap">
+	<div class="head">		
+		<a href="{$site_url}" title="返回首页" class="fl">
+			<img src="{$logo}" max-height="93" alt="">
+		</a>
+		<div class="navBar fr">
+			<ul class="nav clearfix">
+                {$limit = 5}
+				<li class="m" style="width: {100/($limit+1)}%">
+					<h3><a  href="{$site_url}">首页</a></h3>
+				</li>
+					{foreach item=nav from=$navs}
+	                    <li class="m {if $nav.current}current{/if}" style="width: {100/($limit+1)}%">
+		                    <h3><a href="{$nav.link}">{$nav.name}</a></h3>
+                 
+		                    {if $nav.childmenu}
+		                        <ul class="sub">
+		                          {foreach item=nav_list from=$nav.childmenu}
+		                          <li class="{if $nav_list.current}current{/if}">
+			                          <a href="{$nav_list.link}">{$nav_list.name}</a>
+		                          </li>
+		                          {/foreach}
+		                        </ul>
+		                    {/if}
+	                    </li>
+	                    {if $nav@index+1 gte $limit}{break}{/if}
+	                {/foreach}
+			</ul>
+		</div>	
+	</div>
 </div>
-
-
-
- </div>
- 
- 
-<div id="banner">
-<!--100%-->
-  <div class="banner_box">
-    <div id="kinMaxShow" style="display:none;"> {foreach name=slidepics item=slidepic from=$global.slidepics}
-      <div> <a href="{$slidepic.link}" target="_blank"><img src="{$slidepic.image}" alt="{$slidepic.title}"  /></a></div>
-      {/foreach} </div>
-  </div>
+<div class="wap">
+	<div class="slider">		
+			<div class="bd">
+				<ul>
+					{foreach item=slidepic from=$_header.slidepics}
+						<li>
+							<a href="{$slidepic.link}"><img src="{$slidepic.image}" alt="{$slidepic.title}"></a>
+						</li>
+	                {/foreach}
+				</ul>
+			</div>
+			<div class="hd">
+				<ul>
+					{foreach item=slidepic from=$_header.slidepics}
+	                    <li>{$slidepic@index+1}</li>
+	                {/foreach}
+				</ul>
+			</div>
+	</div>
 </div>

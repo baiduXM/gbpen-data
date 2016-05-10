@@ -1,87 +1,88 @@
-window.onload=function(){
-	 $(".yc ul li").each(function(){
-		 var ww=$(this).find("img").width();
-   $(this).find("p").width(ww);
-  });
-	$(".bd li").each(function(){
-	if($(this).find("img").width() > 640){
-        $(this).find("img").width("99%");
-}
-
-		})
+jQuery(document).ready(function($) {
 	
-	}
 
-$(document).ready(function() {
-						   jQuery(".slideBoxb").slide({mainCell:".bd ul",autoPlay:false,effect:"leftLoop"});				
 
-/*侧边栏*/
- 		$(".listbg li a").click(function () {
-        $(this).parent().siblings().find(".second").slideUp()
-        $(this).siblings(".second").slideToggle()
-    })  
-    $(".second li a").click(function () {
-        $(this).parent().siblings().find(".third").slideUp()
-        $(this).siblings(".third").slideToggle()
-    }) 
-	/*导航*/
-    jQuery("#nav").slide({
-        type: "menu", // 效果类型，针对菜单/导航而引入的参数（默认slide）
-        titCell: ".nav1", //鼠标触发对象
-        targetCell: "span", //titCell里面包含的要显示/消失的对象
-        effect: "slideDown", //targetCell下拉效果
-        delayTime: 300, //效果时间
-        triggerTime: 0, //鼠标延迟触发时间（默认150）
-        returnDefault: false //鼠标移走后返回默认状态，例如默认频道是"预告片"，鼠标移走后会返回"预告片"（默认false）
-    });
-   	$(".nav ul li.nav1").eq(0).addClass("nav_1");
-	$(".nav ul li.nav1").eq(1).addClass("nav_2");
-    $(".nav ul li.nav1").eq(2).addClass("nav_3");
-	$(".nav ul li.nav1").eq(3).addClass("nav_4");
-    $(".nav ul li.nav1").eq(4).addClass("nav_5");
-	$(".nav ul li.nav1").eq(5).addClass("nav_6");
-  	$(".nav ul li.nav1").eq(6).addClass("nav_7");
+nav(".aboutNav");
+	function nav(stair){
+		var stair=$(stair).children('li').children('a'),
+		 obj=stair.next(),
+		 erj=obj.children('dd').children('a'),
+         sj=erj.next();
+		if (obj.length>0) {
+			
+			obj.prev().append('<span>+</span>')
+			stair.click(function(event) {
+              $(this).children('span').text() == "+"?$(this).attr('href', 'javascript:void(0)')&&
+                 $(this).children('span').text('-'):$(this).children('span').text('+')
 
-	
-	
-/*产品详细页*/
-    jQuery(".slideBoxb").slide({
-        mainCell: ".bd ul",
-        autoPlay: false,
-        effect: "leftLoop"
-    });
-	
-	
- // 兼容低版本IE
-    $(function() {
-        if (window.PIE) {
-            $('.rounded').each(function() {
-                PIE.attach(this);
-            });
-        }
-    });
+              $(this).next().slideToggle(200)
+			});
+            if (sj.length>0) {
 
-/*大图 100%*/	
-	$("#kinMaxShow").kinMaxShow({
-            height: 377,
-            button: {
-                showIndex: false,
-                normal: { background: 'url(../web/images/button.png) no-repeat -14px 0', marginRight: '8px', border: '0', left: '80%', bottom: '20px' },
-                focus: { background: 'url(../web/images/button.png) no-repeat 0 0', border: '0' }
-            }
-        });
-	
-/*滚动js*/	
+            	sj.prev().prepend('<span>+</span>')
+            	
+            	erj.click(function(event) {
+            		
+            		if($(this).children('span').text() == "+"){
+            			$(this).attr('href', 'javascript:void(0)');
+                 $(this).children('span').text('-')
+             }else{
+                 $(this).children('span').text('+')
+             };
 
-var MarqueeDiv1Control=new Marquee("MarqueeDiv2");		//箭头控制滚动方向、加速及鼠标拖动实例
-MarqueeDiv1Control.Direction="left";
-MarqueeDiv1Control.Step=1;
-MarqueeDiv1Control.Width=850;
-//MarqueeDiv1Control.Height=167;
-MarqueeDiv1Control.Timer=20;
-MarqueeDiv1Control.ScrollStep=1;				//若为-1则禁止鼠标控制实例
-MarqueeDiv1Control.Start();
-MarqueeDiv1Control.BakStep=MarqueeDiv1Control.Step;
-
+              $(this).next().slideToggle(200)
+            	});
+            };
+		};       
+    }
 
 });
+
+
+
+
+	// <!-- 导航 -->
+
+
+	(function(){
+			var ind = 2; //初始位置
+			var nav= jQuery(".nav");
+			var init = jQuery(".nav .m").eq(ind);
+			var block = jQuery(".nav .block"); //滑块
+			block.css({"left":init.position().left-3}); //初始化滑块位置
+			nav.hover(function(){},function(){ block.animate({"left":init.position().left-3},100); }); //移出导航滑块返回
+
+			jQuery(".nav").slide({ 
+					type:"menu", //效果类型
+					titCell:".m", // 鼠标触发对象
+					targetCell:".sub", // 效果对象，必须被titCell包含
+					delayTime:300, // 效果时间
+					triggerTime:0, //鼠标延迟触发时间
+					returnDefault:true,//on返回初始位置
+					defaultIndex:ind,//初始位置
+					startFun:function(i,c,s,tit){ //控制当前滑块位置
+						block.animate({"left":tit.eq(i).position().left-3},100);
+					}
+				});
+	})()
+
+
+
+// <!-- banner切换 -->
+
+		jQuery(".slider").slide({ titCell:".hd ul", mainCell:".bd ul", effect:"left",  autoPlay:true, autoPage:true, trigger:"click",
+			mouseOverStop:false,/* 鼠标移到容器层继续播放*/
+			
+		});
+
+
+// <!-- 图片滚动 -->
+
+jQuery(".picScroll").slide({ mainCell:"ul", effect:"leftMarquee", vis:4, autoPlay:true, interTime:50, switchLoad:"_src" });
+
+
+/*鼠标移过，左右按钮显示*/
+		jQuery(".focusBox").hover(function(){ jQuery(this).find(".prev,.next").stop(true,true).fadeTo("show",0.2) },function(){ jQuery(this).find(".prev,.next").fadeOut() });
+		/*SuperSlide图片切换*/
+		jQuery(".focusBox").slide({ mainCell:".pic",effect:"fold", autoPlay:true, delayTime:600, trigger:"click"});
+

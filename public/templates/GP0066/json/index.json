@@ -1,20 +1,22 @@
-{
-	"about": {
-		"description": "关于我们",
+{   
+	"list1": {
 		"value": {},
-		"type": "page"
-	},	
-	
-	"pro":{
-		"description": "产品中心",
+		"description": "第一个栏目列表",
+		"type": "page",
+		"config": {
+			"width": 342,
+			"height": 261
+		}	
+	},
+	"list2": {
 		"value": {},
-		"type": "list"
-	},	
-	
-	"news":{
-		"description": "新闻中心",
-		"value": {},
-		"type": "list"
+		"description": "第二个栏目列表",
+		"type": "list",
+		"config": {
+			"width": 282,
+			"height": 240
+		}	
 	}
-	
 }
+
+

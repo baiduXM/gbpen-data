@@ -6,11 +6,11 @@
 	<ul class="clearfix sub3nav">
 		{foreach name=pagenavs item=nav from=$pagenavs}
 		<li class="{if $nav.current}current{/if}">
-			<a href="{$nav.link}">{$nav.name}</a>
+			<a href="{if $nav.childmenu}javascript:;{else}{$nav.link}{/if}">{$nav.name}</a>
 			{if $nav.childmenu}
 			<ul class="clearfix" style="display: none;">
 				{foreach key=key item=nav_list from=$nav.childmenu}
-				<li class="{if $nav_list.current}current{/if}"><a href="{$nav_list.link}">{$nav_list.name}</a></li>
+				<li class="{if $nav_list.current}current{/if}"><a href="{if $nav_list.childmenu}javascript:;{else}{$nav_list.link}{/if}">{$nav_list.name}</a></li>
 				{if $nav_list.childmenu}
 				{foreach key=key item=nav_listse from=$nav_list.childmenu}
 				<li class="{if $nav_listse.current}current{/if}">
