@@ -47,7 +47,7 @@ img{border: none;}
 
 /*abo*/
 .abo{margin: 40px auto;height: 285px;background: url(../images/border_07.png) no-repeat right bottom;}
-.abo .img{height: 261px;}
+.abo .img{height: auto;    max-width: 342px;}
 .abo .text{width: 800px;height: 271px;overflow: hidden;color: #666;font: 12px/28px "微软雅黑";padding-right: 25px;}
 .abo h5{font: 16px/24px "微软雅黑";height: 24px;overflow: hidden;margin: 15px 0 8px;}
 .abo h5 span{font: 12px/24px "微软雅黑";}
@@ -66,7 +66,7 @@ img{border: none;}
 .picScroll .next:hover{background: url(../images/nexth_28.png) no-repeat;}
 .picScroll ul{ overflow:hidden; zoom:1; }
 .picScroll ul li{float:left; width:310px ;margin:20px -5px; }
-.picScroll ul li a{ overflow:hidden;width: 310px;height: 285px;display: block; position: relative;}
+.picScroll ul li a{ overflow:hidden;width: 310px;height: auto;display: block; position: relative;}
 .picScroll ul li img{display:block;padding: 14px 13px;width: 282px; height:auto;}
 .picScroll ul li p{text-align: center;font: 14px/20px "微软雅黑";width: 210px;height: 20px;overflow: hidden;position: absolute;left: 50px;top: 265px;display: none;}
 .picScroll ul li a:hover:before{content: ""; position:absolute;left:0;top:0; z-index: -1; width:310px ;height:285px;background:url(../images/p_bg.png) no-repeat; display: inline-block;}
@@ -74,8 +74,8 @@ img{border: none;}
 /*.tempWrap{width: 90% !important;margin: 0 auto; }*/
 
 /*footer*/
-.footer{color: #999;font: 12px/60px "宋体";text-align: center;background: url(../images/footer_22.png) no-repeat;overflow: hidden;}
-.footer a{color: #999;font: 12px/60px "宋体";height: 60px;overflow: hidden;}
+.footer{color: #999;font: 12px/28px "宋体";text-align: center;background: url(../images/footer_22.png) no-repeat;overflow: hidden;}
+.footer a{color: #999;font: 12px/28px "宋体";height: 60px;overflow: hidden;}
 .footer a:hover{color: #333;}
 
 /*content*/
@@ -107,9 +107,9 @@ img{border: none;}
 .right .txt{color: #666;font: 12px/28px "宋体";}
 
 /*news*/
-.news li{height: 139px;margin-bottom: 16px;overflow: hidden;}
-.new-pic{height: 130px;max-width: 180px;margin-right: 20px;}
-.new-pic img{height: 130px;max-width: 180px;}
+.news li{margin-bottom: 16px;overflow: hidden;}
+.new-pic{margin-right: 20px;}
+.new-pic img{max-width: 180px;}
 .new{width: 710px;}
 .new h5 a{color: #333;font: 14px/20px "宋体";font-weight: bold;height: 20px;display: block;overflow: hidden;margin: 8px 0 12px;}
 .new .det{color: #666;font: 12px/24px "宋体";height: 72px;overflow: hidden; }
@@ -154,9 +154,9 @@ img{border: none;}
 .pro_det p{color: #666;font: 12px/24px "宋体";}
 .pro_det p span{color: #333;font: 14px/37px "微软雅黑";height: 37px;overflow: hidden;}
 
-.focusBox { position: relative; width:397px; height:337px; overflow: hidden; margin: 5px auto;}
+.focusBox { position: relative; width:397px;  overflow: hidden; margin: 5px auto;}
 .focusBox .pic{ position:relative; z-index:0; }
-.focusBox .pic img { width:397px; height:337px; display: block;}
+.focusBox .pic img { width:397px;  display: block;}
 .focusBox .hd { width:100%; position: absolute; bottom: 10px; text-align: center; font-size:0; z-index:1; }
 .focusBox .hd li{margin: 0 5px;height: 16px; overflow: hidden; width: 16px; cursor: pointer;
 	display:inline-block; *display:inline; zoom:1;}
