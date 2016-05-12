@@ -1,5 +1,5 @@
 
-.PathInner {position: absolute;width:54px;height:54px;z-index:99999; bottom:10px; left:10px;background:rgba(0,0,0,0.1); border-radius:7px; }
+.PathInner {position: absolute;width:54px;height:54px;z-index:99999; bottom:10px; left:10px;background:rgba(0,0,0,0.1); border-radius:7px;display:none; }
 
 .PathInner .PathMain{z-index:1000;position:absolute;display:block;bottom:0;left:0;border-radius:100%;width:36px;height:36px; top:50%; left:50%; transform:translate(-50%,-50%); -webkit-transform:translate(-50%,-50%);}
 .PathInner .PathMain:before,.PathInner .PathMain:after{ content:""; width:40px; height:40px; position:absolute; top:50%; left:50%;transform:translate(-50%,-50%); -webkit-transform:translate(-50%,-50%);background:rgba(0,0,0,0.1); border-radius:100%; z-index:5}
