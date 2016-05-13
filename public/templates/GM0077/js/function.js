@@ -22,7 +22,9 @@ $(".menulist .swiper-nav span").css({"line-height":m})
 
 $("#in_text .inner .line").height($("#in_text .inner ul").height()-15+"px")
 $("#in_text .inner ul li:last").css({"marginBottom":"0"})
-$("#in_image .inner").height($("#in_image .inner ul").height())
+$("#in_image .inner").height($("#in_image .inner ul").height())+"px"
+var h=($("#in_text ul li").height()-$("#in_text ul li .in_textbox").height())*0.5+"px"
+$("#in_text ul li .in_textbox").css({"margin-top":h})
 
 
 /*美工专属区域*/

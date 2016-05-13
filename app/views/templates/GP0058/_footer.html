@@ -5,7 +5,7 @@
 
 
 <div id="footer_links" class="fr">
- <select onchange="javascript:openLink(this)">
+       <select onchange="javascript:openLink(this)">
   <option>--友情链接--</option>
   {foreach name=friend item=friend from=$global.links}
   <option value="{$friend.link}">{$friend.title} </option>
