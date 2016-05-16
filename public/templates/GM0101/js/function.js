@@ -1,174 +1,204 @@
 $(document).ready(function(){
-	resize();
-	$(window).resize(function(){
-		resize();
-		img(".logo",0.16719)
-		img2(".banner",0.5);
-		$(".news").outerWidth()
-	});
-
-	
-	//根据设备窗口大小调整高度
-	function resize(){
-		$(".nav-menu").height($(window).outerHeight());
-		$(".main").height($(window).height()-$("footer").outerHeight()-$(".teldet").outerHeight());
-		
-	}
-	$(".icon-cancel-circled").click(function(){
-		$(".tel").hide();
-		$(".main").height($(window).outerHeight()-$("footer").height())
-		return false
-	});
-	$(".teldet").css({
-		bottom: $("footer").outerHeight()+"px"
-	
-	});
-	$(".share").height($("footer").outerHeight()+40)
-	 function img(im,sc){
-	 	var  img=$(im).width()
-	 	var h=Math.floor($(window).width()*sc) 
-	   
-	    $(".trapezoid").css({
-			
-            borderBottomWidth:h*0.5+"px"
-		});
-	 }
-	img(".logo",0.16719)
-	
-
- function lineHeight(lneHeight,sc,num){
-	 	var wid=$(lneHeight).width()
-	 	var hig=Math.floor(wid*sc) 
-	    $(lneHeight).css({
-	    	lineHeight:(hig*num)+"px",
-	    });
-	 }
-	 lineHeight(".menu li a",.5,1)
-	//二级菜单下拉
-	nav("#left_nav");
-	nav(".aboutNav");
-	function nav(stair){
-		var stair=$(stair).children('li').children('a');
-		var obj=stair.next();
-		var erj=obj.children('li').children('a');
-        var sj=erj.next();
-		if (obj.length>0) {
-			
-			obj.prev().append('<span>+</span>')
-			stair.click(function(event) {
-
-				if($(this).children('span').text() == "+"){
-					// event.preventDefault();
-                     $(this).attr('href', 'javascript:void(0)');
-                 $(this).children('span').text('-')
-             }else{
-                 $(this).children('span').text('+')
-             };
-              $(this).next().slideToggle(200)
-			});
-            if (sj.length>0) {
-
-            	sj.prev().append('<span>+</span>')
-            	
-            	erj.click(function(event) {
-            		
-            		if($(this).children('span').text() == "+"){
-            			$(this).attr('href', 'javascript:void(0)');
-                 $(this).children('span').text('-')
-             }else{
-                 $(this).children('span').text('+')
-             };
-
-              $(this).next().slideToggle(200)
-            	});
-            };
-		};       
-}
-
-    function img2(im,sc){
-        var  img=$(im).width()
-         hght=Math.floor(img*sc) 
-        $(im).css({
-            height:hght+1+"px"
-        });
-     }
-
-    img2(".banner",0.5);
-
-
-	$(".tel .close").click(function(){
-		$(".tel").css('display','none');
-		$(".main").height($(window).height()-$("footer").height())
-		return false
-	})
-	
-	 //隐藏导航跟wrap的切换
-	$(".slide-nav").click(function(){
-		$("#quickbar-navs,.wrap").addClass("slide");
-		$(".shadow").show();
-	})
-	$(".nav-close,.shadow").on('touchstart click',function(){
-		$("#quickbar-navs,.wrap").removeClass("slide");
-		$(".shadow").hide(400);
-		
-	})
-	
-	$(".qx").click(function() {
-		$(".share").hide();
-
-	});
-	$(".icon-flow-branch").click(function() {
-
-		$(".share").show(500, function() {
-			$(".share").height($("footer").outerHeight()+40)
-		});
-	});
- //返回上一页
-	$('.forword').click(function(){
-		window.history.go(-1);
-	
-	});
-	
-	(function(){
-		$('.type').click(function(){
-			if($('.aboutName').is(':hidden')){
-				$(this).html("分类↓");
+	/*大图js效果*/
+	TouchSlide({ 
+					slideCell:"#slideBox",
+					titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+					mainCell:".bd ul", 
+					effect:"leftLoop", 
+					autoPage:true,//自动分页
+					autoPlay:true,
+					interTime:6000 //自动播放
+				});
 				
-			}else{
-				
-				$(this).html("分类↑");
-			}
-			$('.aboutName').slideToggle(200);
-			
-		})
-	})();
+$(window).load(function(){
+/*美工专属区域*/
+$(".in_h2 .sj").css({"border-bottom-width":$('.in_h2').height()*0.5 ,"border-right-width":$('.in_h2').innerWidth()})
+$(".in_h2 .sj1").css({"border-bottom-width":$('.in_h2').height()*0.5 ,"border-left-width":$('.in_h2').innerWidth()})
+$("#in_image .in_proimg").height($("#in_image .in_proimg").width())
+$(window).resize(function(){
+	$("#in_image .in_proimg").height($("#in_image .in_proimg").width())
+	$(".in_h2 .sj").css({"border-bottom-width":$('.in_h2').height()*0.5 ,"border-right-width":$('.in_h2').innerWidth()})
+    $(".in_h2 .sj1").css({"border-bottom-width":$('.in_h2').height()*0.5 ,"border-left-width":$('.in_h2').innerWidth()})
+
+})
+
+$("#in_image .inner").height($("#in_image .inner ul li").height())
+/*美工专属区域*/
 	
-	$('.font-set').click(function(){
-		$('.font-list').slideToggle(200);
-		$('.type-list').slideUp(200);
-	});
 	
-	fontSize('.d','1.25rem');
-	fontSize('.x','.75rem');
-	fontSize('.z','1rem');
-	function fontSize(fontSiz,siz){
-		$(fontSiz).click(function() {
-		$('.infos').css('font-size',siz);
-		$('.font-sel').slideUp();
-		});
-		
-	}
-	
-	//返回顶部
-	$('.icon-angle-circled-up').click(function(){
-		$('.main').animate({
-			'scrollTop' : 0
-
-		},1);
-
-	})
-	
-
-
-
+/*标题自适应宽度*/		
+	$(".yc ul li").each(function(){
+		 var ww=$(this).find("img").width();
+   $(this).find("p").width(ww);
   });
+ /*标题自适应宽度*/
+ 
+ 
+ 
+  var img=new Image();
+		var self5 = $(".cpszs_show");
+                                        var heights5 = $(self5).height();;
+                                        var alimat5 = $(".listpp");
+                                        alimat5.height(heights5);		
+		var self6 = $(".nimg1");
+                                        var heights6 = $(self6).height();;
+                                        var alimat6 = $(".decurlits");
+                                        alimat6.height(heights6);
+	img.src=$(".prolist img").attr("src");
+	$(".index-wrap").height($(".wrap").height())
+	$(".class-m").height($(".class").outerHeight()-$(".class-top").outerHeight())
+	$(".menulist dl").height($(".menulist dl").width())
+	$(".menu").height($(".menulist dl").outerHeight())
+	$(".prolist .tielbox").height($(".prolist img").height())
+	});
+	$(window).resize(function(){
+		/* $(".index-wrap").height($(window).height()-$(".fixed").height()-$(".tell-icon").height()) */
+		$(".class-m").height($(".class").outerHeight()-$(".class-top").outerHeight())
+		$(".menulist dl").height($(".menulist dl").width())
+		$(".menu").height($(".menulist dl").outerHeight())
+		$(".prolist .tielbox").height($(".prolist img").height())
+		
+	$("#about .nr dd").height($("#about img").height()-29)
+	if($(window).width()<400){
+		$("#about .nr dd").css({'line-height':$("#about .nr dd").height()/3+"px"})
+		}else{
+			if($(window).width()<540)
+			{$("#about .nr dd").css({'line-height':$("#about .nr dd").height()/5+"px"})}
+			else{$("#about .nr dd").css({'line-height':$("#about .nr dd").height()/6+"px"})}
+			}
+			
+			
+	$(".class-m").height($(".class").outerHeight()-$(".class-top").outerHeight())
+	 $(".index-wrap").height($(".wrap").height()+$(".quickbar-tips").height()) 
+	//赖加载
+	
+	});
+	
+	
+	function pageSlideOver(){
+    $('.page-out').live('transitionend', function(){
+      $(this).removeClass('page-out');
+    });
+    $('.page-in').live('transitionend', function(){
+      $(this).removeClass('page-in');
+    });
+  }
+  //隐藏导航跟wrap的切换
+	$("#class").click(function(){
+		$(".class").removeClass("page-prev").addClass("page-in");
+		$(".wrap").removeClass("page-active").addClass("page-next page-in")
+		$(".opacity2").show()
+		pageSlideOver();
+		
+	})
+	$(".class-close,.opacity2").on('touchstart',function(){
+		$(".class").addClass("page-prev page-out")
+		$(".wrap").removeClass("page-next").addClass(" page-out")
+		$(".opacity2").hide()
+		$(".newsclass").removeClass("show")
+		pageSlideOver();
+		return false;
+	})
+								
+
+  function setHeighti() {
+                                  // $('.slimgs2').each(function () {
+        var self5 = $(".aboutimgs");
+        var heights5 = $(self5).height()-'20'+'px';;
+        var alimat5 = $(".a_text");
+       alimat5.height(heights5);										
+                                  //  })
+
+                                };
+          setHeighti();								
+ $(window).resize(function(){
+	setTimeout(setHeighti);
+	 })		
+	
+  //隐藏导航跟wrap的切换
+  $("#daohang,#header_menu,#fixed_menu").click(function(){
+		$("#quickbar-navs").removeClass("page-prev").addClass("page-in");
+		$("#quickbar-wrap").removeClass("page-active").addClass("page-next page-in")
+		$(".quickbar-opacity2").show()
+		pageSlideOver();
+	})
+	$(".quickbar-navs-close,.quickbar-opacity2").on('touchstart',function(){
+		$("#quickbar-navs").addClass("page-prev page-out")
+		$("#quickbar-wrap").removeClass("page-next").addClass(" page-out")
+		$(".quickbar-opacity2").hide()
+		$(".newsclass").removeClass("show")
+		pageSlideOver();
+		return false;
+	})
+		
+	$(".tell-icon .close").click(function(){
+		$(".tell-icon").removeClass("display-block")
+		$(".index-wrap").height($(window).height()-$(".fixed").height())
+		return false
+	})
+	
+	//字体上下拉开始
+  	
+	$("#font").click(function(){
+		$("#up").hide()
+		$("#down").show()
+		$(".hide-class").removeClass("hide-class1")
+		$(".font").slideToggle()
+		$(".hide-class").slideUp()	
+	})
+	$(".font dl.big").click(function(){
+		$(".edite").attr('class',"edite font-big")
+		$(".news-ins").attr('class',"news-ins font-big")
+		$(".list_page").attr('class',"list_page font-big")
+		$(".font").hide()
+	})
+	$(".font dl.normal").click(function(){
+		$(".edite").attr('class',"edite font-normal")
+		$(".news-ins").attr('class',"news-ins font-normal")
+		$(".list_page").attr('class',"list_page font-normal")
+		$(".font").hide()
+	})
+	$(".font dl.small").click(function(){
+		$(".edite").attr('class',"edite font-small")
+		$(".news-ins").attr('class',"news-ins font-small")
+		$(".list_page").attr('class',"list_page font-small")
+		$(".font").hide()
+
+	})	
+	//字体上下拉结束
+	//分类上下拉开始
+	$("#first").click(function(){
+		$("#up").toggle()
+		$("#down").toggle()
+		$(".hide-class").slideToggle()
+		$(".font").slideUp()	
+	})
+	//分类上下拉结束
+	
+	$(".title2 span.bigd").click(function(){
+		$(".edite").attr('class',"edite font-big")
+	})
+	$(".title2 span.middled").click(function(){
+		$(".edite").attr('class',"edite font-normal")
+	})
+	$(".title2 span.smalld").click(function(){
+		$(".edite").attr('class',"edite font-small")
+
+	})		
+	//返回顶部开始
+	$(".back-top").click(function(){$(".index-wrap").animate({scrollTop :0}, 800)})
+	$("#share_btn").click(function(){
+		$(".newsclass").addClass("show")
+		$(".opacity2").show()
+		return false
+	})
+	//返回顶部结束
+	//分享取消按钮开始
+	$(".share-cance").click(function(){
+		$(".newsclass").removeClass("show")
+		$(".opacity2").hide()
+	})
+  	});
+	//分享取消按钮结束
+
+	

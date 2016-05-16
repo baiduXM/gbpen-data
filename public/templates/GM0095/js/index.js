@@ -18,12 +18,15 @@ $(document).ready(function(){
     });
   //产品
   var swiper = new Swiper('.pic_xq.swiper-container', {
-            paginationClickable: false
-
+        slidesPerView : 3,
+centeredSlides : true,
+loop : true
     });
-
 var mw=$(".menu").width()
 $(".menu").height(mw*.2891)
-$(".news").height(mw*.30156)
+//$(".news").height(mw*.30156)
 $(".pic .tit").height(mw*.22)
+
+	
   });
+  

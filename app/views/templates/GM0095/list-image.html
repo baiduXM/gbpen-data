@@ -43,9 +43,9 @@
 	    <div class="wrap transition p_a">
 			<div class="main index">
 			    <div class="aboutheader p_r">
-			   	 <i class="icon iconfont ss p_a">&#xe601;</i>
+			   	 
 			     <a href=""><img src="{$logo}" alt=""></a>
-				 <i class="icon iconfont slide-nav p_a">&#xe60f;</i>
+				
 			 </div>
 			
 				<div class="menu swiper-container">
@@ -69,19 +69,14 @@
 					<div class="b"></div>
             <div class="about">
             	<div class="className p_r">
-			     <div class="tit">{$list.name}<div class="font"><span class="type">分类∧</span><em class="font-set">字体+</em></div>
-				</div>
-                 <ul class="font-list font-sel" style="display: none;">
-				<li class="d">大</li>
-				<li class="z">中</li>
-				<li class="x">小</li>
-			</ul>
+			     
+                 
 				</div>
 				
 			  {include file="./_pagenavs_sub3.html"}
 		        <div class="aboutms info">
 		          
-		             <div class="pic pro">
+		             <div class="pic1 pro">
 			             <ul>
 
 			              {foreach item=article from=$list.data}
@@ -89,7 +84,7 @@
                                  <figcaption>{$article.title}</figcaption> 
 							</a></li>
 							
-							{if $article@index+1 == 9}{break}{/if}
+							
                         {/foreach}   
 
 
@@ -101,7 +96,8 @@
 		        </div> 
 	        </div>  
 			  </div> 
-		    <p class="aboutbq">{$footprint}</p>
+		    
+		    <div class="footer"><p class="aboutbq">{$footprint}</p></div>
 		</div>
 	
 		

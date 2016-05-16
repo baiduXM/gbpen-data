@@ -1,28 +1,20 @@
-
-<header class="he p_r">
-
-			
-				<img src="{$logo}" class="logo" alt="">
-				<i class="iconfont daohang demo-icon icon-th-list iconnav p_a fix_icon" id="quickbar-navs-btn">&#xe603;</i>
-
-				</header>
-				 <div class="banners p_r">
-          
-           
-				<div class="banner swiper-container">
-			        <ul class="swiper-wrapper">
-			         
-					{foreach name=slidepics item=slidepic from=$global.slidepics}
-					<li class="swiper-slide"><a class="pic" href="{$slidepic.link}" target="_blank"><img src="{$slidepic.image}" alt="{$slidepic.title}" /></a></li>
-					{/foreach}
-			        </ul>
-			      
-			        
-			        
-			        <div class="swiper-button-next"></div>
-			        <div class="swiper-button-prev"></div>     
-			    </div>
-            </div>
-
-
-
+<header>
+    <div class="header">
+      <div class="logo"><img src="{$logo}" width="100%"></div>
+      <div class="baner">
+        <div id="slideBox" class="slideBox">
+          <div class="hd">
+            <ul>
+            </ul>
+          </div>
+          <div class="bd">
+            <ul>
+               {foreach name=slidepics item=slidepic from=$global.slidepics}
+              <li><a class="pic" href="{$slidepic.link}"><img src="{$slidepic.image}" title="640*316" /></a></li>
+   {/foreach} 
+            </ul>
+          </div>
+        </div>
+      </div> 
+    </div>
+  </header>

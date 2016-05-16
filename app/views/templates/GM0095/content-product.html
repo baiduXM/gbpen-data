@@ -43,7 +43,7 @@
 		<div class="main">
 		  
             <div class="classNamexq p_r"><span class="forword">< 返回</span>{$article.category.name}
-      <i class="icon iconfont slide-nav iconnav p_a">&#xe60f;</i> 
+      
 		</div>
 		<div class="contant">
 					<div class="b"></div>
@@ -53,13 +53,37 @@
 		        <div class="aboutms info">
 		           <h3 class="protit">{$article.title}</h3>
 		           <div class="fonts"><span class="d">大</span> | <span class="z">中</span> | <span class="x">小</span></div>
-		       <figure class="nimg"><img src="{$article.image}"  alt=""></figure>
-			     {$article.content}
+<!-- 		       <figure class="nimg">
+
+
+		       <img src="{$article.image}"  alt="">
+
+		       </figure> -->
+
+				<div class="nimg">
+				    <div class="swiper-container">
+				        <div class="swiper-wrapper">
+				            {foreach item=image from=$article.images}
+				            <div class="swiper-slide"><img src="{$image.image}"  alt=""></div>
+							{/foreach}
+		
+				        </div>
+				        <!-- Add Pagination -->
+				        <div class="swiper-pagination"></div>
+				        <!-- Add Arrows -->
+				        <div class="swiper-button-next"></div>
+				        <div class="swiper-button-prev"></div>
+				    </div>					
+
+				</div>
+
+
+			    <div class="infos"> {$article.content}</div>
 			       
 		        </div> 
 	        </div>  
 			  </div> 
-		    <p class="aboutbq">{$footprint}</p>
+		    <div class="footer"><p class="aboutbq">{$footprint}</p></div>
 		</div>
 	
 		
@@ -73,6 +97,6 @@
 <script type="text/javascript" src="{$site_url}js/function.js"></script>
 <script type="text/javascript" src="{$site_url}js/lazyload.js"></script>
 <script type="text/javascript" src="{$site_url}js/swiper.min.js"></script>
-<script type="text/javascript" src="{$site_url}js/about.js"></script>
+<script src="{$site_url}js/content.js"></script>
 </body>
 </html>

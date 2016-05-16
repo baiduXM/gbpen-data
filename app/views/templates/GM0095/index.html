@@ -45,9 +45,7 @@
 			    <div class="headBanner p_r">
 					<header>
 					   <div class="p_r">
-						   	 <i class="icon iconfont ss p_a">&#xe636;</i>
 						      <div class="logo"><a href=""><img src="{$logo}" alt=""></a></div>
-							 <i class="icon iconfont slide-nav p_a">&#xe603;</i>
 					   </div>
 					   
 					</header>
@@ -90,7 +88,7 @@
 						<h3 class="tit"><a href="{$mIndexCat.link}">{$mIndexCat.name}</a></h3>
 						<div class="pic_xq swiper-container">
                          
-						<ul class="pic_lm swiper-wrapper">
+						<ul class="pic_lm swiper-wrapper" id ="a">
 						{foreach item=article from=$mIndexCat.data}
 						<li class="swiper-slide"><a href="{$article.link}"><figure><img src="{$article.image}" alt="{$article.title}"></figure>
                                  <figcaption>{$article.title}</figcaption> 
@@ -107,24 +105,26 @@
 {elseif $mIndexCat.type eq 1}
 
 <div class="news">
-<h3 class="tit"><a href="{$mIndexCat.link}">{$mIndexCat.name}</a></h3>
-<ul class="new">
-						{foreach item=article from=$mIndexCat.data}
+	<h3 class="tit"><a href="{$mIndexCat.link}">{$mIndexCat.name}</a></h3>
+	<ul class="new">
+		{foreach item=article from=$mIndexCat.data}
 						
 		<li><a href="{$article.link}"><span>({$article.pubdate})</span>{$article.title}</a></li>
 		{if $article@index+1 == 5}{break}{/if}
 		{/foreach}
+			
 							
-							
-						</ul>
-						</div>
+	</ul>
+</div>
 {/if}
 {/foreach}
 	</div>
+   <div class="footer">
+  	<p class="bq">{$footprint}</p> 	
+   </div>
 
-				<p class="bq">{$footprint}</p>
 				
-			</div>
+</div>
 
 			
 	    </div>

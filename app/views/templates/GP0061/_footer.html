@@ -1,0 +1,80 @@
+
+<div class="link">
+    友情链接：    
+        {foreach name=flink item=flink from=$global.links}
+         <a href="{$flink.link}">{$flink.title}</a>    丨    
+        {/foreach}
+
+</div>
+<div class="sec-class">
+<!--     <ul>
+        {foreach item=sec_nav from=$global.second_navs}
+        <li>
+            <h2><a href="{$sec_nav.link}">{$sec_nav.name}</a></h2>
+            <div>
+                {foreach item=sec_nav_child from=$sec_nav.childmenu}
+                       <a href="{$sec_nav_child.link}">{$sec_nav_child.name}</a>
+                {/foreach}
+
+            </div>
+        </li>
+
+        {/foreach}
+
+    </ul> -->
+    <ul>
+        <li>
+            <h2><a href="{$global.second_navs1.link}">{$global.second_navs1.name}</a></h2>
+            <div>
+                {foreach item=sec_nav_child from=$global.second_navs1.childmenu}
+                       <a href="{$sec_nav_child.link}">{$sec_nav_child.name}</a>
+                {/foreach}
+            </div>
+        </li>
+        <li>
+            <h2><a href="{$global.second_navs2.link}">{$global.second_navs2.name}</a></h2>
+            <div>
+                {foreach item=sec_nav_child from=$global.second_navs2.childmenu}
+                       <a href="{$sec_nav_child.link}">{$sec_nav_child.name}</a>
+                {/foreach}
+            </div>
+        </li>
+        <li>
+            <h2><a href="{$global.second_navs3.link}">{$global.second_navs3.name}</a></h2>
+            <div>
+                {foreach item=sec_nav_child from=$global.second_navs3.childmenu}
+                       <a href="{$sec_nav_child.link}">{$sec_nav_child.name}</a>
+                {/foreach}
+            </div>
+        </li>
+        <li>
+            <h2><a href="{$global.second_navs4.link}">{$global.second_navs4.name}</a></h2>
+            <div>
+                {foreach item=sec_nav_child from=$global.second_navs4.childmenu}
+                       <a href="{$sec_nav_child.link}">{$sec_nav_child.name}</a>
+                {/foreach}
+            </div>
+        </li>
+        <li>
+            <h2><a href="{$global.second_navs5.link}">{$global.second_navs5.name}</a></h2>
+            <div>
+                {foreach item=sec_nav_child from=$global.second_navs5.childmenu}
+                       <a href="{$sec_nav_child.link}">{$sec_nav_child.name}</a>
+                {/foreach}
+            </div>
+        </li>
+        <li>
+            <h2><a href="{$global.second_navs6.link}">{$global.second_navs6.name}</a></h2>
+            <div>
+                {foreach item=sec_nav_child from=$global.second_navs6.childmenu}
+                       <a href="{$sec_nav_child.link}">{$sec_nav_child.name}</a>
+                {/foreach}
+            </div>
+        </li>                
+    </ul>
+                                                                                    
+</div>
+<div class="foot">
+    {$footprint}
+</div>
+{$footscript} 

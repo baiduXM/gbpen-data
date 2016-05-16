@@ -1,88 +1,75 @@
 <!DOCTYPE html>
-<html>
+<html manifest="huancun.manifest">
 	<head>
 		<!-- 实时预览调试代码，模板开发完成后删除 -->
 		
 		<!-- 调试代码 End -->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no,minimal-ui">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta content="telephone=no, email=no" name="format-detection">
+		<!-- 启用360浏览器的极速模式(webkit) -->
+		<meta name="renderer" content="webkit">
+		<!-- 避免IE使用兼容模式 -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+		<meta name="HandheldFriendly" content="true">
+		<!-- 微软的老式浏览器 -->
+		<meta name="MobileOptimized" content="320">
+		<!-- uc强制竖屏 -->
+		<meta name="screen-orientation" content="portrait">
+		<!-- QQ强制竖屏 -->
+		<meta name="x5-orientation" content="portrait">
+		<meta name="keywords" content="{$keywords}" />
+		<meta name="description" content="{$description}" />
+		<link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
+		<title>{$title}</title>
+		<link rel="stylesheet" href="{$site_url}css/reset.css" /> 
+		<link rel="stylesheet" href="{$site_url}css/public.css" /> 
+		<link href="{$site_url}css/css.css" rel="stylesheet" type="text/css" />
+		<link href="{$site_url}css/swipe.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" rev="stylesheet" href="{$site_url}css/style_{$stylecolor}.css" type="text/css" />
+		<script src="{$site_url}js/TouchSlide.1.1.js"></script>
+		<script type="text/javascript" src="{$site_url}js/jquery.min.js"></script>
+		<script type="text/javascript" src="{$site_url}js/function.js"></script>
+		<script type="text/javascript" src="{$site_url}js/share.js"></script>
+		<script src="{$site_url}js/idangerous.swiper-2.0.min.js"></script>
+		<script src="{$site_url}js/idangerous.swiper.3dflow-2.0.js"></script>
+		<script src="{$site_url}js/simple-app.js"></script>
 		<script type="text/javascript">
-		// 跳转PC页面
-		{if $site_another_url}
-			if (!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
-				location.href = '{$site_another_url}';
-			}
-		{/if}
+			window.addEventListener('load', function(){
+		   setTimeout(function(){ window.scrollTo(0, 1); }, 100);
+		});//safari浏览器可以通过此代码来隐藏地址栏
 		</script>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width,minimum-scale=1.0, maximum-scale=1.5,user-scalable=no,minimal-ui">
-<meta name="keywords" content="{$keywords}" />
-<meta name="description" content="{$description}" />        
-<meta name="apple-mobile-web-app-capable" content="yes" />
-<meta name="apple-mobile-web-app-status-bar-style" content="black" />
-<meta content="telephone=no, email=no" name="format-detection">
-<meta name="renderer" content="webkit">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="HandheldFriendly" content="true">
-<meta name="MobileOptimized" content="320">
-<meta name="screen-orientation" content="portrait">
-<meta name="x5-orientation" content="portrait">
-<title>{$title}</title>
-<link rel="stylesheet" href="{$site_url}css/swiper.css">
-
-<link href="{$site_url}css/css.css" rel="stylesheet" type="text/css" />
-
-<script type="text/javascript">
-	window.addEventListener('load', function(){
-   setTimeout(function(){ window.scrollTo(0, 1); }, 100);
-});//safari浏览器可以通过此代码来隐藏地址栏
-</script>
-</head>
+	</head>
 <body>
-<div class="className p_r"><span class="type">分类↑</span>{$list.name}
+<div class="body">
+<div class="wrap page-active">
+    <div class="index-wrap"> 
+       {include file="./_header.html"} 
 
-         <i class="iconfont demo-icon icon-th-list slide-nav iconnav p_a">&#xe603;</i>
+  <section>
+    <div class="boxmaind">
+      <div class="boxmain_d">
+        <div class="main">
+          <div class="searchresult">
+            <p class="public_color">共搜索到{$search.total}个结果</p>
+            <ul>
+            	{foreach name=article item=article from=$search.data}
+                 <li><a href="{$article.link}" class="public_color">{$article.title}</a></li>
+				{/foreach}
+            </ul>
+            
+                <div class="next1 public_color"><a href="{$page_links.first_link}" class="public_color">首页</a><a href="{$page_links.prev_link}" class="public_color">上一页</a>{$page_links.current_page}/{$page_links.page_count}　<a href="{$page_links.next_link}" class="public_color">下一页</a><a href="{$page_links.last_link}" class="public_color">尾页</a></div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+      <footer class="foot bg1" ><a class="back-top">∧</a>{$footprint}</footer>
 </div>
-   {include file="./_pagenavs_sub3.html"}
-
-   <div class="aboutms info">
-
-          <!--   <div class="font">字体： <span class="d">大</span> | <span class="z">中</span> | <span class="x">小</span></div> -->
-           <div class="infos s">
-            <h3 class="sos">
-            	搜索关键词为“<span>{$search.keyword}</span>”的产品/文章，共搜索到{$search.total}个结果：
-            </h3>
-
-           <ul>
-                     {foreach item=article from=$list.data}
-                    	<li>
-                        	<h3><a onclick="javascript:window.location.href='{$article.link}'"><span>({$article.pubdatestamp|date_format:"%y "}/{$article.pubdatestamp|date_format:"%d "}/{$article.pubdatestamp|date_format:"%m "})</span>{$article.title}</a></h3>
-                        	<div class="newsms">{$article.description}</div>
-                        </li> 
-                        {if $article@index+1 == 8}{break}{/if}
-                     {/foreach}                                                                               
-                         
-
-                                   
-                    </ul>
-
-
-
-                     <div class="num"><a href="{$page_links.first_link}" class="cu">首页</a><a href="{$page_links.prev_link}">上一页</a><a href="{$page_links.next_link}" >下一页</a><a href="{$page_links.last_link}"  >尾页</a></div>  
-           </div> 
-        </div> 
-					
-				  
-					
-				
-
-			<div class="name">{$footprint}<!-- <i class="demo-icon icon-angle-circled-up">&#xe801;</i> --></div>
-		
-			
-		</div>
-	
-		<div class="shadow p_a"></div>
-        {$footscript}
-
-<script src="{$site_url}js/jquery.min.js"></script>
-<script type="text/javascript" src="{$site_url}js/function.js"></script>
+</div>{$footscript}</div>
 </body>
 </html>

@@ -43,7 +43,7 @@
 		<div class="main">
 		  
             <div class="classNamexq p_r"><span class="forword">< 返回</span>{$article.category.name}
-      <i class="icon iconfont slide-nav iconnav p_a">&#xe60f;</i> 
+       
 		</div>
 		<div class="contant">
 					<div class="b"></div>
@@ -52,14 +52,18 @@
 			
 		        <div class="aboutms info">
 		           <h3 class="protit">{$article.title}</h3>
-		           <div class="fonts"><span class="d">大</span> | <span class="z">中</span> | <span class="x">小</span></div>
+		           <div class="fonts" id="font"><span class="d">大</span> | <span class="z">中</span> | <span class="x">小</span></div>
 		       <figure class="nimg"><img src="{$article.image}"  alt=""></figure>
-			     {$article.content}
+			       <div class="infos">{$article.content}</div>
 			       
 		        </div> 
+				<div class="next2">
+            	<dl><a href="{$article.prev.link}">上一条:{$article.prev.title}</a></dl>
+			    <dl><a href="{$article.next.link}">下一条:{$article.next.title}</a></dl>
+            </div>
 	        </div>  
 			 </div> 
-		    <p class="aboutbq">{$footprint}</p>
+		    <div class="footer"><p class="aboutbq">{$footprint}</p></div>
 		</div>
 	
 		

@@ -43,9 +43,9 @@
 	    <div class="wrap transition p_a">
 			<div class="main index">
 			    <div class="aboutheader p_r">
-			   	 <i class="icon iconfont ss p_a">&#xe601;</i>
+			   	 
 			     <a href=""><img src="{$logo}" alt=""></a>
-				 <i class="icon iconfont slide-nav p_a">&#xe60f;</i>
+				
 			 </div>
 			
 				<div class="menu swiper-container">
@@ -69,13 +69,7 @@
 					<div class="b"></div>
             <div class="about">
             	<div class="className p_r">
-			     <div class="tit">{$list.name}<div class="font"><span class="type">分类∧</span><em class="font-set">字体+</em></div>
-				</div>
-                 <ul class="font-list font-sel" style="display: none;">
-				<li class="d">大</li>
-				<li class="z">中</li>
-				<li class="x">小</li>
-			</ul>
+			     
 				</div>
 				
 			  {include file="./_pagenavs_sub3.html"}
@@ -88,14 +82,14 @@
 			           
                      {foreach item=article from=$list.data}
                     	       <li >
-						<a href="">
+						<a href="{$article.link}">
 							<figure><img src="{$article.image}" alt=""></figure>
 
 							<div class="imgright p_r">
 							<h3 class="title">{$article.title}</h3>
 							<p>{$article.description}</p></div></a>
 						</li>
-                        {if $article@index+1 == 8}{break}{/if}
+                        
                      {/foreach}                                                                               
                          
 
@@ -106,7 +100,7 @@
 		        </div> 
 	        </div>  
 			 </div>
-		    <p class="aboutbq">{$footprint}</p>
+		    <div class="footer"><p class="aboutbq">{$footprint}</p></div>
 		</div>
 	
 		
@@ -118,9 +112,9 @@
 
 
 <script src="{$site_url}js/jquery.min.js"></script>
-<script type="text/javascript" src="{$site_url}js/function.js"></script>
-<script type="text/javascript" src="{$site_url}js/lazyload.js"></script>
-<script type="text/javascript" src="{$site_url}js/swiper.min.js"></script>
-<script type="text/javascript" src="{$site_url}js/about.js"></script>
+	<script type="text/javascript" src="{$site_url}js/swiper.min.js"></script>
+	<script type="text/javascript" src="{$site_url}js/function.js"></script>
+	<script type="text/javascript" src="{$site_url}js/index.js"></script>
+	<script type="text/javascript" src="{$site_url}js/lazyload.js"></script>
 </body>
 </html>
