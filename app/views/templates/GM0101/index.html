@@ -75,7 +75,7 @@
          <div class="inner insub_text">
             <ul class="newslist">
            {foreach item=article from=$mIndexCat.data}
-             <li><a href="#">
+             <li><a href="{$mIndexCat.link}">
                 <div class="date ">
                 <dd class="day">{$article.pubtimestamp|date_format:"%d "}</dd>
                 <dd class="year">{$article.pubtimestamp|date_format:"%Y "}-{$article.pubtimestamp|date_format:"%m "}
