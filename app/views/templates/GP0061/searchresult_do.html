@@ -44,7 +44,7 @@
                 <!--search_content_end-->{/foreach}
             </ul>
             <div class="paging">
-                第{$page_links.current_page}页/共{$page_links.page_count}页 &nbsp;&nbsp;&nbsp;&nbsp;   共{$page_links.per_page}条记录&nbsp; 
+                第{$page_links.current_page}页/共{$page_links.page_count}页 &nbsp;&nbsp;&nbsp;&nbsp;   共{$search.total}条记录&nbsp; 
                 <a href="{$page_links.first_link}">[第一页]</a> 
                 <a href="{$page_links.prev_link}">[上一页]</a> 
                 {foreach name=nears_link item=near_link key=near_page from=$page_links.nears_link}
