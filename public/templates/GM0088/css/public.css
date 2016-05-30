@@ -109,7 +109,7 @@ header{ position:relative}
 /*list-image*/
 .list_image ul li{  float:left;  overflow:hidden;width:30%; background:#f2f0e6; box-shadow:2px 2px 2px rgba(0,0,0,.2); margin:2% 1.5%;  }
 
-.list_image ul li .in_protitle{ text-align:left; background:#02a0e7; line-height:30px; padding-left:10px; font-size:15px; }
+.list_image ul li .in_protitle{ text-align:left; background:#02a0e7; line-height:30px; padding-left:10px; font-size:15px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; }
 .list_image ul li .in_protitle span{ width:80%; color:#fff}
 .list_image ul li .in_protitle .more{ width:20%; float:right; color:#aaaaaa;}
 
