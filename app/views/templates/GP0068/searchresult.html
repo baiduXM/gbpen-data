@@ -1,199 +1,95 @@
-<!DOCTYPE>
-<html>
-<head>
-<meta http-equiv="x-ua-compatible" content="ie=8" />
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<script type="text/javascript">
+    // 跳转手机页面
+    {if $site_another_url}
+      if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+        location.href = '{$site_another_url}';
+      }
+    {/if}
+    </script>
+
+<meta http-equiv="x-ua-compatible" content="ie=7" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title> </title>
-<link href="css/css.css" rel="stylesheet" type="text/css" />
-<script src="js/jquery1.9.1.min.js" type="text/javascript"></script>
-<script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
-<script type="text/javascript" src="js/function.js"></script>
-<style>
-        .searchbox{behavior:url(PIE.htc);}
-</style>
+
+<meta name="keywords" content="{$keywords}"/>
+<meta name="description" content="{$description}"/>
+<link href="{$site_url}css/css.css" rel="stylesheet" type="text/css" />
+<link href="{$site_url}css/sub.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="{$site_url}js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="http://common.mn.sina.com.cn/public/resource/lib/jquery.jcarousellite.js">
+</script>
+<script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.js"></script>
+    <script type="text/javascript" src="{$site_url}js/jquery.kinMaxShow-1.0.min.js"></script>
+<script type="text/javascript" src="{$site_url}js/function.js"></script>
+
+
+<title>{$title}</title> 
+
 </head>
+
 <body>
-<div class="wrap">
-    <div class="top">
-        <div class="public">
-            <div class="tel">4000-127-808</div>
-            <div class="topright">
-                <p><a href="">加入收藏</a>  |  <a href="">网站地图</a></p>
-                <form class="search fr" action="">
-                    <input type="text" class="sinp fl" value="Search......" />
-                    <input type="submit" class="sbtn fr" value="" />
-                </form>
-            </div>
-        </div>
-    </div>
-    <div class="header">
-        <div class="head">
-            <div class="logo fl"><a href="" title="返回首页"><img src="images/logo.png" alt=""></a></div>
-            <div class="menu fr">
+<div class="bg">
+      {include file='./_header.html'}
+<div id="sub_container" class=" wrapper1 clearfix" >
+                   	
+ {include file='./_aside.html'}
 
-                  <ul id="nav" class="nav">
-                    <li class="nLi">
-                      <h3><a href="index.html" target="_blank">网站首页</a></h3>
-                    </li>
-                    <li class="nLi">
-                        <h3><a href="about.html" target="_blank">关于我们</a></h3>
-                    </li>
-                    <li class="nLi">
-                        <h3><a href="news.html" target="_blank">产品中心</a></h3>
-                    </li>
-                    <li class="nLi">
-                        <h3><a href="#" target="_blank">案例展示</a></h3>
-
-                          <ul class="sub">
-                            <li><a href="#">顶级别墅装饰</a></li>
-                            <li><a href="#">精品大宅装饰</a></li>
-                            <li><a href="#">中小户型整装</a></li>
-                            <li><a href="#">东易饰家软装</a></li>
-                            <li><a href="#">中小户型整装</a></li>
-                            <li><a href="#">中小户型整装</a></li>
-                          </ul>                    
-                    </li>
-                    <li class="nLi">
-                       <h3><a href="" target="">新闻中心</a></h3>
-                    </li>
-                    <li class="nLi">
-                       <h3><a href="" target="">人才招聘</a></h3>
-                    </li>            
-                    <li class="nLi">
-                        <h3><a href="#" target="_blank">联系我们</a></h3>
-                    
-                    </li>                         
-                  </ul>                                    
-            </div>
-        </div>
+            <div class="main fr"> 
+                       <div class="crumb "><span>您所在的位置：<a href="{$site_url}">首页</a>> 搜索结果</span>
+      <h2><img src="{$site_url}images/crumb_ico.jpg" width="34" height="25" /><b>搜索结果</b>searchresult</h2>
     </div>
-    <div class="banner">
-        <div class="fullSlide">
+       
+            <div class="article">
             
-            <div class="bd">
-                <ul>
-                    <li style="background:url(images/banner.jpg) center 0 no-repeat;"><a target="_blank" href="javascript:;"></a></li>
-                    <li style="background:url(images/banner.jpg) center 0 no-repeat;"><a target="_blank" href="javascript:;"></a></li>
-                    <li style="background:url(images/banner.jpg) center 0 no-repeat;"><a target="_blank" href="javascript:;"></a></li>
-                    <li style="background:url(images/banner.jpg) center 0 no-repeat;"><a target="_blank" href="javascript:;"></a></li>
-                    <li style="background:url(images/banner.jpg) center 0 no-repeat;"><a target="_blank" href="javascript:;"></a></li>
-                </ul>
-            </div>
-
-            <div class="hd">
-                <ul>
-                    <li><img src="images/ban1.jpg" /></li>
-                    <li><img src="images/ban2.jpg" /></li>
-                    <li><img src="images/ban3.jpg" /></li>
-                </ul>
-            </div>
-        </div>
-        
-    </div>
-
-    <div class="nycont">
+                
+                       
+            <div class="searchresult">
+                    {if $search.total eq 0}
+                    <p class="search_res">没有查找到相关数据！</p>
+                    {else}
+                     <ul class="resultbox">
+                        {foreach item=article from=$search.data}
+                            <li>
+                            <div class="nlist_a"><a href="{$article.link}"><span>{$article.pubdate}</span> <b>{$article.title}</b></a></div>
+                            <div class="nlist_word">{$article.description}<span><a href="{$article.link}">[查看更多]</a></span></div>
+                            </li>            
+                          {if $article@index+1 == 6} {break} {/if}
+                        {/foreach}
+                     </ul>
+                        <div class="module_page">
+                            第{$page_links.current_page}页/共{$page_links.page_count} 页
+                            <a href="{$page_links.first_link}">首页</a>
+                            <a href="{$page_links.prev_link}">上一页</a> {foreach name=nears_link item=near_link key=near_page from=$page_links.nears_link} {if $near_page == $page_links.current_page}
+                            <a class="current">{$near_page}</a> {else}
+                            <a href="{$near_link}">{$near_page}</a> {/if} {/foreach}
+                            <a href="{$page_links.next_link}">下一页</a>
+                            <a href="{$page_links.last_link}">尾页</a></div>
+                      {/if}
             
-        <div class="searchbox">
-            <form action="">
-                <input class="sinp" type="text" value="请输入搜索关键字" />
-                <input class="sbtn" type="submit" value="搜索" />
-            </form>
-        </div>
-        <div class="edit">
-            <ul class="searchlist">
-                <li><a href=""><h2>如何对待舌尖上的浪费 各国各出奇招（欧美篇）</h2><span>2014-05-15</span></a></li>
-                <li><a href=""><h2>如何对待舌尖上的浪费 各国各出奇招（欧美篇）</h2><span>2014-05-15</span></a></li>
-                <li><a href=""><h2>如何对待舌尖上的浪费 各国各出奇招（欧美篇）</h2><span>2014-05-15</span></a></li>
-                <li><a href=""><h2>如何对待舌尖上的浪费 各国各出奇招（欧美篇）</h2><span>2014-05-15</span></a></li>
-                <li><a href=""><h2>如何对待舌尖上的浪费 各国各出奇招（欧美篇）</h2><span>2014-05-15</span></a></li>
-                <li><a href=""><h2>如何对待舌尖上的浪费 各国各出奇招（欧美篇）</h2><span>2014-05-15</span></a></li>
-                <li><a href=""><h2>如何对待舌尖上的浪费 各国各出奇招（欧美篇）</h2><span>2014-05-15</span></a></li>
-                <li><a href=""><h2>如何对待舌尖上的浪费 各国各出奇招（欧美篇）</h2><span>2014-05-15</span></a></li>
-                <li><a href=""><h2>如何对待舌尖上的浪费 各国各出奇招（欧美篇）</h2><span>2014-05-15</span></a></li>
-                <li><a href=""><h2>如何对待舌尖上的浪费 各国各出奇招（欧美篇）</h2><span>2014-05-15</span></a></li>
-                <li><a href=""><h2>如何对待舌尖上的浪费 各国各出奇招（欧美篇）</h2><span>2014-05-15</span></a></li>
-            </ul>
-            <div class="paging">
-                第1页/共1页 &nbsp;&nbsp;&nbsp;&nbsp;   共10条记录&nbsp; <a href="">[第一页]</a> <a href="">[上一页]</a> <a href="">1</a> <a href="">[下一页]</a> <a href="">[最后页]
-</a>            </div>
-        </div>
-
-    </div>
-
-
-    <div class="link">
-        友情链接：    <a href="">百度</a>    丨    <a href="">易尔通</a>    丨    <a href="">新浪</a>    丨    <a href="">花瓣网</a>    丨   <a href="">腾讯</a>     丨    <a href="">搜狐</a>    丨    <a href="">爱奇艺</a>    丨    <a href="">人才网</a>     丨    <a href="">易尔通</a>    丨    <a href="">新浪</a>
-    </div>
-    <div class="sec-class">
-        <ul>
-            <li>
-                <h2><a href="">关于我们</a></h2>
-                <div>
-                    <a href="">关于我们</a>
-                    <a href="">关于我们</a>
-                    <a href="">关于我们</a>
-                    <a href="">关于我们</a>
-                    <a href="">关于我们</a>
-                </div>
-            </li>
-            <li>
-                <h2><a href="">产品中心</a></h2>
-                <div>
-                    <a href="">产品中心</a>
-                    <a href="">产品中心</a>
-                    <a href="">产品中心</a>
-                    <a href="">产品中心</a>
-                    <a href="">产品中心</a>
-                </div>
-            </li>
-            <li>
-                <h2><a href="">案例展示</a></h2>
-                <div>
-                    <a href="">案例展示</a>
-                    <a href="">案例展示</a>
-                    <a href="">案例展示</a>
-                    <a href="">案例展示</a>
-                    <a href="">案例展示</a>
-                </div>
-            </li>
-            <li>
-                <h2><a href="">新闻中心</a></h2>
-                <div>
-                    <a href="">新闻中心</a>
-                    <a href="">新闻中心</a>
-                    <a href="">新闻中心</a>
-                    <a href="">新闻中心</a>
-                    <a href="">新闻中心</a>
-                </div>
-            </li>
-            <li>
-                <h2><a href="">人才招聘</a></h2>
-                <div>
-                    <a href="">人才招聘</a>
-                    <a href="">人才招聘</a>
-                    <a href="">人才招聘</a>
-                    <a href="">人才招聘</a>
-                    <a href="">人才招聘</a>
-                </div>
-            </li>
-            <li>
-                <h2><a href="">联系我们</a></h2>
-                <div>
-                    <a href="">联系我们</a>
-                    <a href="">联系我们</a>
-                    <a href="">联系我们</a>
-                    <a href="">联系我们</a>
-                    <a href="">联系我们</a>
-                </div>
-            </li>            
-        </ul>
-                                                                                        
-    </div>
-    <div class="foot">
-        版权所有 厦门易尔通网络科技有限公司  电话：0592-1234567  地址：厦门市思明区软件园二期观日路36号201单元<br>
-        技术支持：<a href="">厦门易尔通网络科技有限公司</a>  人才网：<a href="">厦门人才网</a>
-    </div>
-
-</div>
+             </div>
+                    </div>                      
+                    </div>                  
+                          
+ 
+        </div>      
+      {include file='./_footer.html'}
+     </div> 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

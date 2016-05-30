@@ -1,27 +1,20 @@
 <div class="footer_bg">
-<div id="footer" class=" wrapper clearfix">
-      <div class="cty">{$footprint}</div>
-      <div class="links">
-          <select onchange="javascript:openLink(this)">
-  <option>--友情链接--</option>
-  {foreach name=friend item=friend from=$global.links}
-  <option value="{$friend.link}">{$friend.title} </option>
-  {/foreach}  
-</select>
-<script type="text/javascript">
-  function openLink(obj) {
-    if (obj.selectedIndex != 0) {
-      window.open(obj.options[obj.selectedIndex].value);
-    }
-  }
-</script>
+      <div class="links_bg">
+      <div class="links_inner wrapper"><h2>友情链接:</h2>{foreach name=friend item=friend from=$global.links}
+		    <a href="{$friend.link}">{$friend.title}</a> 
+		 	{/foreach} 
+
+</div>
+      
       </div>
-    </div>
+      <div class="cty">{$footprint}</div>
+      
+
 </div>
 
 
 
-{$footscript}
+
 
 
 

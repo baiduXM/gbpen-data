@@ -1,18 +1,159 @@
 {
 	
     "about_us": {
-		"description": "关于我们",
+		"description": "左上方内容单页（如关于我们）",
 		"value": {},
-		"type": "page"
-	},
-    "news": {
-		"description": "新闻中心",
-		"value": {},
-		"type": "list"
+		"type": "page",
+		"config": {
+			"width": 320,
+			"height": 238
+		}
 	},
 	"pro":{
-		"description": "产品中心",
+		"description":"中间图片列表多图滚动(如产品展示)",
+		"value":{},
+		"type":"list"
+	},
+	"news":{
+		"description": "底部文字列表（如新闻栏目）",
 		"value": {},
-		"type": "list"
-	}
+		"type": "list",
+		"config":{
+			"showchilddata":"true"
+		}	
+
+	},
+    "website": {
+             "value": [{
+                     "title": "www.123456789.com",
+                     "image": "http://tb2.bdstatic.com/tb/static-common/img/search_logo_big_282cef2.gif",
+                     "link": "http://www.123456789.com"
+             }],
+             "description": "大轮滚图",
+             "type": "images",
+             "config": {
+                     "width": 10,
+                     "height": 10,
+                     "limit": 1
+             }
+
+      },
+	"QQ":{
+		"value": [{
+			"title": "1234567",
+			"image": "images/qq1.png",
+			"link": "http://www.baidu.com"
+		}, {
+			"title": "1234567",
+			"image": "images/qq2.png",
+			"link": "http://www.baidu.com"
+		}, {
+			"title": "1234567",
+			"image": "images/qq3.png",
+			"link": "http://www.baidu.com"
+		}],
+		"description": "QQ",
+		"type": "images",
+		"config": {
+			"width": 34,
+			"height": 34
+		}
+	},
+	"xianshi":{
+		"value": [{
+			"title": "三只松鼠_碧根果210gx2袋",
+			"image": "images/tr1.jpg",
+			"link": "http://www.baidu.com"
+		}, {
+			"title": "三只松鼠_碧根果210gx2袋",
+			"image": "images/tr2.jpg",
+			"link": "http://www.baidu.com"
+		}, {
+			"title": "三只松鼠_碧根果210gx2袋",
+			"image": "images/tr3.jpg",
+			"link": "http://www.baidu.com"
+		}],
+		"description": "产品图片",
+		"type": "images",
+		"config": {
+			"width": 320,
+			"height": 177
+		}		
+	},
+
+  "colbg1": {
+         "value": {
+                 "title": "第一个背景图片",
+                 "image": "images/colicoimg.png",
+                 "link": "http://www.baidu.com/"
+         },
+         "description": "网站第一个背景图片",
+         "type": "image",
+         "config": {
+                 "width": 149,
+                 "height":92
+         }
+ },
+
+  "bg1": {
+         "value": {
+                 "title": "第一个栏目背景图片",
+                 "image": "images/toprbg.png",
+                 "link": "http://www.baidu.com/"
+         },
+         "description": "网站第一个背景图片",
+         "type": "image",
+         "config": {
+                 "width": 214,
+                 "height":171
+         }
+ },
+  "bg2": {
+         "value": {
+                 "title": "第二个背景图片",
+                 "image": "images/toplbg.png",
+                 "link": "http://www.baidu.com/"
+         },
+         "description": "网站第二个背景图片",
+         "type": "image",
+         "config": {
+                 "width": 365,
+                 "height":222
+         }
+ },
+
+  "bg3": {
+         "value": {
+                 "title": "第三个背景图片",
+                 "image": "images/bottomrbg.png",
+                 "link": "http://www.baidu.com/"
+         },
+         "description": "网站第三个背景图片",
+         "type": "image",
+         "config": {
+                 "width": 411,
+                 "height":281
+         }
+ },
+
+  "bg4": {
+         "value": {
+                 "title": "第四个背景图片",
+                 "image": "images/btbg.png",
+                 "link": "http://www.baidu.com/"
+         },
+         "description": "网站第四个背景图片",
+         "type": "image",
+         "config": {
+                 "width": 290,
+                 "height":201
+         }
+ }
+
+
+
 }
+               
+
+
+

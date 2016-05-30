@@ -34,93 +34,88 @@
      {include file='./_header.html'}
  
  <div id="container" class=" clearfix">
+
+
 <div class="bj">
-
-<div class="about_in">
-<div class="bk"></div>
-<div id="about">
-
-<div class="about_text">
-<div class="title"><b>{$index.about.name}</b><br />{$index.about.en_name}</div>
-<div class="inner">{$index.about.description} <a href="{$index.about.link}">查看更多>></a></div>
-
-</div>
-
-
-
+<div id="about" class="wrapper">
+<div class="title"><a href="{$index.about.link}">{$index.about.en_name}<br /><span>{$index.about.name}</span></a></div>
+<div class="inner clearfix">
+<div class="about_text">{$index.about.description}	<a href="{$index.about.link}">《更多详情》</a></div>
 
 <div class="about_img"><img src="{$index.about.image}"  /></div>
 
-<div class="mo"><a href="{$index.about.link}"><img src="{$site_url}images/mo.jpg" width="151" height="60" /></a></div>
+</div></div>
+
 </div>
-</div>
-</div>
+
+
+
+
+<div class="bj">
+<div id="pro" class="wrapper clearfix" >
+<div class="inner">
+
+
+<ul>
+{foreach name=pro item=pro from=$index.pro.data}
+ <li><a href="{$pro.link}"><div class="pro_img"><img src="{$pro.image}" /></div><div class="pro_bg">{$pro.title}</div></a></li>
+       {/foreach}
+
+
+</ul>
+
+</div></div></div>
 
 
 
 
 <div class="bj">
 <div id="news" class="wrapper clearfix">
-<div class="title">
-<h1>
-<b>{$index.news.name}</b><br />
-{$index.news.description}
-</h1>
-<a href="{$index.news.link}" class="mo1"><img src="{$site_url}images/mo1.jpg" width="160" height="40" /></a><br />
-<span>{$index.news.en_name}</span>
-</div>
+<div class="title"><a href="{$index.news.link}">{$index.news.en_name}<br /><span>{$index.news.name} </span></a></div>
+<div class="inner clearfix">
+<div class="news_l">
+<div class="news_img"><img src="{$index.news.data[0].image}"  /></div>
+<div class="news_text">
+<h2><a href="{$index.news.data[0].link}">{$index.news.data[0].title}</a></h2>
+<p> {$index.news.data[0].description}</p>
 
-
-<div class="inner">
 <ul>
-
 {foreach name=news item=news from=$index.news.data}
- <li class="clearfix">
-<a href="{$news.link}">
-<div class="digital"></div>
-<div class="news_text"><h1>{$news.title}</h1>{$news.description}</div>
-</a>
-</li>
-  {if $news@index+1 == 3}{break}{/if}
+    {if $news@index+1 gte 2 and $news@index+1 lte 6}
+       <li><a href="{$news.link}">{$news.title}</a></li>
+     {/if}
 {/foreach}
-
-</ul>
-</div></div></div>
-
-
-
-
-<div class="bj">
-<div id="pro" class="wrapper clearfix">
-<div class="pro_l">
-<a href="{$index.pro.link}"><h1><span>{$index.pro.name}</span><br />{$index.pro.en_name}</h1></a>
-<div class="pro_img"><img src="{$site_url}images/p_img.jpg" width="90" height="270" /></div>
-<div class="pro_list">
-<ul>
-
-{foreach name=lnav item=lnav from=$index.left_nav.childmenu}
-             <li><a href="{$lnav.link}">{$lnav.name}</a></li>
-            
-            {if $lnav@index+1 == 10}{break}{/if}
-           {/foreach}
-
-
 </ul>
 
+</div></div>
+
+
+<div id="contact">
+<div class="tilte">
+联系我们<br />contact us
+</div>
+<div class="contact_inner">
+地址:{$contact.address} <br />
+联系电话：{$contact.telephone}<br />    
+传真：{$contact.fax}<br />
 </div>
 </div>
 
+</div>
 
-<div class="pro_inner">
-<ul class="clearfix" >
-{foreach name=pro item=pro from=$index.pro.data}
-<li><a href="{$pro.link}"><img src="{$pro.image}" /></a></li>
-       {/foreach}
+
+</div>
 
 
 
-</ul>
-</div></div></div>
+
+
+</div>
+
+
+
+
+
 
 
 

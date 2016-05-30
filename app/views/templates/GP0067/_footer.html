@@ -1,12 +1,16 @@
-<div class="footes">
-    <div class="mid_ft">
-        <div class="flink">
-            {foreach item=nav from=$global.second_navs}
-            <a class="{if $nav.current}current{/if}" href="{$nav.link}">{$nav.name}</a>
-            {if $nav@index+2 neq count($nav)}|{/if}
-            {/foreach}
-        </div>
-        {$footprint}
+  <div class="link">
+    <div class="linkbox">
+     <span>友情链接 :</span>
+     {$limit =  3}
+      {foreach name=flink item=flink from=$global.flinks}
+      <a href="{$flink.link}">{$flink.title}</a> 
+	  {if $flink@index+1 gte $limit}{break}{/if}
+      | 
+      {/foreach}
     </div>
-</div>
-{$footscript}
+  </div>
+  <div class="footer">
+    {$footprint}     
+   
+  </div>
+{$footscript}    

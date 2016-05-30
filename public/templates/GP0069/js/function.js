@@ -3,30 +3,41 @@
 window.onload=function(){
 	
 <!--美工-->
-
+	
+	
 $("#container .bj").each(function(n){
 
 			
 		  if(n%2==1){
-			$(this).addClass("bj1");
+			$(this).addClass("bg1");
 			   }
 					   })
 	
+		
 	
-	
-	
-	
+
 	 $("#about").each(
  function(){
-	 $(this).find(".about_text").width($(this).width()-$(this).find(".about_img img").width()-55)
+	 $(this).find(".about_text").width($(this).width()-$(this).find(".about_img img").width()-155)
+	 }
+ )
+
+
+	
+	 $(".news_l").each(
+ function(){
+	 $(this).find(".news_text").width($(this).width()-$(this).find(".news_img img").width()-95)
 	 }
  )
 	
 	
+
 	
-	 $("#news .digital").each(function (i) {
-        $(this).text("0"+(i+1));
-      });
+
+	
+
+
+	
 	
 
 function adaption(selector,li_w,li_h){
@@ -46,7 +57,7 @@ function adaption(selector,li_w,li_h){
 		})
 	}
 /*首页产品列表图片自适应*/
- adaption("#pro .pro_inner ul li",175,175)
+ adaption("#pro .inner ul li .pro_img",209,209)
  
  
 
@@ -136,7 +147,7 @@ $(document).ready(function() {
 
 /*大图 100%*/	
 	$("#kinMaxShow").kinMaxShow({
-            height: 450,
+            height: 409,
             button: {
                 showIndex: false,
                 normal: { background: 'url(images/button.png) no-repeat -14px 0', marginRight: '8px', border: '0', right: '48%', bottom: '20px' },

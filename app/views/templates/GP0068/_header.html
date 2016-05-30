@@ -1,85 +1,64 @@
-<div class="top">
-    <div class="public">
-        <div class="tel">{$global.top_tel}</div>
-        <div class="topright">
-            <p><a href="javascript:void(0)" onclick="shoucang(document.title,window.location)">加入收藏</a>  </p>
-            <form class="search fr" action="{$search_action}" method="GET">
-                <input type="text" class="sinp fl" name="s" value="Search......" />
-                <input type="submit" class="sbtn fr" value="" />
-            </form>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <div id="banner" class="wrapper">
+<div id="kinMaxShow" style="display:none;"> {foreach name=slidepics item=slidepic from=$global.slidepics}
+      <div> <a href="{$slidepic.link}" target="_blank"><img src="{$slidepic.image}" alt="{$slidepic.title}"  /></a></div>
+      {/foreach} </div>   
+ </div>
+ 
+ 
+ 
+ 
+ 
+ 
+<div class="search"><form action="{$search_action}" method="GET">
+  <input type="text" name="s"  placeholder="请输入关键字" class="search_area" />
+  <input type="submit" class="search_btn"  value=""/>
+</form></div>
 
-        </div>
-    </div>
+
+
+
+<div class="header_bg">
+<div id="header" class="wrapper clearfix">
+<h1><a href="{$site_url}"><img src="{$logo}" alt="{$title}" ></a></h1>
+<div id="nav" style="width:800px;">
+<ul class="clearfix">
+            {$limit = 7}
+            {if $navs|count lt $limit}{$limit = $navs|count}{/if}
+           
+            {foreach name=navs item=nav from=$navs}
+            <li class="fl{if $nav.current} current{/if} aa" style="width:{100/($limit+1)}%">
+                <a href="{$nav.link}">{$nav.name}</a>
+                <ul class="sub clearfix">
+                    {if $nav.childmenu} {foreach key=key item=nav_list from=$nav.childmenu}
+                    <li class="{if $nav.current}current{/if} cc"><a href="{$nav_list.link}">{$nav_list.name}</a></li>
+                    {/foreach} {/if}
+                </ul>
+            </li>
+            {if $nav@index+1 eq $limit}{break}{/if}
+            {/foreach}
+        </ul>
+
 </div>
-<script src="js/add.js"></script>
-<div class="header">
-    <div class="head">
-        <div class="logo fl"><a href="{$site_url}" title="返回首页"><img src="{$logo}" alt=""></a></div>
-        <div class="menu fr">
-            <ul id="nav" class="nav">
-                {$limit = 6}
-                <li class="nLi on">
-                    <h3><a href="{$site_url}" target="_self">网站首页</a></h3>
-                </li>
-                {foreach name=navs item=nav from=$navs}
-                <li class="{if $nav.current}on{/if} nLi">
-                    <h3>
-                        <a href="{$nav.link}" target="_self">{$nav.name}</a>
-                    </h3>               
-                    {if $nav.childmenu}
-                        <ul class="sub">
-                            {foreach key=key item=nav_list from=$nav.childmenu}
-                            <li class="{if $nav.current}current{/if}"><a href="{$nav_list.link}">{$nav_list.name}</a></li>
-                            {/foreach}
-                        </ul>
-                    {/if}
-                </li>
-                {if $nav@index+1 gte $limit}{break}{/if}
-                {/foreach}
-            </ul> 
-        </div>
-    </div>
 </div>
-<div class="banner">
-    <div class="fullSlide">
-        
-        <div class="bd">
-            <ul>
-                {foreach item=slidepic from=$global.slidepics}
-                    <li style="background:url({$slidepic.image}) center 0 no-repeat;"><a target="_self" href="javascript:;"></a></li>
-                {/foreach}
 
-            </ul>
-        </div>
-
-        <div class="hd">
-            <ul>
-                {foreach item=slidepic from=$global.slidepics}
-                    <li><img src="{$slidepic.image}" /></li>
-                {/foreach}
-            </ul>
-        </div>
-    </div>
-    
 </div>
 
 
 
+ 
+ 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ 
 
 
 

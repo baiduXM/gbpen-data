@@ -6,7 +6,7 @@
 <nav>
 
 
-   <div class="alefttitle">{$posnavs[0].name}<br /><span>{$posnavs[0].en_name}</span></div>	
+   <div class="alefttitle">{$posnavs[0].name}</div>	
     <div class="category">	
 
 	<ul class="listbg clearfix">
@@ -38,8 +38,7 @@
         
 {else}	<!-- 让客服自己选择，如果当前无子栏目 展现的目标栏目 -->
 <nav>
-<div class="alefttitle">{$_aside.pagenavs.name}<br /><span>{$_aside.pagenavs.en_name}</span></div>	
-
+   <div class="alefttitle">{$_aside.pagenavs.name}</div>	
      <div class="category"> 
 	<ul class="listbg clearfix">
 		{foreach name=pagenavs2 item=nav from=$_aside.pagenavs.childmenu}
@@ -81,15 +80,6 @@
  </div>
 
   </div>
-  
-  
-  <div class="sub_contact">
-  <div class="title">{$contact.telephone}</div>
-  <div class="inner"> 电话{$contact.telephone}<br />
-   传真：{$contact.fax}<br />
-   邮箱:{$contact.mail}<br />
-   地址：{$contact.address}</div>
-</div>
   
 </div>
 

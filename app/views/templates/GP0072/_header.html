@@ -1,0 +1,68 @@
+<div class="top_bg wap">
+	<div class="top w">
+		<div class="welcome f_l">{$_header.ggtext}</div>
+		<form action="{$search_action}" method="GET" class="search f_r">
+			<input type="text" name="s" value="" class="text searchkey">
+			<input type="submit" value="" class="submit" >
+		</form>
+	</div>	
+</div>
+<div class="header_bg wap">		
+	<div class="header w1">
+		<a href="{$site_url}" title="返回首页" class="lg f_l">
+			<img src="{$logo}" height="84" max-width="280" alt="{$title}">
+		</a>
+		<div class="navBar">
+			<ul class="nav clearfix">								
+				{$limit = 10}
+				<!-- <li class="m">
+					<h3>
+						<a  href="{$site_url}">关于我们</a>
+					</h3>
+				</li> -->
+				{foreach item=nav from=$navs}
+				<li class="m {if $nav.current}current{/if}" style="width: {100/($limit)}%">
+					<h3>
+						<a href="{$nav.link}">{$nav.name}</a>
+					</h3>
+					{if $nav.childmenu}
+					<ul class="sub">
+						{foreach item=nav_list from=$nav.childmenu}
+						<li class="{if $nav_list.current}current{/if}">
+							<a href="{$nav_list.link}">{$nav_list.name}</a>
+						</li>
+						{/foreach}
+					</ul>
+					{/if}
+				</li>
+				{if $nav@index+1 gte $limit}{break}{/if}
+                {/foreach}							
+			</ul>
+		</div>
+	</div>		
+</div>
+<div class="slider wap">		
+	<div class="banner">
+		<div class="bd">
+			<ul>
+				{foreach item=slidepic from=$_header.slidepics}
+				<li>
+					<a href="{$slidepic.link}">
+						<img src="{$slidepic.image}" alt="{$slidepic.title}">
+					</a>
+				</li>
+				{/foreach}
+			</ul>
+			<a class="prev" href="javascript:void(0)"></a>
+			<a class="next" href="javascript:void(0)"></a>
+		</div>
+		<div class="hd">
+			<ul>
+				{foreach item=slidepic from=$_header.slidepics}
+				<li class="on">{$slidepic@index+1}</li>
+				{/foreach}
+			</ul>
+		</div>
+	</div>
+</div>	
+
