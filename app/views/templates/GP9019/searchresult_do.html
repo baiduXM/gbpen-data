@@ -32,30 +32,25 @@ DD_belatedPNG.fix('div,ul,li,a,p,img');
 </head>
 
 <body>
-
- <div class="wappers">
+<div class="wappers">
     {include file="./_header.html"}
-        <div class="container h_o public">
-		  	<div class="left fl">
-             {include file="./_pagenavs_sub3.html"}                          
-			</div>			  
-			<div class="right h_o fr">
-				<h3 class="title">
-	            	<span class="location fr">Current Position:<a href="{$site_url}">Home</a> &gt; {foreach item=nav from=$posnavs}>> <a href="{$nav.link}">{$nav.name}</a>
-					{/foreach}
-					</span>
-					<b>{$list.en_name}</b>{$list.name}
-				</h3>
-				<div class="article h_o">
-				<h3 class="list_title">Search keywords for“<span>{$search.keyword}</span>”，A total of search {$search.total} results</h3>
-	            	<ul class="news_ls"> 	
-                        {foreach item=article from=$search.data}<!--search_content_start-->
-	                     <li><a href="search_$link"><span class="date"><time datetime="search_$pubdate" pubdate="pubdate">search_$pubdate</time></span>search_$title</a></li>
-       				    <!--search_content_end-->{/foreach} 
-	                </ul>
-                     <ul class="clearfix munber">
-								<li ><a href="{$page_links.first_link}">First</a></li>
-								<li ><a href="{$page_links.prev_link}">Prev</a></li>
+        <div class="containers ">
+        	<div class="contant ">
+        		<div class="public01">
+				  	<div class="left fl p_r">
+		             {include file="./_pagenavs_sub3.html"}                          
+					</div>			  
+					<div class="right h_o fr">
+		                <h3 class="list_title">Search keywords for“<span>{$search.keyword}</span>”，A total of search {$search.total} results</h3>
+							<div class="article h_o">
+				            	<ul class="news_ls"> 	
+                                 {foreach item=article from=$search.data}<!--search_content_start-->
+				                     <li><a href="search_$link"><span class="date"><time datetime="search_$pubdate" pubdate="pubdate">search_$pubdate</time></span>search_$title</a></li>
+                   				<!--search_content_end-->{/foreach} 
+                              </ul>
+                            <ul class="clearfix munber">
+								<li ><a href="{$page_links.first_link}">first</a></li>
+								<li ><a href="{$page_links.prev_link}">prev</a></li>
 								{foreach item=near_link key=near_page from=$page_links.nears_link}
 								{if $near_page == $page_links.current_page}<!--page_corrent_link_start-->
 									<li class=" current"><a>{$near_page}</a></li>
@@ -63,14 +58,18 @@ DD_belatedPNG.fix('div,ul,li,a,p,img');
 									<li ><a href="{$near_link}">{$near_page}</a></li>
 								<!--page_uncorrent_link_end-->{/if}
 								{/foreach}
-								<li><a href="{$page_links.next_link}">Next</a></li>
-								<li><a href="{$page_links.last_link}">Last</a></li>
-					</ul>
-	            </div>     
-       		</div>  
+								<li><a href="{$page_links.next_link}">next</a></li>
+								<li><a href="{$page_links.last_link}">last</a></li>
+							</ul>
+				            </div>
+		                     
+	           		</div>
+           		</div>
+           </div>              
+                     
        </div>
-      {include file="./_footer.html"} 	
-</div>   
+      	{include file="./_footer.html"}
+</div> 
 
 </body>
 </html>
