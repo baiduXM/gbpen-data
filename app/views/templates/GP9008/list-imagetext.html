@@ -49,7 +49,7 @@ DD_belatedPNG.fix('div,ul,li,a,p,img');
 				<div class="article h_o">
 	            	<ul class="ny_news_list" >
             			{foreach name=article item=article from=$list.data}
-						   <li class="h_o"><div class="img"><a href="{$article.link}"><img src="{$article.image}" /><span>{$article.pubtimestamp|date_format:'%Y-%m-%d'}</span></a></div><div class="li_nr1"><h2><a class="ellipsis" href="{$article.link}">{$article.title}</a></h2><p>{$article.description}</p><a href="{$article.link}">[查看更多]</a></div>
+						   <li class="h_o"><div class="img"><a href="{$article.link}"><img src="{$article.image}" /><span>{$article.pubtimestamp|date_format:'%Y-%m-%d'}</span></a></div><div class="li_nr1"><h2><a class="ellipsis" href="{$article.link}">{$article.title}</a></h2><p>{$article.description}</p><a href="{$article.link}">[more+]</a></div>
                   			</li> 
            				{/foreach}  
 		  			</ul>
