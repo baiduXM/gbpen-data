@@ -1,4 +1,4 @@
-@charset "utf-8";
+﻿@charset "utf-8";
 /*author:blackgecko*/
 *{ margin:0px; padding:0px;}
 a{ color:#484848; text-decoration:none;font:12px/24px "宋体";cursor:pointer;}
@@ -21,7 +21,7 @@ input {font:12px;}
 /*公用样式end*/
 
 
-.wappers{ width:100%;}
+.wappers{ width:100%;background:#ffffff;}
 .header{ width:100%; background:url(../images/hbg.jpg) repeat-x bottom #ffffff; height: 160px;}
 .logo img{display: block; height: 160px; max-width: 439px;}
 
