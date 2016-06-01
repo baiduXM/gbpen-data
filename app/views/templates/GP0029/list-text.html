@@ -32,7 +32,7 @@
 {include file='./_header.html'}
 <div id="sub_container" class="wrapper">
   <div class="c_top"><img src="{$site_url}images/container_topbg.jpg" width="1010" height="20" /></div>
-  <div class="crumb">当前位置：<a href="{$site_url}">首页</a> {foreach item=nav from=$posnavs}&gt; <a href="{$nav.link}">{$nav.name}</a> {/foreach} </div>
+  <div class="crumb">Current Position<a href="{$site_url}">Home</a> {foreach item=nav from=$posnavs}&gt; <a href="{$nav.link}">{$nav.name}</a> {/foreach} </div>
  
   <div class="main clearfix"> 
   {include file='./_aside.html'}
@@ -44,14 +44,13 @@
           {/foreach}
         </ul>
         <div class="module_page">
-         第{$page_links.current_page}页/共{$page_links.page_count} 页 <a href="{$page_links.first_link}">首页</a>
-         <a href="{$page_links.prev_link}">上一页</a> 
-         {foreach name=nears_link item=near_link key=near_page from=$page_links.nears_link} 
-         {if $near_page == $page_links.current_page} 
-         <a class="current">{$near_page}</a> {else} 
-         <a href="{$near_link}">{$near_page}</a> {/if} {/foreach} 
-         <a href="{$page_links.next_link}">下一页</a> 
-         <a href="{$page_links.last_link}">尾页</a></div>
+                            {$page_links.current_page}/{$page_links.page_count}
+                            <a href="{$page_links.first_link}">First</a>
+                            <a href="{$page_links.prev_link}">Prev</a> {foreach name=nears_link item=near_link key=near_page from=$page_links.nears_link} {if $near_page == $page_links.current_page}
+                            <a class="current">{$near_page}</a> {else}
+                            <a href="{$near_link}">{$near_page}</a> {/if} {/foreach}
+                            <a href="{$page_links.next_link}">Next</a>
+                            <a href="{$page_links.last_link}">Last</a></div>
       </div>
     </div>
   </div>

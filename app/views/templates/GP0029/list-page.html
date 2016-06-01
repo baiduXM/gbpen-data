@@ -33,7 +33,7 @@
 {include file='./_header.html'}
 <div id="sub_container" class="wrapper">
   <div class="c_top"><img src="{$site_url}images/container_topbg.jpg" width="1010" height="20" /></div>
-  <div class="crumb">当前位置：<a href="{$site_url}">首页</a> {foreach item=nav from=$posnavs}&gt; <a href="{$nav.link}">{$nav.name}</a> {/foreach} </div>
+  <div class="crumb">Current Position<a href="{$site_url}">Home</a> {foreach item=nav from=$posnavs}&gt; <a href="{$nav.link}">{$nav.name}</a> {/foreach} </div>
   <div class="main clearfix"> 
   {include file='./_aside.html'}
     <div class="article "> {$list.content|unescape:"html"} </div>

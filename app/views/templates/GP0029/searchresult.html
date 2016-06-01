@@ -43,25 +43,24 @@
                        
             <div class="searchresult">
                     {if $search.total eq 0}
-                    <p class="search_res">没有查找到相关数据！</p>
+                    <p class="search_res">No search to the related data！</p>
                     {else}
                      <ul class="resultbox">
                         {foreach item=article from=$search.data}
                             <li>
                             <div class="nlist_a"><a href="{$article.link}"><span>{$article.pubdate}</span> <b>{$article.title}</b></a></div>
-                            <div class="nlist_word">{$article.description}<span><a href="{$article.link}">[查看更多]</a></span></div>
-                            </li>            
-                          {if $article@index+1 == 6} {break} {/if}
+                            <div class="nlist_word">{$article.description}<span><a href="{$article.link}">[MORE]</a></span></div>
+                            </li>
                         {/foreach}
                      </ul>
                         <div class="module_page">
-                            第{$page_links.current_page}页/共{$page_links.page_count} 页
-                            <a href="{$page_links.first_link}">首页</a>
-                            <a href="{$page_links.prev_link}">上一页</a> {foreach name=nears_link item=near_link key=near_page from=$page_links.nears_link} {if $near_page == $page_links.current_page}
+                            {$page_links.current_page}/{$page_links.page_count}
+                            <a href="{$page_links.first_link}">First</a>
+                            <a href="{$page_links.prev_link}">Prev</a> {foreach name=nears_link item=near_link key=near_page from=$page_links.nears_link} {if $near_page == $page_links.current_page}
                             <a class="current">{$near_page}</a> {else}
                             <a href="{$near_link}">{$near_page}</a> {/if} {/foreach}
-                            <a href="{$page_links.next_link}">下一页</a>
-                            <a href="{$page_links.last_link}">尾页</a></div>
+                            <a href="{$page_links.next_link}">Next</a>
+                            <a href="{$page_links.last_link}">Last</a></div>
                       {/if}
             
              </div>
