@@ -34,7 +34,7 @@
 <div id="sub_container" class="wrapper">
 
   <div class="c_top"><img src="{$site_url}images/container_topbg.jpg" width="1010" height="20" /></div>
-  <div class="crumb">Current Position:<a href="{$site_url}">Home</a> {foreach item=nav from=$posnavs}&gt; <a href="{$nav.link}">{$nav.name}</a> {/foreach} </div>
+  <div class="crumb">当前位置：<a href="{$site_url}">首页</a> {foreach item=nav from=$posnavs}&gt; <a href="{$nav.link}">{$nav.name}</a> {/foreach} </div>
                  	
              <div class="main clearfix"> 
                        {include file='./_aside.html'}            	
@@ -50,8 +50,8 @@
                     {shareExt shareText=$article.content|unescape:"html"|strip_tags|truncate:140:"…" sharePic=$article.image}
                 </div>
                 <ul class="inner_pages" style="clear:both;">
-                    <li>Prev:<a href="{$article.prev.link}">{$article.prev.title}</a></li>
-                    <li>Next:<a href="{$article.next.link}">{$article.next.title}</a></li>
+                    <li>上一篇：<a href="{$article.prev.link}">{$article.prev.title}</a></li>
+                    <li>下一篇：<a href="{$article.next.link}">{$article.next.title}</a></li>
                 </ul>
             </div>                      
                     </div>                  
