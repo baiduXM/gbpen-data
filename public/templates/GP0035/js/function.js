@@ -45,6 +45,16 @@ $(document).ready(function() {
     })
 	
 
+function apartNav(selector,middle){
+    var navs = $(selector).children().length; 
+    var rightNav = Math.ceil(navs/2),
+        sideNavWidth = ($(selector).width()-middle)/2;
+		$(selector).children().eq(rightNav).css('padding-left',middle+'px');
+    $(selector).children().each(function() {
+        $(this).css({'width':Math.floor(sideNavWidth/rightNav)});
+    });
+}
+apartNav('.menu1',296);
 
 	
 	
