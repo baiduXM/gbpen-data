@@ -3,20 +3,32 @@
 	"about": {
 		"description": "关于我们",
 		"value": {},
-		"type": "page"
+		"type": "page",
+		"config": {
+			"nav_width": 282,
+			"nav_height": 281
+		}
 		
 	},	
 	
 	"pro":{
 		"description": "产品中心",
 		"value": {},
-		"type": "list"
+		"type": "list",
+		"config": {
+			"width": 209,
+			"height": 209
+		}
 	},	
 	
 	"news":{
 		"description": "新闻中心",
 		"value": {},
-		"type": "list"
+		"type": "list",
+		"config": {
+			"width": 230,
+			"height": 230
+		}
 	}		
 	
 

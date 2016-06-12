@@ -3,7 +3,11 @@
 	"about": {
 		"description": "关于我们",
 		"value": {},
-		"type": "page"
+		"type": "page",
+		"config": {
+			"nav_width":1003,
+			"nav_height": 158
+		}
 		
 	},	
 	
@@ -12,7 +16,12 @@
 	"pro":{
 		"description": "产品中心",
 		"value": {},
-		"type": "list"
+		"type": "list",
+		"config": {
+			"width": 225,
+			"height": 225
+		}
+
 	},	
 	
 	"news":{
