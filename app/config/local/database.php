@@ -54,15 +54,15 @@ return array(
 
 		'mysql' => array(
 			'driver'    => 'mysql',
-			'host'      => '180.76.142.133',
-			'database'  => 'unify_db',
-			'username'  => 'dingchao',
-			'password'  => 'pengdingchao',
+			'host'      => '192.168.1.48',
+			'database'  => 'unify',
+			'username'  => 'admin',
+			'password'  => 'admin',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => 'up_',
 		),
-
+       
 		'pgsql' => array(
 			'driver'   => 'pgsql',
 			'host'     => 'localhost',
