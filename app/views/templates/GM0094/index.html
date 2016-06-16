@@ -61,7 +61,7 @@
         
        <h2>搜索</h2>
        <span id="search-back">返回</span>
-       <i class="hicon2 iconfont" id="quickbar-showcats">&#xe603;</i>
+       <!-- <i class="hicon2 iconfont" id="quickbar-showcats">&#xe603;</i> -->
                   
       </div>
       <div class="search-box">
@@ -77,29 +77,6 @@
 
               <span class="search-class-word">分类:</span>
               <ul class="search-result">
-<!--                 <li><a href="">遗留下的残缺</a></li>
-                <li><a href="">遗留下的残缺</a></li>
-                <li><a href="">遗留下的残缺</a></li>
-                <li><a href="">遗留下的残缺</a></li>
-                <li><a href="">遗留下的残缺</a></li>
-                <li><a href="">遗留下的残缺</a></li>
-                <li><a href="">遗留下的残缺</a></li>
-                <li><a href="">遗留下的残缺</a></li>
-                <li><a href="">遗留下的残缺</a></li>
-                <li><a href="">遗留下的残缺</a></li>
-                <li><a href="">遗留下的残缺</a></li>
-                <li><a href="">遗留下的残缺</a></li>
-                <li><a href="">遗留下的残缺</a></li>
-                <li><a href="">遗留下的残缺</a></li>
-                <li><a href="">遗留下的残缺</a></li>
-                <li><a href="">遗留下的残缺</a></li>
-                <li><a href="">遗留下的残缺</a></li>
-                <li><a href="">遗留下的残缺</a></li>
-                <li><a href="">遗留下的残缺</a></li> -->
-                     <!--        {foreach name=lnav item=lnav from=$navs[0].childmenu[]}
-                            <li><a href="{$lnav.link}">{$lnav.name}</a></li>
-                            {/foreach} -->
-
 
               </ul>
 
@@ -119,7 +96,7 @@
                    <div class="headimg"><img src="{$site_url}images/headerbg.jpg" alt=""></div>
             	     <div class="logo"><img src="{$logo}" width="100%"></div>
                    <i class="hicon1 iconfont" id="search">&#xe741;</i>
-                   <i class="hicon2 iconfont">&#xe603;</i>
+                   <i class="hicon2 iconfont" id="quickbar-showcats">&#xe603;</i>
                </div>
           </header>
           <div class="menu">
@@ -169,11 +146,6 @@
                   </div>
               
                </div>
-               <script>
-
-        
-               </script>
-
               
             </div>
           </div>
@@ -192,7 +164,7 @@
                 <h2>{$mIndexCat.name}</h2>
               </div>
               <div class="index-edit-nr">
-               {$mIndexCats[0].description}
+               {$mIndexCat.description}
                                                                          
               </div>
             </div>

@@ -1,0 +1,56 @@
+
+/*标题样式*/
+.in_h2{ height:40px; overflow:hidden; background:#fff; padding:10px 0 5px 0;   position:relative; text-align:left; z-index:100;  margin-bottom:15px; border-bottom:1px solid #c0c0c0}
+.in_h2 .in_zh{ color:#479e3f;line-height:24px;font-size:1.2em; text-align:center;color:#5d5d5d; display:inline-block;    }
+.in_h2 .in_en{ color:#479e3f; line-height:12px; font-weight:normal; font-size:24px;text-align:center; margin-bottom:5px; color:#5d5d5d;  }
+
+.in_more{ height:2px; background:#333; position:absolute; bottom:0px; margin:auto; z-index:100; }
+.in_more a{ position: relative; display:block; height:35px; width:35px;}
+.in_more a:after, .in_more a:before {  border: 5px solid transparent;  border-top: 5px solid #fff;  width: 0;  height: 0;  position: absolute;  top: 14px;  right: 0px; left:0; margin:auto;  content: ' '; }
+.in_more a:before { border-top-color: #52a44a; top: 15px;}
+
+@media screen and (min-width: 320px) and (max-width: 479px){
+.in_h2 .in_zh{ font-size:14px;}
+
+}
+/*标题样式*/
+
+.inner{ margin-top:15px;}
+.wrapper{ width:95%; margin:auto; margin-top:25px;}
+
+#in_page .inner img{ float:right; width:20%; border:3px solid #4d4d4d}
+#in_page .inner p{ float:left; width:77%; line-height:24px; height:72px; overflow:hidden;}
+
+
+#in_image .inner{ background:#1c1c1c; padding:15px 0}
+#in_image .inner ul li{ position:relative; width:46%; float:left}
+#in_image .inner ul li .in_protitle{ width:50%; position:absolute; margin:auto  }
+#in_image .inner ul li .in_protitle img{ width:100%}
+#in_image .inner ul li .txt{ width:50%; position:absolute; text-align:center;  color:#333; left:25%; height:20px; line-height:20px; display: block;margin: 0 auto;overflow: hidden;text-overflow: ellipsis;white-space: nowrap; padding:0 2px}
+
+#in_text .inner{background:#e2e2e2; overflow:hidden}
+ul.newslist{ margin-top:10px; padding:0px; width:66%; float:right; padding-left:10px; overflow:hidden}
+#in_text .inner .newsimg{  float:left; width:30%; border:solid 1px rgba(0,0,0,.2); padding:5px;  }
+#in_text .inner .newsimg img{ width:100%}
+ul.newslist li{ height:35px; line-height:35px; overflow:hidden;white-space: normal;text-overflow: ellipsis; font-size:14px; background:url(../images/news_icon.jpg) no-repeat left; padding-left:15px; }
+
+
+
+@media screen and (min-width: 320px) and (max-width: 480px){
+#in_page .inner p{ line-height:20px; height:40px; overflow:hidden; font-size:12px;}
+ul.newslist{ width:62%;}
+ul.newslist li{height:28px; line-height:28px;}
+#in_image .inner ul li .in_protitle{ width:60%;  }
+
+}
+@media screen and (min-width: 480px) {
+#in_page .inner p{ line-height:24px; height:72px; overflow:hidden; background-attachment:fixed}
+}
+
+
+
+
+
+
+
+

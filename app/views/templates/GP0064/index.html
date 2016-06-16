@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script type="text/javascript">
+    // 跳转手机页面
+    {if $site_another_url}
+        if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+            location.href = '{$site_another_url}';
+        }
+    {/if}
+    </script>
+
+
+<meta name="keywords" content="{$keywords}"/>
+<meta name="description" content="{$description}"/>
+<link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Language" content="zh-CN">
+
+<link rel="stylesheet" type="text/css" href="{$site_url}css/demo.css"/>
+<script type="text/javascript" src="{$site_url}js/jquery1.42.min.js"></script>
+<script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.js"></script>
+<script type="text/javascript" src="http://common.mn.sina.com.cn/public/resource/lib/jquery.jcarousellite.js"></script>
+<script type="text/javascript" src="{$site_url}js/roll.js"></script>
+<script type="text/javascript" src="{$site_url}js/demo.js"></script>
+<script type="text/javascript" src="{$site_url}js/html5.js"></script>
+<script type="text/javascript" src="{$site_url}js/index.js"></script>
+<title>{$title}</title>
+{$headscript}
+</head>
+<body>
+<div class="wrap">
+	{include file='./_header.html'}
+	<div class="side_top">
+		<div class="side_top_hd">
+			<h2><a href="{$index.recommend.link}">{$index.recommend.name}</a><img src="{$site_url}images/leaf.png"></h2>
+			<p>{$index.recommend.description}</p>
+		</div>
+		<div class="side_top_ft">
+			<div class="side_top_pic">
+				<ul class="side_top_list">
+					{foreach item=recommend from=$index.recommend.data}
+					<li><a href="{$recommend.link}">
+						<img src="{$recommend.image}">
+						<div class="recommend">
+							<h3><span>{$recommend.title}</span><p class="xz" data-limit="20">{$recommend.description}</p></h3>
+							<img src="{$site_url}images/fire.png">
+						</div>
+					</a></li>
+					{/foreach}
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="side_ab">
+		<article class="side_about">
+			<h2 class="side_title"><a href="{$index.about.link}">{$index.about.name}</a><p>{$index.about.description}</p></h2>
+			<section class="side_about_text">
+				{$index.about.content|unescape:"html"}
+			</section>
+		</article>
+	</div>
+	<div class="side_pro">
+		<div class="side_back"><img src="{$index.back.image}"></div>
+		<div class="side_case">
+			<div class="side_case_top">
+				<h2 class="side_title"><a href="{$index.pro.link}">{$index.pro.name}</a><p>{$index.pro.description}</p></h2>
+			</div>
+			<div class="side_case_other">
+				<div class="side_case_bottom">
+					<div class="hd">
+						<ul></ul>
+					</div>
+					<div class="bd">
+						<div class="ul_side">
+						{$pronum=($index.pro.data|count)/2}
+						{$num=0}
+						{for $item=1 to $pronum}
+							<ul class="side_case_pic">
+								{foreach item=pro from=$index.pro.data}
+								 	{if $num%2==0}
+										<li><a href="{$index.pro.data[$num].link}">
+											<img src="{$index.pro.data[$num].image}">
+											<div class="side_masked">
+												<p>{$index.pro.data[$num].title}</p>
+											</div>
+										</a></li>
+									{else}
+										<li><a href="{$index.pro.data[$num].link}">
+											<img src="{$index.pro.data[$num].image}">
+											<div class="side_masked">
+												<p>{$index.pro.data[$num].title}</p>
+											</div>
+										</a></li>
+									{/if}
+									{$num=$num+1}
+									{if $num%2==0}{break}{/if}
+								{/foreach}
+							</ul>
+						{/for}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="side_news">
+		<h2 class="side_title">{$index.news.name}<p>{$index.news.description}</p></h2>
+		<ul class="side_news_other">
+		{if $index.news.childmenu}
+		{foreach item=new from=$index.news.childmenu}
+			<li class="side_{$new@index+1}">
+				<h4>{$new.name}</h4>
+				<ul class="side_press">
+				{foreach item=article from=$new.data}
+					<li><a href="{$article.link}">{$article.title}<time datetime="{$article.pubtimestamp|date_format:'%Y-%m-%d'}">{$article.pubtimestamp|date_format:'%Y-%m-%d'}</time></a></li>
+				{/foreach}
+				</ul>
+				<img src="{$site_url}images/back_02.png">
+				<p><a href="{$new.link}">了解更多…</a></p>
+			</li>
+			{if $new@index+1 gt 2}{break}{/if}
+		{/foreach}
+		{/if}
+		</ul>
+	</div>
+	{include file='./_footer.html'}
+</div>
+
+</body>
+</html>

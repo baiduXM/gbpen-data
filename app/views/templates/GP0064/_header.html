@@ -1,0 +1,74 @@
+	<div class="banner">
+		<ul class="picture">
+			{foreach name=slidepics item=slidepic from=$global.slidepics}
+			<li><a target="_blank" href="{$slidepic.link}"><img src="{$slidepic.image}"></a></li>
+			{/foreach}
+		</ul>
+		<ul class="dot">
+			{foreach name=slidepics item=slidepic from=$global.slidepics}
+			<li></li>
+			{/foreach}
+		</ul>
+	</div>
+	<header id="head">
+		<div class="head_top">
+			<div class="head_left">
+				<img src="{$site_url}images/sound.png">
+				<p>{$_header.sound.description}</p>
+			</div>
+			<div class="head_logo">
+				<a href="{$site_url}"><img src="{$logo}"></a>
+			</div>
+			<div class="head_right">
+				<form id="search" action="{$search_action}" method="post">
+					<label for="search_text" class="search_text"><img src="{$site_url}images/mag.png"></label>
+					<input type="text" name="s" id="head_search" placeholder="请输入关键字" />
+					<button class="search_button">确 认</button>
+			    </form>
+			</div>
+		</div>
+		<nav id="nav">
+			<ul class="menu">
+				<li><a href="{$site_url}"><span id="width">首页</span></a></li>
+				{foreach name=navs item=nav from=$navs}
+
+				<li class="{if $nav.current}current{/if}">
+					<a href="{$nav.link}"><span id="width">{$nav.name}</span></a>
+					{if $nav.childmenu}
+					<ul class="nav_list">
+						{foreach key=key item=nav_list from=$nav.childmenu}
+
+						<li class="{if $nav.current}current{/if}"><a href="{$nav_list.link}">{$nav_list.name}</a>
+						{if $nav_list.childmenu}
+							<ul class="nav_first">
+								{foreach key=key item=nav_first from=$nav_list.childmenu}
+
+								<li class="{if $nav.current}current{/if}">
+									<a href="{$nav_first.link}">{$nav_first.name}</a>
+									{if $nav_list.childmenu}
+									<ul class="nav_second">
+										{foreach key=key item=nav_second from=$nav_list.childmenu}
+
+										<li class="{if $nav.current}current{/if}"><a href="{$nav_second.link}">{$nav_second.name}</a></li>
+
+										{/foreach}
+									</ul>
+									{/if}
+								</li>
+
+								{/foreach}
+							</ul>
+
+						{/if}
+						</li>
+
+						{/foreach}
+					</ul>
+					{/if}
+				</li>
+
+				{/foreach}
+			<div class="ledgement"></div>
+			</ul>
+		</nav>
+	</header>

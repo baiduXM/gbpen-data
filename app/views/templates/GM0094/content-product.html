@@ -84,23 +84,14 @@
                             <div class="bd">
                                 <ul>
                                   {foreach item=proimg from=$article.images}
-                                    <li><img src="{$proimg.image}" alt="" width="100%"></li>
+                                    <li><img src="{$proimg.image}" alt=""></li>
                                   {/foreach}  
                                 </ul>
                             </div>
-    
+                            <a class="prev" href="javascript:void(0)"></a>
+                            <a class="next" href="javascript:void(0)"></a>    
                         </div>
-<!--             <script type="text/javascript">
-                TouchSlide({ 
-                    slideCell:"#slideBox",
-                    titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
-                    mainCell:".bd ul", 
-                    effect:"leftLoop", 
-                    autoPage:true,//自动分页
-                    autoPlay:true,
-                    interTime:6000 //自动播放
-                });
-            </script>  -->
+
 
 
                       <h2>{$article.images[0].title}</h2>

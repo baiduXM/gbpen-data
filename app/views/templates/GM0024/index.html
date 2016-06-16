@@ -69,7 +69,7 @@
               <a href="{$site_url}">
                 <p>网站首页</p>
               </a>
-            </span> <b>WEBSITE HOMEPAGE</b>
+            </span> <b>HOME</b>
           </div>
           {foreach item=nav_list from=$navs}
                   {* 仅输出类型为 5内容单页 和 外链的栏目（包括5留言板、7微信、8直达号功能） *}
@@ -121,8 +121,13 @@
                 <div class="nr public_color">{$mIndexCat.description}</div>
               </div>
             </div>
-            <div class="about_right">
-              <img src="{$mIndexCat.image}" width="104px" height="146px"></div>
+            <div class="about_right" id='about_right'>
+            <!-- class="about_right" -->
+            <!-- 540*285 -->
+            <!-- http://www.baidu.com/img/bd_logo1.png -->
+            
+              <img id="ari" src="{$mIndexCat.image}">
+            </div>
           </div>
           {/if}
           {elseif $mIndexCat.type eq 2}
