@@ -54,7 +54,7 @@
                           <ul> 	
        {foreach name=article item=article from=$list.data} 
                             <li>
-                               <div class="nimgb"><a href="{$article.link}"><img src="{$article.image}" alt="{$article.title|strip_tags}" height="109" width="150"/></a></div>
+                               <div class="nimgb"><a href="{$article.link}"><img src="{$article.image}" alt="{$article.title|strip_tags}"  style="width: 100%"/></a></div>
                             	<div class="right_news"><div class="nlist_a"><a href="{$article.link}"><b>{$article.pubdate} </b> {$article.title}</a></div>
                                 <div class="nlist_word">
                                {$article.description}  <span><a href="{$article.link}">[查看详情]</a></span>
