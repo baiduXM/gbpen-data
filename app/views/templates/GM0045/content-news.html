@@ -80,6 +80,10 @@
             <div class="edite">{$article.content|unescape:"html"}</div>
           </div>
         </div>
+        <div style="color: #d9b56c;">
+          上一篇：<a href="{$article.prev.link}">{$article.prev.title}</a><br/>
+          下一篇：<a href="{$article.next.link}">{$article.next.title}</a>
+        </div>
         <footer class="foot ny_foot">
           <div class="back-top">
             <A href="#">顶部&uarr;</A>

@@ -28,23 +28,23 @@ ul.nav li .menu_list a{ display:block; color:#d9b56c; height:100%; width:100%;}
 .font dl.small,.font-small{ font-size:0.9em;}
 
 ul.newslist{ height:auto; overflow:hidden; padding:0px 5px;}
-ul.newslist li{ padding:13px 0px; height:auto; overflow:hidden; background:#fff; border-bottom:1px solid #e6ebf2}
+ul.newslist li{ padding:13px 0px; height:auto; overflow:hidden;  border-bottom:1px solid #e6ebf2}
 ul.newslist li img{ width:136px; height:106px; overflow:hidden; float:left; display:inline; margin-right:16px; }
-ul.newslist li dt{ height:36px; line-height:36px; overflow:hidden; font-size:1.12em; color:#04224d;white-space: nowrap;text-overflow: ellipsis;}
+ul.newslist li dt{ height:36px; line-height:36px; overflow:hidden; font-size:1.12em; color:#d9b56c;white-space: nowrap;text-overflow: ellipsis;}
 ul.newslist li dt.date{ color:#c22a29; height:20px; overflow:hidden; line-height:20px; }
-ul.newslist li dd{ height:44px; line-height:22px; overflow:hidden; color:#04224d}
+ul.newslist li dd{ height:44px; line-height:22px; overflow:hidden; color:#fff}
 .next1{ clear:both; height:auto; overflow:hidden; text-align:center;margin:15px 7px; }
 .next1 a{ padding:2px 7px;background:#04224d; color:#fff; margin:0px 5px; border-radius:3px; }
 .next1 a.cu{ background:#c22a29  }
 
 .news_detail{ height:auto; overflow:hidden; padding:5px 0px 10px; }
-.news_detail .title1{ height:auto; overflow:hidden; text-align:center; font-size:1.15em; color:#393e5e}
+.news_detail .title1{ height:auto; overflow:hidden; text-align:center; font-size:1.15em; color:#8a8faf}
 
 ul.picture2{ height:auto; overflow:hidden; }
 ul.picture2 li{ height:auto; overflow:hidden; float:left; display: inline;}
 ul.picture2 li div{ margin:0px 4px; height:auto; overflow:hidden; }
 ul.picture2 li div .img{ padding:2px; height:auto; overflow:hidden; box-shadow:0px 0px 3px rgba(0,0,0,0.2); margin:3px; }
-ul.picture2 li div .title1{height:36px; line-height:36px; text-align:center; white-space: nowrap;text-overflow: ellipsis; overflow:hidden; }
+ul.picture2 li div .title1{color:#fff;height:36px; line-height:36px; text-align:center; white-space: nowrap;text-overflow: ellipsis; overflow:hidden; }
 ul.picture2 li a{ display:block; color:#04224d;}
 
 .bigimg_font{ text-align:center; color:#c22a29; padding:2px 0px;}
