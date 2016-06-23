@@ -32,11 +32,11 @@
 
 		 <div class="menu">
 				<ul class="nav">
-						{$limit = 5}
-						<li class="nLi" ><a href="">网站首页<span>HOME</span></a></li>
+						{$limit = 7}
+						<li class="nLi" ><a href="">网站首页</a></li>
 						{foreach name=navs item=nav from=$navs}
 						<li class="{if $nav.current} current{/if} nLi">
-								<a href="{$nav.link}">{$nav.name}<span>{$nav.en_name}</span></a>
+								<a href="{$nav.link}">{$nav.name}</a>
 
 						</li>
 						{if $nav@index+1 gte $limit}{break}{/if}
