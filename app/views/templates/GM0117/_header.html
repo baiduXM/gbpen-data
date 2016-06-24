@@ -1,0 +1,37 @@
+<header>
+      	<div class="logo public-bg"><Div style="background:url({$site_url}images/header_bg.png) no-repeat left top; background-size:100% auto;"><img src="{$logo}" width="100%"></Div></div>
+        
+            <div class="baner public-bg">
+	<div id="slideBox" class="slideBox1">
+    <div class="hd">
+            <ul></ul>
+      </div>
+	<div class="bd">
+		<ul>
+    {foreach name=slidepics item=slidepic from=$global.slidepics}
+			<li><a class="pic" href="{$slidepic.link}"><img src="{$slidepic.image}" /></a></li>
+		{/foreach}
+		</ul>
+	</div>
+	
+			</div>
+		
+   </div>  
+      
+   <div class="menu public-bg1">
+            	<div class="nav">
+            	<a class="arrow-left" href="#">&lt;</a> 
+   				 <a class="arrow-right" href="#">&gt;</a>
+               <div class="swiper-nav swiper-container">
+                  <div class="swiper-wrapper">
+                  {foreach item=nav from=$navs}
+                      <div class="swiper-slide">
+                      <span>
+                        <a href="{$nav.link}" class="public-color1">{$nav.name}</a>
+                      </span>
+                      </div>
+                  {/foreach}
+                  </div>
+				</div>
+                </div></div>  
+    </header>
