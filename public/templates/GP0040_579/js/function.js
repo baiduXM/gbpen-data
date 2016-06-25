@@ -15,8 +15,8 @@ $(document).ready(function() {
 
 	// banner js
 
-		jQuery(".nybanner .slideBox").slide({mainCell:".bd ul",autoPlay:true, effect:"fold", trigger:"click",interTime:4000});
-		jQuery(".slideBox").slide({mainCell:".bd ul",autoPlay:true, effect:"fold", trigger:"click",interTime:4000});
+		jQuery(".nybanner .slideBox").slide({mainCell:".bd ul",autoPlay:true, effect:"fold", trigger:"click",interTime:3000});
+		jQuery(".slideBox").slide({mainCell:".bd ul",autoPlay:true, effect:"fold", trigger:"click",interTime:3000});
  		// $('.photos .photos-content ul li').width($('.photos').width()/7)
 		$('#prizes  .photos-content.enable').jCarouselLite({
 			btnPrev: '#prizes a.photos-prev',
