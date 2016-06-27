@@ -29,67 +29,105 @@
 {$headscript}
 </head>
 <body>
-     {include file='./_header.html'}
- 
-<div id="container" class="clearfix">
 
-<div  class="bg">
-<div id="news" class="wrapper">
-<div class="title">{$index.news.en_name}</div>
+{include file='./_header.html'}
+ 
+<div id="container_bg">
+<div id="container" class="wrapper clearfix">
+<div id="about" class="bt">
+<div class="title "><div class="bg">
+      <div class="math public_color">{$index.about.en_name}</div>
+      <div class="text">
+       <div class="in_zh public_color">{$index.about.name}</div>
+      <div class="in_en public_color">{$index.about.en_name}</div>
+      
+      </div></div><span><a href="{$index.about.link}"><img src="{$site_url}images/more.jpg" /></a></span> </div>
+<div class="inner"> 
+<div class="about_img"><img src="{$index.about.image}" /></div>
+
+<p>{$index.about.description}</p>
+
+</div>
+</div>
+
+<div id="news" class="bt">
+<div class="title"><div class="bg">
+      <div class="math public_color">{$index.news.en_name}</div>
+      <div class="text">
+       <div class="in_zh public_color">{$index.news.name}</div>
+      <div class="in_en public_color">{$index.news.en_name}</div>
+      
+      </div></div><span><a href="{$index.news.link}"><img src="{$site_url}images/more.jpg" /></a></span> </div>
 <div class="inner">
-<ul class="clearfix">
+<div class="newscontent clearfix">
+<div class="newsimg"><img src="{$index.news.data[0].image}" /></div>
+<div class="newstext">
+<h3>{$index.news.data[0].title}</h3><p>{$index.news.data[0].description}</p><span><a href="{$index.news.link}">[查看更多]</a></span>
+</div>
+
+
+</div>
+
+<ul>
 {foreach name=news item=news from=$index.news.data}
-<li>
-<div class="ser_img"><b class="news_data">{$news.pubtimestamp|date_format:'%d'} </b><b class="news_mou">{$news.pubtimestamp|date_format:'%m'} 月</b></div>
-<div class="ser_wz"><a href="{$news.link}"><h1><strong>{$news.title}</strong></h1><p>{$news.description}</p> </a></div>
-</li>
-  {if $news@index+1 == 4}{break}{/if}
+    {if $news@index+1 gte 2 and $news@index+1 lte 6}
+  <li><span>{$article.pubtimestamp|date_format:'%Y-%m-%d'}</span><a href="{$news.link}">{$news.title}</a></li>
+     {/if}
 {/foreach}
-</ul>
 
+
+</ul>
+</div>
 </div>
 
-</div></div>
 
-
-
-<div class="bg">
-<div id="about" class="wrapper">
-<div class="title">{$index.about.en_name}</div>
+<div id="contact" class="bt">
+<div class="title"><div class="bg">
+      <div class="math public_color">{$global.contact_us.en_name}</div>
+      <div class="text">
+       <div class="in_zh public_color">{$global.contact_us.name}</div>
+      <div class="in_en public_color">{$global.contact_us.en_name}</div>
+      
+      </div></div><span><a href="{$global.contact_us.link}"><img src="{$site_url}images/more.jpg" /></a></span></div>
 <div class="inner">
+<b>{$contact.company}</b><br />
+联系人：{$contact.name}<br />
+电 话：{$contact.telephone}<br />
+传 真：{$contact.fax}<br />
+Q   Q：{$contact.qq}<br />
+地 址：{$contact.address}<br />
+</div>
+</div>
 
-{$index.about.description}
+<div style="clear:both"></div>
 
-</div></div></div>
-
-
-
-<div class="bg">
-
-<div id="pro" class="wrapper">
-<div class="title">{$index.pro.en_name}</div>
+<div id="show" class="bt">
+<div class="title"><div class="bg">
+      <div class="math public_color">{$index.pro.en_name}</div>
+      <div class="text">
+       <div class="in_zh public_color"> {$index.pro.name}</div>
+      <div class="in_en public_color">{$index.pro.en_name}</div>
+      
+      </div></div><span><a href="{$index.pro.link}"><img src="{$site_url}images/more.jpg" /></a></span></div>
 <div class="inner">
+<div class="bd" style="width:1010px; overflow:hidden">
 <ul class="clearfix">
- {foreach name=pro item=pro from=$index.pro.data}
- <li><a href="{$pro.link}"><div class="pro_img"><img src="{$pro.image}"/></div><p>{$pro.title}</p></a></li>
- 
- {if $pro@index+1 == 8}{break}{/if}
-{/foreach}
+
+ {foreach item=pro from=$index.pro.data}
+           <li><a href="{$pro.link}"><div class="show_img"><img src="{$pro.image}" /></div>{$pro.title}</a></li>
+            {/foreach}
+
+
+
 </ul>
-
 </div>
 </div>
 
-
-
-
 </div>
-
-
+</div>
+</div>
  
- </div>
- 
-      {include file='./_footer.html'}
+{include file="./_footer.html"}
 
 </body>
 </html>

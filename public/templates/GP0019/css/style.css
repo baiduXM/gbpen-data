@@ -25,7 +25,7 @@ input {font:12px;}
 .header{ width:100%; background:url(../images/hbg.jpg) repeat-x bottom #ffffff; height: 160px;}
 .logo img{display: block; height: 160px; max-width: 439px;}
 
-.h_right{width: 680px;}
+.h_right{width: 680px;padding-top: 54px;}
 .navs{ text-align: right; width: 100%; padding: 15px 0; display: block;color: #8b8b8b;}
 .navs a{ color: #8b8b8b;  padding:0 3px; display: inline-block;}
 .navs a:last-child{border-right:none;}
@@ -67,7 +67,7 @@ input {font:12px;}
 .news_list li img{ height: 56px; /* width:106px; */ padding:2px; display: block; float: left; margin-right:8px; border-radius: 4px; border:1px solid #dddddd; }
 .li_nr{/* display: inline-block; */ height: 60px; overflow: hidden; /* width:205px; */}
 .news_list li:last-child{padding-top: 10px;}
-.li_nr h2{height: 24px; overflow: hidden;}
+.li_nr h2{height: 24px; overflow: hidden;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}
 .li_nr  a{ color: #2b2b2b; font-weight: bold; line-height: 18px;}
 .li_nr p{ color: #656565;  height: 36px; overflow: hidden; line-height: 18px; display: block;}
 .li_nr  a:hover{color:red;}

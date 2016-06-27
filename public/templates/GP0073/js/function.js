@@ -1,4 +1,68 @@
+
+$(document).ready(function() {
+	$(".bt").each(function(){
+									
+	str= $(this).find(".title .bg .in_en").text(); 
+    str2 = str.substr(0,1);//取出字符串前俩个字符。
+    str3="<span>"+str2+"</span>"; //给取出字符串前俩个字符处理加上标签。 
+    str = str.replace(str2,str3)//将处理后的替换没有处理的。 
+    $(this).find(".title .bg .in_en").html(str);//最后添加到原来的字符中
+									
+									
+	var tet=$(this).find(".title .math").text()
+   tet=tet.substr(0,1); 
+   $(this).find(".title .math").text(tet)								
+									
+									})
+})
 window.onload=function(){
+	<!--美工-->
+
+
+	$(".bt").each(function(){
+									
+	str= $(this).find(".title .bg .in_en").text(); 
+    str2 = str.substr(0,1);//取出字符串前俩个字符。
+    str3="<span>"+str2+"</span>"; //给取出字符串前俩个字符处理加上标签。 
+    str = str.replace(str2,str3)//将处理后的替换没有处理的。 
+    $(this).find(".title .bg .in_en").html(str);//最后添加到原来的字符中
+									
+									
+	var tet=$(this).find(".title .math").text()
+   tet=tet.substr(0,1); 
+   $(this).find(".title .math").text(tet)								
+									
+									})
+	
+
+
+
+
+
+
+	
+<!--关于我们-->
+ $(".about").each(
+ function(){
+	 $(this).find(".about_text").width($(this).width()-$(this).find(".about_img img").width()-45)
+	 }
+ )
+ 
+
+<!--新闻-->			
+$(".newscontent").each(
+ function(){
+	 $(this).find(".newstext").width($(this).width()-$(this).find(".newsimg img").width()-15)
+	 }
+ )
+
+<!--产品-->
+$("#show .inner ").slide({mainCell:".bd ul",autoPlay:true,effect:"leftMarquee",vis:6,interTime:50});
+
+<!--大图-->
+$(".slideBox").slide({mainCell:".bd ul",autoPlay:true, effect:"fold", trigger:"click",interTime:3000});
+	
+
 function adaption(selector,li_w,li_h){
 		$(selector).each(function(i){
 		img_i=$(selector).eq(i).find("img")
@@ -8,19 +72,19 @@ function adaption(selector,li_w,li_h){
          img_i.height("100%");}
 	   var img_h=img_i.height()	
        var img_w=img_i.width()												
-       var mar_t=(li_h-img_h)*0.5;
-       var mar_l=(li_w-img_w)*0.5;
-  	   $(this).find("img").css({"margin-top":mar_t+"px","margin-left":mar_l+"px"})
+       var mar_t=Math.floor((li_h-img_h)*0.5);
+       var mar_l=Math.floor((li_w-img_w)*0.5);
+  	   $(this).css({"padding-top":mar_t+"px","padding-left":mar_l+"px"})
+	   $(this).width($(this).width()-mar_l);
+	   $(this).height($(this).height()-mar_t);
 		})
 	}
 /*首页产品列表图片自适应*/
- adaption("#pro ul li .pro_img",230,230)
+adaption("#show .inner ul li .show_img",170,170)
 
 
-/*首页关于我们图片自适应*/	
-var wid3=$("#about .aboutimg img").width();
-var wid4=$("#about .inner").width();
-$("#about .abouttext").width(wid4-wid3-20)
+
+
 	 
 /*图文内页图片自适应*/	 
  $(".list_imagetext ul li").each(
@@ -37,26 +101,19 @@ $("#about .abouttext").width(wid4-wid3-20)
 		 var ww=$(this).find("img").width();
    $(this).find("p").width(ww);
   });*/
-
-
+  
 }
 
 $(document).ready(function() {
+	
+
 /*产品详细页图片自适应*/
 	$(".bd li").each(function(i){
 	if($(".bd li").eq(i).find("img").width() > 640){
        $(".bd li").eq(i).find("img").width("99%");
 }
 
-		})	
-/*美工js*/
-$("#container .bg").each(function(n){
-
-			
-		  if(n%2==1){
-			$(this).addClass("bg1");
-			   }
-					   })
+		})
 
 	
 /*侧边栏*/
@@ -99,22 +156,6 @@ $("#container .bg").each(function(n){
         }
     });
 
-/*大图 100%*/	
-	$("#kinMaxShow").kinMaxShow({
-            height: 282,
-            button: {
-                showIndex: false,
-                normal: { background: 'url(images/button.png) no-repeat -14px 0', marginRight: '8px', border: '0', right: '48%', bottom: '20px' },
-                focus: { background: 'url(images/button.png) no-repeat 0 0', border: '0' }
-            }
-        });
-/*产品滚动js*/		
-		$('#prizes .photos-content.enable').jCarouselLite({
-			btnPrev: '#prizes a.photos-prev',
-			btnNext: '#prizes a.photos-next',
-			visible: 6,
-			auto: 3000,
-			speed: 1000
-		}).css({visibility:"visible"});
+
 
 });

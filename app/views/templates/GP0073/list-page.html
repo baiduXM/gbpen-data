@@ -30,19 +30,34 @@
 <title>{$title}</title>
 </head>
 <body>
+<div class="bg">
 
 {include file='./_header.html'}
-<div class="sub_conbg">
-<div id="sub_container" class=" wrapper clearfix" >
+<div id="container_bg">
+<div class="container" >
+<div class="subcontainer wrapper clearfix">
   {include file='./_aside.html'}
   <div class="main fr"> 
 
-<div class="crumb"><span><a href="{$site_url}">首页</a>{foreach item=nav from=$posnavs} > <a href="{$nav.link}">{$nav.name}</a> {/foreach}</span></div>
+<div class="crumb "><span><a href="{$site_url}">首页</a>  {foreach item=nav from=$posnavs} <a href="{$nav.link}">>{$nav.name}</a> {/foreach}</span><div class="bt"><div class="title"><div class="bg">
+      <div class="math public_color">{$list.en_name}</div>
+      <div class="text">
+       <div class="in_zh public_color"> {$list.name}</div>
+      <div class="in_en public_color">{$list.en_name}</div>
+      
+      </div></div></div></div></div>
+
+
 
     <div class="article "> {$list.content|unescape:"html"} </div>
   </div>
-</div></div>
+
+</div>
+  </div>
+
+</div>
 {include file='./_footer.html'}
+</div>
 </body>
 </html>
 <!--#*

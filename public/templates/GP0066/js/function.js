@@ -78,11 +78,11 @@ nav(".aboutNav");
 
 // <!-- 图片滚动 -->
 
-jQuery(".picScroll").slide({ mainCell:"ul", effect:"leftMarquee", vis:4, autoPlay:true, interTime:50, switchLoad:"_src" });
+jQuery(".picScroll").slide({ mainCell:"ul", effect:"leftMarquee", vis:4, autoPlay:true, interTime:20, switchLoad:"_src" });
 
 
 /*鼠标移过，左右按钮显示*/
-		jQuery(".focusBox").hover(function(){ jQuery(this).find(".prev,.next").stop(true,true).fadeTo("show",0.2) },function(){ jQuery(this).find(".prev,.next").fadeOut() });
-		/*SuperSlide图片切换*/
-		jQuery(".focusBox").slide({ mainCell:".pic",effect:"fold", autoPlay:true, delayTime:600, trigger:"click"});
+jQuery(".focusBox").hover(function(){ jQuery(this).find(".prev,.next").stop(true,true).fadeTo("show",0.2) },function(){ jQuery(this).find(".prev,.next").fadeOut() });
+/*SuperSlide图片切换*/
+jQuery(".focusBox").slide({ mainCell:".pic",effect:"fold", autoPlay:true, delayTime:600, trigger:"click"});
 

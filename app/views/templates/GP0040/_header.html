@@ -40,8 +40,7 @@
 
 
 
-              
-    <!--banner-->
+
     <div class="nybanner">
       <div id="slideBox" class="slideBox">
         <div class="hd">
@@ -54,12 +53,14 @@
         <div class="bd">
           <ul>
             {foreach name=slidepics item=slidepic from=$global.slidepics}
-                  <li><a href="{$slidepic.link}" target="_blank"><img src="{$slidepic.image}" alt="{$slidepic.title}" width="100%" /></a></li>       
+                  
+                  
+                  <li style="background:url({$slidepic.image}) no-repeat center; height:244px;"><a href="{$slidepic.link}" target="_blank"></a></li>
+                  
+                  
             {/foreach}
 
-<!--             <li><a href="#"><img src="images/nybanner.jpg" /></a></li>
-            <li><a href="#"><img src="images/nybanner.jpg" /></a></li>
-            <li><a href="#"><img src="images/nybanner.jpg" /></a></li> -->
+
           </ul>
         </div>
       </div>
