@@ -91,7 +91,7 @@ adaption("#show .inner ul li .show_img",170,170)
  function(){
 	 var wid1=$(this).find(".img_box img").width();
 	 var wid2=$(this).width();
-	 $(this).find(".text_box").width(wid2-wid1-10)
+	 $(this).find(".text_box").width(wid2-wid1-11)
 	 }
  )
  
