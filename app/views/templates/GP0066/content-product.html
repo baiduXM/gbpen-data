@@ -38,16 +38,24 @@
           <a href="javascript:window.history.back()">[ 返回列表 ]</a>
         </div>
         
-        <div class="focusBox">
-          <ul class="pic">
-            {foreach item=proshowb from=$article.images}
-              <li><img src="{$proshowb.image}"  width="397" alt="{$proshowb.title}"/></li>    
-            {/foreach}
-          </ul>
-          <a class="prev" href="javascript:void(0)"></a>
-          <a class="next" href="javascript:void(0)"></a>
-          
-        </div>
+        <div  id="slideBoxb" class="slideBoxb" style="margin:0 auto">
+          <div class="hd">
+               
+                 </div>
+              <div class="bd" style="width: 300px;margin:0 auto;">
+                <ul>
+                        {foreach item=proshowb from=$article.images}
+                              <li><img src="{$proshowb.image}" alt="{$proshowb.title}" style="width: 99%;" /></li>
+                            
+                            {/foreach}               
+                </ul>
+              </div>      
+              <!-- 下面是前/后按钮代码，如果不需要删除即可 -->
+              <a class="prev" href="javascript:void(0)"></a>
+              <a class="next" href="javascript:void(0)"></a>                  
+
+                    </div>
+
         <p>
           <span></span></br>
           {$article.content|unescape:"html"}
@@ -55,7 +63,7 @@
         <div class="bbs">
           {include file="./_share.html"}
         </div>
-        <div class='other'>       
+        <div class='other'>
           <h3><a href="{$article.prev.link}">上一个：{$article.prev.title}</a></h3>
           <h3><a href="{$article.next.link}">下一个：{$article.next.title}</a></h3>
         </div>  
