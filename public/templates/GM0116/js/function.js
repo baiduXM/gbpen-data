@@ -138,20 +138,22 @@ $(".back-top").click(function(){$(".index-wrap").animate({scrollTop :0}, 800)})
                                 function setHeightf() {
                                     $('.limat').each(function () {
                                         var self = this;
+                                        // alert($(self).attr("class"));
                                         var heights = $(self).height();
-                                        var limat2 = $('.limat2').find('.sliword');
+                                        var limat2 = $(self).next().find('.sliword');
                                         limat2.height(heights);
+                                        // alert(heights);
                                         // $('.maline').height(heights-$(".menuline").height()-55);
                                         // $('.maline').height();
                                         // alert((heights*0.5));
                                         if((heights*0.5)<55){
-                                        	$('.maline').height(20);
+                                        	limat2.find('.maline').height(20);
                                         }else if((heights*0.5)<100){
-                                        	$('.maline').height(35);
+                                        	limat2.find('.maline').height(35);
                                         }else if((heights*0.5)<180){
-                                        	$('.maline').height(175);
+                                        	limat2.find('.maline').height(175);
                                         }else{
-                                        	$('.maline').height(175);
+                                        	limat2.find('.maline').height(175);
                                         }
                                     })
 

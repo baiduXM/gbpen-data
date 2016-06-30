@@ -31,42 +31,43 @@
 <body>
 
       {include file='./_header.html'}
-<div id="sub_container" class="wrapper">
+<div id="sub_container" class="wrapper clearfix">
                    	
+ {include file='./_aside.html'}
 
-
-            <div class="main clearfix"> 
-                     {include file='./_aside.html'}  
+            <div class="main fr"> 
+                      
             <div class="article">
             
                 
                        
             <div class="searchresult">
                     {if $search.total eq 0}
-                    <p class="search_res">No search to the related data！</p>
+                    <p class="search_res">没有查找到相关数据！</p>
                     {else}
                      <ul class="resultbox">
                         {foreach item=article from=$search.data}<!--search_content_start-->
                             <li>
                             <div class="nlist_a"><a href="search_$link"><span>search_$pubdate</span> <b>search_$title</b></a></div>
-                            <div class="nlist_word">search_$description<span><a href="search_$link">[MORE]</a></span></div>
-                            </li>
+                            <div class="nlist_word">search_$description<span><a href="search_$link">[查看更多]</a></span></div>
+                            </li>            
+                          {if $article@index+1 == 6} {break} {/if}
                         <!--search_content_end-->{/foreach}
                      </ul>
                         <div class="module_page">
-                            {$page_links.current_page}/{$page_links.page_count}
-                            <a href="{$page_links.first_link}">First</a>
-                            <a href="{$page_links.prev_link}">Prev</a> {foreach name=nears_link item=near_link key=near_page from=$page_links.nears_link} {if $near_page == $page_links.current_page}<!--page_corrent_link_start-->
+                            第{$page_links.current_page}页/共{$page_links.page_count} 页
+                            <a href="{$page_links.first_link}">首页</a>
+                            <a href="{$page_links.prev_link}">上一页</a> {foreach name=nears_link item=near_link key=near_page from=$page_links.nears_link} {if $near_page == $page_links.current_page}<!--page_corrent_link_start-->
                             <a class="current">{$near_page}</a> <!--page_corrent_link_end-->{else}<!--page_uncorrent_link_start-->
                             <a href="{$near_link}">{$near_page}</a> <!--page_uncorrent_link_end-->{/if} {/foreach}
-                            <a href="{$page_links.next_link}">Next</a>
-                            <a href="{$page_links.last_link}">Last</a></div>
+                            <a href="{$page_links.next_link}">下一页</a>
+                            <a href="{$page_links.last_link}">尾页</a></div>
                       {/if}
             
              </div>
                     </div>                      
                     </div>                  
-                           <div class="cn_bot"><img src="{$site_url}images/sub_conbg.jpg" width="1010" height="15" /></div>
+                          
  
         </div>      
       {include file='./_footer.html'}
