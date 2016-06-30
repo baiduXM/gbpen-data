@@ -1,4 +1,10 @@
 $(document).ready(function() {
+  if($("#tiaozheli").size()>0){
+    // alert($("#tiaozheli").position().top);
+    $("html,body").scrollTop($(".bd ul li").height());
+    // $("html,body").animate({scrollTop:$("#tiaozheli").offset().top},1000);
+  }
+ 
 
 // menuhover
       jQuery("#nav").slide({ 

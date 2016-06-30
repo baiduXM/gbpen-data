@@ -71,9 +71,9 @@ ol,p,dl,li{list-style:none;}
 .nycontent{width: 1001px;margin:0 auto 40px;position: relative;z-index: 120;border-bottom: 1px solid #3f4447;}
 .contentbox{width: 920px;height:358px;position: absolute;top: 0px;left: 50%;margin-left: -460px;/*overflow: hidden;*/z-index: 200}
 .side-left{width:296px;overflow: hidden;}
-.tel{background: url(../images/tel.png) 10px top no-repeat;height: 46px;padding: 38px 0 0 38px;color: #b9b8b8;letter-spacing: 2px;position: absolute;
-top: -75px;}
-.tel span{display: block;font-size: 16px;font-weight: bold;font-family: "宋体";}
+.tel{background: url(../images/tel.png) 10px top no-repeat;height: 46px;padding: 45px 0 0 38px;color: #b9b8b8;letter-spacing: 2px;position: absolute;
+top: -75px;font-size: 18px;}
+.tel span{display: block;font-size: 25px;font-weight: bold;font-family: "微软雅黑";}
 /*about*/
 .about{width:296px;height:225px;position: relative;overflow: hidden;margin-top: 60px;}
 .aboutbg{width:296px;height:225px;background: url(../images/sidelbg.png) no-repeat;position: absolute;top: 0;z-index: 20;}
