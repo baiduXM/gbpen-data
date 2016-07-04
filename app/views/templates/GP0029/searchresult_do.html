@@ -20,8 +20,9 @@
 <script type="text/javascript" src="http://common.mn.sina.com.cn/public/resource/lib/jquery.jcarousellite.js">
 </script>
 <script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.js"></script>
-    <script type="text/javascript" src="{$site_url}js/jquery.kinMaxShow-1.1.min.js"></script>
+    <script type="text/javascript" src="{$site_url}js/jquery.kinMaxShow-1.0.min.js"></script>
 <script type="text/javascript" src="{$site_url}js/function.js"></script>
+
 
 <title>{$title}</title> 
 
@@ -30,18 +31,12 @@
 <body>
 
       {include file='./_header.html'}
-<div id="container" class="wrapper clearfix">
-         {include file='./_aside.html'}            	
+<div id="sub_container" class="wrapper">
+                   	
 
 
-            <div class="main">
-                   <div class="crumb">
-                {$list.name}{$list.en_name}
-                <span>当前位置：<a href="{$site_url}">首页</a>
-           {foreach item=nav from=$posnavs}
-             &gt; <a href="{$nav.link}">{$nav.name}</a>
-           {/foreach}</span>
-            </div>  
+            <div class="main clearfix"> 
+                     {include file='./_aside.html'}  
             <div class="article">
             
                 
@@ -72,7 +67,8 @@
              </div>
                     </div>                      
                     </div>                  
-                 
+                           <div class="cn_bot"><img src="{$site_url}images/sub_conbg.jpg" width="1010" height="15" /></div>
+ 
         </div>      
       {include file='./_footer.html'}
 
