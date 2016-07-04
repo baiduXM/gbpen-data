@@ -42,6 +42,7 @@
 <script src="{$site_url}js/TouchSlide.1.1.js"></script>
 <script type="text/javascript" src="{$site_url}js/jquery.min.js"></script>
 <script type="text/javascript" src="{$site_url}js/function.js"></script>
+<script type="text/javascript" src="{$site_url}js/share.js"></script>
 <script src="{$site_url}js/idangerous.swiper-2.0.min.js"></script>
 <script src="{$site_url}js/idangerous.swiper.3dflow-2.0.js"></script>
 <script src="{$site_url}js/simple-app.js"></script>
@@ -53,38 +54,37 @@
 </head>
 <body>
 
-<div class="index-wrap" style="background: #fefbf4">
-  <header>
-       <div class="sheader">
-           <h2>搜索结果</h2>
-       </div>
-  </header>  
+<div class="index-wrap">
+          <header>
+               <div class="nyheader">
+                    <h2>{$article.category.name}</h2>
+                    <div class="fontbox">字体： <span class="font-big">大</span><span class="font-normal">中</span><span class="font-small">小</span></div>
+                    <i class="iconfont hicon2" id="quickbar-showcats">&#xe603;</i>
+              </div>             
+          </header> 
   <section>
-         <div class="ny-cont" >
 
-            <div class="searchbox">
-              <form action="{$search_action}" method="GET">
-                <input class="sinp" type="text" name="s" value="请输入关键字" />
-                <input class="sbtn" type="submit" value="" />
-                <i></i>
-              </form>
-              <p>搜索</p>
-            </div>              
-            <div class="edit">
-                <p class="searchword">以下是关键字<b>“{$search.keyword}”</b>的搜索结果</p>
-                <ul class="slist">
-                    {foreach item=article from=$search.data}<!--search_content_start-->
-                    <li><a href="search_$link">search_$title</a></li>
-                    <!--search_content_end-->{/foreach}
 
-                </ul>
-                <div class="next1"><a href="{$page_links.prev_link}">上一页</a><a href="{$page_links.next_link}">下一页</a></div>
-                    
-            </div>
+        
 
- 
+      <div class="news_detail">
+                <h2 class="title1">{$article.title}</h2>
+                <span class="art-date">发布日期：{$article.pubtimestamp|date_format:'%Y-%m-%d'}</span>
+                <div class="edit" >
+                 {$article.content|unescape:"html"}
+                </div>
+                <div class="next1"><a href="{$article.prev.link}">上一篇</a><a href="{$article.next.link}">下一篇</a></div>
+                                                          
+                
+        </div>
 
-         {include file='./_footer.html'}    
+    
+
+   
+  </section>
+
+
+         {include file='./_footer.html'}     
     
     </div>
 
