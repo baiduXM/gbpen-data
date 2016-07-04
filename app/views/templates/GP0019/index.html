@@ -73,7 +73,7 @@ DD_belatedPNG.fix('div,ul,li,a,p,img');
                               <ul class="navss">
                                {foreach item=naver from=$global.second_navs}
                                 <li><a href="{$naver.link}"><span>{$naver.icon} </span>{$naver.name}<br/>{$naver.en_name}</a></li>
-                                 {if $naver@index+1 == 2}{break}{/if} 
+                                 {if $new@index+1 == 2}{break}{/if} 
                                 {/foreach}
                               </ul>
                           </div>
