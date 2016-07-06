@@ -1,0 +1,12 @@
+<a href="{$page_links.first_link}" class="leaf">首页</a>
+<a href="{$page_links.prev_link}" class="leaf">上一页</a>&nbsp;&nbsp;
+{foreach item=near_link key=near_page from=$page_links.nears_link}
+  {if $near_page == $page_links.current_page}
+    <a class="current">{$near_page}</a>&nbsp;&nbsp;
+  {else}
+    <a href="{$near_link}">{$near_page}</a>&nbsp;&nbsp;
+  {/if}
+{/foreach}
+<a href="{$page_links.next_link}" class="leaf">下一页</a>
+<a href="{$page_links.last_link}" class="leaf">尾页</a>
+&nbsp;&nbsp;当前第<a class="number">{$page_links.current_page}</a>页/总<a class="number">{$page_links.page_count}</a>页

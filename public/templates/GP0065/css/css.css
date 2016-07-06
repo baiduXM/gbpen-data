@@ -40,7 +40,7 @@ ol,p,dl,li{list-style:none;}
 .sinp{width: 194px;height: 28px;line-height: 28px;background: #fff;padding:0 10px;border: 1px solid #eee;border-right: none;color: #999;font-family: Microsoft YaHei;}
 .sbtn{width: 30px;height: 28px;border: none;background: url(../images/searchicon.png) center no-repeat #c4c4c4;cursor: pointer;}
 /*主菜单标签*/
-.menu{max-width: 600px;position: absolute;right: 0;bottom: 5px;font-family: Microsoft YaHei;}
+.menu{max-width: 1000px;position: absolute;right: 0;bottom: 5px;font-family: Microsoft YaHei;}
 ul.nav{width:100%;z-index: 10;margin: 0 auto;position: relative;}
 ul.nav>li{display: inline-block;height:45px;float: left;position: relative;}
 ul.nav>li>h3{position: relative;height: 30px;line-height: 30px;padding: 0 20px;border-radius: 2px;position: relative;}
@@ -74,10 +74,10 @@ ul.nav>.on>.sub:after{border-bottom-color: #de0f27;}
 .slideBox .bd img{height:750px;}
 .bdesc{position: absolute;bottom: 0px;z-index: 20;width: 1000px;left: 50%;margin-left: -500px;font-family: Microsoft YaHei;}
 .bdesc h2{display: inline-block;height:218px;background: #c9152a;font-size: 22px;color: #fff;width: 20px;padding: 0 30px 25px;float: right;position: relative;}
-.bdesc h2:before{content: "";display: block;width: 0;height: 0;border-bottom:30px solid #c9152a;border-right: 80px solid transparent;position: absolute;top: -30px;left:0;}
+.bdesc h2:before{content: "";display: block;width: 0;height: 0;border-bottom:31px solid #c9152a;border-right: 80px solid transparent;position: absolute;top: -30px;left:0;}
 .bdesc div{color: #fff;display: inline-block;padding:5px 20px 30px 28px;position: absolute;right: 80px;bottom: 0;width: 314px;background: #de0f27;font-size: 14px;color: #ffa1ac;text-align: left;height: 72px;/*overflow: hidden;*/}
 .bdesc div span{display: block;height: 72px;overflow: hidden;}
-.bdesc div:before{content:"";display: block;width: 0;height: 0;border-right: 362px solid #de0f27;border-top: 165px solid transparent;position: absolute;top: -165px;left: 0;}
+.bdesc div:before{content:"";display: block;width: 0;height: 0;border-right: 363px solid #de0f27;border-top: 167px solid transparent;position: absolute;top: -165px;left: 0;}
 
 .slideBox .prev,
 .slideBox .next{ display: none;position:absolute; left:20.5%; top:50%; margin-top:-51px; display:block; width:66px; height:102px; background:url(../images/slidearrow.png) -1px 0 no-repeat;z-index: 20}
@@ -91,8 +91,8 @@ ul.nav>.on>.sub:after{border-bottom-color: #de0f27;}
 .content{/*width:1680px;*/margin: 20px auto;overflow: hidden;position: relative;}
 .contentbg{width: 1680px;height: 320px;position: absolute;left: 50%;margin-left: -840px;top: 367px;top: 370px\9;}
 .contentiner{width: 342px;height: 100%;position: absolute;right: 0;background: #c9152a;}
-.contentiner:before{content: "";display: block;width: 0;height: 0;border-left: 340px solid #f8f8f8;border-bottom: 159px solid transparent;}
-.contentiner:after{content: "";display: block;width: 0;height: 0;border-right: 342px solid #fff;border-top: 161px solid transparent;}
+.contentiner:before{content: "";display: block;width: 0;height: 0;border-left: 340px solid #f8f8f8;border-bottom: 162px solid transparent;}
+.contentiner:after{content: "";display: block;width: 0;height: 0;border-right: 345px solid #fff;border-top: 161px solid transparent;}
 .row{width: 1000px;margin-bottom: 15px;/*overflow: hidden;*/margin: 0 auto;position: relative;}
 .pro{width: 586px;}
 .tit{/*width: 100%;*/font-family: Microsoft YaHei;line-height: 20px;position: relative;margin-bottom: 20px;}
@@ -107,7 +107,7 @@ ul.nav>.on>.sub:after{border-bottom-color: #de0f27;}
 .pro-tit a{color: #666;}
 /*news*/
 .news{width: 378px;position: relative;}
-.newsbg{width: 501px;height: 210px;background: url(../images/rowbg1.png) no-repeat;margin-left: 150px;}
+.newsbg{width: 501px;height: 210px;margin-left: 150px;}
 .newstop{/*height: 166px;*/   width: 0;height: 0;border-bottom: 148px solid #564f50;border-right: 314px solid transparent;position: absolute;top: 25px;}
 .newstop img{width: 71px;height: 104px;margin: 40px 0 0 35px;}
 .news .tit{margin-top: -15px;}
@@ -116,7 +116,7 @@ ul.nav>.on>.sub:after{border-bottom-color: #de0f27;}
 .newsbox dl img{height: 78px;max-width: 82px;}
 .newsbox dt{height: 56px;line-height: 28px;overflow: hidden;color: #666;margin-top: -5px;width: 75%;}
 .newsbox  a{color: #666;display: block;line-height: 28px;}
-.news ul{height: 140px;overflow: hidden;}
+.news ul{height: 250px;overflow: hidden;}
 .news ul li{line-height: 28px;}
 .news ul li a{overflow: hidden;display: block;}
 .news ul li span{float: left;display: inline-block;width: 80px;}
@@ -128,15 +128,15 @@ ul.nav>.on>.sub:after{border-bottom-color: #de0f27;}
 .rowraw{}
 /*about*/
 .about{width: 586px;}
-.aboutbox{height: 160px;overflow: hidden;}
-.aboutbox dl{max-width: 178px;height: 160px;overflow: hidden;float: left;margin-right: 23px;}
+.aboutbox{overflow: hidden;}
+.aboutbox dl{max-width: 178px;overflow: hidden;float: left;margin-right: 23px;}
 .aboutbox dl img{max-width: 172px;border: 1px solid #dcdcdc;background: #eae4db;padding: 2px;}
-.aboutbox dt{line-height: 26px;height: 156px;}
+.aboutbox dt{line-height: 26px;}
 .aboutbox dt a{padding-left: 5px;color: #666;}
 .aboutbox dt a:hover{text-decoration: underline;}
 /*contact*/
 .contact{width: 378px;position: relative;height: 220px;/*overflow: hidden;*/}
-.contacttop{width: 0;height: 0;border-top: 160px solid #de0f27;border-left: 378px solid transparent;position: absolute;top: -20px;}
+.contacttop{width: 0;height: 0;border-top: 160px solid #de0f27;border-left: 378px solid transparent;position: absolute;top: -18px;}
 .contact-tit{position: relative;z-index: 10;display: inline-block;float: right;margin:20px 20px 0 0;line-height:20px;text-align: center; }
 .contact-tit h2,.contact-tit span{font-size: 18px;font-family: Microsoft YaHei;color: #fff;font-weight: bold}
 .contact-tit:after{content: "";display: block;width: 0;height: 0;border-top: 15px solid #fff;border-left: 8px solid transparent;border-right: 8px solid transparent;position: absolute;bottom: -25px;left: 50%;margin-left: -6px;}
@@ -159,9 +159,9 @@ ul.nav>.on>.sub:after{border-bottom-color: #de0f27;}
 /*左栏目*/
 .side-left{width: 678px;}
 .side-left-top{height: 38px;border-bottom: 1px solid #666;line-height: 38px;margin-bottom: 10px;}
-.side-left-tit{width:160px;font-family: Microsoft YaHei;display: inline-block;position: relative;height: 38px;}
+.side-left-tit{width:240px;font-family: Microsoft YaHei;display: inline-block;position: relative;height: 38px;}
 .side-left-tit:after{content: "";display: block;width:100%;height: 1px;background:#666;position: absolute;bottom: -2px;z-index: 10}
-.side-left-tit h2,.side-left-tit h3{font-size: 18px;color: #333;max-width:80px;display:inline-block;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}
+.side-left-tit h2,.side-left-tit h3{font-size: 18px;color: #333;max-width:160px;display:inline-block;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}
 .location{display: inline-block;max-width: 60%;float: right;color: #333;}
 .location a{color:#333;}
 .location a:hover{text-decoration: underline;}
@@ -213,7 +213,7 @@ ul.third li a.selected{ background-image: url(../images/arwlih.png)!important;co
 .pon{background: #e2001a;color: #fff!important;}
 /*news-det*/
 .det-top{width: ;text-align: center;padding: 10px 0;}
-.det-top h2{font-size: 16px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;color: #333;font-family: Microsoft YaHei;line-height: 30px;}
+.det-top h2{font-size: 16px;color: #333;font-family: Microsoft YaHei;line-height: 30px;}
 .det-top span{display: block;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;color: #333;}
 .det-nr{line-height: 28px;color: #333;border-bottom: 1px solid #eee;position: relative;padding-bottom: 35px;}
 .nextpaging{width: 100%;overflow: hidden;line-height: 28px;padding: 10px 0;}
@@ -221,7 +221,7 @@ ul.third li a.selected{ background-image: url(../images/arwlih.png)!important;co
 .nextpaging a:hover{color: #950002;text-decoration: underline;}
 /*pro*/
 .pro-list{padding: 20px 19px 0;overflow: hidden;}
-.pro-list li{margin: 0 11px 25px;width: 296px;border: 1px solid #999;float: left;}
+.pro-list li{margin: 0 9px 25px;width: 296px;border: 1px solid #999;float: left;}
 .pro-list li a{display: block;position: relative;overflow: hidden;}
 .pro-item{}
 .pro-item-tit{padding: 0 30px 30px;background: #f8f8f8;font-family: "宋体";text-align: center;line-height: 20px;}
@@ -248,22 +248,22 @@ ul.third li a.selected{ background-image: url(../images/arwlih.png)!important;co
 .img-desc a.more{display: block;width:76px;height: 22px;line-height: 22px;color: #666;text-align: center;float: right;background: #eee;color: #666;margin-top: 10px;}
 .img-desc a.more:hover{color: #950002;}
 /*pro-det*/
-.pro-det-pic{width: 328px;border: 1px solid #040506;height: 328px;background: #eee;margin-right: 20px;float: left;}
-.pro-det-nr{height: 328px;overflow: hidden;text-align: left;line-height: 30px;}
+.pro-det-pic{width: 328px;border: 1px solid #040506;background: #eee;margin-right: 20px;float: left;}
+.pro-det-nr{height: 328px;overflow: hidden;text-align: left;line-height: 30px;margin-top:30px;}
 .pro-det-nr h2{font-size: 24px;color: #333;}
 .pro-det-nr h3{font-size: 16px;color: #333;}
 .pro-det-nr span{display: block;height: 150px;overflow: hidden;}
 .share{position: absolute;right: 30px;bottom: 5px;}
 
 
-.slideBoxb{ width:328px;height: 328px; overflow:hidden; position:relative;margin: 0 auto;}
+.slideBoxb{ width:328px; overflow:hidden; position:relative;margin: 0 auto;}
 .slideBoxb .hd{ height:15px; overflow:hidden; position:absolute; right:5px; bottom:5px; z-index:1; display:none; }
 .slideBoxb .hd ul{ overflow:hidden; zoom:1; float:left; display:none;  }
 .slideBoxb .hd ul li{ float:left; margin-right:2px;  width:15px; height:15px; line-height:14px; text-align:center; background:#fff; display:none; cursor:pointer; }
 .slideBoxb .hd ul li.on{ background:#f00; color:#fff; }
 .slideBoxb .bd{ position:relative; /*height:301px;*/ z-index:0; max-width:414px;text-align:center; margin: 0 auto;}
 .slideBoxb .bd li{ zoom:1; vertical-align:middle; }
-.slideBoxb .bd img{ width:328px; height:328px;}
+.slideBoxb .bd img{ width:328px; }
 /* 下面是前/后按钮代码，如果不需要删除即可 */
 .slideBoxb .prev{ position:absolute; left:0; top:50%; margin-top:-31px; display:block; width:47px; height:67px; background:url(../images/prev.png) no-repeat;}
 .slideBoxb .next{ position:absolute; right:0; top:50%; margin-top:-31px; display:block; width:47px; height:67px; background:url(../images/next.png) no-repeat;}
