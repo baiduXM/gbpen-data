@@ -1,0 +1,21 @@
+<div class="links wrapper">
+    <span>友情链接:</span>
+    {foreach item=flink from=$global.links}
+    <a href="{$flink.link}">{$flink.title}</a>
+    {/foreach} 
+</div>
+
+<div class="fri_bg">
+<div class="friendlink wrapper">
+ <a href="#">网站首页</a> 
+  {foreach name=navs item=nav from=$navs}
+   | <a href="{$nav.link}">{$nav.name}</a> 
+  {/foreach} 
+</div>
+</div>
+
+<div id="footer" class="wrapper" >
+    <div class="inner">{$footprint}</div> 
+</div>
+
+{$footscript}

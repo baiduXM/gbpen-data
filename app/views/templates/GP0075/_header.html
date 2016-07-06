@@ -1,0 +1,58 @@
+
+<div id="header">
+  <div class="wrapper">
+    <h1><a href="{$site_url}"><img src="{$logo}" alt="{$title}" class="img-responsive"></a></h1>
+  </div>
+</div>
+
+
+
+
+<div id="nav"> <a href="javascript:;"  id="stock"><img src="{$site_url}images/6.png" /></a>
+
+  <div id="dialogBg"></div>
+  <div id="dialog" class="animated">
+  <a href="javascript:;" id="stock1"><img src="{$site_url}images/x.jpg" /></a>
+
+    <div class="inner">
+      <ul class="clearfix">
+            {$limit =9}
+            {if $navs|count lt $limit}{$limit = $navs|count}{/if}
+           
+            {foreach name=navs item=nav from=$navs}
+            <li class="fl{if $nav.current} current{/if} aa" style="width:{100}%">
+                <a href="{$nav.link}" class="ffl">{$nav.name}</a>
+                <div class="fd">
+                <ul class="sub clearfix">
+                    {if $nav.childmenu} {foreach key=key item=nav_list from=$nav.childmenu}
+                   
+                    <li class="submenu clearfix {if $nav.current}current{/if} cc "><a href="{$nav_list.link}">{$nav_list.name}</a></li>
+                    
+                    {/foreach} {/if}
+                </ul>
+                </div>
+            </li>
+            {if $nav@index+1 eq $limit}{break}{/if}
+            {/foreach}
+        </ul>
+    
+    </div>
+  </div>
+</div>
+
+
+
+
+ <div id="banner" class="wrapper">
+<div id="kinMaxShow" style="display:none;"> {foreach name=slidepics item=slidepic from=$global.slidepics}
+      <div> <a href="{$slidepic.link}" target="_blank"><img src="{$slidepic.image}" alt="{$slidepic.title}"  /></a></div>
+      {/foreach} </div>   
+ </div>
+
+
+
+
+
+
+ 
+
