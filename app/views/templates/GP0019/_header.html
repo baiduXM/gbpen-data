@@ -3,19 +3,11 @@
 	<div class="public01">
 	<span class="logo fl h_o"><img src="{$logo}"/></span>
 	<div class='h_right fr'>
-		<ul class='navs h_o'>
-			{foreach key=key item=naver from=$global.second_navs}
-				<a href="{$naver.link}">{$naver.name}</a>|
-				{if $naver@index+1 == 3}{break}{/if}
-			{/foreach}
-		</ul>
-            <div class="search_div">
-                <form action="{$search_action}" method="GET">
-                    <span class="search"><input type="text" class="text" name="s" /><input name="" type="submit" class="submit" />
-                    </span>
-                </form>
-                <div id="language_div" style="float: right;"></div>
-            </div>
+
+		 <form action="{$search_action}" method="GET">
+			<span class="search"><input type="text" class="text" name="s" /><input name="" type="submit" class="submit" />
+			</span>
+		 </form>
 	    <ul id="nav" class="nav" >
 	       {$litmit = 8}
 	        {if $navs|count lt $litmit}{$litmit = $navs|count}{/if}

@@ -173,10 +173,10 @@ ul.listbg  li ul.second li ul.third li a.selected{ color:#970f0f; }
 		/*产品列表结束*/
 		/*产品详情开始*/
 		.products_detail{ height:auto; overflow:hidden; margin:0 auto;}
-		.dtBox{ width:355px; position: relative;margin:0 auto;overflow: hidden;}
-		.dtBox .bd{width: 255px;height: auto;overflow: hidden;margin: 0 auto;}
+		.dtBox{ max-width:620px;position: relative;margin:0 auto;overflow: hidden;}
+		.dtBox .bd{max-width: 550px;height: auto;overflow: hidden;margin: 0 auto;}
 		.dtBox .bd li{ zoom:1; vertical-align:middle; }
-		.dtBox .bd img{ width:255px; display:block; position:relative; }
+		.dtBox .bd img{ max-width:550px; display:block; position:relative; margin: 0 auto;}
 		/* 下面是前/dtBox */
 		.dtBox .prev{ width:16px; height:43px;display: block; float: left;background:url(../images/lq.jpg) 0px 0px no-repeat; filter:alpha(opacity=50);opacity:.5;position: absolute;top:50%;margin-top: -21.5px;left:0;}
 		.dtBox .next{  width:16px; height:43px; display: block; float: right; background:url(../images/lq1.jpg) 0px 0px no-repeat; z-index:99; filter:alpha(opacity=50);opacity:.5; position: absolute;top:50%;margin-top: -21.5px;right: 0;}

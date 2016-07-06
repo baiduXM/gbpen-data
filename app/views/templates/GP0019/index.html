@@ -71,10 +71,14 @@ DD_belatedPNG.fix('div,ul,li,a,p,img');
                                 地址：{$contact.address}<br/>
                               </span>
                               <ul class="navss">
-                               {foreach item=naver from=$global.second_navs}
-                                <li><a href="{$naver.link}"><span>{$naver.icon} </span>{$naver.name}<br/>{$naver.en_name}</a></li>
-                                 {if $new@index+1 == 2}{break}{/if} 
-                                {/foreach}
+                               
+                                <li><a href="{$global.second_navs1.link}"><span>{$global.second_navs1.icon} </span>{$global.second_navs1.name}<br/>{$global.second_navs1.en_name}</a></li>
+                               
+                               
+                                
+                                <li><a href="{$global.second_navs2.link}"><span>{$global.second_navs2.icon} </span>{$global.second_navs2.name}<br/>{$global.second_navs2.en_name}</a></li>
+                                
+                               
                               </ul>
                           </div>
                         </div>
