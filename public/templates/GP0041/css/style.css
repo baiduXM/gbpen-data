@@ -223,7 +223,7 @@ ul.third li a:hover{color:#2883c2; font-weight: bold;}
 /* 图片列表*/
 .ny_prod{overflow:hidden; padding-top: 15px;}
 ul.inner_pro{height:auto; overflow:hidden;}
-ul.inner_pro li{ float:left; margin:0 10px;display:inline; }
+ul.inner_pro li{ float:left; margin:0 10px;display:inline; min-height: 220px;}
 ul.inner_pro li a{display:block; width:220px; color:#666666;overflow:hidden; padding:8px 0;}
 ul.inner_pro li a:hover{color:#ff9000; }
 ul.inner_pro li a img{ width:220px; vertical-align:top;}
