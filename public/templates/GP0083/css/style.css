@@ -205,6 +205,10 @@ p.title{height:30px; line-height:30px; text-align:center;overflow: hidden;font-s
 .description p{height: auto;overflow: hidden; margin-top: 15px;}
 .description p span{font-weight: bold;line-height: 24px;max-height: 48px;overflow: hidden;display: block;}
 .description p img{display: block;max-width: 100%;}
+.contenttext{ padding:0px 10px 13px;*padding:15px 10px 16px !important;_padding:15px 0px 22px; width:96%;_width:99%; _margin-left:10px;height:auto; overflow:hidden;}
+.contenttext p{height: auto;overflow: hidden; }
+.contenttext p img{display: block;max-width: 100%;}
+.contenttitle{font-weight: bold;line-height: 24px;max-height: 48px;overflow: hidden;display: block;margin-bottom: 15px;}
 
 .sear{color: #246513;font: 12px/24px "微软雅黑";text-align: center;height: 24px;overflow: hidden; font-weight: bold;margin-top: 15px;}
 
