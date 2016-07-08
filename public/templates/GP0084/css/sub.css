@@ -50,6 +50,9 @@ strong{display: block;margin: 0 auto;overflow: hidden;text-overflow: ellipsis;wh
 	height: 100%;
 }
 
+
+.list_text ul li a{ font-size:13px; font-weight:bold}
+
 .list_imagetext ul li { padding:0 2% 15px 0; margin-bottom:20px; border-bottom:dashed 1px #ccc; }
 .list_imagetext ul li .text_box{ display: inline-block;vertical-align:top;}
 /*.list_imagetext ul li .img_box{ float:left; }
@@ -61,6 +64,8 @@ strong{display: block;margin: 0 auto;overflow: hidden;text-overflow: ellipsis;wh
 .list_imagetext ul li .text_word span{ display:block; text-align:right }
 .list_imagetext ul li .text_word span a{color:#f00}
 .list_imagetext ul li .text_word span a:hover{ text-decoration:underline}
+
+
 
 
 .descripimg{ background:none; width:100%; height:auto; overflow:hidden;margin-bottom:15px;}
@@ -106,4 +111,13 @@ ul.resultbox  .nlist_word span{ margin-left:10px; }
 ul.resultbox  .nlist_word span a{color:#F00}
 ul.resultbox  .nlist_word span a:hover{ text-decoration:underline}
 .searchtxt{font-size: 14px;text-align: center;padding:20px 0;overflow: hidden;font-family: Microsoft YaHei;}
+
+
+.list_image ul li p { font-size:13px; font-weight:bold}
+
+.list_imagetext ul li p { font-size:13px; font-weight:bold}
+
+
+
+
 
