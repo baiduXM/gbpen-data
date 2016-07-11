@@ -66,26 +66,18 @@
 
                 {/foreach}
 
-                                     
-<!--                     <li><a href=""><h2>这是一封提升公司品牌值的邀请函</h2><span>2015-08-18</span></a></li>
-                    <li><a href=""><h2>这是一封提升公司品牌值的邀请函</h2><span>2015-08-18</span></a></li>
-                    <li><a href=""><h2>这是一封提升公司品牌值的邀请函</h2><span>2015-08-18</span></a></li>
-                    <li><a href=""><h2>这是一封提升公司品牌值的邀请函</h2><span>2015-08-18</span></a></li>
-                    <li><a href=""><h2>这是一封提升公司品牌值的邀请函</h2><span>2015-08-18</span></a></li>
-                    <li><a href=""><h2>这是一封提升公司品牌值的邀请函</h2><span>2015-08-18</span></a></li>
-                    <li><a href=""><h2>这是一封提升公司品牌值的邀请函</h2><span>2015-08-18</span></a></li>
-                    <li><a href=""><h2>这是一封提升公司品牌值的邀请函</h2><span>2015-08-18</span></a></li>
-                    <li><a href=""><h2>这是一封提升公司品牌值的邀请函</h2><span>2015-08-18</span></a></li>
-                    <li><a href=""><h2>这是一封提升公司品牌值的邀请函</h2><span>2015-08-18</span></a></li>
-                    <li><a href=""><h2>这是一封提升公司品牌值的邀请函</h2><span>2015-08-18</span></a></li> -->
+   
                 </ul>
                 <div class="paging">
-                    <a href="">« 上一页</a>
-                    <a class="pon" href="">1</a>
-                    <a href="">2</a>
-                    <a href="">3</a>
-                    <a href="">4</a>
-                    <a href="">下一页 »</a>
+                    <a href="{$page_links.prev_link}">« 上一页</a>
+                    {foreach name=nears_link item=near_link key=near_page from=$page_links.nears_link}
+                      {if $near_page == $page_links.current_page}
+                       <a href="{$near_link}" class="pon">{$near_page}</a>
+                      {else}
+                       <a href="{$near_link}">{$near_page}</a>
+                      {/if}
+                    {/foreach} 
+                    <a href="{$page_links.next_link}">下一页 »</a>
                 </div>
             </div>
             <div class="side-right fr">
