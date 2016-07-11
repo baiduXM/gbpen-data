@@ -1,0 +1,18 @@
+<section>
+ 
+      <div class="picMarquee">
+				<ul class="picList">
+
+					{foreach  name=list3 item=article from=$index.list3.data}
+                         <li>
+                             <a href="{$article.link}" class="title">
+                                 <img src="{$article.image}" />
+                                 {$article.title}
+                             </a>
+                         </li>
+                    {/foreach}
+                    
+				</ul>
+
+			</div>
+</section>
