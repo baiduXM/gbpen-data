@@ -2,6 +2,8 @@ jQuery(document).ready(function($) {
 	
 jQuery(".slideBoxb").slide({mainCell:".bd ul",autoPlay:false,effect:"leftLoop"});
 
+
+
 // <!-- banner切换 -->
 
 /*鼠标移过，左右按钮显示*/
@@ -42,6 +44,7 @@ nav(".aboutNav");
             };
 		};       
     }
+
 
 });
 
@@ -108,3 +111,4 @@ function pageScroll(){
 }
 
 
+$("#hdul").width($("#hdul li").length*13);

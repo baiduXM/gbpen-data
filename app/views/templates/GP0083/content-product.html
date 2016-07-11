@@ -42,7 +42,7 @@
         </div>
         <div class="deteo">
           <div class="main_right_con2">
-            <div class="contenttext">
+            <div class="description">
               {if $article.images|count gt 1}
                 <div class="focus">
                   <ul class="pic">
@@ -61,7 +61,7 @@
                 </div> 
               {/if}
               <p>
-                <span class="contenttitle">{$article.title}</span>
+                <span>{$article.title}</span>
                 {$article.content|unescape:"html"}
               </p>
               <div class="bbs">
