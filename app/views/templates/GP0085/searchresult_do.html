@@ -32,7 +32,6 @@
 
 <!-- 导入头部文件 -->
 {include file='./_header.html'}
-
 <div class="content">
 	<div class="left">
 		{include file='./_pagenavs_sub3.html'}
@@ -44,11 +43,21 @@
 		{/foreach}
 		</strong>{$list.name}</h2>
 
-		<div class="about_text1" style="padding: 0 18px;">
-			{$list.content|unescape:"html"}
+		<div class="about_text1">
+			{if $search.total eq 0}
+              <div class="sear_tit">以下是您搜索的关键字“{$search.keyword}”，搜索的结果有{$search.total}条</div>
+            {else}
+			<ul class="module_news">
+			<div class="sear_tit">以下是您搜索的关键字“{$search.keyword}”，搜索的结果有{$search.total}条</div>
+			{foreach name=article item=article from=$list.data}
+			    <li><a href="{$article.link}"><span class="date">[{$article.pubtimestamp|date_format:'%Y-%m-%d'}]</span>{$article.title}</a></li>
+			{/foreach}
+			</ul>
+			{/if}
+			
+			{include file='./_page.html'}
 		</div>
 	</div>
-
 </div>
 
 
@@ -56,7 +65,6 @@
 
 </body>
 </html>
-
 
 
 
