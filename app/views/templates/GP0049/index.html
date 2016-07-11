@@ -30,12 +30,14 @@
  <!-- 内容 -->
  <div class="contant">
       <div class="contant_left">
-        <div class="left1">
-         {include file="./_pagenavs_sub3.html"}
+        <div class="left1 inset_form_div">
+            {if $cus_id eq 481||99}
+            {include file="./_inset_form.html"}
+            {/if}
         </div>
         <div class="left4">
           <h3 class="title left4_title">联系我们&nbsp;<span>CONTACT US</span></h3>
-          {include file="./_global.html"}
+          {include file="./_inset_form.html"}
         </div>
       </div>
       <div class="contant_right">
