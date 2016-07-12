@@ -84,7 +84,7 @@ h3.tit span{font-family: "Arial";font-size: 11px;}
 .left2 a:hover{opacity: 0.7;filter: alpha(opacity=70);}
 .left3 a{display: block;width:212px;height: 79px;border: 1px solid #e4cb9d;background:url(../images/hez_37.png) no-repeat center center;margin-top: 8px;}
 .left3 a:hover{opacity: 0.7;filter: alpha(opacity=70);}
-.left4{margin: 28px 0 0;}
+.left4{margin: 0 0 0;}
 /*.left4 p{color: #333333;line-height: 22px;padding: 0px 0 0 10px;background:url(../images/lx_10.jpg) no-repeat center center;width: 238px;height: 149px;margin: 0 auto;}*/
 .left4 p strong{color: #3b7400;}
 .contant_right{width:703px;float: left;}
@@ -215,3 +215,9 @@ ul.list li a{display: block;line-height: 35px;height:35px; overflow:hidden;backg
 #slide .prev:hover,  #slide .next:hover {filter:alpha(opacity=50) !important;opacity:0.5 !important;}
 
 .ss p.t{color: #8e8e8e;font-size: 24px;text-align: center;margin: 10px auto 20px}
+
+/*===嵌入表单样式===*/
+.list-item input{ width: 70% !important;margin-left:10px}
+.adv-add-show{ padding:0 10px;}
+.fv-as-title{ font-size: 16px; font-family: "微软雅黑"; padding-bottom: 10px; }
+.adv-unit-preview{ padding-top: 10px;}
