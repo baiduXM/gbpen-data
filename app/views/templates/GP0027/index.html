@@ -6,7 +6,7 @@
   // 跳转手机页面
   {if $site_another_url}
     if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
-      location.href = '{$site_another_url}';
+      parent.location.href = '{$site_another_url}';
     }
   {/if}
   </script>
@@ -43,7 +43,7 @@
         
                        {foreach name=products item=article from=$index.products.data}
                        <li>
-                            <div class="pic"><a href="{$article.link}"><img width='170' height='126' src="{$article.image}" /></a></div>
+                            <div class="pic"><a href="{$article.link}"><img style="width: 100%" src="{$article.image}" /></a></div>
                             <div class="title"><a href="{$article.link}">{$article.title}</a></div>                           
                           </li>
                             {if $article@index+1 == 12}{break}{/if}

@@ -4,7 +4,7 @@
       <script type="text/javascript">
       // 跳转PC页面
       {if $site_another_url}
-          if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+          if (!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
               location.href = '{$site_another_url}';
           }
       {/if}
@@ -89,11 +89,11 @@
         <div class="newslist">
               <ul> 
                 {foreach item=list1 from=$list.data}
-                   <li><a href="{$list1.link}"><i></i>{$list1.title}</a><span>{$list1.pubtimestamp|date_format:'%y-%m-%d'}</span></li>
+                   <li><a href="{$list1.link}"><i></i><p>{$list1.title}</p></a><span>{$list1.pubtimestamp|date_format:'%y-%m-%d'}</span></li>
                 {/foreach}
                     
               </ul>
-              <div class="next1"><a href="{$page_links.prev_link}">上一页</a><a href="{$page_links.next_link}">下一页</a></div>
+              <div class="next1"><a href="{$page_links.prev_link}">上一页</a><span>{$page_links.current_page}/{$page_links.page_count}</span><a href="{$page_links.next_link}">下一页</a></div>
                   
           </div>            
     </section>

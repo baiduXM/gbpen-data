@@ -53,7 +53,7 @@
 		<ul class="proList">
         {foreach name=article item=article from=$list.data}
 			<li>
-				<div class="pic"><a href="{$article.link}"><img width='170' height='126'  src="{$article.image}" alt="{$article.title|strip_tags}" /></a></div>
+				<div class="pic"><a href="{$article.link}"><img  style="width: 100%" src="{$article.image}" alt="{$article.title|strip_tags}" /></a></div>
 				<div class="title"><a href="{$article.link}">{$article.title}</a></div>
 			</li>
           {/foreach} 

@@ -48,7 +48,7 @@ DD_belatedPNG.fix('div,ul,li,a,p,img');
                     <div class="article h_o">
                         <h1 class="inner_news_tit">{$article.title}  </h1>
                         <h2 class="inner_news_time">{$article.pubdate} </h2>
-                        <div class="edit">{$article.content}   </div>
+                        <div class="edit">{$article.content|unescape:"html"}</div>
                         {shareExt shareText=$article.content|strip_tags|truncate:140:"…" sharePic=$article.image}
                           <ul class="inner_pages">
                           <li>上一篇：<a href="{$article.prev.link}">{$article.prev.title}</a></li>

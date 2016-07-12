@@ -19,7 +19,6 @@
 <link href="{$site_url}css/css.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="{$site_url}js/jquery-1.11.3.js"></script>
 <script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.1.js"></script>
-
 <script type="text/javascript" src="{$site_url}js/function.js"></script>
 
 <title>{$title}</title>
@@ -31,7 +30,7 @@
 <!-- 导入头部文件 -->
     {include file='./_header.html'}
 
-
+<div id="tiaozheli"><p></p></div>
    <div class="nycontent">
         <div class="nyconttop">
             <div class="tel fl">
@@ -50,7 +49,7 @@
             <div class="img"><img src="{$list.image}"><div class="leftshadow"></div></div>
             <div class="sidebar">
               <div class="sidebartit">
-                <div class="stit">走进<br />影视院</div>    
+                <div class="stit">{$list.name}</div>    
                 <div class="triangle_border_down"></div>
                 <div class="triangle_border_down1"></div> 
               </div>

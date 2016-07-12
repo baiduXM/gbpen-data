@@ -43,7 +43,7 @@
                     </dl>
                     <div class="contact-qq">
                       {foreach name=QQ item=QQ from=$global.QQ}
-                         <a target=blank href=http://wpa.qq.com/msgrd?V=3&uin={$QQ.title}&Site=QQ客服&Menu=yes><img border="0" SRC=http://wpa.qq.com/pa?p=1:{$QQ.title}:1 alt="点击这里给我发消息"></a>
+                         <a target=blank href=http://wpa.qq.com/msgrd?V=3&uin={$QQ.title}&Site=QQ客服&Menu=yes><img border="0" SRC="{$QQ.image}" alt="点击这里给我发消息"></a>
                           
                       {/foreach}
 

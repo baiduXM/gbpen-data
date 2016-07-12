@@ -4,7 +4,7 @@
       <script type="text/javascript">
       // 跳转PC页面
       {if $site_another_url}
-          if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+          if (!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
               location.href = '{$site_another_url}';
           }
       {/if}
@@ -57,7 +57,7 @@
 <div class="index-wrap">
     <header>
        <div class="nyheader">
-           <div class="nyheadbg"><img src="images/nybg.jpg" width="100%" alt=""></div>       
+           <div class="nyheadbg"><img src="{$site_url}images/nybg.jpg" width="100%" alt=""></div>       
            <h2>{$posnavs[0].name}</h2>
            <i class="hicon2 iconfont" id="quickbar-showcats">&#xe603;</i>
            <span class="hicon1"><a href="javascript:window.history.back()">返回</a></span>

@@ -5,7 +5,7 @@
             </div>
             <div class="search">
               <form action="{$search_action}" method="GET">
-                <input class="sinp fl" type="text" name="s" value="请输入关键字" />
+                <input class="sinp fl" type="text" name="s" value="" placeholder="请输入关键字" />
                 <input class="sbtn fl" type="submit" value="" />
               </form>
             </div>
@@ -48,7 +48,7 @@
                     <li class="{if $nav.current}on{/if} nLi">
                         <h3><a href="{$nav.link}">{$nav.name}</h3></a>
                         {if $nav.childmenu}
-                            <ul class="sub">
+                            <ul class="sub" style="position: absolute;top: 50px;width: 100%;">
                                 {foreach key=key item=nav_list from=$nav.childmenu}
                                 <li class="{if $nav.current}current{/if}"><a href="{$nav_list.link}">{$nav_list.name}</a></li>
                                 {/foreach}

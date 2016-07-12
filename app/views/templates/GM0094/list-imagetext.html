@@ -4,7 +4,7 @@
       <script type="text/javascript">
       // 跳转PC页面
       {if $site_another_url}
-          if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+          if (!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
               location.href = '{$site_another_url}';
           }
       {/if}
@@ -57,7 +57,7 @@
 <div class="index-wrap">
       <header>
            <div class="nyheader">
-               <div class="nyheadbg"><img src="images/nybg.jpg" width="100%" alt=""></div>           
+               <div class="nyheadbg"><img src="{$site_url}images/nybg.jpg" width="100%" alt=""></div>           
                <h2>{$list.name}</h2>
                <i class="hicon2 iconfont" id="quickbar-showcats">&#xe603;</i>
                <span class="more2">分类 <i class="up">&or; </i></span>
@@ -105,7 +105,8 @@
                     {/foreach}
                  
               </ul>
-              <div class="next1"><a href="{$page_links.prev_link}">上一页</a><a href="{$page_links.next_link}">下一页</a></div>
+              <div class="next1"><a href="{$page_links.prev_link}">上一页</a><span>{$page_links.current_page}/{$page_links.page_count}</span><a href="{$page_links.next_link}">下一页</a></div>
+                  
                   
           </div>           
         

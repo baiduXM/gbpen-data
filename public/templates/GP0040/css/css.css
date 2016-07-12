@@ -57,6 +57,33 @@ ol,p,dl,li{list-style:none;}
 .slideBox .bd li{ zoom:1; vertical-align:middle; }
 .slideBox .bd img{ width: 100%;}
 
+
+
+
+
+
+/*大图标签*/
+.nybanner{width: 100%;position:relative;}
+.nybanner .slideBox{ width:100%; height:244px; position:relative;margin-left: -860px; margin:0 auto; text-align:center}
+.nybanner .slideBox .hd{display: none;width:100%;height:7px; overflow:hidden; position:absolute; bottom:17px; z-index:100; }
+.nybanner .slideBox .hd ul{ overflow:hidden; zoom:1;width:219px;margin: 0 auto;}
+.nybanner .slideBox .hd ul li{ float:left; margin:0 6px;width:57px; height:3px;  cursor:pointer;border: 2px solid #ececec; }
+.nybanner .slideBox .hd ul li.on{  border: 2px solid #2e4d82; background: #2e4d82;}
+.nybanner .slideBox .bd{ position:relative; height:100%; z-index:10; }
+.nybanner .slideBox .bd ul{ position:relative; height:100%;  }
+
+.nybanner .slideBox .bd li{ zoom:1; vertical-align:middle;  margin:0 auto}
+.nybanner .slideBox .bd img{height:244px;}
+
+/*.nybanner .slideBox{height: 279px;}
+.nybanner .slideBox .bd img{  height:279px; display:block;}*/
+
+
+
+
+
+
+
 .incontent{margin: 20px 0 40px;overflow: hidden;}
 .pro{/*height: 116px;*/background: #fff;overflow: hidden;padding: 16px;margin-bottom: 20px;overflow: hidden;}
 /*.pro ul li{width: 136px;float: left;margin:0 6px;}*/
@@ -159,22 +186,6 @@ ul.tab li{width: 80px;height: 30px;line-height: 30px;margin-bottom: 5px;color: #
 .sub li{ zoom:1;text-align: center;height:26px;}
 .sub a{ display:block;color: #f4f4f4;background: #426e9d; }
 .sub a:hover{ background:#2e549b;  }
-
-/*大图标签*/
-.nybanner{width: 100%;position:relative;}
-.nybanner .slideBox{ width:1920px; height:244px; position:relative;left: 50%;margin-left: -860px;}
-.nybanner .slideBox .hd{display: none;;width:100%;height:7px; overflow:hidden; position:absolute; bottom:17px; z-index:100; }
-.nybanner .slideBox .hd ul{ overflow:hidden; zoom:1;width:219px;margin: 0 auto;}
-.nybanner .slideBox .hd ul li{ float:left; margin:0 6px;width:57px; height:3px;  cursor:pointer;border: 2px solid #ececec; }
-.nybanner .slideBox .hd ul li.on{  border: 2px solid #2e4d82; background: #2e4d82;}
-.nybanner .slideBox .bd{ position:relative; height:100%; z-index:10; }
-.nybanner .slideBox .bd ul{ position:relative; height:100%;  }
-
-.nybanner .slideBox .bd li{ zoom:1; vertical-align:middle; }
-.nybanner .slideBox .bd img{height:244px;}
-
-/*.nybanner .slideBox{height: 279px;}
-.nybanner .slideBox .bd img{  height:279px; display:block;}*/
 
 /*内容区域标签*/
 .content{width:973px;height:auto;position: relative;margin: 25px auto;overflow: hidden;padding: 0 20px 0 10px;}

@@ -11,6 +11,9 @@ $(document).ready(function() {
 	 	
 	 });
 
+	
+
+
 	// banner js
    	jQuery(".slideBox").slide({mainCell:".bd ul",autoPlay:true, effect:"fold", trigger:"click",interTime:4000});
     
@@ -49,4 +52,19 @@ $(document).ready(function() {
 		})
 
 	 jQuery(".slideBoxb").slide({mainCell:".bd ul",autoPlay:false,effect:"leftLoop"});
-})
+
+
+	var leftheight = $("#prodetpicl").height();
+	if(leftheight != null ){
+		$("#prodetnr").height(leftheight);
+	}
+});
+window.onload = function() { 
+	if($('#row').height() < 526){
+		$('#row').height(526);
+	}else if($('#row').height() >526){
+		var rheight = parseInt($("#contentbg").css("top"));
+		$("#contentbg").css("top",($('#row').height()-526)+rheight);
+	}
+
+};

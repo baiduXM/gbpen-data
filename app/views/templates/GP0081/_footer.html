@@ -1,0 +1,18 @@
+
+<div class="tail wap">
+	<div class="link w">
+		<h3 class="linktit f_l">友情链接</h3>
+		{include file="./_links.html"}		
+		<div class="go_top"><img src="{$site_url}images/back_03.png" alt=""></div>
+	</div>
+	<div class="second_nav w">
+		<a href="{$site_url}">网站首页</a> /
+		{foreach name=navs item=nav from=$navs}
+			<a href="{$nav.link}" >{$nav.name}</a> /
+		{/foreach}<br /> 
+	</div> 
+	<div class="footer w">
+		{$footprint}
+	</div>
+</div>
+{$footscript}

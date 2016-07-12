@@ -61,7 +61,7 @@ DD_belatedPNG.fix('div,ul,li,a,p,img');
 							<a class="next" href="javascript:void(0)"></a>                  
             			</div>
 			            <div class="moule_edot">
-							{$article.content}{shareExt shareText=$article.content|strip_tags|truncate:140:"…" sharePic=$article.image}
+							{$article.content|unescape:"html"}{shareExt shareText=$article.content|strip_tags|truncate:140:"…" sharePic=$article.image}
 			  			</div>
                           <ul class="inner_pages">
                           <li>上一篇：<a href="{$article.prev.link}">{$article.prev.title}</a></li>

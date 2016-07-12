@@ -3,22 +3,60 @@
     "about_us": {
 		"description": "图片列表下方的内容单页（如关于我们）",
 		"value": {},
-		"type": "page"
+		"type": "page",
+		"config": {
+			"nav_width": 176,
+			"nav_height": 160
+		}
 	},
 	"news":{
 		"description": "中间文字列表（如影视资讯）",
 		"value": {},
-		"type": "list"		
+		"type": "list",
+		"config": {
+			"width": 78,
+			"height": 78
+		}	
 	},
 	"pro":{
 		"description":"大图下方左侧侧图片列表(如产品展示)",
 		"value":{},
-		"type":"list"
+		"type":"list",
+		"config": {
+			"width": 78,
+			"height": 78
+		}
 	},
 	"contact":{
 		"value": "电 话：4000-127-808\r\n 传 真：0592-3503377\r\n 投诉中心：tousu@xm12t.com\r\n地 址：厦门市软件园二期观日路36号201单元",
 		"description": "联系方式",
 		"type": "textarea"
+	},
+	"indexcr1":{
+		"value": {
+			"title": "首页中间右侧图1",
+			"image": "images/newstitbg.png",
+			"link": ""
+		},
+		"description": "首页中间右侧图1",
+		"type": "image",
+		"config": {
+			"height": 104,
+			"width":71
+		}
+	},
+	"indexcr2":{
+		"value": {
+			"title": "首页中间右侧图2",
+			"image": "images/rowbg1.png",
+			"link": ""
+		},
+		"description": "首页中间右侧图2",
+		"type": "image",
+		"config": {
+			"height": 209,
+			"width":501
+		}
 	}
 }                     
 

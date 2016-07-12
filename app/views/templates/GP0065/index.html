@@ -28,10 +28,10 @@
     <!-- 导入头部文件 -->
     {include file='./_header.html'}
     <div class="content">
-        <div class="contentbg">
+        <div class="contentbg" id="contentbg">
             <div class="contentiner"></div>
         </div>
-        <div class="row">
+        <div class="row" id="row" style="min-height: 526px;">
             <div class="pro fl">
                 <div class="tit">
                     <h2>{$index.pro.en_name}</h2>
@@ -51,8 +51,8 @@
                 </ul>
             </div>
             <div class="news fr">
-                <div class="newsbg"></div>
-                <div class="newstop"><img src="{$site_url}images/newstitbg.png" alt=""></div>
+                <div class="newsbg" style="background: url({$index.indexcr2.image}) no-repeat;"></div>
+                <div class="newstop"><img src="{$index.indexcr1.image}" alt=""></div>
                 <div class="tit">
                     <h2>{$index.news.en_name}</h2>
                     <span>{$index.news.name}</span>
@@ -65,7 +65,7 @@
                     <div class="newsbox">
                         <dl><a href="{$article.link}"><img src="{$article.image}" alt=""></a></dl>
                         <dt>
-                            {$article.title}
+                            {$article.description|truncate:60:"..."}
                         </dt>
                         <a href="{$article.link}">了解更多>>></a>
                     </div> 
@@ -90,7 +90,7 @@
                     </div> 
                     <div class="aboutbox">
                         <dl><img src="{$index.about_us.image}" alt=""></dl>
-                        <dt>{$index.about_us.description}
+                        <dt>{$index.about_us.description|truncate:100:"..."}
                             <a href="{$index.about_us.link}">[详细]</a>
                         </dt>
                     </div>                   
