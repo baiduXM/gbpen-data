@@ -18,7 +18,7 @@ img{ border:none;}
 #header h1 span{display: table-cell;vertical-align: middle;}
 #header h1 span img{max-width:270px;max-height: 109px;}
 
-.menu{ width:730px;  height:78px;float:right;overflow: hidden;}
+.menu{ width:730px;  height:78px;float:right;}
 .nav{ width:100%; height:78px;margin:0 auto; position:relative; z-index:1; }
 .nav a{ color:#fff; line-height:34px;  }
 .nav .nLi{  position:relative; display:inline;text-align: center; float:left; width:78px; height:109px;}
@@ -30,8 +30,8 @@ img{ border:none;}
 .nav .sub a:hover{ color:#ceaa7e; background: #fff; }
 
 
-.banner .topline{ background:url(../images/banner_bg.jpg) no-repeat center top; height:6px;}
-.banner{ width:100%;height: auto;overflow: hidden;background:url(../images/banner_bg1.jpg)  no-repeat center bottom;}
+.banner .topline{ background:url(../images/banner_bg.jpg) repeat-x center top; height:6px;}
+.banner{ width:100%;height: auto;overflow: hidden;background:url(../images/banner_bg1.jpg) repeat-x center bottom;}
 .slideBox{ position: relative;  overflow: hidden; width: 100%;height:auto;}
 .slideBox .hd{  height:16px;width: 100%;text-align: center; overflow:hidden; position:absolute; bottom:20px; z-index:1;}
 .slideBox .hd ul{  overflow:hidden; zoom:1;width:100%;  text-align: center;   }
@@ -181,13 +181,13 @@ ul.inner_pro1 li:hover h3{color: #ff0000;}
 
 .main_right_con2{overflow:hidden;}
 
-.description{ height:auto; overflow:hidden; width:%; margin:10px 0px; }
+.description{ height:auto; overflow:hidden;  margin:10px 0px; }
 
 
 .descripimg { padding:0px; max-width:90%; height:auto; border:1px solid #ceaa7e; display: block;margin: 10px auto;}
 .descriptcot{margin:0px; padding:0px; float:left; width:100%; position:relative;}
 .text_p{ color:#ceaa7e;padding:0px;width:40%; position:absolute; top:0px; left:460px; }
-.moule_edot{  color:#ceaa7e;width:%; margin-left:5px; clear:both;text-align:Justify;
+.moule_edot{  color:#ceaa7e; margin-left:5px; clear:both;text-align:Justify;
 text-justify:inter-ideograph;margin-top: 0px;}
 .deteo .edit,.moule_edot{border-bottom: 1px dashed #ceaa7e;}
 

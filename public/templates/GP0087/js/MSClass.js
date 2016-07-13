@@ -11,5 +11,5 @@ eval(function(MSClass){var d=MSClass,p=d[0],k=d[1],c=k.length,a=62,e=function(c)
 
 //-->
 
-new Marquee("Marquee",2,2,950,175,50,0,1000,-2);
+
 
