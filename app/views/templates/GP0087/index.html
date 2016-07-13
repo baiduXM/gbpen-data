@@ -1,0 +1,99 @@
+<!DOCTYPE>
+<html>
+<head>
+<script type="text/javascript">
+    // 跳转手机页面
+    {if $site_another_url}
+        if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+            location.href = '{$site_another_url}';
+        }
+    {/if}
+</script>
+
+<meta name="keywords" content="{$keywords}"/>
+<meta name="description" content="{$description}"/>
+<link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
+<meta http-equiv="x-ua-compatible" content="ie=8"/>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>{$title}</title>
+<link href="{$site_url}css/css.css" rel="stylesheet" type="text/css" />
+<script src="{$site_url}js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.1.js"></script>
+<script src="{$site_url}js/MSClass.js" type="text/javascript" language="javascript"></script>
+<script type="text/javascript" src="{$site_url}js/function.js"></script>
+<!--[if IE 6]>
+<script type="text/javascript" src="{$site_url}js/DD_belatedPNG_0.0.8a-min.js"></script>
+<script>
+  DD_belatedPNG.fix('.pngFix');
+</script>
+<![endif]-->
+{$headscript}
+</head>
+
+<body>
+<!-- 导入头部文件 -->
+{include file='./_header.html'}
+
+<div id="container" class="wrapper clearfix">
+  <div id="product">
+    <h2 class="clearfix pngFix">
+      <span class="more">
+        <a href="{$index.pro.link}"><Img src="{$site_url}images/more.png" class="pngFix" /></a>
+      </span>
+      <img src="{$site_url}images/h2_icon.jpg"  class="licon" />
+      <span class="tit">{$index.pro.name}<i>{$index.pro.en_name}</i></span>
+    </h2>
+    <div class="inner">
+      <ul id="Marquee"  class="case_content">
+      {foreach item=pro from=$index.pro.data}
+        <li>
+          <div  class="img">
+            <a href="{$pro.link}">
+              <span><i><img src="{$pro.image}" /></i></span>
+              <div class="line"></div>
+            </a>
+          </div>
+          <a href="{$pro.link}" class="text kz" data-limit="12">{$pro.title}</a>
+        </li>       
+      {/foreach}
+      </ul>   
+    </div>
+  </div>
+
+  <div id="about">
+    <h2 class="clearfix pngFix">
+      <span class="more">
+        <a href="{$index.about_us.link}"><Img src="{$site_url}images/more.png" class="pngFix" /></a>
+      </span>
+      <img src="{$site_url}images/h2_icon.jpg"  class="licon" />
+      <span class="tit">{$index.about_us.name}<i>{$index.about_us.en_name}</i></span>
+    </h2>
+    <div class="inner">
+      <span><i><img src="{$index.about_us.image}" class="pngFix" /></i></span>
+      <div class="text kz" data-limit="110">{$index.about_us.description}</div>
+    </div>
+  </div>
+
+  <div id="news">
+    <h2 class="clearfix pngFix">
+      <span class="more">
+        <a href="{$index.news.link}"><Img src="{$site_url}images/more.png" class="pngFix" /></a>
+      </span>
+      <img src="{$site_url}images/h2_icon.jpg"  class="licon" />
+      <span class="tit">{$index.news.name}<i>{$index.news.en_name}</i></span>
+    </h2>
+    <div class="inner">
+      <ul class="clearfix">
+      {foreach item=news from=$index.news.data}
+        <li><span>{$news.pubtimestamp|date_format:'%Y-%m-%d'}</span><a href="{$news.link}" class="kz" data-limit="24">{$news.title}</a>
+        </li>
+      {if $news@index eq 3}{break}{/if}
+      {/foreach} 
+      </ul>
+    </div>
+  </div>
+</div>
+
+{include file='./_footer.html'}
+</body>
+</html>

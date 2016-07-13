@@ -12,7 +12,7 @@
     
     <div class="title">
 <h2>
- <span class="icon">{$pagenavs[0].icon}</span>
+ <span class="icon">{$posnavs[0].icon}</span>
     <span class="cn"> {$posnavs[0].name}</span>
 </h2>
     <span class="en">{$posnavs[0].en_name} </span>
@@ -55,10 +55,10 @@
    <div class="alefttitle">
    <div class="title">
 <h2>
- <span class="icon">{$_aside.pagenavs[0].icon}</span>
-    <span class="cn">  {$_aside.pagenavs[0].name}</span>
+ <span class="icon">{$_aside.pagenavs.icon}</span>
+    <span class="cn">  {$_aside.pagenavs.name}</span>
 </h2>
-    <span class="en">{$_aside.pagenavs[0].en_name}</span>
+    <span class="en">{$_aside.pagenavs.en_name}</span>
     </div>
    
    
