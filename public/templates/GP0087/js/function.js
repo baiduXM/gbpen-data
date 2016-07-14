@@ -13,6 +13,8 @@ $(document).ready(function(){
 
   jQuery(".slideBox").slide({mainCell:".bd ul",autoPlay:true,effect:"left"});
 
+  jQuery(".picMarquee-left").slide({mainCell:".bd ul",autoPlay:true,effect:"leftMarquee",vis:5,interTime:50});
+
   //多图时轮播
     jQuery(".slideBox3").slide({  mainCell:".bd ul", effect:"left", delayTime:1000, autoPlay:true, autoPage:true, trigger:"click",
     mouseOverStop:false,/* 鼠标移到容器层继续播放*/
