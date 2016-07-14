@@ -19,9 +19,7 @@
     <script src="{$site_url}js/jquery.js" type="text/javascript"></script>
     <script language="javascript" type="text/javascript" src="{$site_url}js/yao.js"></script>
     <script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.1.js"></script>
-    <script type="text/javascript" src="{$site_url}js/MSClass.js"></script>
     <script type="text/javascript" src="{$site_url}js/function.js"></script>
-    <script type="text/javascript" src="{$site_url}js/index.js"></script>
     <title>{$title}</title>
     {$headscript}
 </head>
@@ -84,30 +82,40 @@
                     <div class="about pro fl">
                         <h1 class="contact-top"><a href="{$index.pro.link}" class="more fr"></a>{$index.pro.name} \ <span class="en">{$index.pro.en_name}</span></h1>
                         <div id="prizes">
-                            <div class="photos">
-                                <a href="javascript:void(0);" class="photos-button photos-prev"></a>
-                                <div class="photos-content ">
-                                    <ul id="MarqueeDiv1">
-                                        {section name=key loop=$index.pro.data start=0 step=2}
-                                        <li>
-                                            <a href="{$index.pro.data[key].link}"><img alt="" src="{$index.pro.data[key].image}" />
-                                                <h2>{$index.pro.data[key].title}</h2></a>
-                                        </li>
-                                        {if $smarty.section.key.rownum gt 2}{break}{/if} {/section}
-                                    </ul>
-                                </div>
-                                <div class="photos-content photo2 {if $index.pro.data|count>4} enable{/if}">
-                                    <ul id="MarqueeDiv2">
-                                        {section name=key loop=$index.pro.data start=1 step=2}
-                                        <li>
-                                            <a href="{$index.pro.data[key].link}"><img alt="" src="{$index.pro.data[key].image}"  />
-                                                <h2>{$index.pro.data[key].title}</h2></a>
-                                        </li>
-                                        {if $smarty.section.key.rownum gt 1}{break}{/if} {/section}
-                                    </ul>
-                                </div>
-                                <a href="javascript:void(0);" class="photos-button photos-next"></a>
-                            </div>
+
+                <div class="slideBox1 photos">
+                    <a href="javascript:void(0);" class="photos-button photos-prev"></a>
+                    <div class="bd1">
+                      <div class="ulWrap photos-content">
+                        {$pronum=($index.pro.data|count)/2}
+                        {$num=0}
+                        {for $item=1 to $pronum}
+                        <ul id="MarqueeDiv1" style="width: 160px;">
+                          {foreach item=pro from=$index.pro.data}
+                            {if $num%2==0}
+                          <li>
+                            <a href="{$index.pro.data[$num].link}"><img alt="" src="{$index.pro.data[$num].image}" />
+                                <h2>{$index.pro.data[$num].title}</h2></a>
+                          </li>
+                           {else}
+                          <li>
+                            <a href="{$index.pro.data[$num].link}"><img alt="" src="{$index.pro.data[$num].image}" />
+                                <h2>{$index.pro.data[$num].title}</h2></a>
+                          </li>
+                           {/if} 
+                          {$num=$num+1}
+                          {if $num%2==0}{break}{/if}
+                          {/foreach}
+                        </ul>
+                        {/for}
+                      </div>
+                    </div>
+                    <a href="javascript:void(0);" class="photos-button photos-next"></a>
+              </div>
+
+
+
+
                         </div>
                     </div>
                 </div>

@@ -45,6 +45,8 @@ $(".bd li").each(function(){
 
 
 	
+$("#pro .inner").slide({mainCell:".bd ul",autoPlay:true,effect:"leftMarquee",vis:8,interTime:50});	
+	
 	
 /*产品详细页*/
     jQuery(".slideBoxb").slide({

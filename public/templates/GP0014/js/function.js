@@ -42,6 +42,8 @@ $(document).ready(function(){
 // banner
 	jQuery(".focusBox").slide({ mainCell:".pic",effect:"left", autoPlay:true, delayTime:500,interTime:4000,trigger:"click"});
 
+//产品展示轮播
+jQuery(".slideBox1").slide({ mainCell:" .ulWrap",autoPage:true,interTime:30,effect:"leftMarquee",autoPlay:true,trigger:"click",vis:5});
 
 
 
