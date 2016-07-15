@@ -111,8 +111,11 @@ jQuery(document).ready(function($) {
 	var News_w=$(".news_list1 li a").width();
 	 $(".news_list1 li a").height(News_w*0.24);
 	var Sp_h=$(".news_list1 li a span").height();
+	var num = 2;
+	if(Sp_h>90)
+		num=3;
 	$(".news_list1 li a span").css({
-		marginTop: -Sp_h/2
+			marginTop: -Sp_h/num
 	});
 		
 		

@@ -39,12 +39,12 @@
 <body>
 <div class="className p_r"><span class="type">分类↑</span>{$list.name}
 
-         <i class="iconfont demo-icon icon-th-list slide-nav iconnav p_a">&#xe603;</i>
+         
 </div>
    {include file="./_pagenavs_sub3.html"}
 
    <div class="aboutms info">
-            <figure><img src="{$list.image}" ></figure>
+           
             <div class="font">字体： <span class="d">大</span> | <span class="z">中</span> | <span class="x">小</span></div>
            <div class="infos">	 {$list.content|unescape:"html"}   </div> 
         </div> 
@@ -62,6 +62,7 @@
         {$footscript}
 
 <script src="{$site_url}js/jquery.min.js"></script>
+<script type="text/javascript" src="{$site_url}js/TouchSlide.1.1.js"></script>
 <script type="text/javascript" src="{$site_url}js/function.js"></script>
 </body>
 </html>

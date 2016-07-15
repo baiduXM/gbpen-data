@@ -29,6 +29,12 @@
 <link rel="stylesheet" href="{$site_url}css/swiper.css">
 
 <link href="{$site_url}css/css.css" rel="stylesheet" type="text/css" />
+<script src="{$site_url}js/jquery.min.js"></script>
+<script type="text/javascript" src="{$site_url}js/swiper.min.js"></script>
+<script type="text/javascript" src="{$site_url}js/lazyload.js"></script>
+<script type="text/javascript" src="{$site_url}js/effect.js"></script>
+<script type="text/javascript" src="{$site_url}js/TouchSlide.1.1.js"></script>
+<script type="text/javascript" src="{$site_url}js/function.js"></script>
 
 <script type="text/javascript">
 	window.addEventListener('load', function(){
@@ -65,11 +71,11 @@
 {foreach item=mIndexCat from=$mIndexCats}
 {if $mIndexCat.type eq 2}
   <div class="pic p_r cp">
-                        <canvas id="canvas2"></canvas>
+                        
 						<h3 class="tit"><a href="{$mIndexCat.link}">+MORE</a>{$mIndexCat.name}</h3>
 						<div class="pic_xq">
                          
-						<ul class="pic_lm">
+						<ul class="pic_lm" >
 						{foreach item=article from=$mIndexCat.data}
 						<li><a href="{$article.link}"><figure><img src="{$article.image}" alt="{$article.title}"></figure>
                                  <figcaption>{$article.title}</figcaption> 
@@ -84,18 +90,19 @@
 					</div>
 {elseif $mIndexCat.type eq 3}
 <div class="news p_r">
-				    <h2 class="sj">	</h2>
+				    
 				    <canvas id="canvas3"></canvas>
 				    <a href="{$mIndexCat.link}" class="more">+</a>
 					<h3 class="tit">{$mIndexCat.name}</h3>
-					<ul class="newdet margin">
+					<ul class="newdet margin" id="indexul">
 					{foreach item=article from=$mIndexCat.data}
 						<li >
-							<figure><img src="{$article.image}" alt="{$article.title}"></figure>
+							<figure><img src="{$article.image}" style="width: 100%" alt="{$article.title}"></figure>
 
 							<div class="imgright p_r">
 							<h3 class="title">{$article.title}</h3>
-							<p>{$article.description}</p><a href="{$article.link}" class="xq">查看详细</a></div>
+							<p>{$article.description}</p><a href="{$article.link}" class="xq">查看详细</a>
+							</div>
 						</li>
 						
 						{if $article@index+1 == 5}{break}{/if}
@@ -107,8 +114,18 @@
 {elseif $mIndexCat.type eq 4}
 	<div class="about p_r">
 
-					<div class="db"><h3 class="bfore"></h3><h3 class="tit">{$mIndexCat.name}</h3></div>
-					<div class="aboutdate"><figure><img src="{$mIndexCat.image}"  alt=""></figure><p>{$mIndexCat.description}</p></div>
+					
+					<div class="aboutdate">
+					<figure>
+					<a href="{$mIndexCat.link}">
+					<img src="{$mIndexCat.image}"  alt="" style="max-width: 200px;">
+					</a>
+					</figure>
+					<a href="{$mIndexCat.link}">
+					<h3 class="tit">{$mIndexCat.name}</h3>
+					</a>
+					<p>{$mIndexCat.description|truncate:80:"..."}</p>
+					</div>
 				</div>
 {/if}
 
@@ -117,7 +134,7 @@
 					
 				
 
-			<div class="name">{$footprint}<!-- <i class="demo-icon icon-angle-circled-up">&#xe801;</i> --></div>
+			<div class="name">{$footprint}</div>
 		
 			
 		</div>
@@ -125,11 +142,7 @@
 		<div class="shadow p_a"></div>
         {$footscript}
 
-<script src="{$site_url}js/jquery.min.js"></script>
-<script type="text/javascript" src="{$site_url}js/swiper.min.js"></script>
-<script type="text/javascript" src="{$site_url}js/function.js"></script>
-<script type="text/javascript" src="{$site_url}js/lazyload.js"></script>
-<script type="text/javascript" src="{$site_url}js/effect.js"></script>
+
 
 </body>
 </html>

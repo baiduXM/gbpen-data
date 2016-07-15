@@ -1,10 +1,28 @@
 $(document).ready(function(){
+
+	TouchSlide({ 
+		slideCell:"#slideBox",
+		titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+		mainCell:".bd ul", 
+		effect:"leftLoop", 
+		autoPage:true,//自动分页
+		autoPlay:true,
+		interTime:2000 //自动播放
+	});
 	resize();
+	// $('#indexrd').height($('#indexli').height());
+
 	$(window).resize(function(){
 		resize();
 		img(".logo",0.16719)
 		img2(".banner",0.5);
-		$(".news").outerWidth()
+		$(".news").outerWidth();
+
+		$('#indexul li').each(function (){
+			var ilh = $(this).find("figure").height();
+			// alert(ilh);
+			$(this).find("figure").next("div").height(ilh);
+		});
 	});
 
 	
@@ -30,7 +48,7 @@ $(document).ready(function(){
 	   
 	    $(".trapezoid").css({
 			
-            borderBottomWidth:h*0.5+"px"
+            borderBottomWidth:h*1.5+"px"
 		});
 	 }
 	img(".logo",0.16719)
@@ -39,9 +57,9 @@ $(document).ready(function(){
  function lineHeight(lneHeight,sc,num){
 	 	var wid=$(lneHeight).width()
 	 	var hig=Math.floor(wid*sc) 
-	    $(lneHeight).css({
-	    	lineHeight:(hig*num)+"px",
-	    });
+	    // $(lneHeight).css({
+	    // 	lineHeight:(hig*num)+"px",
+	    // });
 	 }
 	 lineHeight(".menu li a",.5,1)
 	//二级菜单下拉
@@ -102,16 +120,16 @@ $(document).ready(function(){
 		return false
 	})
 	
-	 //隐藏导航跟wrap的切换
-	// $(".slide-nav").click(function(){
-	// 	$("#quickbar-navs,.wrap").addClass("slide");
-	// 	$(".shadow").show();
-	// })
-	// $(".nav-close,.shadow").on('touchstart click',function(){
-	// 	$("#quickbar-navs,.wrap").removeClass("slide");
-	// 	$(".shadow").hide(400);
+	 // 隐藏导航跟wrap的切换
+	$(".slide-nav").click(function(){
+		$("#quickbar-navs,.wrap").addClass("slide");
 		
-	// })
+	})
+	$(".nav-close,.shadow").on('touchstart click',function(){
+		$("#quickbar-navs,.wrap").removeClass("slide");
+		
+		
+	})
 	
 	$(".qx").click(function() {
 		$(".share").hide();
@@ -181,23 +199,24 @@ $(document).ready(function(){
     var aboutimgh=Math.ceil(aboutimgw*0.651);
     var bl=aboutimgh
     $(".aboutdate img").css({
-        width: aboutimgw + "px",
-        height:aboutimgh+"px"
+        // width: aboutimgw + "px",
+        // height:aboutimgh+"px"
      });
     $(".bfore").css({
-        borderLeftWidth:  bl+"px",
-        borderTopWidth:bl/2+"px",
-        borderBottomWidth:bl/2+"px"
+        // borderLeftWidth:  bl+"px",
+        // borderTopWidth:bl/2+"px",
+        // borderBottomWidth:bl/2+"px"
     });
     $(".db .tit").css({
-        lineHeight:aboutimgh+"px"
+        // lineHeight:aboutimgh+"px"
     });
 $(".aboutdate p").css({
-    height: (Math.floor(aboutimgh/16/1.5))*1.5+1.5+"rem"
+    // height: (Math.floor(aboutimgh/16/1.5))*1.5+1.5+"rem"
 
 });
 
 $(".pic_lm li:odd").addClass('js');
+$("#pic_lm li").removeClass('js');
 
 
 

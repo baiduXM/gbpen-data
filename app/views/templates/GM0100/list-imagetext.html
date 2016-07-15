@@ -54,15 +54,15 @@
 			<span class="page_mn icon_n" id="quickbar" ><i class="iconfont" id="quickbar-navs-btn">&#xe603;</i></span>
 			<ul class="class_list">
 			{foreach name=pagenavs item=nav from=$pagenavs}
-				<li class="{if $nav.current}current{/if}" ><a href="{if $nav.childmenu}javascript:;{else}{$nav.link}{/if}" class="{if $nav.selected}selected{/if}">{$nav.name}</a>
+				<li class="{if $nav.current}current{/if}" ><a href="{if $nav.childmenu}javascript:void(0){else}{$nav.link}{/if}" class="{if $nav.selected}selected{/if}">{$nav.name}</a>
 				{if $nav.childmenu}
-					<ul class="second">
+					<ul class="second" style="z-index: 99999;">
 					{foreach key=key item=nav_list from=$nav.childmenu}
-						<li class="{if $nav_list.current}current{/if}"><a href="{if $nav_list.childmenu}javascript:;{else}{$nav_list.link}{/if}" class="{if $nav_list.selected}selected{/if}">{$nav_list.name}</a>
+						<li class="{if $nav_list.current}current{/if}" style="background-color: #ab8f77;"><a href="{if $nav_list.childmenu}javascript:void(0){else}{$nav_list.link}{/if}" class="{if $nav_list.selected}selected{/if}">{$nav_list.name}</a>
 						{if $nav_list.childmenu}
 							<ul class="third">
 							{foreach key=key item=nav_listsec from=$nav_list.childmenu}
-								<li class="{if $nav_listsec.current}current{/if}"><a href="{$nav_listsec.link}" class="{if $nav_listsec.selected}selected{/if}">{$nav_listsec.name}</a></li>
+								<li class="{if $nav_listsec.current}current{/if}" style="background-color: #ab8f77;"><a href="{$nav_listsec.link}" class="{if $nav_listsec.selected}selected{/if}">{$nav_listsec.name}</a></li>
 							{/foreach}
 							</ul>
 						{/if}	
@@ -77,7 +77,7 @@
 			    <ul class="ny_news_list">
 			    {foreach item=article from=$list.data}
             		<li><span class='img'><a href="{$article.link}"><img src="{$article.image}"  /></a></span><div class="news_right"><h1><a href="{$article.link}">{$article.title} </a></h1><span class="date">2015-11-06</span><p class="article_01">{$article.description}</p><a href="{$article.link}" class="more_1">MORE+</a></div></li>
-            		{if $article@index+1 == 3}{break}{/if}
+            		
 					{/foreach} 
 
 												           
@@ -87,7 +87,7 @@
                    <li><a href="{$page_links.prev_link}">上一页 </a></li>
                    {foreach item=near_link key=near_page from=$page_links.nears_link}
 					{if $near_page == $page_links.current_page}
-						<li class=" current"><a>{$near_page}</a></li>
+						<li class="current"><a>{$near_page}</a></li>
 					{else}
 						<li><a href="{$near_link}">{$near_page}</a></li>
 					{/if}
@@ -97,17 +97,19 @@
                 </div>
 			</div>	
 		 </div>
-		</div>
-	     <div class="Copy">
+		 <div class="Copy">
 	    	{$footprint} 
 	    </div> 
+		</div>
+	     
 </section>
 {$footscript}
 	<script type="text/javascript" src="{$site_url}js/jquery-1.10.2.min.js"></script>
 	<script type="text/javascript" src="{$site_url}js/swiper.min.js"></script>
 	<script type="text/javascript" src="{$site_url}js/index.js"></script>
-	<script type="text/javascript" src="{$site_url}js/function.js"></script>
 	<script type="text/javascript" src="{$site_url}js/jsScroller.js"></script>
-	<script type="text/javascript" src="{$site_url}js/jsScrollbar.js"></script>
+	<script type="text/javascript" src="{$site_url}js/slides-1.1.1-min.js"></script>
+	<script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.js"></script>
+	<script type="text/javascript" src="{$site_url}js/function.js"></script>
 </body>
 </html>

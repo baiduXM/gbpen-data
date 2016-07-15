@@ -56,13 +56,13 @@
 			{foreach name=pagenavs item=nav from=$pagenavs}
 				<li class="{if $nav.current}current{/if}" ><a href="{if $nav.childmenu}javascript:;{else}{$nav.link}{/if}" class="{if $nav.selected}selected{/if}">{$nav.name}</a>
 				{if $nav.childmenu}
-					<ul class="second">
+					<ul class="second" style="z-index: 99999;">
 					{foreach key=key item=nav_list from=$nav.childmenu}
-						<li class="{if $nav_list.current}current{/if}"><a href="{if $nav_list.childmenu}javascript:;{else}{$nav_list.link}{/if}" class="{if $nav_list.selected}selected{/if}">{$nav_list.name}</a>
+						<li class="{if $nav_list.current}current{/if}" style="background-color: #ab8f77;"><a href="{if $nav_list.childmenu}javascript:;{else}{$nav_list.link}{/if}" class="{if $nav_list.selected}selected{/if}">{$nav_list.name}</a>
 						{if $nav_list.childmenu}
 							<ul class="third">
 							{foreach key=key item=nav_listsec from=$nav_list.childmenu}
-								<li class="{if $nav_listsec.current}current{/if}"><a href="{$nav_listsec.link}" class="{if $nav_listsec.selected}selected{/if}">{$nav_listsec.name}</a></li>
+								<li class="{if $nav_listsec.current}current{/if}" style="background-color: #ab8f77;"><a href="{$nav_listsec.link}" class="{if $nav_listsec.selected}selected{/if}">{$nav_listsec.name}</a></li>
 							{/foreach}
 							</ul>
 						{/if}	
@@ -78,7 +78,7 @@
 				    <div class="Scroller-Container">
              		<div class="news_detail">
                     	<h1 class="Title">{$article.title}  </h1>
-                        <h2 class="Time">{$article.pubdate} <a href="" class="go">[返回]</a></h2>
+                        <h2 class="Time">{$article.pubdate} <a href="{$article.link}" class="go">[返回]</a></h2>
                      </div>
 		           	<div class="f_size fr ">
 				 		<span class=" font_s">字体：</span>
@@ -96,16 +96,15 @@
 					</div>
 				</div>
 			     <div id="Scrollbar-Container">
-			    <div class="Scrollbar-Track">
-			      <div class="Scrollbar-Handle"></div>
-			    </div>
+			   
 			  	</div>
 			</div>	
 		 </div>
-		</div>
-	     <div class="Copy">
+		 <div class="Copy">
 	    	{$footprint}
-	    </div> 	
+	    </div>
+		</div>
+	      	
 	<div class="show_bg"></div>
 </section>
 {$footscript}
@@ -113,8 +112,9 @@
 	<script type="text/javascript" src="{$site_url}js/jquery-1.10.2.min.js"></script>
 	<script type="text/javascript" src="{$site_url}js/swiper.min.js"></script>
 	<script type="text/javascript" src="{$site_url}js/index.js"></script>
-	<script type="text/javascript" src="{$site_url}js/function.js"></script>
 	<script type="text/javascript" src="{$site_url}js/jsScroller.js"></script>
-	<script type="text/javascript" src="{$site_url}js/jsScrollbar.js"></script>
+	<script type="text/javascript" src="{$site_url}js/slides-1.1.1-min.js"></script>
+	<script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.js"></script>
+	<script type="text/javascript" src="{$site_url}js/function.js"></script>
 </body>
 </html>

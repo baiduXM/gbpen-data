@@ -81,7 +81,7 @@
 	    		<span class="pro_dt">
 	    			<b>{$mIndexCat.name}</b>
 	    			<p>
-	    				{$mIndexCat.description}
+	    				{$mIndexCat.description|truncate:60:"..."}
 	    			</p>
 	    		</span>
 	    	</div>
@@ -104,7 +104,7 @@
 	    	<ul class="news_list">
 	    	{foreach item=article from=$mIndexCat.data}
 	    		<li>
-            		<div class='img'><a href="{$article.link}"><img src="{$article.image}"/></a></div><div class="txtimg"><h1><a href="{$article.link}">{$article.title} </a></h1><p class="article_01">{$article.description} </p></div>
+            		<div class='img'><a href="{$article.link}"><img src="{$article.image}"/></a></div><div class="txtimg"><h1 style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis;"><a href="{$article.link}" style=" font: 0.9rem/1.8rem '微软雅黑';">{$article.title} </a></h1><p class="article_01">{$article.description|truncate:60:"..."} </p></div>
 				</li>
 
 			{/foreach}

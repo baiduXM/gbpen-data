@@ -56,7 +56,7 @@
 		{include file="./_header.html"}
 		 <div class="about">
 		 <h3 class="title">
-			 	<span class="title_a font_s fr">字+</span>
+			 	
 			 	<i><i class="iconfont icon">&#xe604;</i>{$list.name}</i>
 			 	<span class="class fr">分类∧</span>
 		 	</h3>
@@ -92,13 +92,14 @@
 				<ul class="news_list1">
 				{foreach item=article from=$list.data}
             		<li>
-	            	<a href="{$article.link}"><i>{$article.pubdate}</i><span><b>{$article.title}</b><em>{$article.description}</em></span></a>
+	            	<a href="{$article.link}"><i>{$article.pubtimestamp|date_format:'%Y-%m-%d'}</i><span><b>{$article.title}</b><em>{$article.description}</em></span></a>
 					</li>
 					{/foreach}
                 </ul>
 					<div class="munber">	
 	                   <li><a href="{$page_links.first_link}" class="cu">首页</a></li>	
 	                   <li><a href="{$page_links.prev_link}">上一页 </a></li>
+                   		{$page_links.current_page}/{$page_links.page_count}
 	                   <li><a href="{$page_links.next_link}">下一页</a></li>
 	                   <li><a href="{$page_links.last_link}"  >尾页</a></li>
                     </div>

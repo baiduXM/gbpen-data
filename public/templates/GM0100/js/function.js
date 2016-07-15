@@ -1,5 +1,7 @@
 
 jQuery(document).ready(function($) {
+	
+	jQuery(".banner").slide({mainCell:".swiper-wrapper",autoPlay:true,interTime:3000,delayTime:1000,effect:"leftLoop",});
 
 	//根据设备窗口大小调整高度
 	resize();
@@ -26,7 +28,7 @@ jQuery(document).ready(function($) {
 			obj.prev().append('<span>></span>')
 			stair.click(function(event) {
 				if($(this).children('span').text() == ">"){
-				$(this).attr('href', 'javascript:0;');
+				$(this).attr('href', 'javascript:void(0)');
                  $(this).children('span').text('>')
              }else{
                  $(this).children('span').text('>')
@@ -76,17 +78,17 @@ jQuery(document).ready(function($) {
 
 
 	$('.big').click(function() {
-				$('.article').css({
+				$('.news_nr').css({
 					fontSize: 1.25+"em"
 				});
 		});
 	$('.mormal').click(function() {
-				$('.article').css({
+				$('.news_nr').css({
 					fontSize: 1+"em"
 				});
 	});
 	$('.smail').click(function() {
-			$('.article').css({
+			$('.news_nr').css({
 				fontSize: 0.9+"em"
 			});
 	});
@@ -97,7 +99,7 @@ jQuery(document).ready(function($) {
  	var second_CH=first_CH.next();
  	if (second_CH.length>0){
  		second_CH.prev().addClass('tans');
- 		second_CH.prev().attr('href', 'javascript:0;');
+ 		second_CH.prev().attr('href', 'javascript:void(0)');
  		first_CH.click(function() {
  			$(this).next().slideToggle();
  		});
@@ -106,7 +108,7 @@ jQuery(document).ready(function($) {
  	var third_CH=two_CH.next();
  	if(third_CH.length>0){
  		third_CH.prev().addClass('line');
- 		third_CH.prev().attr('href', 'javascript:0;');
+ 		third_CH.prev().attr('href', 'javascript:void(0)');
  		two_CH.click(function() {
  			$(this).next().slideToggle();
  		});
@@ -135,11 +137,25 @@ jQuery(document).ready(function($) {
 		//首页产品pro_top的高度
 		var abouth=Math.floor($(".pro_top>img").height());
 		$(".pro_dt").outerHeight(abouth*0.95);
+		
 		//滚动条
-var scroller  = null;
-var scrollbar = null;
-window.onload = function () {
-  scroller  = new jsScroller(document.getElementById("Scroller-1"), 630, 450);
-  scrollbar = new jsScrollbar (document.getElementById("Scrollbar-Container"), scroller, false);
-}
+// 		var scroller  = null;
+// 		var scrollbar = null;
+// window.onload = function () {
+	
+//   scroller  = new jsScroller(document.getElementById("Scroller-1"), 630, 450);
+//   scrollbar = new jsScrollbar (document.getElementById("Scrollbar-Container"), scroller, false);
+// }
+
+$('#search').click(function(){
+		$('.search-wrap').show();
+		$('.wrapper').hide();
+	})
+
+	$("#search-back").click(function(){
+		$(".search-wrap").hide();
+		$('.wrapper').show();
+		
+	})
+
 });

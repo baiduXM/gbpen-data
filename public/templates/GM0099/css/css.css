@@ -1,5 +1,4 @@
-
-.menu2{ position:absolute;  left:5%; height:18px;top:50%; -webkit-transform:translate(0,-50%)}
+ .menu2{ position:absolute;  left:5%; height:18px;top:50%; -webkit-transform:translate(0,-50%)}
 .menu2 span{ background:#e7e2dd; height:18px; width:29px; display:block;-webkit-mask:url(../images/zz1.png) no-repeat;-webkit-mask-size:29px 18px}
 .menu2 a{ color:#e7e2dd;}
 .search{ position:absolute;  right:5%; height:40px;top:50%; -webkit-transform:translate(0,-50%);}
@@ -7,7 +6,7 @@
 .search a{ color:#e7e2dd;}
 .menu2 .word{ height:20px; line-height:20px;}
 .topxz{ margin:0px 5px; color:#929292;padding:0px 0px; display:block; -webkit-tap-highlight-color:rgba(0,0,0,0); border-bottom: 10px solid #929292;border-left: 20px solid transparent;border-right: 20px solid transparent;height: 0; margin-top:7px; }
-.wrap-bg{ height:auto; width:100%; overflow:hidden; position:relative;}
+.wrap-bg{ height:200px; width:100%; overflow:hidden; position:relative;}
 .index_show{ width:100%; height:auto; overflow:hidden; position:relative;}
 .index_prod{ margin:10px;overflow:hidden; height:auto; margin-bottom:10px;}
 .pro_title{ color:#6a3906; font-size:1.2em; text-align:center; margin-bottom:10px;}
@@ -18,7 +17,7 @@
 .cimg{ width:100%; height:auto; overflow:hidden; margin-bottom:5px;}
 .c_wprd{ background:#89c997; width:100%; height:auto; overflow:hidden; text-align:center; position:relative;}
 .iconta{ width:50%; margin:25px auto; height:auto; overflow:hidden;}
-.ic_word{ color:#5f2c0f; font-size:1.1em; text-align:center; position:absolute; bottom:15px; width:100%; left:50%;-webkit-transform:translate(-50%,0%)}
+.ic_word a{ color:#5f2c0f; font-size:1.1em; text-align:center;  bottom:15px; width:100%; left:50%;-webkit-transform:translate(-50%,0%)}
 .prodshow dd:nth-child(2) .cimg{ margin-bottom:0px;}
 .prodshow dd:nth-child(2) .c_wprd{ margin-bottom:5px; overflow:hidden; background:#ffa873}
 .index_news{  height:auto; overflow:hidden; width:100%; height:auto; overflow:hidden;}
@@ -34,8 +33,8 @@ white-space: nowrap; word-break: keep-all; display:block; margin:5px 0px; }
 .mores span a{ display:block; padding:2px 8px; background:#429353; color:#fff; font-size:1.2em; border-radius:5px;}
 .index_about{ margin:10px; height:auto; overflow:hidden;}
 .left_clorbg{ width:40%; height:auto; padding:0; background:#fff7cd; float:left; display:inline; position:relative;}
-.c_titl{ color:#343434; font-size:1.1em; color:#343434;line-height:30px; height:30px; position:absolute; top:50%; margin-top:-20px; left:10%;overflow:hidden;overflow:hidden; text-overflow: ellipsis;
-white-space: nowrap; word-break: keep-all; display:block; }
+.c_titl{ color:#343434; font-size:1.1em; color:#343434;line-height:30px; height:30px;     width: 86%;position:absolute; top:50%;  left:10%;overflow:hidden;overflow:hidden; 
+ display:block; }
 .c_titl a{ color:#343434;}
 .c_titl a:hover{ color:#343434;}
 .right_clorbg{ width:60%; height:auto; overflow:hidden; display:inline; float:left;}
@@ -80,12 +79,14 @@ white-space: nowrap; word-break: keep-all; display:block; }
 .pros_showa ul li div p{ height:auto; overflow:hidden;}
 .pros_showa ul li div .imgword{ display:block; height:30px; margin-top:5px; line-height:30px; text-align:center; font-weight:1.1em; color:#2f2f2f}
 .pros_showa ul li a{ color:#fff;}
-.next1{ margin:10px auto; height:30px; width:80%;font-size:1em;line-height:30px; padding:5px 0px; overflow:hidden;text-align:center; }
-.next1 a{ border-radius:4px; background:#739c4b; color:#fff;  cursor:pointer; margin-right:10px; height:30px; line-height:30px; padding:5px; }
+.next1{ margin:10px auto; height:30px; width:100%;font-size:1em;line-height:30px; padding:5px 0px; overflow:hidden;text-align:center; }
+.next1 a{ border-radius:4px; background:#739c4b; color:#fff;  cursor:pointer; margin-right:5px; height:30px; line-height:30px; padding:2px; }
 .newsbg2{ background:#efd3cd; margin:0px; padding:10px; overflow:hidden;}
 .newsbg2 ul{ width:100%; height:auto; overflow:hidden;}
 .newsbg2 ul li{ height:30px; line-height:30px; width:100%; overflow:hidden; border-bottom:1px dotted #fffefe;}
-.newsbg2 ul li a{ display:block; color:#7f4508; font-size:1em;}
+.newsbg2 ul li a{ display:block; color:#7f4508; font-size:1em;    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;}
 .newsbg2 ul li a span{ float:right; display:inline; color:#b77734; font-size:0.9em;}
 
 .news_lista{ height:auto; overflow:hidden; width:100%;}
@@ -105,9 +106,7 @@ white-space: nowrap; word-break: keep-all; display:block; }
 .date_d{ float:right; display:inline; overflow:hidden; font-size:0.9em; height:24px; line-height:24px; color:#a27d76;}
 
 .d_titles{ text-align:center; margin:0px auto; height:auto; overflow:hidden; margin:10px 0px; padding-bottom:5px;border-bottom:1px dotted #939393; }
-.index_show .title1{ font-size:1.15em; color:#4a3c33; height:30px; line-height:30px; margin-bottom:0px;text-align:center; overflow:hidden;text-overflow: ellipsis;
-    white-space: nowrap;
-    word-break: keep-all;}
+.index_show .title1{ font-size:1.15em; color:#4a3c33; line-height:30px; margin-bottom:0px;text-align:center; o}
 .index_show .title2{ margin:0px 10px; text-align:center; color:#dbc5c0; line-height:25px; margin:0px auto; position:relative; z-index:1000 }
 .index_show .title2 a{ color:#dbc5c0;}
 .d_titles2{ text-align:center; margin:0px auto; height:auto; overflow:hidden; margin:10px 0px; padding-bottom:5px;}
