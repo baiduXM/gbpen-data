@@ -9,7 +9,7 @@ a img{ border:none;}
 img{ vertical-align:top;}
 #clear{ clear:both;}
 table{ font-size:12px;border-collapse:collapse; border-spacing:0px;}
-body{font-size:12px; font-weight:normal; line-height:24px; font-family: Arial, Helvetica, sans-serif,"宋体";  color:#686868; background:#edf2f6;}
+body{font-weight:normal; line-height:24px; font-family: Arial, Helvetica, sans-serif,"宋体";  color:#686868; background:#edf2f6;}
 a{blr:expression(this.onFocus=this.blur())} /*a{ -webkit-tap-highlight-color:rgba(0,0,0,0);  }  去掉链接触摸高亮 */
 a{outline:none;} /*for Firefox*/
 h1,h2,h3,h4,h5,input{font-size:12px; font-weight:normal;}
@@ -39,7 +39,7 @@ ol,p,dl,li{list-style:none;}
 .search{padding: 30px 12px 10px;width: 136px;height: 24px;overflow: hidden;}
 .searchbox{width: 97px;border: 1px solid #cdcdcd; height: 22px;line-height: 22px;padding-left: 5px;color: #ccc;float: left;}
 .searchbtn{width: 31px;height: 24px;border: none;background: #426db1 url(../images/searchicon.png) center no-repeat;float:left;}
-.contact{width:162px;height: 52px;}
+.contact{width:162px;height: 52px;font-size:12px;}
 .contact dl{width:55px;background: url(../images/tel.jpg) left center no-repeat; margin: 0 auto;padding-left: 20px;color: #030303;line-height: 30px;}
 .contact dt{font-size: 20px;color: #fe9216;text-align: center;}
 /*首页右边内容*/
@@ -100,7 +100,7 @@ ul.tab li{width: 80px;height: 30px;line-height: 30px;margin-bottom: 5px;color: #
 #menu1 li.hover a{color: #fff;}
 /*#menu1 li a:hover{background:#5682c1;color: #fff;}*/
 
-.main1box {/* width: 230px;*/width:70%;float: right;/*clear:both;*/ height:136px;border-left:1px dotted #c4c9cd;border-bottom:1px dotted #c4c9cd; } 
+.main1box {/* width: 230px;*/width:70%;font-size:12px;float: right;/*clear:both;*/ height:136px;border-left:1px dotted #c4c9cd;border-bottom:1px dotted #c4c9cd; } 
 #main1 ul { display: none; } 
 #main1 ul.block { display: block; } 
 #main1 ul li{width:100%;background: url(../images/lidot.jpg) 5px center no-repeat;padding-left: 15px;white-space: nowrap;text-overflow:ellipsis;overflow: hidden;border-bottom: 1px dotted #c4c9cd;line-height: 33px;}
@@ -126,10 +126,10 @@ ul.tab li{width: 80px;height: 30px;line-height: 30px;margin-bottom: 5px;color: #
     height: 100%;
     margin: 0 auto;
 }
-.aboutnr{height: 72px;overflow: hidden;}
+.aboutnr{height: 72px;overflow: hidden;font-size:12px;}
 
 /*底部*/
-.footer{height: 24px;padding: 20px 0 19px;border-top: 1px solid #c4cbd1;overflow: hidden;}
+.footer{height: 24px;padding: 20px 0 19px;border-top: 1px solid #c4cbd1;overflow: hidden;font-size:12px;}
 .selectbox{float: right;width: 100px;}
 
 /**********************************************************/
@@ -155,7 +155,7 @@ ul.tab li{width: 80px;height: 30px;line-height: 30px;margin-bottom: 5px;color: #
 .on h3{background: #426db1!important;}
 .on h3 a{color: #fff !important;}
 /*.menu>ul>li>h3>a:hover{background: url(../images/hoverbg.png) repeat-x;}*/
-.sub{ display:none; width:107px; position:absolute;background:#426db1;/* left:18px; */line-height:26px;z-index: 100;top: 45px;left: 18px;  }
+.sub{ display:none;font-size:12px;width:107px; position:absolute;background:#426db1;/* left:18px; */line-height:26px;z-index: 100;top: 45px;left: 18px;  }
 .sub li{ zoom:1;text-align: center;height:26px;overflow: hidden;}
 .sub a{ display:block;color: #f4f4f4;background: #426e9d; }
 .sub a:hover{ background:#2e549b;  }
@@ -204,7 +204,7 @@ ul.tab li{width: 80px;height: 30px;line-height: 30px;margin-bottom: 5px;color: #
 .sideitem{height: 55px;padding:25px 0 0 96px;font-family: Microsoft YaHei;}
 .nycontact{background: url(../images/tel.png) 32px center no-repeat;border-bottom: 1px dotted #ccc;}
 .sideitem dl{font-size: 14px;line-height: 20px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}
-.sideitem dt{line-height: 12px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}
+.sideitem dt{font-size: 12px;line-height: 12px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}
 .nyserve{background: url(../images/server.png) 32px center no-repeat;}
 
 .sidebar  li.current ul.second li.current ul.third{ display:block; margin:0px;}
@@ -234,7 +234,7 @@ ul.news-list li a{color: #494745;}
 ul.news-list li a h2{width:80%;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}
 ul.news-list li a:hover{color:#0073bd;}
 ul.news-list li a span{position: absolute;right: 0;top:0;}
-.page{ padding: 20px 0 10px; text-align: center;}
+.page{ padding: 20px 0 10px; text-align: center;font-size:12px;}
 .page a{margin: 0 5px;color:#555;padding: 2px 4px;background: #dfdfdf;}
 .page a:hover{color: #2e4d82;font-weight: bold;}
 .pon{color: #2e4d82 !important;font-weight: bold !important;}
@@ -284,7 +284,7 @@ ul.news-list li a span{position: absolute;right: 0;top:0;}
 .pro-det{/*min-height: 200px;*/overflow: hidden;padding-bottom:35px;position: relative;}
 
 /*list*/
-.list{padding: 20px;overflow: hidden;}
+.list{padding: 20px;overflow: hidden;font-size:12px;}
 .list div{height: 125px;margin-bottom: 30px;}
 .list div dl{float: left;margin-right: 15px;}
 .list div dl a{}
