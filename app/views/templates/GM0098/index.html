@@ -76,8 +76,8 @@
 	      	{if $mIndexCat.showtype eq 1}
 	    <div class="products">
 	    	<h3><a href=" {$mIndexCat.link}">MORE+</a> {$mIndexCat.name}</h3>
-	    	<div class="pro_top">
-	    		<img id="pro_img" src="{$mIndexCat.image}">
+	    	<div class="pro_top" style="height:120px;">
+	    		<img src="{$mIndexCat.image}" style="height:120px;">
 	    		<span class="pro_dt">
 	    			<p>
 	    				{$mIndexCat.description|truncate:60:"..."}
@@ -122,11 +122,4 @@
  {$footscript}
 	
 </body>
-<script type="text/javascript">
-var abouth=$("#pro_img").height();
-		//$(".pro_dt").outerHeight(abouth);
-		//$(".pro_top img").css('float','left');
-		//console.log($("#pro_img"));
-		console.log(abouth);
-</script>
 </html>

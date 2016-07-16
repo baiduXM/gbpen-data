@@ -120,9 +120,9 @@ body{position: relative;font: 0.9rem/1.8rem "微软雅黑";margin: 0 auto;overfl
 	.products h3{font: 1.2rem/2.5rem "微软雅黑"; color:#212121; padding-left: 1rem; height: 2.5rem; overflow: hidden;}
 	.products h3 a{display: inline; float: right;color:#212121;}
 	.products h3:before{width: 0; height:0; display: inline-block; border-left:0.8rem solid #212121; border-bottom: 0.4rem solid transparent;border-top: 0.4rem solid transparent; content: ""; position:absolute;; left:0; top: 0.8rem;  }
-	.pro_top{background: #212121;}
-	.pro_top img{display: inline; width: 60%;}
-	.pro_dt{overflow: hidden;display: block;}
+	.pro_top{height: auto; overflow: hidden; background: #212121;}
+	.pro_top img{display: inline; float: left;}
+	.pro_dt{overflow: hidden; display: block;}
 
 	.pro_dt b{color: #ffffff;  font:1rem/1.8rem "微软雅黑"; height: 1.8rem; overflow: hidden;display: block;padding:0.3rem 0.8rem }
 	.pro_dt p{ color: #989898; font:0.9rem/1.6rem "微软雅黑"; overflow: hidden;padding:0 0.8rem}
