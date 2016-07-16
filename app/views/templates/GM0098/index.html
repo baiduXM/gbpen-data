@@ -77,9 +77,8 @@
 	    <div class="products">
 	    	<h3><a href=" {$mIndexCat.link}">MORE+</a> {$mIndexCat.name}</h3>
 	    	<div class="pro_top">
-	    		<img src="{$mIndexCat.image}">
+	    		<img id="pro_img" src="{$mIndexCat.image}">
 	    		<span class="pro_dt">
-	    			<b>{$mIndexCat.name}</b>
 	    			<p>
 	    				{$mIndexCat.description|truncate:60:"..."}
 	    			</p>
@@ -123,4 +122,11 @@
  {$footscript}
 	
 </body>
+<script type="text/javascript">
+var abouth=$("#pro_img").height();
+		//$(".pro_dt").outerHeight(abouth);
+		//$(".pro_top img").css('float','left');
+		//console.log($("#pro_img"));
+		console.log(abouth);
+</script>
 </html>
