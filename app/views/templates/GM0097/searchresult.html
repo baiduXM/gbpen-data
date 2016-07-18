@@ -37,7 +37,7 @@
 </script>
 </head>
 <body>
-<div class="className p_r"><span class="type">分类↑</span>{$list.name}
+<div class="className p_r" style="height: 24px;"><span class="type">分类↑</span>{$list.name}
 
          <a href="#" id="quickbar-showcats">
          				    	<i class="iconfont demo-icon icon-th-list slide-nav iconnav p_a" style="width: 40px;height: 24px;"></i>
@@ -54,10 +54,14 @@
             </h3>
 
            <ul>
-                     {foreach item=article from=$list.data}
+                     {foreach item=article from=$search.data}
                     	<li>
-                        	<h3><a onclick="javascript:window.location.href='{$article.link}'"><span>({$article.pubtimestamp|date_format:'%Y/%m/%d'})</span>{$article.title}</a></h3>
-                        	
+                        	<h3>
+                        	<a onclick="javascript:window.location.href='{$article.link}'">
+                        	<span>
+                        	({$article.pubdate})
+                        	</span>{$article.title}</a></h3>
+                        	<div class="newsms">{$article.description}</div>
                         </li> 
                         {if $article@index+1 == 8}{break}{/if}
                      {/foreach}                                                                               

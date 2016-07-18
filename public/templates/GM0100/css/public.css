@@ -181,7 +181,7 @@ footer{width: 100%;height: auto;overflow: hidden;position: absolute;bottom: 0;le
 /*分享end*/
 /*about us begin*/
 	.about{width: 100%;height: auto;overflow: hidden;position: relative;   overflow: auto;}
-	.back1{background: url(../images/about_01.jpg) no-repeat;}
+	.back1{background-color: #d0bbae;}
 	.about .title{height: auto;overflow: hidden; width:40%;height:70px;background-image: -webkit-gradient(radial,50% 100%,10,50% 50%,90,from(rgba(97,72,56,1)),to(rgba(74,55,43,1))); color: #ffffff;font: 1.25rem/70px "微软雅黑";text-align: center;position: relative;margin:2%  0 0 0; }
 	@media screen and (max-width: 320px){
 		.about .title{font: 1.1rem/70px "微软雅黑"; height: 70px;} 
