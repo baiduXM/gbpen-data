@@ -81,7 +81,7 @@ ul.nav>li>h3>a:hover {background:#331e16 url(../images/navhover.png) top center 
 .col-tit h2{display: inline-block;float: left;max-width: 40%;color: #bfab9c;font-size: 14px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}
 .col-tit span{font-size: 14px;font-family: Arial;color: #958375;display: inline-block;float: left;max-width: 40%;line-height: 32px;margin-left: 5px;} 
 .about-desc{width:100%;height: 160px;overflow: hidden;line-height: 26px;}
-.about-desc img{height: 129px;max-width: 61px;margin:0 10px;float: left;}
+.about-desc img{height: 129px;max-width: 61px;margin:0 10px;float:left; border-radius:25px;  }
 .about-desc a{color: #aa9889;}
 .about-desc a:hover{text-decoration: underline;}
 /*资讯*/

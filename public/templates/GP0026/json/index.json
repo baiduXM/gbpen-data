@@ -3,7 +3,12 @@
     "about_us": {
 		"description": "左侧内容单页（如关于我们栏目）",
 		"value": {},
-		"type": "page"
+		"type": "page",
+			"config": {
+			"nav_width": 61,
+			"nav_height": 129
+		}
+
 	},
 	"news":{
 		"description": "中间部分文字列表页（如新闻栏目）",
@@ -17,7 +22,12 @@
 	"pro":{
 		"description":"右侧图片列表(如产品展示)",
 		"value":{},
-		"type":"list"
+		"type":"list",
+		"config": {
+			"width": 192,
+			"height": 139
+		}
+
 	}
 }
                
