@@ -51,31 +51,71 @@
 		<div class="about background_2">
 			<h3 class="title">搜索结果页</h3>
 			<span class="page_mn icon_n" id="quickbar" ><i class="iconfont" id="quickbar-navs-btn">&#xe603;</i></span>
-			<ul class="class_list">
+			
+
+			<!-- 二级栏目列表（展示到三级子栏目） -->
 			{if $pagenavs}
+			<div class="aboutName">
+
+
+				<ul class="list aboutNav">
 			{foreach name=pagenavs item=nav from=$pagenavs}
-				<li class="{if $nav.current}current{/if}" ><a href="{if $nav.childmenu}javascript:;{else}{$nav.link}{/if}" class="{if $nav.selected}selected{/if}">{$nav.name}</a>
-				{if $nav.childmenu}
-					<ul class="second" style="z-index: 99999;">
-					{foreach key=key item=nav_list from=$nav.childmenu}
-						<li class="{if $nav_list.current}current{/if}" style="background-color: #ab8f77;"><a href="{if $nav_list.childmenu}javascript:;{else}{$nav_list.link}{/if}" class="{if $nav_list.selected}selected{/if}">{$nav_list.name}</a>
-						{if $nav_list.childmenu}
-							<ul class="third">
-							{foreach key=key item=nav_listsec from=$nav_list.childmenu}
-								<li class="{if $nav_listsec.current}current{/if}" style="background-color: #ab8f77;"><a href="{$nav_listsec.link}" class="{if $nav_listsec.selected}selected{/if}">{$nav_listsec.name}</a></li>
+					<li class="{if $nav.current}current{/if}">
+						<a href="{if $nav.childmenu}javascript:;{else}{$nav.link}{/if}">{$nav.name}</a>
+						{if $nav.childmenu}
+						<ul class="second">
+							{foreach key=key item=nav_ls from=$nav.childmenu}
+							<li class="{if $nav_ls.current}current{/if}"><a href="{if $nav_ls.childmenu}javascript:;{else}{$nav_ls.link}{/if}">{$nav_ls.name}</a>
+								{if $nav_ls.childmenu}
+								<dl class="third">
+			                        {foreach key=key item=nav_listsec from=$nav_ls.childmenu}
+			                        <dd class="{if $nav_listsec.current}current{/if}"><a href="{$nav_listsec.link}">{$nav_listsec.name}</a></dd>
+			                        {/foreach}
+			                    </dl> 
+			                    {/if}      
+							</li>
 							{/foreach}
-							</ul>
-						{/if}	
-						</li>
+						</ul>
+						{/if}
+					</li>
+					{/foreach} 
+			        
+			       
+				</ul>
+			</div>
+
+			{else}	<!-- 让客服自己选择，如果当前无子栏目 展现的目标栏目 -->
+			<div class="aboutName">
+
+
+				<ul class="list aboutNav">
+					{foreach name=pagenavs2 item=nav from=$_pagenavs_sub3.pagenavs.childmenu}
+					<li class="{if $nav.current}current{/if}">
+						<a href="{if $nav.childmenu}javascript:;{else}{$nav.link}{/if}">{$nav.name}</a>
+						{if $nav.childmenu}
+						<ul class="second">
+							{foreach key=key item=nav_list from=$nav.childmenu}
+							<li class="{if $nav_list.current}current{/if}"><a href="{if $nav_list.childmenu}javascript:;{else}{$nav_list.link}{/if}">{$nav_ls.name}</a>
+								{if $nav_list.childmenu}
+								<dl class="third">
+			                        {foreach key=key item=nav_listsec from=$nav_ls.childmenu}
+			                        <dd class="{if $nav_listsec.current}current{/if}"><a href="{$nav_listsec.link}">{$nav_ls.name}</a></dd>
+			                        {/foreach}
+			                    </dl>  
+			                    {/if}     
+							</li>
+							{/foreach}
+						</ul>
+						{/if}
+					</li>
 					{/foreach}
-					</ul>
-				{/if} 	
-				</li>
-				{/foreach}
-				{else}
-				<h1>else</h1>
-				{/if}
-			</ul>	
+				</ul>
+				</div>
+
+			{/if}
+
+
+
 		 	<div class="article">
 			    <ul class='news_ls'>
 			    {foreach item=article from=$search.data}<!--search_content_start-->
