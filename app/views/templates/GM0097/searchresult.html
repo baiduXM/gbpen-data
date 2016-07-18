@@ -39,7 +39,9 @@
 <body>
 <div class="className p_r"><span class="type">分类↑</span>{$list.name}
 
-         <i class="iconfont demo-icon icon-th-list slide-nav iconnav p_a">&#xe603;</i>
+         <a href="#" id="quickbar-showcats">
+         				    	<i class="iconfont demo-icon icon-th-list slide-nav iconnav p_a" style="width: 40px;height: 24px;"></i>
+         				    </a>
 </div>
    {include file="./_pagenavs_sub3.html"}
 
@@ -52,10 +54,10 @@
             </h3>
 
            <ul>
-                     {foreach item=article from=$search.data}
+                     {foreach item=article from=$list.data}
                     	<li>
-                        	<h3><a onclick="javascript:window.location.href='{$article.link}'"><span>({$article.pubdatestamp|date_format:"%y "}/{$article.pubdatestamp|date_format:"%d "}/{$article.pubdatestamp|date_format:"%m "})</span>{$article.title}</a></h3>
-                        	<div class="newsms">{$article.description}</div>
+                        	<h3><a onclick="javascript:window.location.href='{$article.link}'"><span>({$article.pubtimestamp|date_format:'%Y/%m/%d'})</span>{$article.title}</a></h3>
+                        	
                         </li> 
                         {if $article@index+1 == 8}{break}{/if}
                      {/foreach}                                                                               
@@ -66,7 +68,13 @@
 
 
 
-                     <div class="num"><a href="{$page_links.first_link}" class="cu">首页</a><a href="{$page_links.prev_link}">上一页</a><a href="{$page_links.next_link}" >下一页</a><a href="{$page_links.last_link}"  >尾页</a></div>  
+                     <div class="num">
+	                     <a href="{$page_links.first_link}" class="cu">首页</a>
+	                     <a href="{$page_links.prev_link}">上一页</a>
+	                     {$page_links.current_page}/{$page_links.page_count}
+	                     <a href="{$page_links.next_link}" >下一页</a>
+	                     <a href="{$page_links.last_link}"  >尾页</a>
+                     </div>  
            </div> 
         </div> 
 					
