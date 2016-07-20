@@ -17,17 +17,27 @@
 		}
 	},
 	"indeximg": {
-		"value": [{
+		"value": {
 			"title": "侧边图1",
 			"image": "./images/iconb.jpg",
 			"link": "http://www.baidu.com"
-		}, {
+		},
+		"description": "首页产品侧边图",
+		"type": "image",
+		"config": {
+			"width": 196,
+			"height": 237,
+			"limit": 2
+		}
+	},
+	"indeximg2": {
+		"value": {
 			"title": "侧边图2",
 			"image": "./images/icona.png",
 			"link": "http://www.baidu.com"
-		}],
+		},
 		"description": "首页产品侧边图",
-		"type": "images",
+		"type": "image",
 		"config": {
 			"width": 196,
 			"height": 237,
