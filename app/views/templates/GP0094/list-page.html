@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script type="text/javascript">
+    // 跳转手机页面
+    {if $site_another_url}
+        if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+            location.href = '{$site_another_url}';
+        }
+    {/if}
+    </script>
+ 
+    
+    <meta name="keywords" content="{$keywords}"/>
+    <meta name="description" content="{$description}"/>
+    <link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
+    <meta http-equiv="x-ua-compatible" content="ie=8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>{$title}</title>
+    <link href="{$site_url}css/css.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="{$site_url}js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.js"></script>
+    <script type="text/javascript" src="{$site_url}js/function.js"></script>
+
+</head>
+
+<body>
+  {include file="./_header.html"}
+  <div id="container">
+    <div class="service">
+        <ul>
+          <li>
+            <a href="{$global.other_navs1.link}">
+              <div class="col-pic"><img src="{$global.other_navs1.image}" alt="" /></div>
+              <div class="col-name">
+                <h2>{$global.other_navs1.name}</h2>
+                <p>{$global.other_navs1.en_name}</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="{$global.other_navs2.link}">
+              <div class="col-pic"><img src="{$global.other_navs2.image}" alt="" /></div>
+              <div class="col-name">
+                <h2>{$global.other_navs2.name}</h2>
+                <p>{$global.other_navs2.en_name}</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="{$global.other_navs1.link}">
+              <div class="col-pic"><img src="{$global.other_navs1.image}" alt="" /></div>
+              <div class="col-name">
+                <h2>{$global.other_navs1.name}</h2>
+                <p>{$global.other_navs1.en_name}</p>
+              </div>
+            </a>
+          </li>
+
+        </ul>
+    </div>
+    <div class="sidebar ">
+      {include file='./_pagenavs_sub3.html'}
+      <div class="nynmcon">
+          <h3><img src="{$site_url}images/nycon-td.gif" width="220" height="28" /></h3>
+          <div class="inter"><strong class="td">{$contact.company}</strong><br />
+            {$global.contact}
+          </div>
+      </div> 
+    </div>
+    <div id="main">
+      <div class="crumb ">
+        <span><img src="{$site_url}images/crumb-dian.gif" /> 您所在的位置：<a href="{$site_url}">首页</a>{foreach item=nav from=$posnavs} &gt; <a href="{$nav.link}">{$nav.name}</a>{/foreach}</span>   
+    	  <h3>{$list.name}</h3>
+      </div>
+      <div class="article" >
+        <div class="edit">
+                    
+              {$list.content|unescape:"html"} 
+        </div>
+      </div>
+    </div>
+ </div>
+
+ {include file='./_footer.html'}
+</body>
+</html>

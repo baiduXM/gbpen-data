@@ -1,0 +1,7 @@
+<div id="footer">
+	{foreach key=key item=link from=$_footer.links}
+		<a href="{$link.link}" target="_blank">{$link.title}</a> | 
+	{/foreach}	<br />	
+	{$footprint}
+</div>
+{$footscript}

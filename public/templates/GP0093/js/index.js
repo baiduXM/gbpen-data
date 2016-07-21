@@ -1,19 +1,9 @@
-$(document).ready(function(){
-
-
-	var swiper = new Swiper('.banner.swiper-container', {
-        nextButton: '.swiper-button-next',
-        prevButton: '.swiper-button-prev',
-        centeredSlides: true,
-        autoplay: 2500,
-        autoplayDisableOnInteraction: false
-    });
-// 菜单
- var swiper = new Swiper('.menu.swiper-container', {
-        pagination: '.swiper-pagination',
-        paginationClickable: true
-    });
-
-
-
-  });
+jQuery(document).ready(function($) {
+  $('#prizes .photos-content.enable').jCarouselLite({
+    btnPrev: '#prizes a.photos-prev',
+    btnNext: '#prizes a.photos-next',
+    visible: 6,
+    auto: 3000,
+    speed: 1000
+  }).css({visibility:"visible"});
+});

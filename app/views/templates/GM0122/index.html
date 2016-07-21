@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html manifest="huancun.manifest">
+<head>
+      <script type="text/javascript">
+      // 跳转PC页面
+      {if $site_another_url}
+          if (!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+              location.href = '{$site_another_url}';
+          }
+      {/if}
+      </script>
+      <!-- 实时预览调试代码，模板开发完成后删除 -->
+      
+      <meta name="x5-orientation" content="portrait">
+      <meta name="keywords" content="{$keywords}" />
+      <meta name="description" content="{$description}" />
+      <link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
+
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name="viewport" content="width=device-width,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no,minimal-ui">
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+      <meta content="telephone=no, email=no" name="format-detection">
+      <!-- 启用360浏览器的极速模式(webkit) -->
+      <meta name="renderer" content="webkit">
+      <!-- 避免IE使用兼容模式 -->
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+      <meta name="HandheldFriendly" content="true">
+      <!-- 微软的老式浏览器 -->
+      <meta name="MobileOptimized" content="320">
+      <!-- uc强制竖屏 -->
+      <meta name="screen-orientation" content="portrait">
+      <!-- QQ强制竖屏 -->
+      <meta name="x5-orientation" content="portrait">
+      <title>{$title}</title>
+<link rel="stylesheet" href="{$site_url}css/reset.css" /> 
+<link rel="stylesheet" href="{$site_url}css/public.css" /> 
+<link href="{$site_url}css/css.css" rel="stylesheet" type="text/css" />
+<link href="{$site_url}css/swipe.css" rel="stylesheet" type="text/css" />
+<link href="{$site_url}css/iconfont.css" rel="stylesheet" type="text/css" />
+<script src="{$site_url}js/TouchSlide.1.1.js"></script>
+<script type="text/javascript" src="{$site_url}js/jquery.min.js"></script>
+<script type="text/javascript" src="{$site_url}js/function.js"></script>
+<script type="text/javascript" src="{$site_url}js/share.js"></script>
+<script src="{$site_url}js/idangerous.swiper-2.0.min.js"></script>
+<!-- <script src="js/idangerous.swiper.3dflow-2.0.js"></script> -->
+<script src="{$site_url}js/simple-app.js"></script>
+<script type="text/javascript">
+	window.addEventListener('load', function(){
+   setTimeout(function(){ window.scrollTo(0, 1); }, 100);
+});//safari浏览器可以通过此代码来隐藏地址栏
+</script>
+{$headscript}
+</head>
+<body>
+      <div class="search">
+        <header>
+            <h2>搜索 · 分类</h2>
+            <div class="backhis"></div>          
+        </header>
+        <div class="sbox-wrap">
+          <h2>搜索</h2>
+          <div class="sbox">
+            <form action="{$search_action}" method="GET">
+              <input class="sinp" type="text" name="s" value="" />
+              <input class="sbtn" type="submit" value="" />
+            </form>
+          </div>
+        </div>
+        <div class="searchbox">
+          <div class="sresult">
+             <p class="sword">分类</p>
+             <ul>
+              {foreach item=lnav from=$global.snav.childmenu}
+               <li><a href="{$lnav.link}">{$lnav.name}</a></li>
+
+              {/foreach}
+             </ul>
+          </div>      
+        </div>        
+
+      </div>
+
+      <div class="index-wrap">
+          <header>
+               <div class="header">
+            	    <img src="{$logo}" width="100%">
+                   <i class="iconfont hicon1" id="search">&#xe636;</i>
+                   <i class="iconfont hicon2" id="quickbar-showcats">&#xe603;</i>
+               </div>
+          </header>
+          <nav>
+            <ul class="nav">
+
+            {foreach item=nav from=$navs}
+              {$limit =6}
+              <li>
+                <div class="nav-img">
+                  <img src="{$nav.image}" alt="">
+                </div>
+                <a class="nav-tit" href="{$nav.link}">
+                  <span>{$nav.name}</span>
+                </a>
+              </li>             
+               
+            {if $nav@index+1 eq $limit}{break}{/if}
+            {/foreach}
+            </ul>
+          </nav>         
+         
+
+         
+
+           <section>
+              <div class="index-cont">
+                <div class="row" style="min-height: 250px;">
+
+                  
+                    
+                    <div id="slideBox" class="slideBox" style="width: 200px;max-height: 250px;">
+                      <a href="javascript:void(0);" class="slide_left"></a>
+                      <a href="javascript:void(0);" class="slide_right"></a>
+                      <div class="hd">
+                       <span class="next"></span>
+                       <ul style=""></ul>
+                       <span class="prev"></span>
+                      </div>
+                      <div class="bd">
+                          <ul>
+                            {foreach item=mIndexCat from=$mIndexCats}
+            
+                            {if $mIndexCat.type eq 2} 
+                            {if $mIndexCat.showtype eq 1}             
+                               
+                                  {$limit = 4}
+                                   {foreach item=list from=$mIndexCat.data}
+                                   
+                                    <li>
+                                      <a class="pic" href="{$list.link}">
+                                        <img src="{$list.image}"/>
+                                        <div class="bword"><h2>{$list.title}</h2><span>{$list.description}</span></div>
+                                      </a>
+                                    </li>
+                                   {if $list@index+1 gte $limit}{break}{/if}
+                                   {/foreach}
+
+
+                               
+                            {/if}                    
+                            {/if}                  
+                            {/foreach}
+
+                          </ul>
+
+                      </div> 
+                    </div>                   
+                  
+                  
+                </div>
+
+
+                <div class="about">
+                  {foreach item=mIndexCat from=$mIndexCats}
+                  {if $mIndexCat.type eq 4}
+                  {if $mIndexCat.showtype eq 1}                  
+
+                  <div class="about-tit">
+                    <h2>{$mIndexCat.name}</h2>
+                    <span>{$mIndexCat.en_name}</span>
+                  </div>
+                  <div class="aboutbox">
+                    <div class="aboutimg"><img src="{$site_url}images/aboutimg.jpg" alt=""></div>
+                    <a class="about-nr" href="{$mIndexCat.link}">
+                      <span class="about-det">{$mIndexCat.description}</span>
+                      <span class="more">More</span>
+                    </a>
+                  </div>
+
+
+                  {/if}
+                  {/if}
+                  {if $mIndexCat.type eq 2} 
+                          <div style="background-color: #eae3dc;padding: 10px;">
+                            <a href="{$mIndexCat.link}">
+                              <span style="color: #ab7653;font-size: 25px;">{$mIndexCat.name}</span>
+                              <h1 style="color: #ab7653;">{$mIndexCat.en_name}</h1>
+                            </a>
+                          </div>
+                      <ul>
+                        {$limit = 4}
+                         {foreach item=list from=$mIndexCat.data}
+                         <li><a href="{$list.link}"><img src="{$list.image}" alt=""></a></li>
+                         {if $list@index+1 gte $limit}{break}{/if}
+                         {/foreach}
+
+                      </ul>  
+                                 
+                  {/if}                  
+                  {/foreach}
+
+
+
+                </div>
+               
+              </div>
+           </section>
+
+
+
+         {include file='./_footer.html'}   
+        
+  </div>
+
+</body>
+</html>
