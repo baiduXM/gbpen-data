@@ -1,8 +1,8 @@
  .menu2{ position:absolute;  left:5%; height:18px;top:50%; -webkit-transform:translate(0,-50%)}
-.menu2 span{ background:#e7e2dd; height:18px; width:29px; display:block;-webkit-mask:url(../images/zz1.png) no-repeat;-webkit-mask-size:29px 18px}
+.menu2 span{  height:18px; width:29px; display:block;-webkit-mask:url(../images/zz1.png) no-repeat;-webkit-mask-size:29px 18px}
 .menu2 a{ color:#e7e2dd;}
 .search{ position:absolute;  right:5%; height:40px;top:50%; -webkit-transform:translate(0,-50%);}
-.search span{ background:#e7e2dd; height:40px; width:40px; display:block;-webkit-mask:url(../images/zz2.png) no-repeat;-webkit-mask-size:40px 40px; position:relative; z-index:1000;}
+.search span{  height:40px; width:40px; display:block;-webkit-mask:url(../images/zz2.png) no-repeat;-webkit-mask-size:40px 40px; position:relative; z-index:1000;}
 .search a{ color:#e7e2dd;}
 .menu2 .word{ height:20px; line-height:20px;}
 .topxz{ margin:0px 5px; color:#929292;padding:0px 0px; display:block; -webkit-tap-highlight-color:rgba(0,0,0,0); border-bottom: 10px solid #929292;border-left: 20px solid transparent;border-right: 20px solid transparent;height: 0; margin-top:7px; }
