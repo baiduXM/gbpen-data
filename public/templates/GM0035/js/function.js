@@ -1,13 +1,5 @@
 $(document).ready(function(){
-	TouchSlide({ 
-					slideCell:"#slideBox",
-					titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
-					mainCell:".bd ul", 
-					effect:"leftLoop", 
-					autoPage:true,//自动分页
-					autoPlay:true,
-					interTime:6000 //自动播放
-				});
+
 	$(window).load(function(){
 	var img=new Image();
 	img.src=$(".about_img img").attr("src");
@@ -16,7 +8,6 @@ $(document).ready(function(){
 	img.src=$(".nimg2 img").attr("src");			
 	$(".class-m").height($(".class").outerHeight()-$(".class-top").outerHeight())
 	$(".index-wrap").height($(".wrap").height()-$(".fixed").height()-$(".tell-icon").height())
-/*	$(".box_menu").height($(".index-wrap").height()-$(".header").height()-$(".foot").height()-46)*/
 	$(".mlist").height($(".mimg").height())
 	$(".mlist_null").height($(".mimg").height())
 	if($(window).width()>320&&$(window).width()<500){
@@ -29,7 +20,6 @@ $(document).ready(function(){
 	$(window).resize(function(){	
 	$(".mlist").height($(".mimg").height())
 	$(".mlist_null").height($(".mimg").height())
-/*	$(".box_menu").height($(".index-wrap").height()-$(".header").height()-$(".foot").height()-46)*/
 	if($(window).width()>320&&$(window).width()<500){
 		$(".box_menu").height($(".index-wrap").height()-$(".header").height()-$(".foot").height()-46)
 	}else{
@@ -116,7 +106,15 @@ $(document).ready(function(){
 		$(".font").slideUp()	
 	})
 	
-				 
+	TouchSlide({ 
+					slideCell:"#slideBox",
+					titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+					mainCell:".bd ul", 
+					effect:"leftLoop", 
+					autoPage:true,//自动分页
+					autoPlay:true,
+					interTime:6000 //自动播放
+				});				 
 				 					                            		
 	
   });

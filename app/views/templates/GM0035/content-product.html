@@ -46,10 +46,12 @@
 <link rel="stylesheet" rev="stylesheet" href="{$site_url}css/style_{$stylecolor}.css" type="text/css" />
 <script src="{$site_url}js/TouchSlide.1.1.js"></script>
 <script type="text/javascript" src="{$site_url}js/jquery.min.js"></script>
-<script type="text/javascript" src="{$site_url}js/function.js"></script>
 <script type="text/javascript" src="{$site_url}js/lanrenzhijia.js"></script>
+<script type="text/javascript" src="{$site_url}js/function.js"></script>
 <script src="{$site_url}js/idangerous.swiper-2.0.min.js"></script>
 <script src="{$site_url}js/simple-app.js"></script>
+
+
 </head>
 <body>
 <div class="body">
@@ -61,7 +63,7 @@
        <a href="javascript:window.history.back()">〈 返回</a>
      </span>
     <div class="menu2" id="daohang"><span></span></div> 
-   </h1>
+</h1>
 <div class="index-wrap">
 	<div class="index_show" style="margin:45px 0px 0px;">
       <div class="boxmain_detal">
@@ -77,34 +79,33 @@
                 <dl class="small">小</dl>
             </div>
             <div class="hide-class">
-			{foreach name=pagenavs item=nav from=$pagenavs}
-              <dl><a href="{$nav.link}">{$nav.name}</a></dl>
-			  {/foreach}
-          </div>                        
+        			{foreach name=pagenavs item=nav from=$pagenavs}
+                      <dl><a href="{$nav.link}">{$nav.name}</a></dl>
+        			{/foreach}
+           </div>                        
           <div class="boxmain-ny-m">
-   <div class="bimg"><div class="worda">{$article.title}</div>
-<div class="baner">
-	<div id="slideBox" class="slideBox">
-    <div class="hd">
-            <ul></ul>
-              </div>
-	<div class="bd">
-		<ul>
-			{foreach item=image from=$article.images}
-			
-			<li><a class="pic"><img src="{$image.image}" width="100%" title="281*222" /></a></li>
-			{/foreach}
-		</ul>
-	</div>
-	
-			</div>
-			
-   </div>           
-   
-   </div>               
-                <div class="edite" >
-        {$article.content|unescape:"html"}
-                </div>       
+              <div class="bimg"><div class="worda">{$article.title}</div>
+                <div class="baner">
+                	<div id="slideBox" class="slideBox">
+                    <div class="hd">
+                        <ul></ul>
+                    </div>
+                  	<div class="bd">
+                  		<ul>
+                  			{foreach item=image from=$article.images}
+                  			<li><a class="pic"><img src="{$image.image}" width="100%" title="281*222" /></a></li>
+                  			{/foreach}
+                  		</ul>
+                  	</div>
+                	
+                	</div>
+                			
+                </div>           
+       
+              </div>               
+              <div class="edite" >
+                {$article.content|unescape:"html"}
+              </div>       
                 <div class="next2">
             	<dl><a href="{$article.prev.link}">上一条：{$article.prev.title}</a></dl>
                 <dl><a href="{$article.next.link}">下一条：{$article.next.title}</a></dl>
