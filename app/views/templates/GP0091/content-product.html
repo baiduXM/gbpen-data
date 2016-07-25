@@ -42,7 +42,7 @@
 			{include file="./_right_nav.html"}
 			<div class="article">
 				<div class="pro_det">
-					{if $article.images|count gt 1}
+
 			            <div class="focus">
 			            	<ul class="pic">
 			                	{foreach item=proshowb from=$article.images}
@@ -54,11 +54,7 @@
 				            <a class="prev" href="javascript:void(0)"></a>
 				            <a class="next" href="javascript:void(0)"></a>
 		          		</div> 
-			        {else}
-			          	<div class="focu">
-			            	<img src="{$article.image}" alt="{$article.title}"/>
-			          	</div> 
-			        {/if}
+
 			        <p>
 			          <span>{$article.title}</span>
 			          {$article.content|unescape:"html"}
@@ -81,13 +77,13 @@
 			<div class="article-tm"></div>
 		</div>
 	</div>
-	{include file="./_footer.html"}
-
-
 
 <script type="text/javascript" src="{$site_url}js/jquery-1.9.1.min.js"></script>
 <script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.js"></script>
 <script type="text/javascript" src="{$site_url}js/function.js"></script>
+
+	{include file="./_footer.html"}
+
 
 </body>
 </html>
