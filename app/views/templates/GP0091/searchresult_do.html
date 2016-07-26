@@ -54,7 +54,9 @@
 		        </div>
 				<ul class="news">
 					{foreach name=article item=article from=$search.data}<!--search_content_start-->
-				        <li><a href="search_$link"><span>{$article.pubtimestamp|date_format:'%Y-%m-%d'}</span>search_$title</a></li>
+				        <li><a href="search_$link">
+				        <span><time datetime="search_$pubdate" pubdate="pubdate">
+				        {$article.pubtimestamp|date_format:'%Y-%m-%d'}</time></span>search_$title</a></li>
 				    <!--search_content_end-->{/foreach}  
 			    </ul>
 			    <div class="num">

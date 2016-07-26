@@ -1,8 +1,8 @@
-jQuery(document).ready(function() {
+// jQuery(document).ready(function() {
 	
-  var mySwiper = new Swiper('.swiper-container',{
-    loop: true,
-	autoplay: 3000,
-  });
+//   var mySwiper1 = new Swiper('.baner .swiper-container',{
+//     loop: true,
+// 	autoplay: 3000,
+//   });
 
-});
+// });
