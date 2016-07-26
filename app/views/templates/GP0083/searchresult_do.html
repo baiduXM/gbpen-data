@@ -56,9 +56,9 @@
 					          {/if}
 					        </div>
 				    		<ul>
-				    			{foreach name=article item=article from=$list.data}
-							        <li><a href="{$article.link}"><span class="date">[{$article.pubtimestamp|date_format:'%Y-%m-%d'}]</span>{$article.title}</a></li>
-							    {/foreach}
+				    			{foreach name=article item=article from=$search.data}<!--search_content_start-->
+							        <li><a href="search_$link"><span class="date">[{$article.pubtimestamp|date_format:'%Y-%m-%d'}]</span>search_$title</a></li>
+							    <!--search_content_end-->{/foreach}
 				    		</ul>
 				    		{include file="./_num.html"}	
 				    	</div>    
