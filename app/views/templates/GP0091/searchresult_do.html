@@ -53,19 +53,19 @@
 		          	{/if}
 		        </div>
 				<ul class="news">
-					{foreach name=article item=article from=$search.data}
-				        <li><a href="{$article.link}"><span>{$article.pubtimestamp|date_format:'%Y-%m-%d'}</span>{$article.title}</a></li>
-				    {/foreach}  
+					{foreach name=article item=article from=$search.data}<!--search_content_start-->
+				        <li><a href="search_$link"><span>{$article.pubtimestamp|date_format:'%Y-%m-%d'}</span>search_$title</a></li>
+				    <!--search_content_end-->{/foreach}  
 			    </ul>
 			    <div class="num">
 					<a href="{$page_links.first_link}">首页</a>
 					<a href="{$page_links.prev_link}">上一页</a>
 					{foreach item=near_link key=near_page from=$page_links.nears_link}
-					  {if $near_page == $page_links.current_page}
+					  {if $near_page == $page_links.current_page}<!--page_corrent_link_start-->
 					    <a class="current">{$near_page}</a>
-					  {else}
+					  <!--page_corrent_link_end-->{else}<!--page_uncorrent_link_start-->
 					    <a href="{$near_link}">{$near_page}</a>
-					  {/if}
+					  <!--page_uncorrent_link_end-->{/if}
 					{/foreach}
 					<a href="{$page_links.next_link}">下一页</a>
 					<a href="{$page_links.last_link}">尾页</a>
