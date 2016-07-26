@@ -1,16 +1,9 @@
 $(document).ready(function(){
 
-	TouchSlide({ 
-				slideCell:"#proBox",
-				titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
-				mainCell:".bd ul", 
-				effect:"leftLoop", 
-				autoPage:true,//自动分页
-				autoPlay:true,
-				interTime:6000 //自动播放
-	});	
+
 	$(".class-m").height($(".class").outerHeight()-$(".class-top").outerHeight())
 	$(".index-wrap").height($(".wrap").height()-$(".fixed").height()-$(".tell-icon").height())
+    //	$(".box_menu").height($(".index-wrap").height()-$(".header").height()-$(".foot").height()-46)
 	$(".mlist").height($(".mimg").height())
 	$(".mlist_null").height($(".mimg").height())	
 	

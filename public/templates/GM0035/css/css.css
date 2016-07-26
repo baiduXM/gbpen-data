@@ -97,23 +97,23 @@ text-overflow:ellipsis;}
 .worda{ color:#dc2f98; text-align:center; font-size:1.1em;  height:30px; line-height:30px; margin-bottom:10px;}
 
 
-.proBox{position: relative;}
+/*.proBox{position: relative;}*/
 /*.proBox .hd{ display: none;}*/
 
-.proBox .bd{overflow: hidden;}
+/*.proBox .bd{overflow: hidden;}
 .proBox .bd li{ position:relative; text-align:center;  }
 .proBox .bd li img{vertical-align:top; width:100%;}
 .proBox .bd li a{ -webkit-tap-highlight-color:rgba(0,0,0,0);  }
 .proBox .slide_left,.proBox .slide_right{display: block;width: 29px;height: 47px;background: url(../images/ad_ctr.png) 0 -47px no-repeat;position: absolute;top: 50%;margin-top: -23px;z-index: 100}
 .proBox .slide_left{left: 5%}
-.proBox .slide_right{background-position: 0 0;right:5%;}
+.proBox .slide_right{background-position: 0 0;right:5%;}*/
 /*.prodet-tit{width: 100%;background: #d4e01b;text-align: center;height: 2.5rem;line-height: 2.5rem;margin-top: 2%;color: #333;}*/
 
 
-.proBox .hd{ width:100%; height:11px;  position:absolute; z-index:10; bottom:5px; text-align:center;  }
+/*.proBox .hd{ width:100%; height:11px;  position:absolute; z-index:10; bottom:5px; text-align:center;  }
 .proBox .hd ul{ display:inline-block; height:5px; padding:3px 5px; background-color:rgba(255,255,255,0.7); -webkit-border-radius:5px; -moz-border-radius:5px; border-radius:5px; font-size:0; vertical-align:top;}
 .proBox .hd ul li{ display:inline-block; width:5px; height:5px; -webkit-border-radius:5px; -moz-border-radius:5px; border-radius:5px; background:#8C8C8C; margin:0 5px;  vertical-align:top; overflow:hidden;   }
-.proBox .hd ul .on{ background:#c32a2a;}
+.proBox .hd ul .on{ background:#c32a2a;}*/
 
 
 @media screen and (min-width: 320px) and (max-width: 480px){

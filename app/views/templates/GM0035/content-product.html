@@ -46,6 +46,7 @@
 <link rel="stylesheet" rev="stylesheet" href="{$site_url}css/style_{$stylecolor}.css" type="text/css" />
 <script src="{$site_url}js/TouchSlide.1.1.js"></script>
 <script type="text/javascript" src="{$site_url}js/jquery.min.js"></script>
+<script type="text/javascript" src="{$site_url}js/pro.js"></script>
 <script type="text/javascript" src="{$site_url}js/function.js"></script>
 <script type="text/javascript" src="{$site_url}js/lanrenzhijia.js"></script>
 
@@ -84,25 +85,19 @@
                   <div class="bimg">
                     <div class="worda">{$article.title}</div>
                     <div class="baner">
-
-                      <div id="proBox" class="proBox">
-                          <div class="hd">
-                                  <ul>
-                                     {foreach item=proimg from=$article.images}
-                                      <li></li>
-                                     {/foreach} 
-                                  </ul>
-                          </div>
-                          <div class="bd">
-                              <ul>
-                              {foreach item=proimg from=$article.images}
-                                <li><img src="{$proimg.image}" alt="" width="100%"></li>
-                              {/foreach} 
-                              </ul>
-                          </div>
-                      </div>
-
-
+                    	<div id="slideBox" class="slideBox">
+                        <div class="hd">
+                          <ul></ul>
+                        </div>
+                    	  <div class="bd">
+                      		<ul>
+                      			{foreach item=image from=$article.images}
+                      			<li><a class="pic"><img src="{$image.image}" width="100%" title="281*222" /></a></li>
+                      			{/foreach}
+                      		</ul>
+                      	</div>
+                    	
+                    	</div>
                     			
                     </div>           
                    

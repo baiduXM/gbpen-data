@@ -4,7 +4,7 @@
 	 	<!-- 下表为0的面包屑导航正好是一级栏目的当前栏目 -->
            <ul class="hide-class">
                         {foreach name=pagenavs item=nav from=$pagenavs}
-                          <li><a href="{if $nav.childmenu}javascript:;{else}{$nav.link}{/if}">{$nav.name}aaa</a>
+                          <li><a href="{if $nav.childmenu}javascript:;{else}{$nav.link}{/if}">{$nav.name}</a>
                               {if $nav.childmenu}
                               <ul class="second">
                                  {foreach key=key item=nav_list from=$nav.childmenu}
