@@ -42,13 +42,16 @@
 <link rel="stylesheet" href="{$site_url}css/public.css" /> 
 <link href="{$site_url}css/css.css" rel="stylesheet" type="text/css" />
 <link href="{$site_url}css/lanrenzhijia.css" type="text/css" rel="stylesheet" />
+<link href="{$site_url}css/swiper.min.css" type="text/css" rel="stylesheet" />
 
 <link rel="stylesheet" rev="stylesheet" href="{$site_url}css/style_{$stylecolor}.css" type="text/css" />
-<script src="{$site_url}js/TouchSlide.1.1.js"></script>
+
 <script type="text/javascript" src="{$site_url}js/jquery.min.js"></script>
-<script type="text/javascript" src="{$site_url}js/pro.js"></script>
+<script src="{$site_url}js/swiper.min.js"></script>
 <script type="text/javascript" src="{$site_url}js/function.js"></script>
 <script type="text/javascript" src="{$site_url}js/lanrenzhijia.js"></script>
+
+<script type="text/javascript" src="{$site_url}js/pro.js"></script>
 
 </head>
 <body>
@@ -85,19 +88,17 @@
                   <div class="bimg">
                     <div class="worda">{$article.title}</div>
                     <div class="baner">
-                    	<div id="slideBox" class="slideBox">
-                        <div class="hd">
-                          <ul></ul>
+
+                      <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            {foreach item=image from=$article.images}
+                            <div class="swiper-slide"><img src="{$image.image}" width="100%" title="281*222" /></div>
+                            {/foreach}
+          
                         </div>
-                    	  <div class="bd">
-                      		<ul>
-                      			{foreach item=image from=$article.images}
-                      			<li><a class="pic"><img src="{$image.image}" width="100%" title="281*222" /></a></li>
-                      			{/foreach}
-                      		</ul>
-                      	</div>
-                    	
-                    	</div>
+                      </div>
+
+                    
                     			
                     </div>           
                    
