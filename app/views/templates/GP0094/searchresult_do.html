@@ -29,20 +29,33 @@
   <div id="container">
     <div class="service">
         <ul>
-          {foreach item=other_nav from=$global.other_navs}
-
           <li>
-            <a href="{$other_nav.link}">
-              <div class="col-pic"><img src="{$other_nav.image}" alt="" /></div>
+            <a href="{$global.other_navs1.link}">
+              <div class="col-pic"><img src="{$global.other_navs1.image}" alt="" /></div>
               <div class="col-name">
-                <h2>{$other_nav.name}</h2>
-                <p>{$other_nav.en_name}</p>
+                <h2>{$global.other_navs1.name}</h2>
+                <p>{$global.other_navs1.en_name}</p>
               </div>
             </a>
           </li>
-
-            {if $other_nav@index+1 gte 3}{break}{/if}
-          {/foreach}
+          <li>
+            <a href="{$global.other_navs2.link}">
+              <div class="col-pic"><img src="{$global.other_navs2.image}" alt="" /></div>
+              <div class="col-name">
+                <h2>{$global.other_navs2.name}</h2>
+                <p>{$global.other_navs2.en_name}</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="{$global.other_navs3.link}">
+              <div class="col-pic"><img src="{$global.other_navs3.image}" alt="" /></div>
+              <div class="col-name">
+                <h2>{$global.other_navs3.name}</h2>
+                <p>{$global.other_navs3.en_name}</p>
+              </div>
+            </a>
+          </li>
 
         </ul>
     </div>
@@ -52,10 +65,10 @@
            <div class="search-txt">以下是关键字“{$search.keyword}”的搜索结果</div>
                   <ul>  
 
-                    {foreach name=article item=article from=$list.data} 
+                    {foreach name=article item=article from=$search.data}<!--search_content_start--> 
 
-                      <li><a href="{$article.link}"><span>{$article.pubtimestamp|date_format:'%Y-%m-%d'}</span>{$article.title}</a></li>
-                    {/foreach} 
+                      <li><a href="search_$link"><span>{$article.pubtimestamp|date_format:'%Y-%m-%d'}</span>search_$title</a></li>
+                    <!--search_content_end-->{/foreach} 
                                
                   </ul>
                   <div class="module_page">

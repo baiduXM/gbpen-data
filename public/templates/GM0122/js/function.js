@@ -176,7 +176,8 @@ $(document).ready(function(){
 		$(".search").toggle();
 		
 	})
-	$('.opacity3').click(function(){
+	$('.backhis').click(function(){
+		
 		$('.search').hide();
 	})
 
