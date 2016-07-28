@@ -1,0 +1,64 @@
+    <div class="ny_top">
+       <div class="header">
+          <div class="logo fl"><a href="{$site_url}"><img src="{$logo}" alt="{$title}"/></a></div>
+          <div class="menuside fr">
+              <div class="menu">
+                <ul id="nav" class="nav clearfix">
+                   {$litmit = 6}
+                      {if $navs|count lt $litmit}{$litmit = $navs|count}{/if}
+                          <li class="nLi" style="width:{100/($litmit+1)-1}%">
+                              <h3><a href="{$site_url}">首页</a></h3>
+                          </li>
+                          {foreach name=navs item=nav from=$navs}
+                          <li  class="fl{if $nav.current} current{/if} nLi" style="width:{100/($litmit+1)}%">
+                                  <h3><a href="{$nav.link}">{$nav.name}</a></h3>
+                                  {if $nav.childmenu}
+                              <ul class="sub clearfix">
+                              
+                                  {foreach key=key item=nav_list from=$nav.childmenu}
+                                  <li class="{if $nav.current}current{/if}"><a href="{$nav_list.link}">{$nav_list.name}</a></li>
+                                  {/foreach}
+                                 
+                              </ul>
+                               {/if}
+                          </li>
+                          {if $nav@index+1 gte $litmit}{break}{/if}
+                  {/foreach}
+                </ul>           
+              </div>
+          </div>         
+       </div>
+       <div class="ny_datu">
+         <div class="ny_banner">
+            <div class="ny_focusBox" style="margin:0 auto">
+                <ul class="pic">
+                       {foreach name=slidepicsb item=slidepicb from=$global.slidepicsb}
+                        <li><a href="{$slidepicb.link}" target="_blank"><img src="{$slidepicb.image}" alt="{$slidepicb.title}" /></a></li>                            
+                       {/foreach}
+    
+                </ul>
+                <a class="prev" href="javascript:void(0)"></a>
+                <a class="next" href="javascript:void(0)"></a>
+                <ul class="hd">
+                  {foreach name=slidepicsb item=slidepicsb from=$global.slidepicsb}
+                   <li>{$slidepicsb@index+1}</li>
+                     {/foreach}  
+                </ul>
+           </div>
+         </div>
+       </div>
+      <DIV class="headerbottom">
+        	<div class="public tbg" style="background: url('{$global.bannerbottomimg.image}') no-repeat scroll right center;">
+            	<div class="serach fl">
+                       <form action="{$search_action}" method="GET">
+                            <input type="text" name="s" value="" class="txt1" />
+    	                    <input type="submit" class="btm" value="搜索"  />    	
+                      </form>                    
+                </div>
+                <div class="telnum fl">
+                咨询热线：{$contact.telephone} 
+                </div>
+            </div>
+        </DIV>  
+    </div>
+            
