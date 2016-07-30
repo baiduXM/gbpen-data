@@ -44,7 +44,7 @@
 			<div class="bg clearfix">
 			<ul class="clearfix">
 				<li class="first">					
-					<div><h2><span class="zh">{$index.products.name}</span><br/><span class="en">{$index.products.en_name}</span></h2></div>
+					<div><h2><span class="zh">{$index.img_list.name}</span><br/><span class="en">{$index.img_list.en_name}</span></h2></div>
 				</li>
 				{$limit = 10}
 				{foreach name=imglist item=imglist from=$index.img_list.data}	
@@ -57,7 +57,7 @@
 				{if $imglist@index+1 eq $limit}{break}{/if}
 				{/foreach}	
 				<li class="last">					
-					<div><a href="{$index.products.link}" class="more">更多</a></div>
+					<div><a href="{$index.img_list.link}" class="more">更多</a></div>
 				</li>
 			</ul>
 			</div>
@@ -67,7 +67,7 @@
 			<div class="new_list">
 				<ul class="clearfix">
 				{$limit = 6}
-				{foreach name=txtlist item=txtlist from=$index.img_list.data}					
+				{foreach name=txtlist item=txtlist from=$index.news.data}					
 					<li>
 						<div class="c_l">
 							<span class="day">{$txtlist.pubtimestamp|date_format:'%d'}</span>

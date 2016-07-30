@@ -23,7 +23,7 @@
           <div class="swiper-nav swiper-container">
             <div class="swiper-wrapper">
 {foreach item=nav from=$navs}
-              <div class="swiper-slide"><span><div class="pic">{$nav.icon}</div><a href="{$nav.link}" class="public_color">{$nav.name}</a></span></div>
+              <div class="swiper-slide"><span><div class="pic" onclick="window.location.href='{$nav.link}'">{$nav.icon}</div><a href="{$nav.link}" class="public_color">{$nav.name}</a></span></div>
      {/foreach}              </div>
           </div>
         </div>
