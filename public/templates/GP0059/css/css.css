@@ -1,6 +1,6 @@
 body{ color:#666666; font-family:Microsoft Yahei,Arial, Helvetica, sans-serif; background:#fff }
-body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,input,textarea,div{margin:0;padding:0; list-style:none; /*line-height:24px; font-size:12px;*/ font-weight:normal}
-body,div,ul,li,dl,dt,dd{ /*font-size:12px;*/}
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,input,textarea,div{margin:0;padding:0; list-style:none; line-height:24px; font-size:12px; font-weight:normal}
+body,div,ul,li,dl,dt,dd{ font-size:12px;}
 .clearfix:after { content:'\20'; display:block; height:0; clear:both; }
 .clearfix { *zoom:1; font-size:0px;}
 a{ color:#666666; text-decoration:none}
@@ -66,7 +66,7 @@ img{ border:none;}
 #ab_text .ab_title{  font-weight:bold; font-size:13px; color:#fff}
 #ab_text .ab_title img{ margin-right:8px;margin-left: 5px;margin-right: 5px;margin-bottom:5px;vertical-align:bottom;}
 #ab_text .ab_inner{ color:#cccccc; margin-top:10px; height:95px; overflow:hidden; padding-bottom:15px;}
-#about .inner{ color:#ddd; width:970px; margin:auto; margin-top:55px; line-height:22px; height:110px; overflow:hidden}
+#about .inner{ color:#ddd; width:970px; margin:auto; margin-top:55px; line-height:22px; height:110px; overflow:hidden; font-size:12px;}
 
 
 #pro{ margin-top:35px;}
