@@ -89,6 +89,8 @@ $("#banner").slideDown("slow")
             }
         });
 	
-	
+	if($("#maodian").length>0){
+        window.location.hash = "#maodian";  
+    }
 
 });

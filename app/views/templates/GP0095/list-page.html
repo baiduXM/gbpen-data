@@ -40,7 +40,7 @@ DD_belatedPNG.fix('div,ul,li,a,p,img');
                 {include file="./_pagenavs_sub3.html"}    
 			</div>			  
 			<div class="news">
-                <div class="right_tt"><span class="location">所在位置:<a href="{$site_url}">首页</a> &gt; {foreach item=nav from=$posnavs}>> <a href="{$nav.link}">{$nav.name}</a>{/foreach}</span>{$list.name}</div>
+                <div class="right_tt"><span class="location">所在位置：<a href="{$site_url}">首页</a>{foreach item=nav from=$posnavs} &gt; <a href="{$nav.link}">{$nav.name}</a>{/foreach}</span>{$list.name}</div>
 				<div class="article">
 	            {$list.content|unescape:"html"}
 	            </div>        

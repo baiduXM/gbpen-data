@@ -40,7 +40,7 @@ DD_belatedPNG.fix('div,ul,li,a,p,img');
                 {include file="./_pagenavs_sub3.html"}    
 			</div>			  
 			<div class="news">
-	           <h3 class="right_tt">搜索关键词为“<span>{$search.keyword}</span>”的产品/文章，共搜索到{$search.total}个结果</h3>
+	           <h3 class="right_tt">搜索关键词为“<mark>{$search.keyword}</mark>”的产品/文章，共搜索到<mark> {$search.total} </mark>个结果</h3>
 				<div class="article">
 		            <ul class='new_list'>	
 		                {foreach item=article from=$search.data}

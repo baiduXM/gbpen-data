@@ -112,23 +112,24 @@ i,em{font-style:normal;}
 	
 	
 	/*关于我们 开始*/
-	    .about span{height: 38px; overflow: hidden; background: url(../images/Ab03.jpg) no-repeat #935f23; display: block;padding-left: 24px; font: 16px/38px"微软雅黑"; color: #ffffff; }
+	    .about span{height: 38px; overflow: hidden; background:#026ec8;display: block;padding-left: 24px; font: 16px/38px"微软雅黑"; color: #ffffff;position: relative;}
+		.about span:before{content: "";display: block;width: 15px;height: 100%;background: #abd9ff;position: absolute;left: 0px;top: 0px;}
 		ul.first{margin:0;padding:20px; height: auto; overflow: hidden; background: url(../images/siidbg.jpg) no-repeat  right #ffffff;}
 		ul.first li { height:auto; overflow: hidden;}
 		ul.first li a{display:block;background: url(../images/jg.jpg) no-repeat left; color:#333333;font:14px/34px "宋体"; padding-left: 14px;}
-		ul.first li a:hover{ background: url(../images/jh.jpg) no-repeat left; color:#aa855b;}
+		ul.first li a:hover{ background: url(../images/jh.jpg) no-repeat left; color:#026ec8;}
 		ul.first .second{padding-left: 15px; display: none;}
 		ul.first .second li a{ background: url(../images/hd.jpg) no-repeat left; padding-left: 5px; }
 		ul.first .second li a:hover{background: url(../images/hdt.jpg) no-repeat left;}
 		ul.first.third{padding:0px;display: none; }
 		ul.first .third li a{ background:none;  color: #666666; }
 		ul.first .third li a:hover{color: #333333;text-decoration: underline;background:none;}
-		ul.first .current a{background: url(../images/jh.jpg) no-repeat left; color:#aa855b;}
+		ul.first .current a{background: url(../images/jh.jpg) no-repeat left; color:#026ec8;}
 		ul.first  li.current ul.second li.current ul.third{ display:block; margin:0px;}
 		ul.first  li.current ul.second { display:block;}
-		ul.first  li a.selected{ background: url(../images/jh.jpg) no-repeat left; color:#aa855b;}
-		ul.first  li ul.second li a.selected { color:#aa855b; background:none;}
-		ul.first  li ul.second li ul.third li a.selected{ color:#aa855b; }
+		ul.first  li a.selected{ background: url(../images/jh.jpg) no-repeat left; color:#026ec8;}
+		ul.first  li ul.second li a.selected { color:#026ec8; background:none;}
+		ul.first  li ul.second li ul.third li a.selected{ color:#026ec8; }
 		
 		ul.contacts{padding:25px 0;}
 		ul.contacts li{display: inline; float: left; padding:0 10px; background: url(../images/er.png) no-repeat right;}
@@ -140,10 +141,11 @@ i,em{font-style:normal;}
 
 		.right{width:808px; height:auto; overflow: hidden; padding:50px 0 25px 0;}
 		.article{color:#666666; overflow: hidden;height:auto;padding:10px 0px; line-height:28px;}
-		.location{ float:right;height:30px;color:#967e58;display:block; overflow:hidden;  line-height:30px;  font-size:12px;}
-		.location  a{color:#967e58;font-family:"宋体"; font-size:12px; background: none;}
-		.location  a:hover{color:#af2d2b;}
-		.right_tt{color: #aa855b; font: 18px/36px "微软雅黑"; border-bottom: 1px solid #aa855b;}
+		.location{ float:right;height:30px;color:#026ec8;display:block; overflow:hidden;  line-height:30px;  font-size:12px;}
+		.location  a{color:#026ec8;font-family:"宋体"; font-size:12px; background: none;}
+		.location  a:hover{color:#abd9ff;}
+		.right_tt{color: #026ec8; font: 18px/36px "微软雅黑"; border-bottom: 1px solid #abd9ff;}
+		.right_tt mark{background: none;font-size: 22px;color: #ff8600;}
 		/*关于我们 结束*/
 		
 		/*新闻列表开始*/
@@ -151,8 +153,8 @@ i,em{font-style:normal;}
 		.news1_ls li{ height:100px;  overflow:hidden; background: url(../images/n_line.png) no-repeat bottom; padding:15px 0;}
 		.news1_ls li .news1_tt{display: inline; float: right; width:520px;}
 		.news1_ls li .news1_tt h2 a{color:#333333;display:block; font:16px/28px "微软雅黑"; background:url(../images/news1_03.png) no-repeat left; height: 28px; overflow: hidden;}
-		.news1_ls li .news1_tt h2 a:hover{color:#ff8400;}
-		.news1_ls li .news1_tt h2 a:hover .date{color:#ff8400;}
+		.news1_ls li .news1_tt h2 a:hover{color:#026ec8;}
+		.news1_ls li .news1_tt h2 a:hover .date{color:#026ec8;}
 		.news1_ls li .news1_tt .date{font-weight: normal; font-size: 12px; color: #999999; }
 		.news1_ls li .news1_tt .decript{height:50px; overflow: hidden; line-height: 24px; color: #666666; display: block;}
 		.news1_ls li .image{display: inline; float: left; width: 115px; overflow: hidden;}
@@ -167,8 +169,8 @@ i,em{font-style:normal;}
 		.munber{ width:100%; height:auto; overflow:hidden;  text-align:center; padding:20px 0;}
 		.munber li{display:inline;  color:#999999;  margin:0 2px;}
 		.munber li a{color:#666666;padding:2px 4px;}
-		.munber li a:hover{ color:#ffffff; background: #c67915;}
-		.munber li.current a{color:#ffffff; background: #c67915;}
+		.munber li a:hover{ color:#ffffff; background: #026ec8;}
+		.munber li.current a{color:#ffffff; background: #026ec8;}
 		/*序号结束*/
 		
 		/*新闻详情 开始*/
