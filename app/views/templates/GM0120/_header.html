@@ -1,9 +1,7 @@
-  <header>
+    <header>
     <div class="header">
-    <div class="logo"><img src="{$logo}" width="100%"></div>
-        <div class="header_menu"><a href="#" id="header_menu"><img src="{$site_url}icon/6.png"></a></div>
-    </div>
-    <div class="baner" id="baner">
+      <div class="logo"><img src="{$logo}" width="100%"></div>
+      <div class="baner">
         <div id="slideBox" class="slideBox">
           <div class="hd">
             <ul>
@@ -13,19 +11,11 @@
             <ul>
               {foreach name=slidepics item=slidepic from=$global.slidepics}
               <li><a class="pic" href="{$slidepic.link}"><img src="{$slidepic.image}" title="640*200" /></a></li>
-   {/foreach} 
+            {/foreach}
             </ul>
           </div>
         </div>
       </div>
-      <div class="menulist">
-        <div class="navlist">
-          <div class="swiper-nav swiper-container">
-            <div class="swiper-wrapper">
-{foreach item=nav from=$navs}
-              <div class="swiper-slide"><span><div class="pic">{$nav.icon}</div><a href="{$nav.link}" class="public_color">{$nav.name}</a></span></div>
-     {/foreach}              </div>
-          </div>
-        </div>
-      </div>
+      
+    </div>
   </header>

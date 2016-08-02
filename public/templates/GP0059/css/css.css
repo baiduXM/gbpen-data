@@ -1,6 +1,6 @@
 body{ color:#666666; font-family:Microsoft Yahei,Arial, Helvetica, sans-serif; background:#fff }
-body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,input,textarea,div{margin:0;padding:0; list-style:none; line-height:24px; font-size:12px; font-weight:normal}
-body,div,ul,li,dl,dt,dd{ font-size:12px;}
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,input,textarea,div{margin:0;padding:0; list-style:none; line-height:24px;  font-weight:normal}
+body,div,ul,li,dl,dt,dd{ }
 .clearfix:after { content:'\20'; display:block; height:0; clear:both; }
 .clearfix { *zoom:1; font-size:0px;}
 a{ color:#666666; text-decoration:none}
@@ -86,13 +86,13 @@ img{ border:none;}
 
 
 
-
+#footer{font-size:12px;}
 
 
 #footer .cty a {
 	height:55px;
 	line-height:55px;
-	color:#fff
+	color:#fff; font-size:12px;
 }
 #footer .cty {
 	float:left;
@@ -116,7 +116,9 @@ img{ border:none;}
 
 .sub_conbg{ background:url(../images/sub_containerbg.jpg) top center repeat-y; width:100%;}
 
-#sub_container{ padding-bottom:45px;}
+#sub_container{ padding-bottom:45px;font-size:12px;}
+
+#sub_container p{ font-size:12px;}
 
 .sidebar{ width:174px;  float:left; }
 
@@ -133,8 +135,8 @@ ul.second li a.seconda:hover{color:#148976}
 ul.third li a.thirda{ background:none; width:70%; padding-left:30%; margin:auto;color:#fff;  display:block;border-bottom:1px solid #335852; line-height:35px;}
 ul.third li a.thirda:hover{color:#148976}
 
-.main{float:right; width:770px; margin-top:25px;}
-.article{ margin-top:20px; margin-left:15px}
+.main{float:right; width:770px; margin-top:25px;font-size:12px;}
+.article{ margin-top:20px; margin-left:15px; font-size:12px;}
 
 .crumb{ color:#9f9f9f;  height:25px; line-height:25ppx; border-bottom:1px solid #bfbfbf; width:100%; padding-left:35px;}
 
@@ -145,3 +147,13 @@ ul.third li a.thirda:hover{color:#148976}
 	margin-right: 15px;
 	margin-bottom:3px;
 	vertical-align: bottom;}
+	
+	
+	
+	
+.quickbar_nav ul li.quickbar_phone .quickbar_hoverbox li {
+    height: 59px;
+    line-height: 59px;
+    overflow: hidden;
+    width: 300px;
+}

@@ -159,9 +159,10 @@
       {if $mIndexCat.type eq 4}
       <!-- 如果栏目类型是内容单页，输出此HTML代码块 -->
             <div class="index-edit">
-              <div class="index-edit-tit">
-                <img src="{$site_url}images/index-edit-tit.jpg" alt="">
+              <div class="index-edit-tit" style="background-color: #5D3F1C;height: 30px;">
+                
                 <h2>{$mIndexCat.name}</h2>
+                <a href="{$mIndexCat.link}" style="color: #fff;"><div style="float: right;margin-right: 20px;">more+</div></a>
               </div>
               <div class="index-edit-nr">
                {$mIndexCat.description}

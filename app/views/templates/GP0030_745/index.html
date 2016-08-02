@@ -35,6 +35,16 @@
 
 
  {include file='./_header.html'}
+<div id="banner"> 
+ <!--100%-->
+  <div class="banner_box">
+    <div id="kinMaxShow" style="display:none;">
+    {foreach name=slidepics item=slidepic from=$global.slidepics}
+      <div> <a href="{$slidepic.link}" target="_blank"><img src="{$slidepic.image}" alt="{$slidepic.title}"  /></a></div>
+      {/foreach}
+    </div>
+  </div>
+</div>
 
 <div id="container" class=" clearfix">
   <div id="about" class="clearfix wrapper">

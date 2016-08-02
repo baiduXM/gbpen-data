@@ -12,37 +12,8 @@ $(document).ready(function(){
 				
 $(window).load(function(){
 /*美工专属区域*/
-
-var ww=$(".in_h2 .in_zh").height()+$(".in_h2 .in_en").height();
 $("#in_image ul li:last").css("margin-right",0)
-
-$(".menulist .swiper-nav span .pic").height($(".menulist .swiper-nav span .pic").width())
-
-var m=$(".menulist .swiper-nav span .pic").height()+$(".menulist .swiper-nav span a").height()
-$(".menulist .swiper-nav span").height(m)
-
-$(".menulist .navlist,.swiper-wrapper,.swiper-slide").height($(".menulist .swiper-nav span").height())
-$(".menulist .swiper-nav span .iconfont").css({"font-size":"25px"})
-var m=$(".menulist .swiper-nav span .pic").height()*0.2
-$(".menulist .swiper-nav span .pic").css({"padding-top":m})
-
-var m1=$(".menulist .swiper-nav span .pic").height()-m
-$(".menulist .swiper-nav span .pic").height(m1)
-
-$(".logo").height($(".baner").height())
-var n=$("#baner").height()*0.1
-$("#baner").css({"padding-top":n})
-
-
-
-
-
-
-
-$("#in_text .inner .line").height($("#in_text .inner ul").height()-15+"px")
-$("#in_text .inner ul li:last").css({"marginBottom":"0"})
-$("#in_image .inner").height($("#in_image .inner ul").height())
-
+$("#in_image .inner").height($("#in_image ul li").height())
 
 /*美工专属区域*/
 	
@@ -105,20 +76,21 @@ $("#in_image .inner").height($("#in_image .inner ul").height())
     });
   }
   //隐藏导航跟wrap的切换
-	$("#daohang,#header_menu,#fixed_menu").click(function(){
-		$("#quickbar-navs").removeClass("page-prev").addClass("page-in");
-		$("#quickbar-wrap").removeClass("page-active").addClass("page-next page-in")
-		$(".quickbar-opacity2").show()
+	$("#class").click(function(){
+		$(".class").removeClass("page-prev").addClass("page-in");
+		$(".wrap").removeClass("page-active").addClass("page-next page-in")
+		$(".opacity2").show()
 		pageSlideOver();
+		
 	})
-	$(".quickbar-navs-close,.quickbar-opacity2").on('touchstart',function(){
-		$("#quickbar-navs").addClass("page-prev page-out")
-		$("#quickbar-wrap").removeClass("page-next").addClass(" page-out")
-		$(".quickbar-opacity2").hide()
+	$(".class-close,.opacity2").on('touchstart',function(){
+		$(".class").addClass("page-prev page-out")
+		$(".wrap").removeClass("page-next").addClass(" page-out")
+		$(".opacity2").hide()
 		$(".newsclass").removeClass("show")
 		pageSlideOver();
 		return false;
-	})						
+	})
 								
 
                                 function setHeighti() {
@@ -164,30 +136,26 @@ $("#in_image .inner").height($("#in_image .inner ul").height())
 		$("#up").hide()
 		$("#down").show()
 		$(".hide-class").removeClass("hide-class1")
-		$(".font1").slideToggle()
 		$(".font").slideToggle()
 		$(".hide-class").slideUp()	
 	})
-	$(".font dl.big,.font1 dl.big").click(function(){
-		$(".edite").attr('class',"edite font-big")
+	$(".font dl.big").click(function(){
+		$(".edite").attr('class',"edite font-big")		 
 		$(".list_page").attr('class',"list_page font-big")
 		$(".news-ins").attr('class',"news-ins font-big")
 		$(".font").hide()
-		$(".font1").hide()
 	})
-	$(".font dl.normal,.font1 dl.normal").click(function(){
-		$(".edite").attr('class',"edite font-normal")
+	$(".font dl.normal").click(function(){
+		$(".edite").attr('class',"edite font-normal")				
 		$(".list_page").attr('class',"list_page font-normal")
 		$(".news-ins").attr('class',"news-ins font-normal")
 		$(".font").hide()
-		$(".font1").hide()
 	})
-	$(".font dl.small,.font1 dl.small").click(function(){
-		$(".edite").attr('class',"edite font-small")
+	$(".font dl.small").click(function(){
+		$(".edite").attr('class',"edite font-small")						   
 		$(".list_page").attr('class',"list_page font-small")
 		$(".news-ins").attr('class',"news-ins font-normal")
 		$(".font").hide()
-		$(".font1").hide()
 
 	})	
 	//字体上下拉结束

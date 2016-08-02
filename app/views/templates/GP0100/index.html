@@ -103,9 +103,9 @@
                     <div id="prizes1">
                       <div class="photos">
                           <a href="javascript:void(0);" class="photos-button photos-prev"></a>
-                          <div class="photos-content {if $index.pro.data|count>3}enable{/if}">
+                          <div class="photos-content {if $index.case.data|count>3}enable{/if}">
                               <ul>
-                                 {foreach name=proimg item=proimg from=$index.pro.data}
+                                 {foreach name=proimg item=proimg from=$index.case.data}
                                     
                                     <li>
                                       <a href="{$proimg.link}" target="_self"><div class="pic"><img src="{$proimg.image}" /></div></a>
