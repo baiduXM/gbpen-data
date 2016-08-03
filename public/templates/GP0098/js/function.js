@@ -1,6 +1,6 @@
 jQuery(document).ready(function($) {
     jQuery("#nav").slide({ type:"menu", titCell:".nLi", targetCell:".sub",effect:"slideDown",delayTime:300,triggerTime:0,returnDefault:true});
-	  // jQuery(".slideBox").slide({mainCell:".bd ul",autoPlay:true, effect:"fold", trigger:"click",interTime:4000});
+	
     jQuery(".picMarquee-left").slide({mainCell:".bd ul",autoPlay:true,effect:"leftLoop",vis:6,interTime:3000,prevCell:'.prev',nextCell:'.next'});
     $('ul.nav>li:last-child,ul.nav>li:last-child h3').css('border',"none")
 
@@ -22,7 +22,9 @@ jQuery(document).ready(function($) {
 	
 	// jQuery(".slideTxtBox").slide({trigger:"click"});
 
-
+setTimeout(function () { 
+    jQuery(".slideBox").slide({mainCell:".bd ul",autoPlay:true, effect:"fold", trigger:"click",interTime:4000});
+  },5000);
 });
 function openLink(obj) {
     if (obj.selectedIndex != 0) {

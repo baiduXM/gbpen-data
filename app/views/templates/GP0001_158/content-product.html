@@ -17,40 +17,46 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="Content-Language" content="zh-CN">
     <title>{$title}</title>
-    <link rel="stylesheet" type="text/css" href="{$site_url}css/css_sxsd.css"/>
+    <link rel="stylesheet" type="text/css" href="{$site_url}css/style.css"/>
     <script src="{$site_url}js/jquery-1.7.2.min.js" type="text/javascript"></script>
     <script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.1.js"></script>
     <script type="text/javascript" src="{$site_url}js/function.js"></script>
-    </head>
+</head>
+
+
 
 <body>
-        
-            
-            
-<div class="wrap">
-    <div class="main">
-        
-        {include file='./_header.html'}
 
-       <div class="content">
-          <div class="left">
-              {include file='./_pagenavs_sub3.html'}        
-                <div class="news">
-                    <h1 class="news_top">联系我们</h1>
-                    <div class="contact_m">
-                        地址：{$contact.address}<br>
-                        电话：{$contact.telephone}<br>
-                        E-mail：{$contact.mail}<br>
+
+
+<div class='wrapper'>
+    {include file='./_header.html'}
+    <div class="content">
+            
+            <div class="left fl">
+              {include file='./_pagenavs_sub3.html'} 
+             <div class="contact">
+                <h3 class="title"><img src="{$site_url}images/about_lx.jpg"></h3>
+                <div class="contact_nr">
+                    <p> 联系人：{$contact.name}<br>
+                        电  话：{$contact.mobile}<br>
                         手机：{$contact.mobile}<br>
-                        联系人：{$contact.name}
-                    </div>
+                        QQ：{$contact.qq} <br>
+                        地  址： {$contact.address}</p>
+
                 </div>
+             </div>
+            
             </div>
-          <div class="news about">
-              <h1 class="news_top"><strong class="lujin">您现在的位置：<a href="{$site_url}">首页</a>{foreach item=nav from=$posnavs}&nbsp;&gt;&gt;&nbsp;<a href="{$nav.link}">{$nav.name}</a>{/foreach}</strong>{$posnavs[0].name}</h1>
-            <div class="right_m">
-            	<div class="right_products_conyent">
-                    	<div class="right_big_img">
+            <div class="right fr">
+                    <h3 class="title"><span class="location">当前位置:<a href="{$site_url}">首页</a>{foreach item=nav from=$posnavs}&gt;&gt;<a href="{$nav.link}">{$nav.name}</a>{/foreach}</span>{$posnavs[0].name}</h3>    
+               <div class='article'>
+            	
+                    	<div class='products_detail'>
+
+                            <div class='img fl'>
+
+
                               <div id="slideBox" class="slideBox">
                                   <div class="hd">
                                       <ul></ul>
@@ -58,7 +64,7 @@
                                   <div class="bd">
                                       <ul>
                                           {foreach item=image from=$article.images}
-                                              <li><a href="javascript:void(0);" ><img src="{$image.image}" /></a></li>
+                                              <li><div class="pic"><img src="{$image.image}" /></div></li>
                                           {/foreach}
 
                                       </ul>
@@ -69,20 +75,23 @@
                                   <a class="next" href="javascript:void(0)"></a>
                                   
                               </div>
+
+
+                            </div>
+						
+						</div>
+                      
                         
-                        <span class="pro_dtal"></span>
-                        </div>
-                       
-                        
+
                     	<div class="right_protext">
-                           {$article.content|unescape:"html"}
+                            {$article.content|unescape:"html"}
 
-                          <div class="share">
-                          {shareExt shareText=$article.content|unescape:"html"|strip_tags|truncate:140:"…" sharePic=$article.image}
-                          </div>
-
-				   </div>
-
+                              <div class="share">
+                              {shareExt shareText=$article.content|unescape:"html"|strip_tags|truncate:140:"…" sharePic=$article.image}
+                              </div>  
+                        </div>
+                 
+                    
                      <div class="next1">
                         <ul>
                              <li>上一篇：<a href="{$article.prev.link}">{$article.prev.title}</a></li>
@@ -90,28 +99,10 @@
                         </ul>
                     </div>
                 </div>
+            </div>
         </div>
-		   </div>
-              <div class="news pro">
-                  <h1 class="news_top">友情链接</h1>
-                  <div class="link_m">
-
-                      {foreach name=flink item=flink from=$global.links}
-                       <a href="{$flink.link}">{$flink.title}</a>    丨    
-                      {/foreach}  
-
-         
-                 </div>
-               </div>  
-
-
-      
-        </div>
-      {include file='./_footer.html'}
-
-  </div>
+    {include file='./_footer.html'}
 </div>
  
 </body>
 </html>
-

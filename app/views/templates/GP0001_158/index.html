@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <script type="text/javascript">
+    // 跳转手机页面
+    {if $site_another_url}
+        if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+            location.href = '{$site_another_url}';
+        }
+    {/if}
+    </script>
+	
+	<meta name="keywords" content="{$keywords}"/>
+	<meta name="description" content="{$description}"/>
+	<link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="Content-Language" content="zh-CN">
+	<title>{$title}</title>
+	<link rel="stylesheet" type="text/css" href="{$site_url}css/style.css"/>
+	<script src="{$site_url}js/jquery-1.7.2.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="http://common.mn.sina.com.cn/public/resource/lib/jquery.jcarousellite.js"></script>
+	<script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.1.js"></script>
+	<script type="text/javascript" src="{$site_url}js/function.js"></script>
+	<script type="text/javascript" src="{$site_url}js/index.js"></script>
+	{$headscript}
+
+
+    </head>
+
+
+
+<body>
+
+	
+	<div class='wrapper'>
+		{include file='./_header.html'}
+		
+
+		
+		
+		<div class='content'>
+				<div class='about fl'>
+						<h3 class='title'><a href="{$index.about_us.link}" class='more fr'><img src="{$site_url}images/more.png"></a>{$index.about_us.name}</h3>
+						<div class='about_nr'>
+							<div class="about-edit">
+								<span  class='img'><img src="{$index.about_us.image}" alt="" /></span>
+								{$index.about_us.description}								
+							</div>
+
+						</div>
+						
+					</div>
+					
+					<div class='news fr'>
+						<h3 class='title '><a href="{$index.news.link}" class='more fr'><img src="{$site_url}images/more.png"></a>{$index.news.name}</h3>
+						<div class='news_art'>
+							{foreach item=list1 from=$index.news.data}
+							{if $list1@index+1 eq 1}
+							<div class='news_top'>
+								<div class='n_img fl'><img src="{$list1.image}" alt="" /></div>
+								<div class='news_01 fr'>
+									<h2><a href="{$list1.link}">{$list1.title}</a></h2>
+									<p>{$list1.description}</p>
+								</div>
+							</div>
+							{/if}
+							{/foreach}
+							<div class='news_list'>
+								
+								<ul>
+									{foreach item=list1 from=$index.news.data}
+									{if $list1@index+1 gt 1}
+												
+											<li><a href="{$list1.link}"><span>{$list1.pubtimestamp|date_format:'%Y-%m-%d'}</span><p>{$list1.title}</p></a></li>
+									{/if}
+									{if $list1@index+1 eq 4}{break}{/if}
+									{/foreach}
+								</ul>
+							</div>
+								
+
+						</div>
+					</div>
+
+
+
+  
+		</div>
+		
+		<div class='products '>
+			<h3 class='title '><a href="{$index.pro.link}" class='more_01 fr'><img src="{$site_url}images/more.png"></a>{$index.pro.name}</h3>
+	          <div id="prizes">
+	              <div class="photos">
+	                  <a href="javascript:void(0);" class="photos-button photos-prev"></a>
+	                  <div class="photos-content {if $index.pro.data|count>3}enable{/if}">
+	                      <ul>
+	                         {foreach name=proimg item=proimg from=$index.pro.data}
+	                            
+	                            <li>
+	                              <div class="pic"><a href="{$proimg.link}" target="_self"><img src="{$proimg.image}" /><h2>{$proimg.title}</h2></a></div>
+
+	                       
+	                            </li>
+
+	                           
+	                            
+	                          {/foreach}
+	                      </ul>
+	                  </div>
+	                  <a href="javascript:void(0);" class="photos-button photos-next"></a>
+	              
+	              </div>
+	          </div>   
+
+
+						</div>
+						
+	{include file='./_footer.html'}
+</div>
+ 
+</body>
+</html>
