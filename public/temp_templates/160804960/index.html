@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+		// 跳转PC页面
+		{if $site_another_url}
+			if (!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+				location.href = '{$site_another_url}';
+			}
+		{/if}
+		</script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no,minimal-ui">
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta content="telephone=no" name="format-detection">
+<script type="text/javascript" src="http://chanpin.xm12t.com.cn/js/preview.js"></script>
+<title>{$title}</title>
+<meta name="keywords" content="{$keywords}" />
+<meta name="description" content="{$description}" />
+<link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
+<link href="{$site_url}css/swipe.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="{$site_url}css/public.css" />
+<link href="{$site_url}css/css.css" rel="stylesheet" type="text/css" />
+<script src="{$site_url}js/TouchSlide.1.1.js"></script>
+<script src="{$site_url}js/jquery.min.js"></script>
+<script type="text/javascript" src="{$site_url}js/share.js"></script>
+<script src="{$site_url}js/idangerous.swiper-2.0.min.js"></script>
+<script src="{$site_url}js/simple-app.js"></script>
+<script type="text/javascript" src="{$site_url}js/function.js"></script>
+{$headscript}
+</head>
+<body>
+      <div class="index-wrap">
+      <div class="heaer  public_bg1">
+        <div class="logo"><img src="{$logo}" width="100%"></div>
+      </div>
+      <div class="menu public_bg1">
+        <div class="nav"> <a class="arrow-left" href="#">&lt;</a> <a class="arrow-right" href="#">&gt;</a>
+          <div class="swiper-nav swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><span><a href="{$site_url}" class=" public_color">网站首页<br>
+                <span class="en">home</span></a></span></div>
+				{foreach name=key item=nav from=$navs}
+              <div class="swiper-slide"><span><a href="{$nav.link}" class=" public_color">{$nav.name}<br>
+                <span class="en">{$nav.en_name}</span></a></span></div>
+				{/foreach}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="baner">
+        <div id="slideBox" class="slideBox">
+          <div class="hd">
+            <ul>
+            </ul>
+          </div>
+          <div class="bd">
+            <ul>
+			{foreach name=slidepics item=slidepic from=$global.slidepics}
+              <li><a class="pic" href="{$slidepic.link}"><img src="{$slidepic.image}" /></a></li>
+			  {/foreach}
+            </ul>
+          </div>
+        </div>
+        
+      </div>
+      <div class="main">
+	  {foreach name=mIndexCats_list item=mIndexCat from=$mIndexCats}
+	  {if $mIndexCat.type eq 4}
+        <div class="box-id">
+		
+          <div class="box-about clearfix public_bg"><i><img src="{$mIndexCat.image}" width="147" height="97" title="147*97"></i>
+            
+			<dl class="nr public_color1"><a href="{$mIndexCat.link}">
+              {$mIndexCat.description}</a> </dl>
+            <div class="j j1"></div>
+			
+          </div>
+        </div>
+		{elseif $mIndexCat.type eq 2}
+		
+        <div class="box-id">
+          <div class="box-pro">
+            <h1 class="box-top clearfix public_bor"><span class="more public_bg"><a href="{$mIndexCat.link}">更多+</a></span>
+              <div class="text public_color2">{$mIndexCat.name}
+                <div class="en public_color">{$mIndexCat.en_name}</div>
+              </div>
+            </h1>
+            <div class="about-m">
+              <ul class="picture2">
+			  {foreach name=mIndexCat_list item=mIndexCat_list from=$mIndexCat.data}
+                <li>
+                  <div class="public_color"><a href="{$mIndexCat_list.link} ">
+                    <p class="img public_bg"><img src="{$mIndexCat_list.image}" width="100%" title="170*94" /></p>
+                    <p class=" title public_color"><b>{$mIndexCat_list.title}</b></p>
+                    </a></div>
+                </li>
+                {if $mIndexCat_list@index+1 == 6}{break}{/if}
+					{/foreach}
+              </ul>
+            </div>
+          </div>
+        </div>
+		{/if}
+        {/foreach}
+      </div>
+      <div class="foot public_bg">
+        <div class="back-top" id="quickbar-backtotop"><A href="#">TOP</A></div>
+        <div class="text">{$footprint}</div>
+      </div>
+      </div>
+    {$footscript}
+</body>
+</html>

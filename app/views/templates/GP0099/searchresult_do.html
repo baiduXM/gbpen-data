@@ -35,10 +35,10 @@
     <div class="content">
                 <p class="search-word">搜索关键词为“<span>{$search.keyword}</span>”的产品/文章，共搜索到{$search.total}个结果：</p>            
                 <ul class="ny_news_list">
-                  {foreach name=article item=article from=$list.data} 
-                      <li><a href="{$article.link}"><span class="date">[{$article.pubtimestamp|date_format:'%Y-%m-%d'}]</span>{$article.title} </a>
+                  {foreach item=article from=$search.data}<!--search_content_start-->
+                      <li><a href="search_$link"><span class="date">[search_ ]</span>search_$title </a>
                       </li>
-                  {/foreach}                 
+                  <!--search_content_end-->{/foreach}                 
                 </ul> 
                 <div class="munber">
 
