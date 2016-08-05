@@ -1,10 +1,16 @@
-<div class='links'>
-  <ul>
-    {foreach name=flink item=flink from=$global.links}
-     <a href="{$flink.link}">{$flink.title}</a>    丨    
-    {/foreach}
-  </ul>
-</div>
+<div class="footers">
+	<div class="dibuat">
+		<div class="flinks">
+			<span>友情链接：</span>
+			{foreach item=links from=$global.links}
+			    {if $links@index neq 0} | {/if}
+			    <a href="{$links.link}">{$links.title}</a>
+			{/foreach}
 
-<div class="footer">{$footprint}</div>
-{$footscript} 
+		</div>
+    	<div class="fwpord">
+    		{$footprint}
+		</div>
+    </div>
+</div>
+{$footscript}

@@ -1,35 +1,54 @@
-jQuery(document).ready(function($) {
-    jQuery("#nav").slide({ type:"menu", titCell:".nLi", targetCell:".sub",effect:"slideDown",delayTime:300,triggerTime:0,returnDefault:true});
-	
-    jQuery(".slideBox").slide({mainCell:".bd ul",autoPlay:true});
+$(document).ready(function() {
 
+	$(".menu>ul>li:last-child").css({background:'none'});
 
+//实例一
+	$("#menu>ul>li>a").wrapInner('<span class="out"></span>' ).append('<span class="bg"></span>');
+	$("#menu>ul>li>a").each(function(){
+		$('<span class="over">' +  $(this).text() + '</span>').appendTo(this);
+	});
 
+	$("#menu>ul>li").hover(function(){
+		$(".out",this).stop().animate({'top':'45px'},250);
+		$(".over",this).stop().animate({'top':'0px'},250);
+		$(".bg",this).stop().animate({'top':'0px'},120);
+		$(this).find('.nav_list').stop(true, true).slideDown(300).prev('a').addClass('menu_in');
+	},function(){
+		$(".out",this).stop().animate({'top':'0px'},250);
+		$(".over",this).stop().animate({'top':'-45px'},250);
+		$(".bg",this).stop().animate({'top':'-45px'},120);
+		$(this).find('.nav_list').slideUp(300).prev('a').removeClass('menu_in');
+	});
 
-    $(".first li a").click(function(){
-      $(this).parent().siblings().find(".second").slideUp()
-      $(this).siblings(".second").slideToggle()
-    })
-    $(".second li a").click(function(){
-      $(this).parent().siblings().find(".third").slideUp()
-      $(this).siblings(".third").slideToggle()
-    })  
+	/*SuperSlide图片切换*/
+	jQuery(".focusBox").slide({ mainCell:".pic",effect:"left", autoPlay:true, delayTime:600, trigger:"click"});
 
-//使用div时，请保证colee_left2与colee_left1是在同一行上.
-  // var speed=30//速度数值越大速度越慢
-  // var colee_left2=document.getElementById("colee_left2");
-  // var colee_left1=document.getElementById("colee_left1");
-  // var colee_left=document.getElementById("colee_left");
-  // colee_left2.innerHTML=colee_left1.innerHTML
-  // function Marquee3(){
-  // if(colee_left2.offsetWidth-colee_left.scrollLeft<=0)//offsetWidth 是对象的可见宽度
-  // colee_left.scrollLeft-=colee_left1.offsetWidth//scrollWidth 是对象的实际内容的宽，不包边线宽度
-  // else{
-  // colee_left.scrollLeft++
-  // }
-  // }
-  // var MyMar3=setInterval(Marquee3,speed)
-  // colee_left.onmouseover=function() {clearInterval(MyMar3)}
-  // colee_left.onmouseout=function() {MyMar3=setInterval(Marquee3,speed)}
-                                      
+// 编辑框
+	$("ul.first a").click(function(event) {
+		if ($(this).next("ul").length > 0) {
+			
+			var a=$(this);
+			var thisname = a.attr('class');
+			a.parent().siblings().find("ul").slideUp(300).prev("a").removeClass();
+			if (thisname == null || thisname == 0) {
+				a.next("ul").slideDown(300);
+				a.parent().siblings().find('ul').slideUp(500).prev("a").removeClass();
+				var parent = a.parent().parent("ul").attr('class');
+				switch (parent) {
+					case "first":
+						a.addClass("box_on");
+						break;
+					default:
+						a.addClass("box_in");
+				}
+			}else{
+				a.removeClass().next('ul').slideUp(300);
+				a.next('ul').find('a').removeClass().next('ul').slideUp(300);
+			};
+			return false;
+		};
+	});
+
+// 产品图片
+	jQuery(".slideBox").slide({mainCell:".bd ul",autoPlay:true,effect:"leftLoop"});	
 });

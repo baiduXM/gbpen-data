@@ -1,57 +1,81 @@
 {
-
 	"slidepics": {
 		"value": [{
-			"title": "banner1",
-			"image": "images/banner.jpg",
+			"title": "banner",
+			"image": "images/1.jpg",
 			"link": "article/1.html",
-			"description": "大图轮播1"
+			"description": "banner1"
 		}, {
-			"title": "banner2",
-			"image": "images/banner.jpg",
-			"link": "http://www.baidu.com",
-			"description": "大图轮播2"
+			"title": "测试图2",
+			"image": "images/2.jpg",
+			"link": "http://www.baidu.com"
 		},{
-			"title": "banner3",
-			"image": "images/banner.jpg",
-			"link": "http://www.baidu.com",
-			"description": "大图轮播3"
+			"title": "测试图3",
+			"image": "images/3.jpg",
+			"link": "http://www.baidu.com"
+		}, {
+			"title": "测试图4",
+			"image": "images/4.jpg",
+			"link": "http://www.baidu.com"
+		}, {
+			"title": "测试图5",
+			"image": "images/5.jpg",
+			"link": "http://www.baidu.com"
 		}],
-		"description": "多图轮播",
+		"description": "头部大轮滚图",
 		"type": "images",
 		"config": {
-			"width":986,
-			"height": 314
+			"width": 1920,
+			"height": 450
 		}
+	},
+	"contact_way":{
+		"description":"首页联系我们",
+		"value":"</br>地址：厦门市思明区软件园...</br>联系人：X先生</br>手机：13489990000</br>电话：0592-23232232</br>传真：0592-8686886</br>邮箱：01@eexx.me</br></br>",
+		"type":"text"
 	},
 	"links": {
 		"value": [{
+			"title": "中国站长站",
+			"image": "images/1.jpg",
+			"link": "article/1.html",
+			"description": "友情链接1"
+		}, {
+			"title": "华军软件园",
+			"image": "images/2.jpg",
+			"link": "http://www.baidu.com"
+		},{
+			"title": "网易163",
+			"image": "images/3.jpg",
+			"link": "http://www.baidu.com"
+		}, {
+			"title": "微软中国",
+			"image": "images/4.jpg",
+			"link": "http://www.baidu.com"
+		},{
+			"title": "优酷网",
+			"image": "images/5.jpg",
+			"link": "http://www.baidu.com"
+		},{
+			"title": "天空软件站",
+			"image": "images/5.jpg",
+			"link": "http://www.baidu.com"
+		},{
+			"title": "雅虎中国",
+			"image": "images/5.jpg",
+			"link": "http://www.baidu.com"
+		},{
 			"title": "百度",
-			"image": "images/f1.jpg",
-			"link": "http://www.baidu.com"
-		}, {
-			"title": "易尔通",
-			"image": "images/f2.jpg",
-			"link": "http://www.baidu.com"
-		}, {
-			"title": "谷歌",
-			"image": "images/f3.jpg",
-			"link": "http://www.baidu.com"
-		}, {
-			"title": "腾讯",
-			"image": "images/f4.jpg",
-			"link": "http://www.baidu.com"
-		}, {
-			"title": "小米",
-			"image": "images/f5.jpg",
+			"image": "images/5.jpg",
 			"link": "http://www.baidu.com"
 		}],
 		"description": "友情链接",
 		"type": "images",
 		"config": {
-			"width": 104,
-			"height": 45
+			"width": 100,
+			"height": 100
 		}
 	}
+
 
 }
