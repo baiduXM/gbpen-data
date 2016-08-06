@@ -1,0 +1,94 @@
+{
+	"slidepics": {
+		"value": [{
+			"title": "测试图1",
+			"image": "images/banne.jpg",
+			"link": "http://www.baidu.com"
+		}, {
+			"title": "测试图2",
+			"image": "images/banne.jpg",
+			"link": "http://www.baidu.com"
+		}],
+		"description": "大轮滚图",
+		"type": "images",
+		"config": {
+			"width": 1026,
+			"height": 418,
+			"limit": 3
+		}
+	},
+	"index_text": {
+		"value": "点击这里可以在线预约看房",
+		"description": "电话下文字",
+		"type": "text"
+	},
+	"second_navs1": {
+		"value": {},
+		"description": "左侧导航栏目下三个单页导航1",
+		"type": "nav",
+		"config": {
+			"filter": "ALL",
+			"nav_width": 37,
+			"nav_height": 37
+		}
+	},
+	"second_navs2": {
+		"value": {},
+		"description": "左侧导航栏目下三个单页导航2",
+		"type": "nav",
+		"config": {
+			"filter": "ALL",
+			"nav_width": 37,
+			"nav_height": 37
+		}
+	},
+	"second_navs3": {
+		"value": {},
+		"description": "左侧导航栏目下三个单页导航3",
+		"type": "nav",
+		"config": {
+			"filter": "ALL",
+			"nav_width": 37,
+			"nav_height": 37
+		}
+	},
+	"index_text_link": {
+		"value": {},
+		"description": "点击这里所跳转栏目",
+		"type": "nav",
+		"config": {
+			"filter": "ALL"
+		}
+	},
+	"contact":{
+	"value":"地址：软件园二期观日路36号201号\r\n电话：0592-23232232\r\n传真：0592-23232232\r\nE-mail：01@eexx.me\r\n",
+	"description": "联系我们",
+	"type": "textarea"
+	},
+	"image1": {
+		"value": {
+			"title": "侧边栏目顶部图片",
+			"image": "images/qiu.jpg",
+			"link": "http://www.baidu.com/"
+		},
+		"description": "侧边栏目顶部图片",
+		"type": "image",
+		"config": {
+			"width":232,
+			"height": 79
+		}
+	},
+	"image2": {
+		"value": {
+			"title": "侧边栏目底部图片",
+			"image": "images/bei.png",
+			"link": "http://www.baidu.com/"
+		},
+		"description": "侧边栏目底部图片",
+		"type": "image",
+		"config": {
+			"width":213,
+			"height": 84
+		}
+	}
+}

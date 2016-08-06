@@ -1,0 +1,66 @@
+    <div class='header '>
+            
+            <h1 class='logo fl'><img src="{$logo}" width="" height=""></h1>
+            <div class="h_right fr">
+                <span class="tel ">电话：<i>{$contact.telephone} </i></span>
+                <div class='search fr'><form action="{$search_action}" method="GET"><input name="s" type="text" class='text_01'><input name="" type="submit" class='submit_01' value=''></form></div>
+
+            </div>
+            
+        </div>
+        <div class='mune'>
+            
+            
+                
+            <ul id="nav" class="nav" >
+            <li class="nLi " ><a href="{$site_url}">网站首页</a>    </li>
+         {foreach item=nav from=$navs}
+               
+
+                <li class="nLi  {if $nav.current}current{/if}">
+                        <a href="{$nav.link}">{$nav.name} </a>
+                        {if $nav.childmenu}
+                        <ul class="sub">
+                        {foreach item=nav_list from=$nav.childmenu}
+                            <li class="{if $nav_list.current}current{/if}"><a href="{$nav_list.link}">{$nav_list.name}</a></li>
+                          
+                        {/foreach}
+                            
+                        </ul>
+                        {/if}
+                </li>
+        
+                
+                
+                {/foreach}
+
+            </ul>
+        
+     
+        
+                
+        </div>
+        <div class='banner '>
+                <div id="slideBox" class="slideBox height_01">
+            
+            <div class="hd">
+                <ul><li></li><li></li><li></li></ul>
+            </div>
+            
+            <div class="bd">
+                <ul>
+                {foreach item=slidepic from=$global.slidepics}
+                    <li><a href="{$slidepic.link}" ><img src="{$slidepic.image}"   /></a></li>
+                  
+                    {/foreach}
+                </ul>
+            </div>
+                <!-- 下面是前/后按钮代码，如果不需要删除即可 -->
+            <a class="prev" href="javascript:void(0)"></a>
+            <a class="next" href="javascript:void(0)"></a>
+        
+
+        </div>
+
+    
+        </div>

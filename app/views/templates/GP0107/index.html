@@ -1,0 +1,235 @@
+<!DOCTYPE>
+<html>
+<head>
+<script type="text/javascript">
+    // 跳转手机页面
+    {if $site_another_url}
+        if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+            location.href = '{$site_another_url}';
+        }
+    {/if}
+</script>
+
+<meta name="keywords" content="{$keywords}"/>
+<meta name="description" content="{$description}"/>
+<link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
+<meta http-equiv="x-ua-compatible" content="ie=8"/>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<link href="{$site_url}css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="{$site_url}js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.js"></script>
+<script type="text/javascript" src="{$site_url}js/function.js"></script>
+<title>{$title}</title>
+
+<script language="javascript">
+$(function() {
+    if (window.PIE) {
+        $('.rounded').each(function() {
+            PIE.attach(this);
+        });
+    }
+});
+</script>
+{$headscript}
+</head>
+
+<body>
+    <div class="wrap">
+       
+      <!-- 导入头部文件 -->
+      {include file='./_header.html'}
+        
+        <div class="public content">
+        	<div class="in_lista">
+            	<ul>
+                	<li class="qiyi1">
+                    <span><i><img src="{$index.about_us.image}"/></i></span>
+                    <a href="{$index.about_us.link}"><div class="word">{$index.about_us.name}<b>{$index.about_us.en_name}</b></div></a>
+                  </li>
+                	<li class="qiyi1">
+                    <span><i><img src="{$index.news.image}"/></i></span>
+                    <a href="{$index.news.link}"><div class="word">{$index.news.name}<b>{$index.news.en_name}</b></div></a>
+                  </li>
+                	<li class="qiyi1">
+                    <span><i><img src="{$index.service.image}"/></i></span>
+                    <a href="{$index.service.link}"><div class="word">{$index.service.name}<b>{$index.service.en_name}</b></div></a>
+                  </li>                 
+                </ul>
+            </div>
+            <div class="left_class fl">
+            	<div class="list">
+                <div class="titla">● {$index.pro.name} <b>{$index.pro.en_name}</b></div> 
+                <div class="category">
+                     <ul>
+                     {foreach item=pro from=$index.pro.childmenu}
+                        <li><span>»</span><a href="{$pro.link}" class="h3_l" data-limit="12">{$pro.name}</a> </li>
+                      {if $pro@index eq 9}{break}{/if}
+                      {/foreach}                                                                                                      
+                    </ul>
+                </div>                 
+                </div>
+            </div>
+            <div class="product fr">
+            	<div class="prod_title"><span><a href="{$index.pro.link}">+<i>MORE</i></a></span>● {$index.pro.name} <b>{$index.pro.en_name}</b></div>
+              <!-- 滚动  -->    
+              <div class="slideBox1">
+                <div class="bd1">
+                  <div class="ulWrap">
+                    {$pronum=($index.pro.data|count)/2}
+                    {$num=0}
+                    {for $item=1 to $pronum}
+                    <ul>
+                      {foreach item=pro from=$index.pro.data}
+                      {if $num%2==0}
+                      <li>
+                        <a href="{$index.pro.data[$num].link}">
+                        <div class="pic2"><span><img src="{$index.pro.data[$num].image}" /></span></div>
+                        <div class="txt">
+                          <h3 class="h3_l" data-limit="10">{$index.pro.data[$num].title}</h3>
+                        </div>
+                        </a>
+                      </li>
+                      {else}
+                      <li>
+                        <a href="{$index.pro.data[$num].link}">
+                        <div class="pic2"><span><img src="{$index.pro.data[$num].image}" /></span></div>
+                        <div class="txt">
+                          <h3 class="h3_l" data-limit="10">{$index.pro.data[$num].title}</h3>
+                        </div>
+                        </a>
+                      </li>
+                      {/if} 
+                      {$num=$num+1}
+                      {if $num%2==0}{break}{/if}
+                      {/foreach}
+                    </ul>
+                    {/for}
+                  </div>
+                </div>
+                <!-- 下面是前/后按钮代码，如果不需要删除即可 -->
+                <a class="prev" href="javascript:void(0)"></a>
+                <a class="next" href="javascript:void(0)"></a>
+              </div>           
+            </div>
+
+            <div class="index_a">
+            	<div class="news fl">
+                	<div class="prod_titleb"><span><a href="{$index.news.link}">+<i>MORE</i></a></span>{$index.news.name} <b>{$index.news.en_name}</b></div>
+                        <div class="n_tu">
+                        {foreach item=news from=$index.news.data} 
+                          {if $news@index lt 1}
+                         	  <div class="n_img"><a href="{$news.link}"><img src="{$news.image}"/></a></div>
+                            <div class="n_word">
+                            	  <div class="n_title"><a href="{$news.link}">{$news.title}</a></div>
+                                <div class="huiyi_edit" >
+                                  <span class=" h3_l" data-limit="30">{$news.description}</span><Span><a href="{$news.link}">[详细]</a></Span>
+                                </div>                                
+                            </div>
+                          {/if}
+                      {if $news@index eq 1}{break}{/if}
+                      {/foreach} 
+                         </div>                          
+			            <div class="news_deta3">
+                      <ul> 
+                      {foreach item=news from=$index.news.data}	
+                      {if $news@index gt 0}
+                        <li><a href="{$news.link}"><span>{$news.pubtimestamp|date_format:'%Y-%m-%d'}</span>{$news.title} </a></li>
+                      {/if}
+                      {if $news@index eq 2}{break}{/if}
+                      {/foreach}   
+                      </ul>  
+                   </div>                     
+                </div>
+                <div class="about fl">
+                	<div class="prod_titleb"><span><a href="{$index.about_us.link}">+<i>MORE</i></a></span>{$index.about_us.name} <b>{$index.about_us.en_name}</b></div>
+                    <div class="border">
+                      <div class="n_img n_img1"><a href="{$index.about_us.link}">
+                      <img src="{$index.about_us.image}" />
+                      </a></div>
+                      <span class="anputt h3_l" data-limit="90">{$index.about_us.description}<span><a href="{$index.about_us.link}">[详细]</a></span>
+                      </span>                              
+                    </div>                
+                </div>
+                <div class="contact fr">
+                	<div class="prod_titleb"><span><a href="{$index.about_us.link}">+<i>MORE</i></a></a></span>{$index.contact_us.name} <b>{$index.contact_us.en_name} </b></div>
+                   <div class="lianxibg">
+                    联系人：{$contact.name}<br />
+                    电 话：{$contact.telephone}<br />
+                    传 真：{$contact.fax}<br />
+                    手 机：{$contact.mobile}<br />
+                    地 址：{$contact.address}<br />
+                   </div>                
+                </div>
+            </div>
+            <div class="case">
+            	<div class="prod_titlec"><span><a href="{$index.about_us.link}">+<i>MORE</i></a></span>● {$index.case.name} <b> \ {$index.case.en_name}</b></div>
+              <div class="inner">
+        
+<!-- 滚动  -->    
+              <div class="slideBox2">
+                <div class="bd1">
+                  <div class="ulWrap">
+                    {$pronum=($index.case.data|count)/2}
+                    {$num=0}
+                    {for $item=1 to $pronum}
+                    <ul>
+                      {foreach item=case from=$index.case.data}
+                      {if $num%2==0}
+                      <li>
+                        <a href="{$index.case.data[$num].link}">
+                        <div class="pic2"><span><img src="{$index.case.data[$num].image}" /></span></div>
+                        <div class="txt">
+                          <h3 class="h3_l" data-limit="10">{$index.case.data[$num].title}</h3>
+                        </div>
+                        </a>
+                      </li>
+                      {else}
+                      <li>
+                        <a href="{$index.case.data[$num].link}">
+                        <div class="pic2"><span><img src="{$index.case.data[$num].image}" /></span></div>
+                        <div class="txt">
+                          <h3 class="h3_l" data-limit="10">{$index.case.data[$num].title}</h3>
+                        </div>
+                        </a>
+                      </li>
+                      {/if} 
+                      {$num=$num+1}
+                      {if $num%2==0}{break}{/if}
+                      {/foreach}
+                    </ul>
+                    {/for}
+                  </div>
+                </div>
+                <!-- 下面是前/后按钮代码，如果不需要删除即可 -->
+                <a class="prev" href="javascript:void(0)"></a>
+                <a class="next" href="javascript:void(0)"></a>
+              </div>
+
+            </div>            
+            </div>
+            	
+        </div>   
+        
+        
+        {include file='./_footer.html'}     
+    </div>
+
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
