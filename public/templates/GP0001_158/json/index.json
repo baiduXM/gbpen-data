@@ -1,31 +1,74 @@
 {
-    "about_us": {
-		"description": "内容单页（如关于我们）",
-		"value": {},
-		"type": "page",
-		"config":{
-			"width":234,
-			"height":129
+	"slidepics": {
+		"value": [{
+			"title": "banner",
+			"image": "images/home_pic_1.jpg",
+			"link": ""
+		}, {
+			"title": "测试图2",
+			"image": "images/home_pic_2.jpg",
+			"link": ""
+		}, {
+			"title": "测试图2",
+			"image": "images/home_pic_1.jpg",
+			"link": ""
+		}, {
+			"title": "测试图2",
+			"image": "images/home_pic_2.jpg",
+			"link": ""
+		}, {
+			"title": "测试图2",
+			"image": "images/home_pic_1.jpg",
+			"link": ""
+		}],
+		"description": "多图轮播",
+		"type": "images",
+		"config": {
+			"width":1903,
+			"height": 979,
+			"limit": 5
 		}
 	},
-	"news":{
-		"description":"文字列表（如新闻中心）",
+    "about": {
+		"description": "关于我们",
+		"value": {},
+		"type": "page"
+	},
+    "news":{
+		"description":"新闻中心",
+		"value":{},
+		"type":"list"
+	},
+	"list1":{
+		"description":"底部棱形内第二导航第1个子栏目",
 		"value":{},
 		"type":"list",
 		"config":{
-			"width":95,
-			"height":73
+			"filter":"list,page"
 		}
-	},	
-
-	"pro":{
-		"description": "图片列表(如产品展示)",
-		"value": {},
-		"type": "list",
+	},
+	"list2":{
+		"description":"底部棱形内第二导航第2个子栏目",
+		"value":{},
+		"type":"list",
 		"config":{
-			"width":180,
-			"height":140
-		}		
+			"filter":"list,page"
+		}
+	},
+	"list3":{
+		"description":"底部棱形内第二导航第3个子栏目",
+		"value":{},
+		"type":"list",
+		"config":{
+			"filter":"list,page"
+		}
+	},
+	"list4":{
+		"description":"底部棱形内第二导航第4个子栏目",
+		"value":{},
+		"type":"list",
+		"config":{
+			"filter":"list,page"
+		}
 	}
-}                     
-
+}

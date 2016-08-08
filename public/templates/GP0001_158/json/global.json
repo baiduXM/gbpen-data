@@ -1,57 +1,37 @@
-{
-
-	"slidepics": {
-		"value": [{
-			"title": "banner1",
-			"image": "images/img.jpg",
-			"link": "article/1.html",
-			"description": "大图轮播1"
-		}, {
-			"title": "banner2",
-			"image": "images/img.jpg",
-			"link": "http://www.baidu.com",
-			"description": "大图轮播2"
-		},{
-			"title": "banner3",
-			"image": "images/img.jpg",
-			"link": "http://www.baidu.com",
-			"description": "大图轮播3"
-		}],
-		"description": "多图轮播",
-		"type": "images",
-		"config": {
-			"width":960,
-			"height": 281
+{	
+	"hot_news":{
+		"description":"新闻内容页底部的图片列表",
+		"value":{},
+		"type":"list",
+		"config":{
+			"limit":9,			
+			"width": 114,
+			"height": 114,
+			"star_only": true
+		}
+	},	
+	"link1":{
+		"description":"内页侧边栏第二导航第1个子栏目",
+		"value":{},
+		"type":"list",
+		"config":{
+			"filter":"list,page"
 		}
 	},
-	"links": {
-		"value": [{
-			"title": "百度",
-			"image": "images/f1.jpg",
-			"link": "http://www.baidu.com"
-		}, {
-			"title": "易尔通",
-			"image": "images/f2.jpg",
-			"link": "http://www.baidu.com"
-		}, {
-			"title": "谷歌",
-			"image": "images/f3.jpg",
-			"link": "http://www.baidu.com"
-		}, {
-			"title": "腾讯",
-			"image": "images/f4.jpg",
-			"link": "http://www.baidu.com"
-		}, {
-			"title": "小米",
-			"image": "images/f5.jpg",
-			"link": "http://www.baidu.com"
-		}],
-		"description": "友情链接",
-		"type": "images",
-		"config": {
-			"width": 104,
-			"height": 45
+	"link2":{
+		"description":"内页侧边栏第二导航第2个子栏目",
+		"value":{},
+		"type":"list",
+		"config":{
+			"filter":"list,page"
 		}
-	}
-
+	},
+	"link3":{
+		"description":"内页侧边栏第二导航第3个子栏目",
+		"value":{},
+		"type":"list",
+		"config":{
+			"filter":"list,page"
+		}
+	}		
 }
