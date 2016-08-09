@@ -31,5 +31,12 @@ $(document).ready(function() {
           $(this).siblings(".third").slideToggle()
       }) 
      jQuery(".slideBoxb").slide({mainCell:".bd ul",autoPlay:false,effect:"leftLoop"});
+
+     // alert($('logo').width());
+     if(window.screen.width > 1400 && window.screen.width < 1690){
+     	$('.logo').css("background-size","220px 220px");
+     	$('.logo').width("220px");
+     	$('.logo').height("220px");
+     }
 			
 })

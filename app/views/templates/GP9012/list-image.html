@@ -34,8 +34,7 @@
             <div class="crumb">
              {$list.en_name}
                 <span>current position
-：<a href="{$site_url}">Home page
-</a>
+：<a href="{$site_url}">Home page</a>
            {foreach item=nav from=$posnavs}
              &gt; <a href="{$nav.link}">{$nav.en_name}</a>
            {/foreach}</span>
@@ -48,26 +47,30 @@
          <li><a href="{$article.link}"><div class="img"> <img src="{$article.image}"/></div><p>{$article.title} </p></a></li>
     {/foreach}
      </ul>	
+     
+     
+     
+     
+     
+     
+                            
+                            
+                            
+                            
      <div class="module_page">
 
 
 
      
-                            first
-{$page_links.current_page}page
-/total {$page_links.page_count} page
-                            <a href="{$page_links.first_link}">Home page
-</a>
-                            <a href="{$page_links.prev_link}">previous page
-</a> 
+                            first{$page_links.current_page}page/total {$page_links.page_count} page
+                            <a href="{$page_links.first_link}">Home page</a>
+                            <a href="{$page_links.prev_link}">previous page</a> 
                             {foreach name=nears_link item=near_link key=near_page from=$page_links.nears_link} 
                             {if $near_page == $page_links.current_page}
                             <a class="current_near">{$near_page}</a> {else}
                             <a href="{$near_link}">{$near_page}</a> {/if} {/foreach}
-                            <a href="{$page_links.next_link}">next page
-</a>
-                            <a href="{$page_links.last_link}">back
-</a></div>
+                            <a href="{$page_links.next_link}">next page</a>
+                            <a href="{$page_links.last_link}">back</a></div>
 	</div>
                 
             </div>
