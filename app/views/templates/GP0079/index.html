@@ -37,16 +37,17 @@
 				<!-- 下面是前/后按钮代码，如果不需要删除即可 -->
 				<span class="arrow"><a class="next"></a><a class="prev"></a></span>
               <ul>
-                {foreach name=prolist item=article from=$index.prolist.childmenu}
-                <a href="{$article.link}"><li>{$article.name}</li></a>
-                   {if $article@index+1 == 3}{break}{/if}
-                 {/foreach}                  
+                
+                <a href="{$index.prolist1.link}"><li>{$index.prolist1.name}</li></a>
+                <a href="{$index.prolist2.link}"><li>{$index.prolist2.name}</li></a>
+                <a href="{$index.prolist3.link}"><li>{$index.prolist3.name}</li></a>
+                                   
                 
                 </ul>
 			</div>
 			<div class="bd">
 				 <ul class="prodshow">
-                {foreach name=article item=article from=$index.prolist.data}  
+                {foreach name=article item=article from=$index.prolist1.data}  
                       <li><a href="{$article.link}">
                       	<img src="{$article.image}" class="pica" />
                       	<div class="pri_title">{$article.title}</div>
@@ -56,7 +57,7 @@
                     {/foreach}      					
 				</ul>
 				<ul class="prodshow">
-                {foreach name=article item=article from=$index.prolist.data}  
+                {foreach name=article item=article from=$index.prolist2.data}  
                       <li><a href="{$article.link}">
                       	<img src="{$article.image}" class="pica" />
                       	<div class="pri_title">{$article.title}</div>
@@ -66,7 +67,7 @@
                     {/foreach}  
 				</ul>
 				<ul class="prodshow">
-                {foreach name=article item=article from=$index.prolist.data}  
+                {foreach name=article item=article from=$index.prolist3.data}  
                       <li><a href="{$article.link}">
                       	<img src="{$article.image}" class="pica" />
                       	<div class="pri_title">{$article.title}</div>
