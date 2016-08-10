@@ -50,10 +50,12 @@ else
 percent=.1*(diffY-lastScrollY); 
 if(percent>0)percent=Math.ceil(percent); 
 else percent=Math.floor(percent); 
-document.getElementById("scrollfull").style.top=parseInt(document.getElementById("scrollfull").style.top)+percent+"px";
+if (document.getElementById("scrollfull")) {
+	document.getElementById("scrollfull").style.top=parseInt(document.getElementById("scrollfull").style.top)+percent+"px";
+
+}
 
 lastScrollY=lastScrollY+percent; 
 }
 suspendcode="";
-document.write(suspendcode);
 window.setInterval("heartBeat()",10);
