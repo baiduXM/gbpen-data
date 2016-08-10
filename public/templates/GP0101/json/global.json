@@ -1,49 +1,38 @@
 {
-	"footclass":{
-		"value": [{
-			"title": "西餐类 <span>Western class</span>",
-			"image": "images/western.jpg",
-			"link": "article/1.html",
-			"description": "友情链接1"
-		}, {
-			"title": "中餐类 <span>Chinese class</span>",
-			"image": "images/chinese.jpg",
-			"link": "http://www.baidu.com"
-		},{
-			"title": "甜点类 <span>Dessert class</span>",
-			"image": "images/dessert.jpg",
-			"link": "http://www.baidu.com"
-		}],
-		"description": "友情链接",
-		"type": "images",
-		"config": {
-			"width": 322,
-			"height": 151,
-			"limit": 3
-		}
-	},
 	"slidepics": {
 		"value": [{
 			"title": "banner",
-			"image": "images/banner.jpg",
+			"image": "images/1.jpg",
 			"link": "article/1.html",
 			"description": "banner1"
 		}, {
 			"title": "测试图2",
-			"image": "images/banner.jpg",
+			"image": "images/2.jpg",
 			"link": "http://www.baidu.com"
 		},{
 			"title": "测试图3",
-			"image": "images/banner.jpg",
+			"image": "images/3.jpg",
+			"link": "http://www.baidu.com"
+		}, {
+			"title": "测试图4",
+			"image": "images/4.jpg",
+			"link": "http://www.baidu.com"
+		}, {
+			"title": "测试图5",
+			"image": "images/5.jpg",
 			"link": "http://www.baidu.com"
 		}],
 		"description": "头部大轮滚图",
 		"type": "images",
 		"config": {
-			"width": 1423,
-			"height": 379,
-			"limit": 3
+			"width": 1920,
+			"height": 450
 		}
+	},
+	"contact_way":{
+		"description":"首页联系我们",
+		"value":"</br>地址：厦门市思明区软件园...</br>联系人：X先生</br>手机：13489990000</br>电话：0592-23232232</br>传真：0592-8686886</br>邮箱：01@eexx.me</br></br>",
+		"type":"text"
 	},
 	"links": {
 		"value": [{
@@ -84,9 +73,9 @@
 		"type": "images",
 		"config": {
 			"width": 100,
-			"height": 100,
-			"limit": 5
+			"height": 100
 		}
 	}
-	
+
+
 }

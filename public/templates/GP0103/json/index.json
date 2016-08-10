@@ -1,80 +1,55 @@
 {
-
-
-   "news":{
-		"description": "新闻中心",
+	"pro":{
+		"description":"产品展示",
+		"value":{},
+		"type":"list",
+		"config": {
+			"height": 120,
+			"width":160
+		}
+	},
+	"news":{
+		"description": "新闻中心(banner下栏目二)",
 		"value": {},
 		"type": "list",
 		"config": {
-			"nav_width": 249,
-			"nav_height": 53
-			
+			"nav_height":105,
+			"nav_width":140
 		}
-
-	
-		
 	},
-	
-	
-	
-	
-	
-	
-	"about": {
-	    "value": {},
-		"description": "关于我们",
-		
+    "about_us": {
+		"description": "关于我们(banner下栏目一)",
+		"value": {},
 		"type": "page",
 		"config": {
-			"nav_width": 165,
-			"nav_height": 200
-		}	
-		
-	},	
-	
-	
-
-	   
-	
-		
+			"nav_height":105,
+			"nav_width":140
+		}
+	},
 	"contact_us": {
 		"description": "联系我们",
 		"value": {},
 		"type": "page"
-		
-
-	},
-	
-	
-	
-	
-	
-	
-	"second_navs1": {
-		"value": {},
-		"description": "快捷按钮",
-		"type": "list",
-		"config": {
-			"nav_width": 221,
-			"nav_height":61
-		}
-	},
-	
-	
-	
-	 "pro":{
-		"description": "产品中心",
+	},	
+	"case":{
+		"description": "案例展示",
 		"value": {},
 		"type": "list",
 		"config": {
-			"width": 130,
-			"height": 130
-			
+			"height":120,
+			"width":160
 		}
-	}
-	
-	    
-
-	
-	
+	},
+	"service":{
+		"description": "服务项目(banner下栏目三)",
+		"value": {},
+		"type": "list",
+		"config": {
+			"nav_height":105,
+			"nav_width":140
+		}
+	}	
 }
+               
+
+

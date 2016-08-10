@@ -1,66 +1,51 @@
-
-
- <div id="header" class="wrapper clearfix">
-  <h1>
-  <a href="{$site_url}"><img src="{$logo}" alt="{$title}"></a>
-  </h1>
-  <div class="tel">
-{$contact.telephone}
-  </div>
-  <div class="search"><form action="{$search_action}" method="GET">
-  <input type="text" name="s"  placeholder="请输入关键字" class="search_area" />
-  <input type="submit" class="search_btn"  value="搜索"/>
-</form></div>
- </div>
- 
- 
- 
-<div id="nav_bg">
-<div id="nav" class="wrapper">
-<div class="nav-wrap">
-      <ul class="clearfix">
-            {$limit = 7}
-            {if $navs|count lt $limit}{$limit = $navs|count}{/if}
-              <li class=" nav1" style="width:{100/($limit+1)}%"><a href="{$site_url}">网站首页</a></li>
-            {foreach name=navs item=nav from=$navs}
-            <li class="fl{if $nav.current} current{/if} aa" style="width:{100/($limit+1)}%">
-               <a href="{$nav.link}" class="nav_c">{$nav.name}</a>
-                <ul class="sub clearfix">
-                    {if $nav.childmenu} {foreach key=key item=nav_list from=$nav.childmenu}
-                    <li class="{if $nav.current}current{/if} cc"><a href="{$nav_list.link}">{$nav_list.name}</a></li>
-                    {/foreach} {/if}
-                </ul>
-            </li>
-            {if $nav@index+1 eq $limit}{break}{/if}
-            {/foreach}
-        </ul>
+ <div class="public header">
+	<div class="logo fl">
+    	<a href="{$site_url}" title="返回首页">
+    	<img src="{$logo}" />
+        </a>
+    </div>
+    <div class="tophome fr">
+        <div class="numbers">
+        <b>{$contact.telephone}</b>                
+        </div>
     </div>
 </div>
-</div>
 
- 
- 
- <div id="banner">
-<div id="slideBox" class="slideBox">
-					<div class="hd">
-						<ul>
-							{foreach name=slidepics item=slidepic from=$global.slidepics}
-							<li></li>
-							{/foreach}
-						</ul>
-					</div>
-					<div class="bd">
-						<ul>
-							{foreach name=slidepics item=slidepic from=$global.slidepics}
-									<li style="background:url({$slidepic.image}) no-repeat center; height:440px;"><a href="{$slidepic.link}" target="_blank"></a></li>
-							{/foreach}
-						</ul>
-					</div>
-				</div>
- </div>
- 
+
+<div class="nav">
+        <div class="public navbar">
+            <ul>
+                <li class="nav_li" style="width:{100/(($navs|count)+1)}%"><a href="{$site_url}">首页</a></li>
+                {foreach name=navs item=nav from=$navs}
+                <li class="{if $nav.current} current{/if} nav_li" style="width:{100/(($navs|count)+1)}%">
+                    <a href="{$nav.link}" class="a">{$nav.name}<i>{$nav.en_name}</i></a>
+                    {if $nav.childmenu}
+                    <ul class="sub">
+                        {foreach key=key item=nav_list from=$nav.childmenu}
+                        <li class="{if $nav.current}current{/if}"><a href="{$nav_list.link}">{$nav_list.name}</a></li>
+                        {/foreach}
+                    </ul>
+                    {/if}
+                </li>
+                {/foreach}
+            </ul>
+        </div>
+    </div>
 
 
 
-
-
+<div class="public banner">
+    <div class="focusBoxa" style="margin:0 auto">
+        <ul class="pic">
+            {foreach name=slidepics item=slidepic from=$global.slidepics}
+                <li><a href="{$slidepic.link}" target="_blank"><img src="{$slidepic.image}"/></a></li>
+            {/foreach}   
+        </ul>
+            <ul class="hd">
+            {foreach name=slidepics item=slidepic from=$global.slidepics}
+                <li></li>
+            {/foreach}
+            </ul>
+    
+    </div>                         
+</div> 

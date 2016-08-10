@@ -1,6 +1,16 @@
-<footer>
+	<div class='footer'>
+			<ul class="fo_mune">
+			 {foreach item=nav from=$navs}
+				<li class="{if $nav.current}current{/if}"><a href="{$nav.link}">{$nav.name}  </a>|</li>     
+				
+			{/foreach}
+			</ul>
+			
+			<span>{$footprint}</span>
+				
+			
+				
+		</div>
 
-	<div class="footer">{$footprint}</div>
 
-</footer>
-{$footscript}
+			
