@@ -1,5 +1,5 @@
 {
-	"site_url": "./",
+	"site_url": "",
 	"site_another_url": "#此刻已跳转到与viewport相符的显示界面",
 	"search_action": "searchresult.html",
 	"title": "网站标题",
@@ -7,9 +7,9 @@
 	"description": "这是这个页面的描述，这是一大段的描述语句，里面有很多的内容，多写点 多写点...",
 	"logo": "images/logo.png",
 	"favicon": "images/favicon.ico",
-	"stylecolor": "white",
+	"stylecolor": "red",
 	"footprint": "copyright 2014-2015",
-	"footscript": "<!-- 这里将会输出底部脚本代码 -->\n<script type=\"text/javascript\" src=\"http://chanpin.xm12t.com.cn/js/quickbar.js\"></script>",
+	"footscript": "<!-- 这里将会输出底部脚本代码 -->",
 	"headscript": "<!-- 这里将会输出头部脚本代码 -->",
 	"navs": [
 		{
@@ -635,27 +635,7 @@
 							"image": "http://chanpin.xm12t.com.cn/images/cat_01.jpg",
 							"description": "这是栏目的一段描述...",
 							"current": 0,
-							"type": 3,
-							"childmenu": [
-								{
-									"name": "导航F3aA",
-									"en_name": "Nav F3a",
-									"link": "list-imagetext.html",
-									"image": "http://chanpin.xm12t.com.cn/images/cat_01.jpg",
-									"description": "这是栏目的一段描述...",
-									"current": 0,
-									"type": 3
-								},
-								{
-									"name": "导航F3Ab",
-									"en_name": "Nav F3b",
-									"link": "list-imagetext.html",
-									"image": "http://chanpin.xm12t.com.cn/images/cat_01.jpg",
-									"description": "这是栏目的一段描述...",
-									"current": 0,
-									"type": 3
-								}
-							]
+							"type": 3
 						},
 						{
 							"name": "导航F3b",
@@ -702,26 +682,7 @@
 					"link": "list-imagetext.html",
 					"image": "http://chanpin.xm12t.com.cn/images/cat_01.jpg",
 					"description": "这是栏目的一段描述...",
-					"current": 1,
-					"childmenu": [
-						{
-							"name": "导航F3aa",
-							"en_name": "Nav F3a",
-							"link": "list-imagetext.html",
-							"image": "http://chanpin.xm12t.com.cn/images/cat_01.jpg",
-							"description": "这是栏目的一段描述...",
-							"current": 1,
-							
-						},
-						{
-							"name": "导航F3b",
-							"en_name": "Nav F3ab",
-							"link": "list-imagetext.html",
-							"image": "http://chanpin.xm12t.com.cn/images/cat_01.jpg",
-							"description": "这是栏目的一段描述...",
-							"current": 0
-						}
-					]
+					"current": 1
 				},
 				{
 					"name": "导航F3b",
