@@ -40,10 +40,10 @@
             </li>
             {/foreach}
         </ul>
-        <ul class="hd">
+        <ul class="hd" style="display: block;">
+             {foreach name=slidepics item=slidepic from=$global.slidepics}
             <li></li>
-            <li></li>
-            <li></li>
+            {/foreach}
         </ul>
     </div>
     {100/(($navs|count)+1)}

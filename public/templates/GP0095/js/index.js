@@ -8,7 +8,7 @@
  // });
  jQuery(document).ready(function($) {
 
- 	jQuery(".slideBox").slide({mainCell:".bd ul",autoPlay:true});
+ 	jQuery(".slideBox").slide({mainCell:".bd ul",autoPlay:true,interTime:5000});
  	jQuery("#nav").slide({ 
 								type:"menu",// 效果类型，针对菜单/导航而引入的参数（默认slide）
 								titCell:".nLi", //鼠标触发对象

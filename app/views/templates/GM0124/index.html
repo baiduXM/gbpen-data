@@ -57,7 +57,21 @@
 	<div class="contant">
 		 {include file="./_header.html"}
 		 {foreach item=mIndexCat from=$mIndexCats}
-			 {if $mIndexCat.type eq 3}
+			 {if $mIndexCat.type eq 2}
+		    <div class="products">
+		    	<h3><a href="{$mIndexCat.link}">【更多】</a><i class="iconfont icon">{$mIndexCat.icon}</i>{$mIndexCat.name}</h3>
+		    	<div class="pro_top">
+		    		<ul class="pto_list">
+		    		{foreach item=article from=$mIndexCat.data}
+						<li>
+							<a href="{$article.link}"><img src="{$article.image}" /><span class='title'><b>{$article.title}</b>{$article.description} </span></a>
+						</li>
+						 {if $article@index+1 == 4}{break}{/if}
+					{/foreach}
+					</ul>
+		    	</div>
+		    </div>
+		    {elseif $mIndexCat.type eq 3}
 		    <div class="products">
 		    	<h3><a href="{$mIndexCat.link}">【更多】</a><i class="iconfont icon">{$mIndexCat.icon}</i>{$mIndexCat.name}</h3>
 		    	<div class="pro_top">
