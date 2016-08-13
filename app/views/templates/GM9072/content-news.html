@@ -68,14 +68,14 @@
         <div class="index_show">
           <div class="d_titles">
             <h1 class="title1 public_color">{$article.title}</h1>
-            <hl class="title2 public_color">更新时间：{$article.pubdate}  </hl>
+            <hl class="title2 public_color">Update time：{$article.pubdate}  </hl>
           </div>
           <div class="box-m">
             <div class="boxmain-m">
               <div class="edite public_color" > {$article.content|unescape:"html"}</div>
               <ul class="inner_pages">
-             <li><a href="{$article.prev.link}" class="public_color">上一条:{$article.prev.title}</a></li>
-            <li><a href="{$article.next.link}" class="public_color">下一条:{$article.next.title}</a></li>
+             <li><a href="{$article.prev.link}" class="public_color">UP:{$article.prev.title}</a></li>
+            <li><a href="{$article.next.link}" class="public_color">NEXT:{$article.next.title}</a></li>
               </ul>
             </div>
           </div>

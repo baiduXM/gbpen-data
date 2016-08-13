@@ -94,21 +94,10 @@
             <div class="nytop">
                 <div class="col-tit">
                     <h2>{$list.name}</h2><span>{$list.en_name}</span>
-                    <img src="{$site_url}images/siderightbg.png">
                 </div>
                 <span class="fontbox">字体</span>
                 <span class="more2">分类 <i><img src="{$site_url}images/classarrow.png" alt=""></i></span>
-            <!--   <h2>关于我们</h2> -->
-       <!--        <div class="fontbox">A<span>+</span></div>
-              <div class="more2">分类 <i>&or;</i></div> -->
-
             </div>
-<!--             <div class="hide-class">
-              <dl><a href="#">公司简介</a></dl>
-              <dl><a href="#">关于我们</a></dl>
-              <dl><a href="#">企业文化</a></dl>
-              <dl><a href="#">公司简介</a></dl>
-            </div> -->
              <ul  class="hide-class">
                   {foreach name=pagenavs item=nav from=$pagenavs}
                     <li><a href="{if $nav.childmenu}javascript:;{else}{$nav.link}{/if}">{$nav.name}</a>

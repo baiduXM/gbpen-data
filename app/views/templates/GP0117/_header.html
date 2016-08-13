@@ -1,0 +1,51 @@
+
+
+    <div class="nytop">
+        <div class="header">
+            <div class="logo"><a href="{$site_url}"><img src="{$logo}" alt=""></a></div>
+        </div>
+        <div class="banner">
+          <img src="{$global.slidepic.image}" alt="">
+        </div>
+    </div>
+    <div class="menu">
+        {$limit = 5}
+
+        <ul id="nav" class="nav">
+
+            <li class="nLi on" style="width:{100/($limit+1)}%">
+                <h3><a href="{$site_url}"><i class="iconfont">&#xe620;</i>网站首页</a></h3>
+            </li>
+            {foreach name=navs item=nav from=$navs}
+            <li class="{if $nav.current}on{/if} nLi" style="width:{100/($limit+1)}%">
+                <h3>
+                    <a href="{$nav.link}">{$nav.icon}{$nav.name}</a>
+                </h3>               
+            </li>
+            {if $nav@index+1 gte $limit}{break}{/if}
+            {/foreach}
+        </ul>
+    </div>
+
+
+
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
