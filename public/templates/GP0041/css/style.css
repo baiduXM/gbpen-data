@@ -195,7 +195,7 @@ ul.third li a:hover{color:#2883c2; font-weight: bold;}
 
 /* 内页左侧分类联系我们*/
 .ncontact{ padding: 16px; background: #ffffff; border-radius:4px; box-shadow: 0px 3px 0px #b8c7d1;}
-.ncontact span{ display: block; font-size: 29px; color:#ff9000;}
+.ncontact span{ display: block; font-size: 24px; color:#ff9000;}
 .ncontact i{ font-size: 14px; color: #ff9000;}
 .ncontact .address{ font-size: 14px; color: #666666; line-height: 22px; padding-top: 8px;}
 
@@ -262,7 +262,7 @@ h2.inner_news_time a:hover{ color:#ff9000; text-decoration:underline;}
 .slideBox .hd ul li.on{ background:#f00; color:#fff; }
 .slideBox .bd{ position:relative;z-index:0; width:500px;margin:0px auto; text-align:center;   }
 .slideBox .bd li{ zoom:1; vertical-align:middle; }
-.slideBox .bd img{ display:block; margin:0px auto; text-align:center; }
+.slideBox .bd img{ display:block; margin:0px auto; text-align:center; width:500px;}
 /* 下面是前/后按钮代码，如果不需要删除即可 */
 .slideBox .prev,
 .slideBox .next{ position:absolute; left:3%; top:50%; margin-top:-25px; display:block; width:32px; height:40px; background:url(../images/prev.png) left no-repeat;}

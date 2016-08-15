@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html manifest="huancun.manifest">
 <head>
 <!-- 实时预览调试代码，模板开发完成后删除 -->
 		
@@ -44,7 +44,7 @@
 <link href="{$site_url}css/lanrenzhijia.css" type="text/css" rel="stylesheet" />
 <link href="{$site_url}css/swipe.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" rev="stylesheet" href="{$site_url}css/style_{$stylecolor}.css" type="text/css" />
-
+<script src="{$site_url}js/TouchSlide.1.1.js"></script>
 <script type="text/javascript" src="{$site_url}js/jquery.min.js"></script>
 <script type="text/javascript" src="{$site_url}js/function.js"></script>
 <script type="text/javascript" src="{$site_url}js/lanrenzhijia.js"></script>
@@ -54,44 +54,45 @@
 <body>
 <div class="body">
 	{include file='./_dh.html'}
-  <div class="wrap page-active">
-  	{include file='./_zdcustom.html'}
-    <h1 class="fixed-top">
-         <span class="fixed-btn backa">
-         <a href="javascript:window.history.back()">〈 返回</a>
-       </span>
-      <div class="menu2" id="daohang"><span></span></div> 
-    </h1>
-    <div class="index-wrap">
-    	<div class="index_show" style="margin:45px 0px 0px;">
-          <div class="boxmain_detal">
-             <div class="boxmain_d">
-              	<h1 class="boxmain-top">
-                   <span class="more3" id="first">分类<span id="down"> &darr;</span><span id="up"> &uarr; </span></span>
-                   {$list.name}
-                </h1>
-                 {include file='./_nav.html'}                   
-                <div class="boxmain-ny-m">
-                    <div class="pros_showa">
-                      <ul>
-                    					{foreach name=article item=article from=$list.data}
-                                        <li><a href="{$article.link}">
-                                            <div><p><img  src="{$article.image}" width="100%" /></p><span class="imgword">{$article.title}</span></div>
-                                            </a>
-                                        </li>
-                              {/foreach}
-                      </ul>   
-                      <div class="next1"><a href="{$page_links.first_link}">首页</a><a href="{$page_links.prev_link}">上一页</a>{$page_links.current_page}/{$page_links.page_count}　<a href="{$page_links.next_link}">下一页</a><a href="{$page_links.last_link}">尾页</a></div>          
-                    </div>                           		
-                </div>
-        
-            </div>           	
-          </div>
+<div class="wrap page-active">
+	{include file='./_zdcustom.html'}
+<h1 class="fixed-top">
+     <span class="fixed-btn backa">
+       <a href="javascript:window.history.back()">〈 返回</a>
+     </span>
+    <div class="menu2" id="daohang"><span></span></div> 
+   </h1>
+<div class="index-wrap">
+	<div class="index_show" style="margin:45px 0px 0px;">
+      <div class="boxmain_detal">
+         <div class="boxmain_d">
+        	<h1 class="boxmain-top">
+             <span class="more3" id="first">分类<span id="down"> &darr;</span><span id="up"> &uarr; </span></span>
+             {$list.name}
+            </h1>
+             {include file='./_nav.html'}                   
+          <div class="boxmain-ny-m">
+<div class="pros_showa">
+  <ul>
+					{foreach name=article item=article from=$list.data}
+                    <li><a href="{$article.link}">
+                        
+                        <div><p><img  src="{$article.image}" width="100%" /></p><span class="imgword">{$article.title}</span></div>
+                        </a>
+                    </li>
+                    {/foreach}
+                 </ul>   
+  <div class="next1"><a href="{$page_links.first_link}">首页</a><a href="{$page_links.prev_link}">上一页</a>{$page_links.current_page}/{$page_links.page_count}　<a href="{$page_links.next_link}">下一页</a><a href="{$page_links.last_link}">尾页</a></div>          
+                </div>                           		
+           </div>
+    
+        </div>           	
         </div>
-      <footer class="foot">{$footprint}</footer>
-     </div>
-     {$footscript}
-  </div>
+    </div>
+    <footer class="foot">{$footprint}</footer>
+   </div>
+   {$footscript}
+</div>
 </div>
 
 </body>

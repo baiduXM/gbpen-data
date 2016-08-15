@@ -26,7 +26,10 @@ $(function(){
 	
 	
 	var mySwiper = new Swiper('.baner .swiper-container',{
-	loop:true
+	pagination: '.pagination',
+    paginationClickable: true,
+	loop:true,
+    mode: 'vertical'
 	
   })
 	//幻灯片元素与类"menu_body"段与类"menu_head"时点击
