@@ -39,7 +39,12 @@
           </div>                        
         </div> 
         <div class="rightside fr">
-           <div class="a_titlec"><span>所在位置:<a href="#">首页</a> &gt; <a href="#">产品中心</a></span>产品中心</div>
+           <div class="a_titlec">
+            <span>所在位置:<a href="{$site_url}">首页</a>
+            {foreach item=nav from=$posnavs} &gt; <a href="{$nav.link}">{$nav.name}</a>{/foreach}
+            </span>
+            {$list.name}
+          </div>
            <div class="deteo">
              <div class="ny_prod">
               	<ul class="inner_pro">

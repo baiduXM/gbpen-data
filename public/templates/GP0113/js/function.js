@@ -1,5 +1,5 @@
 $(document).ready(function() {
-$(".deteo").height($(".ny_detal").height()-45)	
+// $(".deteo").height($(".ny_detal").height()-45)	
 	//实例一
 	$("#menu>ul>li>h3 a").wrapInner('<span class="out"></span>' ).append('<span class="bg"></span>');
 	$("#menu>ul>li>h3 a").each(function(){
