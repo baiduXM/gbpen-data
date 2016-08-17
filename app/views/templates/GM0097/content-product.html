@@ -39,7 +39,7 @@
 <body>
 
 <div class="className p_r"><span class="forword"><</span>{$article.category.name}
-         <i class="iconfont demo-icon icon-th-list slide-nav iconnav p_a">&#xe603;</i>
+        
 </div>
    {include file="./_pagenavs_sub3.html"}
 
@@ -47,11 +47,24 @@
          <h3 class="protit">{$article.title}</h3>
            
 
-            <div class="font">发布日期：2015-09-15  字体： <span class="d">大</span> | <span class="z">中</span> | <span class="x">小</span></div>
+            <div class="font">发布日期：{$related[0].pubdate}  字体： <span class="d">大</span> | <span class="z">中</span> | <span class="x">小</span></div>
            <div class="infos newsdet">
-           	       <figure><img src="{$article.image}" ></figure>
+            <div id="slideBox" class="slideBox">
+                 <div class="hd" style="display: none;">
+                    <ul></ul>
+                 </div>
+                 <div class="bd">
+                    <ul>
+                       {foreach item=image from=$article.images}
+                         <li><img src="{$image.image}" alt="{$image.title}" /></li>
+                       {/foreach}
+
+                   </ul>
+                </div>
+           </div>
+           	<br/>
 <div class="pxq">
-	{$article.content}
+	{$article.content|unescape:"html"}
 </div>
 
              <ul class="next_pre">
@@ -74,6 +87,7 @@
         {$footscript}
 
 <script src="{$site_url}js/jquery.min.js"></script>
+<script type="text/javascript" src="{$site_url}js/TouchSlide.1.1.js"></script>
 <script type="text/javascript" src="{$site_url}js/function.js"></script>
 </body>
 </html>

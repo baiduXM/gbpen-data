@@ -4,7 +4,7 @@
 a{ color: #666; text-decoration:none}
 a:hover{color:#0161c4;}
 table{border-collapse:collapse; border-spacing:0px;}
-body{word-wrap:break-word;color: #666;font: 12px/200% "宋体";overflow-x: hidden;background-color: #fff;}
+body{word-wrap:break-word;color: #666;font: 12px/200% "宋体";background-color: #fff;}
 ul,dl,li,i{list-style:none;}
 h1,h2,h3,h4,h5{font-size:12px;font-weight:normal;}
 i,em{font-style:normal;font-weight:normal;list-style:none;}
@@ -14,7 +14,7 @@ img{border: none;}
 .wap{width: 100%;height: auto;overflow: hidden;}
 
 .w1{width: 1000px;height: auto;margin: 0 auto;background: url(../images/1.png) no-repeat center;}
-.w2{width: 1680px;height: auto;margin: 0 auto;overflow: hidden;}
+.w2{width: 1680px;height: auto; position: relative; left: 50%; margin-left: -840px; overflow: hidden;}
 .w{width: 1000px;height: auto;margin: 0 auto;overflow: hidden;}
 
 .f_l{float: left;}

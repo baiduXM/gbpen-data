@@ -72,13 +72,13 @@
             <ul>
             	<li><div class="mlist_null"></div></li>
                 <li><div class="mlist"><a  onclick="javascript:window.location.href='{$navs[0].link}'">{$navs[0].icon}<p class="pword">{$navs[0].name}</p></a></div></li>
-                <li><div class="mimg"><a  onclick="javascript:window.location.href='{$navs[0].link}'"><img src="{$navs[0].image}" width="118px" height="100px"></a></div></li>
+                <li><div class="mimg"><a  onclick="javascript:window.location.href='{$navs[0].link}'"><img src="{$navs[0].image}"  height="100px"></a></div></li>
             </ul>
             {/if}
             {if $nav_num gte 3}
             <ul>
                 <li><div class="mlist"><a  onclick="javascript:window.location.href='{$navs[1].link}'">{$navs[1].icon}<p class="pword">{$navs[1].name}</p></a></div></li>
-                <li><div class="mimg"><img src="{$navs[1].image}" width="118px" height="100px"></div></li>
+                <li><div class="mimg"><img src="{$navs[1].image}"  height="100px"></div></li>
                 <li><div class="mlist"><a  onclick="javascript:window.location.href='{$navs[2].link}'">{$navs[2].icon}<p class="pword">{$navs[2].name}</p></a></div></li>
             </ul>
             {/if}
@@ -86,7 +86,7 @@
             {if $nav_num gte 4}
             {$cos=3}{else}{$cos=1}{/if}
             <ul>
-                <li><div class="mimg"><img src="{$navs[$cos].image}" width="118px" height="100px"></div></li>
+                <li><div class="mimg"><img src="{$navs[$cos].image}" height="100px"></div></li>
                 <li><div class="mlist"><a  onclick="javascript:window.location.href='{$navs[$cos].link}'">{$navs[$cos].icon}<p class="pword">{$navs[$cos].name}</p></a></div></li>
                 <li><div class="mlist_null"></div></li>
             </ul>
@@ -95,7 +95,7 @@
             <ul>
                 <li><div class="mlist"><a  onclick="javascript:window.location.href='{$navs[4].link}'">{$navs[4].icon}<p class="pword">{$navs[4].name}</p></a></div></li>
                 <li><div class="mlist_null"></div></li>
-                <li><div class="mimg"><a  onclick="javascript:window.location.href='{$navs[4].link}'"><img src="{$navs[4].image}" width="118px" height="100px"></a></div></li>
+                <li><div class="mimg"><a  onclick="javascript:window.location.href='{$navs[4].link}'"><img src="{$navs[4].image}" height="100px"></a></div></li>
             </ul>
             {/if}
         </div>

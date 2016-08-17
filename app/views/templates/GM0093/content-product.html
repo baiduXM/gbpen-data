@@ -30,6 +30,7 @@
 <link rel="stylesheet" href="{$site_url}css/swiper.css">
 <link href="{$site_url}css/iconfont.css" rel="stylesheet" type="text/css" />
 <link href="{$site_url}css/css.css" rel="stylesheet" type="text/css" />
+<script src="{$site_url}js/TouchSlide.1.1.js"></script>	
 <script type="text/javascript">
 	window.addEventListener('load', function(){
    setTimeout(function(){ window.scrollTo(0, 1); }, 100);
@@ -43,7 +44,7 @@
 		<div class="main">
 		  
             <div class="classNamexq p_r"><span class="forword">< 返回</span>{$article.category.name}
-      <i class="icon iconfont slide-nav iconnav p_a">&#xe60f;</i> 
+  
 		</div>
             <div class="about aboutdet">
             	
@@ -52,8 +53,23 @@
 		           <h3 class="protit">{$article.title}</h3>
 		           <div class="fonts"><span class="d">大</span> | <span class="z">中</span> | <span class="x">小</span></div>
 		           <div class="infos">
-		       <figure class="nimg"><img src="{$article.image}"  alt=""></figure>
-			     {$article.content}
+
+		       
+
+		        <div id="slideBox" class="slideBox1">
+			    	<div class="hd">
+			            <ul></ul>
+			        </div>
+					<div class="bd">
+						<ul>
+				        {foreach item=image from=$article.images}
+							<li><img src="{$image.image}"  style="width: 99%;"/></li>
+						{/foreach}
+						</ul>
+					</div>
+				</div>
+					<br/><br/>
+			     {$article.content|unescape:"html"}
 			     </div> 
 
 			       <ul class="next_pre">
@@ -74,9 +90,10 @@
 
 </div>
 <script src="{$site_url}js/jquery.min.js"></script>
-<script type="text/javascript" src="{$site_url}js/function.js"></script>
 <script type="text/javascript" src="{$site_url}js/lazyload.js"></script>
 <script type="text/javascript" src="{$site_url}js/swiper.min.js"></script>
 <script type="text/javascript" src="{$site_url}js/about.js"></script>
+<script type="text/javascript" src="{$site_url}js/TouchSlide.1.1.js"></script>
+<script type="text/javascript" src="{$site_url}js/function.js"></script>
 </body>
 </html>

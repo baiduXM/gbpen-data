@@ -46,34 +46,15 @@
 	{$headscript}
 </head>
 <body>
-<div class="class">
-  <h1 class="class-top"><span class="class-close">×</span>快速搜索</h1>
-  <div class="class-m">
-  <div class="swiper-container scroll-container">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide">
-                        	<div class="search_all">
-                    	<form action="{$search_action}" method="GET">
-                 	<div class="suosuo">
-                       
-                           <div class="ss_input"><input type="text" name="s" value=""  class="txt1" id="strName" autofocus="autofocus"></div>
-                             <div class="ss_btn"><input type="submit" class="btn1" value="搜索"> </div>
-                          
-                                                  
-                    </div>  </form>                          
-                            </div>
-  	
-    </div></div></div>
-  </div>
-</div>
+    {include file="./_header.html"} 
            
    <div class="index-wrap">
           <div class="wrap-bg">
             <div class="header">           		
                 <div class="logo"><img src="{$logo}" width="100%"></div>
-                <div class="menu2"  id="quickbar" ><a href="#" id="quickbar-navs-btn"><span></span></a></div>
+                <div class="menu2"  id="quickbar" ><a href="#" id="quickbar-navs-btn"><span><img src="{$site_url}images/zz1.png"></span></a></div>
                 <div class="search" id="daohang">
-                  <a href="#"><span></span></a>
+                  <a href="#"><span><img src="{$site_url}images/zz2.png"></span></a>
                 </div>   
            </div> 
             <div class="baner">
@@ -92,26 +73,12 @@
             
            </div>  
           </div>
-          <div class="menu">
-               <div class="nav">
-                 <a class="arrow-left" href="#">&lt;</a> 
-                 <a class="arrow-right" href="#">&gt;</a>
-                 <div class="swiper-nav swiper-container">
-                   <div class="swiper-wrapper"> 
-                       <div class="swiper-slide">
-                           <div class="menu_icon"><a href="{$site_url}"><div class="menu_tb"><img src="{$site_url}images/icon1.png"></div><div class="menu_wrd">网站首页</div></a></div>                           
-                       </div>
-                        {foreach item=nav from=$navs}
-                           <div class="swiper-slide"><div class="menu_icon"><a href="index.html"><div class="menu_tb"><img src="{$nav.image}"></div><div class="menu_wrd">{$nav.name}</div></a></div></div>                        {/foreach}                                         
-                      </div>
-                    </div>
-                    </div>
-          </div>
+        
          <div class="index_show">
            {foreach item=mIndexCat from=$mIndexCats}
-               {if $mIndexCat.type eq 2}            
+               {if $mIndexCat.type eq 2}        
    	        <div class="index_prod">
-         	 <div class="pro_title">{$mIndexCat.name}<b>{$mIndexCat.en_name}</b></div>
+         	 <div class="pro_title"><a href="{$mIndexCat.link}" style="color: black;">{$mIndexCat.name}<b>{$mIndexCat.en_name}</b></a></div>
                <dl class="prodshow">
                   {foreach item=article from=$mIndexCat.data}  
                    {if  $article@index == 0}         
@@ -119,8 +86,10 @@
                         <div class="showimg">
                             <div class="cimg"><img src="{$article.image}" width="100%"></div>
                             <div class="c_wprd">
-                                <div class="iconta"><img src="{$site_url}images/icona.png"></div>
-                                <div class="ic_word">{$article.title}</div>
+                                <div class="iconta"></div>
+                                <div class="ic_word" style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis;">
+                                  <a href="{$article.link}">{$article.title}</a>
+                                </div>
                             </div>
                             
                         </div>
@@ -129,8 +98,10 @@
                     <dd>
                         <div class="showimg">
                             <div class="c_wprd">
-                                <div class="iconta"><img src="{$site_url}images/iconb.jpg"></div>
-                                <div class="ic_word">{$article.title}</div>
+                                <div class="iconta"></div>
+                                <div class="ic_word" style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis;">
+                                  <a href="{$article.link}">{$article.title}</a>
+                                </div>
                             </div>                
                             <div class="cimg"><img src="{$article.image}" width="100%"></div>
                             
@@ -141,31 +112,40 @@
                  </dl>
              
            </div>
+		   
+		   
+		   
+		   
             {elseif $mIndexCat.type eq 3} 
               <div class="index_news">
-              <div class="pro_title">{$mIndexCat.name}<b>{$mIndexCat.en_name}</b></div>
+              <div class="pro_title"><a href="{$mIndexCat.link}" style="color: black;">{$mIndexCat.name}<b>{$mIndexCat.en_name}</b></a></div>
               <div class="newsbg">
               {foreach item=article from=$mIndexCat.data}   
                  <div class="index_xwzx">
                     <div class="nimg_index"><img src="{$mIndexCat.image}" width="100%"></div>
-                    <div class="news_title"><a href="{$article.link}">{$article.title}</a></div>
+                    <div class="news_title" style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis;">
+                      <a href="{$article.link}">{$article.title}</a>
+                    </div>
                     <div class="news_p">
                   {$article.description}
                     </div>
-                    <div class="mores"><span><a href="#">More</a></span>日期：{$article.pubdate} </div>
+                    <div class="mores"><span><a href="{$article.link}">More</a></span>日期：{$article.pubdate} </div>
                  </div>
                     {if $article@index+1 == 1}{break}{/if}
                {/foreach}
               </div>
            </div> 
+		   
+		   
+		   
              {elseif $mIndexCat.type eq 1} 
              <div class="index_about">
-             <div class="pro_title">{$mIndexCat.name}<b>{$mIndexCat.en_name}</b></div>
+             <div class="pro_title"><a href="{$mIndexCat.link}" style="color: black;">{$mIndexCat.name}<b>{$mIndexCat.en_name}</b></a></div>
              <div class="i_gywm">
                 <dl>
                  {foreach item=article from=$mIndexCat.data}  
                    {if  $article@index == 0}   
-                    <dd>
+                    <dd class="aaaa">
                         <div class="left_clorbg">
                             <div class="c_titl"><a href="{$article.link}">{$article.title}</a></div>
                              <div class="mores_a"><a href="{$article.link}">More</a></div>
@@ -194,7 +174,7 @@
 
             {/if}
            {/foreach}  
-       <div class="index_contact">
+       <div class="index_contact" style="padding-bottom: 0;">
           <div class="pro_title">联系我们<b>Contact Us</b></div>
           <div class="i_lianxi">
             公司地址:{$contact.address}<br>
@@ -202,10 +182,20 @@
             传真:{$contact.fax}<br>
             邮箱:{$contact.mail} 
           </div>
-       </div>              
+          
+       </div> 
+       <div class="index_contact" style="padding: 0;background-color: #846755;margin-top: 10px;">
+          <div class="i_lianxi" style="margin-top: 10px;width: 80%;float: left;background-color: #846755;">
+            {$footprint}
+          </div>
+          <div style="background-color: #4a3c33;width: 50px;border-radius: 10px;color: white;text-align: center;width: 10%;float: left;margin-top: 10%;">
+            <a class="top">Top</a>
+          </div>
+       </div>               
    </div>         
       </div>
-      {$footprint}
+      
+      
     {$footscript}  
 </body>
 </html>

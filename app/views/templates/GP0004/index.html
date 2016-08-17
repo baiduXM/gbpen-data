@@ -38,7 +38,7 @@
                 <li><a href="{$global.case.link}" onClick="jarallax.jumpToProgress( 57, 1500, 30);return false;">{$global.case.name}</a></li>
                 <li><a href="{$global.feedback.link}" onClick="jarallax.jumpToProgress( 71, 1500, 30);return false;">{$global.feedback.name}</a></li>
                 <li><a href="{$global.contact_us.link}" onClick="jarallax.jumpToProgress( 86, 2000, 30);return false;">{$global.contact_us.name}</a></li>
-                {foreach name=navs item=nav from=$global.fixed_navs}
+                {foreach name=navs item=nav from=$footer_navs}
                 <li>
                     <a href="{$nav.link}">{$nav.name}</a>
                 </li>

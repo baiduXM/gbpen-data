@@ -1,6 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
-strong{display: block;margin: 0 auto;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+strong{display: inline;margin: 0 auto;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
 .second{ display:none}
 .module_page{ width:100%;  line-height:20px;margin-top:30px;text-align:center; height:30px;}
 .module_page a{ text-decoration:none; color:#555454; /*color:#0c2d63;*/color:#633100; border:1px solid #b99e8b; background:#b99e8b;padding:3px 4px;}

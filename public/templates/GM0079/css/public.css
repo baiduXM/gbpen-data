@@ -2,7 +2,7 @@
 .relative{ position:relative;}
 .body{ position: absolute; width:100%; height:100%; min-width:320px; max-width:640px; overflow:hidden; }
 .wrap{ width:100%; height:100%; position: absolute; top:0px; left:0px; z-index:5; /*background:#815b2f; */}
-.index-wrap{width:100%;min-height: 100%; overflow:hidden;overflow-y : auto; -webkit-overflow-scrolling:touch;overflow-scrolling: touch; position:absolute; top:0px; left:0px;background: url(../images/bg1.jpg) no-repeat;background-size: cover; }
+.index-wrap{width:100%; overflow:hidden;overflow-y : auto; -webkit-overflow-scrolling:touch;overflow-scrolling: touch; position:absolute; top:0px; left:0px;background: url(../images/bg1.jpg) no-repeat;background-size: cover; }
 .main{ margin:5px 9px 10px; height:auto; overflow:hidden; animation:opacity 1.5s linear;-webkit-animation:opacity 1.5s linear; }
 .header{ width:100%;height: auto; overflow:hidden; position:relative;vertical-align: middle;background: rgba(48,91,160,0.8);}
 /*.header .headimg{width: 100%;height: auto;position: absolute;top: 0;}*/
@@ -12,7 +12,7 @@
 /*.menubg{ width:100%; height:auto; overflow:hidden; position:absolute; left:0px; bottom:0px;}*/
 /*.headerhome,.headersearch{  position:absolute; left:15px; top:50%; border-radius:100%;  border:1px solid #fff; padding:5px;transform:translate(0,-50%);-webkit-transform:translate(0,-50%); z-index:1}*/
 /*.headersearch{ left: auto; right:15px; transform:rotate(90deg) translate(-50%,0);-webkit-transform:rotate(0deg) translate(-50%,0); border-radius:100%;  border:1px solid #fff; padding:5px;}*/
-.foot{margin:0px 0px 0px; height:auto; line-height:30px;text-align:center;  position:relative; color:#fff;}
+.foot{margin:0px 0px 0px; height:auto; line-height:30px;text-align:center;  position:relative; color:#fff;background-color: #2694e5}
 /*.back-top{display: none; height:30px; width:50px; line-height:18px;overflow:hidden; right:9px; position:absolute; text-align:center;  color:#dddddd; animation: lightheight 1s linear 2s infinite alternate;-webkit-animation: lightheight 1s linear infinite alternate;}*/
 /*.back-top a{ color:#999; display:block;}*/
 .tell-icon{ height:35px; overflow:hidden; line-height:35px; background:url(../images/tellicon.png) 10px center no-repeat #603b1b; background-size: auto 20px; position:absolute; bottom:58px; left:0px; z-index:99; width:100%; text-indent:35px; color:#fff; font-size:1.13em; display:none; }
@@ -67,12 +67,12 @@ ul.class-list li.cu{ height:auto; overflow:hidden;}
 
 /*分享结束*/
 /*banner开始*/
-/*.banner{width: 57.8%;margin-right: 0.2%;float: left;}*/
+.banner{width: 57.8%;margin-right: 0.2%;height: auto;}
 
 
 /*.banner{width:55%;background: blue;}*/
 
-.slideBox{position:relative; overflow:hidden;width: 57.8%;margin-right: 0.2%;}
+.slideBox{position:relative; overflow:hidden;}
 .slideBox .hd{ width:100%; height:11px;  position:absolute; bottom:5px; text-align:center; z-index:2;display: none }
 .slideBox .hd ul{ display:inline-block; height:7px; padding:3px 5px; 
 	-webkit-border-radius:5px; -moz-border-radius:5px; border-radius:5px; font-size:0; vertical-align:top;

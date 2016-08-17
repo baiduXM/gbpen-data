@@ -39,7 +39,7 @@
 <body>
 
 <div class="className p_r"><span class="forword"><</span>{$article.category.name}
-         <i class="iconfont demo-icon icon-th-list slide-nav iconnav p_a">&#xe603;</i>
+        
 </div>
    {include file="./_pagenavs_sub3.html"}
 
@@ -51,7 +51,7 @@
            <div class="infos newsdet">
            	       <figure><img src="{$article.image}" ></figure>
 <div class="pxq">
-	{$article.content}
+	{$article.content|unescape:"html"}
 </div>
 
              <ul class="next_pre">
@@ -74,6 +74,7 @@
         {$footscript}
 
 <script src="{$site_url}js/jquery.min.js"></script>
+<script type="text/javascript" src="{$site_url}js/TouchSlide.1.1.js"></script>
 <script type="text/javascript" src="{$site_url}js/function.js"></script>
 </body>
 </html>

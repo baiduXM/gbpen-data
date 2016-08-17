@@ -4,11 +4,11 @@
 		"value": {},
 		"type": "page"
 	},
-	"products":{
-		"description": "产品中心",
-		"value": {},
-		"type": "list",
-		"config": {
+	"img_list":{
+		"value":{},
+		"description":"首页产品模块10张图片列表",
+		"type":"list",
+		"config":{
 			"width":240,
 			"height": 192
 		}
@@ -34,14 +34,6 @@
 			"width":565,
 			"height": 565
 		}
-	},
-	"img_list":{
-		"value":{},
-		"description":"首页产品模块10张图片列表",
-		"type":"list",
-		"config":{
-			"width":240,
-			"height": 192
-		}
 	}
+	
 }

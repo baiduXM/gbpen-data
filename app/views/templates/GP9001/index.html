@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"/>
+<script type="text/javascript">
+	// 跳转手机页面
+	{if $site_another_url}
+	if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+	    location.href = '{$site_another_url}';
+	} {/if}
+</script>
+
+
+<title>{$title}</title>
+<meta name="keywords" content="{$keywords}" />
+<meta name="description" content="{$description}" />
+<link rel="stylesheet" href="{$site_url}css/globle.css">
+<link rel="stylesheet" href="{$site_url}css/home.css">
+
+<!--[if lte IE 8]>
+<link rel="stylesheet" href="css/ie.css">
+<![endif]-->
+
+<!--[if lte IE 7]>
+<style type="text/css">
+.main,.search,.header,.hoverview,.slash{
+	before:'';
+}
+.slash{
+	after:'';
+	z-index:10;
+}
+.slash .before{
+	z-index: 11;
+}
+.slash .after{
+	z-index: 12;
+}
+.nav{
+	z-index: 13;
+}
+.icon{
+	z-index:20;
+}
+</style>
+<![endif]-->
+<link rel="stylesheet" href="{$site_url}css/ajust.css">
+<script src="{$site_url}js/respond.min.js"></script>
+<script type="text/javascript" src="{$site_url}js/jquery-1.7.1.min.js"></script>
+<!--[if lte IE 8]>    
+<script type="text/javascript" src="js/jquery.pseudo.js"></script>
+<![endif]-->
+{$headscript}
+</head>
+<body>
+	<div class="wrap">
+
+		<div class="header">
+			<div class="header_inner">
+				<div class="top group">
+					<h1 class="logo"><a href="javascript:;"><img src="{$logo}" alt="{$title|strip_tags}"/></a></h1>
+					<ul>
+						<li><a href="javascript:void(0);" onClick="SetHome(this, window.location)">home page</a></li>
+						<li><a href="javascript:void(0);" onClick="shoucang(document.title, window.location)"> collection
+</a></li>
+					</ul>
+				</div>
+
+				<div class="nav">
+					<ul>
+					{foreach item=nav from=$navs}
+						<li class="nav_{$nav@index+1}"><a href="{$nav.link}">{$nav.en_name}</a>
+							<span class="hoverview">
+								<ul>
+									{if $nav.childmenu} {foreach item=nav_list from=$nav.childmenu}
+		                            <li class="{if $nav.current}current{/if}"><a href="{$nav_list.link}">{$nav_list.en_name}</a></li>
+		                            {/foreach} {/if}
+								</ul>
+							</span>
+						</li>
+						{if $nav@index+1 eq 6}{break}{/if}
+					{/foreach}
+					</ul>
+					<!-- 斜线 -->
+					<div class="slash"></div>
+				</div>
+			</div>
+		</div>
+
+		
+		<div class="slider-wrapper theme-theme1204">
+
+            <div class="ribbon"></div>
+
+            <div id="slider" class="nivoSlider">
+            {foreach item=slidepic from=$index.slidepics}
+                <img src="{$slidepic.image}" height="1050" width="1920" alt="{$slidepic.title|strip_tags}" />
+			{/foreach}
+            </div>
+		</div>
+
+		<div class="main">
+			<div class="about">
+				<h2>{$index.about.en_name}<span class="blue"></span></h2>
+				<div class="txt">{$index.about.description}</div>
+				<span><a href="{$index.about.link}">[detailed]</a></span>
+			</div>
+			<div class="news">
+				<div class="title">
+					<h2>{$index.news.en_name}<span class="blue"></span></h2>
+					<a href="{$index.news.link}" class="title_more">MORE>></a>
+				</div>
+
+				<div class="container">
+					<div id="ca-container" class="ca-container">
+						<div class="ca-wrapper">
+						{foreach item=article from=$index.news.data}
+							<div class="ca-item ca-item-{$article@index+1}">
+								<h6><a href="{$article.link}">{$article.title|strip_tags}</a></h6>
+								<div class="news_img"><img src="{$article.image}" alt="{$article.title|strip_tags}"/></div>
+								<div class="txt">
+									<p>{$article.description}</P>
+									<span class="more">[<a href="{$article.link}">view more</a>]</span>
+								</div>
+							</div>
+						{/foreach}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="icon">
+			<ul>
+				<li class="rotate_bg_1"><a href="{$index.list1.link}"><div>{$index.list1.icon}<br/>{$index.list1.en_name}<br/></div></a></li>
+				<li class="rotate_bg_2"><a href="{$index.list2.link}"><div>{$index.list2.icon}<br/>{$index.list2.en_name}<br/></div></a></li>
+				<li class="rotate_bg_3"><a href="{$index.list3.link}"><div>{$index.list3.icon}<br/>{$index.list3.en_name}<br/></div></a></li>
+				<li class="rotate_bg_4"><a href="{$index.list4.link}"><div>{$index.list4.icon}<br/>{$index.list4.en_name}<br/></div></a></li>
+			</ul>
+			<div class="rotate_bg"></div>
+			<div class="ie8">
+				<img src="{$site_url}images/home_i.png" height="300" width="442" usemap="#icon_img" alt="icon_img"/>
+				<map name="icon_img">
+					<area shape="poly" coords="142,0,212,72,142,142,72,72" href="javascript:;" title="{$index.list1.name}"/> 
+					<area shape="poly" coords="0,142,72,72,142,142,72,212" href="javascript:;" title="{$index.list2.name}"/> 
+					<area shape="poly" coords="72,212,142,142,212,212,142,280" href="javascript:;" title="{$index.list3.name}"/> 
+					<area shape="poly" coords="143,142,212,72,282,142,213,212" href="javascript:;" title="{$index.list4.name}"/> 
+				</map>
+			</div>
+		</div>
+		
+		<div class="copyright">{$footprint}</div>
+		<div class="copyright_bg"></div>
+		
+		<div class="search">
+			<form id="form" class="fm" action="{$search_action}" method="GET" name="fm">
+				<span class="s_ipt_wr">
+					<input type="text" id="kw" name="s" class="s_ipt" placeholder="Enter product key"/>
+					<a href="javascript:;"></a>
+				</span>
+				<span class="s_btn_wr">
+					<input type="submit" class="s_btn" id="submit" value="">
+				</span>
+			</form>
+			<div class="phone"> hotline：<span>{$contact.telephone}</span></div>
+		</div>
+
+		<div class="blue_bg_l"></div>
+		<div class="blue_bg_r"></div>
+	</div>
+<script type="text/javascript" src="{$site_url}js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="{$site_url}js/jquery.nivo.slider_2.5.2.js"></script>
+<!-- the jScrollPane script -->
+<script type="text/javascript" src="{$site_url}js/jquery.crollPane.js"></script>
+<script type="text/javascript" src="{$site_url}js/tap.js"></script>
+<script type="text/javascript" src="{$site_url}js/index.js"></script>
+{$footscript}
+
+</body>
+</html>

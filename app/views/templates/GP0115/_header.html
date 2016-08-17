@@ -1,0 +1,70 @@
+
+
+<div class="header">
+  <div class='logo fl'><a href="{$site_url}"><img src="{$logo}" alt="" /></a></div>
+  <div class="headimg">
+    <img src="{$global.head_img.image}" alt="">
+  </div>
+<!-- <div class="home">
+</div> -->
+
+</div>
+      
+<div class="baner">
+  <div id="slideBox" class="slideBox">
+      <div class="hd">
+          <ul>
+            {foreach item=slidepic from=$global.slidepics}
+              <li>
+                {$slidepic@index+1}
+              </li>                    
+            {/foreach}
+          </ul>
+      </div>
+      <div class="bd">
+          <ul>
+            {foreach item=slidepic from=$global.slidepics}
+              <li><a href="{$slidepic.link}"><img src="{$slidepic.image}"></a></li>                    
+            {/foreach} 
+          </ul>
+      </div>
+
+  
+
+  </div>
+</div>
+    
+<div class="menu">
+          <ul id="nav" class="nav">
+            {$limit = 7}
+            <li class="nLi on" style="width:{100/($limit+1)}%">
+                <h3><a href="{$site_url}">首页</a></h3>
+            </li>
+            {foreach name=navs item=nav from=$navs}
+            <li class="nLi {if $nav.current}on{/if}" style="width:{100/($limit+1)}%">
+                <h3>
+                    <a href="{$nav.link}">{$nav.name}</a>
+                </h3>               
+                {if $nav.childmenu}
+                    <ul class="sub">
+                        {foreach key=key item=nav_list from=$nav.childmenu}
+                        <li class="{if $nav.current}current{/if}"><a href="{$nav_list.link}">{$nav_list.name}</a></li>
+                        {/foreach}
+                    </ul>
+                {/if}
+            </li>
+            {if $nav@index+1 gte $limit}{break}{/if}
+            {/foreach}
+        </ul> 
+
+<!--     <ul class="nav">
+    <li class="mu_bg"><a href="index.php">首 页 </a></li>
+    <li class="mu_bg"><a href="article.php?m=1" >关于我们</a></li>
+    <li class="mu_bg"><a href="article.php?m=2" >新闻资讯</a></li>
+    <li class="mu_bg"><a href="article.php?m=3" >产品中心</a></li>
+    <li class="mu_bg"><a href="article.php?m=4" >批发中心</a></li>
+   <li class="mu_bg"><a href="article.php?m=5" >在线留言</a></li>
+   <li class="mu_bg"><a href="article.php?m=14" >人才招聘</a></li>
+    <li><a href="article.php?m=10" >联系方式</a></li>
+    </ul> -->
+</div>

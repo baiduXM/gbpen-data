@@ -1,6 +1,18 @@
 $(document).ready(function(){
-
-
+	TouchSlide({ 
+		slideCell:"#slideBox",
+		titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+		mainCell:".bd ul", 
+		effect:"leftLoop", 
+		autoPage:true,//自动分页
+		autoPlay:false,
+		interTime:6000 //自动播放
+	});
+	$("#logodiv").height($("#logodiv").width());
+	if($('#logoimg').height() < $("#logodiv").height()){
+		var logoheight = $("#logodiv").height()-$('#logoimg').height();
+		$('#logoimg').css("margin-top",logoheight/2);
+	}
 
 
  var lineHeight=$("header,.aboutheader").outerHeight()
@@ -145,10 +157,10 @@ $(document).ready(function(){
 
 	})
     
-    $(".logo").outerHeight( $(".logo img").outerWidth()/2)
-    $(".logo img").css({
-    	marginLeft: - $(".logo img").outerWidth()/2,
-    	marginTop:- $(".logo img").outerWidth()/2
-    });
+    // $(".logo").outerHeight( $(".logo img").outerWidth()/2)
+    // $(".logo img").css({
+    // 	marginLeft: - $(".logo img").outerWidth()/2,
+    // 	marginTop:- $(".logo img").outerWidth()/2
+    // });
 
   });

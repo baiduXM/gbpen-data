@@ -47,12 +47,16 @@
                  <h1 class="title ico2">{$index.news.name}<a href="{$index.news.link}">点击查看更多</a></h1>
                  <div class="newstop">
                      <dl><a href="{$index.news.data[4].link}"><img src="{$index.news.data[4].image}"></a></dl>
-                     <dt><a href="{$index.news.data[4].link}">{$index.news.data[4].title}</a></dt>
+                     <dt>
+                         <div style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis;">
+                            <a href="{$index.news.data[4].link}">{$index.news.data[4].title}</a>
+                         </div>
+                     </dt>
                      <dd>{$index.news.data[0].description}</dd>
                  </div>
                  <ul>
                  {foreach item=new from=$index.news.data}
-                     <li><a href="{$new.link}" class="clearfix">{$new.title}<span>{$new.pubdate}</span></a></li>
+                     <li><a href="{$new.link}" class="clearfix" ><div style="max-width:181px;height:27px;overflow:hidden;float:left;">{$new.title}</div><span>{$new.pubdate}</span></a></li>
                  
                  {if $new@index+1 eq 3}{break}{/if}
                  {/foreach}
@@ -76,14 +80,7 @@
                     <a href="javascript:void(0);" class="photos-button photos-prev"></a>
                     <div class="photos-content">
                         <ul>
-                        {$pronum=$index.pro.data|count}
-                        {$num=1}
-                        {$fullnum=5}
-                        {while ($pronum lt $fullnum)}
-                            {$pronum=$pronum % $fullnum}
-                            {$fullnum=$fullnum-$pronum}
-                            {$num=$num+1}
-                        {/while}
+                        
                         {for $item=1 to 5}
                                    {foreach item=pro from=$index.pro.data}
                                        <li><a href="{$pro.link}" class="choose"><img alt="" src="{$pro.image}" /><h2 class="xu_word">{$pro.title}</h2></a></li>

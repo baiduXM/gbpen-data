@@ -77,7 +77,7 @@
 	    	<ul class="news_list">
 	    	{foreach item=article from=$mIndexCat.data}
 	    		<li>
-	            	<a href="{$article.link}"><i>{$article.pubdate}</i><span>{$article.title}</span></a>
+	            	<a href="{$article.link}"><i>{$article.pubtimestamp|date_format:'%Y-%m-%d'}</i><span>{$article.title}</span></a>
 				</li>
 				 {if $article@index+1 == 4}{break}{/if}
 				{/foreach}

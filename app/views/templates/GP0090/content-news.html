@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script type="text/javascript">
+    // 跳转手机页面
+    {if $site_another_url}
+      if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+        location.href = '{$site_another_url}';
+      }
+    {/if}
+    </script>
+
+<meta http-equiv="x-ua-compatible" content="ie=7" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="{$keywords}"/>
+<meta name="description" content="{$description}"/>
+<link href="{$site_url}css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="{$site_url}js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.js"></script>
+
+<script type="text/javascript" src="{$site_url}js/jsScroller.js"></script>
+<script type="text/javascript" src="{$site_url}js/jsScrollbar.js"></script>
+<script type="text/javascript" src="{$site_url}js/jsScrollShow.js"></script>
+<script type="text/javascript" src="{$site_url}js/function.js"></script>     
+<title>{$title}</title> 
+
+</head>
+
+<body>
+<div class="wrap">
+    {include file="./_header.html"}
+    <div class="ny_content">
+        	<div class="left_side fl">
+            	<div class="list_img">
+                	<img src="{$site_url}images/leftimg.jpg" height="135" width="348" />
+              </div>
+              {include file="./_pagenavs_sub4.html"}                
+          </div>
+          <div class="right_side fr">
+            	<div class="home_site">
+                  <strong>当前位置：</strong>
+                  <a href="{$site_url}">首页</a>
+                  {foreach item=nav from=$posnavs}
+                  >> <a href="{$nav.link}">{$nav.name}</a>
+                  {/foreach}
+              </div>
+
+
+              <div class="ny_newsdetal" >
+                 <h1 class="inner_news_tit">{$article.title}  </h1>
+                 <h2 class="inner_news_time">发表日期：{$article.pubtimestamp|date_format:'%Y-%m-%d'} <a href="javascript:history.go(-1);">[ 返回列表 ]</a></h2>
+                 <div class="rigcont4">    
+                    <div id="Scroller-1">
+                       <div class="Scroller-Container">
+                         <div class="detal_news">
+                            <div class="module_edit">
+                            {$article.content|unescape:"html"}
+                         
+                            </div>
+                         </div>  
+                       </div> 
+                       <div id="Scrollbar-Container">        
+                         <div class="Scrollbar-Track"> <img src="images/scrollbar_handl.jpg" height="28" width="11" class="Scrollbar-Handle" /> </div>
+                       </div>
+                    </div>
+                </div>
+              <div style="height:30px;overflow: hidden; padding-top:7px; margin-top:15px; color:#6c5c47; float:right;"><!-- Baidu Button BEGIN -->
+              {shareExt shareText=$article.content|unescape:"html"|strip_tags|truncate:140:"…" sharePic=$article.image}
+              </div>
+                  <ul class="inner_pages" style="clear:both">
+                   <li><a href="{$article.prev.link}">上一篇：{$article.prev.title}</a></li>
+                   <li><a href="{$article.next.link}">下一篇：{$article.next.title}</a></li>
+                  </ul>
+                  
+                 			</div>                
+            </div>
+        </div>       
+       {include file="./_footer.html"} 
+    </div>
+ </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

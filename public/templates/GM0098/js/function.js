@@ -167,6 +167,6 @@ jQuery(document).ready(function($) {
 		});
 		
 		//首页产品pro_top的高度
-		var abouth=Math.floor($(".pro_top>img").height());
-		$(".pro_dt").outerHeight(abouth*0.95)
+		var abouth=$(".pro_top img").height();
+		$(".pro_dt").outerHeight(abouth);
 });

@@ -1,0 +1,48 @@
+<div id="header">
+  <div class="top">
+    <div class="logo"><a href="{$site_url}"><img src="{$logo}" class="pngFix" alt="" /></a></div>
+    <div class="tel">
+      <p>服务热线:</p>
+      <h2>{$global.top_tel}</h2>
+    </div>
+  </div>
+</div> 
+<div class="menu">
+        <ul id="nav" class="nav">
+          {$limit = 7}
+          <li class="nLi on" style="width:{100/($limit+1)}%">
+              <h3><a href="{$site_url}" target="_self">网站首页</a></h3>
+          </li>
+          {foreach name=navs item=nav from=$navs}
+          <li class="{if $nav.current}on{/if} nLi" style="width:{100/($limit+1)}%">
+              <h3>
+                  <a href="{$nav.link}" target="_self">{$nav.name}</a>
+              </h3>               
+              {if $nav.childmenu}
+                  <ul class="sub">
+                      {foreach key=key item=nav_list from=$nav.childmenu}
+                      <li class="{if $nav.current}current{/if}"><a href="{$nav_list.link}">{$nav_list.name}</a></li>
+                      {/foreach}
+                  </ul>
+              {/if}
+          </li>
+          {if $nav@index+1 gte $limit}{break}{/if}
+          {/foreach}
+      </ul> 
+
+</div>
+<div class="banter">
+  <div class="focusBox" >
+    <ul class="pic">
+      {foreach item=slidepic from=$global.slidepics}
+        <li><a href="{$slidepic.link}"><img src="{$slidepic.image}"></a></li>                    
+      {/foreach}               
+    </ul>
+    <ul class="hd">
+      {foreach item=slidepic from=$global.slidepics}
+        <li></li>                    
+      {/foreach} 
+    </ul>
+
+  </div>
+</div>

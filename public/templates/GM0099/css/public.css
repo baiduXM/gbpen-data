@@ -1,5 +1,5 @@
 .body{ position: absolute; width:100%; height:100%; min-width:320px; max-width:640px; overflow:hidden;}
-.wrap{ width:100%; height:100%; position: absolute; top:0px; left:0px; z-index:5; background:#ffffff; background-size:auto auto }
+.wrap{ width:100%; height:100%; position: absolute; top:0px; left:0px; z-index:5; background-size:auto auto }
 .index-wrap{width:100%; overflow:hidden;overflow-y:scroll; position:absolute; top:0px; left:0px; background:url(../images/bg.jpg);  }
 .main{ margin:5px 9px 10px; height:auto; overflow:hidden; animation:opacity 1.5s linear;-webkit-animation:opacity 1.5s linear; }
 
@@ -19,10 +19,10 @@
 
 /*panle导航开始*/
 /*panle导航开始*/
-.class{width:100%;  height:100%; z-index:7; position: absolute; top:0px; right:-100%; color:#fff; background:url(../../images/bg.jpg);  }
-.class-top{ height:40px; overflow:hidden; line-height:40px; font-size:1.3em;  background:#4a3c33;padding-right:15px; text-align:right;}
-.class-close{ width:40px; height:40px; float:left; display:inline; text-align:center; font-size:1.4em;} 
-.class-m{ height: auto; overflow:hidden;}
+.rclass{width:100%;  height:100%; z-index:7; position: absolute; top:0px; /*right:-100%; */color:#fff; background:url(../../images/bg.jpg);display: none;}
+.rclass-top{ height:40px; overflow:hidden; line-height:40px; font-size:1.3em;  background:#4a3c33;padding-right:15px; text-align:right;}
+.rclass-close{ width:40px; height:40px; float:left; display:inline; text-align:center; font-size:1.4em;} 
+.rclass-m{ height: auto; overflow:hidden;}
 .opacity2{ width:100%; height:100%; position: absolute; top:0px; left:0px; background:rgba(0,0,0,0.2); z-index:990; display:none;}
 .overflow{ height:100%; overflow:hidden;}
 ul.class-list{ padding:0px; margin:0px; height:auto; overflow:hidden;}
@@ -47,7 +47,7 @@ ul.class-list li.cu{ height:auto; overflow:hidden;border-bottom:1px solid #ec4e4
 #box li a{ color:#fff; display:block; }
 #box li .title{ height:23px; overflow:hidden;  line-height:23px;}
 .fix_icon{ height:33px; overflow:hidden;}
-
+ 
 /*分享开始*/
 .newsclass{ width:100%; height:130px; padding-top:15px; position:absolute; bottom:-145px; left:0px; z-index:9999; background:#f5f5f5;-webkit-transition: all 0.3s ease-in; -moz-transition: all 0.3s ease-in; -o-transition: all 0.3s ease-in; transition: all 0.3s ease-in; }
 .show{transform: translate(0px,-145px);
@@ -115,6 +115,3 @@ transform:translate3d(0, 0, 0);
 -webkit-transform:translate3d(100%, 0, 0);	
 -o-transform:translate3d(100%, 0, 0);	
 -moz-transform:translate3d(100%, 0, 0);}
-
-
-

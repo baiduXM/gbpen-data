@@ -109,7 +109,7 @@
 	<ul class="new">
 		{foreach item=article from=$mIndexCat.data}
 						
-		<li><a href="{$article.link}"><span>({$article.pubdate})</span>{$article.title}</a></li>
+		<li><a href="{$article.link}">{$article.title}</a></li>
 		{if $article@index+1 == 5}{break}{/if}
 		{/foreach}
 			

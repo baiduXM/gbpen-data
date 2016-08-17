@@ -1,7 +1,7 @@
 @charset "utf-8";
 *{margin:0;padding:0;}
 html{ width: 100%;height: 100%;min-width: 320px;font-family: "微软雅黑",Helvetica Neue, Helvetica, Arial, sans-serif; max-width: 640px; overflow: hidden;margin:0 auto;font-size: 16px;}
-a,a:hover,a:visited,a:link{text-decoration:none; font: 0.9rem/1.8rem "微软雅黑";}
+a,a:hover,a:visited,a:link{text-decoration:none; }
 img{border:none; vertical-align: top;max-width: 100%;}
 ol,p,dl,li{list-style: none}
 h1,h2,h3,h4,h5{ font-weight: normal;}
@@ -59,8 +59,8 @@ body{position: relative;font: 0.9rem/1.8rem "微软雅黑";margin: 0 auto;overfl
 	.hd_icon{position: absolute;top:10%; height: 100%; width: 5% !important; background: none !important; left:90% !important;}
 	header{width: 100%;height:auto;overflow: hidden;background: #603d15;position: relative;}
 	.hd_icon .icon{font-size: 2.5rem;color: #cdab85;}
-	.logo{width: 50%;margin: 0 auto;}
-	.logo i{ color: #cdab85;font: 1.6em/2.5rem "微软雅黑";padding:5.5% 0; display: inline-block;}
+	.logo{width: 100%;margin: 0 auto;}
+	.logo i{ color: #cdab85;font: 1.6em/1.8rem "微软雅黑";padding:5.5% 0; display: inline-block;}
 	.logo img{display: block; width: 100%;}
 	.ss{position: absolute;left: 1.5rem;top:20%;}
 	.ss i.icon{font-size: 1.3rem;color: #cdab85;}
@@ -198,7 +198,7 @@ footer{width: 100%;height: auto;overflow: hidden;position: absolute;bottom: 0;le
 	ul.newss_list li{ overflow:hidden;border-bottom: 0.0625rem dotted #8f6537;padding: 2% 0;}
 	ul.newss_list li a{display: block;}
 	ul.newss_list li a i{width: 20%; height: auto; overflow: hidden;}
-	ul.newss_list li a i img{height: 86px;}
+	ul.newss_list li a i img{width: 25%;}
 	ul.newss_list li a span{width: 72.5%; float: right; display: inline-block;}
 	ul.newss_list li a span b{display: block;font:1rem/1.65rem "微软雅黑";  height: 1.65rem; overflow: hidden; color: #ad5e05}
 	ul.newss_list li a span em{display: block;font:0.9rem/1.1rem "微软雅黑";  height: 3.3rem; overflow: hidden; color: #8f6537}
@@ -210,7 +210,7 @@ footer{width: 100%;height: auto;overflow: hidden;position: absolute;bottom: 0;le
 	}
 /*新闻详情页begin*/
 	.news_detail{ width:100%; height:auto; overflow:hidden;}
-	.news_detail  .Title{ text-align:center; color:#603d15; font:1.1rem/1.8rem "微软雅黑";  height:1.8rem;overflow:hidden; padding: 0.5rem 0 0 0}
+	.news_detail  .Title{ text-align:center; color:#603d15; font:1.1rem/1.8rem "微软雅黑";  overflow:hidden; padding: 0.5rem 0 0 0}
 	.news_detail  .Title .icon{color:#603d15; float: left;font-size:1.25rem;}
 	.news_detail .Time{color:#666666;text-align:center; font-size:1rem; }
 	.dt_size{display: block; text-align: center;border-bottom: 1px dotted #603d15;}
@@ -231,9 +231,10 @@ footer{width: 100%;height: auto;overflow: hidden;position: absolute;bottom: 0;le
 	.news_list1{height: auto; overflow: hidden;}
 	.news_list1 li{margin-bottom: 0.5rem;  height:auto; overflow: hidden;}
 	.news_list1 li a{display: block; background:url(../images/ny.png) no-repeat; background-size: 100%; position: relative;}
-	.news_list1 li a i{ color: #cdab85; font-size: 1.1rem; text-align: center; width: 20%;position: absolute; bottom: 20%; }
+	.news_list1 li a i{ color: #cdab85; font-size: 0.1rem; text-align: center; position: absolute; bottom: 13%; }
 	.news_list1 li a span{display: block;position: absolute; left:22.5%; top:50%; color: #cdab85; font: 1rem/1.5rem "微软雅黑"; width: 53%; height: 6rem;overflow: hidden;}
-	.news_list1 li a span b{display: block; color: #ff8600; font-weight: normal;height: 1.5rem; overflow: hidden; line-height: 1.5rem}
+	.news_list1 li a span b{display: block; color: #ff8600; font-weight: normal;height: 1.5rem; overflow: hidden; line-height: 1.5rem;white-space: nowrap;
+    text-overflow: ellipsis;}
 	.news_list1 li a span em{height: 4.5rem; overflow: hidden; }
 	@media screen and (max-width: 320px){
 	.news_list1 li a i{font-size: 0.3rem;bottom: -33% }

@@ -58,7 +58,7 @@
 		 <div class="about">
 		 	<h3 class="title">
 			 <span class="class fl">分类∧</span>
-		 	<i>{$list.name}</i>
+		 	<i class="cont-name">{$list.name}</i>
 		 	 <span id="quickbar"  class="fr btn"><a href="#" id="quickbar-navs-btn"><span><i class="iconfont icon">&#xe603;</i></span></a></span>
 		 	</h3>
 			<ul class="class_list">
@@ -89,7 +89,7 @@
 		 		<ul class='pro_list'>
 		 		{foreach item=article from=$list.data}
 					<li>
-						<a href="{$article.link}"><img src="{$article.image}" /><span class='case_title'>{$article.title}</span></a>
+						<a href="{$article.link}"><img src="{$article.image}" /><span class='case_title' style=" font: 0.9rem/1.8rem '微软雅黑';overflow:hidden;white-space:nowrap;text-overflow:ellipsis;">{$article.title}</span></a>
 
 					</li>
 				
@@ -100,6 +100,7 @@
 					<div class="munber">
 					<li><a href="{$page_links.first_link}" class="cu">首页</a></li>	
 	                    <li><a href="{$page_links.prev_link}">上一页 </a></li>
+	                    {$page_links.current_page}/{$page_links.page_count} 
 	                    <li><a href="{$page_links.next_link}">下一页</a></li>
 	                    <li><a href="{$page_links.last_link}"  >尾页</a></li>
                     </div>

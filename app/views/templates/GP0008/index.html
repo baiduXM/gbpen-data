@@ -59,7 +59,7 @@ DD_belatedPNG.fix('div,ul,li,a,p,img');
       </div>
       <div class="container public h_o">
             <div class="news fl">
-              <h3 class="n_title"><b>{$index.news.en_name}<br/>{$index.news.name}</b><p><img src="{$index.news.image}"></p></h3> 
+              <h3 class="n_title"><b>{$index.news.en_name}<br/>{$index.news.name}</b><p><img src="{$index.news_right.image}"></p></h3> 
               <ul class="news_list h_o">
                   {foreach item=new from=$index.news.data}
                   <li class="h_o"><div class="img"><a href="{$new.link}"><img src="{$new.image}" /><span>{$new.pubtimestamp|date_format:'%Y-%m-%d'}</span></a></div><div class="li_nr"><h2><a class="ellipsis" href="{$new.link}">{$new.title}</a></h2><p>{$new.description}<a class="readmore" href="{$new.link}">[查看更多]</a></p></div>
@@ -69,7 +69,7 @@ DD_belatedPNG.fix('div,ul,li,a,p,img');
               </ul>
             </div>
             <div class="contact fr h_o">
-              <img src="{$global.contact.image}" />
+              <img src="{$index.about_left.image}" />
               <div class="contact_nr h_o">
                     <h3>{$global.contact.name}<br/>{$global.contact.en_name}</h3>
                     <span>{$global.contacts}</span>

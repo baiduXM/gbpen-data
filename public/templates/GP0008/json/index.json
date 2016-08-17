@@ -28,8 +28,36 @@
 			"height": 150
 			}
 
-	}
+	},
 
+	"news_right": {
+		"value": {
+		    "title": "新闻列表侧边图",
+			"image": "images/news_right.jpg",
+			"link": "http://www.baidu.com/"
+		},
+		"description": "新闻列表侧边图",
+		"type": "image",
+		"config": {
+			"width": 370,
+			"height": 104
+			}
+
+	},
+	"about_left": {
+		"value": {
+		    "title": "关于列表侧边图",
+			"image": "images/about_left.jpg",
+			"link": "http://www.baidu.com/"
+		},
+		"description": "关于我们侧边图",
+		"type": "image",
+		"config": {
+			"width": 235,
+			"height": 303
+			}
+
+	}
 }
 
 

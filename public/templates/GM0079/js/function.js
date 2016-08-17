@@ -1,4 +1,25 @@
 $(document).ready(function(){
+	TouchSlide(         
+	{slideCell:"#slideBox",
+	titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+	mainCell:".bd ul", 
+	effect:"leftLoop", 
+	prevCell:".slide_left",
+	nextCell:".slide_right",
+	autoPage:true,//自动分页
+	autoPlay:true,
+	interTime:10000,//自动播放)
+	pnLoop:"ture" // 前后按钮不循环
+
+	});
+	if($("#ibd").height() < ($("#ipro div").height()+10)){
+		$("#ipro").height($("#ipro div").height()+10);
+		$("#icol").height($("#ipro div").height()+10);
+	}else{
+		$("#ipro").height($("#ibd").height());
+		$("#icol").height($("#ibd").height());
+	}
+	
 	$(window).load(function(){
 		var img=new Image();
 
@@ -14,7 +35,16 @@ $(document).ready(function(){
 			}
 	
 		$(".class-m").height($(".class").outerHeight()-$(".class-top").outerHeight())
-		// $(".index-wrap").height($(".wrap").height()-$(".fixed").height()-$(".tell-icon").height())
+		$(".index-wrap").height($(window).height()-$(".fixed").height());
+		
+
+		if($("#ibd").height() < ($("#ipro div").height()+10)){
+				$("#ipro").height($("#ipro div").height()+10);
+				$("#icol").height($("#ipro div").height()+10);
+			}else{
+				$("#ipro").height($("#ibd").height());
+				$("#icol").height($("#ibd").height());
+			}
 	
 	});
 
@@ -29,7 +59,16 @@ $(document).ready(function(){
 			}
 	
 		$(".class-m").height($(".class").outerHeight()-$(".class-top").outerHeight())
-		// $(".index-wrap").height($(".wrap").height()-$(".fixed").height()-$(".tell-icon").height())
+		$(".index-wrap").height($(window).height()-$(".fixed").height());
+		
+
+		if($("#ibd").height() < ($("#ipro div").height()+10)){
+				$("#ipro").height($("#ipro div").height()+10);
+				$("#icol").height($("#ipro div").height()+10);
+			}else{
+				$("#ipro").height($("#ibd").height());
+				$("#icol").height($("#ibd").height());
+			}
 	})
 
 	// 
@@ -213,13 +252,8 @@ $(document).ready(function(){
 	})
 
 	//返回顶部 
-	$('.back-top').click(function(){
-		alert('1')
-	})
-	// $(".back-top").click(function(){$("#quickbar-wrap-body").animate({scrollTop :0}, 800)})
-	// $(".back-top").click(function(){$(".index-wrap").animate({scrollTop :0}, 800)})
-	
-	$("#share_btn").click(function(){
+	$(".back-top").click(function(){$(".index-wrap").animate({scrollTop :0}, 800)})
+		$("#share_btn").click(function(){
 			$(".newsclass").addClass("show")
 			$(".opacity2").show()
 			return false
@@ -252,7 +286,17 @@ $(document).ready(function(){
 	})
 
 	// index menu
+	// $('.menu ul li').height($('.menu ul li:nth-child(2)').width());
+	// $('.banner').height(($('.banner').width()*2)+3);
+	// $('.hicon1').css('top',($('.header').height()-$('.hicon1').height())/2);
+	// $('.hicon2').css('top',($('.header').height()-$('.hicon2').height())/2);
+	// $('.pro').height()
 
+	$(window).resize(function() {
+			
+		// $('.menu ul li').height($('.menu ul li:nth-child(2)').width());
+		// $('.banner').height(($('.banner').width()*2)+3);
+	});
 
 	// $("#search").click(function(){
 	// 	$(".search-wrap").removeClass("page-up");
@@ -265,41 +309,7 @@ $(document).ready(function(){
 	// })
 
 // // 内页header
+// $('.nyheader h2').height($('.nyheadbg img').height())
 	$('.news-desc').height($('.list-imgtxt ul li a img').height());
-
-    TouchSlide(         
-    {slideCell:"#slideBox",
-    titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
-    mainCell:".bd ul", 
-    effect:"leftLoop", 
-    prevCell:".slide_left",
-    nextCell:".slide_right",
-    autoPage:true,//自动分页
-    autoPlay:true,
-    interTime:10000,//自动播放)
-    pnLoop:"ture" // 前后按钮不循环
-
-    });
-      $(".hide-class li a").click(function () {
-          $(this).parent().siblings().find(".second").slideUp()
-          $(this).siblings(".second").slideToggle()
-      })  
-      $(".second li a").click(function () {
-          $(this).parent().siblings().find(".third").slideUp()
-          $(this).siblings(".third").slideToggle()
-      }) 
-	$('.col').height($('.slideBox .bd li').height());
-	$('#search').click(function(){
-		$('.search-wrap').show();
-		$('.index-wrap').hide();
-	})
-
-	$("#search-back").click(function(){
-		$(".search-wrap").hide();
-		$('.index-wrap').show();
-		
-	})
-
-          
 });
   
