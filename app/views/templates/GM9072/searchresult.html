@@ -58,7 +58,7 @@
             	{foreach name=article item=article from=$search.data}
                  <li><a href="{$article.link}" class="public_color">{$article.title}</a></li>
 				{/foreach}
-              {if $article@index+1 == 10} {break} {/if}
+             
             </ul>
             
                 <div class="next1 public_color"><a href="{$page_links.first_link}" class="public_color">Home</a><a href="{$page_links.prev_link}" class="public_color">Page up</a>{$page_links.current_page}/{$page_links.page_count}　<a href="{$page_links.next_link}" class="public_color">Page down</a><a href="{$page_links.last_link}" class="public_color">last</a></div>
