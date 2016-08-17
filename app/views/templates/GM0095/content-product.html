@@ -45,10 +45,21 @@
             <div class="classNamexq p_r"><span class="forword">< 返回</span>{$article.category.name}
       
 		</div>
+
 		<div class="contant">
 					<div class="b"></div>
             <div class="about aboutdet">
-            	
+            	<div class="className p_r">
+			     <div class="tit"><div class="font"><span class="type">分类∧</span><em class="font-set">字体+</em></div>
+				</div>
+                 <ul class="font-list font-sel" style="display: none;">
+				<li class="d">大</li>
+				<li class="z">中</li>
+				<li class="x">小</li>
+			</ul>
+				</div>
+				
+			  {include file="./_pagenavs_sub3.html"}
 			
 		        <div class="aboutms info">
 		           <h3 class="protit">{$article.title}</h3>
@@ -78,7 +89,7 @@
 				</div>
 
 
-			    <div class="infos"> {$article.content}</div>
+			    <div class="infos"> {$article.content|unescape:"html"}</div>
 			       
 		        </div> 
 	        </div>  
