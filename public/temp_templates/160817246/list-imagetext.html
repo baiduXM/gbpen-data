@@ -2,7 +2,7 @@
 <html manifest="huancun.manifest">
 <head>
 <!-- 实时预览调试代码，模板开发完成后删除 -->
-
+<script type="text/javascript" src="http://chanpin.xm12t.com.cn/js/preview.js"></script>
 <!-- 调试代码 End -->
 <script type="text/javascript">
 		// 跳转PC页面
@@ -55,29 +55,33 @@
 <div class="body">
 <div class="wrap page-active">
     <div class="index-wrap"> 
- {include file="./_header.html"}
-   <section>
+    {include file="./_header.html"}
+  <section>
     <div class="boxmaind">
       <div class="boxmain_d">
-      
-        <h1 class="boxmain-top">
+          <h1 class="boxmain-top">
         <span class="more3" id="first">分类<span id="down"> ∧</span><span id="up"> ∨ </span></span>
          <div class="sub_zh public_color">{$list.name}</div><div class="sub_en public_color">{$list.en_name}</div></h1>
-      
+         
+     
          {include file='./_nav.html'}
         <div class="main">
-          <div class="list_text">
+          <div class="list_imagetext">
             <ul class="clearfix">
-            {foreach name=article item=article from=$list.data}
-              <li>
-                <div class="text_box1"><a onClick="javascript:window.location.href='{$article.link}'">
-                 <div class="text_title1 public_color">{$article.title}</div>
-                 <div class="text_data1 public_color">{$article.pubdate}</div>
-                 <div class="text_des1 public_color">{$article.description}</div></a>
+             {foreach name=article item=article from=$list.data}           
+            
+                 
+                  <li class="clearfix">
+                <div class="img_box"><a href="{$article.link}"><img src="{$article.image}" width="100%" title="120*88" /></a></div>
+                <div class="text_box"><a href="{$article.link}">
+                 <div class="text_title">{$article.title}</div>
+                 <div class="text_data">{$article.pubdate}</div>
+                 <div class="text_des">{$article.description}</div></a>
                 </div>
                  </li>
-                  {if $article@index+1 == 10} {break} {/if}
-			{/foreach}
+               {if $article@index+1 == 10} {break} {/if}
+  
+              {/foreach}
             </ul>
                 <div class="next1 public_color"><a href="{$page_links.first_link}" class="public_color">首页</a><a href="{$page_links.prev_link}" class="public_color">上一页</a>{$page_links.current_page}/{$page_links.page_count}　<a href="{$page_links.next_link}" class="public_color">下一页</a><a href="{$page_links.last_link}" class="public_color">尾页</a></div>
             
@@ -88,6 +92,7 @@
   </section>
       <footer class="foot" ><a class="back-top">∧</a>{$footprint}</footer>
 </div>
-</div>{$footscript}</div>
+</div>
+{$footscript} </div>
 </body>
 </html>

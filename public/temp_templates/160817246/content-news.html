@@ -2,7 +2,7 @@
 <html manifest="huancun.manifest">
 <head>
 <!-- 实时预览调试代码，模板开发完成后删除 -->
-		
+		<script type="text/javascript" src="http://chanpin.xm12t.com.cn/js/preview.js"></script>
 		<!-- 调试代码 End -->
 		<script type="text/javascript">
 		// 跳转PC页面
@@ -53,40 +53,38 @@
 </head>
 <body>
 <div class="body">
-<div class="wrap page-active">
-    <div class="index-wrap"> 
-
-     {include file="./_header.html"}
-  <section>
-    <div class="boxmaind">
-      <div class="boxmain_d">
-        <h1 class="boxmain-top">
-         <span class="more3" id="font">字+</span> <span class="more3" id="first">分类<span id="down"> ∧</span><span id="up"> ∨ </span></span>
-         <div class="sub_zh public_color">{$list.name}</div><div class="sub_en public_color">{$list.en_name}</div></h1>
-         
-      
-          <div class="font">
-            	<dl class="big">大</dl>
-                <dl class="normal">中</dl>
-                <dl class="small">小</dl>
-           	</div>
-           {include file='./_nav.html'} 
-        <div class="main">
-          <div class="list_page public_color">
-         {$list.content|unescape:"html"}
-            
+  <div class="wrap page-active">
+    <h1 class="fixed-top">
+      <span class="fixed-btn back"><a href="javascript:window.history.back()">返回</a></span>
+      <span class="fixed-btn more2" id="font">字+</span>
+      {$article.category.name}</h1>
+      <div class="font1">
+            <dl class="big">大</dl>
+            <dl class="normal">中</dl>
+            <dl class="small">小</dl>
+          </div>
+    <div class="index-wrap">
+      <section>
+        <div class="index_show">
+          <div class="d_titles">
+            <h1 class="title1 public_color">{$article.title}</h1>
+            <hl class="title2 public_color">更新时间：{$article.pubdate}  </hl>
+          </div>
+          <div class="box-m">
+            <div class="boxmain-m">
+              <div class="edite public_color" > {$article.content|unescape:"html"}</div>
+              <ul class="inner_pages">
+             <li><a href="{$article.prev.link}" class="public_color">上一条:{$article.prev.title}</a></li>
+            <li><a href="{$article.next.link}" class="public_color">下一条:{$article.next.title}</a></li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
-      <!--第三种样式结束-->
-      
-      
+      </section>
+    <footer class="foot" ><a class="back-top">∧</a>{$footprint}</footer></div>
     </div>
-  </section>
-   <footer class="foot" ><a class="back-top">∧</a>{$footprint}</footer>
-</div>
-</div>
- {$footscript}
+  </div>
+  {$footscript}
 </div>
 </body>
 </html>
