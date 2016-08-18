@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script type="text/javascript">
+    // Ìø×ªÊÖ»úÒ³Ãæ
+    {if $site_another_url}
+        if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+            location.href = '{$site_another_url}';
+        }
+    {/if}
+    </script>
+
+
+<meta name="keywords" content="{$keywords}"/>
+<meta name="description" content="{$description}"/>
+<link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Language" content="zh-CN">
+
+<link rel="stylesheet" type="text/css" href="{$site_url}css/style.css"/>
+<script type="text/javascript" src="http://common.mn.sina.com.cn/public/resource/lib/jquery.jcarousellite.js"></script>
+<script type="text/javascript" src="{$site_url}js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.js"></script>
+<script type="text/javascript" src="{$site_url}js/function.js"></script>
+<script type="text/javascript" src="{$site_url}js/html5.js"></script>
+<title>{$title}</title>
+</head>
+<body>
+	<div class='wrapper'>
+	{include file='./_header.html'}
+		<div class='content public'>
+			{include file='./_left.html'}
+			<div class='right fr'>
+				<h3 class="title">
+					<div class="location">当前位置：
+						<a href="{$site_url}">首页</a>
+						{foreach item=nav from=$posnavs}
+						 >> <a href="{$nav.link}">{$nav.name}</a>
+						{/foreach}
+					</div>
+					<em>{$article.category.name}</em>
+				</h3>
+				<div class='article'>
+					<div class="pro_detail">
+                        <h2 class="pro_title">{$article.title}</h2>
+                        {if $article.images|count gt 1}
+                            <div class="case slides">
+                                <div class="case_hd">
+                                    <a class="next" href="javascript:void(null)"></a>
+                                     <a class="prev" href="javascript:void(null)"></a>
+                                </div>
+                                 <div class="case_bd">
+                                    <ul class="case_list">
+                                    {foreach item=image from=$article.images}
+                                         <li><img src="{$image.image}"></li>
+                                    {/foreach}
+                                    </ul>
+                                </div>
+                            </div>
+                        {else}
+                            <div class="case slides">
+                                <img src="{$article.image}" />
+                            </div>
+                        {/if}
+                        <div class="products_nr">
+                            {$article.content|unescape:"html"}
+                        </div>
+                        <div class="share">
+                            {shareExt shareText=$article.content|unescape:"html"|strip_tags|truncate:140:"…" sharePic=$article.image}
+                        </div>
+                    </div>
+                	<ul class="next_pre">
+						<li>上一篇：<a href="{$article.prev.link}">{$article.prev.title}</a></li>
+						<li>下一篇：<a href="{$article.next.link}">{$article.next.title}</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	{include file='./_footer.html'}
+	</div>
+</body>
+</html>

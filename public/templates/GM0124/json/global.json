@@ -1,26 +1,20 @@
 {
 	"slidepics": {
 		"value": [{
-			"title": "banner",
-			"image": "images/banner.png",
-			"link": "article/1.html",
-			"description": "banner1"
+			"title": "测试图1",
+			"image": "images/banner.jpg",
+			"link": "http://www.baidu.com"
 		}, {
 			"title": "测试图2",
-			"image": "images/banner.png",
-			"link": "http://www.baidu.com"
-		},{
-			"title": "测试图3",
-			"image": "images/banner.png",
+			"image": "images/banner.jpg",
 			"link": "http://www.baidu.com"
 		}],
-		"description": "导航下方的大图轮播（banner）",
+		"description": "大轮滚图",
 		"type": "images",
 		"config": {
 			"width": 640,
-			"height": 372,
-			"limit": 6
+			"height": 360,
+			"limit": 1
 		}
 	}
-
 }

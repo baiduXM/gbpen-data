@@ -1,27 +1,23 @@
-
-		<header>
-			<div class="head fl" id="quickbar">
-				<a href="#" id="quickbar-navs-btn" class="fix_icon head_left"><i class="iconfont">&#xe603;</i></a>
-				<div class="logo"><img src="{$logo}" ></div>
-				<a href="searchresult.html" id="search_btn" class="fix_icon head_right"><i class="iconfont">&#xe636;</i></a>
-			</div>
-		</header>
-		<div class="banner" >
-		<div class="hd">
-		        <div class="swiper-container">
-				        <ul class="swiper-wrapper">
-				            {foreach name=slidepics item=slidepic from=$global.slidepics}
-		         			<li class="swiper-slide"><img src="{$slidepic.image}"></li>
-	           				{/foreach}
-				        </ul>
-				        <div class="banner_page"><div class="page"></div></div>
-    				</div>
-		    </div>
-	    <div class="mune swiper-container">
-    		<ul class=" swiper-wrapper ">
-    			{foreach item=nav from=$navs}
-	    		<li class="swiper-slide"><a href="{$nav.link}"><span><i class="iconfont icon">{$nav.icon}</i>{$nav.name}</span></a></li>
-	    		 {/foreach}
-	    	</ul>
-	    </div>
-    	</div>
+﻿    
+    <div id="header">
+         <div id="logo"><a href="{$site_url}"><img src="{$logo}" /></a></div>
+        <nav id="nav" class="opacity">
+            <h2><a href="{$site_url}"><img src="{$site_url}images/iconHome.png">首页</a></h2>
+            <ul class="menu">
+                {foreach item=nav from=$navs}
+                <li>
+                    <a href="{$nav.link}">{$nav.name}</a>
+                    {if $nav.childmenu}
+                    <ul class="menu-list">
+                        {foreach key=key item=nav_list from=$nav.childmenu}
+                        <li><a href="{$nav_list.link}">{$nav_list.name}</a></li>
+                        {/foreach}
+                    </ul>
+                    {/if}
+                </li>
+                {/foreach}
+                <div class="ledgement"></div>
+            </ul>
+        </nav>
+    </div>
+   

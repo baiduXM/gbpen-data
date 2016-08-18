@@ -1,20 +1,30 @@
 {
-	"slidepics": {
+	"links": {
 		"value": [{
-			"title": "测试图1",
-			"image": "images/banner.jpg",
-			"link": "http://www.baidu.com"
+			"title": "中国站长站",
+			"image": "images/1.jpg",
+			"link": "article/1.html",
+			"description": "友情链接1"
 		}, {
-			"title": "测试图2",
-			"image": "images/banner.jpg",
+			"title": "华军软件园",
+			"image": "images/2.jpg",
+			"link": "http://www.baidu.com"
+		},{
+			"title": "网易163",
+			"image": "images/3.jpg",
 			"link": "http://www.baidu.com"
 		}],
-		"description": "大轮滚图",
-		"type": "images",
+		"description": "页脚友情链接",
+		"type": "images"
+	},
+	"pagenavs": {
+		"value": {},
+		"description": "侧边栏目列表（当前栏目无子栏目时展示的目标栏目）",
+		"type": "list",
 		"config": {
-			"width": 640,
-			"height": 360,
-			"limit": 1
+			"filter": "list,page",
+			"mustchild": true
 		}
 	}
+	
 }

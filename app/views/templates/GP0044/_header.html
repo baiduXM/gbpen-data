@@ -4,15 +4,14 @@
         <a href="{$site_url}">
           <img src="{$logo}" height="80px"></a>
       </div>
-        <div class="search_div search">
-            <form action="{$search_action}" method="GET">
-                <input class="searchbox" type="text" name="s" value="请输入关键字" />
-                <div class="searchbtn">
-                    <input type="submit" value="" />
-                </div>
-            </form>
-            <div id="language_div" style="float: right;"></div>
-        </div>
+      <div class="search">
+        <form action="{$search_action}" method="GET">
+          <input class="searchbox" type="text" name="s" value="请输入关键字" />
+          <div class="searchbtn">
+            <input type="submit" value="" />
+          </div>
+        </form>
+      </div>
       <div class="menu">
         <ul class="nav">
           <li>
@@ -35,7 +34,7 @@
             </ul>
             {/if}
           </li>
-		  {if $nav@index+1 == 7}{break}{/if}
+		     {if $nav@index+1 == 7}{break}{/if}
           {/foreach}
         </ul>
       </div>

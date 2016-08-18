@@ -1,0 +1,68 @@
+	<div class="left">
+    	<div class="list">
+		{if $pagenavs}
+			<div class="list_title2">{$posnavs[0].name}</div>
+			<div class="listbg">
+				<ul class="first">
+					{foreach item=nav from=$pagenavs}
+					<li>
+						<a href="">{$nav.name}</a>
+						{if $nav.childmenu}
+						<ul class="second">
+							{foreach item=nav_list from=$nav.childmenu}
+							<li>
+								<a href="">{$nav_list.name}</a>
+								{if $nav_list.childmenu}
+								<ul class="third">
+									{foreach item=nav_last from=$nav_list.childmenu}
+										<li><a href="">{$nav_last.name}</a></li>
+									{/foreach}
+								</ul>
+								{/if}
+							</li>
+							{/foreach}
+						</ul>
+						{/if}
+					</li>
+					{/foreach}
+				</ul>
+			</div>
+		{else}  <!-- 让客服自己选择，如果当前无子栏目 展现的目标栏目 -->
+			<div class="list_title2">{$global.pagenavs.name}</div>
+			<div class="listbg">
+				<ul class="first">
+					{foreach item=nav from=$global.pagenavs.childmenu}
+					<li>
+						<a href="">{$nav.name}</a>
+						{if $nav.childmenu}
+						<ul class="second">
+							{foreach item=nav_list from=$nav.childmenu}
+							<li>
+								<a href="">{$nav_list.name}</a>
+								{if $nav_list.childmenu}
+								<ul class="third">
+									{foreach item=nav_last from=$nav_list.childmenu}
+										<li><a href="">{$nav_last.name}</a></li>
+									{/foreach}
+								</ul>
+								{/if}
+							</li>
+							{/foreach}
+						</ul>
+						{/if}
+					</li>
+					{/foreach}
+				</ul>
+			</div>
+		{/if}
+		</div>
+		<div class="contact">
+            <h3>{$global.contact.name}</h3>   
+            <div class="xwzbg">
+                <div class="lix2">
+                    {$global.contact_way}
+                </div>
+                <div class="cimg"><a href="{$global.contact.link}"><img src="{$global.contact.image}" /></a></div>
+            </div>
+        </div>
+	</div>

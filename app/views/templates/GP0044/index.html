@@ -79,7 +79,7 @@
         {foreach name=slidepics item=slidepic from=$index.slidepics}
         <li>
           <a href="{$slidepic.link}" target="_blank">
-            <img src="{$slidepic.image}" alt="{$slidepic.title}" width="1920px" height="559px" />
+            <img src="{$slidepic.image}" alt="{$slidepic.title}" style="width: 100%;" />
           </a>
         </li>
         {/foreach}
@@ -152,7 +152,7 @@
               {foreach name=pro item=article from=$index.pro.data}
               <li>
                 <a href="{$article.link}">
-                  <img alt="" src="{$article.image}" width="174px" height="131px" />
+                  <img alt="" src="{$article.image}" />
                   <h2>
                     {$article.title}
                     <p>+</p>

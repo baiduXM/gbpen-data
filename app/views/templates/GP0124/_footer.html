@@ -1,0 +1,16 @@
+﻿
+<footer id="footer">
+	<div class="foot">
+	    <div class="chaining">
+	    	<span>友情链接 <i>/ LINKS</i></span>
+	        {foreach item=links from=$global.links}
+	            {if $links@index neq 0} | {/if}
+	            <a href="{$links.link}">{$links.title}</a>
+	        {/foreach}
+	    </div>
+	    <div class="copyright">
+	        {$footprint}
+	    </div>
+	</div>
+</footer>
+{$footscript}

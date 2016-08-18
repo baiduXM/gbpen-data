@@ -1,0 +1,15 @@
+﻿
+    <div class="linew2"></div>
+    <div class="mid_fontw">
+        <div class="chaining">
+            <span>友情链接：</span>
+            {foreach item=links from=$global.links}
+                {if $links@index neq 0} | {/if}
+                <a href="{$links.link}">{$links.title}</a>
+            {/foreach}
+        </div>
+        <div class="foot_list">
+            {$footprint}
+        </div>
+    </div>
+	{$footscript}
