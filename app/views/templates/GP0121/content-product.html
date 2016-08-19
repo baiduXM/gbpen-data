@@ -43,25 +43,19 @@
 				<div class='article'>
 					<div class="pro_detail">
                         <h2 class="pro_title">{$article.title}</h2>
-                        {if $article.images|count gt 1}
-                            <div class="case slides">
-                                <div class="case_hd">
-                                    <a class="next" href="javascript:void(null)"></a>
-                                     <a class="prev" href="javascript:void(null)"></a>
-                                </div>
-                                 <div class="case_bd">
-                                    <ul class="case_list">
-                                    {foreach item=image from=$article.images}
-                                         <li><img src="{$image.image}"></li>
-                                    {/foreach}
-                                    </ul>
-                                </div>
+                        <div class="case slides">
+                            <div class="case_hd">
+                                <a class="next" href="javascript:void(null)"></a>
+                                 <a class="prev" href="javascript:void(null)"></a>
                             </div>
-                        {else}
-                            <div class="case slides">
-                                <img src="{$article.image}" />
+                             <div class="case_bd">
+                                <ul class="case_list">
+                                {foreach item=image from=$article.images}
+                                     <li><img src="{$image.image}"></li>
+                                {/foreach}
+                                </ul>
                             </div>
-                        {/if}
+                        </div>
                         <div class="products_nr">
                             {$article.content|unescape:"html"}
                         </div>

@@ -46,12 +46,12 @@
 		<div class="right f_r">
 			<div class="info pro_det">
 				{if $article.images|count gt 1} 
-		            <div class="pictureSlider poster-main ">
+		            <div class="pictureSlider poster-main focusBox">
 						<div class="poster-btn poster-prev-btn"></div>
 					    <ul class="poster-list">
 					        {foreach item=proshowb from=$article.images}
 			                    <li class="poster-item">
-			                   		<a href="{$proshowb.image}"><img src="{$proshowb.image}" alt="{$proshowb.title}"></a>
+			                   		<img src="{$proshowb.image}" alt="{$proshowb.title}">
 			                    </li>
 			                {/foreach} 
 					    </ul>

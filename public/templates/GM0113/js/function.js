@@ -14,8 +14,7 @@ $(window).load(function(){
 /*美工专属区域*/
 	
 
-$(".menulist .swiper-nav span .pic").height($(".menulist .swiper-nav span .pic").width()+10+"px")
-
+$(".menulist .swiper-nav span .pic").height($(".menulist .swiper-nav span .pic").width()+2+"px")
 
 var y=($(".menulist .swiper-nav span .pic").width()-$(".menulist .swiper-nav span .pic .img_box").width())*0.4
 $(".menulist .swiper-nav span .pic .iconfont").css({"color":"#fff","font-size":"25px","left":y})

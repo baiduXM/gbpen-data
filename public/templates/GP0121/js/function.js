@@ -42,6 +42,9 @@ $(document).ready(function() {
 	});
 
 // 产品展示
+	if ($(".case_bd img").length<2) {
+		$(".case-hd").css({display:"none"});
+	}
 	jQuery(".case").slide({mainCell:".case_list",autoPage:true,effect:"left",autoPlay:true,vis:1,trigger:"click",mouseOverStop:false});
 
 

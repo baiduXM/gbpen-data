@@ -34,13 +34,11 @@
           <h5 class="te">{$article.title}<a href="javascript:window.history.back()"> < 返回</a>
           </h5> 
           {if $article.images|count gt 1} 
-            <div class="game163">
+            <div class="focusBox">
               <ul class="bigImg">
                 {foreach item=proshowb from=$article.images}
                   <li>
-                    <a target="_blank" href="{$proshowb.image}"> 
                       <img src="{$proshowb.image}" alt="{$proshowb.title}"/>
-                    </a>
                   </li>
                 {/foreach}  
               </ul>
@@ -62,7 +60,7 @@
               </div>
             </div>
           {else}
-            <div class="game163">
+            <div class="focusBox">
               <img src="{$article.image}" alt="{$article.title}"/>
             </div> 
           {/if}
