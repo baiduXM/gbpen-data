@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
+ <head>
     <script type="text/javascript">
     // 跳转手机页面
     {if $site_another_url}
@@ -16,6 +16,7 @@
     <link href="{$site_url}css/css.css" rel="stylesheet" type="text/css" />
     <link href="{$site_url}css/sub.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="{$site_url}js/jquery-1.9.1.min.js"></script>
+
     <script type="text/javascript" src="http://common.mn.sina.com.cn/public/resource/lib/jquery.jcarousellite.js">
     </script>
     <script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.js"></script>
@@ -26,6 +27,8 @@
     </head>
 
     <body>
+    <div class="bg">
+
 {include file='./_header.html'}
 <div id="sub_container" class=" wrapper clearfix" >
 {include file='./_aside.html'}
@@ -34,11 +37,13 @@
     
      
           <div class="main fr">
-         
-         
-         
-    <div class="crumb "><span><a href="{$site_url}">首页</a>  {foreach item=nav from=$posnavs}&gt; <a href="{$nav.link}">{$nav.name}</a> {/foreach}</span><h2><img src="{$site_url}images/ico.jpg"  /> <b>{$article.category.name}</b>{$article.category.en_name}</h2></div>
-          
+    
+  <div class="crumb "><span><a href="{$site_url}">首页</a>{foreach item=nav from=$posnavs} <a href="{$nav.link}">>{$nav.name}</a> {/foreach}</span><h2>{$article.category.name}</h2></div>    
+    
+ 
+
+
+
         <div class="article ">
 <div class="descripimg">
                             <div id="slideBoxb" class="slideBoxb" style="margin:0 auto">
@@ -49,7 +54,7 @@
                                         {/foreach}
                                     </ul>
                                 </div>
-                                <div class="bd" style="width:600px;">
+                                <div class="bd" style="width:640px;">
                                     <ul>
                                         {foreach item=proshowb from=$article.images}
                                         <li><img src="{$proshowb.image}" alt="{$proshowb.title}"/></li>
@@ -81,8 +86,8 @@
 
             </div>
       </div>
-
-    </div>
-{include file='./_footer.html'}
+</div>
+    
+{include file='./_footer.html'}</div>
 </body>
 </html>
