@@ -42,13 +42,11 @@ $(".wz").each(
 $(".products .inter").slide({mainCell:".bd ul",autoPlay:true,effect:"leftMarquee",vis:4,interTime:50});
 
 
-<!--案例-->
-var w=Math.floor($(window).width()/220)
-		
-$(".case .picScroll-left").slide({titCell:".hd ul",mainCell:".bd ul",autoPage:true,effect:"leftLoop",autoPlay:true,vis:w,trigger:"click"});
 
-	
-	
+$(".picScroll-left").slide({mainCell:".bd ul",autoPlay:true,effect:"leftMarquee",vis:4,interTime:50});
+
+
+
 
 function adaption(selector,li_w,li_h){
 		$(selector).each(function(i){

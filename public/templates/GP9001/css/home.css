@@ -217,7 +217,9 @@ span.hoverview>ul>li {
 	border-radius:25px;
 	list-style-type:none;
 	box-shadow:0 -1px 3px #ccc;
-	background-color:#fff
+	background-color:#fff;
+	overflow: hidden
+
 }
 span.hoverview>ul>li a {
 	color:#272727

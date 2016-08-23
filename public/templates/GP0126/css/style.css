@@ -17,9 +17,9 @@ img{border: none;}
 /*.back img{max-width: 1920px;max-height: 926px;}*/
 .back span{display: block;width: 1451px;height: 926px;position: absolute;top: 0px;left: 0px;background: url(../images/volcano.png) no-repeat center;z-index: 1;}
 
-#wrapper #content{width: 1200px;padding: 0 360px;height: auto;overflow: hidden;min-height: 926px;position: relative;left: 50%;margin-left: -960px;}
+#wrapper .content{width: 1200px;padding: 0 360px;height: auto;overflow: hidden;min-height: 926px;position: relative;left: 50%;margin-left: -960px;}
 
-#content .left{width: 147px;height: 780px;overflow: hidden;padding: 108px 0 38px 0;float: left;margin-right: 19px;position: relative;z-index: 5;}
+.content .left{width: 147px;height: 780px;overflow: hidden;padding: 108px 0 38px 0;float: left;margin-right: 19px;position: relative;z-index: 5;}
 .left .side-logo{width: 147px;height: 100px;overflow: hidden;text-align: center;display: table-cell;vertical-align: middle;}
 .side-logo img{max-width: 147px;max-height: 100px;vertical-align: middle;}
 .left .menu{width: 93px;height: 680px;overflow: hidden;padding: 0 27px;}

@@ -46,25 +46,19 @@
                             <div class="main_right_con2" >
                                 <div class="pro_detail">
                                     <h2 class="case_title">{$article.title}</h2>
-                                    {if $article.images|count gt 1}
-                                      <div class="case_list slides">
-                                          <div class="case_hd">
-                                              <a class="next" href="javascript:void(null)"></a>
-                                              <a class="prev" href="javascript:void(null)"></a>
-                                          </div>
-                                          <div class="case_bd">
-                                              <ul class="case_last">
-                                                {foreach item=image from=$article.images}
-                                                  <li><img src="{$image.image}"></li>
-                                                {/foreach}
-                                              </ul>
-                                          </div>
+                                    <div class="case_list slides">
+                                        <div class="case_hd">
+                                            <a class="next" href="javascript:void(null)"></a>
+                                            <a class="prev" href="javascript:void(null)"></a>
                                         </div>
-                                      {else}
-                                        <div class="case_list slides">
-                                            <img src="{$article.image}" />
+                                        <div class="case_bd">
+                                            <ul class="case_last">
+                                              {foreach item=image from=$article.images}
+                                                <li><img src="{$image.image}"></li>
+                                              {/foreach}
+                                            </ul>
                                         </div>
-                                      {/if}
+                                      </div>
                                     <div class="pro_text">
                                       {$article.content|unescape:"html"}
                                     </div>

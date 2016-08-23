@@ -47,11 +47,11 @@ img{border: none;}
 
 .searchform{width: 1002px;height: 40px;overflow: hidden;position: absolute;bottom: 147px;left: 50%;margin-left: -501px;}
 .nysear{bottom: 0}
-form{max-width: 352px;width: auto;height: 40px;overflow: hidden;float: right;background: rgba(255,255,255,0.7);margin-right: 77px;}
+form.search{max-width: 352px;width: auto;height: 40px;overflow: hidden;float: right;background: rgba(255,255,255,0.7);margin-right: 77px;}
 .nyform{margin-right: 0;}
-form input.text{width: 228px;height: 32px;overflow: hidden;background: #fff;border: none;font: 12px/25px "微软雅黑";padding: 0 5px;float: left;margin: 4px 5px}
-form input.submit{width: 32px;height: 40px;overflow: hidden;background: url(../images/search.png) no-repeat;border: 0;float: left;cursor: pointer;}
-form input[type="text"]:hover, form input[type="text"]:focus { width:300px; } 
+form.search input.text{width: 228px;height: 32px;overflow: hidden;background: #fff;border: none;font: 12px/25px "微软雅黑";padding: 0 5px;float: left;margin: 4px 5px}
+form.search input.submit{width: 32px;height: 40px;overflow: hidden;background: url(../images/search.png) no-repeat;border: 0;float: left;cursor: pointer;}
+form.search input[type="text"]:hover, form input[type="text"]:focus { width:300px; } 
 
 /*middlebg*/
 .middlebg{width: 100%;height: auto;background: #f5f5f5;}

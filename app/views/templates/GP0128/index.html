@@ -112,14 +112,14 @@
           <a class="prev" href="javascript:void(0)"><img src="{$site_url}images/pro-ri.gif" width="31" height="53" /></a>
         </div>
         
-      <div class="inter bd" >
+      <div class="inter bd" style=" height:264px; overflow:hidden">
       
       <ul class="picList" >
       
-               {foreach item=pro from=$index.pro.data}
+               {foreach item=case from=$index.case.data}
               <li>
-          <div class="pic"><a href="{$pro.link}"><img src="{$pro.image}"  /></a></div>
-          <span>{$pro.title}</span></a></li>
+          <div class="pic"><a href="{$case.link}"><img src="{$case.image}"  /></a></div>
+          <span>{$case.title}</span></a></li>
             {/foreach}
       
       

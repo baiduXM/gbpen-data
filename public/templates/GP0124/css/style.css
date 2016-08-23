@@ -46,8 +46,8 @@ ul.menu-list li a:hover{color: #ffffff;text-decoration: underline;}
 
 
 /*首页焦点图滚动*/
-#content{width: 100%;height: auto;overflow: hidden;position: relative;}
-#content .side-top{width: 1600px;height: 614px;padding-bottom: 101px;position: relative;left: 50%;margin-left: -800px;position: relative;}
+#matter{width: 100%;height: auto;overflow: hidden;position: relative;}
+#matter .side-top{width: 1600px;height: 614px;padding-bottom: 101px;position: relative;left: 50%;margin-left: -800px;position: relative;}
 .side-top #banner{width: 1284px;height: 614px;margin: 0 auto;position: relative;z-index: 5;}
 #banner .picture{width: 1126px;height: 497px;margin: 0 auto;padding: 18px 17px;background: #e8f1f0;position: relative;z-index: 10;top: 47px;}
 .picture ul li{width: 1126px;height: 497px;overflow: hidden;text-align: center;}
@@ -244,7 +244,7 @@ ul.product li a img{max-height: 136px;max-width: 230px;}
 .case-bd{margin: 0 auto;height: auto;}
 .case-bd .tempWrap{ margin: 0 auto;}
 .case-last{width: 100%;height: auto;height: auto;}
-.case-last li{text-align: center;overflow: hidden;width: 426px;max-height: 564px;}
+.case-last li{text-align: center;overflow: hidden;width: 436px;max-height: 574px;}
 .case-list img{max-width: 426px; max-height: 564px;border:solid 5px #e6e5e5;}
 
 .pro-detail{width: 100%;height: 100%;overflow: hidden;padding-bottom: 10px;}
