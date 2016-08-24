@@ -9,78 +9,91 @@
         }
     {/if}
     </script>
-
+ 
 
 <meta name="keywords" content="{$keywords}"/>
 <meta name="description" content="{$description}"/>
 <link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="Content-Language" content="zh-CN">
-
-<link rel="stylesheet" type="text/css" href="{$site_url}css/style.css"/>
-<script type="text/javascript" src="{$site_url}js/jquery-1.9.1.min.js"></script>
+<link href="{$site_url}css/css.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="{$site_url}js/jquery-1.11.3.js"></script>
 <script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.js"></script>
-<script type="text/javascript" src="http://common.mn.sina.com.cn/public/resource/lib/jquery.jcarousellite.js"></script>
-<script type="text/javascript" src="{$site_url}js/function.js"></script>
-<script type="text/javascript" src="{$site_url}js/html5.js"></script>
-<script type="text/javascript" src="{$site_url}js/index1.js"></script>
+<script type="text/javascript" src="http://common.mn.sina.com.cn/public/resource/lib/jquery.jcarousellite.js">
+</script>
+
+<script type="text/javascript" src="{$site_url}js/global.js"></script>
+<script type="text/javascript" src="{$site_url}js/index.js"></script>
 <title>{$title}</title>
 {$headscript}
 </head>
-<body>
-    <div class="wappers">
-    {include file='./_header.html'}
-        <div class="containers">
-            <div class="tpconts">
-                <div class="news">
-                    <div class="newst_titles"><span><a href="{$index.news.link}"><img src="{$site_url}images/more.gif" height="11" width="49" /></a></span>{$index.news.name}<b>{$index.news.en_name}</b></div>
-                    <div class="news_deta3">
-                        <ul>
-                            {foreach item=new from=$index.news.data}
-                            <li><a href="{$new.link}"><span><time datetime="{$article.pubtimestamp|date_format:'%Y-%m-%d'}">{$article.pubtimestamp|date_format:'%Y-%m-%d'}</time></span>{$new.title}</a></li>
-                            {if $new@index+1 eq 6}{break}{/if}
-                            {/foreach}
 
+<body>
+<div class="wrap">
+<!-- 导入头部文件 -->
+    {include file='./_header.html'}
+     <div class="content">
+         <div class="row">
+             <div class="about fl">
+                 <h1 class="title ico1">{$index.about_us.name}<a href="{$index.about_us.link}">点击查看更多</a></h1>
+                 <div class="about-nr">
+                     <a href="{$index.about_us.link}">
+                       <div class="about_img"><img src="{$index.about_us.image}" /></div>
+                       <div class="about_txt">{$index.about_us.description}</div>
+                     </a>
+                 </div>
+             </div>
+             <div class="news fl">
+                 <h1 class="title ico2">{$index.news.name}<a href="{$index.news.link}">点击查看更多</a></h1>
+                 <div class="newstop">
+                     <dl><a href="{$index.news.data[4].link}"><img src="{$index.news.data[4].image}"></a></dl>
+                     <dt><a href="{$index.news.data[4].link}">{$index.news.data[4].title}</a></dt>
+                     <dd>{$index.news.data[0].description}</dd>
+                 </div>
+                 <ul>
+                 {foreach item=new from=$index.news.data}
+                     <li><a href="{$new.link}" class="clearfix">{$new.title}<span>{$new.pubdate}</span></a></li>
+                 
+                 {if $new@index+1 eq 3}{break}{/if}
+                 {/foreach}
+                 </ul>
+                   
+             </div>
+             <div class="contact fr">
+                 <h1 class="title ico3">联系方式</h1>
+                 
+                 <div class="contact-con">
+                   <b>{$title}</b>
+                    {$index.contact_us}
+                 </div>
+                
+             </div>
+         </div>
+         <div class="pro">
+            <div class="protit">{$index.pro.name} <span>\{$index.pro.en_name}</span><a href="{$index.pro.link}"></a></div>
+            <div id="prizes">
+                <div class="photos">
+                    <a href="javascript:void(0);" class="photos-button photos-prev"></a>
+                    <div class="photos-content">
+                        <ul>
+                        
+                        {for $item=1 to 5}
+                                   {foreach item=pro from=$index.pro.data}
+                                       <li><a href="{$pro.link}" class="choose"><img alt="" src="{$pro.image}" /><h2 class="xu_word">{$pro.title}</h2></a></li>
+                                    {/foreach}
+                        {/for}
                         </ul>
                     </div>
-                </div>
-                <div class="abouts">
-                    <div class="newst_titles"><span><a href="{$index.about.link}"><img src="{$site_url}images/more.gif" height="11" width="49" /></a></span>{$index.about.name}<b>{$index.about.en_name}</b></div>
-                    <div class="borders">
-                        <div class="anputt">
-                            <img src="{$index.about.image}"/>
-                            {$index.about.description}
-                            <span><a href="{$index.about.link}">[了解更多]</a></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="contact">
-                    <div class="newst_titles"><span><a href="{$index.contact.link}"><img src="{$site_url}images/more.gif" height="11" width="49" /></a></span>{$index.contact.name}<b>{$index.contact.en_name}</b></div>       
-                    <div class="lianxiw">
-                        {$global.contact_way}
-                    </div>
+                    <a href="javascript:void(0);" class="photos-button photos-next"></a>
+                
                 </div>
             </div>
-            <div class="prods">
-                <div class="pri_titles">
-                    <h2>{$index.pro.name} <i> {$index.pro.en_name}</i></h2>
-                    <span><a href="{$index.pro.link}">更多产品请点击</a></span>
-                </div>
-                <div class="showpro">
-                    <ul class="colee_left">
 
-                        {foreach item=pro from=$index.pro.data}
-                        <li><a href="{$pro.link}">
-                            <img src="{$pro.image}"><p>{$pro.title}</p>
-                        </a></li>
-                        {/foreach}
-
-                    </ul>
-                </div>
-            </div>
-        </div>
-    {include file='./_footer.html'}
+         </div>
+ 
      </div>
+     {include file='./_footer.html'}
+
+</div>
 </body>
 </html>
-

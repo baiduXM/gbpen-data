@@ -1,36 +1,39 @@
 {
-	"news":{
-		"value": {},
-		"description": "首页文字列表(新闻中心)",
-		"type": "list",
-		"config": {
-			"star_only": true
-		}
-	},
-	"about": {
-		"description": "首页(关于我们)",
+	
+    "about_us": {
+		"description": "关于我们",
 		"value": {},
 		"type": "page",
-		"config": {
-			"nav_width": 210,
-			"nav_height": 100
+		"config":{
+			"nav_width":65,
+			"nav_height":157
 		}
 	},
-	"contact":{
-		"description":"联系方式",
-		"type":"page",
+	"news":{
+		"description": "新闻中心",
 		"value": {},
-		"config": {}
+		"type": "list",
+		"config":{
+			"width":85,
+			"height":85
+		}	
+	},
+	"contact_us": {
+		"value": "姓名：龚先生\r\n手机：13275050333 \r\n电话：0595-83068686 \r\n传真：0595-83068686 \r\n地址：石狮市濠江丽景小区1号楼D梯202室\r\n  ",
+		"description": "联系方式",
+		"type": "textarea"
 	},
 	"pro":{
-		"description":"单排滚动图片",
-		"type":"list",
+		"description":"产品展示",
 		"value":{},
-		"config": {
-			"star_only": true,
-			"width": 168,
-			"height": 144
+		"type":"list",
+		"config":{
+			"width":178,
+			"height":178
 		}
 	}
-	
 }
+               
+
+
+

@@ -9,76 +9,75 @@
         }
     {/if}
     </script>
-
+ 
 
 <meta name="keywords" content="{$keywords}"/>
 <meta name="description" content="{$description}"/>
 <link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta http-equiv="Content-Language" content="zh-CN">
-
-<link rel="stylesheet" type="text/css" href="{$site_url}css/style.css"/>
-<script type="text/javascript" src="{$site_url}js/jquery-1.9.1.min.js"></script>
+<meta http-equiv="Content-Language" content="zh-CN"><link rel="stylesheet" rev="stylesheet" href="http://chanpin.xm12t.com.cn/css/global.css" type="text/css" />
+<link href="{$site_url}css/css.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="{$site_url}js/jquery-1.11.3.js"></script>
 <script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.js"></script>
-<script type="text/javascript" src="http://common.mn.sina.com.cn/public/resource/lib/jquery.jcarousellite.js"></script>
-<script type="text/javascript" src="{$site_url}js/function.js"></script>
-<script type="text/javascript" src="{$site_url}js/html5.js"></script>
+<script type="text/javascript" src="http://common.mn.sina.com.cn/public/resource/lib/jquery.jcarousellite.js">
+</script>
+
+<script type="text/javascript" src="{$site_url}js/global.js"></script>
+<script type="text/javascript" src="{$site_url}js/index.js"></script>
 <title>{$title}</title>
+
 </head>
+
 <body>
-    <div class="wappers">
+<div class="wrap">
+<!-- 导入头部文件 -->
     {include file='./_header.html'}
-        
-        <div class="containers">
-            {include file='./_left.html'}
-            <div class="rights">
-            	<div class="detal_s">
-                    <div class="a_titles2">
-                        <h3>{$article.category.name}<b>{$article.category.en_name}</b></h3>
-                        <span>所在位置:
-                            <a href="{$site_url}">首页</a>
-                            {foreach item=nav from=$posnavs}
-                                 > <a href="{$nav.link}">{$nav.name}</a>
-                            {/foreach}
-                        </span>
-                    </div>
-                    <div class="deteo">
-                        <div class="main_right_con" >
-                            <h1 class="inner_news_tit">{$article.title}</h1>
-                            <h2 class="inner_news_time">添加时间：<time class="fr" datetime="{$article.pubdate}" pubdate="pubdate">{$article.pubdate}</time></h2>
-                            <div class="edit">
-                                {$article.content|unescape:"html"}
-                            </div>
-                            <div class="bbs">
-                               {shareExt shareText=$article.content|unescape:"html"|strip_tags|truncate:140:"…"  sharePic=$article.image}
-                            </div>
+     <div class="ny-con">
+       <div class="side-left fl">
+           <i class="topbg"></i><i class="botbg"></i>
+           <div class="ny-tit">
+               <h1><span><span class="cn">{$article.category.name}</span><span class="en">{$article.category.en_name}</span></span><i></i></h1>
+           </div>
+           <div class="locationbox">
+               <div class="location">
+                   当前位置：<a href="{$site_url}">首页</a>
+                               {foreach item=nav from=$posnavs}
+                                 &gt;&gt; <a href="{$nav.link}">{$nav.name}</a>
+                               {/foreach}
+               </div>
+           </div>
+           <div class="main">
+              
+                    <div class="edit">
+                      <div class="ny-dettit">
+                        <h2>{$article.title}</h2>
+                        <span>分类：{$article.category.name} &nbsp;&nbsp; 发布日期:{$article.pubtimestamp|date_format:'%Y-%m-%d'}&nbsp;&nbsp;  浏览次数：{$article.viewcount}&nbsp;&nbsp;  <a href="{$site_url}">[返回]</a></span>
+                      </div>
+                      <div class="ny-detcon">
+                        {$article.content|unescape:"html"}
+                        <div class="share">{shareExt shareText=$article.content|unescape:"html"|strip_tags|truncate:140:"…" sharePic=$article.image}
                         </div>
-                        <ul class="inner_pages">
-                            <li>上一篇：<a href="{$article.prev.link}">{$article.prev.title}</a></li>
-                            <li>下一篇：<a href="{$article.next.link}">{$article.next.title}</a></li>
-                        </ul>
-   			        </div>           
-                </div>
-            </div>
+                      </div>
+                    
+                      <ul class='article-paging'>
+                        <li>上一篇：<a href='{$article.prev.link}'>{$article.prev.title}</a></li>
+                        <li>下一篇：<a href='{$article.next.link}'>{$article.next.title}</a></li>
+                      </ul>
+                    </div>
+           </div>
+        </div>
+  
+        <div class="side-right fr">
+            {include file='./_pagenavs_sub3.html'}
+           
         </div>
 
-    {include file='./_footer.html'}
-    </div>
+     </div>
+     {include file='./_footer.html'}
+
+</div>
 </body>
 </html>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    

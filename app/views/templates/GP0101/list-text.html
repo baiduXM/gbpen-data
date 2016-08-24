@@ -9,67 +9,77 @@
         }
     {/if}
     </script>
-
+ 
 
 <meta name="keywords" content="{$keywords}"/>
 <meta name="description" content="{$description}"/>
 <link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="Content-Language" content="zh-CN">
-
-<link rel="stylesheet" type="text/css" href="{$site_url}css/style.css"/>
-<script type="text/javascript" src="{$site_url}js/jquery-1.9.1.min.js"></script>
+<link href="{$site_url}css/css.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="{$site_url}js/jquery-1.11.3.js"></script>
 <script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.js"></script>
-<script type="text/javascript" src="http://common.mn.sina.com.cn/public/resource/lib/jquery.jcarousellite.js"></script>
-<script type="text/javascript" src="{$site_url}js/function.js"></script>
-<script type="text/javascript" src="{$site_url}js/html5.js"></script>
+<script type="text/javascript" src="http://common.mn.sina.com.cn/public/resource/lib/jquery.jcarousellite.js">
+</script>
+
+<script type="text/javascript" src="{$site_url}js/global.js"></script>
+<script type="text/javascript" src="{$site_url}js/index.js"></script>
 <title>{$title}</title>
+
 </head>
+
 <body>
-    <div class="wappers">
+<div class="wrap">
+<!-- 导入头部文件 -->
     {include file='./_header.html'}
-        
-        <div class="containers">
-            {include file='./_left.html'}
-            <div class="rights">
-            	<div class="detal_s">
-                    <div class="a_titles2">
-                        <h3>{$list.name}<b>{$list.en_name}</b></h3>
-                        <span>所在位置:
-                            <a href="{$site_url}">首页</a>
-                            {foreach item=nav from=$posnavs}
-                                 > <a href="{$nav.link}">{$nav.name}</a>
-                            {/foreach}
-                        </span>
+     <div class="ny-con">
+       <div class="side-left fl">
+           <i class="topbg"></i><i class="botbg"></i>
+           <div class="ny-tit">
+               <h1><span><span class="cn">{$list.name}</span><span class="en">{$list.en_name}</span></span><i></i></h1>
+           </div>
+           <div class="locationbox">
+               <div class="location">
+                   当前位置：<a href="{$site_url}">首页</a>
+                               {foreach item=nav from=$posnavs}
+                                 &gt;&gt; <a href="{$nav.link}">{$nav.name}</a>
+                               {/foreach}
+               </div>
+           </div>
+           <div class="main">
+              <div class="edit">
+                    <ul class="ny-newlist">
+                            {foreach name=article item=article from=$list.data} 
+                                <li><a href="{$article.link}"><span>[{$article.pubtimestamp|date_format:'%Y - %m - %d'}]</span> {$article.title}</a></li>
+                                
+                                
+                            {/foreach}     
+                    </ul>
+                    <div class="paging">
+                      <a href="{$page_links.prev_link}">&laquo; 上一页</a>
+                      {foreach item=near_link key=near_page from=$page_links.nears_link}
+                        {if $near_page == $page_links.current_page}
+                          <a class="current" style="color:#cc1835;" >{$near_page}</a></li>
+                        {else}
+                          <a href="{$near_link}">{$near_page}</a></li>
+                        {/if}
+                      {/foreach}
+
+
+                      <a href="{$page_links.next_link}">下一页 &raquo;</a>
                     </div>
-                    <div class="deteo">
-                        <div class="xwzx_show">
-                        	<div class="n_esa">
-                            	<div class="nimg2"><a href="{$list.data[0].link}"><img src="{$list.data[0].image}"/></a></div>
-                                <div class="new_titles">
-                                	<div class="title"><a href="{$list.data[0].link}">{$list.data[0].title}</a></div>
-                                    <div class="news_p">{$list.data[0].description}<span><a href="{$list.data[0].link}">[查看更多]</a></span></div>
-                                </div>
-                            </div>
-                            <div class="tn_detal7">
-                                <ul>
-                                {foreach name=article item=article from=$list.data}
-                                {if $article@index gt 0}
-                                    <li><a href="{$article.link}"><span>
-                                        <time datetime="{$article.pubtimestamp|date_format:'%Y-%m-%d'}">{$article.pubtimestamp|date_format:'%Y-%m-%d'}</time></span>
-                                        {$article.title}
-                                    </a></li>
-                                {/if}
-                                {/foreach}
-                                </ul>
-                                {include file='./_page.html'}
-                            </div>
-                        </div>
-                    </div>                                                               
-                </div>
-            </div>
+              </div>
+           </div>
         </div>
-    {include file='./_footer.html'}
-    </div>
+  
+        <div class="side-right fr">
+            {include file='./_pagenavs_sub3.html'}
+           
+        </div>
+
+     </div>
+     {include file='./_footer.html'}
+
+</div>
 </body>
 </html>

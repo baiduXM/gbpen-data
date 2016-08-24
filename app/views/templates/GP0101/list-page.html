@@ -9,49 +9,58 @@
         }
     {/if}
     </script>
-
+ 
 
 <meta name="keywords" content="{$keywords}"/>
 <meta name="description" content="{$description}"/>
 <link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="Content-Language" content="zh-CN">
-
-<link rel="stylesheet" type="text/css" href="{$site_url}css/style.css"/>
-<script type="text/javascript" src="{$site_url}js/jquery-1.9.1.min.js"></script>
+<link href="{$site_url}css/css.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="{$site_url}js/jquery-1.11.3.js"></script>
 <script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.js"></script>
-<script type="text/javascript" src="http://common.mn.sina.com.cn/public/resource/lib/jquery.jcarousellite.js"></script>
-<script type="text/javascript" src="{$site_url}js/function.js"></script>
-<script type="text/javascript" src="{$site_url}js/html5.js"></script>
+<script type="text/javascript" src="http://common.mn.sina.com.cn/public/resource/lib/jquery.jcarousellite.js">
+</script>
+
+<script type="text/javascript" src="{$site_url}js/global.js"></script>
+<script type="text/javascript" src="{$site_url}js/index.js"></script>
 <title>{$title}</title>
+
 </head>
+
 <body>
-    <div class="wappers">
+<div class="wrap">
+<!-- 导入头部文件 -->
     {include file='./_header.html'}
-        
-        <div class="containers">
-			{include file='./_left.html'}
-            <div class="rights">
-            	<div class="detal_s">
-                    <div class="a_titles2">
-                        <h3>{$list.name}<b>{$list.en_name}</b></h3>
-                        <span>所在位置:
-                            <a href="{$site_url}">首页</a>
-                            {foreach item=nav from=$posnavs}
-                                 > <a href="{$nav.link}">{$nav.name}</a>
-                            {/foreach}
-                        </span>
-                    </div>
-                    <div class="deteo">
-                        <div class="about_edit">
-                            {$list.content|unescape:"html"}
-                        </div>
-                    </div>
+     <div class="ny-con">
+       <div class="side-left fl">
+           <i class="topbg"></i><i class="botbg"></i>
+           <div class="ny-tit">
+               <h1><span><span class="cn">{$list.name}</span><span class="en">{$list.en_name}</span></span><i></i></h1>
+           </div>
+           <div class="locationbox">
+               <div class="location">
+                   当前位置：<a href="{$site_url}">首页</a>
+                               {foreach item=nav from=$posnavs}
+                                 &gt;&gt; <a href="{$nav.link}">{$nav.name}</a>
+                               {/foreach}
+               </div>
+           </div>
+           <div class="main ny-about">
+                <div class="edit">
+                     {$list.content|unescape:"html"}     
                 </div>
-            </div>
-        </div>
-        
-     {include file='./_footer.html'}
+                              
+           </div>
+       </div>
+       <div class="side-right fr">
+            {include file='./_pagenavs_sub3.html'}
+           
+       </div>
+
      </div>
+     {include file='./_footer.html'}
+
+</div>
 </body>
 </html>
