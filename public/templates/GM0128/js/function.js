@@ -111,6 +111,8 @@ $(document).ready(function(){
 	$('.menu ul li').height($('.menu ul li:nth-child(1)').width());
 	$('.nav li:nth-child(6)').width(($('.menu').width()/3)-2);
 	$('.banner').height(($('.menu').width()/3*2));
+	var banHeight = $(".banner").height();
+	$(".banner img").css({height:banHeight});
 	$('.banner').width(Math.floor(($('.menu').width()/3)-1));
 	$('.banner').css("margin-left",(-$('.banner').width()/2)-3+'px');
 	$(window).resize(function() {
