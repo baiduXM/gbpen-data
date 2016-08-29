@@ -122,7 +122,16 @@
                  </div>
             </div>
         </div>
-        {include file='./_contact.html'}
+        <div class="contact">
+   <div class="contact_title">
+    <div class="style">{$global.con.icon}</div>
+     <p><a href="{$global.con.link}">{$global.con.name} {$global.con.en_name}</p></a>
+   </div>
+   <p class="contact_nr">
+    {$global.contact}
+    <span>{$contact.telephone}</span>
+   </p>
+</div>
     </div>
   </div>
 {include file='./_footer.html'} 

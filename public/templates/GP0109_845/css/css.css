@@ -54,7 +54,7 @@ ul.nav>li>h3>a:hover {background:#ffffff;color: #000000;}
 
 .focusBox {width:1920px;position:relative;left: 50%;margin-left: -960px !important;text-align: center;}
 .focusBox .pic{ position:relative; z-index:0;text-align:center;}
-.focusBox .pic img {height:584px;}
+.focusBox .pic img {height:584px;max-width:1920px;}
 .focusBox .hd {display: none; width:100%; position: absolute; bottom: 10px; text-align: center; font-size:0; z-index:1; }
 .focusBox .hd li{margin: 0 5px; background: url(images/dot.png) no-repeat 0 -16px; height: 16px; overflow: hidden; width: 16px; cursor: pointer;
 	display:inline-block; *display:inline; zoom:1;  _background: url(images/dot8.png) no-repeat 0 -16px;}
