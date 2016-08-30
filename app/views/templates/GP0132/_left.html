@@ -3,13 +3,13 @@
      <div class="ny_left_nav">
           <p class="nav_title">{$posnavs[0].name}</br>{$posnavs[0].en_name}</p>                
           <ul class="ce">
-              {foreach item=article from=$pagenavs}
-                  <li class="{if $article.current}current{/if}">
-                    <a class="xz {if $article.current}current{/if}"  href="{if $article.childmenu}javascript:;
-                                 {else}{$article.link}{/if}">{$article.name}</a><!--如果有子集就阻止连接-->
-                    {if $article.childmenu}
+              {foreach item=lnav from=$pagenavs}
+                  <li class="{if $lnav.current}current{/if}">
+                    <a class="xz {if $lnav.current}current{/if}"  href="{if $lnav.childmenu}javascript:;
+                                 {else}{$lnav.link}{/if}">{$lnav.name}</a><!--如果有子集就阻止连接-->
+                    {if $lnav.childmenu}
                     <ul class="er">
-                        {foreach item=navlist from=$article.childmenu}
+                        {foreach item=navlist from=$lnav.childmenu}
                             <li class="e_li {if $navlist.current}current{/if}">
                               <a  href="{if $navlist.childmenu}javascript:;{else}{$navlist.link}{/if}">{$navlist.name}</a>
                                 {if $navlist.childmenu}
@@ -33,13 +33,13 @@
     <div class="ny_left_nav">
           <p class="nav_title">{$global.pagenavss.name}</br>{$global.pagenavss.en_name}</p>                
           <ul class="ce">
-              {foreach item=article from=$global.pagenavss.childmenu}
-                  <li class="{if $article.current}current{/if}">
-                    <a class="xz {if $article.current}current{/if}"  href="{if $article.childmenu}javascript:;
-                                 {else}{$article.link}{/if}">{$article.name}</a>
-                    {if $article.childmenu}
+              {foreach item=lnav from=$global.pagenavss.childmenu}
+                  <li class="{if $lnav.current}current{/if}">
+                    <a class="xz {if $lnav.current}current{/if}"  href="{if $lnav.childmenu}javascript:;
+                                 {else}{$lnav.link}{/if}">{$lnav.name}</a>
+                    {if $lnav.childmenu}
                     <ul class="er">
-                        {foreach item=navlist from=$article.childmenu}
+                        {foreach item=navlist from=$lnav.childmenu}
                             <li class="e_li {if $navlist.current}current{/if}">
                               <a  href="{if $navlist.childmenu}javascript:;{else}{$navlist.link}{/if}">{$navlist.name}</a>
                                 {if $navlist.childmenu}

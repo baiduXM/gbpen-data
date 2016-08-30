@@ -11,7 +11,7 @@ window.onload=function()
 	for(var i=0;i<oUl.children.length;i++)
 	{
 		//设置一级li等比宽度
-		oUl.children[i].style.width=oNav.offsetWidth/oUl.children.length+"px";
+		// oUl.children[i].style.width=oNav.offsetWidth/oUl.children.length+"px";
 		//添加li鼠标滑入事件
 		oUl.children[i].onmouseover=function()
 		{

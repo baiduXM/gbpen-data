@@ -19,9 +19,11 @@
        <div class="nav_bg"></div>
     <div id="nav" class="nav">
         <ul>
-          <li><a href="{$site_url}">网站首页</a></li>
+        {$limit=10}
+        {if $limit gt $navs|count}{$limit=$navs|count}{/if}
+          <li style="width:{(100/($limit+1))}%"><a href="{$site_url}">网站首页</a></li>
         {foreach item=nav from=$navs}
-        <li class="{if $nav.current} current{/if}">
+          <li style="width:{(100/($limit+1))}%" class="{if $nav.current} current{/if}">
             <a href="{$nav.link}">{$nav.name}</a> 
             {if $nav.childmenu}
             <ul class="erji none">
@@ -31,6 +33,7 @@
             </ul>
             {/if}
         </li>
+        {if $nav@index+1 eq $limit}{break}{/if}
         {/foreach}
      </ul> 
     </div>        
