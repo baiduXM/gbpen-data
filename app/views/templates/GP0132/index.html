@@ -113,26 +113,26 @@
                  </div>
                  <div class="newslist_right">
                       <ul>
-                        {foreach item=article from=$index.news.data}
+                        {foreach item=iarticle from=$index.news.data}
                           <li><a href="{$index.news.data[{$sum}].link}">{$index.news.data[{$sum}].title}{$sum}</a></li>
                            {$sum=$sum+1}
-                          {if $article@index+1 eq 3}{break}{/if}
+                          {if $iarticle@index+1 eq 3}{break}{/if}
                         {/foreach}
                       </ul>
                  </div>
             </div>
         </div>
         <div class="contact">
-   <div class="contact_title">
-    <div class="style">{$global.con.icon}</div>
-     <p><a href="{$global.con.link}">{$global.con.name} {$global.con.en_name}</p></a>
-   </div>
-   <p class="contact_nr">
-    {$global.contact}
-    <span>{$contact.telephone}</span>
-   </p>
-</div>
-    </div>
+           <div class="contact_title">
+            <div class="style">{$global.con.icon}</div>
+             <p><a href="{$global.con.link}">{$global.con.name} {$global.con.en_name}</p></a>
+           </div>
+           <p class="contact_nr">
+            {$global.contactad}
+            <span>{$contact.telephone}</span>
+           </p>
+        </div>
+      </div>
   </div>
 {include file='./_footer.html'} 
 </div>
