@@ -3,7 +3,14 @@
 window.onload=function(){
 	
 <!--美工-->
-	
+	/*产品详细页图片自适应*/
+	$(".bd li").each(function(i){
+	if($(".bd li").eq(i).find("img").width() > 640){
+       $(".bd li").eq(i).find("img").width("99%");
+}
+
+		})
+
 	
 $("#container .bj").each(function(n){
 
@@ -96,13 +103,6 @@ $(document).ready(function() {
      
 
 	})
-/*产品详细页图片自适应*/
-	$(".bd li").each(function(i){
-	if($(".bd li").eq(i).find("img").width() > 640){
-       $(".bd li").eq(i).find("img").width("99%");
-}
-
-		})
 
 	
 /*侧边栏*/
