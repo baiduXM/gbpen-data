@@ -1,40 +1,38 @@
 {
-	"about": {
-		"description": "单页面(关于我们)",
+	"list2": {
 		"value": {},
+		"description": "第一个栏目列表",
+		"type": "list",
+		"config":{
+		"width":160,
+		"height":147
+		}
+	}, 
+
+
+	"list3": {
+		"value": {},
+		"description": "第二个栏目列表",
 		"type": "page",
-		"config": {
-			"nav_width": 310,
-		    "nav_height": 241
+		"config":{
+			"nav_width":171,
+			"nav_height":142
 		}
 	},
-	"aside":{
-			"description": "首页分类",
-			"value": {},
-			"type": "list",
-			"config": {
-				"filter":"list,page",
-				"mustchild":"true"
-			}
-		},
-	"pro":{
-		"description": "(图片列表)产品展示",
+     "list4": {
 		"value": {},
+		"description": "第三个栏目列表",
 		"type": "list",
-		"config": {
-			"star_only": true,
-			"width":218,
-			"height":148
+		"config":{
+		"width":160,
+		"height":148
 		}
-	},	
-	"news":{
-		"description": "新闻中心",
-		"value": {},
-		"type": "list",
-		"config": {
-			"star_only": true,
-			"width":"220",
-			"height":"144"
-		}	
+	},
+	"contact": {
+		"value": "电话：0592-23232232\r\n传真：0592-23232232\r\n地址：软件园二期观日路36号201号\r\nE-mail：01@eexx.me\r\n",
+		"description": "联系我们",
+		"type": "textarea"
 	}
 }
+
+

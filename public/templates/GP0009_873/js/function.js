@@ -18,6 +18,9 @@ $(document).ready(function(){
 		$(this).find(".text").stop().animate({left:'270'}, {duration: "fast"})
 		$(this).find(".text").animate({left:'-270'}, {duration: 0})
 	});
+
+jQuery(".txtMarquee-top").slide({mainCell:".bd ul",autoPlay:true,effect:"leftMarquee",vis:1,interTime:30,delayTime:0});
+
 	
 		jQuery(".focusBoxa").slide({ titCell:".num li", mainCell:".pic",effect:"fold", autoPlay:true,trigger:"click",
 			//下面startFun代码用于控制文字上下切换

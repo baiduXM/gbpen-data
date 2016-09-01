@@ -1,0 +1,45 @@
+    <div class="header">
+        <div class="head">
+            <div class="logo"><a href="{$site_url}"><img src="{$logo}" alt=""></a></div>
+            <div class="headright">
+                <div class="tel">{$global.tel_text} <span>{$contact.telephone}</span>     </div>
+                <div class="search">
+                    <form action="{$search_action}" method="GET">
+                        <input type="text" name="s" class="sinp" value="请输入搜索内容" />
+                        <input type="submit" class="sbtn" value="">
+                    </form>
+                </div>
+            </div>            
+        </div>
+
+    </div>
+
+    <div class="menu">
+        {$limit = 6}
+
+        <ul id="nav" class="nav">
+
+            <li class="nLi on" style="width:{100/($limit+1)}%">
+                <h3><a href="{$site_url}"><span>网站首页</span></a></h3>
+            </li>
+            {foreach name=navs item=nav from=$navs}
+            <li class="{if $nav.current}on{/if} nLi" style="width:{100/($limit+1)}%">
+                <h3>
+                    <a href="{$nav.link}"><span>{$nav.name}</span></a>
+
+                </h3>       
+                {if $nav.childmenu}
+                    <ul class="sub">
+                        {foreach key=key item=nav_list from=$nav.childmenu}
+                        <li class="{if $nav.current}current{/if}"><a href="{$nav_list.link}">{$nav_list.name}</a></li>
+                        {/foreach}
+                    </ul>
+                {/if}                        
+            </li>
+            {if $nav@index+1 gte $limit}{break}{/if}
+            {/foreach}
+        </ul>
+    </div>
+
+
+  

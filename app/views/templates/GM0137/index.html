@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<!-- 实时预览调试代码，模板开发完成后删除 -->
+<html manifest="huancun.manifest">
+<head>
+<!-- 实时预览调试代码，模板开发完成后删除 -->
 		
 		<!-- 调试代码 End -->
 		<script type="text/javascript">
@@ -14,25 +14,37 @@
 		</script>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no,minimal-ui">
-<meta name="keywords" content="{$keywords}" />
-<meta name="description" content="{$description}" />        
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 <meta content="telephone=no, email=no" name="format-detection">
+<!-- 启用360浏览器的极速模式(webkit) -->
 <meta name="renderer" content="webkit">
+<!-- 避免IE使用兼容模式 -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
 <meta name="HandheldFriendly" content="true">
+<!-- 微软的老式浏览器 -->
 <meta name="MobileOptimized" content="320">
+<!-- uc强制竖屏 -->
 <meta name="screen-orientation" content="portrait">
+<!-- QQ强制竖屏 -->
 <meta name="x5-orientation" content="portrait">
-<title>{$title}</title>
-
+<meta name="keywords" content="{$keywords}" />
+<meta name="description" content="{$description}" />
 <link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
+<title>{$title}</title>
 <link rel="stylesheet" href="{$site_url}css/reset.css" /> 
 <link rel="stylesheet" href="{$site_url}css/public.css" /> 
 <link href="{$site_url}css/css.css" rel="stylesheet" type="text/css" />
 <link href="{$site_url}css/swipe.css" rel="stylesheet" type="text/css" />
-
+<link rel="stylesheet" rev="stylesheet" href="{$site_url}css/style_{$stylecolor}.css" type="text/css" />
+<script src="{$site_url}js/TouchSlide.1.1.js"></script>
+<script type="text/javascript" src="{$site_url}js/jquery.min.js"></script>
+<script type="text/javascript" src="{$site_url}js/function.js"></script>
+<script type="text/javascript" src="{$site_url}js/share.js"></script>
+<script src="{$site_url}js/idangerous.swiper-2.0.min.js"></script>
+<script src="{$site_url}js/idangerous.swiper.3dflow-2.0.js"></script>
+<script src="{$site_url}js/simple-app.js"></script>
 <script type="text/javascript">
 	window.addEventListener('load', function(){
    setTimeout(function(){ window.scrollTo(0, 1); }, 100);
@@ -41,157 +53,95 @@
 {$headscript}
 </head>
 <body>
-
+<div class="body">
   <div class="wrap page-active">
     <div class="index-wrap">
-      {include file="./_header.html"} 
+      {include file="./_header.html"}
+      <section> 
+        
+      {foreach name=mIndexCats item=mIndexCat from=$mIndexCats}
+      {if $mIndexCat.type eq 4}
+      <div id="in_page" class="wrapper clearfix"><a href="{$mIndexCat.link}">
+      <h2 class="in_h2"><div class="in_h2ico">{$mIndexCat.icon}</div><div class="in_zh">{$mIndexCat.name}</div></h2>
+        <div class="inner clearfix">
+        <div class="page_img"><img src="{$mIndexCat.image}"></div>
+          <p>{$mIndexCat.description}</p>
+       </div>
+       </a>
+        </div>
+        
+        
+      {elseif $mIndexCat.type eq 1} 
+       <div id="in_text" class="wrapper clearfix">
+        <h2 class="in_h2"><a href="{$mIndexCat.link}"><div class="in_h2ico">{$mIndexCat.icon}</div><div class="in_zh">{$mIndexCat.name}</div></a></h2>
 
-      {foreach item=mIndexCat from=$mIndexCats}
-      {if $mIndexCat.type eq 2}
-      {if $mIndexCat.showtype eq 1}
-      <div class="indexpro">
-        <div class="proimg"><img src="{$site_url}images/proimg.jpg"></div>
-        <h2 class="biaoti"><a href="{$mIndexCat.link}">{$mIndexCat.name}</a></h2>
-        <div class="probox">
-          <ul class="probox-class">
-            {if $mIndexCat.childmenu}
-              {foreach item=article from=$mIndexCat.childmenu}
-                <li><a href="{$article.link}">{$article.name}</a></li>
-                {if $article@index+1==3}{break}{/if}
-              {/foreach}
-            {/if}
-          </ul>
-        </div>
-        <div id="picScroll" class="picScroll">          
-          <div class="bd">
-            {$pronum=($mIndexCat.data|count)/2}
-              {$num=0}
-              {for $item=1 to $pronum}
-              <ul>                
-                {foreach item=article from=$mIndexCat.data}
-                <li>
-                  <a href="{$mIndexCat.data[$num].link}">
-                    <img src="{$mIndexCat.data[$num].image}">
-                    <p>{$mIndexCat.data[$num].title}</p>
-                  </a>
-                </li>
-                {$num=$num+1}
-                {if $num%2==0}{break}{/if}
-                {/foreach}
-              </ul>
-              {/for}
-          </div>
-          <div class="hd">
-            <ul></ul>
-          </div>
-        </div>
-      </div>
-      {/if}  
-
-      {elseif $mIndexCat.type eq 4}      
-      <div class="aboutbg">
-        <div class="about">
-          <div class="aboutdet">
-            <a href="{$mIndexCat.link}" class="aboutimg">
-              <img src="{$mIndexCat.image}" alt="{$mIndexCat.name}" id="aboutimg">
-            </a>
-            <div class="aboutr">
-              <a href="{$mIndexCat.link}">
-                <h1>{$mIndexCat.en_name}</h1>
-                <h2>{$mIndexCat.name}</h2>
-              </a>
-              {if $mIndexCat.showtype eq 1}
-              <div class="aboutedit">
-                {$mIndexCat.description|unescape:"html"}
-              </div>
-              {/if}  
-            </div>
-          </div>           
-        </div>
-      </div>       
-      
-      {elseif $mIndexCat.type eq 1}
-      {if $mIndexCat.showtype eq 1}
-      <div class="indexnews">
-        <h2 class="biaoti"><a href="{$mIndexCat.link}">{$mIndexCat.name}</a></h2>
-        <div class="probox">
-          <ul class="probox-class">
-          {if $mIndexCat.childmenu}
-            {foreach item=article from=$mIndexCat.childmenu}
-              <li><a href="{$article.link}">{$article.name}</a></li>
-              {if $article@index+1==3}{break}{/if}
-            {/foreach}
-          {/if}
-          </ul>
-        </div>
-        <div class="newsbox">
-          <ul>
-            {foreach item=article from=$mIndexCat.data}
-            <li>
-              <a href="{$article.link}">
-                <div class="newsdate"><h2>{$article.pubtimestamp|date_format:'%d'}</h2>
-                <span>{$article.pubtimestamp|date_format:'%Y-%m'}</span></div>
-                <div class="news-nr">
-                  <h2>{$article.title}</h2>
-                  <p>{$article.description}</p>
-                </div>
-              </a>
-            </li>
-            {if $article@index+1 == 4}{break}{/if}
-            {/foreach}           
-          </ul>
-        </div>
-      </div>
-      {/if}  
-      
-      {elseif $mIndexCat.type eq 3}
-      {if $mIndexCat.showtype eq 1}
-      <div class="casebg">
-        <div class="case">
-          <h2 class="biaoti"><a href="{$mIndexCat.link}">{$mIndexCat.name}</a></h2>
-          <div class="probox">
-            <ul class="probox-class">
-              {if $mIndexCat.childmenu}
-                {foreach item=article from=$mIndexCat.childmenu}
-                  <li><a href="{$article.link}">{$article.name}</a></li>
-                  {if $article@index+1==3}{break}{/if}
-                {/foreach}
-              {/if}
-            </ul>
-          </div>
-          <div class="casebox">
+        <div class="inner">
             <ul>
-              {foreach item=article from=$mIndexCat.data}
-              <li>
-                <div class="caseimg"><a href="{$article.link}"><img src="{$article.image}" alt="{$article.title}"></a></div>
-                <div class="casedet">
-                  <h2>{$article.title}</h2>
-                  <p>{$article.description}</p>
-                  <a href="{$article.link}" class="look">点击查看</a>
-                </div>
+            {foreach item=article from=$mIndexCat.data}
+              <li><a href="#">
+                 <div class="in_no">{$article@index+1}</div>
+                 <div class="in_title">{$article.title}</div>
+                 <div style="clear:both"></div>
+                 <div class="in_des">{$article.description}</div></a>
               </li>
-              {if $article@index+1 == 2}{break}{/if}
-              {/foreach}             
+              {if $article@index+1 == 2}{break}{/if} {/foreach}
             </ul>
-          </div>
         </div>
-      </div>
-      {/if} 
-      {/if}
-      {/foreach}
+        </div>
+        
+        
+      {elseif $mIndexCat.type eq 2} 
+      {if $mIndexCat.showtype eq 1}
+      <div id="in_image" class="wrapper clearfix">
+       <h2 class="in_h2"><a href="{$mIndexCat.link}"><div class="in_h2ico">{$mIndexCat.icon}</div><div class="in_zh">{$mIndexCat.name}</div></a></h2>
+        <div class="inner yc">
+            <ul class="clearfix">
+            {foreach item=article from=$mIndexCat.data}
+              <li><a href="{$article.link}">
+                  <div class="in_proimg"><img src="{$article.image}" width="100%" title="160*150"></div>
+                   <div class="in_protitle"> <p>{$article.title}</p></div>
+                  </a>
+              </li>
+             {if $article@index+1 == 3}{break}{/if} {/foreach}
+            </ul>
+        </div>
+        </div>
+        {/if}
+      {if $mIndexCat.showtype eq 2}
+         <div id="in_image1" class="wrapper clearfix">
+        <div class="in_cir"></div>
+        <h2 class="in1_h2"><a href="{$mIndexCat.link}"><div class="in1_zh">{$mIndexCat.name}</div><div class="in1_en">{$mIndexCat.en_name}</div></a></h2>
+        <div class="in_txt">{$mIndexCat.description}</div>
+        <div class="inner1 yc">
+<div class="baner">
+	<div id="slideBox1" class="slideBox">
+    <div class="hd">
+            <ul></ul>
+              </div>
+	<div class="bd">
+		<ul>
+          {foreach item=article from=$mIndexCat.data}
+            <li><a class="pic" href="{$slidepic.link}"><img src="{$article.image}" title="500*245" /></a></li>
+            {/foreach}
+		
+		</ul>
+	</div>
+	
+   </div>
+        </div>
+        </div>
+        </div>
+        {/if} 
+        {/if}
+{/foreach}
+      </section>
+      
+      
+    <footer class="foot" ><a class="back-top">TOP</a>{$footprint}</footer>
     </div>
   </div>
-	    {$footscript}
-
-<script src="{$site_url}js/TouchSlide.1.1.js"></script>
-<script type="text/javascript" src="{$site_url}js/jquery.min.js"></script>
-<script type="text/javascript" src="{$site_url}js/function.js"></script>
-<script type="text/javascript" src="{$site_url}js/share.js"></script>
-<script src="{$site_url}js/idangerous.swiper-2.0.min.js"></script>
-<script src="{$site_url}js/idangerous.swiper.3dflow-2.0.js"></script>
-<script src="{$site_url}js/index.js"></script>
-<script src="{$site_url}js/simple-app.js"></script>
-
+</div>
+{$footscript}
 
 </body>
 </html>

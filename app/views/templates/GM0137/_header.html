@@ -1,41 +1,20 @@
-
-<header>
-    <div class="logo"><img src="{$logo}"></div>
-</header>
-
-<div class="menu">
-    <div class="nav">
-        <div class="swiper-nav swiper-container">	
-			<div class="swiper-wrapper">
-                <div class="swiper-slide"><span><a href="{$site_url}">网站首页</a></span></div>
-                {foreach item=nav from=$navs}
-                <div class="swiper-slide"><span><a href="{$nav.link}">{$nav.name}</a></span></div>                          
-                {/foreach}                                  
-            </div>
+<div class="header">
+      <a href="{$site_url}" class="header_home"></a>
+      <div class="logo"><img src="{$logo}" width="100%"></div>
+      <div class="header_menu" id="header_menu"></div>
+      <div class="baner">
+        <div id="slideBox" class="slideBox">
+          <div class="hd">
+            <ul>
+            </ul>
+          </div>
+          <div class="bd">
+            <ul>
+             {foreach name=slidepics item=slidepic from=$global.slidepics}
+              <li><a class="pic" href="{$slidepic.link}"><img src="{$slidepic.image}" title="500*245" /></a></li>
+            {/foreach}
+            </ul>
+          </div>
         </div>
+      </div>
     </div>
-</div> 
-
-<div class="banner">
-	<div id="slideBox" class="slideBox">
-		<a href="javascript:void(0);" class="slide_left"></a>
-		<a href="javascript:void(0);" class="slide_right"></a>
-		<div class="hd">
-			<ul style=""></ul>
-		</div>
-		<div class="bd">
-			<ul>
-				{foreach name=slidepics item=slidepic from=$global.slidepics}
-				<li>
-					<a class="pic" href="{$slidepic.link}">
-						<figure><img src="{$slidepic.image}"></figure>
-					</a>
-				</li>
-				{/foreach}
-			</ul>
-		</div>
-	</div>
-</div>
-
-
-

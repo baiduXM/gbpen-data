@@ -1,57 +1,55 @@
-﻿ <div id="header">
-   <div class="top">
-     <div class="logo"><img src="{$logo}"></div>
-     <div class="top_right">
-          <div class="tell">
-            <i class="tell_title">{$global.tel}</i>
-            <p>{$contact.telephone}</p>
-          </div>
-          <div class="search">
-            <p>站内搜索：</p>            
-            <form class="search_div" action="{$search_action}" method="GET">
-                <input name="s" type="text" class="input" placeholder="请输入搜索关键字">
-                <input name="" type="submit" class="btn" value="">
-            </form>
-          </div>
-     </div>
-   </div>
-  <div class="top_nav">
-       <div class="nav_bg"></div>
-    <div id="nav" class="nav">
-        <ul>
-          <li><a href="{$site_url}">网站首页</a></li>
-        {foreach item=nav from=$navs}
-        <li class="{if $nav.current} current{/if}">
-            <a href="{$nav.link}">{$nav.name}</a> 
-            {if $nav.childmenu}
-            <ul class="erji none">
-                {foreach item=nav_list from=$nav.childmenu}
-                <li class="{if $nav.current}current{/if}"><a href="{$nav_list.link}">{$nav_list.name}</a></li>
-                {/foreach}
-            </ul>
-            {/if}
-        </li>
-        {/foreach}
-     </ul> 
-    </div>        
-   </div>
- </div>
- <div id="slideBox" class="slideBox">
-      <div class="hd">
-        <ul>
-          {foreach item=banner from=$global.slidepics}
-            <li></li>
-          {/foreach}
-        </ul>
+<header>
+<section>
+<div class="head_outsild">
+      <div class="head">
+          <h1 class="logo"><a href="{$site_url}" title="返回首页"><img src="{$logo}"/></a></h1>
+          <form action="{$search_action}" method="GET" class="ss"> 
+              <span>全网搜索</span> 
+              <input type="text" placeholder="请输入关键词" class="input_case" name="s">
+              <input type="submit" value="" class="input_key">
+          </form>
       </div>
-      <div class="banner">
+</div>    
+</section>
+<section>
+    <div class="header_menu">   
+       <ul class="nav">
+	  <h3><a href="{$site_url}" class="current">网站首页</a></h3>
+      {foreach item=nav from=$navs}
+      <li class="nLi {if $nav.current}current{/if}">
+       <h3><a href="{$nav.link}" class="">{$nav.name}</a></h3>
+      
+        {if $nav.childmenu}
+          <ul class="sub">
+
+            {foreach item=nav_list from=$nav.childmenu}
+            <li class="{if $nav_list.current}current{/if}"><a href="{$nav_list.link}">{$nav_list.name}</a></li>
+            {/foreach}
+          </ul>
+        {/if}
+      </li>
+      {/foreach}
+    </ul>
+    </div>
+</section>
+ <section>
+
+    <div id="slideBox" class="slideBox">
+
+       <div class="bd">
         <ul>
-          {foreach item=banner from=$global.slidepics}
-            <li>
-                <a href="{$banner.link}"><img src="{$banner.image}"/></a>
-            </li>
-          {/foreach}
-        </ul>
+                     {foreach item=slidepic from=$_header.slidepics}
+                              <li><a href="{$slidepic.link}" target="_blank"><img src="{$slidepic.image}" alt="{$slidepic.title}" /></a></li>
+                     {/foreach}
+                </ul>
       </div>
-      <div class="banner_bottom"></div>
-</div>
+
+
+      <!-- 下面是前/后按钮代码，如果不需要删除即可 -->
+      <a class="prev" href="javascript:void(0)"></a>
+      <a class="next" href="javascript:void(0)"></a>
+
+    </div>
+
+    </section>
+</header>

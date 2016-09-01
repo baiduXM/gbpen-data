@@ -30,11 +30,11 @@ ol,p,dl,li{list-style:none;}
     background: #fce2ef;}
 .logo{position:relative; width:252px; height:149px; overflow:hidden;}
 .logo img{ max-width:252px; max-height:149px; position: absolute; top: 0; bottom: 0;left:0; margin: auto;}
-.menu{ height:149px; width:942px; float:right; display:inline; /*background:url(../images/menubg.jpg) right repeat-x;*/}
+.menu{ height:70px; width:942px; float:right; display:inline; /*background:url(../images/menubg.jpg) right repeat-x;*/}
 .clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden; }
-.nav{ padding:0 0px; height:149px; position:relative; z-index:1; }
+.nav{ padding:0 0px; height:70px; position:relative; z-index:1; }
 .nav a{ color:#060001;  }
-.nav .nLi{ float:left;  position:relative; display:inline;  height:149px; /*background:url(../images/muen_link.jpg) right top no-repeat;*/}
+.nav .nLi{ float:left;  position:relative; display:inline;  height:70px; /*background:url(../images/muen_link.jpg) right top no-repeat;*/}
 .nav .nLi h3{ float:left; width:100%;}
 .nav .nLi h3 a{ display:block; padding:0; margin:0px 8px;font-weight:normal; height:32px; line-height:32px; border-bottom:1px solid #000; margin-top:18px;text-align:center; font-size:14px; font-family:"微软雅黑"; padding:0px 0px;}
 .nav .sub{ display:none; width:100%; font-size:12px; text-align:right;top:55px;   position:absolute; background:url(../images/menunav.png);}
@@ -45,6 +45,24 @@ ol,p,dl,li{list-style:none;}
 -moz-animation:swing 1s .2s ease both;}
 .nav .current h3 a{color:#987a60;-webkit-animation:swing 1s .2s ease both;
 -moz-animation:swing 1s .2s ease both;}
+
+
+.txtMarquee-top{
+                margin-top:30px;
+		width:942px;
+		overflow: hidden;
+		position: relative;
+		float: left;
+                font-size:18px;
+                color:#000;
+		.hd{display: none;}
+		.bd{
+			float: left;
+			margin-left: 10px;
+		}
+	}
+
+
 /*header*/
 .banner{ width:1920px; height:450px; left:50%; margin-left:-960px; overflow:hidden;  position:relative; }
 .focusBox { position: relative; width:1920px; height:450px; overflow: hidden; text-align:center;  }

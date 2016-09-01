@@ -1,0 +1,37 @@
+    <div class="headers">
+		<h1 class='logo'><img src="{$logo}"></h1>
+		<div class='h_tel'><span>{$_header.cont}</span>{$contact.telephone}</div>
+    </div>
+    <div class="menu">
+        <ul class="nav">
+            <li><a href="{$site_url}"><span id="width"> 首 页 </span></a></li>
+            {foreach name=navs item=nav from=$navs}
+
+            <li class="{if $nav.current}current{/if}">
+                <a href="{$nav.link}"><span id="width">{$nav.name}</span></a>
+                {if $nav.childmenu}
+                <ul class="nav_list">
+                    {foreach key=key item=nav_list from=$nav.childmenu}
+                    <li class="{if $nav.current}current{/if}"><a href="{$nav_list.link}">{$nav_list.name}</a></li>
+                    {/foreach}
+                </ul>
+                {/if}
+            </li>
+
+            {/foreach}
+          </ul>
+     </div>
+    <div id="banner">
+        <ul class="picture">
+            {foreach name=slidepics item=slidepic from=$global.slidepics}
+            <li><a target="_blank" href="{$slidepic.link}"><img src="{$slidepic.image}"></a></li>
+            {/foreach}
+        </ul>
+        <ul class="dot">
+            {foreach name=slidepics item=slidepic from=$global.slidepics}
+            <li></li>
+            {/foreach}
+        </ul>
+    </div>
+
+    <div class="banner_bottom"><img src="{$site_url}images/l_13.jpg"/></div>   
