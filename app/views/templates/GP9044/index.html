@@ -5,7 +5,7 @@
     // 跳转手机页面
     {if $site_another_url}
         if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
-            parent.location.href = '{$site_another_url}';
+            location.href = '{$site_another_url}';
         }
     {/if}
     </script>
@@ -79,7 +79,7 @@
         {foreach name=slidepics item=slidepic from=$index.slidepics}
         <li>
           <a href="{$slidepic.link}" target="_blank">
-            <img src="{$slidepic.image}" alt="{$slidepic.title}" style="width: 100%;"/>
+            <img src="{$slidepic.image}" alt="{$slidepic.title}" />
           </a>
         </li>
         {/foreach}
