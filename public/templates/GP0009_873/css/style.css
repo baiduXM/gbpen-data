@@ -49,16 +49,17 @@ ol,p,dl,li{list-style:none;}
 
 .txtMarquee-top{
                 margin-top:30px;
-		width:942px;
+		width:910px;
+                margin-left:15px;
 		overflow: hidden;
 		position: relative;
 		float: left;
-                font-size:18px;
-                color:#000;
+                font-size:21px;
+                color:#e05c8e;
+                font-weight:bold;
 		.hd{display: none;}
 		.bd{
-			float: left;
-			margin-left: 10px;
+                       li{float: left;}
 		}
 	}
 
