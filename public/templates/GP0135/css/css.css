@@ -42,7 +42,7 @@ strong{display: block;margin: 0 auto;overflow: hidden;text-overflow: ellipsis;wh
 .menu1 li{ float:left; line-height:90px; text-align:center; font-size:14px; height:90px;}
 .menu1 li p{ height:90px; line-height:90px; overflow:hidden}
 .menu1 li a{ color:#f2cd86;  font-family:Microsoft Yahei,Arial; font-weight: bold; line-height:90px;}
-.menu1 li .cc{background:#1b283b;height:40px; line-height: 40px;display: none; text-align:center; width:100%; position:relative; z-index:100; margin-top:0px; top:0px;}
+.menu1 li .cc{background:#1b283b;height:40px; line-height: 40px;display: none; text-align:center; width:100%; position:relative; z-index:100; margin-top:0px; top:0px; overflow:hidden}
 .menu1 li .cc:hover{}
 .menu1 li .cc a{width:92%; margin:auto;color:#f2cd86; padding:0 4%; overflow:hidden; height:40px; line-height:40px;}
 .menu1 li .cc a:hover{ text-decoration:underline;color:#f2cd86;}

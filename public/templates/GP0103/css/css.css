@@ -190,13 +190,14 @@ strong{display: block;margin: 0 auto;overflow: hidden;text-overflow: ellipsis;wh
 
 
 .category ul li .firsta{ background:url(../images/sub1_ico.jpg) no-repeat 5px; padding-left:20px; border-bottom:dashed 1px #ccc; height:25px; line-height:25px; margin-bottom:5px; display:block; overflow:hidden}
-.category ul li a.firsta{ color:#333333;}
+.category ul li a.firsta{ color:#333333; font-size:14px; line-height:35px; height:35px;  }
 .category ul li a:hover.firsta { color:#FF0000}
 
-ul.second li .seconda{ t text-align:left;  height:23px; line-height:23px; padding-left:20px; width:140px; margin:auto;}
-ul.second li a.seconda{display:block; color:#333333; }
+
+ul.second li .seconda{ text-align:left; ; padding-left:20px; width:140px; margin:auto;}
+ul.second li a.seconda{display:block; color:#333333;font-size:14px; }
 ul.second li a.seconda:hover{color:#f00}
-ul.third li a.thirda{ padding-left:32%; margin:auto;color:#edbb41; color:#333333;  display:block; line-height:35px; height:30px; overflow:hidden;}
+ul.third li a.thirda{ padding-left:32%; margin:auto;color:#edbb41; color:#333333;  display:block;  overflow:hidden;font-size:14px;}
 ul.third li a.thirda:hover{color:#FF0000}
 
 

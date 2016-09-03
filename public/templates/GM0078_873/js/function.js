@@ -24,9 +24,9 @@ $("#baner").css({"padding-top":m})
 
 
 
-var m1=$(".menulist .swiper-nav span .pic .iconfont").height()
-$(".menulist .swiper-nav span").css({"padding-top":m1})
-$(".swiper-slide,.swiper-wrapper,.navlist").height($(".menulist .swiper-nav span").height()+m1)
+var m1=$(".menulist .swiper-nav span .pic .iconfont").height();
+/*$(".menulist .swiper-nav span").css({"padding-top":m1})*/
+$(".swiper-slide,.swiper-wrapper,.navlist").height($(".menulist .swiper-nav span").outerHeight()+15)
 
 
 

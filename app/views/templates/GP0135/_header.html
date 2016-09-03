@@ -47,7 +47,7 @@
 					<div class="bd">
 						<ul>
 							{foreach name=slidepics item=slidepic from=$global.slidepics}
-									<li style="background:url({$slidepic.image}) no-repeat center; height:305px;"><a href="{$slidepic.link}" target="_blank"></a></li>
+								<div>	<a href="{$slidepic.link}" target="_blank"><li style="background:url({$slidepic.image}) no-repeat center; height:305px;"></li></a></div>
 							{/foreach}
 						</ul>
 					</div>

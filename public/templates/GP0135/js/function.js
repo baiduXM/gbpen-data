@@ -114,7 +114,7 @@ apartNav('.menu1',250);
 /*产品详细页*/
     jQuery(".slideBoxb").slide({
         mainCell: ".bd ul",
-        autoPlay: false,
+        autoPlay: true,
         effect: "leftLoop"
     });
 	
