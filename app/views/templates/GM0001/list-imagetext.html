@@ -7,7 +7,7 @@
   <script type="text/javascript">
 // 跳转PC页面
 {if $site_another_url}
-    if (!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+    if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
         location.href = '{$site_another_url}';
     }
 {/if}
@@ -44,7 +44,7 @@ window.addEventListener('load', function(){
 </head>
 <body>
   <div class="body">
-    {include file="./_left_navs.html"}
+    
     <div class="wrap page-active">
       <div class="index-wrap">
          {include file="./_header.html"}
@@ -73,7 +73,7 @@ window.addEventListener('load', function(){
       </div>
       <div class="opacity2"></div>
     </div>
-    {include file="./_bottom_navs.html"}
+    
   </div>
 
 {$footscript}

@@ -26,9 +26,31 @@
 			"limit": 10
 		}
 	},
-	"news":{
+	"news1":{
 		"value": {},
-		"description": "首页文字列表(新闻中心)",
+		"description": "首页文字列表(新闻中心)栏目一",
+		"type": "list",
+		"config": {
+			"showchilddata":true,
+			"star_only": true,
+			"width": 134,
+			"height": 95
+		}
+	},
+	"news2":{
+		"value": {},
+		"description": "首页文字列表(新闻中心)栏目二",
+		"type": "list",
+		"config": {
+			"showchilddata":true,
+			"star_only": true,
+			"width": 134,
+			"height": 95
+		}
+	},
+	"news3":{
+		"value": {},
+		"description": "首页文字列表(新闻中心)栏目三",
 		"type": "list",
 		"config": {
 			"showchilddata":true,

@@ -70,23 +70,55 @@
           <div class="xinzun">
             <div class="itemcon">
               <ol class="nav2">
-                <span><a href="{$index.news.link}"><img src="{$site_url}images/more_09.jpg"/></a></span>
-                {foreach item=news from=$index.news.childmenu}
-                  <li><a href="javascript:void(null)">{$news.name}</a></li>
-                  {if $news@index+1 eq 3}{break}{/if}
-                {/foreach}
+                <span><a href="{$index.news1.link}"><img src="{$site_url}images/more_09.jpg"/></a></span>
+                  <li><a href="javascript:void(null)">{$index.news1.name}</a></li>
+                  <li><a href="javascript:void(null)">{$index.news2.name}</a></li>
+                  <li><a href="javascript:void(null)">{$index.news3.name}</a></li>
               </ol>
               <div class="itemlist" id="sub_b0">
                 <ul class="newimg">
-                  {foreach item=news from=$index.news.childmenu}
                   <li>
-                      <div class="nimg"><img src="{$index.news.data[0].image}"/></div>
+                      <div class="nimg"><img src="{$index.news1.data[0].image}"/></div>
                       <div class="nwrd">
-                          <h1>{$index.news.data[0].title}</h1>
-                          <h2>{$index.news.data[0].description}<span><a href="{$index.news.data[0].link}">[详细]</a></span></h2>
+                          <h1><a href="{$index.news1.data[0].link}">{$index.news1.data[0].title}</a></h1>
+                          <h2>{$index.news1.data[0].description}</h2>
                       </div>
                       <ul class="news_deta4">
-                        {foreach item=article from=$news.data}
+                        {foreach item=article from=$index.news1.data}
+                        {if $article@index+1 gt 1}
+                            <li><a href="{$article.link}">
+                              <time datetime="{$article.pubtimestamp|date_format:'%Y-%m-%d'}">{$article.pubtimestamp|date_format:'%Y-%m-%d'}</time>
+                              <span>{$article.title}</span>
+                            </a></li>
+                            {if $article@index+1 eq 5}{break}{/if}
+                        {/if}
+                        {/foreach}
+                      </ul>
+                  </li><li>
+                      <div class="nimg"><img src="{$index.news2.data[0].image}"/></div>
+                      <div class="nwrd">
+                          <h1><a href="{$index.news2.data[0].link}">{$index.news2.data[0].title}</a></h1>
+                          <h2>{$index.news2.data[0].description}</h2>
+                      </div>
+                      <ul class="news_deta4">
+                        {foreach item=article from=$index.news2.data}
+                        {if $article@index+1 gt 1}
+                            <li><a href="{$article.link}">
+                              <time datetime="{$article.pubtimestamp|date_format:'%Y-%m-%d'}">{$article.pubtimestamp|date_format:'%Y-%m-%d'}</time>
+                              <span>{$article.title}</span>
+                            </a></li>
+                            {if $article@index+1 eq 5}{break}{/if}
+                        {/if}
+                        {/foreach}
+                      </ul>
+                  </li><li>
+                      <div class="nimg"><img src="{$index.news3.data[0].image}"/></div>
+                      <div class="nwrd">
+                          <h1><a href="{$index.news3.data[0].link}">{$index.news3.data[0].title}</a></h1>
+                          <h2>{$index.news3.data[0].description}</h2>
+                      </div>
+                      <ul class="news_deta4">
+                        {foreach item=article from=$index.news3.data}
                         {if $article@index+1 gt 1}
                             <li><a href="{$article.link}">
                               <time datetime="{$article.pubtimestamp|date_format:'%Y-%m-%d'}">{$article.pubtimestamp|date_format:'%Y-%m-%d'}</time>
@@ -97,8 +129,6 @@
                         {/foreach}
                       </ul>
                   </li>
-                  {if $news@index+1 eq 3}{break}{/if}
-                  {/foreach}
                 </ul>
               </div>
             </div>
@@ -114,7 +144,7 @@
           </div>
         </div>
         <div class="prod">
-            <h3><span><a href=""><img src="{$site_url}images/more_22.jpg" height="23" width="54" /></a></span>{$index.pro.name}<b>/ {$index.pro.en_name}</b></h3>
+            <h3><span><a href="{$index.pro.link}"><img src="{$site_url}images/more_22.jpg" height="23" width="54" /></a></span>{$index.pro.name}<b>/ {$index.pro.en_name}</b></h3>
             <div class="showpro2">
               <ul class="colee_l">
                 {foreach item=pro from=$index.pro.data}
