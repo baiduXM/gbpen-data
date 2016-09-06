@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html manifest="huancun.manifest">
 <head>
-  <!-- 实时预览调试代码，模板开发完成后删除 -->
-  
-  <!-- 调试代码 End -->
   <script type="text/javascript">
 // 跳转PC页面
 {if $site_another_url}
-    if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+    if (!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
         location.href = '{$site_another_url}';
     }
 {/if}
@@ -45,11 +42,11 @@ window.addEventListener('load', function(){
 </head>
 <body>
   <div class="body">
-   
+   {include file="./_left_navs.html"}
     <div class="wrap page-active">
       <div class="index-wrap">
          <header class="header page_h">
-          <!-- <div class="header_menu" id="header_menu"><i class="icon iconfont">&#xe603;</i></div> -->
+          <div class="header_menu" id="header_menu"><i class="icon iconfont">&#xe603;</i></div>
           <h1 class="logo">{$article.title}</h1>
           <a href="{$site_url}" class="to_home"><i class="icon iconfont">&#xe620;</i></a>
         </header>
@@ -97,10 +94,6 @@ window.addEventListener('load', function(){
                    {/foreach}  
               </div>
             </div>
-
-             
-
-
             </div>
 
         </section>
@@ -108,14 +101,14 @@ window.addEventListener('load', function(){
       </div>
       <div class="opacity2"></div>
     </div>
-    
+    {include file="./_bottom_navs.html"}
   </div>
 
 {$footscript}
 <script src="{$site_url}js/TouchSlide.1.1.js"></script>
 <script type="text/javascript" src="{$site_url}js/jquery.min.js"></script>
 <script src='{$site_url}js/pagenavs_sub3.js'></script>
-<script src="{$site_url}/js/swiper.jquery.min.js"></script>
+<script src="{$site_url}js/swiper.jquery.min.js"></script>
 <script type="text/javascript" src="{$site_url}js/function.js"></script>
 </body>
 </html>

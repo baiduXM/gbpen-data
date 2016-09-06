@@ -1,0 +1,71 @@
+{
+	
+	"slidepics": {
+		"value": [{
+			"title": "梅多克康瑞红葡萄酒1",
+			"image": "images/banner.jpg",
+			"link": "article/1.html",
+			"description": "梅多克康瑞干红葡萄酒，法国原瓶进口，AOC级别的典藏。梅多克康瑞干红葡萄酒，法国原瓶进口，AOC级别的典藏。梅多克康瑞干红葡萄酒。"
+		}, {
+			"title": "梅多克康瑞红葡萄酒2",
+			"image": "images/banner.jpg",
+			"link": "http://www.baidu.com",
+			"description": "梅多克康瑞干红葡萄酒，法国原瓶进口，AOC级别的典藏。梅多克康瑞干红葡萄酒，法国原瓶进口，AOC级别的典藏。梅多克康瑞干红葡萄酒。"
+		},{
+			"title": "梅多克康瑞红葡萄酒3",
+			"image": "images/banner.jpg",
+			"link": "http://www.baidu.com",
+			"description": "梅多克康瑞干红葡萄酒，法国原瓶进口，AOC级别的典藏。梅多克康瑞干红葡萄酒，法国原瓶进口，AOC级别的典藏。梅多克康瑞干红葡萄酒。"
+		}],
+		"description": "多图轮播",
+		"type": "images",
+		"config": {
+			"width": 1680,
+			"height": 750,
+			"limit": 3
+		}
+	},
+	"colimg":{
+		"value": {
+			"title": "栏目右侧底部图片",
+			"image": "images/colimg.jpg",
+			"link": "http://www.baidu.com/"
+		},
+		"description": "栏目右侧底部图片",
+		"type": "image",
+		"config": {
+			"height": 297,
+			"width":336
+		}
+	},
+	"links": {
+		"value": [{
+			"title": "百度",
+			"image": "http://tb2.bdstatic.com/tb/static-common/img/search_logo_big_282cef2.gif",
+			"link": "http://www.baidu.com"
+		}, {
+			"title": "易尔通",
+			"image": "http://img0.bdstatic.com/static/common/widget/search_box_search/logo/logo_3b6de4c.png",
+			"link": "http://www.baidu.com"
+		}, {
+			"title": "谷歌",
+			"image": "http://img0.bdstatic.com/static/common/widget/search_box_search/logo/logo_3b6de4c.png",
+			"link": "http://www.baidu.com"
+		}, {
+			"title": "腾讯",
+			"image": "http://img0.bdstatic.com/static/common/widget/search_box_search/logo/logo_3b6de4c.png",
+			"link": "http://www.baidu.com"
+		}, {
+			"title": "小米",
+			"image": "http://img0.bdstatic.com/static/common/widget/search_box_search/logo/logo_3b6de4c.png",
+			"link": "http://www.baidu.com"
+		}],
+		"description": "友情链接",
+		"type": "images",
+		"config": {
+			"width": 100,
+			"height": 60
+		}
+	}
+
+}

@@ -78,7 +78,7 @@
 	  <div class="inner">
        <ul>
         {foreach name=news item=news from=$index.news.data}
-    <li> <a href="{$index.news.link}">{$news.title} </a></li>
+    <li> <a href="{$news.link}">{$news.title} </a></li>
   {if $news@index+1 == 4}{break}{/if}
 {/foreach}
  </ul></div>

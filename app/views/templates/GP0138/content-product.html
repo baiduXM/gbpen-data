@@ -54,7 +54,11 @@
                             <h2>{$article.title}</h2>
                             <div id="slideBox" class="slideBox">
                                 <div class="hd">
-                                    <ul></ul>
+                                    <ul>
+                                        {foreach item=image from=$article.images}
+                                            <li></li>
+                                        {/foreach} 
+                                    </ul>
                                 </div>
                                 <div class="bd">
                                     <ul>
@@ -81,7 +85,7 @@
                         </div>
                         <div class="detpaging">
                             <span><a href="{$article.prev.link}">上一个产品</a></span>
-                            <span><a href="{$article.next.link}">上一个产品</a></span>
+                            <span><a href="{$article.next.link}">下一个产品</a></span>
                             <span class="back"><a href="{$article.category.link}">返回列表页</a></span>
                         </div>
 
