@@ -10,14 +10,24 @@
                             <span><a href="{$nav.link}">{$nav.name}</a></span>
 
                             {if $nav.childmenu}
+                            <ul>
                             {foreach key=key item=nav_list from=$nav.childmenu}
-                            <span><a href="{$nav_list.link}">{$nav_list.name}</a></span>
+                            <li><a href="{$nav_list.link}">{$nav_list.name}</a></li>
                             {/foreach}
+                                <li><a href=""></a></li>
+                            </ul>
+
                             {/if} 
                        </li>
                     {if $nav@index+1 eq 5}{break}{/if}                
                     {/foreach}
                    </ul>
+
+
+ 
+
+
+
                 </div>
                 <div class="fcontact">
                     <ul>

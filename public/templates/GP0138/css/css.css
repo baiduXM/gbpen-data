@@ -128,11 +128,12 @@ ol,p,dl,li{list-style:none;}
 .fsecond{width: 675px;float: left;}
 .fsecond ul{overflow: hidden;margin-bottom: 10px;}
 .fsecond ul li {float: left;width: 100px;margin-right: 35px;line-height: 26px;}
-.fsecond ul li span{display: block;}
+.fsecond ul li span{display: block;padding: 5px 0;}
+.fsecond ul li span a{color: #fff;font-size: 14px;}
 .fsecond ul li a{color: #a3e5ff;}
 .fsecond ul li a:hover{text-decoration: underline;}
-.fsecond ul li span:first-child{padding: 5px 0;}
-.fsecond ul li span:first-child a{color: #fff;font-size: 14px;}
+/*.fsecond ul li span:first-child{padding: 5px 0;}
+.fsecond ul li span:first-child a{color: #fff;font-size: 14px;}*/
 
 .fcopy{border-top: 1px solid #16ade6;color: #7cd9fe;text-align: center;padding-top:10px;}
 .fcopy a{color: #7cd9fe;}
