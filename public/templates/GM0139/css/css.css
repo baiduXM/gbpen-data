@@ -41,13 +41,12 @@
 .aboutbg{width: 100%;height: auto;overflow: hidden;background: url(../images/aboutbg_02.jpg) no-repeat center;background-size: 100%;}
 .about{width: 93.75%;height: auto;overflow: hidden;margin: 11% auto 14%;background: #fff;}
 .aboutdet{width: 100%;height: auto;overflow: hidden;}
-.aboutimg{width: 125px;height: 135px;overflow: hidden;float: left;display: table;}
-.aboutimg span{display: table-cell;vertical-align: middle;}
-.aboutimg img{max-width: 100%;max-height: 100%;overflow: hidden;}
+.aboutimg{width: 31.7%;height: auto;overflow: hidden;float: left;display: block;}
+.aboutimg img{max-width: 100%;height: auto;overflow: hidden;}
 .aboutr{height: auto;overflow: hidden;padding: 0 8% 0 5%}
 .aboutr h1{font-size: 37px;color: #e7e7e7;height: 2.8rem;overflow: hidden;}
 .aboutr h2{color: #f02f11;font-size: 1.7rem;height: 24px;overflow: hidden;}
-.aboutedit{color: #6b6b6b;font: 1rem/2rem "微软雅黑";max-height: 6rem;overflow: hidden;}
+.aboutedit{color: #6b6b6b;font: 1rem/2rem "微软雅黑";max-height: 10rem;overflow: hidden;}
 
 /*indexnews*/
 .indexnews{width: 100%;height: auto;overflow: hidden;}

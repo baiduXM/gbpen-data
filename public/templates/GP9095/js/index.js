@@ -1,12 +1,4 @@
- // jQuery(document).ready(function($) {
- // 	function height(a,b,c){
- // 		var $this=$(a).height()
- // 		$(a).css({marginTop:-c+"px"});
- // 		$(b).css({height:($this-c)+"px"});
- // 	}
- // 	height(".news",".about",84);
- // });
- jQuery(document).ready(function($) {
+jQuery(document).ready(function($) {
 
  	jQuery(".slideBox").slide({mainCell:".bd ul",autoPlay:true,interTime:5000});
  	jQuery("#nav").slide({ 

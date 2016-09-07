@@ -95,7 +95,7 @@ var swiper = new Swiper('.banner.swiper-container', {
         }
         
     }
-    canvas3("#canvas3",0,0,nwesW,nwesW*0.09,"#b6c0e7");
+    canvas3("#canvas3",0,0,nwesW,nwesW*0.09,"#737aa8");
   
 
 });

@@ -215,8 +215,8 @@ $(".ny-news-list li,#picture li,ul.picture2 li,.news_list .news_d").hide();
 	    });
 
 
-	// var aboutimgh=Math.ceil($(".aboutdet a img").outerHeight());
- //     $(".aboutr").outerHeight(aboutimgh);
+	var aboutimgh=Math.ceil($(".aboutdet a img").outerHeight());
+     $(".aboutr").outerHeight(aboutimgh);
 
      $('.newsdate').height($('.newsdate').width());
      $('.news-nr').height($('.newsdate').width()+6);

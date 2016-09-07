@@ -72,7 +72,7 @@
             <div class="box-id public_bg">
                 <div class="triangle public_bor"></div>
                 <div class="triangle1 public_bor"></div>
-                <h1 class="box-top public_bor1"><a href="{$mIndexCat.link}" class="public_color1"><span >more</span><div class="tt">{$mIndexCat.name}</div></a></h1>
+                <div style="z-index:200;position:relative;"><h1 class="box-top public_bor1"><a href="{$mIndexCat.link}" class="public_color1"><span >more</span><div class="tt">{$mIndexCat.name}</div></a></h1></div>
                 <div class="box-about ">
                     <div class="nr">
                         {$mIndexCat.description}</div>
@@ -81,7 +81,7 @@
             {elseif $mIndexCat.type eq 3}
             <div class="box-id1 public_bg">
                 <div class="triangle3"></div>
-                <h1 class="box-top public_bor1"><a href="{$mIndexCat.link}" class="public_color1"><span >more</span><div class="tt">{$mIndexCat.name}</div></a></h1>
+                <div style="z-index:200;position:relative;"><h1 class="box-top public_bor1"><a href="{$mIndexCat.link}" class="public_color1"><span >more</span><div class="tt">{$mIndexCat.name}</div></a></h1></div>
                 <div class="box-news about-m">
                     <ul class="news-list1">
                         {foreach name=mIndexCat_list item=mIndexCat_list from=$mIndexCat.data}
@@ -101,7 +101,7 @@
             {elseif $mIndexCat.type eq 2}
             <div class="box-id1 public_bg">
                 <div class="triangle3"></div>
-                <h1 class="box-top public_bor1"><a href="{$mIndexCat.link}" class="public_color1"><span >more</span><div class="tt">{$mIndexCat.name}</div></a></h1>
+                <div style="z-index:200;position:relative;"><h1 class="box-top public_bor1"><a href="{$mIndexCat.link}" class="public_color1"><span >more</span><div class="tt">{$mIndexCat.name}</div></a></h1></div>
                 <div class="box-pro">
                     <ul class="picture1">
                         {foreach name=mIndexCat_list item=mIndexCat_list from=$mIndexCat.data}

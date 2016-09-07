@@ -10,12 +10,30 @@
     </li>
     {foreach item=bottomnav from=$global.bottom_navs}
       <li class="{$bottomnav.type}">
-        <a href="{$bottomnav.data}" target="_blank">
-          <span class="icon">
-            {if $bottomnav.icon}<i class="iconfont">{$bottomnav.icon}</i>{else}<img src="{$bottomnav.image}" width="30">{/if}
-          </span>
-          <span class="title">{$bottomnav.name}</span>
-        </a>     
+        {if $bottomnav.type=="tel"}
+          <a href="tel:{$bottomnav.data}" target="_blank">
+            <span class="icon">
+              {if $bottomnav.icon}<i class="iconfont">{$bottomnav.icon}</i>{else}<img src="{$bottomnav.image}" width="30">{/if}
+            </span>
+            <span class="title">{$bottomnav.name}</span>
+          </a> 
+        {/if}
+        {if $bottomnav.type=="sms"}
+          <a href="sms:{$bottomnav.data}" target="_blank">
+            <span class="icon">
+              {if $bottomnav.icon}<i class="iconfont">{$bottomnav.icon}</i>{else}<img src="{$bottomnav.image}" width="30">{/if}
+            </span>
+            <span class="title">{$bottomnav.name}</span>
+          </a> 
+        {/if}
+        {if $bottomnav.type=="im"}
+          <a href="http://wpd.b.qq.com/cgi/get_m_sign.php?uin={$bottomnav.data}" target="_blank">
+            <span class="icon">
+              {if $bottomnav.icon}<i class="iconfont">{$bottomnav.icon}</i>{else}<img src="{$bottomnav.image}" width="30">{/if}
+            </span>
+            <span class="title">{$bottomnav.name}</span>
+          </a> 
+        {/if}
       </li>
       {if $bottomnav@index eq 2}{break}{/if}
     {/foreach}
