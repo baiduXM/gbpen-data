@@ -6,7 +6,7 @@
 <meta name="keywords" content="{$keywords}" />
 <meta name="description" content="{$description}" />
 <script type="text/javascript" src="http://common.mn.sina.com.cn/public/resource/lib/jquery.jcarousellite.js"></script>
-
+<!--  -->
 <link rel="stylesheet" rev="stylesheet" href="{$site_url}css/style_{$stylecolor}.css" type="text/css" />
 
 <!--[if IE 6]>
@@ -38,13 +38,13 @@ DD_belatedPNG.fix('div,ul,li,a,p,img');
 		{include file="./_header.html"}
   <div class="content">
       <div class="about fl">
-        <h3><a href="{$index.about.link}">MORE</a>{$index.about.en_name} {$index.about.name}</h3>
+        <h3><a href="{$index.about.link}">MORE</a>{$index.about.en_name}</h3>
         <div class="in_article">
           {$index.about.description}
          </div>
       </div>
     <div class="news">
-      <h3><a href="{$index.news.link}">MORE</a>{$index.news.en_name} {$index.news.name}</h3>
+      <h3><a href="{$index.news.link}">MORE</a>{$index.news.en_name}</h3>
       <ul class="new_list">
       {foreach name=news item=new from=$index.news.data}
         <li><a href="{$new.link}"><span>{$new.pubtimestamp|date_format:'%Y-%m-%d'}</span>{$new.title}</a></li>
@@ -54,7 +54,7 @@ DD_belatedPNG.fix('div,ul,li,a,p,img');
     </div>
   </div>
    <div class="products public">
-      <h3><a href="{$index.products.link}">MORE</a>{$index.products.en_name}  {$index.products.name}</h3>
+      <h3><a href="{$index.products.link}">MORE</a>{$index.products.en_name}</h3>
       <div class="picMarquee-left">         
         <div class="bd">
           <ul class="picList">
