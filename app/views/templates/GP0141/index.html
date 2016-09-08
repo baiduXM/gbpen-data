@@ -1,0 +1,136 @@
+<!DOCTYPE>
+<html>
+<head>
+    <script type="text/javascript">
+    // 跳转手机页面
+    {if $site_another_url}
+        if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+            location.href = '{$site_another_url}';
+        }
+    {/if}
+    </script>
+    
+    <meta name="keywords" content="{$keywords}"/>
+    <meta name="description" content="{$description}"/>
+    <link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
+    <meta http-equiv="x-ua-compatible" content="ie=8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>{$title}</title>
+    <link rel="stylesheet" type="text/css" href="{$site_url}css/css.css"/>
+    <script src="{$site_url}js/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.1.js"></script>
+    <script type="text/javascript" src="{$site_url}js/function.js"></script>
+    {$headscript}
+</head>
+<body>
+<div class="wrap">
+    {include file='./_header.html'}
+    <div class="content">
+        <div class="pro">
+                <div class="pro-tit">
+                    <h2>{$index.pro.name}</h2>
+                    <ul class="pro-class">
+                        {foreach item=sec_list from=$index.pro.childmenu}
+                            <li><a href="{$sec_list.link}">{$sec_list.name}</a></li>
+                            {if $sec_list@index+1 eq 5}{break}{/if}
+                        {/foreach}
+                    </ul>
+                    <a class="more" href="{$index.pro.link}"></a>
+                </div>
+                <div class="picMarquee-left">
+                    <div class="hd">
+                        <a class="next"></a>
+                        <a class="prev"></a>
+                    </div>
+                    <div class="bd">
+                        <ul class="picList">
+                            {foreach item=list1 from=$index.pro.data}
+                            <li>
+                                <div class="pic"><a href="{$list1.link}"><img src="{$list1.image}" /></a></div>
+                                <div class="title"><a href="{$list1.link}">{$list1.title}</a></div>
+                            </li>
+                            {/foreach}
+                        </ul>
+                    </div>
+                </div> 
+
+            </div>
+            <div class="case">
+                <div class="casebox">
+                    <div class="titbox">
+                        <div class="tit">
+                            <h2>{$index.case.en_name}</h2>
+                            <span>{$index.case.name}</span>
+                        </div>
+                        <a class="more" href="{$index.case.link}"></a>
+                    </div>
+                    <div class="picMarquee-left">
+                        <div class="hd">
+                            <a class="next"></a>
+                            <a class="prev"></a>
+                        </div>
+                        <div class="bd">
+                            <ul class="picList">
+                                {foreach item=list1 from=$index.case.data}
+                                <li>
+                                    <div class="pic"><a href="{$list1.link}"><img src="{$list1.image}" /></a></div>
+                                    <div class="title"><a href="{$list1.link}">{$list1.title}</a></div>
+                                </li>
+                                {/foreach}
+
+                            </ul>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+            <div class="row">
+                <div class="news fl">
+                    <div class="titbox">
+                        <div class="tit">
+                            <h2>{$index.news.en_name}</h2>
+                            <span>{$index.news.name}</span>
+                        </div>
+                        <a class="more" href="{$index.news.link}"></a>
+                    </div>  
+                    <div class="newbox">
+                        <ul>
+                            {foreach item=list1 from=$index.news.data}
+                            <li>
+                                <div class="date">
+                                    <h2>{$list1.pubtimestamp|date_format:'%d'}</h2>
+                                    <p>{$list1.pubtimestamp|date_format:'%Y-%m'}</p>
+                                </div>
+                                <div class="nr">
+                                    <h2><a href="{$list1.link}">{$list1.title}</a></h2>
+                                    <p>{$list1.description}</p>
+                                </div>
+                            </li>
+                            {if $list1@index+1 eq 4}{break}{/if}
+                            {/foreach}
+
+                                        
+                        </ul>
+                    </div>             
+                </div>
+                <div class="about fr">
+                    <div class="titbox">
+                        <div class="tit">
+                            <h2>{$index.about_us.en_name}</h2>
+                            <span>{$index.about_us.name}</span>
+                        </div>
+                        <a class="more" href="{$index.about_us.link}"></a>
+                    </div>  
+                    <div class="aboutbox">
+                        <div class="about-img"><img src="{$index.about_us.image}" alt=""></div>
+                        <div class="about-nr">
+                            <a href="{$index.about_us.link}">{$index.about_us.description}</a>
+                        </div>
+                    </div>             
+                </div>
+            </div>
+    </div>
+    {include file='./_footer.html'}
+
+</div>
+</body>
+</html>

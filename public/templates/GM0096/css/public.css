@@ -112,10 +112,10 @@ body{position: relative;font: 0.9rem/1.8rem "微软雅黑";margin: 0 auto;overfl
 	.pto_list{width:100%; height: auto; overflow: hidden;margin:1% auto;}
 	.pto_list li{float:left; width: 45%; margin: 0.5rem  0 0.5rem 3%; position: relative; overflow: hidden;}
 	.pto_list li a{display: block; height: auto; overflow: hidden;}
-	.pto_list li .title{position: absolute; left: 0;bottom: 0; z-index: 99; display: block; color: #dfad73;font: 0.9rem/1.25rem "微软雅黑"; height: 4.7rem; overflow: hidden;padding:0 0.5rem;background: rgba(33,33,33,.8); border-top: 0.2rem solid #c67915;border-bottom: 0.2rem solid #c67915;width:100%;}
+	.pto_list li .title{position: absolute; left: 0;bottom: 0; z-index: 99; display: block; color: #dfad73;font: 0.9rem/1.25rem "微软雅黑"; max-height:4.7rem; overflow: hidden;padding:0 0.5rem;background: rgba(33,33,33,.8); border-top: 0.2rem solid #c67915;border-bottom: 0.2rem solid #c67915;width:100%;}
 	.pto_list li .title b{font: 1.1rem/2rem "微软雅黑"; color: #ffb049; display: block; height: 2rem; overflow: hidden; padding:0  0.5rem;}
 @media screen and (max-width: 320px){
-	.pto_list li .title{position: absolute; left: 0;bottom: 0; z-index: 99; display: block; color: #dfad73;font: 0.8rem/1.25rem "微软雅黑"; height: 4.7rem; overflow: hidden;padding:0 0.5rem;background: rgba(33,33,33,.8); border-top: 0.2rem solid #c67915;border-bottom: 0.2rem solid #c67915;width:100%;}
+	.pto_list li .title{position: absolute; left: 0;bottom: 0; z-index: 99; display: block; color: #dfad73;font: 0.8rem/1.25rem "微软雅黑";max-height:4.7rem; overflow: hidden;padding:0 0.5rem;background: rgba(33,33,33,.8); border-top: 0.2rem solid #c67915;border-bottom: 0.2rem solid #c67915;width:100%;}
 	.pto_list li .title b{font: 0.9rem/2rem "微软雅黑"; color: #ffb049; display: block; height: 2rem; overflow: hidden; padding:0  0.5rem;}
 	}
 /*产品中心end*/
