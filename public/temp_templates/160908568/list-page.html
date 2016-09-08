@@ -6,7 +6,7 @@
 <meta name="keywords" content="{$keywords}" />
 <meta name="description" content="{$description}" />
 <script type="text/javascript" src="http://common.mn.sina.com.cn/public/resource/lib/jquery.jcarousellite.js"></script>
-
+<script type="text/javascript" src="http://chanpin.xm12t.com.cn/js/preview.js"></script>
 <link rel="stylesheet" rev="stylesheet" href="{$site_url}css/style_{$stylecolor}.css" type="text/css" />
 
 <!--[if IE 6]>
@@ -34,40 +34,21 @@ DD_belatedPNG.fix('div,ul,li,a,p,img');
 
 <body>
 <div class="wrapper">
-    	{include file="./_header.html"}
-       	<div class="content">
-			<div class="about fl">
+    {include file="./_header.html"}
+      	<div class="content">
+		    <div class="about fl">
                 {include file="./_pagenavs_sub3.html"}    
 			</div>			  
-             
 			<div class="news">
-                 <div class="right_tt"><span class="location">所在位置:<a href="{$site_url}">首页</a> &gt; {foreach item=nav from=$posnavs}
-		         >> <a href="{$nav.link}">{$nav.name}</a>{/foreach}</span>{$list.name}
-		         </div>
+                <div class="right_tt"><span class="location">所在位置:<a href="{$site_url}">首页</a> &gt; {foreach item=nav from=$posnavs}>> <a href="{$nav.link}">{$nav.name}</a>{/foreach}</span>{$list.name}</div>
 				<div class="article">
-               		 <ul class='pro_list'>
-		                {foreach name=article item=article from=$list.data}
-					   <li><a href="{$article.link}"><img src="{$article.image}"/><p class="photo_title2">{$article.title}</p></a></li>
-		               {/foreach}  
-			  		</ul>
-  					   <ul class="clearfix munber">
-								<li ><a href="{$page_links.first_link}">首页</a></li>
-								<li ><a href="{$page_links.prev_link}">上一页</a></li>
-								{foreach item=near_link key=near_page from=$page_links.nears_link}
-								{if $near_page == $page_links.current_page}
-									<li class=" current"><a>{$near_page}</a></li>
-								{else}
-									<li ><a href="{$near_link}">{$near_page}</a></li>
-								{/if}
-								{/foreach}
-								<li><a href="{$page_links.next_link}">下一页</a></li>
-								<li><a href="{$page_links.last_link}">末页</a></li>
-							</ul>       
-                </div>    
-           </div>                        
-       </div>
-     	{include file="./_footer.html"}
- </div>    
+	            {$list.content|unescape:"html"}
+	            </div>        
+           	</div>              
+                     
+       	</div>
+      	{include file="./_footer.html"}
+</div>    
 
 </body>
 </html>
