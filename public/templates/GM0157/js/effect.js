@@ -45,7 +45,7 @@ var swiper = new Swiper('.banner.swiper-container', {
             context.fill();
         }
     }
-    canvas("#canvas",0,0,20,hght*0.52,hght*0.6,"#b6c0e7");
+    canvas("#canvas",0,0,20,hght*0.52,hght*0.6,"#c74da9");
 
 
     var pich=$(".pic").outerHeight();
@@ -70,7 +70,7 @@ var swiper = new Swiper('.banner.swiper-container', {
             context.fill();
         }
     }
-    canvas2("#canvas2",0,20,pich,"#b6c0e7")
+    canvas2("#canvas2",0,20,pich,"#b91c22")
 
 
 
@@ -95,7 +95,27 @@ var swiper = new Swiper('.banner.swiper-container', {
         }
         
     }
-    canvas3("#canvas3",0,0,nwesW,nwesW*0.09,"#737aa8");
+    canvas3("#canvas3",0,0,nwesW,nwesW*0.09,"#3fc8f5");
   
+    $(".menu li a").each(function(i, el) {
+        var index = i%5
+        switch (index) {
+            case 0:
+                $(this).css({background:"#faaf39"})
+                break;
+            case 1:
+                $(this).css({background:"#ff843a"})
+                break;
+            case 2:
+                $(this).css({background:"#21d59b"})
+                break;
+            case 3:
+                $(this).css({background:"#29dcda"})
+                break;
+            default:
+                $(this).css({background:"#c74da9"})
+                break;
+        }
+    });
 
 });
