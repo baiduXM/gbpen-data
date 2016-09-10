@@ -83,26 +83,31 @@ $(document).ready(function(){
       defaultPlay:false,//默认是否执行效果（默认true）
       });
 
-	var speed=30;
-var colee2=document.getElementById("colee2");
-var colee1=document.getElementById("colee1");
-var colee=document.getElementById("colee");
-colee2.innerHTML=colee1.innerHTML; //¿ËÂ¡colee1Îªcolee2
-function Marquee1(){
-//µ±¹ö¶¯ÖÁcolee1Óëcolee2½»½çÊ±
-if(colee2.offsetTop-colee.scrollTop<=0){
-colee.scrollTop-=colee1.offsetHeight; //coleeÌøµ½×î¶¥¶Ë
-}else{
-colee.scrollTop++
-}
-}
-var MyMar1=setInterval(Marquee1,speed)//ÉèÖÃ¶¨Ê±Æ÷
-//Êó±êÒÆÉÏÊ±Çå³ý¶¨Ê±Æ÷´ïµ½¹ö¶¯Í£Ö¹µÄÄ¿µÄ
-colee.onmouseover=function() {clearInterval(MyMar1)}
-//Êó±êÒÆ¿ªÊ±ÖØÉè¶¨Ê±Æ÷
-colee.onmouseout=function(){MyMar1=setInterval(Marquee1,speed)}
-
-
+    function iSpeed()
+    {
+    	if (!document.getElementById("colee2")||!document.getElementById("colee1")) {
+    		return false;
+    	}
+    	var speed=30;
+		var colee2=document.getElementById("colee2");
+		var colee1=document.getElementById("colee1");
+		var colee=document.getElementById("colee");
+			colee2.innerHTML=colee1.innerHTML; 
+		function Marquee1(){
+		//µ±¹ö¶¯ÖÁcolee1Óëcolee2½»½çÊ±
+		if(colee2.offsetTop-colee.scrollTop<=0){
+		colee.scrollTop-=colee1.offsetHeight; //coleeÌøµ½×î¶¥¶Ë
+		}else{
+		colee.scrollTop++
+		}
+		}
+		var MyMar1=setInterval(Marquee1,speed)//ÉèÖÃ¶¨Ê±Æ÷
+		//Êó±êÒÆÉÏÊ±Çå³ý¶¨Ê±Æ÷´ïµ½¹ö¶¯Í£Ö¹µÄÄ¿µÄ
+		colee.onmouseover=function() {clearInterval(MyMar1)}
+		//Êó±êÒÆ¿ªÊ±ÖØÉè¶¨Ê±Æ÷
+		colee.onmouseout=function(){MyMar1=setInterval(Marquee1,speed)}
+    }
+    iSpeed();
 //限制字符个数
     $(".kz").each(function(){
     var maxwidth=parseInt($(this).attr("data-limit"));
