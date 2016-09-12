@@ -76,7 +76,7 @@
              <div class="newsimg"><img src="{$mIndexCat.image}"></div>
            <ul class="newslist">
            {foreach item=article from=$mIndexCat.data}
-             <li><a href="{$article.link}" >{$article.title}</li>
+             <li><a href="{$article.link}" >{$article.title}</a></li>
              {if $article@index+1 == 3}{break}{/if} 
                 {/foreach} 
             </ul>
