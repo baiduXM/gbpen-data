@@ -158,8 +158,8 @@ ul.third>li>a.selected{ color:#d09600;}
 .paging{overflow: hidden;color: #6b6b6b;font-size: 12px;text-align: center;padding: 5px 0;}
 .paging a{margin: 0 6px;color: #6b6b6b;}
 /*.paging a:hover{color: #6b6b6b;}*/
-.num{border-radius: 50%;background-color: #6b6b6b;display: inline-block;width: 16px;height: 16px;line-height: 16px;color: #fff!important;font-family: Microsoft YaHei;}
-.num:hover{color: #fff;background-color: #d09600;}
+.paging .num{border-radius: 50%;background-color: #6b6b6b;display: inline-block;width: 16px;height: 16px;line-height: 16px;color: #fff!important;font-family: Microsoft YaHei;}
+.paging .num:hover{color: #fff;background-color: #d09600;}
 .paging b{font-weight: normal;color: #d09600;}
 .pon{color: #fff!important;background-color: #d09600!important;}
 /*news*/
