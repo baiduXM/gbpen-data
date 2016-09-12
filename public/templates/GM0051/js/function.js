@@ -123,13 +123,13 @@ window.onload=function(){
 }	
 
 function resize(){
-		$(".next2 dl .nextright").width($(".next2 dl").width()-$(".next2 dl .nextleft").width()-2)
-		$(".class-m").height($(".class").outerHeight()-$(".class-top").outerHeight())
-		$(".index-wrap").height($(".wrap").height()+$(".quickbar-tips").height())
+		$(".next2 dl .nextright").width($(".next2 dl").width()-$(".next2 dl .nextleft").width()-2);
+		$(".class-m").height($(".class").outerHeight()-$(".class-top").outerHeight());
+		// $(".index-wrap").height($(".wrap").height()+$(".quickbar-tips").height());
 		$(".indexmenu").height($(".indextr").height()-$(".indexlogo").height());
 		$(".indexmenu ul li a").height($(".indexmenu").height()/5-1);
 		$(".indexmenu ul li a").css({
-		"line-height":$(".indexmenu ul li a").height()+"px"
+		"line-height":$(".indexmenu ul li a").height()+"px";
 		})
 		$(".prolistmore").height($(".prolist").height()-2);
 		$(".proclass li .prolistmore dl").css({
@@ -140,8 +140,7 @@ function resize(){
 		"line-height":$("ul.prolist li .prolistb .title").height()+"px"
 		})
 		$(".bot-y").width($("ul.prolist li .prolistb").width());
-		$(".bot-y").height($(".bot-y").width()*0.5)		
-		
+		$(".bot-y").height($(".bot-y").width()*0.5)			
 		$("ul.news-list2 ").height($(".text1").height())
 }
 	
