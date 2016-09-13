@@ -61,7 +61,7 @@
 
 <ul class="clearfix">
  {foreach name=news item=news from=$index.news.data}
-<li><a><Span>{$article.pubtimestamp|date_format:'%Y-%m-%d'}</Span>{$news.title}</a></li>
+<li><a href="{$news.link}"><Span>{$news.pubtimestamp|date_format:'%Y-%m-%d'}</Span>{$news.title}</a></li>
   {if $news@index+1 == 5}{break}{/if}
 {/foreach}
 

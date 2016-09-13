@@ -129,7 +129,7 @@ function resize(){
 		$(".indexmenu").height($(".indextr").height()-$(".indexlogo").height());
 		$(".indexmenu ul li a").height($(".indexmenu").height()/5-1);
 		$(".indexmenu ul li a").css({
-		"line-height":$(".indexmenu ul li a").height()+"px";
+		"line-height":$(".indexmenu ul li a").height()+"px"
 		})
 		$(".prolistmore").height($(".prolist").height()-2);
 		$(".proclass li .prolistmore dl").css({
