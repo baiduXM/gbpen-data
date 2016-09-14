@@ -1,13 +1,10 @@
 <div class="header_bg">
 <div id="header" class="clearfix wrapper">
 <div class="logo"><a href="{$site_url}"><img src="{$logo}" alt="{$title}" ></a></div>
-<div class="search_div search clearfix" >
-    <form action="{$search_action}" method="GET">
-        <input type="text" name="s" value="" class="search_area" />
-        <input type="submit" class="search_btn"  value=" "/>
-    </form>
-    <div id="language_div" style="float: right;"></div>
-</div>
+<div class="search clearfix" ><form action="{$search_action}" method="GET">
+  <input type="text" name="s" value="" class="search_area" />
+  <input type="submit" class="search_btn"  value=" "/>
+</form></div>
 <div id="nav" >
  <ul class="clearfix">
             {$limit = 7}

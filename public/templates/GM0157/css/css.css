@@ -166,7 +166,7 @@ form.form input{-webkit-appearance: none;}
  .tit {color: #c74da9;margin-bottom: 0.5rem;padding-left:0.7rem;position: relative;height: auto;overflow: hidden;font-size: 1rem;}
  .tit:before{width:0.3rem;height:0.4rem;content: "";display: block; background: #29dcda;position: absolute;left:0;top:0.3rem;}
  .tit:after{width:0.3rem;height:0.4rem;content: "";display: block; background: #c74da9;position: absolute;left:0;top:0.6rem;}
-.cp{padding: 0 .625rem;}
+.cp{padding: 0 3.125%;width: 93.75%;}
 .pic .tit a{float: right;padding:  0.2rem 0.5rem;background: #c74da9;border-radius: 0.5rem;font-size: 0.7rem;color: #fff;}
 #canvas{position: absolute;top:0;right: 0px;}
 #canvas2{position: absolute;left:-10px;top:3rem;}
@@ -195,7 +195,7 @@ form.form input{-webkit-appearance: none;}
 .newdet figure{float: left;margin-right: 1rem;overflow: hidden;width: 50%;}
 .newdet  .title{color: #3fc8f5;font-size: 1rem;height: 1.3rem;overflow: hidden;}
 .newdet p{height: 3rem;overflow: hidden;margin-bottom: .3rem;font-size: 1rem;}
-a.xq{background: #3fc8f5;color: #ffffff;padding: 0.2rem 0.5rem;border-radius: 10px;display: inline-block;}
+a.xq{background: #3fc8f5;color: #ffffff;padding: 0.2rem 0.5rem;border-radius: 10px;display: inline-block;float: right;margin-right: 2.5rem;}
 .newdet li{margin:0.8rem  0 }
 .about{margin: 1.5rem .625rem 1rem;height: auto;overflow: hidden;position: relative;}
 .about-hd{width: 0px;height: 0px;border-left: solid 200px rgba(33,213,155,.9);border-top: solid 100px transparent;border-bottom: solid 100px transparent;position: absolute;left: 0px;top:0rem;z-index: 10;}

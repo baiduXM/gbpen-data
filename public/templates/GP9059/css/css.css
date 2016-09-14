@@ -124,7 +124,7 @@ strong{display: block;margin: 0 auto;overflow: hidden;text-overflow: ellipsis;wh
 .category{width:174px;}
 
 .category ul{ padding:10px 0 }
-.category ul li a.firsta{ background:#34af9b ; margin-bottom:5px;display:block;width:85%; margin:auto; height:36px;  line-height:36px; font-size:14px; color:#fff ; padding-left:15%; margin-bottom:1px;}
+.category ul li a.firsta{ background:#34af9b ; margin-bottom:5px;display:block;width:85%; margin:auto; height:36px;  line-height:36px; font-size:14px; color:#fff ; padding-left:15%; margin-bottom:1px;overflow: hidden;}
 .category ul li a.firsta:hover{ background:#e4eee3 url(../images/ico4.jpg) no-repeat 15px ; margin-bottom:5px;display:block;width:85%; margin:auto; height:36px;  line-height:36px; font-size:15px; color:#018764 ; padding-left:15%}
 
 ul.second li a.seconda{ background:url(../images/ico7.png) no-repeat 5px;  width:80%; padding-left:20%; margin:auto;color:#fff; display:block; border-bottom:1px solid #34af9b}
