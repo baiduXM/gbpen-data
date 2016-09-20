@@ -1,0 +1,65 @@
+<div class="ny_right">
+    <div class="ny_right_nav">
+    {if $pagenavs}
+        <p class="nav_title">{$posnavs[0].name}</p>                
+        <ul class="ce">
+            {foreach item=rnav from=$pagenavs}
+            <li> <a class="xz {if $rnav.current}current{/if}" href="{if $rnav.childmenu}javascript:;{else}{$rnav.link}{/if}">{$rnav.name}</a> 
+                {if $rnav.childmenu}
+                 <ul class="er">
+                    {foreach item=navlist from=$rnav.childmenu}
+                    <li class="e_li"><a href="{if $navlist.childmenu}javascript:;{else}{$navlist.link}{/if}">{$navlist.name}</a>
+                         {if $navlist.childmenu}   
+                          <ul class="thr">
+                              {foreach item=navlists from=$navlist.childmenu}
+                              <li><a href="##">{$navlists.name}</a></li>
+                              {/foreach}              
+                              <div class="clear"></div>
+                          </ul>
+                          {/if}
+                    </li>
+                    {/foreach}                                 
+                 </ul>
+                {/if}
+            </li>
+            {/foreach}                        
+            <div class="clear"></div>
+        </ul>
+    {else}
+        <p class="nav_title">{$global.pagenavss.name}</p>                
+        <ul class="ce">
+            {foreach item=rnav from=$pagenavss.childmenu}
+            <li> <a class="xz {if $rnav.current}current{/if}" href="{if $rnav.childmenu}javascript:;{else}{$rnav.link}{/if}">{$rnav.name}</a> 
+                {if $rnav.childmenu}
+                 <ul class="er">
+                    {foreach item=navlist from=$rnav.childmenu}
+                    <li class="e_li"><a href="{if $navlist.childmenu}javascript:;{else}{$navlist.link}{/if}">{$navlist.name}</a>
+                         {if $navlist.childmenu}   
+                          <ul class="thr">
+                              {foreach item=navlists from=$navlist.childmenu}
+                              <li><a href="##">{$navlists.name}</a></li>
+                              {/foreach}              
+                              <div class="clear"></div>
+                          </ul>
+                          {/if}
+                    </li>
+                    {/foreach}                                 
+                 </ul>
+                {/if}
+            </li>
+            {/foreach}                        
+            <div class="clear"></div>
+        </ul>
+    {/if}
+   </div>
+   <div class="contact">
+        <div class="con_title">
+          <i>{$global.con.icon}</i>
+          <p class="rx">{$global.rex}</p>
+        </div>
+        <span>{$contact.telephone}</span>
+        <p class="adr">
+          {$global.contact}
+        </p>
+   </div> 
+</div>

@@ -32,6 +32,4 @@ textarea { overflow: auto; resize: vertical; }
 optgroup { font-weight: bold; }
 input::-moz-placeholder, textarea::-moz-placeholder { color: #cccccc; }
 input:-ms-input-placeholder, textarea:-ms-input-placeholder { color: #cccccc; }
-input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { color: #cccccc; }
-
-div{ z-index:1; position:relative}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { color: #cccccc;}

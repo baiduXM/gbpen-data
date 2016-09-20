@@ -1,0 +1,61 @@
+<div id="header">
+   	  <div class="topbg">
+       <div class="head_top">
+
+        <div id="linkweb"></div>
+        <script>setInterval("linkweb.innerHTML=new Date().toLocaleString()+' 星期'+'日一二三四五六'.charAt(new Date().getDay());",1000);
+        </script>
+
+           <!-- <ul class="top_right">
+            {foreach item=tnav from=$navs}
+            <li><a href="{$tnav.link}">{$tnav.name}</a></li>
+            {if $tnav@index+1 eq 4}{break}{/if}
+            {/foreach}             
+          </ul> -->  
+       </div>
+      </div>
+       <div class="head_mid">
+           <div class="logo"><a href="{$site_url}"><img src="{$logo}"></a></div>
+           <div class="navs">
+                <ul>
+                	{foreach item=nav from=$navs}
+		            <li><a class="{if $nav.current}current{/if}" href="{$nav.link}">{$nav.name}</a>
+		            	{if $nav.childmenu}
+		               <ul class="erji none">
+		               	 {foreach item=nav_list from=$nav.childmenu}
+		                 <li><a href="{$nav_list.link}">{$nav_list.name}</a></li> 
+		                 {/foreach}
+		               </ul>
+		                {/if}
+		            </li>
+		            {if $nav@index+1 eq 7}{break}{/if}
+		            {/foreach}		            
+		        </ul>
+           </div>
+       </div>
+       <div class="banner">
+            <div id="slideBox" class="slideBox">
+		      <div class="hd">
+		        <ul>
+		        	{foreach item=banner from=$global.slidepics}
+	                <li></li>
+	                {/foreach}
+		        </ul>
+		      </div>
+		      <div class="banimg">
+		        <ul>
+		          {foreach item=banner from=$global.slidepics}
+		          <li><a href="{$banner.link}"><img src="{$banner.image}"/></a></li>
+		          {/foreach}
+		        </ul>
+		      </div>
+	      </div>
+       </div>
+       <div class="searchbg">
+            <form class="search_div" action="{$search_action}" method="GET">
+                <input name="s" type="text" class="input" placeholder="请输入关键字">
+                <input name="" type="submit" class="btn" value="">
+            </form>
+            <p class="dh">{$global.search}</p>
+       </div>
+   </div>
