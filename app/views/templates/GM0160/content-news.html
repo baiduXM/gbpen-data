@@ -54,10 +54,10 @@
 <body>
 <div class="body">
   <div class="wrap page-active">
-    <h1 class="fixed-top">
-      <span class="fixed-btn back"><a href="javascript:window.history.back()">返回</a></span>
+     <h1 class="fixed-top">
+      <span class="fixed-btn back"><a href="#">返回</a></span>
       <span class="fixed-btn more2" id="font">字+</span>
-      {$article.category.name}</h1>
+       {$article.category.name}</h1>
       <div class="font font1">
             <dl class="big">大</dl>
             <dl class="normal">中</dl>
@@ -65,10 +65,11 @@
           </div>
     <div class="index-wrap">
       <section>
-        <div class="index_show">
+       
+         <div class="index_show">
           <div class="d_titles">
-            <h1 class="title1 public_color">{$article.title}</h1>
-            <hl class="title2 public_color">更新时间：{$article.pubdate}  </hl>
+            <h1 class="title1">{$article.title}</h1>
+            <hl class="title2">更新时间：{$article.pubdate}] </hl>
           </div>
           <div class="box-m">
             <div class="boxmain-m">
@@ -80,6 +81,7 @@
             </div>
           </div>
         </div>
+       
       </section>
     <footer class="foot" ><a class="back-top">∧</a>{$footprint}</footer></div>
     </div>

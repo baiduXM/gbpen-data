@@ -12,36 +12,25 @@ $(document).ready(function(){
 				
 $(window).load(function(){
 /*美工专属区域*/
-$(".swiper-slide,.menulist .swiper-nav .swiper-wrapper").height($(".menulist .swiper-nav span").height())
 
-
-var n=$("#in_text ul li .in_data").height()*0.5
-$("#in_text ul li .in_data .month").height(n)	
-$("#in_text ul li .in_data .riqi").height(n)
-
-$("#in_text ul li .in_data .month").css({"line-height":n+"px"})
-$("#in_text ul li .in_data .riqi").css({"line-height":n+"px"})
-
-$("section div.wrapper:last").css({"margin-bottom":20})
-
-
-
-$(".list_imagetext ul li").each(function(){
-if($(".list_imagetext ul li .img_box img").height()<$(".list_imagetext ul li .text_box").height()){
-	var z=($(".list_imagetext ul li .text_box").height()-$(".list_imagetext ul li .img_box img").height())*0.5
-	$(".list_imagetext ul li .img_box img").css({"margin-top":z})
-	}})
-
-
-
-
-
-
+$(".homenav ul li").eq(0).addClass("bg1")
+$(".homenav ul li").eq(1).addClass("bg2")
+$(".homenav ul li").eq(2).addClass("bg3")
+$(".homenav ul li").eq(3).addClass("bg4")
+var m=($("#in_page").width()-$("#in_page .tit").width())*0.5
+$("#in_page .tit").css({"left":m-15})
 
 
 
 /*美工专属区域*/
-	
+/*	$(".homenav ul li a").each(function(index, element) {
+        if((index+1) % 4==1)
+		{
+			$(element).css({"background":"#255bb1","color":"#fff"})}
+		if((index+1) % 4==0)
+		{   
+		    $(element).css({"background":"#255bb1","color":"#fff"})}
+    });*/
 	
 /*标题自适应宽度*/		
 	$(".yc ul li").each(function(){
@@ -100,8 +89,7 @@ if($(".list_imagetext ul li .img_box img").height()<$(".list_imagetext ul li .te
       $(this).removeClass('page-in');
     });
   }
-  //隐藏导航跟wrap的切换
-$("#daohang,#header_menu,#fixed_menu").click(function(){
+ $("#daohang,#header_menu,#fixed_menu").click(function(){
 		$("#quickbar-navs").removeClass("page-prev").addClass("page-in");
 		$("#quickbar-wrap").removeClass("page-active").addClass("page-next page-in")
 		$(".quickbar-opacity2").show()
@@ -116,37 +104,39 @@ $("#daohang,#header_menu,#fixed_menu").click(function(){
 		return false;
 	})			
 
-
+		
+	$(".tell-icon .close").click(function(){
+		$(".tell-icon").removeClass("display-block")
+		$(".index-wrap").height($(window).height()-$(".fixed").height())
+		return false
+	})
+	
 	//字体上下拉开始
   	
 	$("#font").click(function(){
 		$("#up").hide()
 		$("#down").show()
 		$(".hide-class").removeClass("hide-class1")
-		
 		$(".font").slideToggle()
 		$(".hide-class").slideUp()	
 	})
-	$(".font dl.big,.font1 dl.big").click(function(){
+	$(".font dl.big").click(function(){
 		$(".edite").attr('class',"edite font-big")
-		$(".list_page").attr('class',"list_page font-big")
 		$(".news-ins").attr('class',"news-ins font-big")
+		$(".list_page").attr('class',"list_page font-big")
 		$(".font").hide()
-		$(".font1").hide()
 	})
-	$(".font dl.normal,.font1 dl.normal").click(function(){
+	$(".font dl.normal").click(function(){
 		$(".edite").attr('class',"edite font-normal")
+		$(".news-ins").attr('class',"news-ins font-normal")
 		$(".list_page").attr('class',"list_page font-normal")
-		$(".news-ins").attr('class',"news-ins font-normal")
 		$(".font").hide()
-		$(".font1").hide()
 	})
-	$(".font dl.small,.font1 dl.small").click(function(){
+	$(".font dl.small").click(function(){
 		$(".edite").attr('class',"edite font-small")
+		$(".news-ins").attr('class',"news-ins font-small")
 		$(".list_page").attr('class',"list_page font-small")
-		$(".news-ins").attr('class',"news-ins font-normal")
 		$(".font").hide()
-		$(".font1").hide()
 
 	})	
 	//字体上下拉结束
