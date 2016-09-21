@@ -40,7 +40,8 @@
 
 
 @media screen and (min-width: 320px) and (max-width: 480px){
-.in_text ul li .data{ width:24%; float:left; }
+.in_text ul li a{ display: block; }
+.in_text ul li .data{ width:25%; float:left; }
 
 .news_detail{ width:75%}
 .in_text ul li .in_des{ font-size:12px;}

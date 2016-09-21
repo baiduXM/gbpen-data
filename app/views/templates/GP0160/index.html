@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script type="text/javascript">
+    // 跳转手机页面
+    {if $site_another_url}
+        if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+            location.href = '{$site_another_url}';
+        }
+    {/if}
+    </script>
+ 
+
+<meta name="keywords" content="{$keywords}"/>
+<meta name="description" content="{$description}"/>
+<link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
+<meta http-equiv="Content-Language" content="zh-CN">
+<meta http-equiv="x-ua-compatible" content="ie=Edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Type" mrc="text/html; charset=gb2312">
+<script type="text/javascript" src="http://common.mn.sina.com.cn/public/resource/lib/jquery.jcarousellite.js">
+</script>
+<title>{$title}</title>
+<link rel="stylesheet" href="{$site_url}css/style.css">
+<script type="text/javascript" src="{$site_url}js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript" src="{$site_url}js/function.js"></script>
+<script type="text/javascript" src="{$site_url}js/main.js"></script>
+{$headscript}
+</head>
+<body>
+<div id="wrap">
+   {include file='./_header.html'}
+   <div id="midlle">      
+       <div class="mtop">
+           <div class="about">
+               <div class="about_left">
+                   <i class="icon"><a href="{$index.about.link}">{$index.about.icon}</a></i>
+                   <p>{$index.about.name}</p>
+               </div>
+               <div class="about_right">
+                   {$index.about.description} 
+               </div>
+           </div>
+           <div class="contact">
+                <div class="con_title">
+                	<i>{$global.con.icon}</i>
+                	<p class="rx">{$global.rex}</p>
+                </div>
+                <span>{$contact.telephone}</span>
+                <p class="adr">
+                	{$global.contact}
+                </p>
+           </div>
+       </div>
+       <div class="mimg">
+            <ul class="transport">
+              {$sum=1}
+              {foreach item=article from=$index.pro.data}
+               <li>
+                  <div class="fs"><a href="{$index.pro.data[{$sum}].link}">
+                      <h1>{$index.pro.data[{$sum}].title}{$sum}</h1>
+                      <div class="flsh"></div>
+                      <p>{$index.pro.data[{$sum}].description|truncate:22:"…"}</p>
+                  </a></div> 
+                  <div class="img_div"><img src="{$index.pro.data[{$sum}].image}"></div>
+               </li>
+                {$sum=$sum+1}
+               {if $article@index+1 eq 2}{break}{/if}
+              {/foreach}              
+            </ul>
+            <ul class="transport2">
+               {foreach item=article from=$index.pro.data}
+               <li>
+                  <div class="fs2"><a href="{$index.pro.data[{$sum}].link}">
+                      <h1>{$index.pro.data[{$sum}].title}{$sum}</h1>
+                      <div class="flsh2"></div>
+                      <p>{$index.pro.data[{$sum}].description|truncate:22:"…"}</p>
+                  </a></div> 
+                  <div class="img_div2"><img src="{$index.pro.data[{$sum}].image}"></div>
+               </li>
+                {$sum=$sum+1}
+               {if $article@index+1 eq 2}{break}{/if}
+              {/foreach}
+            </ul>
+       </div>
+       <div class="mbottom">
+            <div class="mb_left">
+                <ul class="sify">
+                  {foreach item=nnav from=$index.newchild.childmenu}
+                  <li><a class="{if $nnav.current}current{/if}" href="{$nnav.link}">{$nnav.name}</a></li>
+                  {if $nnav@index+1 eq 3}{break}{/if} 
+	                {/foreach}
+                </ul>
+                <div class="mnews">
+                    <div class="mnews_img"><img src="{$index.news.image}"></div>                   
+                    <ul class="newslist">	
+                       {foreach item=news from=$index.news.data}		                			              
+  		                 <li><a href="{$news.link}">
+                        <strong class="date">[{$article.pubtimestamp|date_format:'%Y - %m - %d'}]</strong>
+  		                 	{$news.title}</a>
+                       </li> 
+                       {if $news@index+1 eq 6}{break}{/if}
+                       {/foreach}             		                 
+		                </ul>
+                </div>
+            </div>
+            <div class="mb_right">
+                 <ul class="icon_list">
+                     {foreach item=child from=$index.child.childmenu}
+                     <li>
+                        <div class="icons"><a href="{$child.link}">{$child.icon}</a></div>
+                        <p>{$child.name}</p>
+                     </li>
+                     {if $child@index+1 eq 6}{break}{/if}
+                     {/foreach}
+                    
+ 
+                  
+                 </ul>
+            </div>
+       </div>
+   </div>
+   {include file='./_footer.html'}
+</div>
+</body>
+</html>

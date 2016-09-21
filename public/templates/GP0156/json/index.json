@@ -1,0 +1,69 @@
+{   
+	"slidepics": {
+		"value": [{
+			"title": "测试图1",
+			"image": "images/banner.jpg",
+			"link": "http://www.baidu.com"
+		}, {
+			"title": "测试图2",
+			"image": "images/banner.jpg",
+			"link": "http://www.baidu.com"
+		}, {
+			"title": "测试图3",
+			"image": "images/banner.jpg",
+			"link": "http://www.baidu.com"
+		}],
+		"description": "大轮滚图",
+		"type": "images",
+		"config": {
+			"width": 1920,
+			"height": 756
+		}
+	},
+	"pro": {
+		"value": {},
+		"description": "banner下方图片切换",
+		"type": "list",
+		"config": {
+			"width": 311,
+			"height": 335
+		}	
+	},
+	"page": {
+		"value": {},
+		"description": "中间单页面",
+		"type": "page",
+		"config": {
+			"nav_width": 360,
+			"nav_height": 365
+		}	
+	},
+	"newslist": {
+		"value": {},
+		"description": "中间图文列表",
+		"type": "list",
+		"config": {
+			"width": 500,
+			"height": 337
+		}	
+	},
+	"smoke": {
+		"value": {},
+		"description": "底部上方图片列表",
+		"type": "list",
+		"config": {
+			"width": 303,
+			"height": 303
+		}	
+	},
+	"feedback": {
+		"value": {},
+		"description": "留言板",
+		"type": "nav",
+		"config": {
+			"filter": "feedback"
+		}
+	}
+}
+
+
