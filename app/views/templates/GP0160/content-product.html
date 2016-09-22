@@ -14,60 +14,79 @@
 <meta name="keywords" content="{$keywords}"/>
 <meta name="description" content="{$description}"/>
 <link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="Content-Language" content="zh-CN">
-<meta http-equiv="x-ua-compatible" content="ie=Edge" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="{$site_url}css/css.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="{$site_url}js/jquery-1.11.3.js"></script>
+<script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.js"></script>
 <script type="text/javascript" src="http://common.mn.sina.com.cn/public/resource/lib/jquery.jcarousellite.js">
 </script>
+
+<script type="text/javascript" src="{$site_url}js/global.js"></script>
+<script type="text/javascript" src="{$site_url}js/index.js"></script>
 <title>{$title}</title>
-<link rel="stylesheet" href="{$site_url}css/style.css">
-<script type="text/javascript" src="{$site_url}js/jquery-1.9.1.min.js"></script>
-<script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.1.js"></script>
-<script type="text/javascript" src="{$site_url}js/function.js"></script>
-<script type="text/javascript" src="{$site_url}js/main.js"></script>
 
 </head>
+
 <body>
-<div id="wrap">
-   {include file='./_header.html'}
-   <div id="midlle2"> 
-    <div class="content_ny">   
-        <div class="ny_left">
-            <p class="ny_left_top">当前位置：<a href="{$site_url}">网站首页</a>{foreach item=nav from=$posnavs}<a href="{$nav.link}">-{$nav.name}</a>{/foreach}</p>
-            <div class="ny_left_bottom pro_det">
-                <div class="picScroll-left">    
-                  <div class="bd">
-                    <ul class="picList">
+<div class="wrap">
+<!-- 导入头部文件 -->
+    {include file='./_header.html'}
+     <div class="ny-con">
+       <div class="side-left fl">
+           <i class="topbg"></i><i class="botbg"></i>
+           <div class="ny-tit">
+               <h1><span><span class="cn">{$article.category.name}</span><span class="en">{$article.category.en_name}</span></span><i></i></h1>
+           </div>
+           <div class="locationbox">
+               <div class="location">
+                   当前位置：<a href="{$site_url}">首页</a>
+                               {foreach item=nav from=$posnavs}
+                                 &gt;&gt; <a href="{$nav.link}">{$nav.name}</a>
+                               {/foreach}
+               </div>
+           </div>
+           <div class="main">
+              
+                    <div class="edit">
+                    <div class="det-img">
+                      <ul>
                       {foreach item=image from=$article.images}
                       <li>
-                        <img src="{$image.image}">
-                        <p>{$image.title}</p>
+                      <img src="{$image.image}" /><h1>{$image.title}</h1>
                       </li>
-                      {/foreach}                                              
+                      {/foreach}
+                      </ul>
+                    </div>
+
+                      <div class="ny-detcon">
+                        <div class="prodet">
+                          <h1>详细信息</h1>
+                        </div>
+                        {$article.content|unescape:"html"}
+                        <div class="share">{shareExt shareText=$article.content|unescape:"html"|strip_tags|truncate:140:"…" sharePic=$article.image}
+                        </div>
+                      </div>
+                    </div>
+                    <ul class='article-paging'>
+                      <li>上一篇：<a href='{$article.prev.link}'>{$article.prev.title}</a></li>
+                      <li>下一篇：<a href='{$article.next.link}'>{$article.next.title}</a></li>
                     </ul>
-                  </div>
-                  <a class="next"></a>
-                   <a class="prev"></a>
-                </div>
-                <div class="particle">
-                    <p>详细说明</p>
-                    {$article.content|unescape:"html"}
-                <div class="share">
-                   {shareExt shareText=$article.content|unescape:"html"|strip_tags|truncate:140:"…" sharePic=$article.image}
-                </div>
-             </div>
-                <div class="news_next">
-                    <ul>
-                      <li><a href="{$article.prev.link}">上一篇：{$article.prev.title} </a></li>         
-                      <li><a href="{$article.next.link}">下一篇：{$article.next.title}</a></li>
-                    </ul>          
-                 </div>
-             </div>
-            </div>
-        {include file='./_right.html'}                  
-    </div>            
-   </div>
-   {include file='./_footer.html'}
+                
+           </div>
+        </div>
+  
+        <div class="side-right fr">
+            {include file='./_pagenavs_sub3.html'}
+           
+        </div>
+
+     </div>
+     {include file='./_footer.html'}
+
 </div>
 </body>
 </html>
+
+
+    

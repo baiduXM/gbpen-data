@@ -189,13 +189,7 @@ footer{width: 100%;height: auto;overflow: hidden;position: absolute;bottom: 0;le
 	}
 	.about #quickbar{display:block;position: absolute; left:80%;top:2%; background: #4a372b; width: 40px; height: 40px; border: 1px solid #fff; border-radius: 100%; text-align: center;}
 	.about .page_mn i{ font:2rem/2.15rem "微软雅黑"; color: #fff}
-	
-	.Scrollbar-Track { width:10px; height: 450px; position: absolute; top:230px; right:1%;background:url(../images/sc1.jpg) repeat-y center top;border-radius: 4px;}
-	.Scrollbar-Handle { position: absolute; top: 0px; left: 0px; width:10px; height:10px;background:#4a362a;z-index: 888; }
-	.Scroller-Container {position: absolute;top: 0px; left: 0px; color:#000;width: 96%;margin-right: 10px;height: auto;}
-	#Scroller-1 {  position: absolute;overflow: auto;height: 450px;width: 96%;  margin: 10px 0 10px; padding-right: 10px}
-	.article #Scroller-1{width:96%;position: relative; }
-	.article  .Scroller-Container{width:96% }
+
 
 /*	.font_s em{display: block;}*/
 	.size_3{font-size:2.5rem;}

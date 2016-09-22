@@ -1,43 +1,39 @@
-{		
-	"about": {
-		"description": "单页面(关于我们)",
+{
+	
+    "about_us": {
+		"description": "关于我们",
 		"value": {},
-		"type": "page"
-	},
-	"pro":{
-		"description": "(图片列表)产品展示",
-		"value": {},
-		"type": "list",
-		"config": {
-			"star_only": true,
-			"width":331,
-			"height":150
+		"type": "page",
+		"config":{
+			"nav_width":65,
+			"nav_height":157
 		}
-	},	
-	"newchild":{
-		"description": "新闻资讯的头部分类",
-		"value": {},
-		"type": "list",
-		"config": {
-			"filter": "list,page"
-		}	
 	},
 	"news":{
 		"description": "新闻中心",
 		"value": {},
 		"type": "list",
-		"config": {
-			"star_only": true,
-			"width":234,
-			"height":172			
+		"config":{
+			"width":85,
+			"height":85
 		}	
 	},
-	"child":{
-		"description": "新闻资讯右边的分类",
-		"value": {},
-		"type": "list",
-		"config": {
-			"filter": "list,page"
-		}	
-	}	
+	"contact_us": {
+		"value": "姓名：龚先生\r\n手机：13275050333 \r\n电话：0595-83068686 \r\n传真：0595-83068686 \r\n地址：石狮市濠江丽景小区1号楼D梯202室\r\n  ",
+		"description": "联系方式",
+		"type": "textarea"
+	},
+	"pro":{
+		"description":"产品展示",
+		"value":{},
+		"type":"list",
+		"config":{
+			"width":178,
+			"height":178
+		}
+	}
 }
+               
+
+
+

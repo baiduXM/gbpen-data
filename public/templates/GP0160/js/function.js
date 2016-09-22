@@ -1,23 +1,18 @@
-$(document).ready(function(){
-
-    // banner滚动
-  	jQuery(".slideBox").slide({mainCell:".banimg ul",autoPlay:true});
-  	
-   $(".navs ul li").hover(function(){   
-
-		$(this).find(".erji").stop(false,true).slideDown(200);
-		},function(){ 
-		$(this).find(".erji").stop(false,true).slideUp("");
-		})
+jQuery(document).ready(function(){
 
 
-   jQuery(".picScroll-left").slide({mainCell:".bd ul",autoPage:true,effect:"left",
-               autoPlay:true,vis:1,trigger:"click"});
-    
-	
-});	
-	
-    
 
 
-	
+$('.ny-prolist li:nth-child(4n)').css('marginRight',0);
+	$('.ny-prolist li a').hover(function() {
+			$(this).children('h2').show();
+		}, function() {
+			$(this).children('h2').hide();
+		});
+
+
+
+
+
+});
+
