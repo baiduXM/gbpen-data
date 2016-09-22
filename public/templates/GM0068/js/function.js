@@ -43,7 +43,7 @@ $("section div.wrapper .in_h1 .circle").each(function (i) {
                                         var alimat6 = $(".decurlits");
                                         alimat6.height(heights6);
 	img.src=$(".prolist img").attr("src");
-	$(".index-wrap").height($(".wrap").height())
+	// $(".index-wrap").height($(".wrap").height())
 	$(".class-m").height($(".class").outerHeight()-$(".class-top").outerHeight())
 	$(".menulist dl").height($(".menulist dl").width())
 	$(".menu").height($(".menulist dl").outerHeight())
@@ -67,7 +67,7 @@ $("section div.wrapper .in_h1 .circle").each(function (i) {
 			
 			
 	$(".class-m").height($(".class").outerHeight()-$(".class-top").outerHeight())
-	 $(".index-wrap").height($(".wrap").height()+$(".quickbar-tips").height()) 
+	 // $(".index-wrap").height($(".wrap").height()+$(".quickbar-tips").height()) 
 	//赖加载
 	
 	});

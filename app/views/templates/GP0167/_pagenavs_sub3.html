@@ -1,0 +1,50 @@
+{if $pagenavs}
+<div class="about_left fl">
+	<ul>
+	{foreach name=pagenavs item=nav from=$pagenavs}	
+		<li class="firstli {if $nav.current} on {/if}"><a href="{$nav.link}" class="a1">{$nav.name}</a>
+			<ul class="secondul">	
+			{if $nav.childmenu}
+				{foreach item=nav_list from=$nav.childmenu}
+					<li class="secondli {if $nav_list.current} on {/if}"><a href="{$nav_list.link}" class="a2">{$nav_list.name}</a>	
+						<ul>
+						{if $nav_list.childmenu}
+						{foreach item=nav1_list from=$nav_list.childmenu}
+							<li class="{if $nav1_list.current} on {/if}"><a href="{$nav1_list.link}" class="a3">{$nav1_list.name}</a></li>
+						{/foreach}
+						{/if}
+						</ul>						
+					</li>
+				{/foreach}						
+			{/if}
+			</ul>			
+		</li>
+
+	{/foreach}
+	</ul>
+</div>
+{else}
+<div class="about_left fl">
+	<ul>
+	{foreach name=pagenavs item=nav from=$_pagenavs_sub3.pagenavs.childmenu}
+		<li class="firstli"><a href="{$nav.link}" class="a1">{$nav.name}</a>
+			<ul class="secondul">	
+			{if $nav.childmenu}
+				{foreach item=nav_list from=$nav.childmenu}
+					<li class="secondli"><a href="{$nav_list.link}" class="a2">{$nav_list.name}</a>	
+						<ul>
+						{if $nav_list.childmenu}
+						{foreach item=nav1_list from=$nav_list.childmenu}
+							<li ><a href="{$nav1_list.link}" class="a3">{$nav1_list.name}</a></li>
+						{/foreach}
+						{/if}
+						</ul>						
+					</li>
+				{/foreach}						
+			{/if}
+			</ul>			
+		</li>
+	{/foreach}
+	</ul>
+</div>
+{/if}
