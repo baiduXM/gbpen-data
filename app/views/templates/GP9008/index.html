@@ -40,14 +40,14 @@ DD_belatedPNG.fix('div,ul,li,a,p,img');
       <div class="prodcs public">
       <ul>
         {foreach name=products item=article from=$index.products.childmenu}
-             <li><a href="{$article.link}"><img src="{$article.image}"><span>{$article.name}<i>{$article.en_name}</i></span></a></li> 
+             <li><a href="{$article.link}"><img src="{$article.image}"><span><i>{$article.en_name}</i></span></a></li> 
              {if $article@index+1 == 4}{break}{/if}
         {/foreach}
         </ul>
       </div>
       <div class="about h_o">
           <div class="public padding_15">
-              <div class="ab_title p_r fl h_o"><h3><b>{$index.about.en_name}</b>{$index.about.name} </h3><span class="fr"><img src="{$index.about.image}"></span></div>
+              <div class="ab_title p_r fl h_o"><h3><b>{$index.about.en_name}</b></h3><span class="fr"><img src="{$index.about.image}"></span></div>
               <div class="ab_art fr">
               <a href="{$index.about.link}" class="more">MORE+</a>
                 <p class="article">
@@ -59,7 +59,7 @@ DD_belatedPNG.fix('div,ul,li,a,p,img');
       </div>
       <div class="container public h_o">
             <div class="news fl">
-              <h3 class="n_title"><b>{$index.news.en_name}<br/>{$index.news.name}</b><p><img src="{$index.news.image}"></p></h3> 
+              <h3 class="n_title"><b>{$index.news.en_name}<br/></b><p><img src="{$index.news.image}"></p></h3> 
               <ul class="news_list h_o">
                   {foreach item=new from=$index.news.data}
                   <li class="h_o"><div class="img"><a href="{$new.link}"><img src="{$new.image}" /><span>{$new.pubtimestamp|date_format:'%Y-%m-%d'}</span></a></div><div class="li_nr"><h2><a class="ellipsis" href="{$new.link}">{$new.title}</a></h2><p>{$new.description}<a class="readmore" href="{$new.link}">[MORE]</a></p></div>
@@ -71,13 +71,13 @@ DD_belatedPNG.fix('div,ul,li,a,p,img');
             <div class="contact fr h_o">
               <img src="{$global.contact.image}" />
               <div class="contact_nr h_o">
-                    <h3>{$global.contact.name}<br/>{$global.contact.en_name}</h3>
+                    <h3>{$global.contact.en_name}</h3>
                     <span>{$global.contacts}</span>
               </div>
             </div>
       </div>
       <div class="product public h_o">
-             <h3 class="title p_r"><a href="{$index.products.link}">MORE+</a>{$index.products.name}<em>{$index.products.en_name}</em></h3>
+             <h3 class="title p_r"><a href="{$index.products.link}">MORE+</a><em>{$index.products.en_name}</em></h3>
              <ul class="product_list h_o">
               {foreach item=article from=$index.products.data}
               {if  $article@index == 0} 

@@ -3,22 +3,21 @@
 	<div class="public01">
 		<span class="logo fl h_o "><img src="{$logo}"/></span>
 		<div class='h_right fr'>
-                    <div class="search_div search fr">
-                        <form action="{$search_action}" method="GET">
-                            <input type="text" class="text" name="s" /><input name="" type="submit" class="submit" />
-                        </form>
-                        <div id="language_div" style="float: right;"></div>
-                    </div>
+			<div class="search fr">
+				<form action="{$search_action}" method="GET">
+					<input type="text" class="text" name="s" /><input name="" type="submit" class="submit" />
+				 </form>
+			 </div>
 		    <ul id="nav" class="nav" >
 		       {$litmit = 8}
 		        {if $navs|count lt $litmit}{$litmit = $navs|count}{/if}
 		            <li class="nLi" style="width:{100/($litmit+1)-1}%" ><a href="{$site_url}">Home</a></li>
 		        {foreach item=nav from=$navs}	
-		            <li class="nLi {if $nav.current}current{/if}" style="width:{100/($litmit+1)-1}%" ><a href="{$nav.link}">{$nav.name}</a>
+		            <li class="nLi {if $nav.current}current{/if}" style="width:{100/($litmit+1)-1}%" ><a href="{$nav.link}">{$nav.en_name}</a>
 						{if $nav.childmenu}
 							<ul class="sub clearfix">
 								{foreach item=nav_list from=$nav.childmenu}
-								<li class="{if $nav_list.current}current{/if}"><a href="{$nav_list.link}">{$nav_list.name}</a></li>
+								<li class="{if $nav_list.current}current{/if}"><a href="{$nav_list.link}">{$nav_list.en_name}</a></li>
 								{/foreach}
 							</ul>
 						{/if}

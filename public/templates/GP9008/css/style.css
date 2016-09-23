@@ -83,7 +83,7 @@ i,em{ font-style: normal;}
 .container{margin: 30px auto}
 .news{width: 506px;}
 .news .n_title{height: 104px; background: url(../images/nbg.jpg) no-repeat left;overflow: hidden; }
-.news .n_title b{width: 136px;text-align: center;font: 18px/24px "微软雅黑";padding:25px 0; color: #ffffff; display:inline-block; }
+.news .n_title b{width: 136px;text-align: center;font: 20px/54px "微软雅黑";padding:25px 0; color: #ffffff; display:inline-block; }
 .news .n_title p{display: inline-block; float: right;}
 .news .n_title p img{height: 104px;}
 .news_list{padding-top: 15px;}
@@ -102,7 +102,7 @@ i,em{ font-style: normal;}
 .contact{width: 465px;}
 .contact img{display:inline-block; float: left; width: 235px;}
 .contact_nr{padding: 20px;  background:url(../images/cng.jpg) no-repeat right bottom #212121;}
-.contact_nr h3{color: #ffffff; font: 18px/24px "微软雅黑"; padding-bottom: 15px; }
+.contact_nr h3{color: #ffffff; font: 20px/48px "微软雅黑"; padding-bottom: 15px; }
 .contact span{ color: #989898; height:200px ; line-height: 30px; overflow: hidden; display: block;}
 
 .product{margin: 15px auto;}
@@ -165,7 +165,7 @@ ul.listbg  li ul.second li ul.third li a.selected{ color:#f8c80c;  }
 .right .title em{height: 40px;}
 .right .title b{font-weight: normal; display: none}
 .right .title a:hover{color: #f8c80c;}
-.right .title strong{font-weight: normal; position: absolute; top:-10px; z-index: 10;}
+.right .title strong{font-weight: normal; position: absolute; top:-10px; z-index: 10;margin-top: 22px;}
 .right .title i{ font-size: 46px;}
 .location{ color: #666666;font: 12px/50px "宋体"; }
 
