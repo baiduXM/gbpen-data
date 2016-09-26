@@ -54,10 +54,10 @@ return array(
 
 		'mysql' => array(
 			'driver'    => 'mysql',
-			'host'      => '180.76.142.133',
+			'host'      => '182.61.47.52',
 			'database'  => 'unify_db',
-			'username'  => 'dingchao',
-			'password'  => 'pengdingchao',
+			'username'  => '12t',
+			'password'  => 'admin',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => 'up_',
