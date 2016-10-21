@@ -19,7 +19,7 @@
         </h2>
        <div class="header_menu f_r">
             <ul class="nav clearfix" id="nav">
-                {$limit = 5}
+                {$limit = 6}
                 <li class="nLi" style="width: {100/($limit+1)}%"><h3><a href="{$site_url}">首页<span>HOME</span></a></h3>
                 </li>
                   {foreach item=nav from=$navs}
@@ -52,7 +52,10 @@
         <div class="bd">
             <ul>
                {foreach item=slidepic from=$_header.slidepics}
-                        <li><a href="{$slidepic.link}"><img src="{$slidepic.image}" alt="{$slidepic.title}" /></a></li>
+               
+               <div><a href="{$slidepic.link}" target="_blank">	<li style="background:url({$slidepic.image}) no-repeat center; height:473px;"></li></a></div>
+               
+               
                {/foreach}
             </ul>
         </div>

@@ -133,7 +133,7 @@
       
 
       {foreach name=news item=news from=$index.news.data}
-<li><a href="{$index.news.link}">
+<li><a href="{$news.link}">
       <div class="data">
       <span>{$news.pubtimestamp|date_format:'%Y-%m'}</span><br />
       <b>{$news.pubtimestamp|date_format:'%d'}</b>

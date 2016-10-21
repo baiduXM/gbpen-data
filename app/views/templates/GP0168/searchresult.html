@@ -31,23 +31,23 @@
  <!-- 导入头部文件 -->
   {include file='./_header.html'} 
   <div id="contentm">     
-      {include file='./_ernav.html'}
+      
            <div class="ny_bottom ny_news">
               {if $search.total eq 0}
               <div class="result">没有查找到相关数据！</div>
               {else}
               <div class="result">以下是您输入的关键字“{$search.keyword}”的搜索结果，共{$search.total}条 </div>                           
               <ul class="news_list">
-                   {foreach item=article from=$list.data}
+                   {foreach item=result from=$search.data}
                    <li>
-                      <p>时间：{$article.pubtimestamp|date_format:'%Y-%m-%d'}</p>
-                      <dd><a href="{$article.link}">{$article.title}</a></dd>
-                      <dt>{$article.description|truncate:140:"…"}</dt>
+                      <p datetime="{$result.pubymd}">时间：{$result.pubymd}</p>
+                      <dd><a href="{$result.link}">{$result.title}</a></dd>
+                      <dt>{$result.description|truncate:140:"…"}</dt>
                    </li>
                    {/foreach}                   
-                </ul>
-              {/if}
+                </ul>              
              {include file='./_page.html'}
+             {/if}
            </div>      
  </div>
  <div id="footer2"> 

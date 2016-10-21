@@ -52,8 +52,8 @@
             <div class="txtScroll-left">
                 <div class="bd">
                     <ul class="infoList">
-                       {foreach item=article from=$_header.roll.data}
-                            <li><a class="ellipsis" href="{$article.link}">{$article.title}</a></li>
+                       {foreach item=headarticle from=$_header.roll.data}
+                            <li><a class="ellipsis" href="{$headarticle.link}">{$headarticle.title}</a></li>
                         
                       {/foreach}
                     </ul>

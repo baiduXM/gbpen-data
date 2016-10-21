@@ -18,7 +18,7 @@
 .wrapper{ margin:auto;  }
 #in_page{}
 #in_page .inner{ background:url(../images/about_bg.jpg) no-repeat; padding:2% 3%; position:relative; margin-top:15px;}
-#in_page .inner .pic{ width:30%; float:right; border:1px solid #fff}
+#in_page .inner .pic{ width:30%; float:right; border:1px solid #fff;}
 #in_page .inner p{ width:65%; float:left; line-height:24px; height:96px; overflow:hidden; margin:auto; color:#fff}
 #in_page .inner .more{ width:70px; height:25px; line-height:25px; border:1px solid #fff; border-top:2px solid #fff; text-align:center; color:#fff; position:absolute; left:3%; bottom:8%; text-transform:uppercase; font-size:12px}
 #in_page .inner .more a{ color:#fff}
@@ -27,7 +27,7 @@
 #in_page .inner p{ height:72px; }
 
 #in_page .inner .more{ width:70px; height:20px; line-height:20px; }
-#in_page .inner .pic{ width:40%;}
+#in_page .inner .pic{ width:40%;min-height: 104px;}
 #in_page .inner p{ width:57%;}
 
 }

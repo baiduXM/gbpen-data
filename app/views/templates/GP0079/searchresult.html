@@ -75,7 +75,7 @@
                                     </div>
                             <div class="news_detada">
                                     {foreach item=article from=$search.data}
-                                     <li><a href="#"><span>{$article.pubtimestamp|date_format:'%Y-%m-%d'}</span>{$article.title}</a></li>              
+                                     <li><a href="{$article.link}"><span>{$article.pubymd}</span>{$article.title}</a></li>              
                                      {/foreach}   
   <div class="module_page"  >
                 第{$page_links.current_page}页/共{$page_links.page_count} 页      

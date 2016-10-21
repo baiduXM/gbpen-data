@@ -9,14 +9,14 @@
         }
     {/if}
 </script>
-
+<!--  -->
 <meta name="keywords" content="{$keywords}"/>
 <meta name="description" content="{$description}"/>
 <link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
 <meta http-equiv="x-ua-compatible" content="ie=8"/>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
 <title>{$title}</title>
-<link href="{$site_url}style/css.css" rel="stylesheet" type="text/css" />
+<link href="{$site_url}css/css.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="{$site_url}js/jquery1.42.min.js"></script>
 <script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.js"></script>
 <script type="text/javascript" src="{$site_url}js/function.js"></script>
@@ -51,8 +51,8 @@
         {else}
         <ul>
         <div class="sear_tit">以下是您搜索的关键字“{$search.keyword}”，搜索的结果有{$search.total}条</div>
-         {foreach name=article item=article from=$list.data}
-            <li><a href='{$article.link}'><span>[{$article.pubtimestamp|date_format:'%Y-%m-%d'}]</span>{$article.title}</a></li>
+         {foreach name=sear item=sear from=$search.data}
+            <li><a href='{$sear.link}'><span>[{$sear.pubymd}]</span>{$sear.title}</a></li>
          {/foreach}
         </ul>
             

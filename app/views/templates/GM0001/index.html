@@ -1,13 +1,15 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html manifest="huancun.manifest">
 <head>
-
+  <!-- 实时预览调试代码，模板开发完成后删除 -->
+  
+  <!-- 调试代码 End -->
   <script type="text/javascript">
-// 跳转PC页面
+// 识别为电脑客户端，自动跳转PC页面
 {if $site_another_url}
-    if (!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
-        location.href = '{$site_another_url}';
-    }
+  if (!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+    location.href = '{$site_another_url}';
+  }
 {/if}
 </script>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -44,7 +46,7 @@
   {$headscript}
 </head>
 <body>
-
+   {include file="./_loader.html"}
    {include file="./_left_navs.html"}
     <div class="wrap page-active wrap_home">
       <div class="index-wrap">

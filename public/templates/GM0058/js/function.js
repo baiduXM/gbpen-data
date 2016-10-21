@@ -1,6 +1,6 @@
 function loader(argument) {
-    $('body').addClass('loaded');
 
+    $('body').addClass('loaded');
     setTimeout(function() {
         $(".loader_div").remove();
     }, 4000);
@@ -28,7 +28,6 @@ $(document).ready(function() {
             });
 
     }
-
     function foulpage() {
         var scope = ($(".scope").height() < ($(".wrap").height() - $(".fixed_top").height() - $(".foot").height()) ? ($(".wrap").height() - $(".fixed_top").height() - $(".foot").height()) : $(".scope").height());
         if ($(".scope").height() != scope) {
@@ -37,7 +36,6 @@ $(document).ready(function() {
 
     }
     foulpage();
-
     //隐藏导航跟wrap的切换
     $("#header_menu").click('touchstart',
         function() {

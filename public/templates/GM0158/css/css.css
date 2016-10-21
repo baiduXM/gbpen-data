@@ -262,11 +262,11 @@ span.hicon1 a{color: #fff;font-size: 1.1em;}
 /*searchresult*/
 .sheader{background: #d4e01b;border-top: 3px solid #ed9102;height: 45px;}
 .searchbox{width:92%;overflow: hidden;margin:5% auto 0.5rem;position: relative;z-index: 20;line-height: 2rem;}
-.searchbox form{display: inline-block;float: left;width: 84%;background: #fff;border: 1px solid #e9e9e9;position: relative;}
+.searchbox form{display: inline-block;margin: 0 auto;width: 98%;background: #fff;border: 1px solid #e9e9e9;position: relative;}
 .searchbox input{border: none;line-height: 2rem;}
-.sinp{width: 80%;float: right;background: transparent;padding: 0 3%;color: #666}
-.sbtn{width: 14%;background: url(../images/word.png) center no-repeat;background-size: 50%;float: left;}
-.searchbox i{display: block;height: 20px;width: 1px;background: #cacaca;position: absolute;top: 50%;margin-top: -10px;left: 14%;}
+.sinp{width: 80%;float: left;background: transparent;padding: 0 3%;color: #666}
+.sbtn{width: 14%;background: url(../images/word.png) center no-repeat;background-size: 50%;float: right;}
+.searchbox i{display: block;height: 20px;width: 1px;background: #cacaca;position: absolute;top: 50%;margin-top: -10px;right: 14%;}
 .searchbox p{display: inline-block;text-align: center;width: 15%;font-size: 1.1em;}
 
 .searchword{padding: 2% 0 5%;font-size: 1.1em;text-align: center;color: #333;font-weight: bold;}

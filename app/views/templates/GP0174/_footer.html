@@ -1,0 +1,9 @@
+<div class="footer">
+	<div class="links">
+		{foreach item=flink from=$global.links}
+			<a href="{$flink.link}">{$flink.title}</a>|
+		{/foreach} 
+	</div>
+	<p>{$footprint}</p>
+</div>
+{$footscript}

@@ -15,26 +15,17 @@ $(window).load(function(){
 $(".swiper-slide,.menulist .swiper-nav .swiper-wrapper").height($(".menulist .swiper-nav span").height())
 
 
-$("#in_text ul li .data").height($("#in_text ul li .data").width())
 
-var m=($("#in_text ul li .data").height()*0.5)-10
-
-$("#in_text ul li .data .riqi").css({"line-height":m+"px"})
-$("#in_text ul li .data .month").css({"line-height":m+"px"})
-
-
-var n=$("#in_text ul li").height()*0.4
-$("#in_text ul li .more1").css({"margin-top":n})
 
 $(".list_imagetext ul li").each(function(){
-if($(this).find(".img_box img").height()<$(this).find(".text_box").height()){
-	var z=($(this).find(".text_box").height()-$(this).find(".img_box img").height())*0.5
-	$(this).find(" .img_box img").css({"margin-top":z})
-	}
-	else{	
-	$(this).find(" .img_box img").css({"margin-top":0})
-}
-	})
+if($(".list_imagetext ul li .img_box img").height()<$(".list_imagetext ul li .text_box").height()){
+	var z=($(".list_imagetext ul li .text_box").height()-$(".list_imagetext ul li .img_box img").height())*0.5
+	$(".list_imagetext ul li .img_box img").css({"margin-top":z})
+	}})
+
+
+
+
 
 
 
@@ -115,7 +106,6 @@ if($(this).find(".img_box img").height()<$(this).find(".text_box").height()){
 		return false;
 	})			
 
-	
 	//字体上下拉开始
   	
 	$("#font").click(function(){

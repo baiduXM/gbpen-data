@@ -10,12 +10,12 @@
     </li>
     {foreach item=bottomnav from=$global.bottom_navs}
       <li class="{$bottomnav.type}">
-          <a href="{$bottomnav.link}" target="_blank">
-            <span class="icon">
-              {if $bottomnav.icon}<i class="iconfont">{$bottomnav.icon}</i>{else}<img src="{$bottomnav.image}" width="30">{/if}
-            </span>
-            <span class="title">{$bottomnav.name}</span>
-          </a>
+        <a href="{$bottomnav.data}" target="_blank">
+          <span class="icon">
+            {if $bottomnav.icon}<i class="iconfont">{$bottomnav.icon}</i>{else}<img src="{$bottomnav.image}" width="30">{/if}
+          </span>
+          <span class="title">{$bottomnav.name}</span>
+        </a>     
       </li>
       {if $bottomnav@index eq 2}{break}{/if}
     {/foreach}

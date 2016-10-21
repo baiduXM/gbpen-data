@@ -1,0 +1,10 @@
+
+<div class='footer'>
+	友情链接：
+		{foreach key=key item=link from=$global.links}
+		<a href="{$link.link}" target="_blank">{$link.title}</a>
+		{/foreach}			
+<br />
+	{$footprint}
+</div>
+{$footscript}

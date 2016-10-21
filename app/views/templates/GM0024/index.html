@@ -102,6 +102,10 @@
             </div>
           </div>
         </div>
+        
+        
+        
+        
         <div class="main">
           {* 输出type为1234的栏目展现HTML，且1234每个都须定义 *}
           {foreach name=mIndexCats item=mIndexCat from=$mIndexCats}
@@ -168,7 +172,7 @@
             <div class="about-m">
               <ul class="news-list1">
                 {foreach item=article from=$mIndexCat.data}
-                <li onclick="javascript:window.location.href='{$article.link}'">
+                <li onClick="javascript:window.location.href='{$article.link}'">
                   <a href="#">
                     <div class="news_img public_border" >
                       <div class="news_tra"></div>

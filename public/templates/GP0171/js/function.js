@@ -1,196 +1,192 @@
-$(document).ready(function(){
-	/*大图js效果*/
-	TouchSlide({ 
-					slideCell:"#slideBox",
-					titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
-					mainCell:".bd ul", 
-					effect:"leftLoop", 
-					autoPage:true,//自动分页
-					autoPlay:true,
-					interTime:6000 //自动播放
-				});
-				
-$(window).load(function(){
-/*美工专属区域*/
+ $(document).ready(function(){
 
-$("section div.wrapper").eq(2).css({"margin-bottom":"20px"})
-$("section div.wrapper:last").css({"margin-bottom":"20px"})
+  //限制字符个数
+    $(".kz").each(function(){
+    var maxwidth=parseInt($(this).attr("data-limit"));
+    if($(this).text().length>maxwidth){
+    $(this).text($(this).text().substring(0,maxwidth));
+    $(this).html($(this).html()+'...');
+    }
+    });
 
-$(".menulist .swiper-nav span .icon i .iconfont").css({"font-size":"30"})
+	//下拉菜单
+	jQuery(".nav").slide({ 
+		type:"menu",// 效果类型，针对菜单/导航而引入的参数（默认slide）
+		titCell:".nav_li", //鼠标触发对象
+		targetCell:".sub", //titCell里面包含的要显示/消失的对象
+		effect:"slideDown", //targetCell下拉效果
+		delayTime:300 , //效果时间
+		triggerTime:0, //鼠标延迟触发时间（默认150）
+		returnDefault:true //鼠标移走后返回默认状态，例如默认频道是“预告片”，鼠标移走后会返回“预告片”（默认false）
+	});
+  
+  //选项卡
+  jQuery(".slideTxtBox").slide({mainCell:".bd",trigger:"click"});
 
-
-
-$(".menulist .swiper-nav span .icon").height($(".menulist .swiper-nav span .icon").width())
-$(".swiper-slide,.menulist .swiper-nav .swiper-wrapper").height($(".menulist .swiper-nav span").height())
-
-
-
-var t=($(".menulist .swiper-nav span .icon").height()-$(".menulist .swiper-nav span .icon i.iconfont").height())*0.35
-$(".menulist .swiper-nav span .icon i.iconfont").css({"font-size":20,"display":"block","margin-top":t,"color":"#386aa7"})
-
-$("#in_text ul li .date").height($("#in_text ul li .tit").height())
-var y=$("#in_text ul li .tit").height()*0.2
-$("#in_text ul li .date .year").css({"margin-top":y})
-
-
-
-
-$(".list_imagetext ul li").each(function(){
-if($(this).find(".img_box img").height()<$(this).find(".text_box").height()){
-	var z=($(this).find(".text_box").height()-$(this).find(".img_box img").height())*0.5
-	$(this).find(" .img_box img").css({"margin-top":z})
-	}
-	else{	
-	$(this).find(" .img_box img").css({"margin-top":0})
-}
-	})
-
-
-
-
-
-
-/*美工专属区域*/
-	
-	
-/*标题自适应宽度*/		
-	$(".yc ul li").each(function(){
-		 var ww=$(this).find("img").width();
-   $(this).find("p").width(ww);
+	//大图轮播
+	jQuery(".slideBox").slide({ titCell:".hd ul", mainCell:".bd ul", effect:"left",interTime:4500,delayTime:350, autoPlay:true, autoPage:true, trigger:"click",
+	mouseOverStop:false});
+  //多图时轮播
+  jQuery(".slideBoxs").slide({  mainCell:".bds ul", effect:"left", delayTime:1000, autoPlay:true, autoPage:true, trigger:"click",
+  mouseOverStop:false,/* 鼠标移到容器层继续播放*/
+  /* 控制进度条 */
+    startFun:function(){
+      var timer = jQuery(".slideBox2 .timer");
+      timer.stop(true,true).animate({ "width":"0%" },0).animate({ "width":"100%" },1000);
+    }
   });
- /*标题自适应宽度*/
- 
- 
- 
-  var img=new Image();
-		var self5 = $(".cpszs_show");
-                                        var heights5 = $(self5).height();;
-                                        var alimat5 = $(".listpp");
-                                        alimat5.height(heights5);		
-		var self6 = $(".nimg1");
-                                        var heights6 = $(self6).height();;
-                                        var alimat6 = $(".decurlits");
-                                        alimat6.height(heights6);
-	img.src=$(".prolist img").attr("src");
-	$(".index-wrap").height($(".wrap").height())
-	$(".class-m").height($(".class").outerHeight()-$(".class-top").outerHeight())
-	$(".menulist dl").height($(".menulist dl").width())
-	$(".menu").height($(".menulist dl").outerHeight())
-	$(".prolist .tielbox").height($(".prolist img").height())
-	});
-	$(window).resize(function(){
-		/* $(".index-wrap").height($(window).height()-$(".fixed").height()-$(".tell-icon").height()) */
-		$(".class-m").height($(".class").outerHeight()-$(".class-top").outerHeight())
-		$(".menulist dl").height($(".menulist dl").width())
-		$(".menu").height($(".menulist dl").outerHeight())
-		$(".prolist .tielbox").height($(".prolist img").height())
-		
-	$("#about .nr dd").height($("#about img").height()-29)
-	if($(window).width()<400){
-		$("#about .nr dd").css({'line-height':$("#about .nr dd").height()/3+"px"})
-		}else{
-			if($(window).width()<540)
-			{$("#about .nr dd").css({'line-height':$("#about .nr dd").height()/5+"px"})}
-			else{$("#about .nr dd").css({'line-height':$("#about .nr dd").height()/6+"px"})}
-			}
-			
-			
-	$(".class-m").height($(".class").outerHeight()-$(".class-top").outerHeight())
-	 $(".index-wrap").height($(".wrap").height()+$(".quickbar-tips").height()) 
-	//赖加载
-	
-	});
-	
-	
-	function pageSlideOver(){
-    $('.page-out').live('transitionend', function(){
-      $(this).removeClass('page-out');
+
+
+  if($(".focusBox img").length<2){
+        $(".focusBox").parent().find(".img_hd").css("display","none");
+    }
+
+  
+    $(".inner_l").stop().addClass("animated bounceInLeft");
+    $(".inner_r").stop().addClass("animated bounceInRight");
+  
+  //首页飘入
+    $(window).scroll(function(){
+       if($(window).scrollTop()>2000){
+        $(".news_l").addClass("animated bounceInLeft");
+        $(".news_r").addClass("animated bounceInRight");
+      }
     });
-    $('.page-in').live('transitionend', function(){
-      $(this).removeClass('page-in');
-    });
-  }
+    $(".about_main .img_div").stop().addClass("animated bounceInLeft");
+    $(".about_main .blue").stop().addClass("animated bounceInLeft");
+    $(".about_main .text_div").stop().addClass("animated bounceInRight");
 
-  //隐藏导航跟wrap的切换
-$("#daohang,#header_menu,#fixed_menu").click(function(){
-		$("#quickbar-navs").removeClass("page-prev").addClass("page-in");
-		$("#quickbar-wrap").removeClass("page-active").addClass("page-next page-in")
-		$(".quickbar-opacity2").show()
-		pageSlideOver();
-	})
-	$(".quickbar-navs-close,.quickbar-opacity2").on('touchstart',function(){
-		$("#quickbar-navs").addClass("page-prev page-out")
-		$("#quickbar-wrap").removeClass("page-next").addClass(" page-out")
-		$(".quickbar-opacity2").hide()
-		$(".newsclass").removeClass("show")
-		pageSlideOver();
-		return false;
-	})
-	//字体上下拉开始
-  	
-	$("#font").click(function(){
-		$("#up").hide()
-		$("#down").show()
-		$(".hide-class").removeClass("hide-class1")
-		$(".font").slideToggle()
-		$(".hide-class").slideUp()	
-	})
-	$(".font dl.big,.font1 dl.big").click(function(){
-		$(".edite").attr('class',"edite font-big")
-		$(".list_page").attr('class',"list_page font-big")
-		$(".news-ins").attr('class',"news-ins font-big")
-		$(".font").hide()
-		$(".font1").hide()
-	})
-	$(".font dl.normal,.font1 dl.normal").click(function(){
-		$(".edite").attr('class',"edite font-normal")
-		$(".list_page").attr('class',"list_page font-normal")
-		$(".news-ins").attr('class',"news-ins font-normal")
-		$(".font").hide()
-		$(".font1").hide()
-	})
-	$(".font dl.small,.font1 dl.small").click(function(){
-		$(".edite").attr('class',"edite font-small")
-		$(".list_page").attr('class',"list_page font-small")
-		$(".news-ins").attr('class',"news-ins font-normal")
-		$(".font").hide()
-		$(".font1").hide()
 
-	})	
-	//字体上下拉结束
-	//分类上下拉开始
-	$("#first").click(function(){
-		$("#up").toggle()
-		$("#down").toggle()
-		$(".hide-class").slideToggle()
-		$(".font").slideUp()	
-	})
-	//分类上下拉结束
-	
-	$(".title2 span.bigd").click(function(){
-		$(".edite").attr('class',"edite font-big")
-	})
-	$(".title2 span.middled").click(function(){
-		$(".edite").attr('class',"edite font-normal")
-	})
-	$(".title2 span.smalld").click(function(){
-		$(".edite").attr('class',"edite font-small")
+    //折叠菜单
+  (function ($, window, document, undefined) {
+      if ($('ul.mtree').length) {
+          var collapsed = true;
+          var close_same_level = false;
+          var duration = 400;
+          var listAnim = true;
+          var easing = 'easeOutQuart';
+          $('.mtree ul').css({
+              'overflow': 'hidden',
+              'height': collapsed ? 0 : 'auto',
+              'display': collapsed ? 'none' : 'block'
+          });
+          var node = $('.mtree li:has(ul)');
+          node.each(function (index, val) {
+              $(this).children(':first-child').css('cursor', 'pointer');
+              $(this).addClass('mtree-node mtree-' + (collapsed ? 'closed' : 'open'));
+              $(this).children('ul').addClass('mtree-level-' + ($(this).parentsUntil($('ul.mtree'), 'ul').length + 1));
+          });
+          $('.mtree li > *:first-child').on('click.mtree-active', function (e) {
+              if ($(this).parent().hasClass('mtree-closed')) {
+                  $('.mtree-active').not($(this).parent()).removeClass('mtree-active');
+                  $(this).parent().addClass('mtree-active');
+              } else if ($(this).parent().hasClass('mtree-open')) {
+                  $(this).parent().removeClass('mtree-active');
+              } else {
+                  $('.mtree-active').not($(this).parent()).removeClass('mtree-active');
+                  $(this).parent().toggleClass('mtree-active');
+              }
+          });
+          node.children(':first-child').on('click.mtree', function (e) {
+              var el = $(this).parent().children('ul').first();
+              var isOpen = $(this).parent().hasClass('mtree-open');
+              if ((close_same_level || $('.csl').hasClass('active')) && !isOpen) {
+                  var close_items = $(this).closest('ul').children('.mtree-open').not($(this).parent()).children('ul');
+                  if ($.Velocity) {
+                      close_items.velocity({ height: 0 }, {
+                          duration: duration,
+                          easing: easing,
+                          display: 'none',
+                          delay: 100,
+                          complete: function () {
+                              setNodeClass($(this).parent(), true);
+                          }
+                      });
+                  } else {
+                      close_items.delay(100).slideToggle(duration, function () {
+                          setNodeClass($(this).parent(), true);
+                      });
+                  }
+              }
+              el.css({ 'height': 'auto' });
+              if (!isOpen && $.Velocity && listAnim)
+                  el.find(' > li, li.mtree-open > ul > li').css({ 'opacity': 0 }).velocity('stop').velocity('list');
+              if ($.Velocity) {
+                  el.velocity('stop').velocity({
+                      height: isOpen ? [
+                          0,
+                          el.outerHeight()
+                      ] : [
+                          el.outerHeight(),
+                          0
+                      ]
+                  }, {
+                      queue: false,
+                      duration: duration,
+                      easing: easing,
+                      display: isOpen ? 'none' : 'block',
+                      begin: setNodeClass($(this).parent(), isOpen),
+                      complete: function () {
+                          if (!isOpen)
+                              $(this).css('height', 'auto');
+                      }
+                  });
+              } else {
+                  setNodeClass($(this).parent(), isOpen);
+                  el.slideToggle(duration);
+              }
+              e.preventDefault();
+          });
+          function setNodeClass(el, isOpen) {
+              if (isOpen) {
+                  el.removeClass('mtree-open').addClass('mtree-closed');
+              } else {
+                  el.removeClass('mtree-closed').addClass('mtree-open');
+              }
+          }
+          if ($.Velocity && listAnim) {
+              $.Velocity.Sequences.list = function (element, options, index, size) {
+                  $.Velocity.animate(element, {
+                      opacity: [
+                          1,
+                          0
+                      ],
+                      translateY: [
+                          0,
+                          -(index + 1)
+                      ]
+                  }, {
+                      delay: index * (duration / size / 2),
+                      duration: duration,
+                      easing: easing
+                  });
+              };
+          }
+          if ($('.mtree').css('opacity') == 0) {
+              if ($.Velocity) {
+                  $('.mtree').css('opacity', 1).children().css('opacity', 0).velocity('list');
+              } else {
+                  $('.mtree').show(200);
+              }
+          }
+      }
+  }(jQuery, this, this.document));
 
-	})		
-	//返回顶部开始
-	$(".back-top").click(function(){$(".index-wrap").animate({scrollTop :0}, 800)})
-	$("#share_btn").click(function(){
-		$(".newsclass").addClass("show")
-		$(".opacity2").show()
-		return false
-	})
-	//返回顶部结束
-	//分享取消按钮开始
-	$(".share-cance").click(function(){
-		$(".newsclass").removeClass("show")
-		$(".opacity2").hide()
-	})
-  	});
-	//分享取消按钮结束
 
-	
+
+
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+

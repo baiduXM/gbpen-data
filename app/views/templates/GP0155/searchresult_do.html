@@ -48,9 +48,9 @@
                    {else}
                     <h2 class="results">搜索词为”{$search.keyword}“，找到{$search.total}条结果</h2>
                    <ul class="newslist">
-                    {foreach item=article from=$list.data}
-                      <li><a href="{$article.link}"><strong class="date">[{$article.pubtimestamp|date_format:'%Y - %m - %d'}]</strong>{$article.title}</a></li>
-                    {/foreach} 
+                    {foreach item=article from=$search.data}<!--search_content_start-->
+                      <li><a href="search_$link"><strong class="date">[search_$pubymd]</strong>search_$title</a></li>
+                    <!--search_content_end-->{/foreach} 
                    </ul>
                  {/if}
                  {include file='./_page.html'}

@@ -48,8 +48,8 @@
                    {else}
                     <h2 class="results">搜索词为”{$search.keyword}“，找到{$search.total}条结果</h2>
                    <ul class="newslist">
-                    {foreach item=article from=$list.data}
-                      <li><a href="{$article.link}"><strong class="date">[{$article.pubtimestamp|date_format:'%Y - %m - %d'}]</strong>{$article.title}</a></li>
+                    {foreach item=article from=$search.data}
+                      <li><a href="{$article.link}"><strong class="date">[{$article.pubymd}]</strong>{$article.title}</a></li>
                     {/foreach} 
                    </ul>
                  {/if}

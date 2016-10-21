@@ -1,0 +1,93 @@
+{
+	"horn": {
+		"value": "中国领先家政020平台",
+		"description": "公告标题",
+		"type": "text"
+	},
+	"hotline": {
+		"value": "服务热线：",
+		"description": "服务热线",
+		"type": "text"
+	},
+	"banner": {
+		"value": [{
+			"title": "banner",
+			"image": "images/banner-01.jpg",
+			"link": "article/1.html",
+			"description": "banner1"
+		}, {
+			"title": "测试图2",
+			"image": "images/banner-01.jpg",
+			"link": "http://www.baidu.com"
+		},{
+			"title": "测试图3",
+			"image": "images/banner-01.jpg",
+			"link": "http://www.baidu.com"
+		}],
+		"description": "头部大图",
+		"type": "images",
+		"config": {
+			"width": 1920,
+			"height": 400
+		}
+	},
+	"links": {
+		"value": [{
+			"title": "百度",
+			"image": "images/link_01.jpg",
+			"link": "http://www.baidu.com",
+			"description": "百度"
+		}, {
+			"title": "焦点集团",
+			"image": "images/link_02.jpg",
+			"link": "http://www.baidu.com",
+			"description": "焦点集团"
+		},{
+			"title": "新工作人才网",
+			"image": "images/link_03.jpg",
+			"link": "http://www.baidu.com",
+			"description": "新工作人才网"
+		}],
+		"description": "页脚友情链接",
+		"type": "images",
+		"config": {
+		}
+	},
+	"pagenavs": {
+		"value": {},
+		"description": "侧边栏目列表（当前栏目无子栏目时展示的目标栏目）",
+		"type": "list",
+		"config": {
+			"filter": "list,page",
+			"mustchild": true
+		}
+	},
+	"newspic": {
+		"value": [{
+			"title": "新闻图片一",
+			"image": "images/news-01.jpg",
+			"link": "article/1.html",
+			"description": "news1"
+		}, {
+			"title": "新闻图片二",
+			"image": "images/news-02.jpg",
+			"link": "http://www.baidu.com"
+		},{
+			"title": "新闻图片三",
+			"image": "images/news-03.jpg",
+			"link": "http://www.baidu.com"
+		}],
+		"description": "文字列表页图片轮播",
+		"type": "images",
+		"config": {
+			"width": 336,
+			"height": 198
+		}
+	},
+	"information": {
+		"value": "姓名：麦当娜\r\n年龄：38岁\r\n经验：10年工作经验\r\n服务类型：钟点工、居家保姆、居家护理等。",
+		"description": "员工个人资料",
+		"type": "textarea"
+	}
+	
+}

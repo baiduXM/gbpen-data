@@ -46,17 +46,15 @@
                     <div class="main">
                         <div class="news">
                           <div class="search">搜索关键词为“<mark>{$search.keyword}</mark>”的产品/文章，共搜索到 <mark>{$search.total}</mark> 个结果：</div>
-                            {if $search.total gt 0}
                               <ul class="news-list">
                                   {foreach item=article from=$search.data}
                                       <li><a href="{$article.link}">
-                                          <time datetime="{$article.pubtimestamp|date_format:'%Y-%m-%d'}">{$article.pubtimestamp|date_format:'%Y-%m-%d'}</time>
+                                          <time datetime="{$article.pubymd}">{$article.pubymd}</time>
                                           {$article.title}
                                       </a></li>
                                   {/foreach}
                               </ul>
                               {include file='./_page.html'}
-                            {/if}
                         </div>
                     </div>
                 </div>

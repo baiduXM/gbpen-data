@@ -2,8 +2,8 @@
 <html manifest="huancun.manifest">
 <head>
 
-<!-- 实时预览调试代码，模板开发完成后删除 -->
-
+<!-- 实时预览调试代码，模板开发完成后删除 --><!-- 
+ -->
 <!-- 调试代码 End -->
 <script type="text/javascript">
 // 识别为电脑客户端，自动跳转PC页面
@@ -40,11 +40,6 @@
 <link rel="stylesheet" href="{$site_url}css/public.css" />
 <link rel="stylesheet" href="{$site_url}css/style.css" />
 
-<link rel="stylesheet" rev="stylesheet" href="{$site_url}css/style_{$stylecolor}.css" type="text/css" />
-
-
-
-
 <script type="text/javascript">
 	window.addEventListener('load', function(){
    setTimeout(function(){ window.scrollTo(0, 1); }, 100);
@@ -76,8 +71,6 @@
 
 	<div class="wrap page-active wrap_home">
       <div class="index-wrap">
-        
-        
         <!-- 滚轮图 -->
         <div class="swiper_container">
             <div class="swiper-wrapper">
@@ -88,11 +81,9 @@
             <!-- 如果需要分页器 -->
             <div class="swiper-pagination"></div>
         </div>
-
         <!-- 输出导航式栏目（不包括内容式栏目） -->
         <nav class="menu_nav">
           <ul class="clearfix">
-
             {$limit = 6}
             {foreach item=nav_list from=$navs}            
             <!-- 仅输出类型为 5内容单页 和 外链的栏目（包括5留言板、7微信、8直达号功能） -->
@@ -101,11 +92,8 @@
             </li>            
             {if $nav_list@index+1 eq $limit}{break}{/if}
             {/foreach}
-
           </ul>
         </nav>
-        
-        
         <!-- 输出内容式栏目 -->
         {foreach name=mIndexCats item=mIndexCat from=$mIndexCats}
         <!-- 仅输出类型为 2图片列表 的栏目 -->
@@ -158,8 +146,9 @@
 
 {$footscript}
 </div>
+<script type="text/javascript" src="{$site_url}js/jquery.min.js"></script>
 <script src="{$site_url}js/TouchSlide.1.1.js"></script>
-<script src="{$site_url}/js/swiper.jquery.min.js"></script>
+<script src="{$site_url}js/swiper.jquery.min.js"></script>
 <script type="text/javascript" src="{$site_url}js/function.js"></script>
 </body>
 </html>

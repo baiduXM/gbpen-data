@@ -147,11 +147,11 @@ $(document).ready(function(){
 
 
 	$(".more2").click(function(){
-
-		$(".sidebar").show()
-		$('.index-wrap').hide()	
-		// $(".more2 i").toggleClass("down");
-	})
+		if ($(".sidebar ul.first li").length > 1) {
+			$(".sidebar").show()
+			$('.index-wrap').hide()	
+		}
+	});
 	$('.back').click(function() {
 		$(".sidebar").hide()
 		$('.index-wrap').show()	

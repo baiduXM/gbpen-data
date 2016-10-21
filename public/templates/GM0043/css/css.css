@@ -72,11 +72,11 @@ ul.picture2 li a{ display:block; color:#fff;}
 @media screen and (min-width: 320px) and (max-width: 480px){
 ul.picture2 li{ width:50%}
 ul.picture li{ width:50%;}
-ul.news-list1 li .news_content p{ height:14px; line-height:14px;}
+ul.news-list1 li .news_content p{ height:20px; line-height:20px;}
 }
 @media screen and (min-width: 480px) {
 ul.picture2 li{ width:33%}
-ul.news-list1 li .news_content p{ height:40px; line-height:22px;}
+ul.news-list1 li .news_content p{ height:40px; line-height:20px;}
 }
 
 ul.news-list1{ margin:0px; padding:0px; }
@@ -86,7 +86,7 @@ ul.news-list1 li .news_img{ float:left;width: 25%; margin-right:3%; }
 ul.news-list1 li .news_content{ float:left; width:70%; margin-right:2%; height:95%; overflow:hidden}
 ul.news-list1 li .news_title b{ white-space:nowrap; text-overflow:ellipsis; overflow:hidden; float:left; width:49%; font-size:1.1em; color:rgba(122,43,43,1); font-weight:normal; padding-top:3px;}
 ul.news-list1 li .news_title span{ float:right; font-size:0.9em; font-weight:normal}
-ul.news-list1 li .news_content p{ margin-top:5px; font-size:.9em}
+ul.news-list1 li .news_content p{ margin-top:5px; font-size:0.9em}
 ul.news-list1.nopic li .news_content{ width:100%}
 
 .edite{ height:auto; overflow:hidden; padding:5px 0px;}

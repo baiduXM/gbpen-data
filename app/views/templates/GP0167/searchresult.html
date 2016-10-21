@@ -44,7 +44,7 @@
 					<div class="search_tit">一下是输入关键字“{$search.keyword}”的搜索结果 共{$search.total}条</div>
 					<div class="newslist">
 						<ul>
-						{foreach name=article item=article from=$list.data}
+						{foreach name=article item=article from=$search.data}
 							<li><a href="{$article.link}">{$article.title}</a><span>{$article.pubtimestamp|date_format:'%Y-%m-%d'}</span></li>
 						{/foreach}
 						</ul>

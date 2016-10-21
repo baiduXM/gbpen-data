@@ -45,19 +45,20 @@
              <div class="news fl">
                  <h1 class="title ico2">{$index.news.name}<a href="{$index.news.link}">点击查看更多</a></h1>
                  <div class="newstop">
-                     <dl><a href="{$index.news.data[4].link}"><img src="{$index.news.data[4].image}"></a></dl>
+                     <dl><a href="{$index.news.data[0].link}"><img src="{$index.news.data[0].image}"></a></dl>
                      <dt>
                          <div style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis;">
-                            <a href="{$index.news.data[4].link}">{$index.news.data[4].title}</a>
+                            <a href="{$index.news.data[0].link}">{$index.news.data[0].title}</a>
                          </div>
                      </dt>
-                     <dd>{$index.news.data[4].description}</dd>
+                     <dd>{$index.news.data[0].description}</dd>
                  </div>
                  <ul>
                  {foreach item=new from=$index.news.data}
+				 {if $new@index gte 1 and $new@index lte 3}
                      <li><a href="{$new.link}" class="clearfix" ><div style="max-width:181px;height:27px;overflow:hidden;float:left;">{$new.title}</div><span>{$new.pubdate}</span></a></li>
-                 
-                 {if $new@index+1 eq 3}{break}{/if}
+                 {/if}
+               
                  {/foreach}
                  </ul>
                    

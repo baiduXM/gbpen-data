@@ -100,7 +100,7 @@ header{ position:relative; border-top:4px solid #4167a0; background:url(../image
 .font dl.normal,.font-normal{ font-size:15px;}
 .font dl.small,.font-small{ font-size:13px;}
 
-.fixed-top{z-index:100000; position: absolute; top:0px; left:0px; width:100%; background:rgba(0,0,0,.3); height:35px; line-height:35px; color:#fff;
+.fixed-top{z-index:100000; position: relative; top:0px; left:0px; width:100%; background:rgba(0,0,0,.3); height:35px; line-height:35px; color:#fff;
  font-size:1.14em; overflow:hidden; text-align:center;}
 .fixed-btn{ background:rgba(0,0,0,.3);color:#1a0121; padding:0px 10px; float:right;font-size:0.9em;}
 .back{ float:left;  text-indent:0px;  text-align:center;}

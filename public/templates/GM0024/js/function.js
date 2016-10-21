@@ -65,7 +65,7 @@ $(document).ready(function() {
 		$(".slideBox .bd li a").css("margin-top", h);
 		// $(".main").css("margin-top",$(".pic img").height()*0.5);
 		// $(".baner  .public_bg2").css("top",$(".pic img").height()*0.5);
-		$(".baner").height($(".baner").height()+$(".pic img").height()*0.5);
+	//	$(".baner").height($(".baner").height()+$(".pic img").height()*0.5);
 		var w = $('.menu .swiper-slide').width();
 		$(".menu .swiper-slide").css({
 			"height": w * 1.3,

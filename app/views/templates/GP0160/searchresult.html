@@ -40,8 +40,8 @@
                {else}
                   <p class="result">以下是您输入的关键字“{$search.keyword}”的搜索结果，共{$search.total}条</p>
                 <ul class="newslist">
-                 {foreach item=article from=$list.data}
-                  <li><a href="{$article.link}"><strong class="date">[{$article.pubtimestamp|date_format:'%Y - %m - %d'}]</strong>{$article.title}</a></li>
+                 {foreach item=article from=$search.data}
+                  <li><a href="{$article.link}"><strong class="date">[{$article.pubymd}]</strong>{$article.title}</a></li>
                  {/foreach}
                </ul>
                {/if}

@@ -59,26 +59,20 @@
    <section>
     <div class="boxmaind">
       <div class="boxmain_d">
-      
-      <h1 class="boxmain-top">
-        <span class="more3" id="first">分类<span id="down"> ∧</span><span id="up"> ∨ </span></span><div class="icon"><img src="{$site_url}images/sub1.jpg"></div><div class="sub_zh">{$list.name}</div><div class="sub_en">{$list.en_name}</div></h1>
-      
+          <h1 class="boxmain-top">
+         <span class="more3" id="first">分类<span id="down"> ∧</span><span id="up"> ∨ </span></span><div class="icon"><img src="{$site_url}images/sub1.jpg"></div><div class="sub_zh">{$list.name}</div><div class="sub_en">{$list.en_name}</div></h1>
          {include file='./_nav.html'}
         <div class="main">
           <div class="list_text">
             <ul class="clearfix">
             {foreach name=article item=article from=$list.data}
-        
-              
-               <li>
+                 <li>
                 <div class="text_box1"><a onClick="javascript:window.location.href='{$article.link}'" class="clearfix">
                  <div class="text_title1">{$article.title}</div>
-                 <div class="text_data1">{$article.pubdate}</div>
+                 <div class="text_data1">{$article.pubdate}]</div>
                  <div class="text_des1">{$article.description}</div></a>
                 </div>
                  </li>
-              
-              
                   {if $article@index+1 == 10} {break} {/if}
 			{/foreach}
             </ul>
@@ -86,6 +80,13 @@
             
           </div>
         </div>
+        
+        
+        
+        
+        
+        
+        
       </div>
     </div>
   </section>

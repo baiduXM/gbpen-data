@@ -100,7 +100,7 @@ only screen and (min-device-pixel-ratio: 2.5) {
 .newsdate span{font-size: 1.1rem;}
 .news-nr{height: auto;overflow: hidden;}
 .news-nr h2{color: #10522c;font-size: 1.8rem;line-height: 3rem;height: 3rem;overflow: hidden;}
-.news-nr p{color: #818181;font-size: 1.5rem;overflow: hidden;}
+.news-nr p{color: #818181;font-size: 1.5rem;line-height: 2rem;height:4rem;overflow: hidden;}
 .newsbox ul li a:hover .newsdate{color: #fff;background: #10522c;border-color: #10522c}
 .newsbox ul li a:hover .newsdate h2{border-color: #5d8a70}
 

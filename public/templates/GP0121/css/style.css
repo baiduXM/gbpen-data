@@ -28,7 +28,7 @@ img{border: none;}
 
 .menu{height:38px;background:url(../images/m_bg.jpg) repeat;}
 .menu>ul>{width:100%;display:table;}
-.menu>ul>li{line-height:38px; display:table-cell;width: 100px;position: relative;}
+.menu>ul>li{line-height:38px; display:table-cell;width: 300px;position: relative;}
 .menu>ul>li>a{color:#fff; font-size:14px;text-align:center;display:block;}
 .menu>ul>li:hover>a{color:#efcc0c;}
 .menu>ul>li>.nav_list{display: none; position: absolute;width: 100%;height: auto;overflow: hidden;left: 0px;top: 38px;background: #be1a23;z-index: 90;}

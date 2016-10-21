@@ -64,6 +64,10 @@ jQuery(".slideBox2").slide({ mainCell:" .ulWrap",autoPage:true,interTime:50,effe
     }
     });
 
+      if($(".focusBox img").length<2){
+        $(".focusBox").find("a").css("display","none");
+    }
+
 
         
 });

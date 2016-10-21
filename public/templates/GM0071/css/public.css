@@ -54,7 +54,8 @@ a{ color:#333}
 .boxmain-top2 .sub_zh{line-height:30px;font-size:1.2em; font-weight:bold; padding-top:1%;  }
 .boxmain-top2 .sub_en{  line-height:16px; font-weight:normal; font-size:0.8em; opacity:0.5;filter:Alpha(opacity=50);  }
 .more3{height:30px; padding:0px 7px;line-height:30px;text-indent:0px; display:block; text-align:center; color:#fff; background:#444; font-size:0.8em;opacity:0.4;filter:Alpha(opacity=40); float:right;  position:relative; z-index:99999; margin-left:5px; margin-right:10px; margin-top:4%;}
-.font{ width:33px; text-align:center;background:rgba(0,0,0,0.4);position:absolute; top:61px; right:0px; display:none; z-index:9999; padding-top:10px;}
+.font{ width:33px; text-align:center;background:rgba(0,0,0,0.4);position:absolute; top:35px; right:0px; display:none; z-index:9999; padding-top:10px;}
+.boxmain_d .font{top:44px;}
 .fixed-font{ right:0px; top:40px; padding-top:0px;}
 .font dl{ height:30px; line-height:30px; color:#fff; text-align:center; }
 .font dl.big,.font-big{ font-size:1.3em; }
@@ -101,7 +102,7 @@ a{ color:#333}
 .list_image ul li{ float:left; width:30%; margin:0 1% 0 0; padding:1%;margin-bottom:15px;  }
 .list_image ul li b{ margin-bottom:5px; border:solid 3px; border-color:rgba(0,0,0,0.2);background-clip: border-box; display:block}
 .list_image ul li .in_proimg img{ }
-.list_image ul li .more{  width:100%; background:rgba(0,0,0,.3); text-align:center; color:#fff;}
+.list_image ul li .more{  width:100%; background:rgba(0,0,0,.3); text-align:center; color:#fff;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}
 
 .list_image ul li .imgword{ text-align:center; border-radius:5px; color:#fff;opacity:0.5;filter:Alpha(opacity=50); padding:0 2% }
 
