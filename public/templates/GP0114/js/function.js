@@ -94,5 +94,7 @@ $(".xz").each(function(){
 	
 	//产品详细页大图切换
 	$(function(){
-		Carousel.init($(".pictureSlider"));
+		if ($(".pictureSlider").length>0) {
+			Carousel.init($(".pictureSlider"));
+		}
 	});

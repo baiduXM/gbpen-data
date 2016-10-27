@@ -52,10 +52,10 @@ img{border: none;}
 .about{ width:383px;height:178px;border:1px solid #cdcdcd; overflow:hidden;}
  .title{background:url(../images/a_t.jpg) repeat-x;border-bottom:1px solid #cdcdcd; height:28px; line-height:28px; font-size:14px; color:#ce0100; font-weight:bold;}
  .title em{background:url(../images/t_01.png) no-repeat left;padding-left:20px;display:block;}
-.about_nr{height:130px; overflow:hidden;padding:10px;  color:#555;}
+.about_nr{height:130px; overflow:hidden;padding:10px;  color:#000;}
 .about_nr .img{display:table-cell; float:left; width:175px;height: 135px;text-align: center;}
 .about_nr .img img{max-width:159px;max-height:119px;padding:7px;border:1px solid #cdcdcd;vertical-align: middle;}
-.about_nr article{ padding-left:10px;height:125px; overflow:hidden;text-indent:2em;}
+.about_nr article{ padding-left:10px;height:125px; overflow:hidden;}
 .more{width:40px;height:16px;padding:7px 5px 0 0; display:inline; float:right;}
 .more img{display:block; width:40px;height:16px;}
 .more img:hover{opacity:0.8;}

@@ -32,7 +32,7 @@ ol,p,dl,li{list-style:none;}
 .menu{width: 158px;}
 .menu .nav{}
 .menu .nav li{width: 175px;height: 55px;font-family: Microsoft YaHei;}
-.menu .nav li a{display: block;text-align: center;padding-right: 20px;font-size: 14px;color: #4d4d4d;line-height: 20px;height:51px;padding-top: 12px;overflow: hidden;}
+.menu .nav li a{display: block;text-align: center;padding-right: 20px;font-size: 14px;color: #4d4d4d;line-height: 20px;height:51px;padding-top: 12px; }
 .menu .nav li a span{display: block;table-layout:fixed; word-break: break-all; overflow:hidden;color: #6a6a6a;font-size: 12px;line-height: 15px;}
 .menu .nav li a:hover{background: url(../images/navli.png) no-repeat;color: #fff;}
 .menu .nav li a:hover span{color: #fff;}
@@ -119,7 +119,7 @@ ul.tab li{width: 80px;height: 30px;line-height: 30px;margin-bottom: 5px;color: #
 
 #tabs1 { text-align:left;/* width:322px;*/height: 136px;overflow: hidden;padding-top:3px;} 
 
-.menu1box { position:relative; overflow:hidden;/* width: 80px;*/width:26%;min-height:80px;height: 136px; text-align:left;float: left;margin-right: 10px; } 
+.menu1box { position:relative; overflow:hidden;/* width: 80px;*/width:23%;min-height:80px;height: 136px; text-align:left;float: left;margin-right: 5px; } 
 #menu1 {/*width: 80px;*/width:100%;min-width: 80px; position:absolute; top:0; left:0; z-index:1; } 
 #menu1 li {display:block; cursor:pointer; width: 100%;min-width: 80px; text-align:center; line-height:30px; height:30px;background: #c2cdd3;font-size: 14px;font-family: Microsoft YaHei;margin-bottom: 5px;color: #484848; } 
 #menu1 li a{display: block;color: #484848; }
@@ -127,11 +127,11 @@ ul.tab li{width: 80px;height: 30px;line-height: 30px;margin-bottom: 5px;color: #
 #menu1 li.hover a{color: #fff;}
 /*#menu1 li a:hover{background:#5682c1;color: #fff;}*/
 
-.main1box { width: 250px;font-size:12px;float: right; height:136px;border-left:1px dotted #c4c9cd;border-bottom:1px dotted #c4c9cd; } 
+.main1box {font-size:12px; width:70%;float: right;/*clear:both;*/ height:136px;border-left:1px dotted #c4c9cd;border-bottom:1px dotted #c4c9cd; } 
 #main1 ul { display: none; } 
 #main1 ul.block { display: block; } 
-#main1 ul li{width:235px;background: url(../images/lidot.jpg) 5px center no-repeat;padding-left: 15px;overflow: hidden;border-bottom: 1px dotted #c4c9cd;}
-#main1 ul li a{display: block;width: 100%;height: 100%;overflow: hidden;line-height: 33px;white-space: nowrap;text-overflow:ellipsis;}
+#main1 ul li{width:100%;background: url(../images/lidot.jpg) 5px center no-repeat;padding-left: 15px;white-space: nowrap;text-overflow:ellipsis;overflow: hidden;border-bottom: 1px dotted #c4c9cd;line-height: 33px;}
+
 
 
 
@@ -184,7 +184,7 @@ ul.tab li{width: 80px;height: 30px;line-height: 30px;margin-bottom: 5px;color: #
 /*.menu>ul>li>h3>a:hover{background: url(../images/hoverbg.png) repeat-x;}*/
 .sub{font-size:12px;  display:none; width:107px; position:absolute;background:#426db1;/* left:18px; */line-height:26px;z-index: 100;top: 45px;left: 18px;  }
 .sub li{ zoom:1;text-align: center;height:26px;}
-.sub a{ display:block;color: #f4f4f4;background: #426e9d;width: 100%;height: 100%;overflow: hidden;}
+.sub a{ display:block;color: #f4f4f4;background: #426e9d; }
 .sub a:hover{ background:#2e549b;  }
 
 /*内容区域标签*/
@@ -202,9 +202,9 @@ ul.tab li{width: 80px;height: 30px;line-height: 30px;margin-bottom: 5px;color: #
 .sidebar-tit span{font-size: 12px;padding-left: 5px;color: #7f7f7f;}
 .first{/*padding: 10px 0 10px 28px;*/}
 .first>li{margin-bottom: 8px;}
-.first>li>a{display: block;border-bottom: 1px solid #d0d0d0;font-size: 14px;background: url(../images/arrow.png) 178px center no-repeat;color: #636363;padding:0 17px 0 30px;}
-.first>li>a>span{display: block;width: 100%;height:28px;line-height: 28px;font-size: 14px;border-radius: 4px;-webkit-border-radius: 4px;overflow: hidden;}
-.first>li>a:hover{background: #426db1 url(../images/arrowhover.png) 178px center no-repeat;color: #ffffff;}
+.first>li>a{display: block;border-bottom: 1px solid #d0d0d0;font-size: 14px;color: #0073bd;}
+.first>li>a>span{display: block;color: #636363;height:28px;line-height: 28px;padding-left:45px;font-size: 14px;background: url(../images/arrow.png) 178px center no-repeat;border-radius: 4px;-webkit-border-radius: 4px;}
+.first>li>a:hover span{color: #fff;background: #426db1 url(../images/arrowhover.png) 178px center no-repeat;margin-bottom: 8px;}
 .second{margin-left: 30px;display: none;}
 .second>li>a{display: block;border-bottom: 1px dashed #ccc;line-height: 28px;color: #0073bd;background: url(../images/sarrow.png) left center no-repeat;padding-left: 15px;}
 .second>li>a:hover{background: url(../images/arrowd.png) left center no-repeat;}

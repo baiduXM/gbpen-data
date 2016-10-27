@@ -1,0 +1,61 @@
+{
+	"hotline": {
+		"value": "服务热线：",
+		"description": "头部服务热线名",
+		"type": "text",
+		"config": {}
+	},
+	"picture": {
+		"value": [{
+			"title": "内页大图1",
+			"image": "images/picture.jpg",
+			"link": "article/1.html",
+			"description": "picture1"
+		}, {
+			"title": "内页大图2",
+			"image": "images/picture.jpg",
+			"link": "http://www.baidu.com"
+		},{
+			"title": "内页大图3",
+			"image": "images/picture.jpg",
+			"link": "http://www.baidu.com"
+		}],
+		"description": "内页头部大图",
+		"type": "images",
+		"config": {
+			"width": 1920,
+			"height": 320
+		}
+	},
+	"links": {
+		"value": [{
+			"title": "百度",
+			"image": "images/link_01.jpg",
+			"link": "http://www.baidu.com",
+			"description": "百度"
+		}, {
+			"title": "焦点集团",
+			"image": "images/link_02.jpg",
+			"link": "http://www.baidu.com",
+			"description": "焦点集团"
+		},{
+			"title": "新工作人才网",
+			"image": "images/link_03.jpg",
+			"link": "http://www.baidu.com",
+			"description": "新工作人才网"
+		}],
+		"description": "页脚友情链接",
+		"type": "images",
+		"config": {
+		}
+	},
+	"pagenavs": {
+		"value": {},
+		"description": "侧边栏目列表（当前栏目无子栏目时展示的目标栏目）",
+		"type": "list",
+		"config": {
+			"filter": "list,page",
+			"mustchild": true
+		}
+	}
+}

@@ -5,9 +5,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="{$keywords}" />
 <meta name="description" content="{$description}" />
-<script type="text/javascript" src="http://common.mn.sina.com.cn/public/resource/lib/jquery.jcarousellite.js"></script>
+<!-- <script type="text/javascript" src="http://common.mn.sina.com.cn/public/resource/lib/jquery.jcarousellite.js"></script>
+ -->
 
-<link rel="stylesheet" rev="stylesheet" href="{$site_url}css/style_{$stylecolor}.css" type="text/css" />
 <!--[if IE 6]>
 <script type="text/javascript" src="js/dd_delatedpng.js" ></script>
 <script type="text/javascript">//如果多个element使用PNG,则用','分隔
@@ -35,8 +35,6 @@ DD_belatedPNG.fix('div,ul,li,a,p,img');
 <body>
 	<div class="wappers">
     	 {include file="./_header.html"}
-       
-       
        <div class="containers">
 		  <div class="left">
                 	<div class="list" >
@@ -66,8 +64,8 @@ DD_belatedPNG.fix('div,ul,li,a,p,img');
            <div class="tn_detal7">
                 <div class="search">以下是您搜索的关键字<mark>“ {$search.keyword} ”</mark>，搜索的结果有 <mark>{$search.total}</mark> 条。</div>
                             <ul>
-                                   {foreach name=article item=article from=$list.data}
-                     <li><a href="{$article.link}"><span><time datetime="{$article.pubymd}" pubdate="pubdate">{$article.pubymd}</time></span>{$article.title}</a></li>
+                                   {foreach name=article item=article1 from=$search.data}
+                     <li><a href="{$article1.link}"><span><time datetime="{$article1.pubymd}" pubdate="pubdate">{$article1.pubymd}</time></span>{$article1.title}</a></li>
                    {/foreach} 
                               </ul>
  <div class="module_page">  

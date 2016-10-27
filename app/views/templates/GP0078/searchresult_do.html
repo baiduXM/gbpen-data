@@ -30,10 +30,10 @@
     
 
         <form action="{$search_action}" method="GET" class="f_r ">
-                 <input type="text" placeholder="请输入搜索关键词" class="input_case" name="s">
-                 <input type="submit" value="" class="input_key">
-            </form>
-     <!--   <div class="q"><a href=""></a><a href=""></a><a href=""></a></div> --></div> 
+               <input type="text" placeholder="请输入搜索关键词" class="input_case" name="s">
+               <input type="submit" value="" class="input_key">
+          </form>
+     </div> 
  <div class="about_contant w">
       <div class="about_left f_l">
 
@@ -45,16 +45,12 @@
        
          {include file="./_right_nav.html"}
         <div class="info ss">
-        {if $search.total eq 0}
-                    <p class="search_res">没有查找到相关数据！</p>
-                    {else}
            <p class="t">搜索关键词为“<span>{$search.keyword}</span>”的产品/文章，共搜索到{$search.total}个结果：</p>
              <ul class="module_new">
-              {foreach name=article item=article from=$list.data}
-                <li><a href="{$article.link}"><span>{$article.pubdate}</span>{$article.title}</a></li>
-                {/foreach}
+              {foreach name=article item=article from=$search.data}<!--search_content_start-->
+                <li><a href="search_$link"><span>search_$pubymd</span>search_$title</a></li>
+                <!--search_content_end-->{/foreach}
             </ul>
-            {/if}
           {include file="./_num.html"}
       </div>
       </div>
@@ -78,7 +74,7 @@
            <ul class="pic">
 
              {foreach item=article from=$_global.list.data}
-                                 <li><a href="{$article.link}" ><img src="{$article.image}"  max-height="132" min-width="150" />
+                                 <li><a href="search_$link" ><img src="{$article.image}"  max-height="132" min-width="150" />
                                </a></li>
                               
                   {/foreach}

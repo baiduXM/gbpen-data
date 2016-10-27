@@ -5,7 +5,7 @@
     // 跳转手机页面
     {if $site_another_url}
     if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
-        location.href = '{$site_another_url}';
+        parent.location.href = '{$site_another_url}';
     } 
 	{/if}
     </script>
@@ -133,7 +133,7 @@
       
 
       {foreach name=news item=news from=$index.news.data}
-<li><a href="{$news.link}">
+<li><a href="{$index.news.link}">
       <div class="data">
       <span>{$news.pubtimestamp|date_format:'%Y-%m'}</span><br />
       <b>{$news.pubtimestamp|date_format:'%d'}</b>

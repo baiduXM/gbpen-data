@@ -1,0 +1,81 @@
+{
+	"bgimg": {
+		    "value": {
+				"title": "bgimg",
+				"image": "images/indexbg.jpg",
+				"link": "article/1.html",
+				"description": "全局背景图片"
+		    },
+			"description": "全局背景图片（单图）",
+			"type": "image",
+			"config": {
+				"width":1920,
+				"height":1040
+			    }
+	},
+	"aboutimg": {
+		    "value": {
+				"title": "bgimg",
+				"image": "images/about_03.png",
+				"link": "article/1.html",
+				"description": "关于我们内页右边图片"
+		    },
+			"description": "关于我们内页右边图片（单图）",
+			"type": "image",
+			"config": {
+				"width":376,
+				"height":406
+			    }
+	},
+	"newimg": {
+		    "value": {
+				"title": "bgimg",
+				"image": "images/new_03.png",
+				"link": "article/1.html",
+				"description": "新闻中心列表页右边图片"
+		    },
+			"description": "新闻中心列表页右边图片（单图）",
+			"type": "image",
+			"config": {
+				"width":376,
+				"height":406
+			    }
+	},
+	"newcont": {
+			    "value": {
+				"title": "bgimg",
+				"image": "images/news.jpg",
+				"link": "article/1.html",
+				"description": "新闻详细页左边图片"
+		    },
+			"description": "新闻详细页左边图片（单图）",
+			"type": "image",
+			"config": {
+				"width":323,
+				"height":279
+			    }
+	},
+	"proimg": {
+			    "value": {
+				"title": "bgimg",
+				"image": "images/pro_03.png",
+				"link": "article/1.html",
+				"description": "产品图列表页右边图片"
+		    },
+			"description": "产品图列表页右边图片（单图）",
+			"type": "image",
+			"config": {
+				"width":376,
+				"height":406
+			    }
+	},
+	"pagenavss": {
+		"value": {},
+		"description": "侧边栏目列表（当前栏目无子栏目时展示的目标栏目）",
+		"type": "list",
+		"config": {
+			"filter": "list,page",
+			"mustchild": true
+		}
+	}
+}

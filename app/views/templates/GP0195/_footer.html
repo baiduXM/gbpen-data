@@ -1,0 +1,22 @@
+
+<footer id="footer">
+    <div class="foot">
+        <div class="copyright">{$footprint}</div>
+        <div class="chaining">
+            <div class="flink">
+                <h4><i></i>友情链接</h4>
+                <ul class="flink-list">
+                    {foreach item=links from=$global.links}
+                        <li><a href="{$links.link}">{$links.title}</a></li>
+                    {/foreach}
+                </ul>
+            </div>
+            <ol class="icon">
+                {foreach item=ico from=$global.icon}
+                    <li><a href="{$ico.link}"><img src="{$ico.image}"></a></li>
+                {/foreach}
+            </ol>
+        </div>
+    </div>
+</footer>
+{$footscript}
