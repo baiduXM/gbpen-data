@@ -17,20 +17,21 @@ body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, fo
 .headerbg{ width:1000px; height:116px; margin:0px auto; overflow:hidden;}
 .baozheng{ width:270px; height:116px; overflow:hidden; float:right; display:inline;}
 .logo{height:116px; float:left; display:inline; overflow:hidden;}
-./*baozheng ul{ width:325px; height:auto; overflow:hidden; margin-top:15px;}
+./*baozheng ul{ width:325px; height:auto;  margin-top:15px;}
 .baozheng ul li{ width:87px; height:87px; float:left; display:inline; overflow:hidden; margin-right:4px;}*/
 .menu{  width:1000px; height:39px; overflow:hidden; margin:0px auto 0px; }
-ul.nav{ width:1000px; text-align:center;  height:39px; margin-left:0px; margin-top:0px; margin:0px auto;overflow: hidden;}
-ul.nav li{ float:left;line-height:39px; height:39px;text-align:left; width:122px;background:url(../images/linew.jpg) right top no-repeat; }
-ul.nav li a{line-height:39px; height:39px;display:block; margin-left:4px; text-decoration:none; text-align:center;  font-weight:bold; font-family:"微软雅黑"; font-size:15px;}
+ul.nav{ width:1000px; text-align:center;  height:39px; margin-left:0px; margin-top:0px; margin:0px auto;}
+ul.nav li{ float:left;line-height:39px;text-align:left;width:122px;background:url(../images/linew.jpg) right top no-repeat;position:relative; }
+ul.nav li a{line-height:39px; height:39px;display:block; text-decoration:none; text-align:center;  font-weight:bold; font-family:"微软雅黑"; font-size:15px;}
 ul.nav li a:link,ul.nav li a:visited{ color:#ffffff;}
 ul.nav li a:hover{ color:#ffffff;background:url(../images/m_hover.jpg) top center no-repeat;}
-ul.nav li .sub{position: absolute;z-index: 9;display: none}
+ul.nav li .sub{position: absolute;z-index: 9;width:100%;display:none;}
 ul.nav li .sub li{
     background: -webkit-linear-gradient(#A70B0F, #781416);
     background: -o-linear-gradient(#A70B0F, #781416);
     background: -moz-linear-gradient(#A70B0F, #781416);
     background: linear-gradient(#A70B0F, #781416); 
+    float:none;width:100%;
 }
 .banners{ width:1000px; height:380px; margin:20px auto;overflow: hidden;}
 .focusBox { position: relative; overflow: hidden; }

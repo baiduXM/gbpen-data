@@ -27,13 +27,13 @@ $(document).ready(function(){
     jQuery(".hd").slide({mainCell:"ul",effect:"top",autoPlay:true,autoPage:true,vis:3,prevCell:".prev",nextCell:".next",trigger:"click"});
    
     // 一张图就隐藏
-    var content=document.getElementById('myul').getElementsByTagName('li').length
+    if (document.getElementById('myul')) {
+        var content=document.getElementById('myul').getElementsByTagName('li').length;
+        if(content<2){
+            $(".hd").hide()
+        }
+    };
 
-    if(content<2){
-        $(".hd").hide()
-    }else{
-        $(".hd").show()
-    }
 
 });	
 

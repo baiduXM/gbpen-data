@@ -9,10 +9,10 @@ $(document).ready(function(){
 		interTime:3500 //自动播放
 	});
 	$("#logodiv").height($("#logodiv").width());
-	if($('#logoimg').height() < $("#logodiv").height()){
-		var logoheight = $("#logodiv").height()-$('#logoimg').height();
-		$('#logoimg').css("margin-top",logoheight/2);
-	}
+	// if($('#logoimg').height() < $("#logodiv").height()){
+	// 	var logoheight = $("#logodiv").height()-$('#logoimg').height();
+	// 	$('#logoimg').css("margin-top",logoheight/2);
+	// }
 
 
  var lineHeight=$("header,.aboutheader").outerHeight()

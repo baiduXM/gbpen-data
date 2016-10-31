@@ -19,7 +19,7 @@
 .wrapper{ width:95%; margin:auto; margin-top:25px;}
 
 #in_page .inner img{ float:right; width:20%; border:5px solid #0066c8}
-#in_page .inner p{ float:left; width:77%; line-height:24px; height:72px; overflow:hidden;}
+#in_page .inner p{ float:left; width:75%; line-height:24px; height:72px; overflow:hidden;}
 
 
 #in_image .inner{ background:#0066c8; padding:15px 0}
@@ -37,7 +37,7 @@ ul.newslist li{ height:35px; line-height:35px; overflow:hidden;white-space: norm
 
 
 @media screen and (min-width: 320px) and (max-width: 480px){
-#in_page .inner p{ line-height:20px; height:40px; overflow:hidden; font-size:12px;}
+#in_page .inner p{  font-size:12px;}
 ul.newslist{ width:62%;}
 ul.newslist li{height:28px; line-height:28px;}
 #in_image .inner ul li .in_protitle{ width:60%;  }

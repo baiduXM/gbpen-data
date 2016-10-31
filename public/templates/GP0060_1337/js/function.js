@@ -28,10 +28,11 @@ $(document).ready(function() {
 	        }
         }, 400)
 	});
-    $(".main_nav-percent li").unbind('mouseleave').mouseleave(function(event) {
+   $(".main_nav-percent li").unbind('mouseleave').mouseleave(function(event) {
     	clearTimeout(timer);
         $(this).find('.sub').fadeOut();
     });
+
 // 内页
 	$(".listbg li a").click(function(){	 
 	 	if($(this).next().length > 0){

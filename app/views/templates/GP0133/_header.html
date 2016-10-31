@@ -1,23 +1,55 @@
-  <header>
-      <div class="header">
-      <div class="logo"><img src="{$logo}" width="100%"></div>
-       <div class="header_bg"><img src="{$site_url}images/bg1.png"></div>
-      <div class="header_menu" id="header_menu"><a href="#"><img src="{$site_url}images/6.png"></a></div>
-        <div class="link"><a href="{$site_url}"><img src="{$site_url}images/link.png"></a></div>
-        </div>
-      <div class="baner">
-        <div id="slideBox" class="slideBox">
-          <div class="hd">
-            <ul>
-            </ul>
-          </div>
-          <div class="bd">
-            <ul>
-               {foreach name=slidepics item=slidepic from=$global.slidepics}
-              <li><a class="pic" href="{$slidepic.link}"><img src="{$slidepic.image}" title="640*316" /></a></li>
-   {/foreach} 
-            </ul>
-          </div>
-        </div>
+<header>
+<section>
+<div class="head_outsild">
+      <div class="head">
+          <h1 class="logo"><a href="{$site_url}" title="返回首页"><img src="{$logo}"/></a></h1>
+          <form action="{$search_action}" method="GET" class="ss"> 
+              <span>全网搜索</span> 
+              <input type="text" placeholder="请输入关键词" class="input_case" name="s">
+              <input type="submit" value="" class="input_key">
+          </form>
       </div>
-      </header>
+</div>    
+</section>
+<section>
+    <div class="header_menu">   
+       <ul class="nav">
+	  <h3><a href="{$site_url}" class="current">网站首页</a></h3>
+      {foreach item=nav from=$navs}
+      <li class="nLi {if $nav.current}current{/if}">
+       <h3><a href="{$nav.link}" class="">{$nav.name}</a></h3>
+      
+        {if $nav.childmenu}
+          <ul class="sub">
+
+            {foreach item=nav_list from=$nav.childmenu}
+            <li class="{if $nav_list.current}current{/if}"><a href="{$nav_list.link}">{$nav_list.name}</a></li>
+            {/foreach}
+          </ul>
+        {/if}
+      </li>
+      {/foreach}
+    </ul>
+    </div>
+</section>
+ <section>
+
+    <div id="slideBox" class="slideBox">
+
+       <div class="bd">
+        <ul>
+                     {foreach item=slidepic from=$_header.slidepics}
+                              <li><a href="{$slidepic.link}" target="_blank"><img src="{$slidepic.image}" alt="{$slidepic.title}" /></a></li>
+                     {/foreach}
+                </ul>
+      </div>
+
+
+      <!-- 下面是前/后按钮代码，如果不需要删除即可 -->
+      <a class="prev" href="javascript:void(0)"></a>
+      <a class="next" href="javascript:void(0)"></a>
+
+    </div>
+
+    </section>
+</header>
