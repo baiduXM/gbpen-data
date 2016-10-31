@@ -1,12 +1,11 @@
 <div class="headerbg"><h1 class='logo'><img src="{$logo}" /></h1><span class='tel'>电话：<i>{$contact.telephone} </i></span></div> 
         <div id="menu" class="menu">
             <ul>
-             {$litmit = 8}
-              {if $navs|count lt $litmit}{$litmit = $navs|count}{/if}
+
+              
             <li><a href="{$site_url}">首页</a></li>
            {foreach item=nav from=$navs}	
-          
-            <li class="{if $nav.current}current{/if}" ><a href="{$nav.link}">{$nav.name}</a>
+            <li  class="{if $nav.current}current{/if}" ><a href="{$nav.link}">{$nav.name}</a>
 				{if $nav.childmenu}
 					<ul class="clearfix">
 						{foreach item=nav_list from=$nav.childmenu}
@@ -15,7 +14,7 @@
 					</ul>
 				{/if}
 			</li>            
-       {if $nav@index+1 gte $litmit}{break}{/if}
+       {if $nav@index+1 gte 6}{break}{/if}
 	{/foreach}			            
             </ul>
         </div> 

@@ -1,6 +1,7 @@
 body{ color:#646464; font-family:Microsoft Yahei,Arial, Helvetica, sans-serif;  background:url(../images/body_bg.jpg) top center repeat; }
 
 body,div,ul,li,dl,dt,dd{ font-size:12px;}
+li{ list-style:none;}
 .clearfix:after { content:'\20'; display:block; height:0; clear:both; }
 .clearfix { *zoom:1; font-size:0px;}
 a{ color:#646464; text-decoration:none}
@@ -139,8 +140,8 @@ ul.third li a.thirda:hover{color:#3c0a0e;}
 		.slideBox .hd ul li{ float:left; margin-right:2px;  width:15px; height:15px; line-height:14px; text-align:center; background:#fff; cursor:pointer; }
 		.slideBox .hd ul li.on{ background:#f00; color:#fff; }
 		.slideBox .bd{ position:relative; height:100%; z-index:0;   }
-		.slideBox .bd li{ zoom:1; vertical-align:middle; }
-		.slideBox .bd img{ width:100%; height:auto; display:block;  }
+		.slideBox .bd li{ zoom:1; vertical-align:middle; margin:0 auto; }
+		.slideBox .bd li img{ max-width:100%; height:auto; display:block;  }
 		.slideBox .prev,
 		.slideBox .next{ position:absolute; left:3%; top:50%; margin-top:-25px; display:block; width:32px; height:40px; background:url(images/slider-arrow.png) -110px 5px no-repeat; filter:alpha(opacity=50);opacity:0.5;   }
 		.slideBox .next{ left:auto; right:3%; background-position:8px 5px; }

@@ -10,11 +10,18 @@ img{ border:none;}
 .fl{ float:left}
 .fr{ float:right}
 
-form{ width:180px; float:left}
+.wrapper{width:1003px; margin:0 auto;}
 
+
+display:block; white-space:nowrap; text-overflow:ellipsis; overflow:hidden;
 strong{display: block;margin: 0 auto;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
 
-.wrapper{width:1003px; margin:0 auto;}
+
+
+
+
+
+
 
 #header{ background:#121212}
 #header h1{ float:left; width:600px;}

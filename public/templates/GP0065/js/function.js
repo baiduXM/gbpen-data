@@ -54,10 +54,6 @@ $(document).ready(function() {
 	 jQuery(".slideBoxb").slide({mainCell:".bd ul",autoPlay:false,effect:"leftLoop"});
 
 
-	var leftheight = $("#prodetpicl").height();
-	if(leftheight != null ){
-		$("#prodetnr").height(leftheight);
-	}
 });
 window.onload = function() { 
 	if($('#row').height() < 526){

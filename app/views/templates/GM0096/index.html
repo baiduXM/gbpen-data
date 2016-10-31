@@ -25,7 +25,7 @@
 <!-- QQ强制竖屏 -->
 <meta name="x5-orientation" content="portrait">
 	<title>{$title}</title>
-	
+	<!--  -->
 	<link rel="stylesheet" rev="stylesheet" href="{$site_url}css/style_{$stylecolor}.css" type="text/css" />
 	<link rel="stylesheet" href="{$site_url}css/swiper.css">
 	<link rel="stylesheet" href="{$site_url}css/swiper.min.css">
@@ -57,7 +57,7 @@
 	<div class="contant">
 		 {include file="./_header.html"}
 		 {foreach item=mIndexCat from=$mIndexCats}
-		 {if $mIndexCat.type eq 3}
+		 {if $mIndexCat.type eq 3 or $mIndexCat.type eq 2}
 	    <div class="products">
 	    	<h3><a href="{$mIndexCat.link}">【更多】</a><i class="iconfont icon">{$mIndexCat.icon}</i>{$mIndexCat.name}</h3>
 	    	<div class="pro_top">

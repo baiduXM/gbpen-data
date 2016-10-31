@@ -1,0 +1,15 @@
+<div class="ny_navs">
+  {if $pagenavs}
+     <ul class="ce">
+         {foreach item=rnav from=$pagenavs}
+          <li><a class="xz {if $rnav.current}current{/if}" href="{$rnav.link}">{$rnav.name}</a></li>
+         {/foreach}
+     </ul>
+  {else}
+     <ul class="ce">
+         {foreach item=rnav from=$global.pagenavss.childmenu}
+          <li><a class="xz {if $rnav.current}current{/if}" href="{$rnav.link}">{$rnav.name}</a></li>
+         {/foreach}
+     </ul>
+  {/if}
+</div>

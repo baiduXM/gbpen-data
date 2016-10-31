@@ -1,0 +1,23 @@
+<ul class="mtree transit">
+{foreach  item=nav from=$pagenavs}
+    <li><a href="{$nav.link}" class="firstli kz" data-limit="10">{$nav.name}</a>
+        {if $nav.childmenu}
+        <ul>
+            {foreach item=nav_list from=$nav.childmenu}
+            <li><a href="{$nav_list.link}" class="kz" data-limit="10" >{$nav_list.name}</a>
+                {if $nav_list.childmenu}
+                <ul>
+                    {foreach item=nav1_list from=$nav_list.childmenu}
+                    <li><a href="{$nav1_list.link}" class="kz" data-limit="10">{$nav1_list.name}</a>
+                    </li>
+                    {/foreach}
+                </ul>
+                {/if}
+            </li>
+            {/foreach}
+        </ul>
+        {/if}
+    </li>
+{/foreach}
+</ul>
+

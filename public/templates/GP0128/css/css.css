@@ -1,0 +1,218 @@
+body{ color:#555; font-family:Microsoft Yahei,Arial, Helvetica, sans-serif; background:#f0f5f9; }
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,input,textarea,div{margin:0;padding:0; list-style:none; line-height:24px; font-size:12px; font-weight:normal}
+body,div,ul,li,dl,dt,dd{ font-size:12px;}
+.clearfix:after { content:'\20'; display:block; height:0; clear:both; }
+.clearfix { *zoom:1; font-size:0px;}
+a{ color:#555; text-decoration:none}
+a:hover{ color:#f00} 
+img{ border:none;}
+.c{ clear:both}
+
+
+.wrapper{width:1003px; margin:0 auto; }
+
+
+
+
+
+
+
+display:block; white-space:nowrap; text-overflow:ellipsis; overflow:hidden;
+strong{display: block;margin: 0 auto;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+
+
+
+
+
+#header{margin:auto; width:100%; background:url(../images/top-by.jpg) top center no-repeat;overflow:hidden; padding-bottom:15px; }
+#header .logo{width: 500px;height: 99px;float:left; position:relative; top:7px; }
+#header .logo a{display: block;height:99px;width: 500px;position: absolute;bottom: 0px; left:0;}
+#header .logo img{max-width:500px; max-height:99px; position:absolute; top:0; left:0; right:0; bottom:0; margin:auto}
+#header .inner{position:relative }
+
+#header .search{  position:absolute; right:0px; top:60px;}
+#header .search_area{ background:url(../images/sou_by.jpg); width:266px; height:35px; line-height:35px; float:left; border:none; color:#999; text-indent:24px; }
+#header .search_btn{ background:url(../images/sou-td.jpg) top center no-repeat; width:44px; height:35px; border:none; float:left; position:relative; left:0px; top:0px;}
+
+
+
+
+#header .tel{ float:right;height:30px; color:#fff; font-size:17px;  text-align:left; margin-top:5px; overflow:hidden; width:210px;}
+
+
+
+
+
+
+
+#nav{width:100%; height:50px; background: url(../images/nav-by.jpg) repeat-x;}
+
+
+
+
+
+
+#nav ul li{ float:left;height:50px; line-height:50px; color:#fff; }
+#nav ul li a{font-family:Microsoft Yahei; font-size:14px; color:#fff; padding: 0 20px;  font-weight:bold; display:block; text-align:center;transition:all 0.5s ease-in-out; }
+#nav ul li a:hover{color:#fff ; background:#a8040b;}
+#nav ul li p{ height:50px; line-height:50px; overflow:hidden}
+#nav ul li .cc{background:#067ac7;height:40px; line-height: 40px;display: none; text-align:center; width:100%; position:relative; z-index:100; margin-top:0px; }
+#nav ul li .cc:hover{ background:#067ac7}
+#nav ul li .cc a{width:92%; margin:auto;color:#fff; padding:0 4%; overflow:hidden; height:40px; line-height:40px;}
+#nav ul li .cc a:hover{ color:#fff;}
+
+
+/*banner css*/
+#banner{width:100%;  height:520px; overflow:hidden}
+
+
+
+
+
+#container{margin:auto; width:100%;  overflow:hidden; }
+#container .incenter{width:1003px;  margin:0px auto;  overflow:hidden;   }
+
+/*products css*/
+.products{margin:0 auto; width:1000px; }
+.products .title{height:45px; margin-top:15px;background:url(../images/pro-xuan1.jpg) bottom no-repeat;}
+.products .title span{float:right; height:34px;padding-top:5px;padding-right:15px; font-weight:normal;font-size:12px;  color:#6f6f6f; }
+.products .title span a{ color:#6f6f6f;padding-top:5px;}
+.products .title h2{ color:#f4bd00;text-transform:uppercase; font-size:18px; font-weight:bold;height:30px; line-height:30px; margin-top:2px; overflow:hidden}
+.products .title h2 b{ color:#0a58a3; font-size:24px; margin-right:8px;}
+.products .inter { padding: 10px 0px; overflow:hidden; height:282px;  }
+.products .inter ul{list-style:none;}
+.products .inter ul{ padding-top:19px; padding-left:17px; }
+.products .inter ul li img{ display:block; }
+.products .inter ul li{ width:230px;  height:260px; float:left; margin:0px 6px;border:1px #abcae6 solid; background:#d8e5f5; text-align:center }
+.products .inter ul li .pic{ width:220px; height:220px;overflow:hidden; margin:auto; margin-top:5px; }
+.products .inter ul li .pic img{ display:block; }
+.products .inter ul li span{ line-height:30px; width:220px; overflow:hidden; text-align:center; height:30px;}
+
+.aboutnews{margin:0 auto; width:100%; margin-top:10px;  background:url(../images/pro-xuan.jpg) top  repeat-x; overflow:hidden;}
+
+/*about css*/
+.about{float:left;width:500px; padding: 0px ; margin-top:25px; }
+.about .title{height:44px;  font-weight:bold;font-size:14px; color:#fff; background:url(../images/about-xuan.gif) bottom no-repeat; }
+.about .title span{float:right; padding-top:8px;padding-right:0px;  font-weight:normal; }
+.about .inter {width:480px;  padding:10px; line-height:22px; color:#fff; height:215px; overflow:hidden }
+
+.about .title h2{ color:#fae600;text-transform:uppercase;font-size:22px; font-weight:bold; height:30px; line-height:30px; margin-top:2px; overflow:hidden}
+.about .title h2 b{ color:#fff; font-size:22px; margin-right:8px;}
+
+.about .about_img{ display:inline-block;*display:inline;*zoom:1; height:200px; margin-right:5px; border:3px solid #fff }
+.about .about_img img{ height:100%; display:block; }
+.about .about_text{ display:inline-block; vertical-align:top;*display:inline;*zoom:1; line-height:24px; height:192px; overflow:hidden}
+
+.about .inter a{ color:#fff;  } 
+
+/*new css*/
+.innew .title h2{ color:#fae600;text-transform:uppercase;font-size:20px; font-weight:bold;height:30px; line-height:30px; margin-top:2px; overflow:hidden}
+.innew .title h2 b{ color:#fff; font-size:22px; margin-right:8px;}
+
+.innew{float:right;width:470px;  margin-top:25px; }
+.innew .title{height:44px;    font-weight:bold;font-size:14px; color:#fef1b2;background:url(../images/about-xuan.gif) bottom no-repeat; }
+.innew .title span{float:right; padding-right:0px;  font-size:12px; font-weight:normal; color:#666;padding-top:8px; }
+.innew .title span a{color:#666;}
+.innew .inter { padding:10px; height:197px; overflow:hidden   }
+.innew .inter  .tu{   border:1px #ccc solid; background:#fff; padding:2px;margin-right:10px;  display:inline-block;*display:inline;*zoom:1; height:110px; }
+.innew .inter .tu img{ height:100%; display:block; }
+.innew .inter .biaotd{display:inline-block; vertical-align:top;*display:inline;*zoom:1;  }
+.innew .inter .biao{  color:#fff; font-size:12px; font-weight:bold; height:30px; line-height:30px; overflow:hidden   }
+.innew .inter .biao a{ color:#fff;  }
+.innew .inter .td{ float:left;  font-size:12px; text-indent:24px;  color:#78a8ce ; height:72px; line-height:24px; overflow:hidden }
+.innew .inter .td a{  color:#78a8ce}
+
+
+.innew .inter ul{list-style:none; margin-top:8px; height:73px; overflow:hidden }
+
+.innew .inter ul li{width:440px; line-height:24px;  font-weight: normal; text-indent:24px;color:#fff; height:24px; overflow:hidden;background:url(../images/new-dian.gif) no-repeat 8px;}
+.innew .inter ul li a{ display:block; color:#fff;}
+.innew .inter ul li a:hover{color:#ff0000; }
+.innew .inter ul li span{ float:right;padding-right:10px }
+
+/*case  css*/
+.case {margin:0 auto; width:1120px; margin-top:15px;}
+.case .title {height:45px; text-indent:65px; background:url(../images/pro-xuan1.jpg) bottom no-repeat;  }
+.case .title  span{float:right; padding-right:10px; padding-top:10px;   font-size:12px; font-weight:normal; color:#666; }
+.case .title span a{color:#666;}
+
+.case .title h2{ color:#f4bd00;text-transform:uppercase; font-size:18px; font-weight:bold;height:30px; line-height:30px; margin-top:2px; overflow:hidden}
+.case .title h2 b{ color:#0a58a3; font-size:24px; margin-right:8px;}
+
+.case .next{float:left;width:60px; height:53px;  margin-top:85px; margin-left:18px;}
+.case .prev{float:right;width:60px; height:53px;   margin-top:85px; margin-left:10px;}
+.case .inter { height:282px; overflow:hidden; margin-top:25px;  }
+
+
+.case .inter ul li img{ display:block; }
+.case .inter ul li{ width:230px;  height:260px; float:left;border:1px #abcae6 solid; background:#d8e5f5; text-align:center ; margin-left:5px; margin-right:5px;}
+.case .inter ul li .pic{ width:220px; height:220px;overflow:hidden; margin:auto; margin-top:5px; }
+.case .inter ul li .pic img{ display:block; }
+.case .inter ul li span{ line-height:30px; width:220px; overflow:hidden; text-align:center; height:30px;}
+
+
+/*footer css*/
+#footer{ margin:0 auto; width:100%; margin-top:15px; padding-bottom:30px; background: #1065ae url(../images/tom-by1.jpg) bottom center repeat-x;}
+.friendlink{color:#fff; height:65px; line-height:65px; background:url(../images/tom-by.jpg) top center repeat-x; height:64px; line-height:64px;}
+.friendlink a{ color:#fff}
+.friendlink .inner{ line-height:64px;}
+.copyright{text-align:center;  color:#fff; padding-top:15px; }
+.copyright a{   color:#fff;}
+
+
+
+
+/*sidebar css*/
+.sidebar{ width:238px; float:left;margin-top:10px; display:inline; }
+.subnav ul{ margin:auto}
+.subnav{ margin-bottom:0px;}
+.alefttitle{ height:35px;font-size:14px; font-weight:bold; color:#fff; text-align:center;  padding-top:4px; background: url(../images/sub-rby.gif) no-repeat;font-size: 15px;
+    font-weight: bold; line-height:35px; overflow:hidden}
+.subnav .category{ padding:10px 15px; text-indent:24px;border-left:1px #ebebeb solid;border-right:1px #ebebeb solid; border-bottom:1px #ebebeb solid;background:#fff;overflow:hidden;  }
+.subnav img{ display:block}
+
+
+.category ul{ padding:10px 0 }
+
+
+
+
+.category ul .firsta{width:238px;background:url(../images/lesub-dian.gif) 8px no-repeat;}
+.category ul li a.firsta{ margin:auto;font-size:12px; text-align:left; color:#555;line-height:30px;text-indent:30px; border-bottom:1px #ccc dashed; width:95%; padding-left:5%; display:block ; overflow:hidden ; height:30px; }
+.category ul li a.firsta:hover{  margin:auto;font-size:12px; text-align:left; color:#1065ae;line-height:30px;text-indent:30px; border-bottom:1px #ccc dashed; background:url(../images/lesub-dian.gif) 8px no-repeat; }
+
+ul.second li a.seconda{ font-size:12px; text-align:left; color:#555;text-indent:40px;  line-height:30px;background:url(../images/sub-sian.gif) 28px no-repeat; display:block;width:95%; padding-left:5%; overflow:hidden; height:30px;}
+ul.second li a.seconda:hover{color:#1065ae}
+ul.third li a.thirda{ background:url(../images/ico7.jpg) no-repeat 5px; width:75%; padding-left:25%; margin:auto;color:#545454;  display:block;border-bottom:1px dotted #ccc; line-height:35px; height:30px; overflow:hidden}
+ul.third li a.thirda:hover{color:#1065ae}
+
+
+
+/*nynmcon css*/
+.nynmcon{width:238px; margin-top:10px;  }
+.nynmcon h3{height:46px;line-height:40px;font-size:14px; font-weight:bold; text-indent:28px; color:#fff; background:url(../images/nycon-tby.gif) no-repeat;}
+.nynmcon .inter {padding:10px 10px 10px 10px;  text-align:left;   background:url(../images/nycon-by.gif) bottom  right no-repeat;  }
+
+
+/*main css*/
+
+.main{width:740px;float:right; margin-top:10px;   display:inline; }
+.crumb{ height:33px; text-indent:18px; padding-bottom:0px;margin:auto; line-height:33px; font-weight:bold; font-size:15px; text-align:left; color:#fff; background:url(../images/crumb-rby.gif) no-repeat;}
+.crumb span{ float:right; font-weight:normal; color:#555; margin-right:25px; font-size:12px;}
+.crumb span a{ color:#555; }
+.crumb h2{font-size:14px; font-weight:bold; line-height:33px;}
+
+
+.article { margin:auto; line-height:24px; word-wrap:break-word; word-break:break-all; text-align:left;padding:10px 15px;  border-left:1px #ebebeb solid;border-right:1px #ebebeb solid; border-bottom:1px #ebebeb solid; background:#fff; overflow:hidden;}
+
+.article img{ max-width:730px;}
+
+
+
+.text_list li{ height:32px; line-height:32px; background:url(../images/ico.png) no-repeat 5px;text-indent:2em; border-bottom:solid 1px #CCC}
+.text_list li span{ float:right; margin-right:6px;}
+.img_list li{ width:203px; height:182px; float:left; margin-left:18px;border:1px #abcae6 solid; background:#d8e5f5; padding:5px; margin-top:20px;}
+.img_list li img{width:100%;}
+.img_list li span{line-height:38px;paddin-bottom:5px; font-size:14px; text-align:center; display:block;color:#333; overflow:hidden}
+
+

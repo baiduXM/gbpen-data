@@ -80,12 +80,12 @@ ol,p,dl,li{list-style:none;}
 .proimg{ margin:0px auto 0px; overflow:hidden; width:100%; margin-top:20px; }
 /* 滚动代码 */
 .footer{ background:#ed9100; border-top:6px solid #d4e01b; height:auto; width:100%; overflow:hidden; margin-top:58px; padding:20px 0px;}
-.publicfoote{ width:1200px; height:auto; overflow:hidden; margin:0px auto;}
+.publicfoote{ width:1200px; height:auto; overflow:hidden; margin:0px auto; text-align: center; color:#543d19 }
 .ficon{ width:220px; height:45px; margin:0px auto; overflow:hidden; }
 .ficon ul li{ width:39px; height:39px; float:left; display:inline; margin-right:15px;}
-.fpwprd{ padding:20px 0px; text-align:center; height:auto; line-height:35px; color:#543d19; clear:both; }
-.fpwprd a{ color:#543d19;}
-.fpwprd a:hover{ color:#ffe6bf}
+.fpwprd{ padding-top:10px; text-align:center; height:auto; line-height:35px; color:#543d19; clear:both; }
+.publicfoote a{ color:#543d19;}
+.publicfoote a:hover{ color:#ffe6bf}
 .container{ position:relative; height:auto; overflow:hidden; width:1200px; position:relative; top:-95px; height:auto; overflow:hidden;margin:0px auto; margin-bottom:-95px;}
 .left_side{ width:243px; height:auto; overflow:hidden;}
 .list{ background:#d4e01b; width:233px; padding-left:10px; height:auto; overflow:hidden; padding-bottom:11px;}

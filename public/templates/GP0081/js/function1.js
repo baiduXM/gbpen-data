@@ -69,12 +69,12 @@ $(document).ready(function($) {
 	jQuery(".picScroll").slide({ mainCell:"ul", effect:"leftMarquee", vis:5, autoPlay:true, interTime:50, switchLoad:"_src" });
 
 	//产品详细页大图切换
-	jQuery(".game163").slide({ titCell:".smallImg li", mainCell:".bigImg", effect:"fold", autoPlay:true,delayTime:200,
+	jQuery(".focusBox").slide({ titCell:".smallImg li", mainCell:".bigImg", effect:"fold", autoPlay:true,delayTime:200,
 		startFun:function(i,p){
 			//控制小图自动翻页
-			if(i==0){ jQuery(".game163 .sPrev").click() } else if( i%4==0 ){ jQuery(".game163 .sNext").click()}
+			if(i==0){ jQuery(".focusBox .sPrev").click() } else if( i%4==0 ){ jQuery(".focusBox .sNext").click()}
 		}
 	});
 
 	//产品详细页小图左滚动切换
-	jQuery(".game163 .smallScroll").slide({ mainCell:"ul",delayTime:100,vis:4,effect:"left",autoPage:true,prevCell:".sPrev",nextCell:".sNext",pnLoop:true });
+	jQuery(".focusBox .smallScroll").slide({ mainCell:"ul",delayTime:100,vis:4,effect:"left",autoPage:true,prevCell:".sPrev",nextCell:".sNext",pnLoop:true });

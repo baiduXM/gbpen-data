@@ -1,0 +1,56 @@
+
+/*标题样式*/
+.detail{ color:rgba(255,255,255,0.3)}
+.in_h2{   z-index:1000; margin-bottom:10px; width:98%; margin:auto  }
+.in_h2 .text{margin:auto; float:right;   }
+.in_h2 .text .in_zh{color:#333; font-size:19px;font-weight:bold; line-height:40px; margin-right:5px; height:40px; overflow:hidden; display:block ;border-bottom:1px solid rgba(0,0,0,.4); text-transform:uppercase  }
+/*标题样式*/
+
+
+.inner{}
+.wrapper{ width:100%; margin:auto; margin-top:20px; margin-bottom:20px; }
+
+#in_page{  }
+#in_page .inner{width:95%; margin:auto; }
+#in_page .inner .pic{  margin:10px auto }
+#in_page .inner .pic img{ width:100%; display:block}
+#in_page .inner p{ margin:auto; line-height:24px; height:72px; overflow:hidden; }
+
+@media screen and (min-width: 320px) and (max-width: 480px){
+.in_h2 .text{ margin:10px;}
+.in_h2 .text .in_zh{font-size:15px;  }
+.in_h2 .text .in_en{ font-size:12px; display:none }
+
+}
+@media screen and (min-width: 480px) {}
+
+.in_text .inner{ border-right:1px solid rgba(0,0,0,.1); width:95%;}
+
+
+.in_text ul li{  width:90%; margin:auto;    margin:15px auto; background:rgba(0,0,0,.1); padding:0 2%; position:relative}
+.in_text ul li:after{ width: 0;
+    height: 0;
+    border-top: 7px solid transparent;
+    border-left: 7px solid rgba(0,0,0,.1);
+    border-bottom: 7px solid transparent; display:block; position:absolute; content:""; top:30%; right:-7px; z-index:-1}
+.in_text ul li .in_title{font-size:15px;  line-height:30px; width:100%; display:block; white-space:nowrap; text-overflow:ellipsis; overflow:hidden;  height:30px; color:#333;}
+
+.in_text .more{ width:15%; color:#333;background:rgba(0,0,0,.1); text-transform:uppercase; text-align:center; line-height:25px; float:right; margin-right:3%;}
+
+
+@media screen and (min-width: 320px) and (max-width: 480px){
+}
+
+}
+
+
+
+.in_image ul{ margin-bottom:20px;}
+.in_image ul li{ float:left; display: inline-block; text-align:center;width:31%; margin:2% 1%;}
+.in_image ul li .in_proimg{ width:100%; overflow:hidden;  }
+.in_image ul li .in_proimg img{ width:100%}
+
+
+
+
+

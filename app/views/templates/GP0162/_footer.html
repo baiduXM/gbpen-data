@@ -1,0 +1,14 @@
+﻿
+	<div class="chaining">
+	    	<span><i><img src="{$site_url}images/icon-05.png"></i>友情链接：</span>
+	        {foreach item=links from=$global.links}
+	            {if $links@index neq 0} | {/if}
+	            <a href="{$links.link}">{$links.title}</a>
+	        {/foreach}
+	    </div>
+	<footer id="footer">
+		<div class="foot">
+			{$footprint}
+		</div>
+	</footer>
+{$footscript}

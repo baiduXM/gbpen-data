@@ -1,0 +1,65 @@
+<div class="sidebar">
+	<div class="box">
+		{if $pagenavs}
+		<h2 class="box_hd"><i><img src="{$global.boximg.image}"></i><span>{$posnavs[0].name}</span><em>{$posnavs[0].en_name}</em></h2>
+			<ul class="first">
+				{foreach item=nav from=$pagenavs}
+				<li>
+					<a href="{$nav.link}">{$nav.name}</a>
+					{if $nav.childmenu}
+					<i></i>
+					<ul class="second">
+						{foreach item=nav_list from=$nav.childmenu}
+						<li>
+							<a href="{$nav_list.link}">{$nav_list.name}</a>
+							{if $nav_list.childmenu}
+							<ul class="third">
+								{foreach item=nav_last from=$nav_list.childmenu}
+									<li><a href="{$nav_last.link}">{$nav_last.name}</a></li>
+								{/foreach}
+							</ul>
+							{/if}
+						</li>
+						{/foreach}
+					</ul>
+					{/if}
+				</li>
+				{/foreach}
+			</ul>
+		{else}  <!-- 让客服自己选择，如果当前无子栏目 展现的目标栏目 -->
+			<h2 class="box_hd"><i><img src="{$global.boximg.image}"></i><span>{$global.pagenavs.name}</span><em>{$global.pagenavs.en_name}</em></h2>
+			<ul class="first">
+				{foreach item=nav from=$global.pagenavs.childmenu}
+				<li>
+					<a href="{$nav.link}">{$nav.name}</a>
+					{if $nav.childmenu}
+					<ul class="second">
+						{foreach item=nav_list from=$nav.childmenu}
+						<li>
+							<a href="{$nav_list.link}">{$nav_list.name}</a>
+							{if $nav_list.childmenu}
+							<ul class="third">
+								{foreach item=nav_last from=$nav_list.childmenu}
+									<li><a href="{$nav_last.link}">{$nav_last.name}</a></li>
+								{/foreach}
+							</ul>
+							{/if}
+						</li>
+						{/foreach}
+					</ul>
+					{/if}
+				</li>
+				{/foreach}
+			</ul>
+		{/if}
+	</div>
+	<div class="subcontact">
+		<a href="{$global.contact.link}"><img src="{$site_url}images/subcontact.jpg" /></a>
+	</div>
+</div>
+
+
+
+<!-- <a href="#"><img src="images/join.jpg" /></a> -->
+			
+

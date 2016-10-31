@@ -15,8 +15,8 @@ strong{/*display: block;*/margin: 0 auto;overflow: hidden;text-overflow: ellipsi
 #logo{ width:426px; height:126px;}
 #search{ width:335px; height:28px; top:20px; right:0px;position:absolute;}
 #search input{  border:none; height:27px;}
-.sa{ background: #fff; width:250px;padding:0 5px;}
-.bta{ background:url(../images/search_icon.jpg) no-repeat; height:27px; width:75px; border:none; cursor:pointer; float:right;text-indent:-1000px; font-size:0px;}
+.sa{ background: #fff; width:250px;padding:0 5px; float:left;}
+.bta{ background:url(../images/search_icon.jpg) no-repeat; height:27px; width:75px; border:none; cursor:pointer; float:left;text-indent:-1000px; font-size:0px;}
 
 #tel{ width:307px; height:25px; color:#5f5d5d; font-size:22px; position:absolute; top:70px; right:30px;  background:url(../images/tel_bg.png) no-repeat; text-align:right}
 

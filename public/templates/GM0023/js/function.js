@@ -25,14 +25,14 @@ $(document).ready(function() {
 
 
         img.src = $(".prolist img").attr("src");
-        $(".index-wrap").height($(window).height() - $(".fixed").height() - $(".tell-icon").height())
+        // $(".index-wrap").height($(window).height() - $(".fixed").height() - $(".tell-icon").height())
         $(".class-m").height($(".class").outerHeight() - $(".class-top").outerHeight())
         $(".menulist dl").height($(".menulist dl").width())
         $(".menu").height($(".menulist dl").outerHeight())
         $(".prolist .tielbox").height($(".prolist img").height())
     });
     $(window).resize(function() {
-        $(".index-wrap").height($(window).height() - $(".fixed").height() - $(".tell-icon").height())
+        // $(".index-wrap").height($(window).height() - $(".fixed").height() - $(".tell-icon").height())
         $(".class-m").height($(".class").outerHeight() - $(".class-top").outerHeight())
         $(".menulist dl").height($(".menulist dl").width())
         $(".menu").height($(".menulist dl").outerHeight())
@@ -57,7 +57,7 @@ $(document).ready(function() {
 
 
         $(".class-m").height($(".class").outerHeight() - $(".class-top").outerHeight())
-        $(".index-wrap").height($(".wrap").height() + $(".quickbar-tips").height())
+        // $(".index-wrap").height($(".wrap").height() + $(".quickbar-tips").height())
     });
 
 
@@ -120,7 +120,7 @@ $(document).ready(function() {
 
     $(".tell-icon .close").click(function() {
         $(".tell-icon").removeClass("display-block")
-        $(".index-wrap").height($(window).height())
+        // $(".index-wrap").height($(window).height())
         return false
     })
 
@@ -170,11 +170,11 @@ $(document).ready(function() {
 
         })
         //返回顶部开始
-    $(".back-top").click(function() {
-        $(".index-wrap").animate({
-            scrollTop: 0
-        }, 800)
-    })
+    // $(".back-top").click(function() {
+    //     $(".index-wrap").animate({
+    //         scrollTop: 0
+    //     }, 800)
+    // })
     $("#share_btn").click(function() {
             $(".newsclass").addClass("show")
             $(".opacity2").show()
@@ -186,6 +186,6 @@ $(document).ready(function() {
         $(".newsclass").removeClass("show")
         $(".opacity2").hide()
     })
-
+    $(".back-top").click(function(){$("#quickbar-wrap-body").animate({scrollTop :0}, 800)})
     //分享取消按钮结束
 });

@@ -49,7 +49,8 @@
 #in_text ul li .square{ width:15px; height:15px; position:absolute; left:-7px; top:35%; padding:0px;transform:rotate(45deg);-ms-transform:rotate(45deg); 	/* IE 9 */-moz-transform:rotate(45deg); 	/* Firefox */-webkit-transform:rotate(45deg); /* Safari 和 Chrome */-o-transform:rotate(45deg);  }
 
 #in_text ul li .in_textbox{ width:100%; overflow:hidden}
-#in_text ul li .in_textbox .in_title{ height:22px; line-height:22px;width:75%; padding-left:2%; display:block; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; font-size:1.1em; color:#fff; float:left }
+#in_text ul li .in_textbox .in_title{ height:22px; line-height:22px;width:75%; padding-left:2%; display:block; white-space:nowrap; text-overflow:ellipsis; overflow:hidden;  float:left }
+#in_text ul li .in_textbox .in_title a{font-size:1.1em; color:#fff;}
 #in_text ul li .in_textbox .in_data{ width:15%; float:right; font-size:14px; color:#fff}
 
 

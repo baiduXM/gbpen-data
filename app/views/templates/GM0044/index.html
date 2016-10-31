@@ -2,7 +2,7 @@
 <html>
 <head>
 <!-- 实时预览调试代码，模板开发完成后删除 -->
-		
+		<!--  -->
 		<!-- 调试代码 End -->
 		<script type="text/javascript">
 		// 跳转PC页面
@@ -35,13 +35,13 @@
 <title>{$title}</title>
 <link rel="stylesheet" href="{$site_url}css/reset.css" />
 <link rel="stylesheet" href="{$site_url}css/public.css" />
-<link rel="stylesheet" rev="stylesheet" href="{$site_url}css/style_{$stylecolor}.css" type="text/css" />
+
 <link href="{$site_url}css/css.css" rel="stylesheet" type="text/css" />
 <link href="{$site_url}css/swipe.css" rel="stylesheet" type="text/css" />
 <script src="{$site_url}js/TouchSlide.1.1.js"></script>
 <script type="text/javascript" src="{$site_url}js/jquery.min.js"></script>
 <script type="text/javascript" src="{$site_url}js/function.js"></script>
-<script type="text/javascript" src="{$site_url}js/share.js"></script>
+
 <script src="{$site_url}js/idangerous.swiper-2.0.min.js"></script>
 <script src="{$site_url}js/idangerous.swiper.3dflow-2.0.js"></script>
 <script src="{$site_url}js/simple-app.js"></script>
@@ -103,7 +103,7 @@
             <ul class="prolist clearfix">
 				{foreach item=article from=$mIndexCat.data}
               <li>
-                <div onClick="javascript:window.location.href='{$article.link}'"> <div class="pic"><img src="{$article.image}" width="75px" height="83px"></div><a href="{$article.link}" class="public_color">{$article.title}</a><div class="word">{$article.description}</div>
+                <div onClick="javascript:window.location.href='{$article.link}'"> <div class="pic"><img src="{$article.image}"></div><a href="{$article.link}" class="public_color">{$article.title}</a><div class="word">{$article.description}</div>
                 </div>
               </li>
             {if $article@index+1 == 3}{break}{/if}
@@ -124,7 +124,7 @@
          
           <ul class="news-list2 clearfix">
 					{foreach item=article from=$mIndexCat.data}
-                    <li onClick="javascript:window.location.href='{$article.link}'" class="clearfix" ><div class="pic"><img src="{$article.image}" width="68px" height="68px"></div><a href="{$article.link}">{$article.title}</a></li>
+                    <li onClick="javascript:window.location.href='{$article.link}'" class="clearfix" ><div class="pic"><img src="{$article.image}"></div><a href="{$article.link}">{$article.title}</a></li>
 					 {if $article@index+1 == 3}{break}{/if}
                     {/foreach}
           </ul>

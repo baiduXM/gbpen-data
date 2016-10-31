@@ -1,0 +1,7 @@
+<div id="buttom">
+   	    <div class="share">
+               {shareExt shareText=$article.content|unescape:"html"|strip_tags|truncate:140:"…" sharePic=$article.image}
+        </div>
+        <p>{$footprint}</p>
+   </div>
+   {$footscript}

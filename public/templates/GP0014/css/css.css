@@ -108,6 +108,7 @@ ul.three li a{ text-indent:30px; background:none; font-weight:normal;}
 	}
  
 	.photos .photos-content {height:342px;margin: 0 auto;overflow: hidden;}
+	.photos .photos-content ul{ display: inline-block; }
 	.photos .photos-content li {
 		float:left;display:inline;/*width:165;*/text-align:center;margin:0px 5px;
 	}

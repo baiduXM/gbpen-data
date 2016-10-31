@@ -77,7 +77,7 @@
 		 	<div class="article">
 		 	<div class="news_detail">
                     	<h1 class="Title">{$article.title}  </h1>
-                        <h2 class="Time">{$article.pubdate} <a href="{$article.link}" class="go">[返回]</a></h2>
+                        <h2 class="Time">{$article.pubdate} <span class="go">[返回]</span></h2>
                      </div>
 		           	<div class="f_size fr ">
 				 		<span class=" font_s">字体：</span>
@@ -98,15 +98,11 @@
         						<div class="swiper-pagination"></div>	 
     					</div>
     					<div class="products_nr1">    
-    					<div id="Scroller-1">
 						    <div class="Scroller-Container news_nr">
 			         			{$article.content|unescape:"html"}
 							</div>
+
 						</div>
-						<div id="Scrollbar-Container">
-				    
-					</div> 
-					</div>
     				</div>
 		 		</div>
 		 		<ul class="next_pre">
@@ -128,7 +124,6 @@
 	<script type="text/javascript" src="{$site_url}js/jquery-1.10.2.min.js"></script>
 	<script type="text/javascript" src="{$site_url}js/swiper.min.js"></script>
 	<script type="text/javascript" src="{$site_url}js/index.js"></script>
-	<script type="text/javascript" src="{$site_url}js/jsScroller.js"></script>
 	<script type="text/javascript" src="{$site_url}js/slides-1.1.1-min.js"></script>
 	<script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.js"></script>
 	<script type="text/javascript" src="{$site_url}js/function.js"></script>

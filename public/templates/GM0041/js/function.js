@@ -19,7 +19,7 @@ $(document).ready(function(){
 		"line-height":$(".indexmenu ul li a").height()+"px"
 		})
 	$(".next2 dl .nextright").width($(".next2 dl").width()-$(".next2 dl .nextleft").width()-2)
-	$(".index-wrap").height($(".wrap").height())
+	// $(".index-wrap").height($(".wrap").height())
 	$(".class-m").height($(".class").outerHeight()-$(".class-top").outerHeight())
 	var myswiper=$('.indexmenu .scroll-container').swiper({
 			mode:'vertical',
@@ -99,7 +99,7 @@ $(document).ready(function(){
 		$(".hide-class").slideToggle()
 		$(".font").slideUp()	
 	})
-$(".back-top").click(function(){$(".index-wrap").animate({scrollTop :0}, 800)})
+	$(".back-top").click(function(){$("#quickbar-wrap-body").animate({scrollTop :0}, 800)})
 	$("#share_btn").click(function(){
 		$(".newsclass").addClass("show")
 		$(".opacity2").show()
@@ -123,7 +123,7 @@ window.onload=function(){
 function resize(){
 		$(".next2 dl .nextright").width($(".next2 dl").width()-$(".next2 dl .nextleft").width()-2)
 		$(".class-m").height($(".class").outerHeight()-$(".class-top").outerHeight())
-		$(".index-wrap").height($(".wrap").height()+$(".quickbar-tips").height())
+		// $(".index-wrap").height($(".wrap").height()+$(".quickbar-tips").height())
 		$(".indexmenu").height($(".indextr").height()-$(".indexlogo").height());
 		$(".indexmenu ul li a").height($(".indexmenu").height()/5-1);
 		$(".indexmenu ul li a").css({

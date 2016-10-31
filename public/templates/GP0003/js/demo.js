@@ -18,7 +18,7 @@ $(function($){
 
 		$('.slide').unslider({
 			arrows: false,
-			fluid: true,
+			fluid: false,
 			dots: true
 		});
 
@@ -53,7 +53,6 @@ $(function($){
 		var interval = setInterval(function(){
 			// console.log($("div.product"));
 			rand = Math.floor( Math.random() * ul_len) + 1;//获取随机数
-			console.log(rand);
 			$(".product ul li").removeClass('color');
 	        $(".product ul li").eq(rand).addClass('color');
 	    },1500);

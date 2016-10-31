@@ -1,0 +1,39 @@
+{	
+    "about_us": {
+		"description": "内容单页（如关于我们）",
+		"value": {},
+		"type": "page",
+		"config":{
+			"nav_width":402,
+			"nav_height":388
+		}	
+	},    
+	"news": {
+		"description": "文字列表（如新闻中心）",
+		"value": {},
+		"type": "list",
+		"config":{
+			"width":286,
+			"height":250
+		}	
+	},
+	"pro":{
+		"description": "图片列表（如产品展示）",
+		"value": {},
+		"type": "list",
+		"config":{
+			"width":258,
+			"height":158
+		}	
+	},
+	"case":{
+		"description": "图片列表（如案例展示）",
+		"value": {},
+		"type": "list",
+		"config":{
+			"width":220,
+			"height":180
+		}	
+	}
+}                     
+

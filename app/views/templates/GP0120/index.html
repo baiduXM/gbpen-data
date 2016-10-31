@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script type="text/javascript">
+    // 跳转手机页面
+    {if $site_another_url}
+        if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+            location.href = '{$site_another_url}';
+        }
+    {/if}
+    </script>
+
+
+<meta name="keywords" content="{$keywords}"/>
+<meta name="description" content="{$description}"/>
+<link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Language" content="zh-CN">
+
+<link rel="stylesheet" type="text/css" href="{$site_url}css/style.css"/>
+<script type="text/javascript" src="{$site_url}js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.js"></script>
+<script type="text/javascript" src="{$site_url}js/function.js"></script>
+<script type="text/javascript" src="{$site_url}js/index.js"></script>
+<script type="text/javascript" src="{$site_url}js/html5.js"></script>
+<title>{$title}</title>
+{$headscript}
+</head>
+<body>
+    <div class="wrap">
+        <div class="main">
+        {include file='./_header.html'}
+            <div class="content">
+                <div class="sidle_l">
+                    <div class="about">
+                        <h1 class="about_top">{$index.about.name}<span>{$index.about.en_name}</span><a href="{$index.about.link}">[更多]</a></h1>
+                        <div class="about_m">
+                            <dl class="side_img"><img src="{$index.about.image}"></dl>
+                            <dl class="nr">{$index.about.content|unescape:"html"}</dl>
+                       
+                       </div>
+                    </div>
+                    <div class="about contact">
+                        <h1 class="about_top">{$index.contact_us}</h1>
+                        <div class="contact-m">
+                            <div class="side_img"><img src="{$index.contact.image}" /></div>
+                            <p class="nr" style="font-family: 微软雅黑, 'Microsoft YaHei'; font-size: 16px;">
+                            <b>地 址：</b>{$contact.address}<br />
+                            <b>电 话：</b>{$contact.mobile}<br /> 
+                            <b>联系人：</b>{$contact.name}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidle_r">
+                    <div class="pro">
+                        <h1 class="pro_top"><a href="{$index.pro.link}" class="more"></a>{$index.pro.name} {$index.pro.en_name}</h1>
+                        <div class="pro-m">
+                            <ul class="colee_left">
+                                {foreach item=article from=$index.pro.data}
+                                    <li><a href="{$article.link}"><img src="{$article.image}"><h4>{$article.title}</h4></a></li>
+                                {/foreach}
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="pro news">
+                        <h1 class="pro_top"><a href="{$index.news.link}" class="more"></a>{$index.news.name} {$index.news.en_name}</h1>
+                        <div class="news-m">
+                            <div class="img"><img src="{$index.news.image}"></div>
+                            <ul class="news_list" style="height:186px;">
+                                {foreach item=news from=$index.news.data}
+                                    <li><a href="{$news.link}"><time class="date" datetime="{$news.pubtimestamp|date_format:'%Y-%m-%d'}">{$news.pubtimestamp|date_format:'%Y-%m-%d'}</time>{$news.title}</a></li>
+                                {/foreach}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pro link">
+                 <h1 class="pro_top">友情链接 Links</h1>
+                 <div class="link-m">
+                    <ul class="links">
+                        {foreach item=link from=$index.links}
+                            <li><a href="{$link.link}"><img src="{$link.image}"></a></li>
+                        {/foreach}
+                    </ul>
+                 </div>
+             </div>
+        {include file='./_footer.html'}
+        </div>
+    </div>
+</body>
+</html>

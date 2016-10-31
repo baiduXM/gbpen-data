@@ -9,16 +9,15 @@
       }
     {/if}
     </script>
-
-<meta http-equiv="x-ua-compatible" content="ie=7" />
+<!--  -->
+<meta http-equiv="x-ua-compatible" content="ie=9" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="{$keywords}"/>
 <meta name="description" content="{$description}"/>
 <link href="{$site_url}css/style.css" rel="stylesheet" type="text/css" />
 <link href="{$site_url}css/animate.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="{$site_url}js/jquery-1.9.1.min.js"></script>
-<script type="text/javascript" src="http://common.mn.sina.com.cn/public/resource/lib/jquery.jcarousellite.js">
-</script>
+<script type="text/javascript" src="{$site_url}js/jquery.jcarousellite.js"></script>
 <script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.js"></script>
 <script type="text/javascript" src="{$site_url}js/function.js"></script>
 <title>{$title}</title> 
@@ -76,7 +75,7 @@
                                     </div>
                             <div class="news_detada">
                                     {foreach item=article from=$search.data}<!--search_content_start-->
-                                     <li><a href="#"><span>{$article.pubtimestamp|date_format:'%Y-%m-%d'}</span>search_$title</a></li>              
+                                     <li><a href="search_$link"><span>search_$pubymd</span>search_$title</a></li>              
                                      <!--search_content_end-->{/foreach}   
   <div class="module_page"  >
                 第{$page_links.current_page}页/共{$page_links.page_count} 页      

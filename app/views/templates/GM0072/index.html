@@ -53,8 +53,7 @@
 {$headscript}
 </head>
 <body>
-<div class="body">
-  <div class="wrap page-active">
+
     <div class="index-wrap">
       {include file="./_header.html"}
       <section> 
@@ -77,7 +76,7 @@
                <li class="bg" id="xx">
                   <div class="square bg"></div>
                  <div class="in_textbox clearfix">
-                 <div class="in_title">{$article.title}</div>
+                 <div class="in_title"><a href="{$article.link}">{$article.title}</a></div>
                  <div class="in_data">{$article.pubtimestamp|date_format:"%d "}/{$article.pubtimestamp|date_format:"%m "}</div>
                  </div>
               </li>
@@ -103,9 +102,7 @@
         {/if} 
 {/foreach}
       </section>
-    <footer class="foot" ><a class="back-top">∧</a>{$footprint}</footer></div>
-    </div>
-  </div>
+    <footer class="foot" ><a class="back-top">∧</a>{$footprint}</footer>
   {$footscript}
   </div>
 </body>

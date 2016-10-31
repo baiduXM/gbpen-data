@@ -221,21 +221,22 @@ img{border: none;}
 .pro_det{height: auto;overflow: hidden;}
 .pro_det h5.te{color: #00ffff;font: 18px/24px "微软雅黑";text-align: center;width: 100%;max-height: 48px;overflow: hidden;}
 .pro_det h5 a{color: #00ffff;font: 14px/24px "微软雅黑";}
-.game163{ position: relative;overflow: hidden; width: 532px;margin: 15px auto;}
-.game163 .bigImg{ height: 484px; position: relative;}
-.game163 .bigImg li a{width: 532px;height: 484px;overflow: hidden;display: table-cell;text-align: center;vertical-align: middle;}
-.game163 .bigImg li a img{max-width:100%;max-height:100%;}
+.focusBox{ position: relative;overflow: hidden; width: 532px;margin: 15px auto;}
+.focusBox .bigImg{ width: 532px !important; position: relative;height: 484px !important;}
+.focusBox .bigImg li{width: 532px !important;height: 484px;overflow: hidden;display: table-cell;text-align: center;vertical-align: middle;}
+.focusBox .bigImg li img{max-width:100%;max-height:100%;display: block;margin: 0 auto}
 
-.game163 .smallScroll{width: 532px;height: 99px;background:rgba(0,255,255,.2); ;position: absolute;bottom: 0}
-.game163 .sPrev{float: left; display: block; width: 24px; height: 44px; text-indent: -9999px; background: url(../images/sprev_next.png) no-repeat 0 center;position: absolute;top: 50%;left: 27px;margin-top: -22px;}
-.game163 .sNext{float: right; display: block; width: 24px; height: 44px; text-indent: -9999px; background: url(../images/sprev_next.png) no-repeat right center;position: absolute;top: 50%;right: 27px;margin-top: -22px;}
 
-.game163 .smallImg{width: 390px;overflow: hidden;margin: 7px auto;}
-.game163 .smallImg ul{ height:85px;width: 390px; overflow: hidden;}
-.game163 .smallImg li{ float: left;width:92px; cursor:pointer;  display: inline;margin: 0 3px;}
-.game163 .smallImg ul li a{display: block;width:92px;height:85px;overflow: hidden;}
-.game163 .smallImg ul li a img{max-width:100%;height:79px;display: block;padding: 3px;margin: 0 auto;}
-.game163 .smallImg ul li a:hover img{padding: 2px;border: 1px solid #00ffff;}
+.focusBox .smallScroll{width: 532px;height: 99px;background:rgba(0,255,255,.2); ;position: absolute;bottom: 0}
+.focusBox .sPrev{float: left; display: block; width: 24px; height: 44px; text-indent: -9999px; background: url(../images/sprev_next.png) no-repeat 0 center;position: absolute;top: 50%;left: 27px;margin-top: -22px;}
+.focusBox .sNext{float: right; display: block; width: 24px; height: 44px; text-indent: -9999px; background: url(../images/sprev_next.png) no-repeat right center;position: absolute;top: 50%;right: 27px;margin-top: -22px;}
+
+.focusBox .smallImg{width: 390px;overflow: hidden;margin: 7px auto;}
+.focusBox .smallImg ul{ height:85px;width: 390px; overflow: hidden;}
+.focusBox .smallImg li{ float: left;width:92px; cursor:pointer;  display: inline;margin: 0 3px;}
+.focusBox .smallImg ul li a{display: block;width:92px;height:79px;overflow: hidden;padding: 3px;}
+.focusBox .smallImg ul li a img{max-width:92px;height:79px;display: block;margin: 0 auto;}
+.focusBox .smallImg ul li a:hover{padding: 2px;border: 1px solid #00ffff;}
 
 .pro_det p{height: auto;overflow: hidden; margin-top: 15px;font: 14px/24px "微软雅黑";}
 

@@ -1,0 +1,64 @@
+<div class="header">
+    <div class="head">
+    <div class="logo"><a href="{$site_url}"><img src="{$logo}" alt=""></a></div>
+        <div class="search">
+            <form action="{$search_action}" method="GET">
+                <div class="sinp"><input type="text" name="s" value="请输入搜索关键字" /></div>
+                <input type="submit" class="sbtn" value="">
+            </form>
+        </div>
+    </div>
+</div>
+<div class="menu">
+    {$limit = 7}
+    {if $navs|count lt $limit}{$limit = $navs|count}{/if}
+    <ul id="nav" class="nav">
+      <li class="nLi on"  style="width:{100/($limit+1)}%">
+        <h3><a href="{$site_url}">网站首页</a></h3>
+      </li>
+        {foreach name=navs item=nav from=$navs}
+        <li class="nLi {if $nav.current}on{/if}" style="width:{100/($limit+1)}%">
+            <h3>
+                <a href="{$nav.link}">{$nav.name}</a>
+            </h3>               
+            {if $nav.childmenu}
+              <div class="sub">
+                <ul>
+                    {foreach key=key item=nav_list from=$nav.childmenu}
+                    <li class="{if $nav.current}current{/if}"><a href="{$nav_list.link}">{$nav_list.name}</a></li>
+                    {/foreach}
+                </ul>                
+              </div>
+
+            {/if}
+        </li>
+        {if $nav@index+1 gte $limit}{break}{/if}
+        {/foreach}
+
+    </ul> 
+</div>
+<div class="banner">
+  <div id="slideBox" class="slideBox">
+    <div class="hd">
+      <ul>
+        {foreach item=slidepic from=$global.slidepics}
+          <li></li>                     
+        {/foreach}           
+                             
+      </ul>
+    </div>
+    <div class="bd">
+      <ul>
+        {foreach item=slidepic from=$global.slidepics}
+          <li><a href="{$slidepic.link}"><img src="{$slidepic.image}"></a></li>                    
+        {/foreach} 
+      </ul>
+    </div>
+    <a class="prev" href="javascript:void(0)"></a>
+    <a class="next" href="javascript:void(0)"></a>        
+  </div>  
+</div>  
+
+
+
+  

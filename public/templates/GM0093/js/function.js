@@ -6,7 +6,7 @@ $(document).ready(function(){
 		effect:"leftLoop", 
 		autoPage:true,//自动分页
 		autoPlay:false,
-		interTime:6000 //自动播放
+		interTime:3500 //自动播放
 	});
 	$("#logodiv").height($("#logodiv").width());
 	if($('#logoimg').height() < $("#logodiv").height()){

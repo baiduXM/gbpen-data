@@ -1,0 +1,174 @@
+body{ color:#6f9300; font-family:Microsoft Yahei,Arial, Helvetica, sans-serif;background: #fff;}
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,input,textarea,div{margin:0;padding:0; list-style:none; line-height:24px; font-size:12px; font-weight:normal}
+body,div,ul,li,dl,dt,dd{ font-size:12px;}
+.clearfix:after { content:'\20'; display:block; height:0; clear:both; }
+.clearfix { *zoom:1; font-size:0px;}
+a{ color:#6f9300; text-decoration:none}
+a:hover{ color:#000} 
+img{ border:none;}
+.c{ clear:both}
+
+.wrapper{width:1003px; margin:0 auto; }
+
+
+display:block; white-space:nowrap; text-overflow:ellipsis; overflow:hidden;
+strong{display: block;margin: 0 auto;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+
+
+
+
+
+
+.header_bg{ background:url(../images/bj.jpg) top center repeat-x; height:85px; width:100%}
+
+#header h1{width:400px;height:85px;float:left; position:relative; }
+#header h1 a{display:block;height:85px;width:400px; position:absolute; bottom:0px; left:0;}
+#header h1 img{max-width:400px; max-height:85px; position:absolute; top:0; left:0; right:0; bottom:0; margin:auto}
+
+
+
+.search{ float:right; margin-top:25px;}
+.search_area{ background:url(../images/ser_bg.jpg); width:153px; height:26px; line-height:26px; float:left; border:none; color:#999; text-indent:24px; }
+.search_btn{ background:#5d7b01; width:44px; height:26px; border:none; float:left; position:relative; left:0px; top:0px; color:#e7fdaa}
+
+
+
+
+
+#nav ul li p{height:31px; line-height:31px; overflow:hidden }
+
+.nav_bg{ background:url(../images/nav_bj.jpg) top center repeat-x; height:31px; width:100%;}
+#nav{ width:1003px;  margin:0 auto; }
+#nav ul li{ float:left;height:31px; line-height:31px; color:#e7fdaa; background:url(../images/nav_r.jpg) right center no-repeat }
+#nav ul li a{ font-size:12px; color:#e7fdaa; padding: 0 20px;  font-weight:bold; display:block; text-align:center}
+#nav ul li a:hover{ color:#000}
+
+#nav ul li .cc{background:#5d7902 ;height:40px; line-height: 40px;display: none; text-align:center; width:100%; position:relative; z-index:100; margin-top:0px; }
+#nav ul li .cc:hover{}
+#nav ul li .cc a{width:92%; margin:auto;color:#fff; padding:0 4%; overflow:hidden; height:40px; line-height:40px;}
+#nav ul li .cc a:hover{ text-decoration:underline;color:#fff; }
+
+
+
+
+
+
+
+
+#banner{width:993px; border:#96c900 5px solid; margin:8px auto 0; height:309px; overflow:hidden}
+
+
+
+
+#vdeio{width:315px; float:left; margin-top:8px;}
+#vdeio_vde{background:url(../images/index_viobj.jpg) top repeat-x; height:154px; padding:0 5px 5px}
+
+#null{ width:22px; float:left; margin-top:8px;}
+
+
+
+
+
+#news_t{width:315px; float:left; margin-top:16px; margin-right:22px; display:inline}
+#news_t .title{ height:31px; }
+#news_t .title h2 b{ color:#85a61b; font-size:19px; font-weight:normal; margin-right:5px;}
+#news_t .title h2{font-size:14px; color:#769008; height:29px; overflow:hidden}
+#news_t .inner{ height:129px; overflow:hidden}
+
+#news{ background:url(../images/newsbj.jpg) bottom repeat-x;}
+
+ul.newslist{ margin-top:5px;}
+ul.newslist li{background:url(../images/news_tb.jpg) left no-repeat; text-indent:20px; text-align:left; line-height:25px; height:25px; overflow:hidden; display:block}
+
+ul.newslist li a{ line-height:25px; height:25px; display:block}
+ul.newslist li a:hover{background:#6f9300 ;color:#000000; line-height:25px; height:25px;}
+ul.newslist li span{float:right;  text-align:right; line-height:25px; margin-right:5px;}
+
+#about{width:490px; float:left; margin-top:16px;margin-right:22px; display:inline}
+#about .title{ height:31px; }
+#about .title h2 b{ color:#85a61b; font-size:19px; font-weight:normal; margin-right:5px;}
+#about .title h2{font-size:14px; color:#769008; height:29px; overflow:hidden}
+
+
+#center_photo2 .title{ height:31px; }
+#center_photo2 .title h2 b{ color:#85a61b; font-size:19px; font-weight:normal; margin-right:5px;}
+#center_photo2 .title h2{font-size:14px; color:#769008}
+
+
+
+
+
+#pictype{width:154px; float:left; margin-top:10px;}
+
+#about_name{margin-top:5px; height:125px; overflow:hidden}
+
+#pictype_bj{background:url(../images/pictypebj.jpg) top repeat-x; height:130px;}
+#pictype .title{ width:154px; height:31px; line-height:31px; background:url(../images/index_pictype.jpg) top center no-repeat; color:#fff; text-indent:15px; overflow:hidden}
+
+ul.pictype{ height:122px; overflow:hidden}
+ul.pictype li{ line-height:23px; text-align:left; width:90%; margin:auto; color:#FFFFFF; border-bottom:#f0f0f0 1px dashed;height:23px; overflow:hidden}
+ul.pictype li a{color:#FFFFFF;background:url(../images/typetb.jpg) left no-repeat; padding-left:15px; line-height:23px; height:23px; overflow:hidden}
+ul.pictype li a:hover{color:#000000;}
+
+
+#center_photo2{ width:1003px; margin:auto; margin-top:10px;}
+#center_photo2 .inner{ margin-top:20px; height:167px; overflow:hidden}
+#center_photo2 ul li{ text-align:center; width:142px; overflow:hidden; float:left; margin-right:15px;}
+#center_photo2 ul li .pic{width:140px; height:140px; overflow:hidden;border:solid 1px #CCC;}
+#center_photo2 ul li .pic img{ display:block}
+
+
+#foot{width:1003px; margin:0 auto 15px; background:#dcecab; color:#6f9300; padding-bottom:25px;}
+.bottom{color:#6f9300; text-align:center; padding-top:15px;}
+.bottom a{color:#6f9300;}
+.bottom a:hover{color:#6f9300; text-decoration:underline;}
+.links{width:1003px; margin:15px auto 0;  background:#dcecab; text-align:center;  line-height:35px; text-indent:24px; border-bottom:1px double #fff}
+.links .title{ font-size:13px; font-weight:bold;}
+.links a{ padding:0 7px; font-weight:normal}
+.links a:hover{ color:#000}
+
+
+
+
+
+
+.sidebar{ width:267px; float:left;}
+
+.main{ width:714px; float:right}
+.alefttitle{ height:31px; border-bottom:3px solid #93c901; line-height:31px; color:#85a61b;font-size:14px; overflow:hidden}
+.alefttitle b{color:#85a61b; font-size:19px; font-weight:normal; margin-right:5px;}
+
+.article img{ max-width:700px;}
+
+.curmb{border-bottom:3px solid #93c901; height:31px; line-height:31px;color:#85a61b; display:block}
+.curmb h2{ width:50%; float:left; height:31px; line-height:31px;color:#85a61b;font-size:14px;}
+ .curmb h2 b{color:#85a61b; font-size:19px; font-weight:normal; margin-right:5px;}
+.curmb span{ float:right;color:#85a61b; font-size:12px;}
+.curmb span a{ color:#85a61b}
+
+
+.subnav { width:267px;   overflow:hidden}
+
+.subnav ul li a:hover{ color:#94ca02}
+
+
+
+
+.subnav .first a{  border-bottom: 1px dashed #6f9300; color: #333; display: block; height: 32px;  line-height: 32px;   transition:all 0.5s ease-in-out;overflow:hidden;background:url(../images/typetb.jpg) no-repeat 5px; padding-left:19px; width:100%; }
+
+
+.subnav .first a:hover{ background:#6f9300 url(../images/typetb.jpg) no-repeat 5px; color:#000}
+
+
+
+ul.second li a.seconda{   float:left; display:inline;  padding-left:28px; display:block;height:32px; line-height:32px; background:none}
+
+
+ul.third li a.thirda{ border-bottom:dashed 1px #6f9300;  float:left; display:inline;  padding-left:40px; display:block;height:32px; line-height:32px; background:none}
+
+
+#ppr{ width:267px; background:#6f9200; margin-top:25px; padding-bottom:10px;}
+#ppr .title{ color:#fff; font-size:15px; text-indent:18px; height:43px; line-height:43px;}
+
+#ppr .inner{ width:250px; height:250px; overflow:hidden; margin-left:8px;}
+#ppr .inner img{ display:block}

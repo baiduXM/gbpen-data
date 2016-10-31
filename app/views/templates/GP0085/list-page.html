@@ -42,7 +42,7 @@
 		{foreach item=nav from=$posnavs}
 		><a href="{$nav.link}">{$nav.name} </a>
 		{/foreach}
-		</strong>{$list.name}</h2>
+		</strong>{$posnavs[0].name}</h2>
 
 		<div class="about_text1" style="padding: 0 18px;">
 			{$list.content|unescape:"html"}

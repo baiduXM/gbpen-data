@@ -31,3 +31,6 @@
 @media screen and (min-width: 480px) and (max-width: 640px) {
 	.swiper-nav span {cursor: pointer;display: block;text-align: center;   font-size:1.1em; line-height:1.1em } 
 }
+/*搜索*/
+.search{width: 100%;height: auto;overflow: hidden;text-align: center;font-size: 16px;color: #8d8d8d;line-height: 28px;margin: 10px 0;}
+.search mark{background: none;font-size: 18px;color: #b1b930;}

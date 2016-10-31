@@ -1,0 +1,14 @@
+<div class="banner">
+    <ul class="picture">
+        {foreach item=pic from=$global.picture}
+            <li><a href="{$pic.link}"><img src="{$pic.image}"></a></li>
+        {/foreach}
+    </ul>
+    <div class="dot">
+        <ol>
+            {foreach item=pic from=$global.picture}
+                <li></li>
+            {/foreach}
+        </ol>
+    </div>
+</div>

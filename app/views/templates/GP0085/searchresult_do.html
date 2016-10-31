@@ -49,9 +49,9 @@
             {else}
 			<ul class="module_news">
 			<div class="sear_tit">以下是您搜索的关键字“{$search.keyword}”，搜索的结果有{$search.total}条</div>
-			{foreach name=article item=article from=$list.data}
-			    <li><a href="{$article.link}"><span class="date">[{$article.pubtimestamp|date_format:'%Y-%m-%d'}]</span>{$article.title}</a></li>
-			{/foreach}
+			{foreach name=article item=article from=$search.data}<!--search_content_start-->
+			    <li><a href="search_$link"><span class="date">[{$article.pubtimestamp|date_format:'%Y-%m-%d'}]</span>search_$title</a></li>
+			<!--search_content_end-->{/foreach}
 			</ul>
 			{/if}
 			

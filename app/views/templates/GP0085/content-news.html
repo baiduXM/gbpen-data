@@ -39,16 +39,16 @@
     <div class="nyright">
         <h2 class="nyabout_top"><strong class="location">当前位置
         {foreach item=nav from=$posnavs}
-        ><a href="{$nav.link}">{$nav.name} </a>
+        ><a href="{$nav.link}">{$nav.name}</a>
         {/foreach}
-        </strong>{$article.category.name}</h2>
+        </strong>{$posnavs[0].name}</h2>
 
         
 
         <div class="main_right_con" >
             <h1 class="inner_news_tit">{$article.title}</h1>
             <h2 class="inner_news_time">{$article.pubdate}</h2>
-            <div class="about_text">
+            <div class="about_text1">
                 {$article.content|unescape:"html"}
             
                 <div style="height:30px;overflow: hidden; padding-top:7px;"> 

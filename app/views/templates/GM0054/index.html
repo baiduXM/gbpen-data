@@ -60,7 +60,7 @@
             	<ul class="newstlist">
 				{foreach name=mIndexCat_data item=mIndexCat_data from=$mIndexCat.data}
                 	<li>
-                    <dt class="title1"><span class="time">post time: {$mIndexCat_data.pubdate}</span>{$mIndexCat_data.title}</dt>
+                    <dt class="title1"><a href="{$mIndexCat_data.link}"><span class="time">post time: {$mIndexCat_data.pubdate}</span>{$mIndexCat_data.title}</a></dt>
                     <dd class="nr">{$mIndexCat_data.description}<dd>
                     </li>
 					{if $mIndexCat_data@index+1 == 4}{break}{/if}

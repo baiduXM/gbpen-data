@@ -15,7 +15,7 @@
 
 .content{ width:100%; position:relative; }
 
-.mainbox { width:94%; margin:auto}
+.mainbox { width:100%; margin:auto}
 
 .innerbox{  width:100%; margin-top:20px; margin:auto;}
 
@@ -129,7 +129,8 @@ ul.news-list2 li a span{  font-size:1em; font-weight:normal; float:left; text-al
 .font dl.big,.font-big{ font-size:1.3em;}
 .font dl.normal,.font-normal{ font-size:1.0em;}
 .font dl.small,.font-small{ font-size:0.9em;}
-.edite{ height:auto; overflow:hidden; padding:15px; text-align:left;}
+.edite{ height:auto; overflow:hidden; padding:10px;  text-align:left;}
+.elegant-aero{ padding:0; width: 100%; }
 
 ul.newslist1{ margin:0px; padding:7px; position:relative}
 ul.newslist1 li{ height:90px; margin:4px 0px; display:-webkit-box;display:-moz-box;display:-o-box;display:-ms-box;display:box; width:100%;}

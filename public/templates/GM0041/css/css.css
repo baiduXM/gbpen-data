@@ -135,7 +135,8 @@ ul.newslist1 li .list{-webkit-box-flex:1.0;-moz-box-flex:1.0;-o-box-flex:1.0;-ms
 ul.newslist1 li .list dt{ height:24px; overflow:hidden; border-bottom:1px dashed #ccc; white-space: normal;text-overflow: ellipsis; font-size:1.15em;}
 ul.newslist1 li .list dd{ height:38px; padding-top:6px; line-height:19px; overflow:hidden;}
 
-.fixed-top{ width:100%; position: absolute; top:0px; left:0px; z-index:99999; text-align:center;  height:35px; line-height:35px; font-size:1.15em; text-indent:0px; background:rgba(0,0,0,.1); border:1px dotted #000;}
+/*.fixed-top{ width:100%; position: absolute; top:0px; left:0px; z-index:99999; text-align:center;  height:35px; line-height:35px; font-size:1.15em; text-indent:0px; background:rgba(0,0,0,.1); border:1px dotted #000;}*/
+.fixed-top{ width:100%; position: relative; top:0px; left:0px; z-index:99999; text-align:center;  height:35px; line-height:35px; font-size:1.15em; text-indent:0px; background:rgba(0,0,0,.1); border:1px dotted #000;}
 .ny-wrap{ margin:35px auto 0px;}
 .back{ width:40px;  height:35px; overflow:hidden; background:rgba(255,255,255,0.3); text-indent:0px;  float:left; display:inline;font-size:0.8em;}
 .back a{  display:block;}
@@ -198,3 +199,6 @@ ul.relatelist{ margin:0px; padding:0px;}
 ul.relatelist li{ width:33%; float: left; display:inline; height:auto; overflow:hidden;}
 ul.relatelist li div{ margin:7px; height:auto; overflow:hidden;}
 
+/*搜索*/
+.search{width: 80%;text-align: center; height: auto;overflow: hidden;text-align: center;font-size: 16px;color: #8d8d8d;line-height: 28px;margin: 10px auto;}
+.search mark{background: none;font-size: 18px;color: #0043A6;}

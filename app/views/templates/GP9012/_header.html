@@ -1,4 +1,4 @@
-
+﻿
 <div id="header">
   <div class="wrapper clearfix" >
     <h1><img src="{$logo}" alt="{$title}" /></h1>
@@ -15,9 +15,9 @@
 </div>
 <div id="nav">
   <ul class="clearfix wrapper">
-    {$limit = 8}
+    {$limit = 10}
     {if $navs|count lt $limit}{$limit = $navs|count}{/if}
-    <li class="nav1" style="width:{100/($limit+1)}%"> <a href="{$site_url}">Home page
+    <li class="nav1" style="width:{100/($limit+1)}%"> <a href="{$site_url}">Home 
 </a> </li>
     {foreach name=navs item=nav from=$navs}
     <li class="fl {if $nav.current} current{/if} nav1" style="width:{100/($limit+1)}%"> <a href="{$nav.link}">{$nav.en_name}</a>

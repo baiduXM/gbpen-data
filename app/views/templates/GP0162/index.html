@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script type="text/javascript">
+    // Ìø×ªÊÖ»úÒ³Ãæ
+    {if $site_another_url}
+        if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+            location.href = '{$site_another_url}';
+        }
+    {/if}
+    </script>
+
+<!--  -->
+<meta name="keywords" content="{$keywords}"/>
+<meta name="description" content="{$description}"/>
+<link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Language" content="zh-CN">
+
+<link rel="stylesheet" type="text/css" href="{$site_url}css/style.css"/>
+<script type="text/javascript" src="http://common.mn.sina.com.cn/public/resource/lib/jquery.jcarousellite.js"></script>
+<script type="text/javascript" src="{$site_url}js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.js"></script>
+<script type="text/javascript" src="{$site_url}js/function.js"></script>
+<script type="text/javascript" src="{$site_url}js/index.js"></script>
+<script type="text/javascript" src="{$site_url}js/html5.js"></script>
+<title>{$title}</title>
+{$headscript}
+</head>
+<body>
+	<div id="wrapper">
+		{include file='./_header.html'}
+		<div class="content">
+			<div class="top">
+				<div class="mountain-left mountain"><img src="{$site_url}images/mountain-01.jpg"></div>
+				<div class="mountain-right mountain"><img src="{$site_url}images/mountain-02.jpg"></div>
+				<div class="side-top">
+					<div class="side-hd">
+						<h2 class="hd-name"><span>{$index.about.name}</span></h2>
+						<h3 class="hd-name"><span>{$index.about.en_name}</span></h3>
+						<ul class="stick">
+							<li class="stick-left"><em></em></li>
+							<li class="stick-right"><em></em></li>
+						</ul>
+					</div>
+					<div class="side-about"><b></b>
+						<div class="images"><i><img src="{$index.about.image}"></i></div>
+						<div class="images about-image"><i><img src="{$index.about.image}"></i></div>
+						<div class="text">
+							<article>
+								{$index.about.description}
+							</article>
+							<a href="{$index.about.link}" class="more">查看更多 +</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="mid">
+				<div class="side-hd">
+					<h2 class="hd-name"><span>{$index.product.name}</span></h2>
+					<h3 class="hd-name"><span>{$index.product.en_name}</span></h3>
+					<ul class="stick">
+						<li class="stick-left"><em></em></li>
+						<li class="stick-right"><em></em></li>
+					</ul>
+				</div>
+				<div class="side-pro">
+					<ul class="latest">
+		    			{foreach item=article from=$index.product.data}
+		    				<li class="latest-0{$article@index+1}"><a href="{$article.link}">
+		    					<i><img src="{$article.image}"></i>
+		    					<p class="latest-list"><span>{$article.title}</span><em></em></p>
+		    				</a></li>
+		    				{if $article@index+1 eq 6}{break}{/if}
+		    			{/foreach}
+		    		</ul>
+	    			<a href="{$index.product.link}" class="more center">查看更多</a>
+				</div>
+			</div>
+			<div class="nether">
+				<div class="side-nether">
+					<div class="side-hd">
+						<h2 class="hd-name"><span>{$index.case.name}</span></h2>
+						<h3 class="hd-name"><span>{$index.case.en_name}</span></h3>
+						<ul class="stick">
+							<li class="stick-left"><em></em></li>
+							<li class="stick-right"><em></em></li>
+						</ul>
+					</div>
+					<div class="side-case">
+						<div class="bookmark">
+							<ol>
+								{foreach item=case from=$index.case.data}
+								<li class="num-0{$case@index+1}"><a href="javascript:void(null)">
+									<div class="mark-left"><i></i><span>{$case.title}</span></div>
+									<div class="mark-right"><i></i><span>{$case.title}</span></div>
+								</a></li>
+								{if $case@index+1 eq 3}{break}{/if}
+								{/foreach}
+							</ol>
+						</div>
+						<div class="focus">
+							<ul>
+								{foreach item=case from=$index.case.data}
+								<li>
+									<i><img src="{$case.image}"></i>
+									<div class="explain">
+										<h2>{$case.title}</h2>
+										<p>{$case.description}</p>
+										<a href="{$case.link}" class="more">查看更多</a>
+									</div>
+								</li>
+								{if $case@index+1 eq 3}{break}{/if}
+								{/foreach}
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="bottom">
+				<div class="side-news">
+					<div class="bottom-hd">
+						<div class="stick-01"><em></em></div>
+						<h2>{$index.news.name}</h2>
+						<div class="stick-02"><em></em></div>
+						<a href="{$index.news.link}">MORE+</a>
+					</div>
+					<div class="press-hd">
+						<i><img src="{$index.news.data[0].image}"></i>
+						<div class="press-text"><a href="{$index.news.data[0].link}">
+							<h3>{$index.news.data[0].title}</h3>
+							<p>{$index.news.data[0].description}
+							<span>[查看详细]</span></p>
+						</a></div>
+					</div>
+					<ul class="press">
+						{foreach item=news from=$index.news.data}
+							{if $news@index+1 gt 1}
+							<li><a href="{$news.link}">
+                                    <time datetime="{$news.pubtimestamp|date_format:'%Y-%m-%d'}">[{$news.pubtimestamp|date_format:'%Y-%m-%d'}]</time>
+                                    {$news.title}
+                                </a></li>
+								{if $news@index+1 eq 4}{break}{/if}
+                        	{/if}
+						{/foreach}
+					</ul>
+				</div>
+				<div class="side-message">
+					<div class="bottom-hd">
+						<div class="stick-01"><em></em></div>
+						<h2>{$index.feedback.name}</h2>
+						<div class="stick-02"><em></em></div>
+						<a href="{$index.feedback.link}">MORE+</a>
+					</div>
+					<form id="message" action="{$index.feedback.posturl}" name="message">
+						<p><label for="name"><img src="{$site_url}images/icon-01.png"></label><input type="text" id="name" name="name" value="姓名 / 公司" placeholder="姓名 / 公司"></p>
+						<p><label for="telephone"><img src="{$site_url}images/icon-02.png"></label><input type="text" id="telephone" name="telephone" value="联系方式" placeholder="联系方式"></p>
+						<p><label for="email"><img src="{$site_url}images/icon-03.png"></label><input type="text" id="email" name="email" value="邮箱" placeholder="邮箱"></p>
+						<p class="demand"><label for="content"><img src="{$site_url}images/icon-04.png"></label><textarea type="text" id="content" name="content" value="请留下您的需求" placeholder="请留下您的需求"></textarea></p>
+						<b><input type="submit" name="button" class="submit" value="提交"><input type="reset" name="button2" class="reset" value="重置"></b>
+					</form>
+				</div>
+			</div>
+		</div>
+		{include file='./_footer.html'}
+	</div>
+</body>
+</html>

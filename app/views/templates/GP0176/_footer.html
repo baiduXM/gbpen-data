@@ -1,0 +1,28 @@
+<div class="tailbg">
+	<div class="tail">
+		<div class="link">	
+			<h3 class="linktit">友情链接</h3>
+			<div class="picScroll f_l">
+				<ul>
+					{foreach key=key item=link from=$global.link}
+						<li>
+							<a href="{$link.link}" target="_blank">
+								<img src="{$link.image}" alt="{$link.title|strip_tags}">
+							</a>
+						</li>	
+					{/foreach}										
+				</ul>
+			</div>	
+		</div>
+		<div class="second_nav w">
+			{foreach key=key item=navs from=$global.second_navs}
+				<a href="{$navs.link}" target="_blank">{$navs.name}</a>  ·
+			{/foreach}	
+		</div>
+		<div class="footer">
+			{$footprint}  
+		</div>
+	</div>
+</div>
+
+{$footscript}

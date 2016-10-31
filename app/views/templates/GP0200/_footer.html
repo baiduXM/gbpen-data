@@ -1,0 +1,24 @@
+<div class="linkbg">
+	<div class="link">
+		友情链接：
+		{foreach key=key item=link from=$global.link}
+			<a href="{$link.link}" target="_blank">{$link.title}</a>| 	
+		{/foreach}	
+	</div>
+</div>
+<div class="tail">
+	<div class="footer">
+		<div class="footer-l">
+			{$footprint} 
+		</div>
+		<div class="footer-r">
+			{foreach key=key item=navs from=$global.second_navs}
+				<a href="{$navs.link}" target="_blank">{$navs.name}</a>  |  
+			{/foreach}	
+			<br/>
+			{$global.cont_way}
+		</div>
+	</div>
+</div>
+
+{$footscript}

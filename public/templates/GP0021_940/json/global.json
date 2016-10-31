@@ -1,0 +1,41 @@
+{
+	"slidepics": {
+		"value": [{
+			"title": "image1",
+			"image": "images/1.jpg",
+			"link": "{site_url}article/1.html"
+		}, {
+			"title": "image2",
+			"image": "images/2.jpg",
+			"link": "{site_url}article/2.html"
+		}, {
+			"title": "image3",
+			"image": "images//3.jpg",
+			"link": "{site_url}article/2.html"
+		}, {
+			"title": "image4",
+			"image": "images/4.jpg",
+			"link": "{site_url}article/2.html"
+		}],
+		"description": "大轮滚图",
+		"type": "images",
+		"config": {
+			"width": 914,
+			"height":325,
+			"limit": 0
+			
+		}
+	},        
+	"contactusfoot":{
+		"value": "XXX有限公司\r 地址：厦门市海沧区东孚镇边坂村\r 电话：13003911139\r 联系人：薛小姐\r",
+		"description": "公共底部的联系方式",
+		"type": "textarea"
+	}	,	
+	"contactus":{
+		"value": "XXX有限公司\r\n 联 系 人：某经理\r\n 固定电话：01234567\r\n移动电话：0592-01234567\r\n传真号码：0592-01234567\r\n电子邮箱1234567@qq.com\r\n联系地址：厦门市思明区洪莲西路31号店面之10瑞景商业广场旁",
+		"description": "左边栏目的联系方式",
+		"type": "textarea"
+	}	
+
+ 
+}

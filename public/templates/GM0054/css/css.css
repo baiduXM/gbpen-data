@@ -36,7 +36,8 @@
 .aboutedite .more1{ height:24px; overflow:hidden;}
 ul.newstlist{ margin:0px; padding:0px;}
 ul.newstlist li{ border:1px solid #bababa; height:auto; overflow:hidden; padding-bottom:5px; margin:6px 0px;}
-ul.newstlist li .title1{ height:30px; line-height:30px; overflow:hidden; border-bottom:1px solid #bababa; padding:0px 7px; padding-left:13px; position:relative; color:#333333}
+ul.newstlist li .title1{ height:30px; line-height:30px; overflow:hidden; border-bottom:1px solid #bababa; padding:0px 7px; padding-left:13px; position:relative; }
+ul.newstlist li .title1 a{display: block;width: 100%;height: 100%;color:#333333}
 ul.newstlist li .title1:before{ content:"·"; position:absolute; left:3px; top:0px; font-size:2.0em; color:#aa0000 }
 ul.newstlist li .time{ float:right; display:inline; font-size:0.8em;}
 ul.newstlist li .nr{ height:42px; line-height:21px; overflow:hidden; color:#6f6f6f; padding:7px 8px 0px;}
@@ -128,4 +129,6 @@ ul.picture2 li{ width:33.3%}
 .aboutedite{ height:193px;overflow:hidden;}
 }
 
-
+/*搜索*/
+.search-text{width: 100%;height: auto;overflow: hidden;text-align: center;font-size: 18px;color: #8a7162;line-height: 30px;margin: 20px 0;}
+.search-text mark{background: none;font-size: 20px;color: #aa0000;}

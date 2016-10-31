@@ -54,10 +54,9 @@ $(function() {
               </div>   
                     
             <div class="deteo">
-            <div class="ny_prodetal tempWrap" >
+            <div class="ny_prodetal" >
 				      <div class="titla_b">{$article.title}</div>
-              {if $article.images|count gt 1}
-              <div id="slideBox3" class="slideBox3" >
+              <div id="slideBox3" class="slideBox3 focusBox" >
                 <div class="bd">
                   <ul>
                   {foreach item=proshowb from=$article.images}
@@ -66,11 +65,9 @@ $(function() {
                   </ul>
                 </div>
                 <a class="prev" href="javascript:void(0)"></a>
-                        <a class="next" href="javascript:void(0)"></a>
+                <a class="next" href="javascript:void(0)"></a>
               </div>
-              {else}
-            	<div class="pimgw2"><img src="{$article.image}" /></div> 
-              {/if}
+
             	<div class="moule_edot">
                 {$article.content|unescape:"html"}
               </div>           
