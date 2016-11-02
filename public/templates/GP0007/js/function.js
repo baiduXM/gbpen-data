@@ -34,8 +34,8 @@ $(document).ready(function(){
 		jQuery(".focusBox").slide({ mainCell:".pic",effect:"fold", autoPlay:true, delayTime:600, trigger:"click"});		
 		jQuery(".slideBoxc").slide({mainCell:".bd ul",autoPlay:true,effect:"leftLoop"});
 		jQuery(".m-slide").slide({ titCell:".tab li", mainCell:".img",effect:"fold", autoPlay:true});
-				
-		$('#prizes .photos-content').jCarouselLite({
+		if($("#prizes").length>0) {
+			$('#prizes .photos-content').jCarouselLite({
 			btnPrev: '#prizes a.photos-prev',
 			btnNext: '#prizes a.photos-next',
 			visible: 4,
@@ -43,5 +43,5 @@ $(document).ready(function(){
 			speed: 1000
 		}).css({visibility:"visible"});					
 
-	
+		}
 });

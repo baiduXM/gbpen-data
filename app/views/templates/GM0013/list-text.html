@@ -80,8 +80,8 @@
             	<ul class="news-list1 nopic">
               {$loop_num=($page_links.current_page-1)*$page_links.per_page+1}
 				{foreach name=article item=article from=$list.data}
-                	<li onclick="javascript:window.location.href='{$article.link}'" class="public_bg1">
-                    <a href="#">
+                	<li class="public_bg1">
+                    <a href="{$article.link}">
                      <div class="news_title clearfix public_bg"><span>{$article.pubdate}</span><div class="No">No{$loop_num++}:</div><b> {$article.title}</b></div>
                       <div class="news_bottom clearfix">
                       <div class="news_content">

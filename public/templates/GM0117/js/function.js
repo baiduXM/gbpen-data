@@ -25,7 +25,6 @@ $(document).ready(function(){
         })		
 		
 	$(".next2 dl .nextright").width($(".next2 dl").width()-$(".next2 dl .nextleft").width()-2)
-	$(".index-wrap").height($(window).height()-$(".fixed").height()-$(".tell-icon").height())
 	$(".class-m").height($(".class").outerHeight()-$(".class-top").outerHeight())
 	var myswiper=$('.indexmenu .scroll-container').swiper({
 			mode:'vertical',
@@ -47,7 +46,6 @@ $(document).ready(function(){
 		$("ul.newslist li .list").width($("ul.newslist li").width()-$("ul.newslist li .date").innerWidth()*2)
 		$(".next2 dl .nextright").width($(".next2 dl").width()-$(".next2 dl .nextleft").width()-2)
 		$(".class-m").height($(".class").outerHeight()-$(".class-top").outerHeight())
-		$(".index-wrap").height($(window).height()-$(".fixed").height()-$(".tell-icon").height())
 		$(".newsn h2, .fg h2").css({
 		"line-height":$(".newsn h2 img").height()+"px"
 		})	
@@ -121,9 +119,8 @@ $(document).ready(function(){
 	})
 		$(".tell-icon .close").click(function(){
 		$(".tell-icon").removeClass("display-block")
-		$(".index-wrap").height($(window).height()-$(".fixed").height())
 	})	
-$(".back-top").click(function(){$(".index-wrap").animate({scrollTop :0}, 800)})
+	$(".back-top").click(function(){$("#quickbar-wrap-body").animate({scrollTop:0},800)})
 	$("#share_btn").click(function(){
 		$(".newsclass").addClass("show")
 		$(".opacity2").show()

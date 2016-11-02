@@ -1,0 +1,26 @@
+<div class="header">
+	<div class="public">
+		<div class="logo">
+			<a href="{$site_url}"><img src="{$logo}"></a>
+		</div>
+		<div class="right_div">
+			<div id="share" class="clearfix">  
+			    <div class="bdsharebuttonbox" data-tag="share_1">	    
+			    	<a class="bds_tqq" data-cmd="tqq"></a> 	
+			        <a class="bds_tsina" data-cmd="tsina"></a> 
+			        <span>分享到：</span>
+			    </div>  
+			</div>  				  
+			<script>  			  
+			    //以下为js加载部分  
+			    with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];  
+			</script> 
+			<div class="sear_box">
+				<form action="{$search_action}" method="GET">
+					<input type="text" name="s" placeholder="搜索" />
+					<input type="submit" />
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

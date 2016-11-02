@@ -1,0 +1,33 @@
+{
+	"slidepics": {
+		"value": [{
+			"title": "banner",
+			"image": "images/aboutny.jpg",
+			"link": "article/1.html",
+			"description": "banner1"
+		}, {
+			"title": "测试图2",
+			"image": "images/nbanner2.jpg",
+			"link": "http://www.baidu.com"
+		},{
+			"title": "测试图3",
+			"image": "images/nbanner5.jpg",
+			"link": "http://www.baidu.com"
+		}],
+		"description": "banner图",
+		"type": "images",
+		"config": {
+			"width": 1920,
+			"height": 380
+		}
+	},
+	"pagenavss": {
+		"value": {},
+		"description": "侧边栏目列表（当前栏目无子栏目时展示的目标栏目）",
+		"type": "list",
+		"config": {
+			"filter": "list,page",
+			"mustchild": true
+		}
+	}
+}

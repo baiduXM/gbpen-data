@@ -57,7 +57,6 @@ if($(this).find(".img_box img").height()<$(this).find(".text_box").height()){
                                         var alimat6 = $(".decurlits");
                                         alimat6.height(heights6);
 	img.src=$(".prolist img").attr("src");
-	$(".index-wrap").height($(".wrap").height())
 	$(".class-m").height($(".class").outerHeight()-$(".class-top").outerHeight())
 	$(".menulist dl").height($(".menulist dl").width())
 	$(".menu").height($(".menulist dl").outerHeight())
@@ -81,7 +80,6 @@ if($(this).find(".img_box img").height()<$(this).find(".text_box").height()){
 			
 			
 	$(".class-m").height($(".class").outerHeight()-$(".class-top").outerHeight())
-	 $(".index-wrap").height($(".wrap").height()+$(".quickbar-tips").height()) 
 	//赖加载
 	
 	});
@@ -163,7 +161,7 @@ $("#daohang,#header_menu,#fixed_menu").click(function(){
 
 	})		
 	//返回顶部开始
-	$(".back-top").click(function(){$(".index-wrap").animate({scrollTop :0}, 800)})
+	$(".back-top").click(function(){$("#quickbar-wrap-body").animate({scrollTop :0}, 800)})
 	$("#share_btn").click(function(){
 		$(".newsclass").addClass("show")
 		$(".opacity2").show()

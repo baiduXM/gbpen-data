@@ -1,0 +1,17 @@
+<div class="foot2">
+  <div class="link2">
+       <ul>
+            {$limit=9}
+            {if $limit gt $navs|count}{$limit=$navs|count}{/if}
+            {foreach item=fnav from=$navs}
+            <li>
+                <a href="{$fnav.link}">{$fnav.name}</a>                 
+            </li>
+            {if $fnav@index+1 eq $limit}{break}{/if}
+            {/foreach}
+         </ul>
+       <p>{$footprint}</p>       
+  </div>
+  <input id="btn1" type="button" value="" />
+</div>
+{$footscript}
