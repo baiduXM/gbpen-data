@@ -45,7 +45,7 @@
                 <div class="conbg">
                 <div class="contents-ny article">
                     <p class="atitle">{$article.title}</p>
-                    <p class="puttime"> 发布时间：{$article.pubtimestamp|date_format:'%Y-%m-%d'} 浏览：94<a href="javascript:history.back(-1)">&lt;&lt;返回</a></p>
+                    <p class="puttime">类别：公司新闻 发布时间：{$article.pubtimestamp|date_format:'%Y-%m-%d'} 浏览：94<a href="javascript:history.back(-1)">&lt;&lt;返回</a></p>
                     <div class="newnr">
                         {$article.content|unescape:"html"}
                     </div>
@@ -61,7 +61,11 @@
             </div>
        </div>
   </div>
+  <div class="foot2">
   {include file='./_footer.html'}
+  <input id="btn1" type="button" value="" />
+  </div>
+  {$footscript}
 </div>
 </body>
 </html>

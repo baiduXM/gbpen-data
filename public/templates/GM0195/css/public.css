@@ -14,7 +14,8 @@ a{ color:#333}
 
 
 .header{ width:100%; height: auto; overflow:hidden;  position:relative;}
-.logo{width:70%; height: auto; overflow:hidden; padding:10px 0; }
+.logo{width:100%; height: auto; overflow:hidden; padding:10px 0; }
+.logo img{max-width: 100%;display: block;margin: 0 auto;}
 .header_menu{  position:absolute; top:10%; -webkit-transform:translate(0,-50%); right:25px; background:#0f0e0d;-webkit-mask-repeat:no-repeat; -webkit-mask-image: url(../icon/zz1.png);-webkit-mask-size:23px auto;width:23px; height:23px;}
 .boxmaind{ width:100%; margin:auto} 
 

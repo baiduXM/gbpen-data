@@ -83,7 +83,9 @@
 
 <div id="slideBox" class="slideBox">
 			<div class="hd">
-				<ul><li></li><li></li><li></li></ul>
+				<ul>{foreach name=slidepics item=slidepic from=$index.slidepics}
+    <li></li>
+      {/foreach}</ul>
 			</div>
 			<div class="bd">
 				<ul>
