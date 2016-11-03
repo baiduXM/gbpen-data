@@ -38,9 +38,9 @@ $(document).ready(function() {
 
 		var scroller  = null;
 		var scrollbar = null;
+		if (document.getElementById("Scroller-1")) {scroller  = new jsScroller(document.getElementById("Scroller-1"), 440, 240);}
+		if (document.getElementById("Scrollbar-Container")) {scrollbar = new jsScrollbar (document.getElementById("Scrollbar-Container"), scroller, false);}
 		
-		scroller  = new jsScroller(document.getElementById("Scroller-1"), 440, 240);
-		scrollbar = new jsScrollbar (document.getElementById("Scrollbar-Container"), scroller, false);
 		
 
 });		
