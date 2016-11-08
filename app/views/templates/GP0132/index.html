@@ -114,7 +114,7 @@
                  <div class="newslist_right">
                       <ul>
                         {foreach item=iarticle from=$index.news.data}
-                          <li><a href="{$index.news.data[{$sum}].link}">{$index.news.data[{$sum}].title}{$sum}</a></li>
+                          <li><a href="{$index.news.data[{$sum}].link}">{$index.news.data[{$sum}].title}</a></li>
                            {$sum=$sum+1}
                           {if $iarticle@index+1 eq 3}{break}{/if}
                         {/foreach}

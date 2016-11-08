@@ -1,0 +1,16 @@
+        <div class="public footer">
+        <div class="footmenu">
+        <p>
+            {foreach name=navs item=nav from=$navs}
+				<a href="{$nav.link}" >{$nav.name}</a> |
+    		{/foreach}
+    	</p>
+    	<p>
+            {foreach name=alink item=alink from=$global.alinks}
+				<a href="{$alink.link}" >{$alink.title}</a> |
+    		{/foreach}
+    	</p>
+    	</div>
+        <div class="footword">{$footprint}
+        </div>
+{$footscript}

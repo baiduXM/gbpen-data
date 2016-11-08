@@ -1,8 +1,3 @@
-jQuery(function () {
-        if (jQuery("body div").hasClass("article")) {
-            jQuery('html,body').animate({ scrollTop: jQuery('.article').offset().top }, 600);
-        }
-    });
 
 
 

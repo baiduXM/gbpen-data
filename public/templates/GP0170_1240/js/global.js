@@ -1,3 +1,14 @@
+
+jQuery(function () {
+        if (jQuery("body div").hasClass("ny-con")) {
+            jQuery('html,body').animate({ scrollTop: jQuery('.ny-con').offset().top }, 600);
+        }
+    });
+
+
+
+
+
 $(document).ready(function(){
 			jQuery(".nav").slide({ 
 				type:"menu",// 效果类型，针对菜单/导航而引入的参数（默认slide）

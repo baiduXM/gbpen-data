@@ -128,7 +128,9 @@ white-space: nowrap; word-break: keep-all; display:block; }
 .dtl25 .dtl .p_titleas {
     padding: 0 15px;
     font-size: 18px;
-    line-height: 1.2;
+    line-height:30px;
+        height: 150px;
+     overflow: hidden;
     color: #fff;
     -webkit-transition-delay: 0.1s;
     -moz-transition-delay: 0.1s;

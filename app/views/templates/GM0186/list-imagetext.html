@@ -101,14 +101,9 @@
                 {/foreach}
               </ul>
               <div class="pagenum">
+                <span>共 {$page_links.page_count} 页</span>
                 <a href="{$page_links.prev_link}">上一页</a>
-                {foreach item=near_link key=near_page from=$page_links.nears_link}
-                  {if $near_page == $page_links.current_page}
-                    <a class="number on">{$near_page}</a>
-                  {else}
-                    <a  class="number" href="{$near_link}">{$near_page}</a>
-                  {/if}
-                {/foreach}
+                <a class="number on">{$page_links.current_page}</a>
                 <a href="{$page_links.next_link}">下一页</a>
               </div>
             </div>

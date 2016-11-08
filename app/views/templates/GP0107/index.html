@@ -9,7 +9,8 @@
         }
     {/if}
 </script>
-
+<!--  -->
+<title>{$title}</title>
 <meta name="keywords" content="{$keywords}"/>
 <meta name="description" content="{$description}"/>
 <link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
@@ -19,8 +20,6 @@
 <script type="text/javascript" src="{$site_url}js/jquery-1.9.1.min.js"></script>
 <script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.js"></script>
 <script type="text/javascript" src="{$site_url}js/function.js"></script>
-<title>{$title}</title>
-
 <script language="javascript">
 $(function() {
     if (window.PIE) {
@@ -122,7 +121,7 @@ $(function() {
                             <div class="n_word">
                             	  <div class="n_title"><a href="{$news.link}">{$news.title}</a></div>
                                 <div class="huiyi_edit" >
-                                  <span class=" h3_l" data-limit="30">{$news.description}</span><Span><a href="{$news.link}">[详细]</a></Span>
+                                  <span class=" h3_l" data-limit="30">{$news.description}</span><span><a href="{$news.link}">[详细]</a></span>
                                 </div>                                
                             </div>
                           {/if}
@@ -146,12 +145,11 @@ $(function() {
                       <div class="n_img n_img1"><a href="{$index.about_us.link}">
                       <img src="{$index.about_us.image}" />
                       </a></div>
-                      <span class="anputt h3_l" data-limit="90">{$index.about_us.description}<span><a href="{$index.about_us.link}">[详细]</a></span>
-                      </span>                              
+                      <span class="anputt h3_l" data-limit="90">{$index.about_us.description}</span>                            
                     </div>                
                 </div>
                 <div class="contact fr">
-                	<div class="prod_titleb"><span><a href="{$index.about_us.link}">+<i>MORE</i></a></a></span>{$index.contact_us.name} <b>{$index.contact_us.en_name} </b></div>
+                	<div class="prod_titleb"><span><a href="{$index.contact_us.link}">+<i>MORE</i></a></a></span>{$index.contact_us.name} <b>{$index.contact_us.en_name} </b></div>
                    <div class="lianxibg">
                     联系人：{$contact.name}<br />
                     电 话：{$contact.telephone}<br />
@@ -162,7 +160,7 @@ $(function() {
                 </div>
             </div>
             <div class="case">
-            	<div class="prod_titlec"><span><a href="{$index.about_us.link}">+<i>MORE</i></a></span>● {$index.case.name} <b> \ {$index.case.en_name}</b></div>
+            	<div class="prod_titlec"><span><a href="{$index.case.link}">+<i>MORE</i></a></span>● {$index.case.name} <b> \ {$index.case.en_name}</b></div>
               <div class="inner">
         
 <!-- 滚动  -->    

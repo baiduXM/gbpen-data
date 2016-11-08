@@ -132,12 +132,12 @@
                 <img src="{$article.image}">
                 <div class="news-r">
                   <h5>{$article.title}</h5>
-                  <span>日期：{$article.pubdate}</span>
+                  <span>日期：{$article.pubtimestamp|date_format:'%Y-%m-%d'}</span>
                   <p>{$article.description}</p>
                 </div>
               </a>
             </li>
-            {if $article@index+1 == 3}{break}{/if}
+            {if $article@index+1 == 4}{break}{/if}
             {/foreach}      
           </ul>
         </div>

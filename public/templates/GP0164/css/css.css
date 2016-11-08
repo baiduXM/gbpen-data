@@ -20,7 +20,7 @@ img{border: none;}
 
 .searchform{width: 1002px;height: 40px;overflow: hidden;position: absolute;bottom: 147px;left: 50%;margin-left: -501px;}
 form.search{width: 261px;height: 29px;overflow: hidden;position: absolute;right: 4px;bottom: 15px;}
-form.search input.text{width: 218px;height: 27px;overflow: hidden;background: #fff;border: 1px solid #ccc;color: #999;font: 12px/27px "微软雅黑";padding-left: 10px;;float: left;
+form.search input.text{width: 216px;height: 27px;overflow: hidden;background: #fff;border: 1px solid #ccc;color: #999;font: 12px/27px "微软雅黑";padding-left: 10px;;float: left;
 				border-radius: 3px 0 0 3px;-webkit-border-radius: 3px 0 0 3px;-moz-border-radius: 3px 0 0 3px;behavior:url(PIE.htc);}
 form.search input.submit{width: 31px;height: 29px;overflow: hidden;background: url(../images/submit.png) no-repeat;border: 0;float: left;cursor: pointer;}
 
@@ -41,8 +41,8 @@ form.search input.submit{width: 31px;height: 29px;overflow: hidden;background: u
 .slider{position:relative; overflow:hidden;height:400px;}
 .slider .banner{position: absolute;left: 50%;margin-left: -960px;}
 .slider .bd{ position:relative; z-index:0;}
-.slider .bd li{ height:400px; overflow:hidden;}
-.slider .bd li img{ display:block;  }
+.slider .bd li{ height:400px; width: 1920px; overflow:hidden;}
+.slider .bd li img{ display:block;width: 1920px;}
 .slider .hd{ width:100%;position:absolute; z-index:1; bottom:16px; left:0; height:14px; line-height:14px; }
 .slider .hd ul{ text-align:center;  }
 .slider .hd ul li{ cursor:pointer; display:inline-block; *display:inline; zoom:1; width:14px; height:14px; margin:0 10px; 
@@ -58,7 +58,7 @@ form.search input.submit{width: 31px;height: 29px;overflow: hidden;background: u
 .aboimg a{width: 100%;height: 100%;overflow: hidden;display: block;}
 .aboimg a img{max-width: 100%;max-height: 100%;overflow: hidden;display: block;margin: auto;}
 .aboedit{height: 120px;overflow: hidden;margin: 15px 0 20px;position: relative;}
-.abodet{height: 120px;overflow: hidden;}
+.abodet{height: 120px;overflow: hidden; line-height: 24px;}
 .more{display: block;position: absolute;right: 10px;bottom: 0;height: 24px;overflow: hidden;}
 .more:hover{color: #f32727;}
 
@@ -228,9 +228,9 @@ form.search input.submit{width: 31px;height: 29px;overflow: hidden;background: u
 
 .focus { position: relative; width:510px; overflow: hidden; margin: 5px auto;}
 .focu { position: relative; width:500px; height:500px; overflow: hidden; margin: 5px auto;}
-.focus .pic{ position:relative; z-index:0; margin: 0 auto;}
-.focus .pic li{width: 400px !important;}
-.focus .pic img {display: block;width:400px;vertical-align: top;}
+.focus .pic{ position:relative; z-index:0;width: 400px !important; height: 320px; margin:0 auto;}
+.focus .pic li{width: 400px !important; height: 320px; margin:0 auto; text-align:center;}
+.focus .pic img {max-width:400px;max-height: 320px;}
 .focu img {display: block;max-width: 100%;max-height: 100%;overflow: hidden;margin: 0 auto;vertical-align: middle;}
 .focus .prev{width: 35px; height: 71px; margin: -35px 0 0;background: url(../images/pn.png) no-repeat left center; position: absolute; top: 50%;cursor: pointer;left: 0;}
 .focus .next{width: 35px; height: 71px; margin: -35px 0 0;background: url(../images/pn.png) no-repeat -35px center; position: absolute; top: 50%;cursor: pointer;right: 0;}

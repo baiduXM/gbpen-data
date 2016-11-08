@@ -62,14 +62,24 @@ header #quickbar .slide-nav,.box_tit_inner #quickbar .slide-nav{color: #a37e63;f
 .indexnews{width: 94%;height: auto;overflow: hidden;margin: 0 auto;}
 .indexnews .titles{margin: 4% 0 3%}
 .newslist{width: 100%;height: auto;overflow: hidden;}
-.newslist li{width: 100%;height: 130px;overflow: hidden;float: left;margin-right: 32px;margin-bottom: 23px;}
+/*.newslist li{width: 100%;height: 130px;overflow: hidden;float: left;margin-right: 32px;margin-bottom: 23px;}
 .newslist li a{width:100%;height: 100%;overflow: hidden;display: block;}
 .newslist li a img{max-width: 170px;max-height: 128px;overflow: hidden;display: block;border: 1px solid #fff;float: left;margin-right: 3%;}
 .news-r{height: auto;overflow: hidden;}
 .news-r h5{color: #574335;font-size: 1.8rem;line-height: 2.5rem;height: 2.5rem;overflow: hidden;margin: 0 0 1%}
 .news-r span{color: #a37e63;font-size: 1.5rem;height: 2rem;overflow: hidden;display: block;}
 .news-r p{color: #a37e63;font-size: 1.5rem;line-height: 2rem;height: 6rem;overflow: hidden;}
+.news-r li a:hover h5{color: #6f0e04}*/
+
+.newslist li{width: 50%;height: auto;overflow: hidden;float: left;margin-bottom: 23px;}
+.newslist li a{width:96%;height: auto;overflow: hidden;display: block;margin: 0 auto;}
+.newslist li a img{max-width: 100%;height: auto;overflow: hidden;display: block;border: 1px solid #fff;}
+.news-r{height: auto;overflow: hidden;}
+.news-r h5{color: #574335;font-size: 1.8rem;line-height: 2.5rem;height: 2.5rem;overflow: hidden;margin: 0 0 1%}
+.news-r span{color: #a37e63;font-size: 1.5rem;height: 2rem;overflow: hidden;display: block;}
+.news-r p{color: #a37e63;font-size: 1.5rem;line-height: 2rem;height: 6rem;overflow: hidden;}
 .news-r li a:hover h5{color: #6f0e04}
+
 
 .foot{ padding:8px 50px 8px 8px; margin:0px 0px 0px; height:auto; line-height:25px;text-align:left;  position:relative; color:#f3f4ef;font-size: 1.4rem;background: #a37e63;}
 .foot a{color: #f3f4ef}
@@ -114,10 +124,10 @@ header #quickbar .slide-nav,.box_tit_inner #quickbar .slide-nav{color: #a37e63;f
 .box-contsa{height:auto; overflow:hidden;}
 
 /*内页字体大小*/
-.font{ width:13.5rem;height: 2.6rem;overflow: hidden;;color:#6f0e04;font-size: 1.5rem;line-height: 2.6rem;text-align: center;margin: 0 auto}
+.font{ width:100%;height: 2.6rem;overflow: hidden;;color:#6f0e04;font-size: 1.5rem;line-height: 2.6rem;text-align: center;margin: 0 auto}
 .font span{float: left;}
 .fixed-font{ right:0px; top:35px; background:#c43b40; color:#6f0e04;}
-.font dl{ height:2.6rem; font-size: 1.5rem;line-height:2.6rem;float: left;}
+.font dl{ height:2.6rem; font-size: 1.5rem;line-height:2.6rem;display: inline;}
 .font-big{ font-size:2rem;line-height:  2.8rem}
 .font-normal{ font-size:1.8rem;line-height: 2.5rem}
 .font-small{ font-size:1.5rem;line-height: 2rem}
@@ -130,18 +140,19 @@ header #quickbar .slide-nav,.box_tit_inner #quickbar .slide-nav{color: #a37e63;f
 .news ul li a{color: #a37e63;font-size: 1.5rem;line-height: 2.5rem;height: 2.5rem;overflow: hidden;border-bottom: 1px dashed #a37e63;display: block;background: url(../images/news.png) no-repeat left center;text-indent: 12px;}
 .news ul li a span{float: right;font-size: 1.5rem;}
 .pagenum{color: #a37e63;line-height: 30px;text-align:center;width: 100%;height: 30px;overflow: hidden;margin-top: 6%;}
-.pagenum a{color: #f3f4ef;font-size: 1.4rem;line-height: 30px;width: 64px;height: 30px;overflow: hidden;background: url(../images/pagenum_03.png) no-repeat center;display: inline-block;padding: 0 7px;margin: 0 3px;}
+.pagenum a{color: #f3f4ef;font-size: 1.4rem;line-height: 30px;width: 64px;height: 30px;overflow: hidden;float: left;background: url(../images/pagenum_03.png) no-repeat center;display: inline-block;padding: 0 7px;margin: 0 3px;}
 .pagenum a.number{width: 28px;height: 30px;overflow: hidden;background: url(../images/pagenum.png) no-repeat center;display: inline-block;padding: 0;margin: 0 3px;}
 .pagenum a.number:hover,.pagenum a.on{color: #f3f4ef;background: url(../images/pagenumh.png) no-repeat center;}
+.pagenum span{line-height: 30px;height: 30px;float: left;margin: 0 2% 0 9%;}
 
 /*newsing*/
 .newsing{height: auto;overflow: hidden;padding: 15px 0 0 5px}
 .newsing ul li:last-child{margin-bottom: 0;}
 
 /*news_det*/
-.news_det .font,.pro_det .font{width: 26rem}
-.ti{color: #574335;font-size: 2rem;text-align: center;min-height: 2rem;max-height: 4rem;overflow: hidden;height: auto;margin-top: 4%}
-.message{color: #6f0e04;font-size: 1.5rem;height: 2.6rem;overflow: hidden;float: left;margin-right: 2%;}
+/*.news_det .font,.pro_det .font{width: 26rem}*/
+.ti{color: #574335;font-size: 2rem;text-align: center;line-height: 2rem;min-height: 2rem;max-height: 8rem;overflow: hidden;height: auto;margin-top: 4%}
+.message{color: #6f0e04;font-size: 1.5rem;height: 2.6rem;overflow: hidden;margin-right: 2%;}
 .news_det .edite{border-top: 1px dashed #af917b;padding-top: 1%;}
 .other{color: #f3f4ef;font-size: 1.5rem;line-height: 32px;height: auto;overflow: hidden;margin-top: 1%}
 .other h3 a{color: #f3f4ef;font-size: 1.5rem;text-indent: 7%;height: 32px;overflow: hidden;display: block;background: url(../images/other.png) no-repeat center;background-size: 100% 32px;margin: 3% 0}
