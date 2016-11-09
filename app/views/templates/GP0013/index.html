@@ -47,6 +47,7 @@ DD_belatedPNG.fix('div,ul,li,a,p,img');
     <li class="{if $navho.current}current{/if}">
       <a href="{$navho.link}" class="choose">{$navho.name}</a>
     </li>
+    {if $navho@index+1 eq 5}{break}{/if}
     {/foreach}
   </ul>
     </div>                           
