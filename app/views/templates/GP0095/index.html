@@ -60,7 +60,7 @@ DD_belatedPNG.fix('div,ul,li,a,p,img');
           <ul class="picList">
            {foreach item=product from=$index.products.data}
             <li>
-              <a href="{$product.link}"><!-- <span class="picbg">+</span> --><img src="{$product.image}" /><span class='pic_title'><b>{$product.title}</b>{$product.description} </span></a>
+              <a href="{$product.link}"><!-- <span class="picbg">+</span> --><img src="{$product.image}" /><span class='pic_title'><b>{$product.title}</b></span></a>
             </li>
           {/foreach}  
             
