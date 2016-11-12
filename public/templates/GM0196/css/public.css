@@ -17,7 +17,8 @@ a{ color:#333}
 header{ position:relative}
 
 .header{ width:100%; height: auto; overflow:hidden; position:relative;  z-index:100;background:#ffbb28; }
-.logo{width:100%; height: auto; overflow:hidden;z-index:100; }
+.logo{width:100%; height: auto; overflow:hidden;z-index:100;text-align: center;}
+.logo img{width: 36%;}
 /*banner开始*/
 .baner_bg{ position:absolute; bottom:0px; left:0px; z-index:1000; width:100%}
 #baner1{ width:85%; margin:auto; margin-bottom:20px;}
