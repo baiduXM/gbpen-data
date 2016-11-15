@@ -1,0 +1,78 @@
+{
+	"slidepics": {
+		"value": [{
+			"title": "梅多克康瑞红葡萄酒1",
+			"image": "images/banner.jpg",
+			"link": "article/1.html",
+			"description": "banner1"
+		}, {
+			"title": "梅多克康瑞红葡萄酒2",
+			"image": "images/banner.jpg",
+			"link": "http://www.baidu.com",
+			"description": "banner2"
+		},{
+			"title": "梅多克康瑞红葡萄酒3",
+			"image": "images/banner.jpg",
+			"link": "http://www.baidu.com",
+			"description": "banner3"
+		}],
+		"description": "首页多图轮播",
+		"type": "images",
+		"config": {
+			"width": 1920,
+			"height": 561
+		}
+	},
+    "about_us": {
+		"description": "内容单页（如关于我们）",
+		"value": {},
+		"type": "page",
+		"config":{
+			"nav_width":509,
+			"nav_height":349
+		}
+	},
+    "pro": {
+		"description": "图片列表（如产品展示）",
+		"value": {},
+		"type": "list",
+		"config":{
+			"width":240,
+			"height":150
+		}
+	},			
+	"news":{
+		"description": "文字列表(如新闻中心)",
+		"value": {},
+		"type": "list",
+		"config":{
+			"width":200,
+			"height":318
+		}		
+	},	
+	"contact_us": {
+		"value": [{
+			"title": "李先生",
+			"image": "images/uicon.png",
+			"link": "article/1.html",
+			"description": "联系人"
+		}, {
+			"title": "400-888-888",
+			"image": "images/ticon.png",
+			"link": "http://www.baidu.com",
+			"description": "联系电话"
+		},{
+			"title": "厦门市思明区软件园二期观日路 30号 百度",
+			"image": "images/licon.png",
+			"link": "http://www.baidu.com",
+			"description": "地址"
+		}],
+		"description": "联系我们内容",
+		"type": "images",
+		"config": {
+			"width": 20,
+			"height": 23
+		}
+	}
+}                     
+

@@ -1,0 +1,65 @@
+{
+	"icon1":{
+		"value": {
+			"title": "课程图标1",
+			"image": "images/icon.png",
+			"link": "http://www.baidu.com/"
+			},
+		"description": "自定义图标",
+		"type": "image",
+		"config": {
+			"width":480,
+			"height":240
+		}
+	},
+	"class": {
+		"description": "课程分类",
+		"value": {},
+		"type": "list",
+		"config": {
+			"nav_height":98,
+			"nav_width":98,
+			"showchilddata":true
+		}
+	},
+	"slidepics": {
+		"value": [{
+			"title": "banner",
+			"image": "images/img1.png",
+			"link": "article/1.html",
+			"description": "banner1"
+		}, {
+			"title": "测试图2",
+			"image": "images/img1.png",
+			"link": "http://www.baidu.com"
+		},{
+			"title": "测试图3",
+			"image": "images/img1.png",
+			"link": "http://www.baidu.com"
+		}],
+		"description": "轮播图",
+		"type": "images",
+		"config": {
+			"width": 460,
+			"height":220
+		}
+	},
+	"news":{
+		"description": "最新资讯",
+		"value": {},
+		"type": "list",
+		"config": {
+			"height":94,
+			"width":146
+		}
+	},
+	"pro":{
+		"description": "开课信息",
+		"value": {},
+		"type": "list"
+	}
+	
+}
+               
+
+

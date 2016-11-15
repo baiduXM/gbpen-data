@@ -1,0 +1,45 @@
+{if $pagenavs}
+<ul class="mtree transit">
+{foreach name=pagenavs item=nav from=$pagenavs}
+  <li><a href="{$nav.link}" class="firstli"><i></i>{$nav.name}</a>
+    {if $nav.childmenu}
+    <ul>
+    {foreach item=nav_list from=$nav.childmenu}
+      <li><a href="{$nav_list.link}">{$nav_list.name}</a>
+      	{if $nav_list.childmenu}
+      	<ul>
+      	{foreach item=nav1_list from=$nav_list.childmenu}
+          <li><a href="{$nav1_list.link}">{$nav1_list.name}</a></li>
+        {/foreach}
+        </ul>
+        {/if}
+      </li>
+     {/foreach}
+    </ul>
+    {/if}
+  </li>
+{/foreach}
+</ul>
+{else}
+<ul class="mtree transit">
+{foreach name=pagenavs item=nav from=$_pagenavs_sub3.pagenavs.childmenu}
+  <li><a href="{$nav.link}" class="firstli"><i></i>{$nav.name}</a>
+    {if $nav.childmenu}
+    <ul>
+    {foreach item=nav_list from=$nav.childmenu}
+      <li><a href="{$nav_list.link}">{$nav_list.name}</a>
+      	{if $nav_list.childmenu}
+      	<ul>
+      	{foreach item=nav1_list from=$nav_list.childmenu}
+          <li><a href="{$nav1_list.link}">{$nav1_list.name}</a></li>
+        {/foreach}
+        </ul>
+        {/if}
+      </li>
+     {/foreach}
+    </ul>
+    {/if}
+  </li>
+{/foreach}
+</ul>
+{/if}

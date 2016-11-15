@@ -1,0 +1,107 @@
+{
+		
+	"about": {
+	    "value": {},
+		"description": "关于我们",
+		
+		"type": "page"
+	
+	},	
+	
+
+
+
+"pro_list":{
+		"description":"首页快捷导航",
+		"value":{},
+		"type":"list"
+	}
+		,
+		
+
+	
+  "case":{
+		"description": "案例展示",
+		"value": {},
+		"type": "list",
+		"config": {
+			"width":200,
+			"height":200
+		}
+	},
+	
+	
+	
+	
+	
+	
+		"news":{
+		"description": "新闻中心",
+		"value": {},
+		"type": "list",
+		"config": {
+			"nav_width": 155,
+			"nav_height": 110
+		}
+
+		
+			
+	}	,	
+		
+		
+
+	
+	    "pro":{
+		"description": "产品中心",
+		"value": {},
+		"type": "list",
+		"config": {
+			"width":250,
+			"height":250
+		}
+	},
+		
+		
+		
+		
+	
+	"links": {
+		"value": [{
+			"title": "百度",
+			"image": "images/link_img.jpg",
+			"link": "{site_url}article/1.html",
+			"description": "Although it isn't gooseberry season anymore, I thought I would publish this recipe now because it wo..."
+		}, {
+			"title": "易尔通",
+			"image": "images/link_img.jpg",
+			"link": "{site_url}article/2.html",
+			"description": "Post-Christmas I find I just can't get enough of Turkey. I always think it is such a shame that I on..."
+		}, {
+			"title": "新浪",
+			"image": "images/link_img.jpg",
+			"link": "{site_url}article/3.html",
+			"description": "The PS Cafe chain in Singapore is a must visit when in town. I first visited the Paragon branch over..."
+		}, {
+			"title": "易尔通",
+			"image": "images/link_img.jpg",
+			"link": "{site_url}article/4.html",
+			"description": "A few days ago I began a wardrobe detox. In the new year I always try and start by clearing out my l..."
+		}],
+		"description": "友情链接",
+		"type": "images",
+		"config": {
+			"width": 135,
+			"height": 55,
+			"limit": 4
+		}
+		}	
+	
+		
+
+
+
+	
+	
+
+	
+}
