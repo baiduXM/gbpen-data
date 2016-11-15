@@ -38,7 +38,7 @@ input {font:12px;}
 .submit{width: 28px; height: 20px;cursor: pointer; background: url(../images/ss.jpg) no-repeat; outline: none; border: none;text-indent: 9999px;}
 .nav{margin:0;padding:40px 0 0 0; width: 100%; height: auto; display: table;}
 .nav li{position:relative; height: auto; display: table-cell;  }
-.nav li a{display:block;overflow:hidden; height:30px;font:14px/30px; color: #585757; text-align: center;}
+.nav li a{display:block;overflow:hidden; height:30px; font-size:14px;line-height:30px; color: #585757; text-align: center;}
 .nav .sub{position:absolute;left:0;width:99%; top: 40px; z-index: 999; background: #ffffff; border:1px solid #e7e7e7; display: none; padding: 0;}
 .nav .sub li{ zoom:1; overflow:hidden; width: 100%; display:block;}
 .nav .sub li a{ display:block; overflow:hidden;font:12px/28px;color:#333333; text-align: center; }
@@ -170,7 +170,7 @@ ul.listbg  li ul.second li ul.third li a.selected{ color:#970f0f; }
 		.pro_list li img{ width:180px; border: 1px solid #e2e2e2; }
 		.pro_list li img:hover{ opacity: 0.8}
 		.pro_list li  a:hover{color:#935f23;  }
-		.pro_list li .photo_title2{display:block; line-height:30px; height:30px;overflow:hidden;}
+		.pro_list li .photo_title2{display:block; line-height:30px; height:30px;overflow:hidden; font-size:14px;}
 		/*产品列表结束*/
 		/*产品详情开始*/
 		.products_detail{ height:auto; overflow:hidden; margin:0 auto;}

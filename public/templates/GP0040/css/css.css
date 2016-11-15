@@ -121,7 +121,7 @@ ul.tab li{width: 80px;height: 30px;line-height: 30px;margin-bottom: 5px;color: #
 
 .menu1box { position:relative; overflow:hidden;/* width: 80px;*/width:23%;min-height:80px;height: 136px; text-align:left;float: left;margin-right: 5px; } 
 #menu1 {/*width: 80px;*/width:100%;min-width: 80px; position:absolute; top:0; left:0; z-index:1; } 
-#menu1 li {display:block; cursor:pointer; width: 100%;min-width: 80px; text-align:center; line-height:30px; height:30px;background: #c2cdd3;font-size: 14px;font-family: Microsoft YaHei;margin-bottom: 5px;color: #484848; } 
+#menu1 li {display:block; cursor:pointer; width: 100%;min-width: 80px; text-align:center; line-height:30px; height:30px; overflow:hidden; background: #c2cdd3;font-size: 14px;font-family: Microsoft YaHei;margin-bottom: 5px;color: #484848; } 
 #menu1 li a{display: block;color: #484848; }
 #menu1 li.hover { background:#5682c1;}
 #menu1 li.hover a{color: #fff;}
