@@ -8,6 +8,7 @@
 		<li class="{if $nav.current}current{/if}">
 			<a href="{$nav.link}" class="choose">{$nav.name}</a>
 		</li>
+        {if $nav@index+1 == 5}{break}{/if}
 		{/foreach}
 	</ul>
     </div>
@@ -20,6 +21,7 @@
 		<li class="{if $nav.current}current{/if}">
 			<a href="{$nav.link}">{$nav.name}</a>
 		</li>
+        {if $nav@index+1 == 5}{break}{/if}
 		{/foreach}
 	</ul>
 </nav>

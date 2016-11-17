@@ -59,13 +59,14 @@
 
   $(".inner_l").stop().addClass("animated bounceInLeft");
   $(".inner_r").stop().addClass("animated bounceInRight");
-
+if ($("#inner_l").lenght>0) {
   $("#inner_l").mCustomScrollbar({
     theme:"minimal"
-  });
+  });}
+if ($("#inner_r").lenght>0) {
   $("#inner_r").mCustomScrollbar({
     theme:"minimal"
-  });
+  });}
 
   $("#loc").find("span:last-child").remove();
 

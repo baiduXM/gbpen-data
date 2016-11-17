@@ -24,7 +24,7 @@ img{border: none;}
 .nav>li:hover>a{background: #e0e0e1;}
 .nav>li:hover>a:after{content: "";display: block;width: 100%;height: 4px;background: #c30605;bottom: 0px;left: 0px;position: absolute;}
 ul.subnav{display: none;width: auto;height: 45px;position: absolute;z-index: 99;top: 90px;}
-ul.subnav li{width: auto;height: 100%;float: left;padding: 0 12px;max-width: 240px; overflow:hidden;}
+ul.subnav li{width: auto;height: 100%;float: left;padding: 0 12px;max-width: 240px;}
 ul.subnav li a{line-height: 45px;display: block;width: 100%;height: 100%;}
 ul.subnav li a:hover{color: #c30605;}
 ul.subnav i{display: block;width: 1px;height: 15px;background: #333333;margin: 16px 0;float: left;}

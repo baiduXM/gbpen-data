@@ -147,10 +147,10 @@
                 <div class="new-right fr">
                     <a href="{$index.news.link}" class="more">More</a>
                     <ul>
-                        {foreach name=list1 item=list1 from=$index.pro.data}
+                        {foreach name=list1 item=list1 from=$index.news.data}
                         <li>
                             <span>{$list1.pubtimestamp|date_format:'%Y.%m.%d'}</span>
-                            <p>{$list1.title}</p>
+                           <h3><a href="{$news.link}" class="kz" data-limit="20">{$list1.title}</a></h3>
                         </li>
                         {if $list1@index+1 gte 5}{break}{/if}
                         {/foreach} 

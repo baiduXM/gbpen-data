@@ -2,7 +2,7 @@
 <html manifest="huancun.manifest">
 <head>
 <!-- 实时预览调试代码，模板开发完成后删除 -->
-		
+		<!--  -->
 		<!-- 调试代码 End -->
 		<script type="text/javascript">
 		// 跳转PC页面
@@ -37,13 +37,13 @@
 <link rel="stylesheet" href="{$site_url}css/public.css" /> 
 <link href="{$site_url}css/css.css" rel="stylesheet" type="text/css" />
 <link href="{$site_url}css/swipe.css" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" rev="stylesheet" href="{$site_url}css/style_{$stylecolor}.css" type="text/css" />
+
 <script src="{$site_url}js/TouchSlide.1.1.js"></script>
 <script type="text/javascript" src="{$site_url}js/jquery.min.js"></script>
 <script type="text/javascript" src="{$site_url}js/function.js"></script>
 <script type="text/javascript" src="{$site_url}js/share.js"></script>
 <script src="{$site_url}js/idangerous.swiper-2.0.min.js"></script>
-<script src="{$site_url}js/idangerous.swiper.3dflow-2.0.js"></script>
+
 <script src="{$site_url}js/simple-app.js"></script>
 <script type="text/javascript">
 	window.addEventListener('load', function(){
@@ -74,39 +74,36 @@
            <div class="page_img"><img src="{$mIndexCat.image}"></div>
        </div>
         </div>
-        
-        
           {elseif $mIndexCat.type eq 1} 
-      <div id="in_text" class="wrapper">
-           <div class="in_h2 clearfix"><a href="{$mIndexCat.link}" >
-      <div class="bg">
-      <div class="math public_color">{$mIndexCat.en_name}</div>
-      <div class="text">
-       <div class="in_zh public_color">{$mIndexCat.name}</div>
-      <div class="in_en public_color">{$mIndexCat.en_name}</div>
-      </div>
-      </div>
-      </a>
-      </div>
-         <div class="inner clearfix">
-           <ul>
-           {foreach item=article from=$mIndexCat.data}
-             <li class="clearfix"><a href="{$article.link}" >
-              <div class="in_data"><div class="month">{$article.pubtimestamp|date_format:"%m"}月</div><div class="riqi">{$article.pubtimestamp|date_format:"%d "}日</div></div>
-                 <div class="in_textbox clearfix">
-                 <h2 class="public_color">{$article.title}</h2>
-                 <div class="in_des">{$article.description}</div>
-                 </div>
-                 </a>
-              </li>
-             
-             {if $article@index+1 == 4}{break}{/if} 
-                {/foreach} 
-            </ul>
+        <div id="in_text" class="wrapper">
+             <div class="in_h2 clearfix"><a href="{$mIndexCat.link}" >
+        <div class="bg">
+        <div class="math public_color">{$mIndexCat.en_name}</div>
+        <div class="text">
+         <div class="in_zh public_color">{$mIndexCat.name}</div>
+        <div class="in_en public_color">{$mIndexCat.en_name}</div>
         </div>
         </div>
+        </a>
+        </div>
+           <div class="inner clearfix">
+             <ul>
+             {foreach item=article from=$mIndexCat.data}
+               <li class="clearfix"><a href="{$article.link}" >
+                <div class="in_data"><div class="month">{$article.pubtimestamp|date_format:"%m"}月</div><div class="riqi">{$article.pubtimestamp|date_format:"%d "}日</div></div>
+                   <div class="in_textbox clearfix">
+                   <h2 class="public_color">{$article.title}</h2>
+                   <div class="in_des">{$article.description}</div>
+                   </div>
+                   </a>
+                </li>
+               {if $article@index+1 == 4}{break}{/if} 
+                  {/foreach} 
+              </ul>
+          </div>
+          </div>
       
-         {elseif $mIndexCat.type eq 3} 
+         {elseif $mIndexCat.type eq 3 or $mIndexCat.type eq 2} 
             <div id="in_image" class="wrapper">
  <div class="in_h2 clearfix"><a href="{$mIndexCat.link}" >
       <div class="bg">
