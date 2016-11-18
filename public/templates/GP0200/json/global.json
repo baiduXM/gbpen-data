@@ -1,19 +1,61 @@
-{
+{	
 	"slidepics": {
 		"value": [{
 			"title": "测试图1",
-			"image": "images/baner.jpg",
+			"image": "images/banner.jpg",
 			"link": "http://www.baidu.com"
 		}, {
 			"title": "测试图2",
-			"image": "images/baner.jpg",
+			"image": "images/banner.jpg",
+			"link": "http://www.baidu.com"
+		}, {
+			"title": "测试图3",
+			"image": "images/banner.jpg",
 			"link": "http://www.baidu.com"
 		}],
 		"description": "大轮滚图",
 		"type": "images",
 		"config": {
-			"width": 640,
-			"height": 360
+			"width": 1920,
+			"height": 616
 		}
+	},
+	"link": {
+		"value": [{
+			"title": "易尔通",
+			"image": "",
+			"link": "http://www.baidu.com"
+		}, {
+			"title": "百度推广",
+			"image": "",
+			"link": "http://www.12t.cn"
+		},{
+			"title": "百度外卖",
+			"image": "",
+			"link": "http://www.baidu.com"
+		}, {
+			"title": "百度糯米",
+			"image": "",
+			"link": "http://www.12t.cn"
+		}, {
+			"title": "厦门人才网",
+			"image": "",
+			"link": "http://www.12t.cn"
+		}],
+		"description": "底部友情链接",
+		"type": "images"
+	},
+	"second_navs": {
+		"value": {},
+		"description": "第二导航（底部）",
+		"type": "navs",
+		"config": {
+			"limit": 9
+		}
+	},
+	"cont_way": {
+		"value": "联系人：詹小姐  电话：0592-3503575  传真：0592-3503377",
+		"description": "底部右侧联系方式",
+		"type": "text"
 	}
 }

@@ -1,53 +1,65 @@
-<!DOCTYPE>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <script type="text/javascript">
-    // 跳转手机页面
+    // Ìø×ªÊÖ»úÒ³Ãæ
     {if $site_another_url}
         if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
             location.href = '{$site_another_url}';
         }
     {/if}
     </script>
-    
-    <meta name="keywords" content="{$keywords}"/>
-    <meta name="description" content="{$description}"/>
-    <link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
-    <meta http-equiv="x-ua-compatible" content="ie=8" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>{$title}</title>
-    <link rel="stylesheet" type="text/css" href="{$site_url}css/css.css"/>
-    <script src="{$site_url}js/jquery-1.7.2.min.js" type="text/javascript"></script>
-    <script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.1.js"></script>
-    <script type="text/javascript" src="{$site_url}js/function.js"></script>
+
+<!--  -->
+<meta name="keywords" content="{$keywords}"/>
+<meta name="description" content="{$description}"/>
+<link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Language" content="zh-CN">
+
+<link rel="stylesheet" type="text/css" href="{$site_url}css/style.css"/>
+<script type="text/javascript" src="{$site_url}js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.js"></script>
+<script type="text/javascript" src="{$site_url}js/function.js"></script>
+<script type="text/javascript" src="{$site_url}js/html5.js"></script>
+<title>{$title}</title>
 </head>
 <body>
-<div class="wrap">
-  {include file='./_header.html'}
-  <div class="searchbox">
-      <div class="search-txt">以下是关键字“{$search.keyword}”的搜索结果</div>
-      <ul>
-          {foreach name=list1 item=list1 from=$search.data} 
-              <li><a href="{$list1.link}">{$list1.title}</a></li>
-          {/foreach}  
-      </ul>
-      <div class="paging">
-        <a href="{$page_links.first_link}">首页</a>
-        <a href="{$page_links.prev_link}">上一页</a>
-        {foreach name=nears_link item=near_link key=near_page from=$page_links.nears_link}
-          {if $near_page == $page_links.current_page}
-           <a  href="{$near_link}" class="pon num">{$near_page}</a>
-          {else}
-           <a href="{$near_link}" class="num">{$near_page}</a>
-          {/if}
-        {/foreach}
-        <a href="{$page_links.next_link}">下一页</a>
-        <a href="{$page_links.last_link}">尾页</a>
-        <p>当前第<span>{$page_links.current_page}</span>页/总<span>{$page_links.page_count}</span>页</p>
-      </div>
-  </div> 
-  {include file='./_footer.html'}
-</div>
+	<div id="wrapper">
+		{include file='./_header.html'}
+		<div class="content">
+			<div class="inside">
+				{include file='./_left.html'}
+				<div class="center">
+					<div class="main-hd">
+	                    <span>当前位置：
+	                        <a href="{$site_url}">首页</a>
+	                        {foreach item=nav from=$posnavs} - <a href="{$nav.link}">{$nav.name}</a>
+	                        {/foreach}
+	                    </span>
+	                </div>
+					<div class="main">
+	                    <div class="search">
+	                    	<form id="search" action="{$search_action}" name="search">
+				                <input type="text" name="s" id="keyword" placeholder="请输入搜索关键字" />
+				                <button class="button"><img src="{$site_url}images/map.png"></button>
+				            </form>
+	                    	<p>以下是您搜索的关键字<mark>“ {$search.keyword} ”</mark>，搜索的结果有 <mark>{$search.total}</mark> 条。</p>
+	                    </div>
+                        <ol class="news" id="search-list">
+                        {foreach item=sear from=$search.data}
+                            <li><a href="{$sear.link}">
+                                <time datetime="{$sear.pubymd}">{$sear.pubymd}</time>
+                                {$sear.title}
+                            </a></li>
+                        {/foreach}
+                    	</ol>
+                        {include file='./_page.html'}
+					</div>
+				</div>
+			</div>
+		</div>
+		{include file='./_footer.html'}
+	</div>
 </body>
 </html>
-

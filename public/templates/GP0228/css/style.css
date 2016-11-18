@@ -175,8 +175,8 @@ ul.inner_pro{height:auto; overflow:hidden; padding-bottom:10px; width:790px; mar
 ul.inner_pro li{ float:left; margin:0px 19px 0px 5px;display:inline; width:165px; overflow:hidden; }
 ul.inner_pro li a{ width:165px; height:146px; display:block; color:#333; overflow:hidden;text-align: center;}
 ul.inner_pro li a:hover{ color:#117dbe;}
-ul.inner_pro li img{ width:auto; max-height:114px; padding:0px; border:1px solid #80d5f6;background:#fff;}
-p.photo_title{height:30px; line-height:30px; text-align:center;}
+ul.inner_pro li img{ max-width:114px; max-height:114px; padding:0px; border:1px solid #80d5f6;background:#fff;}
+p.photo_title{height:30px; line-height:30px; text-align:center; overflow:hidden;}
 
 .main_right_con2{overflow:hidden;}
 

@@ -1,78 +1,127 @@
 {
-	"slidepics": {
-		"value": [{
-			"title": "梅多克康瑞红葡萄酒1",
-			"image": "images/banner.jpg",
-			"link": "article/1.html",
-			"description": "banner1"
-		}, {
-			"title": "梅多克康瑞红葡萄酒2",
-			"image": "images/banner.jpg",
-			"link": "http://www.baidu.com",
-			"description": "banner2"
-		},{
-			"title": "梅多克康瑞红葡萄酒3",
-			"image": "images/banner.jpg",
-			"link": "http://www.baidu.com",
-			"description": "banner3"
-		}],
-		"description": "首页多图轮播",
-		"type": "images",
-		"config": {
-			"width": 1920,
-			"height": 561
-		}
-	},
-    "about_us": {
-		"description": "内容单页（如关于我们）",
+	"about": {
+		"description": "单页面(关于我们)",
 		"value": {},
 		"type": "page",
-		"config":{
-			"nav_width":509,
-			"nav_height":349
+		"config": {
+			"nav_width": 525,
+			"nav_height": 315
 		}
 	},
-    "pro": {
-		"description": "图片列表（如产品展示）",
-		"value": {},
-		"type": "list",
-		"config":{
-			"width":240,
-			"height":150
+	"back01": {
+		"value": {
+			"title": "背景图片",
+			"image": "images/back-011.jpg",
+			"link": "article/1.html"
+		},
+		"description": "背景图片一",
+		"type": "image",
+		"config": {
+			"width": 1920,
+			"height": 583
 		}
-	},			
-	"news":{
-		"description": "文字列表(如新闻中心)",
+	},
+	"product":{
+		"description": "首页图片列表一",
 		"value": {},
 		"type": "list",
-		"config":{
-			"width":200,
-			"height":318
-		}		
-	},	
-	"contact_us": {
+		"config": {
+			"showchilddata":true,
+			"star_only": true,
+			"width": 250,
+			"height": 208,
+			"nav_width":250,
+			"nav_height":208
+		}
+	},
+	"news":{
+		"description": "文字列表（左）",
+		"value": {},
+		"type": "list",
+		"config": {
+			"showchilddata":true,
+			"star_only": true,
+			"width": 232,
+			"height": 167
+		}
+	},
+	"pic": {
 		"value": [{
-			"title": "李先生",
-			"image": "images/uicon.png",
+			"title": "picture",
+			"image": "images/pic-01.jpg",
 			"link": "article/1.html",
-			"description": "联系人"
+			"description": "pic1"
 		}, {
-			"title": "400-888-888",
-			"image": "images/ticon.png",
-			"link": "http://www.baidu.com",
-			"description": "联系电话"
-		},{
-			"title": "厦门市思明区软件园二期观日路 30号 百度",
-			"image": "images/licon.png",
-			"link": "http://www.baidu.com",
-			"description": "地址"
+			"title": "picture",
+			"image": "images/pic-02.jpg",
+			"link": "http://www.baidu.com"
 		}],
-		"description": "联系我们内容",
+		"description": "课程图片",
 		"type": "images",
 		"config": {
-			"width": 20,
-			"height": 23
+			"width": 234,
+			"height": 160
 		}
+	},
+	"course":{
+		"description": "文字列表（右）",
+		"value": {},
+		"type": "list",
+		"config": {
+			"showchilddata":true,
+			"star_only": true,
+			"width": 234,
+			"height": 160
+		}
+	},
+	"back02": {
+		"value": {
+			"title": "背景图片",
+			"image": "images/back-02.jpg",
+			"link": "article/1.html"
+		},
+		"description": "背景图片二",
+		"type": "image",
+		"config": {
+			"width": 1920,
+			"height": 589
+		}
+	},
+	"case":{
+		"description": "首页底部图片列表",
+		"value": {},
+		"type": "list",
+		"config": {
+			"showchilddata":true,
+			"star_only": true,
+			"width": 308,
+			"height": 335
+		}
+	},
+	"cerdit": {
+		"description": "底部栏目",
+		"value": {},
+		"type": "page",
+		"config": {}
+	},
+	"1": {
+		"value": "正",
+		"description": "底部保障内容",
+		"type": "text"
+	},
+	"2": {
+		"value": "高",
+		"description": "底部保障内容",
+		"type": "text"
+	},
+	"3": {
+		"value": "团",
+		"description": "底部保障内容",
+		"type": "text"
+	},
+	"4": {
+		"value": "保",
+		"description": "底部保障内容",
+		"type": "text"
 	}
-}                     
-
+}
