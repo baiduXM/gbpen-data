@@ -8,7 +8,7 @@ $(document).ready(function() {
 		var sum = 0;
 		$(this).find('li').each(function(i, r) {
 			sum += $(this).outerWidth(true); //获取二级li宽度集合
-			sum += 2;
+			sum += 13;
 			return sum;
 		});
 		$(this).width(sum);

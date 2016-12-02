@@ -102,7 +102,7 @@ header{ position:relative;}
 .hide-class dl:after{ position:absolute; right:10px; content:"●"; font-size:1.2em; width:10px; height:10px; top:0px; color:#d2d2d2;}
 .hide-class dl a{ display:block;color:#333}
 .hide-class dl a:active {background:rgba(0,0,0,0.1);}
-.font{ width:47px; text-align:center;background:rgba(0,0,0,0.4);position:absolute; right:5px;/* display:none;*/ z-index:9999; top:45px; }
+.font{ width:47px; text-align:center;background:rgba(0,0,0,0.4);position:absolute; right:5px; display:none; z-index:9999; top:45px; }
 .font1{ width:47px; text-align:center;background:rgba(0,0,0,0.4);position:absolute; right:0px;  display:none; z-index:9999; top:35px; color:#fff }
 
 .fixed-font{ right:0px; top:35px; padding-top:0px;}

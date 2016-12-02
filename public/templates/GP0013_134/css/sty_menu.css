@@ -1,0 +1,93 @@
+
+.alignleft {
+	FLOAT: left
+}
+.alignright {
+	FLOAT: right
+}
+.clear {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; CLEAR: both; PADDING-TOP: 0px
+}
+SMALL {
+	FONT-SIZE: 11px
+}
+.small {
+	FONT-SIZE: 11px
+}
+.xsmall {
+	COLOR: #8f8f8f; FONT-SIZE: 10px
+}
+.lavaLamp {
+	POSITION: relative; margin:0px auto; overflow:hidden; width:952px;
+}
+.lavaLamp LI {
+	TEXT-ALIGN: center; LINE-HEIGHT:56px; LIST-STYLE-TYPE: none; WIDTH: 136px
+; FLOAT: left
+}
+.lavaLamp LI.back {
+	Z-INDEX: 1; POSITION: absolute; WIDTH: 9px; BACKGROUND: url(../images/menu_on.jpg) no-repeat ; HEIGHT: 56px; color:#000;
+}
+.lavaLamp LI A {
+ Z-INDEX: 2; POSITION: relative; FONT-VARIANT: small-caps; WIDTH: 136px; text-align:center; DISPLAY: block; HEIGHT: 56px; COLOR: #fff; FONT-SIZE:16px; TEXT-DECORATION: none;
+}
+.lavaLamp LI A:hover {
+	COLOR: #000;
+}
+.lavaLamp LI.current-cat A {
+	COLOR:#ffffff;
+}
+.post {
+	BORDER-BOTTOM: #eeeeee 1px solid; BORDER-LEFT: #eeeeee 1px solid; PADDING-BOTTOM: 10px; PADDING-LEFT: 20px; PADDING-RIGHT: 20px; MARGIN-BOTTOM: 16px; BORDER-TOP: #eeeeee 1px solid; BORDER-RIGHT: #eeeeee 1px solid; PADDING-TOP: 20px
+}
+.post H2 {
+	CLEAR: both
+}
+.post H2 A {
+	FONT-FAMILY: "Î¢ÈíÑÅºÚ","Microsoft YaHei",Verdana,Geneva,Arial,Helvetica,sans-serif; COLOR: #80be06; FONT-SIZE: 24px
+}
+.post H2 A:hover {
+	COLOR: #eeeeee; TEXT-DECORATION: none
+}
+.post UL LI {
+	LINE-HEIGHT: 15px; MARGIN-BOTTOM: 5px; HEIGHT: 15px; FONT-SIZE: 13px; PADDING-TOP: 5px
+}
+.post UL LI A {
+	PADDING-LEFT: 21px; DISPLAY: block; BACKGROUND: url(images/bullet.gif) no-repeat 0px 0px
+}
+.post UL LI A:hover {
+	BACKGROUND: url(images/bullet.gif) no-repeat 0px -15px; FONT-WEIGHT: bold
+}
+.entry-date {
+	MARGIN: 10px 0px; COLOR: #757575; FONT-SIZE: 12px
+}
+.entry-meta {
+	COLOR: #757575; MARGIN-LEFT: 20px; FONT-SIZE: 0.9em
+}
+.entry-content {
+	MARGIN: 10px
+}
+#comments-display {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; PADDING-TOP: 0px
+}
+#comments OL {
+	PADDING-BOTTOM: 0px; LIST-STYLE-TYPE: decimal; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+#comments OL LI {
+	BORDER-BOTTOM: #eeeeee 1px solid; PADDING-BOTTOM: 3px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; MARGIN-BOTTOM: 10px; BACKGROUND: #fafafa 0px 0px; PADDING-TOP: 3px
+}
+#comments SPAN.comment-author {
+	FONT-SIZE: 16px
+}
+H4#comments-count {
+	
+}
+.comment-left {
+	TEXT-ALIGN: right; COLOR: #888888
+}
+.comment-right {
+	
+}
+#respond {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; PADDING-TOP: 10px
+}
+

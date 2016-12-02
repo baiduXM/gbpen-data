@@ -154,13 +154,16 @@ $(document).ready(function() {
                 focus: { background: 'url(images/button.png) no-repeat 0 0', border: '0' }
             }
         });
-/*产品滚动js*/		
-		$('#prizes .photos-content.enable').jCarouselLite({
+/*产品滚动js*/
+
+	if ($('#prizes .photos .enable').length > 0) {
+
+		$('#prizes .photos .enable').jCarouselLite({
 			btnPrev: '#prizes a.photos-prev',
 			btnNext: '#prizes a.photos-next',
-			visible: 6,
+			visible: 4,
 			auto: 3000,
 			speed: 1000
 		}).css({visibility:"visible"});
-
+	}
 });

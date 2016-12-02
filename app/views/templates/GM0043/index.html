@@ -10,7 +10,7 @@
 		{/if}
 		</script>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
+<!--  -->
 <meta name="keywords" content="{$keywords}" />
 <meta name="description" content="{$description}" />
 <link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
@@ -33,29 +33,23 @@
 
 	<div class="heaer  public_bg">
     	<div class="logo"><img src="{$logo}" width="100%"></div>
-        
-    </div>
-    <div class="baner">
-	<div id="slideBox" class="slideBox">
-    <div class="hd">
-            <ul></ul>
-              </div>
-	<div class="bd">
-		<ul>
-			{foreach name=slidepics item=slidepic from=$global.slidepics}
-			<li><a class="pic" href="{$slidepic.link}"><img src="{$slidepic.image}" /></a></li>
-			{/foreach}
-		</ul>
-	</div>
-	
-			</div>
-			<script type="text/javascript">
-				
-			</script>
-       {include file="./_header.html"}    
-   </div>
-   
-    <div class="main">
+  </div>
+  <div class="baner">
+    	<div id="slideBox" class="slideBox">
+          <div class="hd">
+                <ul></ul>
+                  </div>
+        	<div class="bd">
+          		<ul>
+            			{foreach name=slidepics item=slidepic from=$global.slidepics}
+            			<li><a class="pic" href="{$slidepic.link}"><img src="{$slidepic.image}" /></a></li>
+            			{/foreach}
+          		</ul>
+        	</div>
+    	</div>
+      {include file="./_header.html"}    
+  </div>
+  <div class="main">
 	{foreach name=mIndexCats_list item=mIndexCat from=$mIndexCats}
 	{if $mIndexCat.type eq 3}
     <div class="box-id">
@@ -87,7 +81,7 @@
             <div class="box-about clearfix">
             	
                 <dl class="nr">
-                <img src="{$mIndexCat.image}" width="188" height="245" title="188*245" > 
+                <img src="{$mIndexCat.image}" title="188*245" > 
                 {$mIndexCat.description}</dl>
             </div>
         </div>

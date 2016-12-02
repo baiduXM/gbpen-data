@@ -1,0 +1,15 @@
+<ul class="hide-class">
+  {foreach item=nnav from=$pagenavs}
+  <li class="menu_head">
+    <dl class="icon">{if $nnav.childmenu}<span class="icon1">-</span><span class="icon2">+</span>{/if}</dl>
+    <a href="{$nnav.link}">{$nnav.name}</a>
+    {if $nnav.childmenu}
+    <ul class="menu_body">
+      {foreach item=navlist from=$nnav.childmenu}
+      <li><a href="{$navlist.link}">{$navlist.name}</a></li>
+      {/foreach}
+    </ul>
+    {/if}
+  </li>
+  {/foreach}
+</ul>

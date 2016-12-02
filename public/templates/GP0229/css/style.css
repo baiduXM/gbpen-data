@@ -5,7 +5,7 @@ a{ color: #333333; text-decoration:none}
 a:hover{color:#0161c4;}
 table{border-collapse:collapse; border-spacing:0px;}
 body{word-wrap:break-word;color: #333;font: 12px/24px "微软雅黑","Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";}
-ul,dl,li,i{list-style:none;}
+ul,dl,li,i{list-style:none; margin:0; padding:0}
 h1,h2,h3,h4,h5{font-size:12px;font-weight:normal;}
 i,em{font-style:normal;font-weight:normal;list-style:none;}
 img{border: none;}
@@ -23,8 +23,8 @@ img{border: none;}
 .nav>li>a{display: block;width: 100%;height: 100%;font-size: 14px;line-height: 90px;position: relative;color: #333333;}
 .nav>li:hover>a{background: #e0e0e1;}
 .nav>li:hover>a:after{content: "";display: block;width: 100%;height: 4px;background: #c30605;bottom: 0px;left: 0px;position: absolute;}
-ul.subnav{display: none;width: auto;height: 45px;position: absolute;z-index: 99;top: 90px;}
-ul.subnav li{width: auto;height: 100%;float: left;padding: 0 12px;max-width: 240px;}
+ul.subnav{display: none;width: auto;height: 45px;position: absolute;z-index: 99;top: 90px; }
+ul.subnav li{width: auto;height: 100%;float: left;max-width: 240px; padding:0 8px;}
 ul.subnav li a{line-height: 45px;display: block;width: 100%;height: 100%;}
 ul.subnav li a:hover{color: #c30605;}
 ul.subnav i{display: block;width: 1px;height: 15px;background: #333333;margin: 16px 0;float: left;}

@@ -1,4 +1,4 @@
-$(document).ready(function() {  
+$(document).ready(function() {
     // 自适应
     $(window).resize(function() { 
          $('.swiper-container').height($('.swiper-slide>div').height());   
@@ -6,8 +6,6 @@ $(document).ready(function() {
 
     //计算.main的最小高度，保证footer在底部
     var min_height = $('#quickbar-wrap-body').height() - $('header').height() - $('.foot').height();
-    console.log('min_height');
-    console.log(min_height);
     $('.main').css('min-height', min_height + 'px');
     $('.home_main').css('min-height', min_height + 'px');
 
@@ -75,7 +73,6 @@ $(document).ready(function() {
 
     // 返回顶部
      $("#to_top").click('touchstart', function() {
-        console.log('text');
         var speed=300;//滑动的速度
         // $('html,body').animate({scrollTop: 0}, speed);
         /*
@@ -124,7 +121,7 @@ function loader (argument) {
     setTimeout(function(){
         $('#quickbar').addClass('loaded');
         $(".fakeloader").fadeOut();
-    }, 300);
+    }, 0);
 }
 window.onload = function () {
     loader();

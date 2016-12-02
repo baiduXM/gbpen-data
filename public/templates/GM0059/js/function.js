@@ -1,4 +1,4 @@
-$(document).ready(function() {  
+﻿$(document).ready(function() {  
     // 自适应
     $(window).resize(function() { 
          $('.swiper-container').height($('.swiper-slide>div').height());   
@@ -95,7 +95,7 @@ $(document).ready(function() {
 
      //  首页轮播图 
     if($('.swiper_container').length){
-        var swiper = new Swiper('.swiper_container') ; 
+        var swiper = new Swiper('.swiper_container');
     }
      //首页图片列表
      if($('body').width() >= 480){
