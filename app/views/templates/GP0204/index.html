@@ -120,14 +120,19 @@
                         </div>
                         <div class="book">
                             <h3><img src="{$site_url}images/i2.png"/>{$index.book.name}</h3>
-                            <form>
-                                <p class="kz" data-limit="58">{$index.word}</p>
-                                <input type="text" placeholder="学生姓名" class="short short1" />
-                                <input type="text" placeholder="年龄" class="short"/>
-                                <input type="text" placeholder="联系电话" class="long"/>
-                                <!-- <input type="submit" value="立即预约"/> -->
-                                <a href="{$index.book.link}">立即预约</a>
-                            </form>
+                            <!--表单嵌入-->
+                            <div id="div_area0" class="form_css0">
+                                <form class="form_css0">
+                                    <p class="kz" data-limit="58">{$index.word}</p>
+                                    <input type="text" placeholder="学生姓名" class="short short1" />
+                                    <input type="text" placeholder="年龄" class="short"/>
+                                    <input type="text" placeholder="联系电话" class="long"/>
+                                    <!-- <input type="submit" value="立即预约"/> -->
+                                    <a href="{$index.book.link}">立即预约</a>
+                                </form>
+                            </div>
+                            <!--表单嵌入end-->
+
                         </div>
                     </div>
                 </div>
