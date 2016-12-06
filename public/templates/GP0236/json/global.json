@@ -23,21 +23,12 @@
 		
 		}
 	},
-	
-	
-	
-
-			
-"contactus":{
+	"contactus":{
         "value": "電 話:0592-7083933\r\n 手  機:1379978730\r\n 聯系人:謝先生\r\n 傳  真:0592-5535933\r\n 郵  箱：jms_jx@126.com \r\n 地址：廈門軟件園二期觀日路52號A棟201A\r\n 工廠地址：廈門市翔安區新",
 		"description": "联系方式",
 		"type": "textarea"
 		
 	},
-
-	
-	
-			
 	"contact_us": {
 		"description": "联系我们绑定",
 		"value": {},
@@ -45,14 +36,6 @@
 		
 
 	},
-	
-	
-	
-	
-	
-	
-	
-	
 	"links": {
 		"value": [{
 			"title": "百度",
@@ -82,5 +65,14 @@
 			"height": 280,
 			"limit": 4
 		}
+	},
+	"pagenav": {
+		"value": {},
+		"description": "侧边栏目列表（当前栏目无子栏目时展示的目标栏目）",
+		"type": "list",
+		"config": {
+			"filter": "list,page",
+			"mustchild": true
 		}
+	}
 }

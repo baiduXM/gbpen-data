@@ -152,7 +152,7 @@ white-space: nowrap;
 }
 .new-latest ul li a:hover{color: #d20000;}
 /*list-text*/
-.ny-newlist{margin-bottom: 10px;}
+.ny-newlist,.imgTxtlist{margin-bottom: 10px;}
 .ny-newlist li{height: 38px;line-height:38px;padding-bottom: 10px;border-bottom: 1px dashed #c7c7c7;margin-bottom: 10px;font-size: 14px;text-overflow: ellipsis;
 overflow: hidden;
 white-space: nowrap;
@@ -165,7 +165,14 @@ white-space: nowrap;
 .paging a{padding:2px 4px;margin: 0 5px;color: #b7b7b7;}
 .paging a:hover{background: #4a4a4a;font-weight: bold;color: #fff;}
 
-
+/*list-imagetext*/
+/*.imgTxtlist{margin-bottom: 10px;overflow: hidden;}*/
+.imgTxtlist li{height: 126px;overflow: hidden;padding-bottom: 10px;border-bottom: 1px dashed #c7c7c7;margin-bottom: 10px;}
+.imgTxtlist li .pic{float: left;margin-right: 10px;width: 165px;height: 126px;display: table-cell;vertical-align: middle;text-align: center;overflow: hidden;}
+.imgTxtlist li .pic img{max-width: 100%;max-height: 100%;vertical-align: middle;}
+.imgTxtlist li .nr{padding: 10px 0;height: 106px;width: 555px;float: right;line-height: 24px;}
+.imgTxtlist li .nr h2{display: inline-block;font-size: 16px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}
+.imgTxtlist li .nr p{font-size: 12px;height: 72px;overflow: hidden;}
 /*ny-prolist*/
 .ny-prolist{overflow: hidden;}
 .ny-prolist li{width: 238px;height: 159px;float: left;margin-right: 8px;margin-bottom: 20px;position: relative;}

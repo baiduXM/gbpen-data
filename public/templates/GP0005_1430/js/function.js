@@ -38,14 +38,13 @@ jQuery(".txtScroll-left").slide({mainCell:".bd ul",autoPage:true,effect:"top",au
     })
 
    
-
-var about_r=$(".about_r").outerHeight()
-var about_l=$(".about_l").outerHeight()
-  if(about_r>about_l){
-      $(".about_r").parent(".contant_about ").css({height:about_r+"px"});
-  }else{
-       $(".about_l").parent(".contant_about").css({height:about_l+"px"});
-  }
+//var about_r=$(".about_r").outerHeight()
+//var about_l=$(".about_l").outerHeight()
+ // if(about_r>about_l){
+     // $(".about_r").parent(".contant_about ").css({height:about_r+"px"});
+ // }else{
+   //    $(".about_l").parent(".contant_about").css({height:about_l+"px"});
+//  }
 var MarqueeDiv1Control=new Marquee("MarqueeDiv1");      //箭头控制滚动方向、加速及鼠标拖动实例
 MarqueeDiv1Control.Direction="left";
 MarqueeDiv1Control.Step=1;

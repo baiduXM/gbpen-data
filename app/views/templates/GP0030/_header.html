@@ -20,16 +20,18 @@
     <li class="nav1" style="width:{100/($limit+1)}%;"> <a href="{$site_url}" ><p style="height:51px; line-height:51px; font-weight:bold; font-size:17px;">首页</p></a> </li>
     {foreach name=navs item=nav from=$navs}
     <li class="fl{if $nav.current} current{/if} nav1" style="width:{100/($limit+1)}%"> <a href="{$nav.link}"><p style="height:51px; line-height:51px; font-weight:bold; font-size:17px;">{$nav.name}</p></a>
-      <ul class="sub clearfix">
-        {if $nav.childmenu} {foreach key=key item=nav_list from=$nav.childmenu}
-        <li class="{if $nav.current}current{/if} nav2"><a href="{$nav_list.link}">{$nav_list.name}</a></li>
-        {/foreach} {/if}
-      </ul>
+      {if $nav.childmenu}
+        <ul class="sub clearfix">
+          {foreach key=key item=nav_list from=$nav.childmenu}
+          <li class="{if $nav.current}current{/if} nav2">
+            <a href="{$nav_list.link}">{$nav_list.name}</a>
+          </li>
+          {/foreach}
+        </ul>
+      {/if}
     </li>
     {if $nav@index+1 eq $limit}{break}{/if}
     {/foreach}
-    
-    
     
   </ul>
   </div>

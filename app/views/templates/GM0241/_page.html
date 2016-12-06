@@ -1,0 +1,11 @@
+<div class="page">
+    <a href="{$page_links.prev_link}" class="pr">&lt;</a>
+    {foreach item=near_link key=near_page from=$page_links.nears_link}
+       {if $near_page == $page_links.current_page}
+        <a class="current">{$near_page}</a>
+       {else}
+    <a href="{$near_link}">{$near_page}</a>
+       {/if}
+    {/foreach}
+    <a href="{$page_links.next_link}" class="ne">&gt;</a>
+</div>

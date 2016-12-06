@@ -1,0 +1,60 @@
+
+/*标题样式*/
+.in_h2{ overflow:hidden; padding:10px 0 5px 0;   position:relative; text-align:left; z-index:100;   }
+
+.in_h2 .in_zh{ color:#2aa2f9;line-height:35px;font-size:20px; font-weight:400; text-align:center; display:inline-block;    }
+.in_h2 .in_en{ color:#2aa2f9; line-height:25px; font-weight:normal; font-size:15px;text-align:center;   }
+.in_h2 .line{ position:absolute; height:1px; width:100%; left:0px; top:49%; background:#a6a4a5; margin:6px 0; }
+.in_more{ height:2px; background:#ef9500; position:absolute; bottom:41%; margin:auto; z-index:100; }
+
+
+/*标题样式*/
+.inner{ margin-top:10px;}
+.wrapper{ width:100%; margin:auto;  }
+#in_page{  margin:auto; padding-top:20px; padding-bottom:20px;  background:url(../images/about_bg.jpg) no-repeat}
+#in_page h2{ color:#432f1c; font-size:15px; text-align:center}
+#in_page .inner p{width:96%; line-height:24px; height:96px; overflow:hidden; margin:auto; color:#776652; width:96%; margin:auto}
+@media screen and (min-width: 320px) and (max-width: 480px){
+#in_page .inner p{ height:72px; }
+}
+@media screen and (min-width: 480px) {
+	
+}
+
+
+
+
+
+
+#in_text{ padding:10px 0; position:relative; background:#e2f3fd;}
+
+#in_text .inner ul{   margin:auto; width:90%; margin:auto}
+#in_text ul li{  width:100%; margin:20px 0; position:relative; background:#f0dc03; height:35px; }
+#in_text ul li .num{ width:35px; height:35px; line-height:35px;  border-radius:50%;background:#2aa2f9; color:#fff; text-align:center; left:-20px; position:absolute}
+#in_text ul li .in_title{ width:80%; height:35px; line-height:35px; padding-left:20px; display:block; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; font-size:1.1em; color:rgba(0,0,0,.6);float:left; }
+#in_text ul li .in_more1{ width:28px; height:25px; line-height:20px; font-size:18px; font-weight:bold; text-align:center; padding-left:2px; background:#ef9500; color:#fff; position:absolute; right:-15px; top:5px; }
+#in_text ul li:nth-child(even){ background:#2aa2f9}
+#in_text ul li:nth-child(even) .in_title{ text-align:right; padding-right:25px; float:right; color:#fff}
+#in_text ul li:nth-child(even) .num{ position:absolute; left:auto;right:-15px; background:#f0dc03}
+#in_text ul li:nth-child(even) .in_more1{ text-align:center; padding-right:2px; left:-18px; background:#f0dc03; color:#675428}
+
+
+
+
+#in_image{ position:relative; padding-bottom:30px; background:url(../images/pro_bg.jpg) no-repeat; background-size:100% auto; }
+
+#in_image .inner{ overflow:hidden; position:relative; z-index:1; width:96%; margin:auto}
+#in_image ul li{ float:left;  overflow:hidden; margin:1% 1.5%; width:29%; border:3px solid #2aa2f9 }
+#in_image ul li img{width:100%; }
+
+
+@media screen and (min-width: 320px) and (max-width: 480px){
+	#in_text{ -moz-box-shadow:0px 3px 15px rgba(0,0,0,.3) inset;-webkit-box-shadow:0px 3px 15px rgba(0,0,0,.3) inset; box-shadow:0px 3px 15px rgba(0,0,0,.3) inset;}
+#in_text .inner ul{   width:85%; }
+#in_text ul li .in_more1{ width:20px;right:-10px;  }
+#in_text ul li:nth-child(even) .in_more1{ text-align:right; padding-right:2px; left:-10px;  }
+#in_image ul li{ width:28%;}
+}
+@media screen and (min-width: 480px) {
+}
+

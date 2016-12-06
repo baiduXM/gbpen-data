@@ -86,7 +86,7 @@ form.hides {width: 200px;height: 23px;margin-top: 64px;margin-right: 43px;}
 .photo2{margin-top: 15px;}
 .footer{padding: 10px  0 20px ;text-align: center;clear: both;}
 /*.a_c{position: relative;background: #f1f5f6;width: auto;height: auto;overflow: hidden;}*/
-.contant_about{min-height: 169px;height: auto;padding:0  20px 20px;width: 1210px;margin: 0 auto 30px;background: #f1f5f6;position: relative;}
+.contant_about{min-height: 169px;height: auto;display:table; padding:0  20px 20px;width: 1210px;margin: 0 auto 30px;background: #f1f5f6;position: relative;}
 .about_l{width: 220px;height: auto;overflow: hidden;position: relative;top:-58px;z-index: 999999999}
 .about_l nav h3{ background: url(../images/about_03.png) no-repeat; width: 100%;height: 90px;font: 16px/39px "微软雅黑";color: #fff; text-indent: 27px;position: relative;}
 .about_l nav h3 span{color: #fff;font-size: 14px;position: absolute;left:0;bottom: 0px}
@@ -100,11 +100,11 @@ form.hides {width: 200px;height: 23px;margin-top: 64px;margin-right: 43px;}
 .about_l .listbg>ul>li>ul>li>ul>li>a:hover,.about_l .listbg>ul>li>ul>li>ul>li.current>a{color: #92aebf;text-indent: 54px;}
 
 .about_r{width: 990px;height: auto;overflow: hidden;}
-.top_pro{width:993px;background:#e7e8e9 url(../images/wz_03.png) no-repeat 30px center;height: 46px;text-indent: 60px;color: #4b5c66;position: absolute;left:220px;top:-17px; z-index: 999999999999}
+.top_pro{width:993px;background:#e7e8e9 url(../images/wz_03.png) no-repeat 30px center;height: 46px;text-indent: 60px;color: #4b5c66;position: absolute;left:220px;top:-17px; z-index: 99}
 .top_pro span{font: 12px/46px "宋体";padding-right: 20px;}
 .top_pro span a{color: #4b5c66;}
 .top_pro span a:hover{color: #75a0b9;}
-.info{color: #333333;line-height: 26px;padding:75px 20px 30px 20px;height: auto;overflow: hidden;}
+.info{color: #333333;line-height: 26px;padding:75px 20px 30px 20px;height: auto;overflow: hidden;text-indent: 2.7em;}
 
  ul.module_news li a{line-height: 40px;height: 40px;display:block;background: url(../images/news_03.jpg) no-repeat left center;text-indent: 15px;overflow: hidden;color: #333;border-bottom: 1px dotted #cbcbcb;}
  ul.module_news li a:hover{background: url(../images/newsh_03.jpg) no-repeat left center;color: #75a0b9;}

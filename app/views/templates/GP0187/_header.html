@@ -35,7 +35,7 @@
 
             {$limit = 10}
             {if $navs|count lt $limit}{$limit = $navs|count}{/if}
-              <li class=" nav1" style="width:{100/($limit+1)}%"><a href="{$site_url}"><h3>网站首页</h3><p>HMOE page</p></a></li>
+              <li class=" nav1" style="width:{100/($limit+1)}%"><a href="{$site_url}"><h3>网站首页</h3><p>HOME</p></a></li>
             {foreach name=navs item=nav from=$navs}
             <li class="fl{if $nav.current} current{/if} aa" style="width:{100/($limit+1)}%">
                <a href="{$nav.link}"><h3>{$nav.name}</h3><p>{$nav.en_name}</p></a>
