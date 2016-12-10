@@ -68,7 +68,7 @@
                <div class="deteo">
 <div class="main_right_con" >
                 	 <h1 class="inner_news_tit">{$article.title} </h1>
-   <h2 class="inner_news_time">发布日期：{$article.pubtimestamp|date_format:'%Y-%m-%d'} <a href="javascript:history.go(-1);">[ 返回列表 ]</a></h2>
+   <h2 class="inner_news_time">发布日期：{$article.pubtimestamp|date_format:'%Y-%m-%d'} <a href="javascript:history.go(-1);">[ 返回 ]</a></h2>
    <div class="edit">{$article.content|unescape:"html"}</div>
 <div style="height:30px;overflow: hidden; padding-top:7px; margin-top:15px; color:#fff; float:right;"><!-- Baidu Button BEGIN -->
 {shareExt shareText=$article.content|unescape:"html"|strip_tags|truncate:140:"…" sharePic=$article.image}

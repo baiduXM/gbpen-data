@@ -12,9 +12,9 @@ img{border: none;}
 
 /*topbg*/
 .topbg{width: 100%;background: #071727}
-.top{width: 1000px;height: 94px;overflow: hidden;margin: 0 auto;}
-.logo{width: 162px;height: 94px;overflow: hidden;margin: 0 auto;display: block;position: relative;}
-.logo img{max-width: 100%;max-height: 100%;overflow: hidden;margin: auto;position: absolute;top: 0;bottom: 0;}
+.top{width: 1000px;height: 94px;overflow: hidden;margin: 0 auto;text-align: center;}
+.logo{height: 94px;overflow: hidden;margin: 0 auto;display: block;position: relative;}
+.logo img{max-width: 100%;max-height: 100%;overflow: hidden;margin: auto;}
 
 /*header*/
 .header{width: 100%;height: 61px;background: url(../images/nav.png) no-repeat center top;margin-top: -11px;position: relative;z-index: 9999}

@@ -1,6 +1,6 @@
 body{ color:#48332c; font-family: Microsoft Yahei,Arial, Helvetica, sans-serif; background:#e2f3fd }
-body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,input,textarea,div{margin:0;padding:0; list-style:none; line-height:24px; font-size:12px; font-weight:normal}
-body,div,ul,li,dl,dt,dd{ font-size:12px;}
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,input,textarea,div{margin:0;padding:0; list-style:none; line-height:24px; font-size:13px; font-weight:normal}
+body,div,ul,li,dl,dt,dd{ font-size:13px;}
 .clearfix:after { content:'\20'; display:block; height:0; clear:both; }
 .clearfix { *zoom:1; font-size:0px;}
 a{ color:#48332c; text-decoration:none}
@@ -18,7 +18,7 @@ img{ border:none;}
 
 .header_bg{ position:fixed; width:100%;background:#f0db01; z-index:10001}
 
-.logo{width: 310px;height: 77px;float:left; position:relative }
+.logo{width: 310px;height: 77px;float:left; position:relative; margin-left:120px;}
 .logo a{display: block;height:77px;width: 310px;position: absolute;bottom: 0px; left:0;}
 .logo img{max-width:310px; max-height:77px; position:absolute; top:0; left:0; right:0; bottom:0; margin:auto}
 
@@ -34,7 +34,7 @@ img{ border:none;}
 
 #nav ul li a:hover{ color:#fff; background:#29a2f8}
 
-#nav ul li a{ overflow:hidden; height:53px; line-height:53px;display:block; color:#221111; text-align:center; font-size:14px; }
+#nav ul li a{ overflow:hidden; height:53px; line-height:53px;display:block; color:#221111; text-align:center; font-size:16px; }
 #nav ul li .cc{background:#f0db01;height:40px; line-height: 40px;display: none; text-align:center; width:100%; position:relative; z-index:100; margin-top:0px;}
 #nav ul li .cc:hover{}
 #nav ul li .cc a{width:93%; margin:auto;color:#221111; padding:0 4%; overflow:hidden; height:40px; line-height:40px;}
@@ -59,7 +59,7 @@ img{ border:none;}
 #about .about_img{ height:298px; display:inline-block; margin-right:30px;*display:inline;*zoom:1;}
 #about .about_img img{ height:100%; display:block}
 #about .about_text{ display:inline-block; vertical-align: top;*display:inline;*zoom:1;}
-#about .about_text p{ height:210px; overflow:hidden; margin-bottom:20px; margin-top:10px; color:#48332c; line-height:27px;}
+#about .about_text p{ height:210px; overflow:hidden; margin-bottom:20px; margin-top:10px; color:#48332c; line-height:27px; font-size:15px;}
 #about .about_text h1{width:500px; height:28px; line-height:28px; overflow:hidden; background:#261b1a; font-size:17px; color:#ddccbb; text-indent:24px;  }
 #about .inner span{ font-size:23px; color:#48332c}
 #about .inner{ overflow:hidden}
@@ -79,8 +79,8 @@ img{ border:none;}
 #news ul li .n1 .news_img1{ height:109px; display:inline-block; margin-right:5px; float:left; margin-right:10px; margin-left:0px; *display:inline;*zoom:1;}
 #news ul li .n1 .news_img1 img{ height:100%; display:block}
 #news ul li .n1 .news_text{ display:inline-block; vertical-align:top;}
-#news ul li .n1 .news_text h2{ font-size:16px; height:24px; overflow:hidden}
-#news ul li .n1 .news_text p{ height:78px; overflow:hidden}
+#news ul li .n1 .news_text h2{ font-size:19px; height:24px; overflow:hidden}
+#news ul li .n1 .news_text p{ height:78px; overflow:hidden;font-size:15px;}
 #news ul li .nr{ float:right}
 #news ul li .news_xx{ float:right; margin-top:50px; background:url(../images/cc.png) right center no-repeat; width:102px; height:9px; }
 #news ul li .news_lt{ float:left; color:#ea9901}
@@ -101,7 +101,7 @@ img{ border:none;}
 #pro .inner  ul li .pic{ width:310px; height:310px; overflow:hidden;}
 #pro .inner  ul li .pic img{ display:block;}
 #pro .inner  ul li .bg{ position:absolute; top:0px; left:0px; background:rgba(0,0,0,.5); z-index:99; width:100%; height:100%; opacity:0}
-#pro .inner  ul li a{ position:absolute; color:#fff; font-size:14px; text-align:center; z-index:100; top:0%; left:0%; opacity:0; display:block;width:100%; height:100%;}
+#pro .inner  ul li a{ position:absolute; color:#fff; font-size:15px; text-align:center; z-index:100; top:0%; left:0%; opacity:0; display:block;width:100%; height:100%;}
 
 
 
@@ -109,17 +109,17 @@ img{ border:none;}
 
 #footer .cty a {
 	height:55px;
-	line-height:55px;
+	line-height:55px; font-size:15px;
 	color:#fff
 }
 #footer .cty {
 	float:left;
 	color:#fff;
-	line-height:30px;
+	line-height:30px;font-size:15px;
 }
 #footer .links {
 	float: right;
-	margin-top:10px;
+	margin-top:10px;font-size:15px;
 	
 }
 
@@ -169,4 +169,4 @@ ul.third li a.thirda:hover{color:#fff}
 
 
 .sub_contact .title{ margin:auto; width:232px; margin-top:20px;}
-.sub_contact .inner{ margin-left:15px; margin-right:15px; padding-bottom:35px; line-height:28px; color:#48332c; margin-top:15px;}
+.sub_contact .inner{ margin-left:15px; margin-right:15px; padding-bottom:35px; line-height:28px; color:#48332c; margin-top:15px;font-size:15px;}
