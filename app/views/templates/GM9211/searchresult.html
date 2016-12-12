@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- 实时预览调试代码，模板开发完成后删除 -->
+		
+		<!-- 调试代码 End -->
+		<script type="text/javascript">
+		// 跳转PC页面
+		{if $site_another_url}
+			if (!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+				location.href = '{$site_another_url}';
+			}
+		{/if}
+		</script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no,minimal-ui">
+<title>{$title}</title>
+<meta name="keywords" content="{$keywords}" />
+<meta name="description" content="{$description}" />        
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta content="telephone=no, email=no" name="format-detection">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="HandheldFriendly" content="true">
+<meta name="MobileOptimized" content="320">
+<meta name="screen-orientation" content="portrait">
+<meta name="x5-orientation" content="portrait">
+<link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
+<link rel="stylesheet" href="{$site_url}css/reset.css" /> 
+<link href="{$site_url}css/css.css" rel="stylesheet" type="text/css" />
+<link href="{$site_url}css/swipe.css" rel="stylesheet" type="text/css" />
+<script src="{$site_url}js/TouchSlide.1.1.js"></script>
+<script type="text/javascript" src="{$site_url}js/jquery.min.js"></script>
+<script type="text/javascript" src="{$site_url}js/fontsize.js"></script>
+<script type="text/javascript" src="{$site_url}js/function.js"></script>
+<script src="{$site_url}js/idangerous.swiper-2.0.min.js"></script>
+<script src="{$site_url}js/simple-app.js"></script>
+<script type="text/javascript">
+	window.addEventListener('load', function(){
+   setTimeout(function(){ window.scrollTo(0, 1); }, 100);
+});//safari浏览器可以通过此代码来隐藏地址栏
+</script>
+</head>
+<body>
+  <div class="wrap page-active">
+    <div class="index-wrap">
+      {include file="./_header.html"}
+      <section>
+        <div class="detalindex" style="background:url(images/bg.png) no-repeat center bottom;background-size:100%">
+          <div class="box_title">
+            <div class="box_tit_inner">
+              <h2>{$list.name}<span class="more2" id="first">Classfy <i>↓</i></span></h2>
+              <div class="hide-class">
+                <ul class="aboutNav">
+                  {foreach name=pagenavs item=nav from=$pagenavs}
+                    <li class="{if $nav.current}current{/if}">
+                      <a href="{if $nav.childmenu}javascript:;{else}{$nav.link}{/if}">{$nav.name}</a>
+                      {if $nav.childmenu}
+                      <dl class="second">
+                        {foreach key=key item=nav_ls from=$nav.childmenu}
+                        <dd class="{if $nav_ls.current}current{/if}"><a href="{if $nav_ls.childmenu}javascript:;{else}{$nav_ls.link}{/if}">{$nav_ls.name}</a>
+                          {if $nav_ls.childmenu}
+                          <dl class="third">
+                              {foreach key=key item=nav_listsec from=$nav_ls.childmenu}
+                              <dt class="{if $nav_listsec.current}current{/if}"><a href="{$nav_listsec.link}">{$nav_listsec.name}</a></dt>
+                              {/foreach}
+                          </dl> 
+                          {/if}      
+                        </dd>
+                        {/foreach}
+                      </dl>
+                      {/if}
+                    </li>
+                  {/foreach} 
+                </ul>         
+              </div> 
+            </div>
+          </div>
+          <div class="boxmain-m">
+            <div class="news">
+              <div class="sear">
+                {if $search.total eq 0}
+                  <p class="search_res">No search to the related data！</p>
+                  {else}
+                  <p class="t">
+                    Search keywords for “
+                    <span>{$search.keyword}</span>
+                    ” the products/articles，search {$search.total} results：
+                  </p>
+                {/if}
+              </div>
+              <ul>
+                {foreach name=article item=article from=$search.data}
+                <li><a href="{$article.link}"><span>{$article.pubtimestamp|date_format:'%Y-%m-%d'}2016-9-23</span>{$article.title}</a></li>
+                {/foreach}
+              </ul>
+              <div class="pagenum">
+                <a href="{$page_links.prev_link}">Prev page</a>
+                <a class="number on">{$page_links.current_page}</a>
+                <a href="{$page_links.next_link}">Next page</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    <footer class="foot"><div class="back-top"><a href="#">TOP</a></div>{$footprint}</footer>  
+    {$footscript}
+    </div>
+  </div>
+
+</body>
+</html>
