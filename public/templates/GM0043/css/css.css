@@ -31,17 +31,10 @@
 .about-m{ height: auto; overflow:hidden; padding:8px 5px; }
 .about-edite{ height: auto; max-height:72px;line-height:24px; overflow:hidden;}
 .about-img{ width:100%; height:auto; overflow:hidden; padding-top:6px;text-align: center;}
-.box-about{padding: 8px 5px;}
-.box-about img{ width:144px; height:168px; float:left; margin-right: 9px; display:inline}
 
-@media screen and (min-width: 320px) and (max-width: 480px){
-.box-about img{ width:134px; height:180px;}
+.box-about{padding: 8px 5px;}
+.box-about img{ max-width:140px;float:left; margin-right: 9px; display:inline}
 .box-about .nr{ overflow:hidden; }
-}
-@media screen and (min-width: 480px) {
-.box-about img{ width:168px; height:225px;}
-.box-about .nr{ height:222px; overflow:hidden;}
-}
 
 .Wedding-edite{ height: auto; max-height:48px; overflow:hidden;}
 

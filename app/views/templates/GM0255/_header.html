@@ -1,0 +1,21 @@
+<div class="banner">
+	<div id="quickbar-showcats"><i class="icon iconfont slide-nav">&#xe603;</i></div>
+	<div id="slideBox" class="slideBox">
+	  <div class="hd">
+	   <ul style=""></ul>
+	  </div>
+	  <div class="bd">
+	      <ul>
+	          {foreach name=slidepics item=slidepic from=$global.slidepics}
+	          <li>
+	            <a class="pic" href="{$slidepic.link}">
+	              <img src="{$slidepic.image}">
+	            </a>
+	          </li>
+	         	 {if $slidepic@index+1 == $global.slidepics|count - 2}{break}{/if}
+	          {/foreach}
+	      </ul>
+	  </div>
+	</div>
+</div>
+

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html manifest="huancun.manifest">
+<head>
+<!-- 实时预览调试代码，模板开发完成后删除 -->
+    
+    <!-- 调试代码 End -->
+    <script type="text/javascript">
+    // 跳转PC页面
+    {if $site_another_url}
+      if (!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+        location.href = '{$site_another_url}';
+      }
+    {/if}
+    </script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no,minimal-ui">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta content="telephone=no, email=no" name="format-detection">
+<!-- 启用360浏览器的极速模式(webkit) -->
+<meta name="renderer" content="webkit">
+<!-- 避免IE使用兼容模式 -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+<meta name="HandheldFriendly" content="true">
+<!-- 微软的老式浏览器 -->
+<meta name="MobileOptimized" content="320">
+<!-- uc强制竖屏 -->
+<meta name="screen-orientation" content="portrait">
+<!-- QQ强制竖屏 -->
+<meta name="x5-orientation" content="portrait">
+<title>{$title}</title>
+<meta name="keywords" content="{$keywords}" />
+<meta name="description" content="{$description}" />
+<link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
+<link rel="stylesheet" href="{$site_url}css/reset.css" /> 
+<link rel="stylesheet" href="{$site_url}css/public.css" /> 
+<link href="{$site_url}css/swipe.css" rel="stylesheet" type="text/css" />
+<script src="{$site_url}js/TouchSlide.1.1.js"></script>
+<script type="text/javascript" src="{$site_url}js/jquery.min.js"></script>
+<script type="text/javascript" src="{$site_url}js/idangerous.swiper-2.0.min.js"></script>
+<script type="text/javascript" src="{$site_url}js/function.js"></script>
+<script type="text/javascript" src="{$site_url}js/simple-app.js"></script>
+<script type="text/javascript">
+  window.addEventListener('load', function(){
+   setTimeout(function(){ window.scrollTo(0, 1);}, 100);
+});//safari浏览器可以通过此代码来隐藏地址栏
+</script>
+{$headscript}
+</head>
+<body>
+    <!-- 主体内容 -->
+    <div class="index-wrap">
+      <header>
+         <div class="top">
+            <div class="logo"><img src="{$logo}" width="100%"></div>
+            <i class="iconfont">&#xe603;</i>
+         </div>
+      </header>
+      <!-- 头部导航 -->
+      <nav class="menulist">
+            <a class="arrow-left" href="#">&lt;</a>
+            <a class="arrow-right" href="#">&gt;</a>
+              <div class="swiper-nav swiper-container">
+                <div class="swiper-wrapper">
+                  {foreach item=nav from=$navs}
+                  <div class="swiper-slide"><a href="{$nav.link}">{$nav.name}</a></div>
+                  {/foreach}
+                </div>
+              </div>
+      </nav>  
+      <!-- 内容 -->
+      <section>
+        <div class="probox">
+             <div class="pro_top">
+                 <div class="left"><div class="datu"><img src="{$global.indexx.image}"></div></div>
+                 <div class="right">
+                  <a href="{$navs[0].link}" class="icon1"><img src="{$navs[0].image}"></a>
+                  <p>{$navs[0].name}</p>
+                 </div>
+             </div>
+             <ul class="fenl">
+                 <li class="li1">
+                   <a href="{$navs[1].link}" class="icon"><img src="{$navs[1].image}"></a>
+                   <p>{$navs[1].name}</p>
+                 </li>
+                 <li class="li2">
+                   <a href="{$navs[2].link}" class="icon"><img src="{$navs[2].image}"></a>
+                   <p>{$navs[2].name}</p>
+                 </li>
+                 <li class="li3">
+                   <a href="{$navs[3].link}" class="icon"><img src="{$navs[3].image}"></a>
+                   <p>{$navs[3].name}</p>
+                 </li>
+                 <li class="li4">
+                   <a href="{$navs[4].link}" class="icon"><img src="{$navs[4].image}"></a>
+                   <p>{$navs[4].name}</p>
+                 </li>
+                 <li class="li5">
+                   <a href="{$navs[5].link}" class="icon"><img src="{$navs[5].image}"></a>
+                   <p>{$navs[5].name}</p>
+                 </li>
+                 <li class="li6">
+                   <a href="list-image.html" class="icon more">+</a>
+                   <p>查看更多</p>
+                 </li>
+             </ul>
+        </div>
+        <div class="newbox">
+          {foreach item=mIndexCat from=$mIndexCats}
+          {if $mIndexCat.type eq 1}
+            {if $mIndexCat.showtype eq 1}
+             <div class="nav2">{$mIndexCat.name}<a href="{$mIndexCat.link}">MORE+</a></div>  <div class="new">
+                  <ul class="new-list">
+
+                  <div class="new-top"><a href="{$mIndexCat.data[0].link}">
+                    <div class="nleft"><div class="nimg"><img src="{$mIndexCat.data[0].image}"></div></div>
+                    <div class="nright">
+                         <p class="title">{$mIndexCat.data[0].title}</p>
+                         <p class="nr">{$mIndexCat.data[0].description}</p>
+                    </div>
+                  </a></div>
+                    {$sum=1}
+                    {foreach item=new from=$mIndexCat.data}
+                      <li><a href="{$new.link}"><strong class="date">{$new.pubtimestamp|date_format:"%y-%m-%d"}</strong>
+                        {$new.title}</a></li>
+                      {$sum=$sum+1}
+                    {if $new@index+1 == 6}{break}{/if}
+                    {/foreach}
+                  </ul>
+             </div>
+             {/if}
+          {/if}
+          {/foreach}
+        </div>         
+      </section>
+      <footer class="foot"><span class="back-top">TOP↑</span>{$footprint}</footer>
+    </div>
+  {$footscript}
+</body>
+</html>

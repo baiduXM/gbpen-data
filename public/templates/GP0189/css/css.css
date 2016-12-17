@@ -1,6 +1,7 @@
-body{ color:#666; font-family:Microsoft Yahei,Arial, Helvetica, sans-serif; background:#fff }
-body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,input,textarea,div{margin:0;padding:0; list-style:none; line-height:24px; font-size:12px; font-weight:normal}
-body,div,ul,li,dl,dt,dd{ font-size:12px;}
+body{ color:#666;font-size:12px;line-height:24px;font-family:Microsoft Yahei,Arial, Helvetica, sans-serif; background:#fff }
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,input,textarea,div{margin:0;padding:0; list-style:none; /*line-height:24px;*/ font-weight:normal}
+/*body,div,ul,li,dl,dt,dd{ font-size:12px;}*/
+body,div,dl,dt,dd,p{ font-size:12px;}
 .clearfix:after { content:'\20'; display:block; height:0; clear:both; }
 .clearfix { *zoom:1; font-size:0px;}
 a{ color:#666; text-decoration:none}
@@ -41,7 +42,7 @@ strong{display: block;margin: 0 auto;overflow: hidden;text-overflow: ellipsis;wh
 
 #nav{ height:100px; width:630px; float:right}
 #nav ul li p{ height:20px; line-height:20px; overflow:hidden; font-size:14px; font-weight:bold; color:#321500; padding-top:33px;}
-#nav ul li h2{ height:24px; line-height:24px; overflow:hidden; font-size:10px; color:#999999; text-transform:uppercase}
+#nav ul li h2{ height:24px; line-height:24px; overflow:hidden; font-size:10px; color:#999999; /*text-transform:uppercase*/}
 #nav ul li a p:hover{ color:#873a00; width:100%}
 
 #nav ul li{float:left; height:100px; font-size:14px;font-family:Microsoft Yahei; } 
@@ -108,7 +109,7 @@ strong{display: block;margin: 0 auto;overflow: hidden;text-overflow: ellipsis;wh
 #news .title h2{ color:#2b1301; font-size:16px; font-weight:bold; margin-bottom:2px;}
 #news .title h2 b{ text-transform:uppercase; color:#cccccc; font-size:20px; font-weight:normal}
 #news .inner{ width:460px; margin:0 auto; margin-top:15px; height:259px; overflow:hidden}
-#news .inner ul li a .date{ width:84px; float:left; color:#666666; height:20px; line-height:20px; margin-top:7px;}
+#news .inner ul li a .date{ width:84px; float:left; color:#666666; height:20px;font-size: 12px; line-height:20px; margin-top:7px;}
 #news .inner ul li a .date:hover{ background:url(../images/date_bg.png) top center no-repeat; color:#fcf6cd; padding-left:15px;}
 #news .inner ul li a .des{ background:url(../images/ico0.png) right no-repeat; font-size:14px; height:30px; line-height:30px; overflow:hidden; padding-right:10px;}
 #news .inner ul li{border-bottom:1px dashed #ccc; height:37px; line-height:37px;}

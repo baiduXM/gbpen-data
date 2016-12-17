@@ -1,0 +1,25 @@
+<div class="warp_nav" id="warp_nav">
+	<h1>网站导航</h1>
+	<nav class="nav">
+		<div class="nav_main">
+			<ul class="left_menu">
+
+				<li><a href="{$site_url}">网站主页</a></li>
+
+				{foreach item=nav from=$navs}
+				<li>
+					<a href="{$nav.link}">{$nav.name}</a>
+					{if $nav.childmenu}
+					<i></i>
+					<ul class="menu_list">
+						{foreach key=key item=nav_list from=$nav.childmenu}
+						<li><a href="{$nav_list.link}">{$nav_list.name}</a></li>
+						{/foreach}
+					</ul>
+					{/if}
+				</li>
+				{/foreach}
+			</ul>
+		</div>
+	</nav>
+</div>

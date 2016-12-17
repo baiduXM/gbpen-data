@@ -1,0 +1,21 @@
+<div class="search">
+  <header>
+      <h2>搜索 · 分类</h2>
+      <div class="backhis"></div>          
+  </header>
+  <div class="smain">
+    <p>搜索</p>
+    <div class="searchbox">
+      <form action="{$search_action}" method="GET">
+        <input class="sinp" type="text" name="s" value="" />
+        <input class="sbtn" type="submit" value="" />
+      </form>      
+    </div>
+    <p>分类</p>
+    <ul>
+      {foreach item=list1 from=$global.sclass.childmenu}
+        <li><a href="{$list1.link}">{$list1.name}</a></li>
+      {/foreach}
+    </ul>
+  </div>
+</div>

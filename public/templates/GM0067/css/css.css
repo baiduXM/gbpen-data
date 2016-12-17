@@ -19,7 +19,7 @@
 #in_page .in_h1:after{ width:50%; border:1px solid rgba(0,0,0,.3);  left:0px; height:100%; top:0px; position:absolute; content:""; display:block; }
 #in_page .in_h1 .bg{width:60%; background:#fff;  padding:5% 0; margin:20% 0;margin-left:20%;}
 #in_page .in_h1 .in_zh{width:100%;color:#333;line-height:30px; font-size:22px;  text-align:center; margin:auto; text-align:center; border-bottom:1px solid #333 ;margin-top:10px; margin-bottom:10px;}
-#in_page .in_h1 .in_en{ width:100%;color:#e12735; line-height:30px; font-weight:normal; font-size:21px; text-align:center; margin:auto; text-align:center;  border-bottom:1px solid #333; overflow:hidden;  }
+#in_page .in_h1 .in_en{ width:140%;color:#e12735; line-height:30px; text-indent:-1em;   display: inherit; font-weight:normal; font-size:21px; text-align:center; margin:auto; text-align:center;  border-bottom:1px solid #333;overflow:hidden; }
 #in_page .inner{ float:left; width:72%;  overflow:hidden; line-height:25PX; font-size:13px; margin-top:0px;}
 
 #in_page .inner img{ display:block; margin-bottom:5px; width:96%;}

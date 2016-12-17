@@ -1,0 +1,54 @@
+
+
+<div id="footer_bg" class="wrapper clearfix">
+
+<div id="footer">
+
+   <div class="foot_left"><img src="{$site_url}images/link.jpg" /></div>
+   
+   <div class="foot_right">
+   
+   <div class="link">{foreach name=friend item=friend from=$global.links}
+		    <a href="{$friend.link}">{$friend.title}</a> |
+		 	{/foreach}</div>
+   
+   <div class="copyright">{$footprint}</div>
+   
+   </div>
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+{$footscript}
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--#*
+{foreach name=navs item=nav from=$navs}
+<a href="{$nav.link}" >{$nav.name}</a> |{/foreach}
+
+<a href="index.html" target="_blank">首页</a> | {foreach name=navs item=nav from=$navs}<a href="{$nav.link}">{$nav.name}</a> | {/foreach}
+
+{$footprint}
+*#-->
+

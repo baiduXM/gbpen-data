@@ -20,7 +20,7 @@
       <ul class="clearfix menu1">
             {$limit =6}
             {if $navs|count lt $limit}{$limit = $navs|count}{/if}
-              <li class=" nav1" style="width:{100/($limit+1)}%"><a href="{$site_url}"><p>网站首页</p><span> home</span></a></li>
+              <li class=" nav1" style="width:{100/($limit+1)}%"><a href="{$site_url}"><p>网站首页</p><span> Home</span></a></li>
             {foreach name=navs item=nav from=$navs}
             <li class="fl{if $nav.current} current{/if} aa" style="width:{100/($limit+1)}%">
               <a href="{$nav.link}"><p>{$nav.name}</p><h2> {$nav.en_name}</h2></a>
