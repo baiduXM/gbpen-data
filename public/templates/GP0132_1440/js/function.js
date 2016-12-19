@@ -11,6 +11,8 @@ $(document).ready(function(){
 		})*/
     jQuery(".picScroll-left").slide({mainCell:".bd ul",autoPage:true,effect:"left",
                autoPlay:true,vis:1,trigger:"click"});
+
+$(".banq p").remove();
 	
 });	
 	
