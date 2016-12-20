@@ -34,10 +34,11 @@
 
 	<title>{$title}</title>
 
-	<link rel="stylesheet" type="text/css" href="{$site_url}css/public.css">
-	<link rel="stylesheet" type="text/css" href="{$site_url}css/index.css">
+	<link rel="stylesheet" type="text/css" href="{$site_url}css/style.css">
 	<script type="text/javascript" src="{$site_url}js/jquery-1.9.1.min.js"></script>
 	<script type="text/javascript" src="{$site_url}js/swiper.min.js"></script>
+	<script type="text/javascript" src="{$site_url}js/function.js"></script>
+	<script type="text/javascript" src="{$site_url}js/index.js"></script>
 	<script type="text/javascript">
 		window.addEventListener('load', function(){
 	   		setTimeout(function(){ window.scrollTo(0, 1); }, 100);
@@ -46,40 +47,29 @@
 {$headscript}
 </head>
 <body>
-<div id="body">
-	{include file="./_nav.html"}
-	<div class="warp">
+	<div id="wrapper">
 		{include file="./_header.html"}
-		<div class="content">
-			<div class="main">
-				<ul class="menu">
-					<li><a href="{$site_url}"><img src="{$site_url}images/menu_01.png">网站主页</a></li>
-					
-					{foreach item=menu from=$navs}
-					<li><a href="{$menu.link}">{$menu.icon}{$menu.name}</a></li>
+		<div class="content oh pr">
+			<ul class="menu">
+				<li><a href="{$site_url}"><i><img src="{$site_url}images/menu.png"></i>网站主页</a></li>
+				{foreach item=menu from=$navs}
+				<li><a href="{$menu.link}">{$menu.icon}{$menu.name}</a></li>
+				{/foreach}
+			</ul>
+			<div class="banner">
+				<ul class="picture swiper-wrapper">
+					{foreach name=slidepics item=slidepic from=$global.slidepics}
+						<li class="swiper-slide"><a href="{$slidepic.link}"><img src="{$slidepic.image}" /></a></li>
 					{/foreach}
 				</ul>
-				<div class="banner swiper-container">
-					<ul class="picture swiper-wrapper">
-						{foreach name=slidepics item=slidepic from=$global.slidepics}
-							<li class="swiper-slide"><a href="{$slidepic.link}"><img src="{$slidepic.image}" /></a></li>
-						{/foreach}
-					</ul>
-					<div class="page"></div>
-				</div>
-				<div class="telephone">
-					<div class="phone"><a href="tel:{$contact.telephone}">
-						<img src="{$site_url}images/phone.png">期待您的来电：{$contact.telephone}
-					</a></div>
-				</div>
-				<div class="copyright"><div class="footprint">{$footprint}</div></div>
+				<div class="page"><p></p></div>
 			</div>
+			<div class="telephone"><a href="tel:{$contact.telephone}">
+				<img src="{$site_url}images/phone.png">期待您的来电：{$contact.telephone}
+			</a></div>
+			<div class="copyright"><div class="footprint">{$footprint}</div></div>
 		</div>
-		{include file="./_footer.html"}
 	</div>
-</div>
-	<script type="text/javascript" src="{$site_url}js/function.js"></script>
-	<script type="text/javascript" src="{$site_url}js/touch.js"></script>
-	<script type="text/javascript" src="{$site_url}js/index.js"></script>
+{$footscript}
 </body>
 </html>

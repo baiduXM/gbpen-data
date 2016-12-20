@@ -34,10 +34,10 @@
 
 	<title>{$title}</title>
 
-	<link rel="stylesheet" type="text/css" href="{$site_url}css/public.css">
 	<link rel="stylesheet" type="text/css" href="{$site_url}css/style.css">
 	<script type="text/javascript" src="{$site_url}js/jquery-1.9.1.min.js"></script>
 	<script type="text/javascript" src="{$site_url}js/swiper.min.js"></script>
+	<script type="text/javascript" src="{$site_url}js/function.js"></script>
 	<script type="text/javascript">
 		window.addEventListener('load', function(){
 	   		setTimeout(function(){ window.scrollTo(0, 1); }, 100);
@@ -45,46 +45,39 @@
 	</script>
 </head>
 <body>
-<div id="body">
-	{include file="./_nav.html"}
-	<div class="warp">
+	<div id="wrapper">
 		{include file="./_header.html"}
-		<div class="content">
-			<div class="inside">
-				<div class="main">
-					<div class="side_detail">
-						<i><a href="javascript:history.back(-1)"><img src="{$site_url}images/return.png"></a></i>
-						<h1>{$list.name}</h1>
-					</div>
-					<div class="middle">
-						<div class="search">
-							<div class="search_top">
-								<h2>搜索</h2>
-								<form id="search" action="{$search_action}" method="post" name="">
-									<input type="text" name="s" id="searching" placeholder="请输入关键字" />
-									<button class="search_button"><img src="{$site_url}images/mag2.png" alt="搜索"></button>
-							    </form>
-							</div>
-							<div class="search_main">
-								<h2>以下是关键字“ <mark>甜品</mark>”的搜索结果，共<mark>{$search.total}</mark>条</h2>
-								<ul>
-									{foreach item=article from=$list.data}
-										<li><a href="{$article.link}">{$article.title}</a></li>
-									{/foreach}
-								</ul>
-								{include file='./_page.html'}
-							</div>
-						</div>
-						<div class="copyright"><div class="footprint">{$footprint}</div></div>
-					</div>
+		<div class="content oh pr">
+			<div class="main">
+				<div class="content-hd">
+					<a href="javascript:history.back(-1)" class="return db fl"><span></span></a>
+					<h1>{$list.name}</h1>
 				</div>
+            	{include file='./_classify.html'}
+				<article class="article">
+					<div class="search">
+						<div class="search-hd">
+							<h2>搜索</h2>
+						    <form action="{$search_action}" method="GET">
+								<input type="text" name="s" value="" />
+								<input type="submit" value="" />
+							</form>
+						</div>
+						<div class="search-main">
+							<h3>以下是关键字“ <mark>{$search.keyword}</mark>”的搜索结果</h3>
+							<ul class="search-list">
+								{foreach item=sear from=$search.data}
+									<li><a href="{$sear.link}">{$sear.title}</a></li>
+								{/foreach}
+							</ul>
+							{include file='./_page.html'}
+						</div>
+					</div>
+				</article>
+				<div class="copyright"><div class="footprint">{$footprint}</div></div>
 			</div>
 		</div>
-		{include file="./_footer.html"}
 	</div>
-</div>
-	<script type="text/javascript" src="{$site_url}js/function.js"></script>
-	<script type="text/javascript" src="{$site_url}js/touch.js"></script>
-	<script type="text/javascript" src="{$site_url}js/index.js"></script>
+{$footscript}
 </body>
 </html>

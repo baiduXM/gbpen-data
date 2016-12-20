@@ -34,10 +34,10 @@
 
 	<title>{$title}</title>
 
-	<link rel="stylesheet" type="text/css" href="{$site_url}css/public.css">
 	<link rel="stylesheet" type="text/css" href="{$site_url}css/style.css">
 	<script type="text/javascript" src="{$site_url}js/jquery-1.9.1.min.js"></script>
 	<script type="text/javascript" src="{$site_url}js/swiper.min.js"></script>
+	<script type="text/javascript" src="{$site_url}js/function.js"></script>
 	<script type="text/javascript">
 		window.addEventListener('load', function(){
 	   		setTimeout(function(){ window.scrollTo(0, 1); }, 100);
@@ -45,45 +45,34 @@
 	</script>
 </head>
 <body>
-<div id="body">
-	{include file="./_nav.html"}
-	<div class="warp">
+	<div id="wrapper">
 		{include file="./_header.html"}
-		<div class="content">
-			<div class="inside">
-				<div class="main">
-					<div class="side_hd">
-						<h1><img src="{$site_url}images/side_01.png">{$list.name}</h1>
-						<div class="side_right">
-							<div class="size">
-								<a href="">字</a>
-								<ul class="size_list">
-									<em><i></i></em>
-									<li><a href="" id="size_big">大</a></li>
-									<li><a href="" id="size_middle">中</a></li>
-									<li><a href="" id="size_small">小</a></li>
-								</ul>
-							</div>
-							<div class="boxa">
-								<a href="">分类</a>
-							</div>
-						</div>
-					</div>
-					{include file="./_box.html"}
-					<div class="middle">
-						<article class="about">
-							{$list.content|unescape:"html"}
-						</article>
-						<div class="copyright"><div class="footprint">{$footprint}</div></div>
-					</div>
+		<div class="content oh pr">
+			<div class="main">
+				<div class="main-hd">
+					<h1><img src="{$site_url}images/icon-01.png">{$list.name}</h1>
+					<div class="size tc pr fr cf">
+                        <div class="fontsize"><span>字</span></div>
+                        <div class="size-list pa oh">
+                        	<ol>
+	                            <li id="largen">大</li>
+	                            <li id="recover">中</li>
+	                            <li id="diminish">小</li>
+	                        </ol>
+                        </div>
+                    </div>
+					<div class="classify pr fr">分类</div>
 				</div>
+            	{include file='./_classify.html'}
+				<article class="article">
+					<div class="about">
+						{$list.content|unescape:"html"}
+					</div>
+				</article>
+				<div class="copyright"><div class="footprint">{$footprint}</div></div>
 			</div>
 		</div>
-		{include file="./_footer.html"}
 	</div>
-</div>
-	<script type="text/javascript" src="{$site_url}js/function.js"></script>
-	<script type="text/javascript" src="{$site_url}js/touch.js"></script>
-	<script type="text/javascript" src="{$site_url}js/index.js"></script>
+{$footscript}
 </body>
 </html>

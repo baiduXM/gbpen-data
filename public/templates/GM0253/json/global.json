@@ -20,60 +20,13 @@
 			"height": 380
 		}
 	},
-	"bottomnavs": {
-		"value": [{
-			"name": "电话",
-			"icon": "&#xe602;",
-			"image": "http://..../a.png",
-			"data": "0592-2323232",
-			"type": "tel",
-			"enable": 1
-		}, {
-			"name": "短信",
-			"icon": "&#xe604;",
-			"image": "http://..../a.png",
-			"data": "热线电话:0592-2323232|售后电话:13088888888",
-			"type": "sms",
-			"enable": 1
-		}, {
-			"name": "咨询",
-			"icon": "&#xe606;",
-			"image": "http://..../a.png",
-			"data": "小E:156568451@QQ|客服-XX:10000@QQ",
-			"type": "im",
-			"enable": 1
-		}, {
-			"name": "导航B",
-			"icon": "&#xe607;",
-			"image": "http://..../a.png",
-			"data": "http://...",
-			"childmenu": [{
-				"name": "导航B1",
-				"icon": "&#xe607;",
-				"image": "http://..../a.png",
-				"data": "http://...",
-				"type": "link",
-				"enable": 1
-			},
-			{
-				"name": "导航B2",
-				"icon": "&#xe607;",
-				"image": "http://..../a.png",
-				"data": "http://...",
-				"type": "link",
-				"enable": 1
-			}],
-			"type": "link",
-			"enable": 1
-		}, {
-			"name": "分享",
-			"icon": "&#xe600;",
-			"image": "http://..../a.png",
-			"data": "",
-			"type": "share",
-			"enable": 1
-		}],
-		"description": "底部导航",
-		"type": "quickbar"
+	"pagenavs": {
+		"value": {},
+		"description": "内页顶部栏目分类（当前栏目无子栏目时展示的目标栏目）",
+		"type": "list",
+		"config": {
+			"filter": "list,page",
+			"mustchild": true
+		}
 	}
 }
