@@ -20,7 +20,7 @@ $(document).ready(function() {
     });
 
 // 大图滚动
-    $('.slidepics').swiper({pagination: '.dotted p',paginationClickable: true,spaceBetween: 30,autoplay:2500,autoplayDisableOnInteraction:false});
+    $('.slidepics').swiper({pagination: '.dotted p',paginationClickable: true,autoplay:2500,autoplayDisableOnInteraction:false});
 
 // 回到顶部
 	$(".totop").click(function(){
