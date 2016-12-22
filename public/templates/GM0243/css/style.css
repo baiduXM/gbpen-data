@@ -1,4 +1,4 @@
-/*reset+css库*/
+﻿/*reset+css库*/
 @charset "utf-8";
 body, dl, dd, h1, h2, h3, h4, h5, h6, p, form{margin:0;}
 a{ color: #323232; text-decoration:none}
@@ -26,7 +26,7 @@ mark{background: none;}
 .head-menu a#home{display: table-cell;width: 1.15rem;height: 2.9rem;text-align: center;vertical-align: middle;}
 a#home i{font-size: 0.65rem;line-height: 1.15rem;color: #70aa91;}
 
-.slidepics{width: 16rem;height: 9rem;overflow: hidden;position: relative;z-index: 1;margin-bottom: 0.5rem;}
+.slidepics{/*width: 16rem;height: 9rem;*/overflow: hidden;position: relative;z-index: 1;margin-bottom: 0.5rem;}
 .slidepics ul.banner{width: 100%;height: 100%;}
 ul.banner li{width: 100%;height: 100%;overflow: hidden;float: left;}
 ul.banner li a{display: block;width: 100%;height: auto;}

@@ -1,0 +1,34 @@
+{
+	"picture": {
+		"value": [{
+			"title": "测试图一",
+			"image": "images/picture.jpg",
+			"link": "article/1.html",
+			"description": "picture1"
+		}, {
+			"title": "测试图2",
+			"image": "images/picture.jpg",
+			"link": "http://www.baidu.com"
+		},{
+			"title": "测试图3",
+			"image": "images/picture.jpg",
+			"link": "http://www.baidu.com"
+		}],
+		"description": "首页头部大图",
+		"type": "images",
+		"config": {
+			"width": 1920,
+			"height": 360
+		}
+	},
+	"pagenavs": {
+		"value": {},
+		"description": "侧边栏目列表（当前栏目无子栏目时展示的目标栏目）",
+		"type": "list",
+		"config": {
+			"filter": "list,page",
+			"mustchild": true
+		}
+	}
+	
+}
