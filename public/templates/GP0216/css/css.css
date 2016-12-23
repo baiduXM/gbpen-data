@@ -35,7 +35,7 @@ strong{display: block;margin: 0 auto;overflow: hidden;text-overflow: ellipsis;wh
 #nav ul li a:hover{ background:#f2a31a; display:block; color:#FFF;}
 
 #nav ul li .cc{background:#0164c4;height:40px; line-height: 40px;display: none; text-align:center; 
-width:100%; position:relative; z-index:100; margin-top:0px; }
+width:100%; position:relative; z-index:10000; margin-top:0px; }
 #nav ul li .cc:hover{}
 #nav ul li .cc a{width:92%; margin:auto;color:#fff; padding:0 4%; overflow:hidden; height:40px; line-height:40px;}
 #nav ul li .cc a:hover{ text-decoration:underline;color:#fff;}
