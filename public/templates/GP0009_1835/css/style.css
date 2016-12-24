@@ -31,11 +31,11 @@ ol,p,dl,li{list-style:none;}
 .nav a{ color:#060001;  }
 .nav .nLi{ float:left;  position:relative; display:inline;  height:149px; background:url(../images/muen_link.jpg) right top no-repeat;}
 .nav .nLi h3{ float:left; width:100%;}
-.nav .nLi h3 a{color:#d62322; display:block; padding:0; margin:0px 8px;font-weight:normal; height:32px; line-height:32px; border-bottom:1px solid #000; margin-top:18px;text-align:center; font-size:14px; font-family:"微软雅黑"; padding:0px 0px;}
+.nav .nLi h3 a{display:block; padding:0; margin:0px 8px;font-weight:normal; height:32px; line-height:32px; border-bottom:1px solid #000; margin-top:18px;text-align:center; font-size:14px; font-family:"微软雅黑"; padding:0px 0px;}
 .nav .sub{ display:none; width:100%; font-size:12px; text-align:right;top:55px;   position:absolute; background:url(../images/menunav.png);}
 .nav .sub li{ zoom:1;  margin:0px auto; padding:0px 10px; }
 .nav .sub a{ display:block; padding:0 0px; color:#929292; padding-right:5px;height:22px; text-align:center; line-height:22px; overflow:hidden; margin-bottom:2px;}
-.nav .sub a:hover{  color:#fff; background:#d62322  }
+.nav .sub a:hover{  color:#fff; background:#987a60  }
 .nav .on h3 a{color:#987a60;-webkit-animation:swing 1s .2s ease both;
 -moz-animation:swing 1s .2s ease both;}
 .nav .current h3 a{color:#987a60;-webkit-animation:swing 1s .2s ease both;

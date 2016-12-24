@@ -12,7 +12,6 @@ $(document).ready(function(){
 			}
 	
 	$(".class-m").height($(".class").outerHeight()-$(".class-top").outerHeight())
-	$(".index-wrap").height($("html").height()-$(".fixed").height()-$(".tell-icon").height())
 	
 	});
 	$(window).resize(function(){
@@ -26,7 +25,6 @@ $(document).ready(function(){
 			}
 	
 		$(".class-m").height($(".class").outerHeight()-$(".class-top").outerHeight())
-		$(".index-wrap").height($("html").height()-$(".fixed").height()-$(".tell-icon").height())
 	})
 	
 	                            $(window).on('load', function () {
@@ -146,7 +144,6 @@ $(document).ready(function(){
 
 	$(".tell-icon .close").click(function(){
 		$(".tell-icon").removeClass("display-block")
-		$(".index-wrap").height($(window).height()-$(".fixed").height())
 		return false
 	})
 	
