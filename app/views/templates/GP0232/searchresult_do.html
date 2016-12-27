@@ -23,10 +23,11 @@
 <script type="text/javascript" src="{$site_url}js/function.js"></script>
 <body>
 <div class="bg"> {include file='./_header.html'}
+<div id="sub_container_bg" >
   <div id="sub_container" class=" wrapper clearfix" > {include file='./_aside.html'}
     <div class="main fr">
-      <div class="crumb"> <span>您所在的位置：<a href="{$site_url}">首页</a> > 搜索结果 </span>
-       搜索结果
+      <div class="crumb"> <span>您所在的位置：<a href="{$site_url}">首页</a> > 搜索结果 </span><b>search</b>
+        <p>搜索结果</p>
       </div>
       <div class="article">
         <div class="searchresult"> {if $search.total eq 0}
@@ -45,7 +46,7 @@
           {/if} </div>
       </div>
     </div>
-  </div>
+  </div>  </div>
   {include file='./_footer.html'} </div>
 </body>
 </html>

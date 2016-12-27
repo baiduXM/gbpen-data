@@ -119,22 +119,22 @@
   display: none;
   margin-top: -15px;
   background: #2d2d2d;
-  opacity: 0.8;
-  filter: alpha(opacity=80);
+  opacity: 0.95;
+  filter: alpha(opacity=95);
   z-index: 10;
 }
 .nav ul .nav_li ul.sub li {
   position: relative;
   width: 100%;
-  line-height: 24px;
-  height: 24px;
+  line-height: 28px;
+  height: 28px;
   overflow: hidden;
 }
 .nav ul .nav_li ul.sub li a {
-  color: #717171;
+  color: #cccccc; font-size: 14px;
 }
 .nav ul .nav_li ul.sub li:hover a {
-  color: #fff;
+  color: #fff; font-weight: bold;
 }
 .nav ul .nav_li ul.sub i {
   display: block;
@@ -556,7 +556,7 @@
 }
 .banner2 .tit_div .tit {
   width: 100%;
-  text-indent: 50px;
+  text-indent: 20px;
 }
 .banner2 .tit_div .tit h1 {
   font-size: 30px;
@@ -584,7 +584,7 @@
   height: 46px;
   line-height: 46px;
   overflow: hidden;
-  text-indent: 50px;
+  text-indent: 20px;
   font-size: 14px;
   background: #2d2d2d;
   margin-top: 20px;

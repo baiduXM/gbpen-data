@@ -76,9 +76,9 @@ ul.inner_pages a:hover{ text-decoration:underline}
 
 
 .slideBoxb{ width:100%;position:relative;}
-.slideBoxb .hd{ height:15px; overflow:hidden; position:absolute; right:5px; bottom:5px; z-index:1; display:none; }
-.slideBoxb .hd ul{ overflow:hidden; zoom:1; float:left; display:none;  }
-.slideBoxb .hd ul li{ float:left; margin-right:2px;  width:15px; height:15px; line-height:14px; text-align:center; background:#fff; display:none; cursor:pointer; }
+.slideBoxb .hd{ height:15px; overflow:hidden; width: auto; position:absolute; left:48%; bottom:5px; z-index:98;  }
+.slideBoxb .hd ul{ overflow:hidden; zoom:1;}
+.slideBoxb .hd ul li{ float:left; margin-right:2px;  width:15px; height:15px; line-height:14px; text-align:center; background:#fff; cursor:pointer; }
 .slideBoxb .hd ul li.on{ background:#f00; color:#fff; }
 .slideBoxb .bd{ position:relative; height:100%; z-index:0;  margin:0px auto; text-align:center;   }
 .slideBoxb .bd li{ zoom:1; vertical-align:middle; }
