@@ -81,7 +81,7 @@ ul.picture li{width: 1920px;height: 750px;overflow: hidden;text-align: center;}
 .dot ol li{float: left;margin: 0 8px;width: 20px;height: 20px;cursor:pointer;text-indent: 99px;background: url(../images/dot-01.png) no-repeat center;overflow: hidden;}
 .dot ol li.on{background: url(../images/dot-02.png) no-repeat center !important;}
 
-.inside{width: 953px;height: 483px;margin-top: 41px;background: url(../images/back-in.png);position: relative;z-index: 20;padding: 21px 26px 18px 21px;}
+.inside{width: 953px;height: 483px;margin-top: 41px;background: url(../images/back-in.png);position: relative;z-index: 20;background: rgba(0,0,0,0.8); padding: 21px 26px 18px 21px;}
 
 /*左侧编辑框*/
 .left{width: 187px;height: 100%;float: left;position: relative;}
