@@ -2,7 +2,8 @@ $(document).ready(function() {
 	load();
 	setTimeout("cloud()", 1500);
 	setTimeout("theme()", 2300);
-	setTimeout("light()", 4800);
+	//setTimeout("light()", 4800);
+	light();
 	$(".head").wrap('<header id="header"></header>');
 });
 
@@ -62,18 +63,17 @@ function light(){
 	$("#ray,#shadow").css({filter:"Alpha(opacity=100)"}).animate({opacity:"1"}, 800,function(){
 		$(this).removeClass('skew');
 	})
+	setTimeout("change()", 0);
 	$(".cat").animate({left:"478px"}, 1000,function(){
 		$(this).find('i').css({filter:"Alpha(opacity=100)",opacity:"1"}).addClass('change1');
-		setTimeout("change()", 500);
 	});
 };
 function change(){
 	$(".cat").find('i').removeClass('change1').addClass('change2');
-	$(".man").css({filter:"Alpha(opacity=100)"}).animate({opacity:"1",right:"533px"}, 1000,function(){
-		$("#header").animate({top:"20px"}, 250,function(){
+	$(".man").css({filter:"Alpha(opacity=100)"}).animate({opacity:"1",right:"533px"}, 1000);
+	$("#header").animate({top:"20px"}, 250,function(){
 			$(this).animate({top:"0px"}, 100,function(){
 				$(this).addClass('swing')
 			})
 		});
-	});
 };

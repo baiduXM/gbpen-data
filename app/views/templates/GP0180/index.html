@@ -1,6 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+
     <script type="text/javascript">
     // Ìø×ªÊÖ»úÒ³Ãæ
     {if $site_another_url}
@@ -9,16 +10,16 @@
         }
     {/if}
     </script>
-
-<!--  -->
 <meta name="keywords" content="{$keywords}"/>
 <meta name="description" content="{$description}"/>
 <link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="Content-Language" content="zh-CN">
-
 <link rel="stylesheet" type="text/css" href="{$site_url}css/style.css"/>
+<link rel="stylesheet" type="text/css" href="{$site_url}css/jquery.mCustomScrollbar.css"/>
 <script type="text/javascript" src="{$site_url}js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.js"></script>
+<script type="text/javascript" src="{$site_url}js/jquery.mCustomScrollbar.concat.min.js"></script>
 <script type="text/javascript" src="{$site_url}js/function.js"></script>
 <script type="text/javascript" src="{$site_url}js/index.js"></script>
 <script type="text/javascript" src="{$site_url}js/html5.js"></script>
@@ -29,27 +30,32 @@
 	<div id="wrapper">
         <div class="wrap">
             {include file='./_header.html'}
-            <div id="animation">
-                <div class="road"></div>
-                <div class="grass"></div>
-                <div class="hill"></div>
-                <div class="city"></div>
-                <ul class="cloud">
-                    <li class="cloud-01"></li>
-                    <li class="cloud-02"></li>
-                    <li class="cloud-03"></li>
-                </ul>
-                <div class="skew opacity" id="ray"></div>
-                <div class="skew opacity" id="shadow"></div>
-                <ul class="plane">
-                    <li class="plane-01 opacity"><i><span><img src="{$index.picture.image}"></span></i><b></b></li>
-                    <li class="plane-02 opacity"><b></b></li>
-                </ul>
-                <div class="cat">
-                    <i class="opacity"><span><img src="{$index.name.image}"></span></i>
+            {$num=$global.num}
+            {if $num==1}
+                <div id="animation">
+                    <div class="road"></div>
+                    <div class="grass"></div>
+                    <div class="hill"></div>
+                    <div class="city"></div>
+                    <ul class="cloud">
+                        <li class="cloud-01"></li>
+                        <li class="cloud-02"></li>
+                        <li class="cloud-03"></li>
+                    </ul>
+                    <div class="skew opacity" id="ray"></div>
+                    <div class="skew opacity" id="shadow"></div>
+                    <ul class="plane">
+                        <li class="plane-01 opacity"><i><span><img src="{$index.picture.image}"></span></i><b></b></li>
+                        <li class="plane-02 opacity"><b></b></li>
+                    </ul>
+                    <div class="cat">
+                        <i class="opacity"><span><img src="{$index.name.image}"></span></i>
+                    </div>
+                    <div class="man opacity"></div>
                 </div>
-                <div class="man opacity"></div>
-            </div>
+            {else}
+                {include file='./_banner.html'}
+            {/if}
         </div>
         {include file='./_footer.html'}
     </div>

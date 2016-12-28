@@ -42,7 +42,7 @@ li.cloud-03{width: 144px;height: 64px;background: url(../images/cloud-03.png) no
 .change2{-webkit-transform: scale(1) !important;-moz-transform: scale(1) !important;-ms-transform: scale(1) !important;-o-transform: scale(1) !important;transform: scale(1) !important;-webkit-transition: all .2s ease;-moz-transition: all .2s ease;-ms-transition: all .2s ease;-o-transition: all .2s ease;transition: all .2s ease;}
 #animation .man{width: 352px;height: 335px;background: url(../images/man.png) no-repeat center;position: absolute;right: 181px;bottom: 85px;z-index: 50;}
 
-#header{width: 1000px;height: 94px;margin-top: -500px;padding-top: 500px;position: relative;top: -94px;}
+#header{width: 1000px;height: 94px;position: relative;/*top: -94px;*/ z-index: 66;}
 .swing{-webkit-animation: swing 2s linear;-moz-animation: swing 2s linear;-ms-animation: swing 2s linear;-o-animation: swing 2s linear;animation: swing 2s linear;}
 @keyframes swing{0%{transform: rotate(0deg);}16.67%{transform: rotate(9deg);}50%{transform: rotate(-6deg);}83.33%{transform: rotate(3deg);}100%{transform: rotate(0deg);}}
 @-webkit-keyframes swing{0%{-webkit-transform: rotate(0deg);}16.67%{-webkit-transform: rotate(9deg);}50%{-webkit-transform: rotate(-6deg);}83.33%{-webkit-transform: rotate(3deg);}100%{-webkit-transform: rotate(0deg);}}

@@ -59,7 +59,7 @@ $(document).ready(function() {
 		$(this).find('i,ul.subnav').fadeOut(100);
 	});
 
-if ($(".inside").length>0) {
+if ($("#banner").length>0) {
 	// 焦点图片切换
 	jQuery("#banner").slide({ titCell:".dot ol", mainCell:"ul.picture", effect:"left",  autoPlay:true,mouseOverStop:false, autoPage:true, trigger:"click" });
 
