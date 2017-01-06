@@ -26,38 +26,6 @@ $(document).ready(function() {
 		$(".lump").stop(true, true).animate({left:initial,width:liWidth},400);
 	});
 
-	//二级导航位置居中
-	$(".subnav").each(function(index, el) {
-		$(this).css({display:"block"}); //防止css中ul添加了display:none;暂时给予display:bock
-		var parent = $(this).parent("li")
-		var sum = 0;
-		$(this).find('li').each(function(i, r) {
-			sum += $(this).outerWidth(true); //获取二级li宽度集合
-			return sum;
-		});
-		$(this).width(sum);
-		var half = parent.outerWidth(true)/2;
-		var wleft = parent.position().left + half; //获取父元素li中点距ul左侧距离
-		var wright = parent.parent("ul").width()-wleft; //获取父元素li中点距ul右侧距离
-		if ((wleft < sum/2) && (wright > sum/2)) { //当ul宽度的一半小于li中点距离左侧值,且大于距离右侧值
-			var left = half - wleft
-			$(this).css({left:left});
-		} else if ((wright < sum/2) && (wleft > sum/2)) { //当ul宽度的一半小于li中点距离右侧值,且大于距离左侧值
-			var right = half - wright
-			$(this).css({right:right})
-		} else{
-			var mid = half - sum/2;
-			$(this).css({left:mid});
-		};
-		$(this).css({display:"none"}); //二级导航栏位置计算完毕，给予二级导航栏隐藏
-	});
-
-	// 二级导航栏淡入淡出
-	$(".nav li").hover(function() {
-		$(this).find('i,ul.subnav').stop(true, true).fadeIn(400);
-	}, function() {
-		$(this).find('i,ul.subnav').fadeOut(100);
-	});
 
 if ($("#banner").length>0) {
 	// 焦点图片切换
@@ -173,4 +141,39 @@ function hide(){
 	if ($(".third-clone").hasClass('true') == false) {
 			$(".third-clone").slideUp(300);
 		};
+};
+
+window.onload=function(){
+		//二级导航位置居中
+	$(".subnav").each(function(index, el) {
+		$(this).css({display:"block"}); //防止css中ul添加了display:none;暂时给予display:bock
+		var parent = $(this).parent("li")
+		var sum = 0;
+		$(this).find('li').each(function(i, r) {
+			sum += Math.ceil($(this).outerWidth(true)); //获取二级li宽度集合
+			return sum;
+		});
+		$(this).width(sum);
+		var half = parent.outerWidth(true)/2;
+		var wleft = parent.position().left + half; //获取父元素li中点距ul左侧距离
+		var wright = parent.parent("ul").width()-wleft; //获取父元素li中点距ul右侧距离
+		if ((wleft < sum/2) && (wright > sum/2)){ //当ul宽度的一半小于li中点距离左侧值,且大于距离右侧值
+			var left = half - wleft
+			$(this).css({left:left});
+		} else if ((wright < sum/2) && (wleft > sum/2)) { //当ul宽度的一半小于li中点距离右侧值,且大于距离左侧值
+			var right = half - wright
+			$(this).css({right:right})
+		} else{
+			var mid = half - sum/2;
+			$(this).css({left:mid});
+		};
+		$(this).css({display:"none"}); //二级导航栏位置计算完毕，给予二级导航栏隐藏
+	});
+
+	// 二级导航栏淡入淡出
+	$(".nav li").hover(function() {
+		$(this).find('i,ul.subnav').stop(true, true).fadeIn(400);
+	}, function() {
+		$(this).find('i,ul.subnav').fadeOut(100);
+	});
 };

@@ -49,7 +49,7 @@
 				</ul>
 			</div>
 			<div class="aboutus">
-				<a href="" class="ver_btn fl">{$index.about_us.name}</a>
+				<a href="{$index.about_us.link}" class="ver_btn fl">{$index.about_us.name}</a>
 				<div class="about fl">
 					<img src="{$index.about_us.image}" class="fl"/>
 					<div class="about_cont fl">
@@ -63,7 +63,7 @@
 
 	<div class="content2">
 		<div class="public product">
-			<div class="pro_title">{$index.pro.name}</div>
+			<div class="pro_title"><a href="{$index.pro.link}">{$index.pro.name}</a></div>
 			<div class="box">
 							<ul>
 							{foreach item=pro from=$index.pro.data}
@@ -87,8 +87,8 @@
 	<div class="content3">
 		<div class="public nc">
 			<div class="news fl">
-				<a href="" class="ver_btn fl">{$index.news.name}</a>
-				<div class="news_list fl">
+				<a href="{$index.news.link}" class="ver_btn fl">{$index.news.name}</a>
+		          <div class="news_list fl">
 					<a href="{$index.news.link}" id="btn" style="margin: 5px 0 0 0;float: right;">查看更多</a>
 					<ul>
 					{$num=1}

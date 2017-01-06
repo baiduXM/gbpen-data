@@ -1,0 +1,38 @@
+<div class="header public">
+	<div class="img_div">
+		<a href="{$site_url}"><img src="{$logo}"></a>
+	</div>
+	<div class="text_div">
+		<div class="search_box">
+			<form action="{$search_action}" method="GET">
+				<input type="text" name="s" placeholder="搜索关键字" />
+				<input type="submit" />
+			</form>
+		</div>
+		<div class="contact">
+			<span>服务热线：</span>
+			<h3>{$contact.telephone}</h3>
+		</div>	
+	</div>
+</div>	
+
+<div class="nav clearfix">
+	<div class="public1">
+	<ul>
+		<li class="nav_li" style="width:{100/(($navs|count)+1)}%"><a href="{$site_url}" class="a a1">首页<span>Home</span></a></li>
+		{foreach name=navs item=nav from=$navs}
+		<li class="nav_li" style="width:{100/(($navs|count)+1)}%">
+			<a href="{$nav.link}" class="a">{$nav.name}<span>{$nav.en_name}</span></a>
+			{if $nav.childmenu}
+			<ul class="sub">
+				<i></i>
+				{foreach key=key item=nav_list from=$nav.childmenu}
+				<li><a href="{$nav_list.link}">{$nav_list.name}</a></li>
+				{/foreach}
+			</ul>
+			{/if}
+		</li>
+		{/foreach}
+	</ul>
+	</div>
+</div>

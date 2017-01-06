@@ -13,7 +13,7 @@ body{background: #ffffff;}
 /*header*/
 .head{width: 100%;height: 3rem;position: absolute;top: 0;left: 0;z-index: 2;}
 .head .top{/*box-shadow: 0px 0px 8px #cbc3bb;*/border-top: 3rem solid #ffffff;border-left: 2rem solid transparent;border-right: 2rem solid transparent;width:12rem;margin: 0 auto}
-.head .logo{width: 9.5rem; height: 3rem;position: absolute;top: 0;left: 50%;transform:translateX(-50%);display: table-cell;text-align: center;vertical-align: middle;}
+.head .logo{width: 9.5rem; height: 3rem;position: absolute;top: 0;left: 50%;transform:translateX(-50%); -webkit-transform:translateX(-50%);-moz-transform:translateX(-50%);-ms-transform:translateX(-50%);display: table-cell;text-align: center;vertical-align: middle;}
 .head .logo img{max-width: 100%;max-height: 100%;}
 /*banner*/
 .banner{position: relative;width: 100%;height: auto;overflow: hidden;}

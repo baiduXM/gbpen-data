@@ -57,8 +57,8 @@ ul.nav>li>a{display: block;width: 100%;height: 35px;overflow: hidden;text-align:
 ul.nav .lump{width: 0px;height: 35px;background: #f6921e;position: absolute;left: 0px;top: 0px;z-index: 85;}
 ul.nav>li>i{width: 0px;height: 0px;border-top: solid 6px #f6921e;border-left: solid 4px transparent;border-right: solid 4px transparent;position: absolute;left: 50%;margin-left: -4px;top:38px;display: none;z-index: 90;}
 ul.subnav{display: none;width: auto;height: 34px;position: absolute;z-index: 90;top: 35px;overflow: hidden;padding-top: 9px;}
-ul.subnav li{width: auto;height: 100%;float: left;position: relative;}
-ul.subnav li a{display: block;min-width: 64px;padding: 0 20px; font-size: 16px;line-height: 34px;color: #666666;}
+ul.subnav li{height: 100%;float: left;position: relative;}
+ul.subnav li a{display: block;padding: 0 20px; font-size: 16px;line-height: 34px;color: #666666;}
 ul.subnav li a:hover{color: #f6921e;}
 
 /*页脚*/

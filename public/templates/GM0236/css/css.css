@@ -34,7 +34,7 @@
 #in_text ul{width:85%; margin:auto; padding-left:5%; border-left:1px dashed #c7c1b7}
 #in_text ul li{ position:relative; margin:5% 0  }
 #in_text ul li .time{ width:15px; height:15px; position:absolute; left:-7%; top:7%}
-#in_text ul li .date{ font-size:12px; color:#a89b90; height:25px; line-height:25px; background:#fff;border-radius:5px; width:18%; text-align:center; position:relative; display:inline; }
+#in_text ul li .date{ font-size:12px; color:#a89b90; height:25px; line-height:25px; background:#fff;border-radius:5px; width:18%; text-align:center; position:relative; }
 #in_text ul li .date:after{ position:absolute; left:-6px; top:30%; content:"";width: 0;
     height: 0;
     border-top: 4px solid transparent;

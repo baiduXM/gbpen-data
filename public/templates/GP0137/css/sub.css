@@ -76,8 +76,10 @@ ul.inner_pages a:hover{ text-decoration:underline}
 .slideBoxb .hd ul li{ float:left; margin-right:2px;  width:15px; height:15px; line-height:14px; text-align:center; background:#fff; display:none; cursor:pointer; }
 .slideBoxb .hd ul li.on{ background:#f00; color:#fff; }
 .slideBoxb .bd{ position:relative; height:100%; z-index:0;  margin:0px auto; text-align:center;   }
-.slideBoxb .bd li{ zoom:1; vertical-align:middle; }
-.slideBoxb .bd img{ display:block;  border:1px solid #ddd; padding:1px; margin:0px auto; text-align:center; }
+.slideBoxb .bd li{ zoom:1; vertical-align:middle;text-align: center;}
+.slideBoxb .bd li .liimg{width:596px;height:304px;margin: 0 auto;}
+.slideBoxb .bd li .liimg .imgdiv{width:596px;height:304px;display: table-cell;text-align: center;vertical-align: middle; }
+.slideBoxb .bd img{border:1px solid #ddd;max-width: 100%;max-height: 100%;}
 
 		/* 下面是前/后按钮代码，如果不需要删除即可 */
 .slideBoxb .prev,

@@ -51,8 +51,7 @@
 			<div class="educt">
 				<div class="educt-img"><img src="{$index.pro.data[0].image}" ></div>
 				<div class="educt-cont">
-				{foreach item=pro from=$index.pro.data}
-					<div class="edu-title"><a href="{$index.pro.link}"><span>{$index.pro.name}</span> {$index.pro.en_name}</a></div>{/foreach}
+					<div class="edu-title"><span>{$index.pro.name}</span> {$index.pro.en_name}</div>
 					<div class="edu-scroll">
 						<a class="prev" href="javascript:void(0)"></a>
 						<ul>
@@ -65,9 +64,7 @@
 				</div>
 			</div>
 			<div class="indexnews">
-			
-				<div class="news-title">
-				<a href="{$index.newslist.link}"><span>{$index.newslist.name}</span> {$index.newslist.en_name}</a></div>
+				<div class="news-title"><span>{$index.newslist.name}</span> {$index.newslist.en_name}</div>
 				<div class="news-box">
 					<div class="news-tj">
 						<div class="tj-img"><a href="{$index.newslist.data[0].link}"><img src="{$index.newslist.data[0].image}"></a></div>

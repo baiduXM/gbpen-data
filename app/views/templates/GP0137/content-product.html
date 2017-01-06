@@ -1,6 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
  <head>
+    <!-- 实时预览调试代码，模板开发完成后删除 -->
+    
+    <!-- 调试代码 End -->
     <script type="text/javascript">
     // 跳转手机页面
     {if $site_another_url}
@@ -67,7 +70,7 @@
                                 <div class="bd" style="width:640px;">
                                     <ul>
                                         {foreach item=proshowb from=$article.images}
-                                        <li><img src="{$proshowb.image}" alt="{$proshowb.title}"/></li>
+                                        <li><div class="liimg"><div class="imgdiv"><img src="{$proshowb.image}" alt="{$proshowb.title}"/></div></div></li>
                                         {/foreach}
                                     </ul>
                                 </div>
