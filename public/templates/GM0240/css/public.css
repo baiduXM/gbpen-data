@@ -167,7 +167,7 @@ header{ position:relative; background:#005fb3}
 /*list-text*/
 .list_text ul li{ border-left:6px solid #00417a;  width:96%;  display: block; margin:4% 0; padding-bottom:2px; font-size:13px; padding:0 2% }
 .list_text ul li h2{ width:100%;display: block; }
-.list_text ul li h2 span{ display:block; margin-right:3px; float:left; max-width:20%;font-size:12px; line-height:25px; height:25px;}
+.list_text ul li h2 span{width:100px; overflow:hidden; display:block; margin-right:3px; float:left; max-width:20%;font-size:12px; line-height:25px; height:25px;}
 .list_text ul li h2 b{ font-weight:100;  display:block;  max-width:78%; font-size:15px; line-height:25px; height:25px; overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
 .list_text  ul li .in_des{ height:40px; line-height:20px; overflow:hidden; margin-bottom:2px;border-bottom:1px dashed rgba(0,0,0,.2);  color:#7c7c7c; overflow:hidden}
 
