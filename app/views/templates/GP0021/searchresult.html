@@ -10,7 +10,6 @@
     }
   {/if}
   </script>
-  
 <meta http-equiv="x-ua-compatible" content="ie=7" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="{$keywords}" />
@@ -52,8 +51,10 @@
                    <div class="atitle2"><span>
 <ul class="clearfix">
 	<li class="fl"><a href="{$site_url}">首页</a></li>
-	<li class="fl">>><A style="color:#fff">搜索</A></li>
-	</ul>                   
+	{foreach item=nav from=$posnavs}
+	<li class="fl"> >> <a href="{$nav.link}">{$nav.name}</a></li>
+	{/foreach}
+</ul>                   
                    </span>{$list.name}</div>		 
 <div class="deteo">
             <div class="about_edit">
