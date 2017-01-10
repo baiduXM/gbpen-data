@@ -150,7 +150,7 @@ window.onload=function(){
 		var parent = $(this).parent("li")
 		var sum = 0;
 		$(this).find('li').each(function(i, r) {
-			sum += Math.ceil($(this).outerWidth(true)); //获取二级li宽度集合
+			sum += Math.ceil($(this).outerWidth(true))+1; //获取二级li宽度集合
 			return sum;
 		});
 		$(this).width(sum);

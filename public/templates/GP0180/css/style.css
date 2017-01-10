@@ -8,7 +8,7 @@ body{word-wrap:break-word;color: #333333;font: 12px/24px "微软雅黑","Microso
 ul,dl,li,i{list-style:none;}
 h1,h2,h3,h4,h5{font-size:12px;font-weight:normal;}
 i,em,b{font-style:normal;font-weight:normal;list-style:none;}
-img{border: none;max-width: 100%;max-height: 100%}
+img{border: none;}
 .opacity{filter: Alpha(opacity=0);-webkit-opacity: 0;-moz-opacity: 0;-ms-opacity: 0;-o-opacity: 0;}
 
 #wrapper{width: 100%;height: auto;overflow: hidden;position: relative;}
@@ -51,14 +51,15 @@ li.cloud-03{width: 144px;height: 64px;background: url(../images/cloud-03.png) no
 
 .head{width: 1000px;height: 70px;position: relative;margin-top: 24px;z-index: 80;}
 .head .logo{width: 280px;height: 70px;float: left;overflow: hidden;}
+.logo img{max-width: 100%;max-height: 100%}
 .head ul.nav{width: 720px;height: 35px;margin: 18px 0 17px;float: right;background: #333333;position: relative;}
 ul.nav>li{display: table-cell;width: 300px;height: 35px;position: relative;z-index: 90;}
-ul.nav>li>a{display: block;width: 100%;height: 35px;overflow: hidden;text-align: center;color: #ffffff;font-size: 16px;line-height: 35px;}
+ul.nav>li>a{display: block;width: 100%;height: 35px;overflow:hidden;text-align: center;color: #ffffff;font-size: 16px;line-height: 35px;}
 ul.nav .lump{width: 0px;height: 35px;background: #f6921e;position: absolute;left: 0px;top: 0px;z-index: 85;}
 ul.nav>li>i{width: 0px;height: 0px;border-top: solid 6px #f6921e;border-left: solid 4px transparent;border-right: solid 4px transparent;position: absolute;left: 50%;margin-left: -4px;top:38px;display: none;z-index: 90;}
-ul.subnav{display: none;width: auto;height: 34px;position: absolute;z-index: 90;top: 35px;overflow: hidden;padding-top: 9px;}
+ul.subnav{display:none; width:1000px;height: 34px;position: absolute;z-index: 90;top: 35px;overflow: hidden;padding-top: 9px;}
 ul.subnav li{height: 100%;float: left;position: relative;}
-ul.subnav li a{display: block;padding: 0 20px; font-size: 16px;line-height: 34px;color: #666666;}
+ul.subnav li a{display: block;padding: 0 16px; font-size: 14px;line-height: 34px;color: #666666;}
 ul.subnav li a:hover{color: #f6921e;}
 
 /*页脚*/
@@ -93,6 +94,7 @@ ul.first>li:first-child{margin-top: 0px;}
 ul.first>li>a{display: block;width: 140px;padding: 12px 32px 9px 15px;height: 33px;background: #f6921e;font-size: 20px;line-height: 33px;color: #ffffff;position: relative;}
 ul.first>li>a>span{display: block;width: 95px;float: left;height: 100%;overflow: hidden;}
 ul.first>li>a>i{display: block;width: 33px;height: 33px;margin-right: 12px;background: #ffffff;position: relative;z-index: 20;overflow: hidden;-webkit-border-radius: 16px;-moz-border-radius: 16px;-ms-border-radius: 16px;-o-border-radius: 16px;border-radius: 16px;behavior:url(PIE.htc);float: left;}
+ul.first>li>a>i>img{ max-width: 100%;max-height: 100%; }
 ul.first>li>a:hover{background: #6e6e6e;}
 .box-on{background: #6e6e6e !important;}
 .box-on:after{content: "";display: block;width: 0px;height: 0px;border-top: solid 6px #f6921e;border-left: solid 4px transparent;border-right: solid 4px transparent;position: absolute;right: 25px;top: 26px;}
@@ -153,6 +155,7 @@ ul.third-clone li a{display: block;width: auto;min-width: 110px;max-width: 180px
 .article{width: 100%;height: auto;overflow: hidden;position: relative;margin-top: -8px;}
 .article li{width: 100%;height: 114px;position: relative;padding: 8px 0 18px;overflow: hidden;border-bottom: solid 1px #dddddd;}
 .article li i{display: table-cell;width: 187px;height: 114px;overflow: hidden;text-align: center;vertical-align: middle;}
+.article li i img{ max-width: 100%; max-height: 100%; }
 .article li .article-list{width: 543px;height: 134px;overflow: hidden;position: absolute;right: 0px;top: 8px;z-index: 20;}
 .article-list h4{width: 100%;height: 30px;font-size: 14px;line-height: 30px;overflow: hidden;font-weight: bold;}
 .article-list h4 a{display: block;width: 100%;height: 100%;overflow: hidden;color: #ffffff;}
@@ -166,6 +169,7 @@ ul.third-clone li a{display: block;width: auto;min-width: 110px;max-width: 180px
 .product li{width: 218px;height: 203px;float: left;margin: 0 29px 4px 0;}
 .product li a{display: block;width: 100%;height: 100%;overflow: hidden;position: relative;}
 .product li a i{display: table-cell;width: 218px;height: 165px;overflow: hidden;text-align: center;vertical-align: middle;}
+.product li a i img{ max-width: 100%; max-height: 100%; }
 .product li a h4{width: 100%;height: 38px;overflow: hidden;font-size: 14px;line-height: 38px;text-align: center;color: #ffffff;}
 .product li a:hover h4{color: #f6921e;}
 .product li a .border{width: 214px;height: 161px;border:solid 2px #f6921e;position: absolute;left: -100%;top:-100%;z-index:50;-webkit-border-radius: 5px;-moz-border-radius: 5px;-ms-border-radius: 5px;-o-border-radius: 5px;border-radius: 5px;behavior:url(PIE.htc);}
@@ -178,10 +182,12 @@ ul.third-clone li a{display: block;width: auto;min-width: 110px;max-width: 180px
 .case-list .case-bd{width: 516px;height: 278px;border:solid 2px #ffffff;overflow: hidden;float: left;}
 .case-last{width: 100%;height: 100%;}
 .case-last li{text-align: center;overflow: hidden;width: 516px;height: 278px;}
+.case-last li img{ max-width: 100%; max-height: 100%; }
 .case-list .case-hd{width: 217px;height: 100%;position: relative;z-index: 30;float: right;}
 .case-hd ol{width: 100%;height: 100%}
 .case-hd ol li{width:204px;height: 87px;margin-bottom: 4px;position: relative;text-align: center;float: right;border:solid 2px #ffffff;}
 .case-hd ol li a{display: block;width: 100%;height: 100%;overflow: hidden;position: relative;text-align: center;}
+.case-hd ol li a img{ max-height: 100%; max-width: 100%; }
 .case-hd ol li a b{display: block;width: 100%;height: 100%;position: absolute;left: 0px;top: 0px;background: #000000;filter: Alpha(opacity=50);-webkit-opacity: 0.5;-moz-opacity: 0.5;-ms-opacity: 0.5;-o-opacity: 0.5;opacity: 0.5;}
 .case-hd .triangle{width: 0px;height: 0px;border-right: solid 9px #ffffff;border-top: solid 9px transparent;border-bottom: solid 9px transparent;margin: 37px 0;position: absolute;left: 0px;top: 0px;}
 
