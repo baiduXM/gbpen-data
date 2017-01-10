@@ -59,11 +59,7 @@ $(document).ready(function() {
 				});
 	})()
 	
-	// banner切换 
-	jQuery(".slider").slide({ titCell:".hd ul", mainCell:".bd ul", effect:"fold",  autoPlay:true, autoPage:true, trigger:"click",
-		mouseOverStop:false,/* 鼠标移到容器层继续播放*/
-		
-	});
+
 
 	// 首页product
 	$(".prolist li:nth-child(3n-1)").css({marginRight:"24px",marginLeft:"24px"});
@@ -92,14 +88,15 @@ $(document).ready(function() {
 	    $(this).parent().siblings().find(".third").slideUp()
 	    $(this).siblings(".third").slideToggle()
 	})
- 
-	// 内页pro页面
-	$(".pro li:nth-child(3n-1)").css({marginRight:"8px",marginLeft:"8px"});
+});
 
-	//内页pro_det大图切换
-	// if ($(".focus img").length<2) {
-	// 	$(".focus").find('a').css({display:"none"});
-	// };
+window.onload=function(){
+	// banner切换 
+	jQuery(".slider").slide({ titCell:".hd ul", mainCell:".bd ul", effect:"fold",  autoPlay:true, autoPage:true, trigger:"click",
+		mouseOverStop:false,/* 鼠标移到容器层继续播放*/
+	});
+
+	$(".pro li:nth-child(3n-1)").css({marginRight:"8px",marginLeft:"8px"});
 	jQuery(".focus").slide({ mainCell:".pic",effect:"fold", autoPlay:true, delayTime:600, trigger:"click"});
 
-});
+}

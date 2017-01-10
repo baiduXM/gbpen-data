@@ -18,7 +18,9 @@
 <meta name="description" content="{$description}" />
 <link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
 <link href="{$site_url}css/css.css" rel="stylesheet" type="text/css" />
-
+<script type="text/javascript" src="{$site_url}js/jquery-1.9.1.min.js" ></script>
+<script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.js"></script>
+<script type="text/javascript" src="{$site_url}js/function.js"></script>	
 <title>{$title}</title>
 
 </head>
@@ -89,24 +91,18 @@
 						<a href="{$page_links.next_link}">下一页</a>						
 						<a href="{$page_links.last_link}">尾页</a>
 					</div>
-					<div class="number">
+					<!-- <div class="number">
 						<select name="" id="" onchange="javascript:location.href=this.value;">
 							{foreach item=near_link key=near_page from=$page_links.nears_link}
 								<option value="{$near_link}">第{$near_page}页</option>
 							{/foreach}
 						</select>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</div>
 	</div>
 	
 	{include file="./_footer.html"} 
-
-<script type="text/javascript" src="{$site_url}js/jquery-1.9.1.min.js" ></script>
-<script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.js"></script>
-<script type="text/javascript" src="{$site_url}js/function.js"></script>	
-
-
 </body>
 </html>
