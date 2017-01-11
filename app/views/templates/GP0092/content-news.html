@@ -37,7 +37,7 @@
    
                     <div class="artit">
                         <h2>{$article.title}</h2>
-                        <span>发布于：{$article.pubtimestamp|date_format:'%Y-%m-%d %H:%M:%S'} <a class="backhis" href="javascript :history.back(-1)"><< &nbsp;返回</a></span>
+                        <span>发布于：{$article.pubtimestamp|date_format:'%Y-%m-%d %H:%M:%S'} <a class="backhis" href="javascript:history.back(-1)"><< &nbsp;返回</a></span>
                     </div>
                     <div class="article">
                           {$article.content|unescape:"html"} 

@@ -186,7 +186,7 @@ $(".ny-news-list li,#picture li,ul.picture2 li,.news_list .news_d").hide();
 		$(".newsclass").removeClass("show")
 		$(".opacity2").hide()
 	})
-	$('.aboutbox,.aboutbox dt').height($('.aboutbox dl').width());
+	
 	TouchSlide({
 		slideCell:"#slideBox",
         titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
@@ -209,17 +209,7 @@ $(".ny-news-list li,#picture li,ul.picture2 li,.news_list .news_d").hide();
 	// var proimgh=Math.ceil($(".proimg").outerWidth()*0.1);
  //     $(".indexpro .biaoti").marginTop(proimgh)
 
-	var proimgh=$(".proimg").outerHeight()
-	    $(".indexpro .biaoti").css({
-	    	marginTop:proimgh/6.5+"%"
-	    });
-
-
-	var aboutimgh=Math.ceil($(".aboutdet a img").outerHeight());
-     $(".aboutr").outerHeight(aboutimgh);
-
-     $('.newsdate').height($('.newsdate').width());
-     $('.news-nr').height($('.newsdate').width()+6);
+	
 	
 		//搜索开始
 		//focusblur
@@ -245,4 +235,21 @@ $(".ny-news-list li,#picture li,ul.picture2 li,.news_list .news_d").hide();
 	//搜索结束
 
   });
+
+window.onload=function(){
+
+	var proimgh=$(".proimg").outerHeight()
+	    $(".indexpro .biaoti").css({
+	    	marginTop:proimgh/6.5+"%"
+	    });
+
+
+	var aboutimgh=Math.ceil($(".aboutdet a img").outerHeight());
+     $(".aboutr").outerHeight(aboutimgh);
+
+     $('.newsdate').height($('.newsdate').width());
+     $('.news-nr').height($('.newsdate').width()+6);
+
+     $('.aboutbox,.aboutbox dt').height($('.aboutbox dl').width());
+}
   
