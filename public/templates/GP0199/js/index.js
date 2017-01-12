@@ -28,7 +28,7 @@ $(function() {
 		// $(".nav>li").eq(-2).find('.sub').css({"bottom":0,"top":"auto"});
 		// $(".nav>li").eq(-3).find('.sub').css({"bottom":0,"top":"auto"});
 	// banner js
-		jQuery(".slideBox").slide({mainCell:".bd ul",autoPlay:true, effect:"fold", trigger:"click",interTime:4000});
+		//jQuery(".slideBox").slide({mainCell:".bd ul",autoPlay:true, effect:"fold", trigger:"click",interTime:4000});
     //link 
       $("#slt-one h3").click(function(){
         var ul=$("#slt-one .new");
@@ -57,4 +57,17 @@ $(function() {
 		//小图左滚动切换
 		jQuery(".game163 .smallScroll").slide({ mainCell:"ul",delayTime:100,vis:4,scroll:4,effect:"left",autoPage:true,prevCell:".sPrev",nextCell:".sNext",pnLoop:false });
 
+});
+
+function myFn(){
+	// banner js
+	jQuery(".slideBox").slide({mainCell:".bd ul",autoPlay:true, effect:"fold", trigger:"click",interTime:4000});
+    //var mainSre=$(window).height();
+    //var banHeight=$(".banner").outerHeight(true);
+    //var footHeight=$(".footer").outerHeight(true);
+    //$(".row .pic img").height(mainSre-banHeight-footHeight-135);
+}
+
+$(window).load(function(){
+	myFn();
 });

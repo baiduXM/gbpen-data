@@ -1,0 +1,41 @@
+<div class="about2">
+   {if $pagenavs}
+           <i>{$posnavs[0].en_name}</i>
+           <p>{$posnavs[0].name}</p>
+           <ul class="nav2">
+               {foreach item=lnav from=$pagenavs}
+                  <li>
+                    <a class="{if $lnav.current} current{/if}" href="{if $lnav.childmenu}javascript:;{else}{$lnav.link}{/if}">{$lnav.name}</a>
+                    {if $lnav.childmenu}
+                      <ul class="erji2 none">
+                         {foreach item=nav2_list from=$lnav.childmenu}
+                         <li>
+                          <a href="{$nav2_list.link}" id="qig">{$nav2_list.name}</a>
+                         </li> 
+                         {/foreach}              
+                      </ul>
+                    {/if}
+                  </li>
+                {/foreach}                                 
+               </ul>
+{else}
+          <i>{$global.nychild.en_name}</i>
+           <p>{$global.nychild.name}</p>
+           <ul class="nav2">
+                {foreach item=lnav from=$global.nychild.childmenu}
+                  <li>
+                    <a class="{if $lnav.current} current{/if}" href="{if $lnav.childmenu}javascript:;{else}{$lnav.link}{/if}">{$lnav.name}</a>
+                    {if $lnav.childmenu}
+                      <ul class="erji2 none">
+                         {foreach item=nav2_list from=$nav2.childmenu}
+                         <li>
+                          <a href="{$nav2_list.link}" id="qig">{$nav2_list.name}</a>
+                         </li> 
+                         {/foreach}              
+                      </ul>
+                    {/if}
+                  </li>
+                {/foreach}                                 
+               </ul>
+  {/if}
+</div>

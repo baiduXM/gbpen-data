@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html manifest="huancun.manifest">
+<html>
 <head>
 <!-- 实时预览调试代码，模板开发完成后删除 -->
 
@@ -59,27 +59,29 @@
       <section> {foreach name=mIndexCats item=mIndexCat from=$mIndexCats}
         {if $mIndexCat.type eq 4}
         <div id="in_page" class="wrapper">
-          <div class="in_h2 clearfix"> <a  href="{$mIndexCat.link}">
+          <div class="in_h2 clearfix"> 
             <div class="text">
               <div class="in_zh">{$mIndexCat.name}</div>
               <div class="in_en">/ {$mIndexCat.en_name}</div>
             </div>
-            <div class="more">+more</div>
-            </a> </div>
-          <div class="inner clearfix"> <a href="#">
+            <div class="more"><a href="{$mIndexCat.link}">+more</a></div>
+            </div>
+          <div class="inner clearfix"> <a href="{$mIndexCat.link}">
             <div class="page_img"><img src="{$mIndexCat.image}"></div>
             <p>{$mIndexCat.description}</p>
             </a> </div>
         </div>
         {elseif $mIndexCat.type eq 1}
         <div id="in_text" class="wrapper">
-          <div class="in_h2 clearfix"> <a  href="{$mIndexCat.link}">
+          <div class="in_h2 clearfix">
+          <a href="{$mIndexCat.link}">
             <div class="text">
               <div class="in_zh">{$mIndexCat.name}</div>
               <div class="in_en">/ {$mIndexCat.en_name}</div>
             </div>
-            <div class="more">+more</div>
-            </a> </div>
+            </a>
+            
+            </div>
           <div class="inner clearfix">
             <ul>
               {foreach item=article from=$mIndexCat.data}
@@ -93,13 +95,13 @@
         </div>
         {elseif $mIndexCat.type eq 2}
         <div id="in_image" class="wrapper">
-          <div class="in_h2 clearfix"> <a  href="{$mIndexCat.link}">
+          <div class="in_h2 clearfix">
             <div class="text">
               <div class="in_zh">{$mIndexCat.name}</div>
               <div class="in_en">/ {$mIndexCat.en_name}</div>
             </div>
-            <div class="more">+more</div>
-            </a> </div>
+            <div class="more"> <a  href="{$mIndexCat.link}">+more</a></div>
+             </div>
           <div class="inner yc">
             <ul class="clearfix">
               {foreach item=article from=$mIndexCat.data}
