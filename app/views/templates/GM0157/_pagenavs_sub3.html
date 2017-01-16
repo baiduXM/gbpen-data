@@ -1,64 +1,72 @@
-
-
-<!-- 二级栏目列表（展示到三级子栏目） -->
-{if $pagenavs}
-<div class="aboutName">
-
-
-	<ul class="list aboutNav">
-{foreach name=pagenavs item=nav from=$pagenavs}
-		<li class="{if $nav.current}current{/if}">
-			<a href="{if $nav.childmenu}javascript:;{else}{$nav.link}{/if}">{$nav.name}</a>
-			{if $nav.childmenu}
-			<ul class="second">
-				{foreach key=key item=nav_ls from=$nav.childmenu}
-				<li class="{if $nav_ls.current}current{/if}"><a href="{if $nav_ls.childmenu}javascript:;{else}{$nav_ls.link}{/if}">{$nav_ls.name}</a>
-					{if $nav_ls.childmenu}
-					<dl class="third">
-                        {foreach key=key item=nav_listsec from=$nav_ls.childmenu}
-                        <dd class="{if $nav_listsec.current}current{/if}"><a href="{$nav_listsec.link}">{$nav_listsec.name}</a></dd>
+<div class="sidebar">  
+    {if $pagenavs}
+    <div class="subnav">
+    <h2><span class="tit">{$posnavs[0].name}</span></h2>
+      <ul class="firstul">
+      {foreach name=pagenavs item=nav from=$pagenavs}
+         <li class="sub1 {if $nav.current} co {/if}"><a href="{$nav.link}" class="kz" data-limit="16">{$nav.name}</a>
+            <ul class="secondul">
+            {if $nav.childmenu}
+            {foreach item=nav_list from=$nav.childmenu}
+                <li class="sub2 {if $nav_list.current} ct {/if}"><a href="{$nav_list.link}" class="kz" data-limit="14">{$nav_list.name}</a>
+                    <ul>
+                    {if $nav_list.childmenu}
+                        {foreach item=nav1_list from=$nav_list.childmenu}
+                        <li class="sub3 {if $nav_list.current} ct {/if}"><a href="{$nav1_list.link}" class="kz" data-limit="12">{$nav1_list.name}</a></li>
                         {/foreach}
-                    </dl> 
-                    {/if}      
-				</li>
-				{/foreach}
-			</ul>
-			{/if}
-		</li>
-		{/foreach} 
-        
-       
-	</ul>
+                    {/if}
+                    </ul>
+                </li>
+            {/foreach}
+            {/if}
+            </ul>
+         </li> 
+      {/foreach} 
+      </ul>
+    </div>
+    {else}
+    <h2>{$_pagenavs_sub3.pagenavs.name}</h2>
+    <div class="subnav">
+      <ul class="firstul">
+      {foreach name=pagenavs item=nav from=$_pagenavs_sub3.pagenavs.childmenu}
+         <li class="sub1"><a href="{$nav.link}" class="kz" data-limit="16">{$nav.name}<span class="icon">▶</span></a>
+            <ul class="secondul">
+            {if $nav.childmenu}
+            {foreach item=nav_list from=$nav.childmenu}
+                <li class="sub2"><a href="{$nav_list.link}" class="kz" data-limit="14">{$nav_list.name}</a>
+                    <ul>
+                    {if $nav_list.childmenu}
+                        {foreach item=nav1_list from=$nav_list.childmenu}
+                        <li class="sub3"><a href="{$nav1_list.link}" class="kz" data-limit="12">{$nav1_list.name}</a></li>
+                        {/foreach}
+                    {/if}
+                    </ul>
+                </li>
+            {/foreach}
+            {/if}
+            </ul>
+         </li> 
+      {/foreach} 
+      </ul>
+    </div>
+    {/if}
+
+
+
+  <div id="contact" >
+      <div class="title">
+        <span class="t-left">联系我们</span>
+      </div>
+      <div class="subinner">
+        <span>{$contact.company} </span><br/>
+           电话:{$contact.telephone}<br/>
+           传真:{$contact.fax}<br/>
+           地址：{$contact.address}<br/>
+      </div>
+  </div>
+  <div class="culture">
+    <a href="{$_pagenavs_sub3.culture.link}"><img src="{$_pagenavs_sub3.culture.image}"></a>
+  </div>
+
+
 </div>
-
-{else}	<!-- 让客服自己选择，如果当前无子栏目 展现的目标栏目 -->
-<div class="aboutName">
-
-
-	<ul class="list aboutNav">
-		{foreach name=pagenavs2 item=nav from=$_pagenavs_sub3.pagenavs.childmenu}
-		<li class="{if $nav.current}current{/if}">
-			<a href="{if $nav.childmenu}javascript:;{else}{$nav.link}{/if}">{$nav.name}</a>
-			{if $nav.childmenu}
-			<ul class="second">
-				{foreach key=key item=nav_list from=$nav.childmenu}
-				<li class="{if $nav_list.current}current{/if}"><a href="{if $nav_list.childmenu}javascript:;{else}{$nav_list.link}{/if}">{$nav_ls.name}</a>
-					{if $nav_list.childmenu}
-					<dl class="third">
-                        {foreach key=key item=nav_listsec from=$nav_ls.childmenu}
-                        <dd class="{if $nav_listsec.current}current{/if}"><a href="{$nav_listsec.link}">{$nav_ls.name}</a></dd>
-                        {/foreach}
-                    </dl>  
-                    {/if}     
-				</li>
-				{/foreach}
-			</ul>
-			{/if}
-		</li>
-		{/foreach}
-	</ul>
-	</div>
-
-{/if}
-
-

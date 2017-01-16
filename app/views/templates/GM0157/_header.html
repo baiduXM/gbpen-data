@@ -1,32 +1,51 @@
+ <div id="header" class="wrapper clearfix">
+  <h1>
+   <span><img src="{$logo}"></span>
+  </h1>
+  <div class="tel">
+   {$contact.telephone}
+  </div>
+ </div>
+ 
+<div class="menu">
+  <ul id="nav" class="nav clearfix">
+    <li class="nLi mu_bg" style="width:{100/(($navs|count)+1)}%">
+      <a href='{$site_url}'>首页</a>
+    </li>
+    {foreach name=navs item=nav from=$navs}
+    <li class="nLi mu_bg" style="width:{100/(($navs|count)+1)}%">
+        <a href='{$nav.link}'>{$nav.name}</a>
+        {if $nav.childmenu}
+        <ul class="sub"> 
+        {foreach key=key item=nav_list from=$nav.childmenu}
+        <li><a href='{$nav_list.link}'>{$nav_list.name}</a></li>
+        {/foreach}
+        </ul>
+        {/if} 
+    </li>
+    {/foreach}
+  </ul>       
+</div>
 
-<header class="he p_r">
-
-			    <h3 class="trapezoid">
-				    <a href="#" id="quickbar-showcats">
-				    	<i class="demo-icon icon-th-list slide-nav  iconnav p_a" style="width: 40px;height: 24px;margin-top: 55%;"></i>
-				    </a>
-			    </h3>
-				<img src="{$logo}" class="logo" alt="">
-				
-				
-				</header>
-				 <div class="banners p_r">
-            	<canvas id="canvas"></canvas>
-           
-				<div class="banner swiper-container margin">
-			        <ul class="swiper-wrapper">
-			         
-					{foreach name=slidepics item=slidepic from=$global.slidepics}
-					<li class="swiper-slide"><a class="pic" href="{$slidepic.link}" target="_blank"><figure><img src="{$slidepic.image}" alt="{$slidepic.title}" /></figure></a></li>
-					{/foreach}
-			        </ul>
-			      
-			        
-			        
-			        <div class="swiper-button-next"></div>
-			        <div class="swiper-button-prev"></div>     
-			    </div>
-            </div>
-
-
-
+ 
+ 
+ <div class="banner">
+  <div id="slideBox" class="slideBox">
+      <div class="hd">
+        <ul>
+          {$num=1}
+          {foreach name=slidepics item=slidepic from=$global.slidepics}
+            <li>{$num}</li>
+            {$num=$num+1}
+          {/foreach} 
+        </ul>
+      </div>
+      <div class="bd">
+        <ul>
+          {foreach name=slidepics item=slidepic from=$global.slidepics}
+          <li><a href="{$slidepic.link}"><img src="{$slidepic.image}"></a></li>
+          {/foreach} 
+        </ul>
+      </div>
+    </div>
+</div>
