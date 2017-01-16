@@ -86,20 +86,29 @@
         <a href="{$index.pro.link}"><img src="{$site_url}images/products_t-right.jpg"></a>
        </div>
       <div class="inner">
-         <div class="picMarquee-left">
-            <div class="hd1">
-            </div>
-            <div class="bd">
-              <ul class="picList">
-              {foreach item=pro from=$index.pro.data}
-                <li>
+      
+      <div class="bd" style="width:920px; height:150px; overflow:hidden; margin:0 auto">
+<ul class="clearfix">
+
+
+    {foreach item=pro from=$index.pro.data}
+        <li>
                   <div class="pic"><a href="{$pro.link}" target="_blank"><img src="{$pro.image}" /></a></div>
                   <div class="title1"><a href="{$pro.link}" target="_blank" class="kz" data-limit="12">{$pro.title}</a></div>
                 </li>
-              {/foreach}  
-              </ul>
-            </div>
-          </div>
+            {/foreach}
+
+
+
+</ul>
+</div>
+      
+      
+      
+      
+      
+      
+         
       </div>
    </div>
  

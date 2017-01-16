@@ -1,118 +1,142 @@
-<!DOCTYPE>
+<!DOCTYPE html>
 <html>
-<head>
-<script type="text/javascript">
-    // 跳转手机页面
-    {if $site_another_url}
-        if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
-            location.href = '{$site_another_url}';
-        }
-    {/if}
-</script>
-
-<meta name="keywords" content="{$keywords}"/>
-<meta name="description" content="{$description}"/>
-<link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
-<meta http-equiv="x-ua-compatible" content="ie=8"/>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+	<head>
+		<!-- 实时预览调试代码，模板开发完成后删除 -->
+		
+		<!-- 调试代码 End -->
+		<script type="text/javascript">
+		// 跳转PC页面
+		{if $site_another_url}
+			if (!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+				location.href = '{$site_another_url}';
+			}
+		{/if}
+		</script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,minimum-scale=1.0, maximum-scale=1.5,user-scalable=no,minimal-ui">
+<meta name="keywords" content="{$keywords}" />
+<meta name="description" content="{$description}" />        
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta content="telephone=no, email=no" name="format-detection">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="HandheldFriendly" content="true">
+<meta name="MobileOptimized" content="320">
+<meta name="screen-orientation" content="portrait">
+<meta name="x5-orientation" content="portrait">
 <title>{$title}</title>
+<link rel="stylesheet" href="{$site_url}css/swiper.css">
+
 <link href="{$site_url}css/css.css" rel="stylesheet" type="text/css" />
-<script src="{$site_url}js/jquery-1.9.1.min.js" type="text/javascript"></script>
-<script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.1.js"></script>
+<script src="{$site_url}js/jquery.min.js"></script>
+<script type="text/javascript" src="{$site_url}js/swiper.min.js"></script>
+<script type="text/javascript" src="{$site_url}js/lazyload.js"></script>
+<script type="text/javascript" src="{$site_url}js/effect.js"></script>
+<script type="text/javascript" src="{$site_url}js/TouchSlide.1.1.js"></script>
 <script type="text/javascript" src="{$site_url}js/function.js"></script>
+
+<script type="text/javascript">
+	window.addEventListener('load', function(){
+   setTimeout(function(){ window.scrollTo(0, 1); }, 100);
+});//safari浏览器可以通过此代码来隐藏地址栏
+</script>
 {$headscript}
 </head>
-
 <body>
 
-<!-- 导入头部文件 -->
-{include file='./_header.html'}
+           {include file="./_header.html"}
+            <form action="{$search_action}" method="GET"  class="form">
+            	<input type='text'  placeholder='请输入需要查询名称' class='search-text' name="s" value="" />
+            	<input type="submit" value="搜索" class="submit"/>
+            </form>
+			 <div class="contant">
+					<div class="menu swiper-container">
+					    <div  class="swiper-wrapper">
+					        {foreach item=nav from=$navs}
+						    <div class="swiper-slide">
+						        <ul>
+						        
+						            <li><a href="{$nav.link}">{$nav.name}</a></li>
+						            
+						           
+						        </ul>
+						    </div>
+						     {/foreach}  
+					    </div>
+					     
+					   <!--  <div class="swiper-pagination"></div>      --> 
+					</div>
+				</div>
+{foreach item=mIndexCat from=$mIndexCats}
+{if $mIndexCat.type eq 2}
+  <div class="pic p_r cp">
+                        
+						<h3 class="tit"><a href="{$mIndexCat.link}">+MORE</a>{$mIndexCat.name}</h3>
+						<div class="pic_xq">
+                         
+						<ul class="pic_lm" >
+						{foreach item=article from=$mIndexCat.data}
+						<li><a href="{$article.link}"><figure><img src="{$article.image}" alt="{$article.title}"></figure>
+                             <figcaption>{$article.title}</figcaption> 
+						</a></li>
+		
+		{if $article@index+1 == 3}{break}{/if}
+		{/foreach}
+							
+							
+						</ul>
+						</div>
+					</div>
+{elseif $mIndexCat.type eq 3}
+<div class="news p_r">
+				    
+				    <canvas id="canvas3"></canvas>
+				    <a href="{$mIndexCat.link}" class="more">+</a>
+					<h3 class="tit">{$mIndexCat.name}</h3>
+					<ul class="newdet margin" id="indexul">
+					{foreach item=article from=$mIndexCat.data}
+						<li >
+							<figure><img src="{$article.image}" style="width: 100%" alt="{$article.title}"></figure>
 
-<div class="container_bg">
- <div id="container" class="wrapper clearfix">
- 
-    <div class="left">
-        <div id="news" >
-           <div class="title clearfix">
-              <span class="t-left">{$index.news.name}<i>/</i><span>{$index.news.en_name}</span></span>
-              <a href="{$index.news.link}" class="t-right"><img src="{$site_url}images/news_t-right.jpg"></a>
-           </div>
-           <div class="inner">
-            <img src="{$index.news.image}" class="newsimg">
-            <ul>
-            {foreach item=news from=$index.news.data}
-             <li><a href="{$news.link}" class="kz" data-limit="20">{$news.title}</a></li>
-            {if $news@index eq 4}{break}{/if}
-            {/foreach}
-            </ul>
-          </div>
-        </div> 
-          
-      <div id="about">
-        <div class="title clearfix">
-              <span class="t-left">{$index.about_us.name}<i>/</i><span>{$index.about_us.en_name}</span></span>
-              <a href="{$index.about_us.link}" class="t-right"><img src="{$site_url}images/about_t-right.jpg"></a>
-           </div>
-        <div class="inner">
-          <span class="aboutimg"><i><img src="{$index.about_us.image}" ></i></span>
-          <span class="kz" data-limit="180">{$index.about_us.description}</span>
-        </div>
-       </div>
+							<div class="imgright p_r">
+							<h3 class="title">{$article.title}</h3>
+							<p>{$article.description}</p><a href="{$article.link}" class="xq">查看详细</a>
+							</div>
+						</li>
+						
+						{if $article@index+1 == 5}{break}{/if}
+		            {/foreach}
+						
 
-    </div>
+					</ul>
+				</div>
+{elseif $mIndexCat.type eq 4}
+	<div class="about p_r">
 
-     
-   <div class="right clearfix"> 
-      <div id="contact" >
-        <div class="title">
-         <span class="t-left">{$index.contact_us.name}<i>/</i><span>{$index.contact_us.en_name}</span></span>
-        </div>
-        <div class="inner">
-           {$index.contact}
-        </div>
-      </div>
-      <div class="culture">
-       <a href="{$index.contact_us.link}"><img src="{$index.contact_us.image}"></a>
-      </div>
-   </div>
-     
-     
-    <div style="clear:both"></div>
-   
-   
-    <div id="products" class="wrapper">
-       <div class="title">
-         <span class="t-left">{$index.pro.name}<span>{$index.pro.en_name}</span></span>
-        <a href="{$index.pro.link}"><img src="{$site_url}images/products_t-right.jpg"></a>
-       </div>
-      <div class="inner">
-         <div class="picMarquee-left">
-            <div class="hd1">
-            </div>
-            <div class="bd">
-              <ul class="picList">
-              {foreach item=pro from=$index.pro.data}
-                <li>
-                  <div class="pic"><a href="{$pro.link}" target="_blank"><img src="{$pro.image}" /></a></div>
-                  <div class="title1"><a href="{$pro.link}" target="_blank" class="kz" data-limit="12">{$pro.title}</a></div>
-                </li>
-              {/foreach}  
-              </ul>
-            </div>
-          </div>
-      </div>
-   </div>
- 
- 
- </div>
- 
-</div>
+					
+					<div class="aboutdate">
+						<figure>
+							<a href="{$mIndexCat.link}"><img src="{$mIndexCat.image}"  alt="" style="max-width: 200px;"></a>
+						</figure>
+						<div class="about-hd"><h3 class="tit"><a href="{$mIndexCat.link}">{$mIndexCat.name}</a></h3></div>
+						<p>{$mIndexCat.description|truncate:80:"..."}</p>
+					</div>
+				</div>
+{/if}
 
+				
+ {/foreach}  			
+					
+				
 
- 
-
-{include file='./_footer.html'}
-
+			<div class="name">{$footprint}</div>
+		
+			
+		
+	
+		<div class="shadow p_a"></div>
+        {$footscript}
 
 
 
