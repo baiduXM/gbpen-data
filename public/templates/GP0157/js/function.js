@@ -13,7 +13,7 @@ $(document).ready(function(){
 
   jQuery(".slideBox").slide({mainCell:".bd ul",autoPlay:true,effect:"left"});
 
-  jQuery(".picMarquee-left").slide({mainCell:".bd1 ul",autoPlay:true,effect:"leftMarquee",vis:5,interTime:30,delayTime:0});
+  jQuery("#products .picMarquee-left").slide({mainCell:".bd ul",autoPlay:true,effect:"leftMarquee",vis:5,interTime:30,delayTime:0});
 
   //多图时轮播
     jQuery(".slideBox3").slide({  mainCell:".bds ul", effect:"left", delayTime:1000, autoPlay:true, autoPage:true, trigger:"click",
