@@ -1,4 +1,4 @@
-<div id="banner" class="clearfix" style="display:none">
+<div id="banner" >
 <div id="slideBox" class="slideBox">
 					<div class="hd">
 						<ul>
@@ -10,7 +10,7 @@
 					<div class="bd">
 						<ul>
 							{foreach name=slidepics item=slidepic from=$global.slidepics}
-									<div><a href="{$slidepic.link}" target="_blank"><li style="background:url({$slidepic.image}) no-repeat center; height:500px;"></li></a></div>
+								<div>	<a href="{$slidepic.link}" target="_blank"><li style="background:url({$slidepic.image}) no-repeat center; height:500px;"></li></a></div>
 							{/foreach}
 						</ul>
 					</div>

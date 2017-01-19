@@ -16,6 +16,8 @@ $(document).ready(function () {
 window.onload=function(){
 	<!--美工-->
 
+<!--大图-->
+$(".slideBox").slide({mainCell:".bd ul",autoPlay:true, effect:"fold", trigger:"click",interTime:4000});	
 	
 	
 <!--记住多个的内容都不一样的话就要用遍历-->

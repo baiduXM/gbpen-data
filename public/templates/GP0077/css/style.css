@@ -16,7 +16,8 @@ body{font: 12px/24px "微软雅黑"; text-align:left;font-weight:normal; color:#
 a{blr:expression(this.onFocus=this.blur())} /*a{ -webkit-tap-highlight-color:rgba(0,0,0,0);  }  去掉链接触摸高亮 */
 a{outline:none;} /*for Firefox*/
 h1,h2,h3,h4,h5,input{font-size:12px; font-weight:normal;}
-body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td,i{height: 100%; margin:0px; padding:0px;}
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, pre, form, fieldset, legend, button, input, textarea, th, td,i{height: 100%; margin:0px; padding:0px;}
+li{ margin:0px; padding:0px;}
 ol,p,dl,li{list-style:none;}
 i,em{font-style:normal;}
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block;line-height:auto;}

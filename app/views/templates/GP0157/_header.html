@@ -7,24 +7,31 @@
   </div>
  </div>
  
-<div class="menu">
-  <ul id="nav" class="nav clearfix">
-    <li class="nLi mu_bg" style="width:{100/(($navs|count)+1)}%">
-      <a href='{$site_url}'>首页</a>
-    </li>
-    {foreach name=navs item=nav from=$navs}
-    <li class="nLi mu_bg" style="width:{100/(($navs|count)+1)}%">
-        <a href='{$nav.link}'>{$nav.name}</a>
-        {if $nav.childmenu}
-        <ul class="sub"> 
-        {foreach key=key item=nav_list from=$nav.childmenu}
-        <li><a href='{$nav_list.link}'>{$nav_list.name}</a></li>
-        {/foreach}
+<div class="nav_bg">
+<div id="nav" class="wrapper clearfix">
+
+<div class="nav-wrap">
+      <ul class="clearfix menu1">
+            {$limit =10}
+            {if $navs|count lt $limit}{$limit = $navs|count}{/if}
+              <li class=" nav1" style="width:{100/($limit+1)}%"><p><a href="{$site_url}">首页</a></p></li>
+            {foreach name=navs item=nav from=$navs}
+            <li class="fl{if $nav.current} current{/if} aa" style="width:{100/($limit+1)}%">
+               <p><a href="{$nav.link}">{$nav.name}</a></p>
+                <ul class="sub clearfix">
+                    {if $nav.childmenu} {foreach key=key item=nav_list from=$nav.childmenu}
+                    <li class="{if $nav.current}current{/if} cc"><a href="{$nav_list.link}">{$nav_list.name}</a></li>
+                    {/foreach} {/if}
+                </ul>
+            </li>
+            {if $nav@index+1 eq $limit}{break}{/if}
+            {/foreach}
         </ul>
-        {/if} 
-    </li>
-    {/foreach}
-  </ul>       
+    </div>
+
+
+ 
+</div>
 </div>
 
  

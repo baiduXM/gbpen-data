@@ -22,16 +22,33 @@ div,ul,li,h1,h2,h3,h4,h5{ font-size:12px; margin:0; padding:0}
 .top_link{position:absolute; top:24px; right:64px;color:#6fa213;}
 .top_link a{ margin:0 8px; color:#6fa213;}
 
-.menu{ width:100%; background:url(../images/nav_bg.png) repeat-x; height:34px;}
-.nav{ width:1000px; height:34px;margin:0 auto; position:relative; z-index:1; }
-.nav a{ color:#fff; line-height:34px;  }
-.nav .nLi{ float:left;  position:relative; display:inline;text-align: center;  height: 34px;}
-.nav .nLi  a{ display:block;  font-size:14px; height:20px;margin-top:7px;line-height:20px;font-weight:bold; border-left: 1px solid #418402;overflow: hidden; padding:0 5px;}
-.nav .nLi  a:hover{color:#e2ea4b;}
-.nav .sub{ display:none; width:100%; left:0; top:5px;  position:relative; background:#4fa601;  line-height:32px; padding:5px 0;  z-index:555;}
-.nav .sub li{ zoom:1;border-bottom:1px  solid #418402; }
-.nav .sub a{ display:block; text-align:center;font-weight:normal;line-height:32px; height:32px;margin-top: 0;border-left: none;width: 100%;overflow: hidden;}
-.nav .sub a:hover{ color:#e2ea4b;  }
+
+
+
+
+
+
+.nav_bg{ width:100%; background:url(../images/nav_bg.png) repeat-x; height:34px;}
+#nav{ width:1000px; height:34px;margin:0 auto;}
+#nav ul li p{ height:34px; line-height:34px; overflow:hidden}
+#nav ul li{float:left; height:34px; line-height:34px; font-size:14px;font-family:Microsoft Yahei; } 
+#nav ul li a{ color:#fff; display:block; text-align:center; padding:0 5px;font-family:Microsoft Yahei; font-size:15px;border-left: 1px solid #418402}
+#nav ul li a:hover{ background:#63d100;}
+
+
+#nav ul li a{ overflow:hidden;}
+#nav ul li .cc{background:#4fa601;height:40px; line-height: 40px;display: none; text-align:center; width:100%; position:relative; z-index:100; margin-top:0px; }
+#nav ul li .cc:hover{}
+#nav ul li .cc a{width:92%; margin:auto;color:#fff; padding:0 4%; overflow:hidden; height:40px; line-height:40px;}
+#nav ul li .cc a:hover{ text-decoration:underline;color:#fff;  background:none}
+
+
+
+
+
+
+
+
 
 .banner{ width:100%;height: auto;overflow: hidden;background:url(../images/banner_bg.jpg) repeat-x bottom; height:442px;}
 .slideBox{ position: relative; height:442px;  overflow: hidden; width: 100%;height:auto;}

@@ -1,0 +1,90 @@
+h2{ text-align: center}
+.en{ font-size:26px; color:#484848; max-width:60%;overflow: hidden;text-overflow: ellipsis;white-space: nowrap; display:block; margin:auto; margin-bottom:2%}
+.ch{ font-size:22px; color:#4a4a4a; max-width:50%; min-width:30%;overflow: hidden;text-overflow: ellipsis;white-space: nowrap; display:inline-block;margin:auto;  position:relative; height:22px; padding-bottom:15px}
+.ch:before{ width:43%;height: 1px;border-top: 1px solid #5a5a5a;border-right: 1px solid transparent;position:absolute; content:""; bottom:0; left:0%; margin-left:28%}
+@media screen and (min-width: 320px) and (max-width: 480px){
+.en{ font-size:20px; max-width:60%;margin-bottom:1%}
+.ch{ font-size:18px;  height:18px; padding-bottom:12px}
+.ch:before{ width:55%;height: 1px;border-top: 1px solid #5a5a5a;border-right: 1px solid transparent;position:absolute; content:""; bottom:0; left:0%; margin-left:21%}
+}
+
+
+
+@media screen and (min-width: 320px) and (max-width: 480px){
+
+}
+
+
+#in_page{ background:url(../images/about_bg.jpg) top center no-repeat; padding:8% 0; margin-top:9% }
+#in_page .about_left{ width:53%; text-align:center; float:left; padding-top:3%;}
+#in_page .title{ font-size:20px; color:#9f3aa4;overflow: hidden;text-overflow: ellipsis;white-space: nowrap}
+#in_page .text{ font-size:14px; color:#656565; line-height:24px; height:120px; overflow:hidden;  margin:4% 6% 8% 0;}
+#in_page span{ font-size:12px; color:#999999; background:#fff; border:1px solid #e4e4e4; padding:3%; }
+#in_page .about_img{ float:left; width:47%;}
+@media screen and (min-width: 320px) and (max-width: 480px){
+#in_page{ background:url(../images/about_bg.jpg) top center no-repeat; padding:8% 0; margin-top:9% }
+#in_page .about_left{ width:50%;  padding-top:2%;}
+#in_page .title{ font-size:16px; }
+#in_page .text{ font-size:12px;line-height:24px; height:120px; margin:1% 4% 4% 0;}
+#in_page span{ font-size:12px; color:#999999;}
+#in_page .about_img{width:50%;}
+}
+
+
+#in_text{ background:url(../images/news_bg.jpg) top center no-repeat; width:100%; background-size:100% auto; padding:5% 0}
+#in_text ul{ margin-top:4%; width:96%; margin:auto} 
+
+#in_text ul li{ width:48%; background:#fff; float:left; margin-right: 2%}
+
+
+#in_text ul li:last-child{ margin-right:0px;}
+.news_img{ border-top: 3px solid #823691; max-height:182px; overflow:hidden}
+.news_img img{ width:100%}
+#in_text ul li .inner{ padding:5% 4% 2% 4%}
+#in_text .title{ font-size:16px; color:#823691;overflow: hidden;text-overflow: ellipsis;white-space: nowrap}
+#in_text .text{ font-size:14px; color:#646464; line-height:20px; height:40px; overflow:hidden; margin:1% 0}
+#in_text ul li span{ font-size:12px; color:#676767}
+
+@media screen and (min-width: 320px) and (max-width: 480px){
+
+
+#in_text .title{ font-size:14px;}
+#in_text .text{ font-size:12px; color:#646464; line-height:18px; height:36px; }
+}
+
+
+
+
+
+#in_imgage{margin-top:9%; margin-bottom:9% }
+#in_imgage ul{ margin-top:4%}
+#in_imgage ul li{position:relative;width:48%; margin:0 1%; float:left}
+#in_imgage .pro_img{ }
+#in_imgage .pro_img img{ width:100%}
+#in_imgage .text{background:rgba(130,54,145,.7); width:96%; height:28px; line-height:28px; color:#fff; padding:0 2%; font-size:14px; position:absolute; left:0; bottom:6%}
+#in_imgage .text .p1{ width:70%;overflow: hidden;text-overflow: ellipsis;white-space: nowrap; display:block; float:left}
+#in_imgage .text a{ color:#fff}
+#in_imgage .text span{ float:right}
+@media screen and (min-width: 320px) and (max-width: 480px){
+#in_imgage .text{ height:24px; line-height:24px; font-size:12px;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
