@@ -71,7 +71,7 @@
   <section> {foreach name=mIndexCats item=mIndexCat from=$mIndexCats}
     {if $mIndexCat.type eq 4}
     <div id="in_page" class="wrapper">
-           <div class="tit"><div class="pix"><img src="{$site_url}images/about_tit.jpg"></div><div class="wenzi"> {$title}</div></div>
+           <div class="tit"><div class="pix"><img src="{$site_url}images/about_tit.jpg"></div><div class="wenzi"> {$about.title}</div></div>
       <div class="inner clearfix"> <a href="{$mIndexCat.link}">
         <p>{$mIndexCat.description}</p></a> </div>
     </div>

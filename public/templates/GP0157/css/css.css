@@ -14,10 +14,10 @@ div,ul,li,h1,h2,h3,h4,h5{ font-size:12px; margin:0; padding:0}
 .wrapper{width:1003px; margin:0 auto;}
 
 
-#header{ width:1003px; height:112px; margin:0 auto; background:url(../images/header.jpg) no-repeat top left; position:relative;}
+#header{ width:1003px; height:112px; overflow:hidden; margin:0 auto; background:url(../images/header.jpg) no-repeat top left; position:relative;}
 #header h1{ margin-left:26px; float:left; display:inline-table;width: 450px;height:112px;}
 #header h1 span{display: table-cell;vertical-align: middle;}
-#header h1 span img{max-width: 450px;max-height: 112px;}
+#header h1 span img{max-width: 450px;max-height: 112px; display:block}
 .tel{ float:right; display:inline; margin-right:60px; margin-top:76px;font-size: 26px;color:#1e7100;}
 .top_link{position:absolute; top:24px; right:64px;color:#6fa213;}
 .top_link a{ margin:0 8px; color:#6fa213;}
