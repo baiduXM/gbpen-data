@@ -56,12 +56,12 @@
   <section> {foreach name=mIndexCats item=mIndexCat from=$mIndexCats}
     {if $mIndexCat.type eq 4}
      <div id="in_page" class="wrapper">   <a href="{$mIndexCat.link}">
-         <div class="tit1"><img src="images/tit_bg.png"><span>{$mIndexCat.name}</span></div>
+         <div class="tit1"><img src="{$site_url}images/tit_bg.png"><span>{$mIndexCat.name}</span></div>
        <div class="inner clearfix">
        <div class="right">
           <p>{$mIndexCat.description}</p>
    </div>
-          <div class="pix"><img src="{$site_url}images/about_img.jpg"></div>
+          <div class="pix"><img src="{$mIndexCat.image}"></div>
        </div>
          <div class="more"><img src="{$site_url}images/more.png"></div>
      </A></div>
@@ -81,7 +81,7 @@
     </div>
     {elseif $mIndexCat.type eq 2}
     <div id="in_image" class="wrapper">
-        <div class="tit1"><a href="{$mIndexCat.link}"><img src="{$site_url}images/tit_bg.png"><span>{$mIndexCat.name}</span></a></div>
+  <div class="tit"><a href="{$mIndexCat.link}"><img src="{$site_url}images/pro_tit_bg.png"><span>{$mIndexCat.name}</span></a></div>
       <div class="inner yc">
         <ul class="clearfix">
           {foreach item=article from=$mIndexCat.data}

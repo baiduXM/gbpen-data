@@ -1,4 +1,4 @@
-﻿.clearfix:after { content:'\20'; display:block; height:0; clear:both; }
+.clearfix:after { content:'\20'; display:block; height:0; clear:both; }
 .clearfix { *zoom:1;}
 .body{ position: absolute; width:100%; height:100%; min-width:320px; max-width:640px; overflow:hidden; background:#eee6d1}
 .wrap{ width:100%; height:100%; position: absolute; top:0px; left:0px; z-index:5; }
@@ -82,9 +82,9 @@ header{ position:relative; background:#eee6d1; border-bottom:5px solid #3b1d09}
 .hide-class{ height:auto; overflow:hidden; display:none;  margin:0px auto; margin-top:5px; width:96%;}
 .hide-class dl{ height:30px; overflow:hidden; line-height:30px; padding:0px 10px; border-bottom:1px solid #d2d2d2;position:relative; margin:0px 0px 0px; background:#e8e8e8; position:relative}
 .hide-class dl.sub2{ background:#3b1d09}
-.hide-class dl.sub1 a{ background:url(../images/sub1.jpg) no-repeat left; padding-left:25px; color:#333;margin-left:15px; height: 25px; width: 87%;overflow: hidden;}
-.hide-class dl.sub2 a{ background:url(../images/sub2.jpg) no-repeat left; padding-left:25px; margin-left:30px;height: 25px; width: 87%;overflow: hidden;}
-.hide-class dl.sub3 a{ background:url(../images/sbu3.jpg) no-repeat left; padding-left:25px; margin-left:45px; color:#333;height: 25px; width: 87%;overflow: hidden;}
+.hide-class dl.sub1 a{ background:url(../images/sub1.jpg) no-repeat left; padding-left:25px; color:#333;margin-left:15px;}
+.hide-class dl.sub2 a{ background:url(../images/sub2.jpg) no-repeat left; padding-left:25px; margin-left:30px;}
+.hide-class dl.sub3 a{ background:url(../images/sbu3.jpg) no-repeat left; padding-left:25px; margin-left:45px; color:#333}
 
 .hide-class dl:nth-last-child(1){ border-bottom:none;}
 .hide-class dl:before { content:"";
