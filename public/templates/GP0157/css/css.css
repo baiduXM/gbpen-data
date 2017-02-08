@@ -65,11 +65,12 @@ div,ul,li,h1,h2,h3,h4,h5{ font-size:12px; margin:0; padding:0}
 #container{ width:1003px; margin:auto; background:url(../images/container_bg.jpg) no-repeat top left; padding-top:6px; }
 .left{ float:left; display:inline; width:754px;}
 #news{ width:299px; height:242px; float:left; display:inline; margin-left:22px; }
-#news .title{background: url(../images/tleft_bg.png) no-repeat left bottom;}
+#news .title{background: url(../images/tleft_bg.png) no-repeat left bottom; height:27px; overflow:hidden}
 #news .title .t-left{ float:left;color:#2c5d04;font-size: 15px;font-weight: bold;padding-left: 10px; font-family: "微软雅黑";}
 #news .title .t-left i{font-size: 20px;font-weight: normal;}
 #news .title .t-left span{font-size: 12px;color:#6b9f0c;margin-left: 3px;font-weight: normal;}
 #news .title .t-right{ float:right; }
+#news .title .t-right img{ display:block;}
 
 #news .inner{ width:253px;margin-top:18px; }
 #news .inner img.newsimg {border:solid 2px #d9d9d9;height: 57px;width: auto;display: block;margin: 0 auto 5px;}
@@ -79,11 +80,12 @@ div,ul,li,h1,h2,h3,h4,h5{ font-size:12px; margin:0; padding:0}
 #news .inner ul li a:hover{color:#2c5d04;}
 
 #about{ width:419px; height:244px; float:left; display:inline; overflow: hidden; }
-#about .title{background: url(../images/tleft_bg2.png) no-repeat left bottom;}
+#about .title{background: url(../images/tleft_bg2.png) no-repeat left bottom;height:27px; overflow:hidden}
 #about .title .t-left{ float:left;color:#2c5d04;font-size: 15px;font-weight: bold;padding-left: 10px; font-family: "微软雅黑";}
 #about .title .t-left i{font-size: 20px;font-weight: normal;}
 #about .title .t-left span{font-size: 12px;color:#6b9f0c;margin-left: 3px;font-weight: normal;}
 #about .title .t-right{ float:right; }
+#about .title .t-right img{display:block;}
 #about .inner{ width:414px; line-height:25px; margin-top:18px; }
 #about .inner .aboutimg{margin-right:5px; float:left; display:table;width: 173px;height: 129px; }
 #about .inner .aboutimg i{display: table-cell;vertical-align: middle;}

@@ -1,4 +1,4 @@
-$(document).ready(function(){
+﻿$(document).ready(function(){
 									
 	function pageSlideOver(){
 	    $('.page-out').live('transitionend', function(){
@@ -123,7 +123,7 @@ $(document).ready(function(){
 	$(".second>dd>a").click(function () {
 	    $(this).parent().siblings().find(".third").slideUp()
 	    $(this).siblings(".third").slideToggle()
-	    return false;
+	    //return false;
 	})
 
 	// 详细页多图轮播

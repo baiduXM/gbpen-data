@@ -31,7 +31,8 @@ strong{/*display: block;*/margin: 0 auto;overflow: hidden;text-overflow: ellipsi
 #nav ul li .cc:hover{ background:red;}
 #nav ul li .cc a:hover{ color:#fff;}
 
-
+.mbrowse{top: 1% !important;bottom:1%;width:80% !important; padding: 1% !important; text-align:center;max-height:100% !important;}
+.mbrowse img{ height:100% !important; margin:0 auto !important;width:auto !important;max-height:100% !important;}
 
 #banner{ width:920px; height:447px; margin: auto;margin-top: 20px;position: relative; z-index:99;}
 .focusBox { position: relative; width:100%; height:447px; text-align:center;  }
@@ -91,6 +92,7 @@ strong{/*display: block;*/margin: 0 auto;overflow: hidden;text-overflow: ellipsi
 #about{ width:326px; height:190px; overflow:hidden; float:left}
 #about .title{width:326px; height:24px; border-bottom:1px solid #e6e6e6}
 #about .title .ch{ font-size:16px; color:#6b6358; float:left;}
+#about .title .ch a{ font-size:16px; color:#6b6358; float:left;}
 #about .title .en{font-size:12px; color:#6b6358;float:left; margin-left:5px; display:inline; text-transform:capitalize;}
 #about .title span{ float:right; }
 #about .inner{ line-height:24px; overflow:hidden; margin-top:10px; height:160px; overflow:hidden}
@@ -100,6 +102,7 @@ strong{/*display: block;*/margin: 0 auto;overflow: hidden;text-overflow: ellipsi
 #news{ width:326px; height:190px; overflow:hidden; float:left; margin-left:20px; display:inline}
 #news .title{width:326px; height:24px; border-bottom:1px solid #e6e6e6}
 #news .title .ch{ font-size:16px; color:#6b6358; float:left;}
+#news .title .ch a{ font-size:16px; color:#6b6358; float:left;}
 #news .title .en{font-size:12px; color:#6b6358;float:left; margin-left:5px; display:inline; text-transform:capitalize;}
 #news .title span{ float:right; }
 #news .inner{ line-height:24px; overflow:hidden; margin-top:10px;}
@@ -107,7 +110,7 @@ strong{/*display: block;*/margin: 0 auto;overflow: hidden;text-overflow: ellipsi
 #news .inner ul li a{height:30px;  padding-left:10px; color:#333; display:block;max-width: 250px; overflow: hidden;}
 #news .inner ul li span{ float:right;}
 
-#right{ float:left; width:216px; height:377px; background:#efece8;}
+#right{ float:left; width:216px;  background:#efece8;}
 #list{ width:190px; margin-left:15px; height:200px; overflow:hidden;}
 #list .title{ height:30px;color:#7b7878;}
 #list .title .ch{ font-size:18px; float:left;}
@@ -118,7 +121,7 @@ strong{/*display: block;*/margin: 0 auto;overflow: hidden;text-overflow: ellipsi
 
 
 
-#contact{ width:190px; margin-left:15px;  overflow:hidden;  background:url(../images/contact_bg.jpg) no-repeat bottom right; }
+#contact{ width:190px; margin-left:15px;  overflow:hidden;  background:url(../images/contact_bg.jpg) no-repeat bottom right;padding: 20px 0 94px; }
 #contact .title{ height:30px; line-height:30px; color:#7b7878;}
 #contact .title .ch{ font-size:18px; float:left;}
 #contact .title .en{ font-size:12px; float:left;margin-left:5PX;position:relative; top:5PX;}
@@ -281,9 +284,9 @@ h2.inner_news_time a{ color:#333;}
 h2.inner_news_time a:hover{ color:#469c18; text-decoration:underline;}
 h2.inner_news_time span{ float:right; text-align:right; padding-right:10px;}
 .edit{overflow:hidden;text-align:Justify;text-justify:inter-ideograph; color:#333; margin:10px 0px 0px;}
-ul.inner_pages{ padding-top:8px;margin:10px auto 10px; margin-left:0px; border-top:1px dotted #ccc;}
-ul.inner_pages li{line-height:26px;color:#333;}
-ul.inner_pages a{color:#333;}
+ul.inner_pages{ padding-top:8px;margin:10px auto 10px; margin-left:0px; border-top:1px dotted #ccc;overflow:hidden;}
+ul.inner_pages li{line-height:26px;color:#333;float:left; width:40%; text-align:center;line-height:30px; font-size:18px;}
+ul.inner_pages a{color:#333;font-size:18px;}
 ul.inner_pages a:hover{color:#469c18}
 
 
@@ -315,7 +318,7 @@ text-justify:inter-ideograph;}
 	text-align: center;
 	padding: 1px;
 }
-.slideBoxb .bd img {border:1px solid #d3d3d3; padding:1px;
+.slideBoxb .bd img {border:1px solid #d3d3d3; padding:1px; width: 99%;
 	
 }
 
@@ -326,6 +329,9 @@ text-justify:inter-ideograph;}
 		.slideBoxb .prev,
 		.slideBoxb .next{ position:absolute; left:3%; top:50%; margin-top:-25px; display:block; width:32px; height:40px; background:url(../images/prev.png) left no-repeat;}
 		.slideBoxb .next{ left:auto; right:3%; background:url(../images/next.png) right no-repeat; }
+		.slideBoxb .prev1,
+		.slideBoxb .next1{ position:absolute; left:3%; top:50%; margin-top:-25px; display:block; width:32px; height:40px; background:url(../images/prev.png) left no-repeat;}
+		.slideBoxb .next1{ left:auto; right:3%; background:url(../images/next.png) right no-repeat; }
 		.slideBoxb .prevStop{ display:none;  }
 		.slideBoxb .nextStop{ display:none;  }		   
 

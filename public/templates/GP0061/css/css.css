@@ -76,9 +76,9 @@ ul.nav>.on>h3 a{color: #fff;}
 .pro-tit h2 a{color: #10522c;}
 .pro-tit h2:before{content: "";display: block;width: 52px;height: 4px;background: #10522c;position: absolute;bottom: 0;left: 50%;margin-left: -26px;}
 
-.probox-class{overflow: hidden;text-align: center;height: 33px;}
-.probox-class li{min-width: 101px;max-width: 120px;height:29px;line-height: 29px;cursor:pointer;display: inline-block;margin: 0 15px;font-size: 14px;}
-.probox-class li a{display: block;color: #10522c;border: 2px solid #10522c;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}
+.probox-class{text-align: center;}
+.probox-class li{height:30px;line-height:30px;cursor:pointer;display: inline-block;margin: 0 15px;font-size: 14px;}
+.probox-class li a{display: block;color: #10522c;border: 2px solid #10522c;padding: 0 10px; white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}
 .probox-class li a:hover{color: #fff;background: #10522c;}
 .probox-main{background: url(../images/imgbg.png) 360px 10px no-repeat;padding: 85px 0 0;width: 960px;margin: 0 auto;}
 .probox-main ul{height: 230px;position: relative;padding-left: 50px;}
@@ -151,8 +151,8 @@ ul.nav>.on>h3 a{color: #fff;}
 /*list-page*/
 .sideNav{margin-bottom: 25px;position: relative;z-index: 10;}
 .sideNav ul.first{text-align: center;}
-.sideNav ul.first>li{display: inline-block;margin: 0 10px;width: 106px;position: relative;}
-.sideNav ul.first>li>a{font-size: 14px;color: #10522c;display: block;border: 2px solid #10522c;width: 102px;height: 30px;line-height: 30px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}
+.sideNav ul.first>li{display: inline-block;margin: 0 10px;position: relative;}
+.sideNav ul.first>li>a{font-size: 14px;padding:0 10px; color: #10522c;display: block;border: 2px solid #10522c;height: 30px;line-height: 30px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}
 .sideNav ul.first>li>a:hover{background: #10522c;color: #fff;}
 .sideNav .second{display: none;position: absolute;left: 0;/*width: 140px;*/padding: 10px 20px;background: #10522c;text-align: left;}
 .sideNav .second>li{line-height: 30px;white-space: nowrap;}

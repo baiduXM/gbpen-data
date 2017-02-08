@@ -16,7 +16,7 @@ $(document).ready(function() {
 		jQuery(".banner").slide({mainCell:".bd ul",autoPlay:true});
    
 	// content
-      var conHeight=$('.wrap').height()-$('.header').height()-$('.foot').outerHeight();
+      var conHeight=$(window).height()-$('.header').height()-$('.foot').outerHeight();
       $('.contentbox').height(conHeight);
       $('.nycontentbox').height(conHeight);
 

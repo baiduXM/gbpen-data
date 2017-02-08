@@ -43,7 +43,6 @@
                     <ul class="probox-class">
                       {foreach item=pro from=$index.product.childmenu}
                         <li><a href="{$pro.link}">{$pro.name}</a></li>
-                        {if $pro@index+1==3}{break}{/if}
                       {/foreach}
 
                     </ul>

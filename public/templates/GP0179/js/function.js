@@ -88,9 +88,7 @@ $(document).ready(function() {
 	    $(this).parent().siblings().find(".third").slideUp()
 	    $(this).siblings(".third").slideToggle()
 	})
-});
 
-window.onload=function(){
 	// banner切换 
 	jQuery(".slider").slide({ titCell:".hd ul", mainCell:".bd ul", effect:"fold",  autoPlay:true, autoPage:true, trigger:"click",
 		mouseOverStop:false,/* 鼠标移到容器层继续播放*/
@@ -98,5 +96,8 @@ window.onload=function(){
 
 	$(".pro li:nth-child(3n-1)").css({marginRight:"8px",marginLeft:"8px"});
 	jQuery(".focus").slide({ mainCell:".pic",effect:"fold", autoPlay:true, delayTime:600, trigger:"click"});
+});
 
+window.onload=function(){
+	console.log("11");
 }

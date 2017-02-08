@@ -18,6 +18,16 @@
 			"filter":"list,page"
 		}
 	},
+	"test":{
+		"description":"是否推荐相关阅读,1推荐",
+		"value":"1",
+		"type":"text"
+	},
+	"test1":{
+		"description":"是否相关推荐,1推荐",
+		"value":"1",
+		"type":"text"
+	},
 	"link2":{
 		"description":"内页侧边栏第二导航第2个子栏目",
 		"value":{},

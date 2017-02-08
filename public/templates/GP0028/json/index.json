@@ -1,11 +1,12 @@
 {
 	"list1": {
 		"value": {},
-		"description": "第一个栏目列表",
+		"description": "第一个单页面",
 		"type": "list",
 		"config": {
-			"width": 367,
-			"height": 138
+			"filter":"list,page",
+			"nav_width": 367,
+			"nav_height": 138
 		}
 	},
 	"list2": {

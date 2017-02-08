@@ -27,9 +27,9 @@
 
 #in_page{ width:96%; margin:auto; margin-top:5%}
 #in_page .inner{ padding-top:10px; width:95%; margin:auto; margin-top:10px;}
-#in_page .inner .page_img{overflow:hidden; width:28%;  float:left}
-#in_page .inner .page_img img{  width:100%}
-#in_page .inner p{  line-height:28px; height:140px; overflow:hidden;width:68%; float:right }
+#in_page .inner .page_img{overflow:hidden;}
+#in_page .inner .page_img img{  max-width:100%}
+#in_page .inner p{  line-height:28px; height:140px; overflow:hidden;}
 
 #in_text{  width:96%; margin:auto; margin-top:5%}
 #in_text .inner ul{  width:97%; margin:auto; margin-top:10px;}

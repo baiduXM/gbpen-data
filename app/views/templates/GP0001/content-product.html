@@ -19,6 +19,7 @@
 <!--[if lte IE 8]>
 <link rel="stylesheet" href="css/ie.css">
 <![endif]-->
+
 <script type="text/javascript" src="{$site_url}js/jquery-1.7.1.min.js"></script>
 <script type="text/javascript" src="{$site_url}js/slid.js"></script>
 <script type="text/javascript" src="{$site_url}js/tap.js"></script>
@@ -74,14 +75,23 @@
 					<a class="article-pre" href="{$article.prev.link}">上一篇：{$article.prev.title}</a>
 					<a class="article-next" href="{$article.next.link}">下一篇：{$article.next.title}</a>
 				</div>
-				
-				<div class="article_rank">
-					<h5>相关阅读</h5>
-					{foreach name=articles item=article from=$related}
-                    <a href="{$article.link}">{$article.title}</a>
-                    {if $article@index+1 == 8}{break}{/if} 
-                    {/foreach}
+				{if $global.test eq 1}
+				<div class="Recommend group">
+					<div class="th group">
+						<h3>相关推荐<span>Recommended</span></h3>
+						<a href="{$global.hot_news.link}" class="more">more>></a>
+					</div>
+					<div class="bd">
+						{foreach item=article from=$global.hot_news.data}
+	                    <div>
+							<div class="img"><img src="{$article.image}" height="207" width="310" alt="{$article.title|strip_tags}"/></div>
+							<a href="{$article.link}">{$article.title}</a>
+						</div>
+	                    {if $article@index+1 == 6}{break}{/if} 
+	                    {/foreach}
+					</div>
 				</div>
+				{/if}
 				
 			</div>
 			{include file='./_pagenavs_sub3.html'} 		
