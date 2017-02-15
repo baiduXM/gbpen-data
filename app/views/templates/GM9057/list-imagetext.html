@@ -3,7 +3,7 @@
 	<head>
 		<!-- 实时预览调试代码，模板开发完成后删除 -->
 		
-		
+         
 		<!-- 调试代码 End -->
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="viewport" content="width=device-width,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no,minimal-ui">
@@ -30,7 +30,9 @@
     <link rel="stylesheet" href="{$site_url}css/swiper.css" />
     <link rel="stylesheet" href="{$site_url}css/public.css" />
     <link rel="stylesheet" href="{$site_url}css/style.css" />
+    {if $stylecolor}
     <link rel="stylesheet" rev="stylesheet" href="{$site_url}css/style_{$stylecolor}.css" type="text/css" />
+    {/if}
 <script>
 window.addEventListener('load', function(){
   setTimeout(function(){ window.scrollTo(0, 1); }, 100);
@@ -76,7 +78,7 @@ window.addEventListener('load', function(){
 <script src="{$site_url}js/TouchSlide.1.1.js"></script>
 <script type="text/javascript" src="{$site_url}js/jquery.min.js"></script>
 <script src='{$site_url}js/pagenavs_sub3.js'></script>
-<script src="{$site_url}/js/swiper.jquery.min.js"></script>
+<script src="{$site_url}js/swiper.jquery.min.js"></script>
 <script type="text/javascript" src="{$site_url}js/function.js"></script>
 {$footscript}
 </body>

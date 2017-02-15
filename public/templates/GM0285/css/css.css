@@ -1,0 +1,79 @@
+
+/*标题样式*/
+.in_h2{ position:relative; margin:auto; height:30px; line-height:30px;}
+.in_h2  span{ display:block; width:60%; position:absolute; left:3%; top:0px; z-index:100; color:#fff; }
+.in_h2  span .in_zh{ background:url(../images/about_bg.jpg) no-repeat left; font-size:18px; display:inline-block; max-width:40%;overflow: hidden;text-overflow: ellipsis;white-space: nowrap; color:#000;height:30px; line-height:30px; padding-left:5%; font-weight:bold}
+.in_h2  span .in_en{ font-size:14px; text-transform:uppercase; display:inline-block; max-width:40%;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;color:#333;height:30px; line-height:30px;}
+.in_h2 .more{ width:73px; height:26px;position:absolute; right:5%; bottom:0; z-index:100}
+
+.in_h2  span .in_zh1{ background:url(../images/news.jpg) no-repeat left;}
+.in_h2  span .in_zh2{ background:url(../images/case.jpg) no-repeat left;}
+
+
+@media screen and (min-width: 320px) and (max-width: 480px){
+	
+	.in_h2  span{  width:70%;  }
+.in_h2  span .in_zh{ padding-left:10%; }
+
+}
+/*标题样式*/
+.inner{  background:url(../images/inner_bg.jpg) no-repeat top center; padding:5% 5% 0 5%; background-size:100% auto}
+.wrapper{ width:96%; margin:auto   }
+
+
+
+
+#in_page{  }
+
+#in_page .inner{ margin-top:10px; width:90%; margin:auto; }
+#in_page .inner .page_img{ width:30%; float:left; border-radius:15px; overflow:hidden}
+#in_page .inner .page_img img{ width:100%;}
+#in_page .inner .right{width:67%; float:right;}
+#in_page .inner p{ line-height:28px; height:112px; color:#333; overflow:hidden; }
+
+@media screen and (min-width: 320px) and (max-width: 480px){
+#in_page .inner .page_img{ width:40%;}
+#in_page .inner .right{width:55%; float:right;}
+
+#in_page .inner p{ line-height:22px; height:88px; font-size:12px; }
+
+}
+
+
+
+
+
+
+
+#in_image{  }
+#in_image ul{ width:100%; margin:auto; position:relative; overflow:hidden}
+#in_image ul li{  width:30%; float:left; margin:5px 1.5%;  position:relative; border-radius:10px; overflow:hidden }
+#in_image ul li img{ width:100%;}
+#in_image ul li h2{ width:100%; color:#333;  height:35px; line-height:35px; padding-top:10px; overflow: hidden;text-overflow: ellipsis;white-space: nowrap; background:url(../images/pro_bg.jpg) no-repeat top center; background-size:100% auto  }
+
+@media screen and (min-width: 320px) and (max-width: 480px){
+	
+	}
+
+
+#in_text{}
+#in_text .inner{ width:90%;  margin:auto; } 
+#in_text ul li{ width:100%;   position:relative;  margin:10px auto;}
+#in_text ul li .text_box{  padding:1% }
+#in_text ul li .text_box .date{ width:15%;  float:left; overflow:hidden; background:#cecbcc  }
+#in_text ul li .text_box .date .riqi{ font-size:40px;  text-align:center; color:#fff; line-height:35px; height:35px; overflow:hidden; margin-top:10px;}
+#in_text ul li .text_box .date .year{ color:#fff; font-size:14px; text-align:center;line-height:35px; height:35px;}
+
+
+#in_text ul li .text_box .in_des{ width:82%; float:right;}
+#in_text ul li .text_box .in_des h2{font-size:14px; line-height:20px; height:20px; display: block;margin: 0 auto;overflow: hidden;text-overflow: ellipsis;white-space: nowrap; color:#515560;  }
+#in_text ul li .text_box .in_des .txt{ line-height:20px; height:40px; overflow:hidden; font-size:14px; margin:5px 0; color:#9b9a9a}
+
+
+@media screen and (min-width: 320px) and (max-width: 480px){
+#in_text ul li .text_box .date{ width:25%;  float:left; overflow:hidden;  }
+#in_text ul li .text_box .in_des{ width:72%; float:right;}
+#in_text ul li .text_box .date .year{ line-height:25px; height:25px;}
+#in_text ul li .text_box .date .riqi{ font-size:35px; margin-top:5px;}
+}
+

@@ -95,9 +95,20 @@ $(document).ready(function() {
 	});
 
 	$(".pro li:nth-child(3n-1)").css({marginRight:"8px",marginLeft:"8px"});
-	jQuery(".focus").slide({ mainCell:".pic",effect:"fold", autoPlay:true, delayTime:600, trigger:"click"});
-});
+	//jQuery(".focus").slide({ mainCell:".pic",effect:"fold", autoPlay:true, delayTime:600, trigger:"click"});
+	
+	var myTimer=setInterval(myFunc,100);
+	var img=$(".focus ul li img")[0];
+	function myFunc(){
+		if (!img) return;
+		if (img.height!=0) {
+			clearInterval(myTimer);
+			jQuery(".focus").slide({ mainCell:".pic",effect:"fold", autoPlay:true, delayTime:600, trigger:"click"});		
+		}	
+	}
+	
 
-window.onload=function(){
-	console.log("11");
-}
+	
+
+
+});

@@ -1,0 +1,95 @@
+/*标题样式*/
+.xx{ border:1px solid #d0d0d0;border-radius:4px; padding:3% 2%; border-top:9px solid #095c15; background:#fafafa; position:relative; z-index:1000;}
+h2 .ch{ float:left; padding-left:2%; border-left:5px solid #8ec21f; font-size:16px; color:#000; font-weight:bold; max-width:25%;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;height:20px; line-height:20px;}
+h2 .en{float:left; margin-left:1%;max-width:30%;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;height:20px; line-height:20px;}
+h2 { border-bottom:2px solid #f5f5f5; height:30px; line-height:30px; }
+h2 span{ float:right; font-size:12px;height:20px; line-height:20px;}
+@media screen and (min-width: 320px) and (max-width: 480px){
+h2 .ch{ padding-left:2%; border-left:5px solid #8ec21f; font-size:13px; max-width:30%;}
+h2 .en{max-width:45%; font-size:13px;}
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px){
+
+}
+
+
+
+
+
+#in_page{}
+#in_page .page_img{ width:100%; margin-top:2%; max-height:200px; overflow:hidden}
+#in_page .page_img img{ width:100%}
+#in_page .text{ line-height:40px; height:120px; overflow:hidden;font-size:13px; color:#333333; margin-top:3%;}
+@media screen and (min-width: 320px) and (max-width: 480px){
+#in_page .text{ line-height:30px; height:90px; font-size:12x;}
+}
+
+
+
+
+
+
+
+#in_text{}
+#in_text .inner{ width:96%; margin:auto}
+#in_text ul li{ margin-bottom:4%}
+#in_text ul li:nth-child(odd) .text_img{ float:left; width:25%; margin-right:3%; border:2px solid #b6b6b6;}
+#in_text ul li:nth-child(even) .text_img{ float: right; margin-left:3%;width:25%;  border:2px solid #b6b6b6;}
+#in_text ul li .text_img img{ width:100%}
+#in_text ul li .title{ width:70%; float:left;overflow: hidden;text-overflow: ellipsis;white-space: nowrap; font-weight:bold; font-size:14px; color:#095c15; margin:1% 0;}
+#in_text ul li .title{ float: left;overflow: }
+#in_text ul li .text{ width:70%; float:left; line-height:30px; height:90px; overflow:hidden}
+
+@media screen and (min-width: 320px) and (max-width: 480px){
+#in_text ul li:nth-child(odd) .text_img{  width:38%; margin-right:2%; }
+#in_text ul li:nth-child(even) .text_img{  width:38%; margin-left:2%; }
+#in_text ul li .title{ width:58%; margin:0;font-size:13px; }
+#in_text ul li .text{ width:58%; line-height:26px; height:78px; font-size:12px;}
+}
+
+
+
+
+
+
+
+#in_image{}
+#in_image .inner{ width:100%; margin:auto}
+#in_image ul li{ width:31.3%; margin:2% 1%; float:left}
+#in_image .pro_img{ border:1px solid #cecece;}
+#in_image .pro_img img{ width:100%}
+#in_image .text{ width:94%; margin:auto;text-align:center;overflow: hidden;text-overflow: ellipsis;white-space: nowrap; padding:0 2%;}
+@media screen and (min-width: 320px) and (max-width: 480px){
+#in_image ul li{ width:31%; margin:2% 1%; float:left}
+#in_image .text{font-size:12px; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

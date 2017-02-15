@@ -100,6 +100,9 @@ $(document).ready(function() {
 	// if ($(".focus img").length<2) {
 	// 	$(".focus").find('a').css({display:"none"});
 	// };
-	jQuery(".focus").slide({ mainCell:".pic",effect:"fold", autoPlay:true, delayTime:600, trigger:"click"});
-
+	var img=$(".focus ul li img")[0];
+	if (img.height!=0) {
+		jQuery(".focus").slide({ mainCell:".pic",effect:"fold", autoPlay:true, delayTime:600, trigger:"click"});
+	}
+	
 });

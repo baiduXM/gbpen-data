@@ -3,7 +3,7 @@
 	<head>
 		<!-- 实时预览调试代码，模板开发完成后删除 -->
 		
-		
+         
 		<!-- 调试代码 End -->
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="viewport" content="width=device-width,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no,minimal-ui">
@@ -46,8 +46,8 @@ window.addEventListener('load', function(){
 	<div class="main">
 
     <div class="top_nav">
-      <h2><span class="en">{$list.en_name}</span></h2>
-      <a class="classify_btn" href="javascript:;">分类</a>
+      <h2><span class="en">{$list.en_name}</span><span class="zh">{$list.name}</span></h2>
+      <a class="classify_btn" href="javascript:;">Classify</a>
       
       <nav>
         <ul class="nav up">
@@ -56,11 +56,11 @@ window.addEventListener('load', function(){
           {/foreach}
         </ul>
       </nav>
-      <a class="font_btn left" href="javascript:;">字</a>
+      <a class="font_btn left" href="javascript:;">Font</a>
       <div class="font left">
-        <span class="big">大</span>
-        <span class="normal">中</span>
-        <span class="small">小</span>
+        <span class="big">big</span>
+        <span class="normal">middle</span>
+        <span class="small">small</span>
       </div>             
     </div>
 
@@ -78,7 +78,7 @@ window.addEventListener('load', function(){
 <script src="{$site_url}js/TouchSlide.1.1.js"></script>
 <script type="text/javascript" src="{$site_url}js/jquery.min.js"></script>
 <script src='{$site_url}js/pagenavs_sub3.js'></script>
-<script src="{$site_url}/js/swiper.jquery.min.js"></script>
+<script src="{$site_url}js/swiper.jquery.min.js"></script>
 <script type="text/javascript" src="{$site_url}js/function.js"></script>
 {$footscript}
 </body>

@@ -37,10 +37,10 @@ form.search input.submit{width: 26px;height: 26px;overflow: hidden;background: u
 /*slider*/
 .slider{position:relative; overflow:hidden;height:617px;}
 .ny{height: 352px;overflow: hidden;}
-.slider .banner{position: absolute;left: 50%;margin-left: -960px;}
+.slider .banner{position: absolute;width: 1920px;left: 50%;margin-left: -960px;}
 .slider .bd{ position:relative; z-index:0;}
-.slider .bd li{ height:100%; text-align: center; overflow:hidden;}
-.slider .bd li img{height: 617px;}
+.slider .bd li{ height:100%;height:563px; text-align: center; overflow:hidden;}
+.slider .bd li img{height:563px;}
 .slider .hd{ width:100%;/*position:absolute; z-index:1; bottom:18px; left:0;*/ height:8px; line-height:8px;margin: 23px auto}
 .ny .hd{;width:100%;position:absolute; z-index:1; bottom:18px; left:0; height:8px; line-height:8px;margin: 0}
 .slider .hd ul{ text-align:center;  }
@@ -48,6 +48,7 @@ form.search input.submit{width: 26px;height: 26px;overflow: hidden;background: u
 		background: #cfcac5;overflow:hidden;vertical-align:top; line-height:9999px;}
 .ny .hd ul li{background: #fff}
 .slider .hd ul .on{background: #5d9821;}
+.ny .banner,.ny .bd li,.ny .bd li img{height:352px;}
 
 /*about*/
 .about{width: 1000px;height: 277px;overflow: hidden;margin: 12px auto 46px;}
@@ -151,9 +152,10 @@ form.search input.submit{width: 26px;height: 26px;overflow: hidden;background: u
 .contitle{color: #155e08;font-size: 18px;line-height: 32px;text-indent: 18px;height: 32px;overflow: hidden;background: #eee;border-top: 4px solid #155e08;}
 .contimg{width: 182px;height: auto;overflow: hidden;margin: 13px auto 0;}
 .contimg img{max-width: 100%;height: auto;overflow: hidden;margin: 0 auto;display: block;}
-.leftcont em{color: #155e08;font-size: 18px;line-height: 34px;height: 34px;overflow: hidden;display: block;margin: 8px 15px 0}
-.leftcont span{color: #155e08;font-size: 12px;line-height: 34px;height: 34px;overflow: hidden;display: block;margin: 0 14px }
-.leftcont p{color: #666;font-size: 12px;line-height: 24px;height: auto;overflow: hidden;margin: 0 14px}
+.conts{margin: 8px 15px 0}
+.leftcont em{color: #155e08;font-size: 16px;line-height:30px;height:30px;overflow: hidden;display: block;}
+.leftcont span{color: #155e08;font-size: 12px;line-height: 34px;height: 34px;overflow: hidden;display: block;}
+.leftcont p{color: #666;font-size: 12px;line-height: 24px;height: auto;overflow: hidden;}
 
 .right{width: 760px;height: auto;overflow: hidden;float: right;margin-right: 5px;}
 .local{color: #155e08;font-size: 16px;line-height: 32px;text-indent: 20px;width: 100%;height: 32px;overflow: hidden;border-bottom: 2px solid #e6e6e6;background: url(../images/right_10.png) no-repeat 5px center;}

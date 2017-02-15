@@ -1,0 +1,37 @@
+{
+	"slidepics": {
+		"value": [{
+			"title": "测试图1",
+			"image": "images/banner.jpg",
+			"link": "http://www.baidu.com"
+		},{
+			"title": "测试图2",
+			"image": "images/banner.jpg",
+			"link": "http://www.baidu.com"
+		}, {
+			"title": "测试图3",
+			"image": "images/banner.jpg",
+			"link": "http://www.baidu.com"
+		}],
+		"description": "大轮滚图",
+		"type": "images",
+		"config": {
+			"width": 640,
+			"height": 400
+		}
+	},
+	"pagenavs": {
+		"value": {},
+		"description": "内页顶部栏目分类（当前栏目无子栏目时展示的目标栏目）",
+		"type": "list",
+		"config": {
+			"filter": "list,page",
+			"mustchild": true
+		}
+	},
+	"sclass":{
+		"value":{},
+		"type":"list",
+		"description":"搜索分类"
+	}
+}
