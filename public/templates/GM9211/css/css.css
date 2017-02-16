@@ -68,6 +68,7 @@ header img{max-width: 100%;display: block;margin: 0 auto}
 .box_title{position: relative;height: auto;margin: 0.45rem 0 0.6rem;}
 .box_tit_inner{width: 100%;height: auto}
 .box_tit_inner h2{color: #365415;font-size: 1rem;text-indent: 6%;line-height: 1.25rem;height: 1.25rem;overflow: hidden;/*margin-bottom: 0.6rem;*/background: url(../images/inner_03.png) no-repeat 2% center;position: relative;text-overflow: ellipsis;white-space: nowrap}
+.box_tit_inner h2 p{ width: 70%; float: left; height: 100%; overflow: hidden; }
 .more2{font-size: 0.7rem;color: #fff;text-align: center;text-indent: 0; line-height:1.25rem;width: auto;height: 1.25rem;background: #497657;float: right;margin-left: 5px;margin-right: 5px;padding: 0 5px}
 .more2 i{font-style: normal;display: inline-block;}
 .down{transform: rotate(180deg);-webkit-transform: rotate(180deg);}
