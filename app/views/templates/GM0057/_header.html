@@ -9,7 +9,7 @@
     <div class="swiper_container">
         <div class="swiper-wrapper">
           {foreach item=slidepic from=$global.slidepics}
-            <div class="swiper-slide"><img src="{$slidepic.image}" alt="{$slidepic.title|strip_tags}"></div>
+            <div class="swiper-slide"><a href="{$slidepic.link}"><img src="{$slidepic.image}" alt="{$slidepic.title|strip_tags}"></a></div>
           {/foreach} 
         </div>
     </div>     

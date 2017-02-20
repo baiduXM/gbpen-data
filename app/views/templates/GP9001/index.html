@@ -94,7 +94,7 @@
 
             <div id="slider" class="nivoSlider">
             {foreach item=slidepic from=$index.slidepics}
-                <img src="{$slidepic.image}" height="1050" width="1920" alt="{$slidepic.title|strip_tags}" />
+                <a href="{$slidepic.link}" target="_blank"> <img src="{$slidepic.image}" height="1050" width="1920" alt="{$slidepic.title|strip_tags}" /></a>
 			{/foreach}
             </div>
 		</div>

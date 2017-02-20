@@ -52,8 +52,8 @@
 			{else}
 				<div class="sear_tit">Here are your search keyword "{$search.keyword}", the results of the search {$search.total} article</div>
 				<ul class="sear_list">
-				{foreach name=article item=article from=$list.data}
-					<li><a href="{$article.link}">{$article.title}</a><span>{$article.pubtimestamp|date_format:'%Y-%m-%d'}</span></li>
+				{foreach name=article item=article from=$search.data}
+					<li><a href="{$article.link}">{$article.title}</a><span>{$article.puymd}</span></li>
 				{/foreach}
 				</ul>
 				{include file='./_page.html'}

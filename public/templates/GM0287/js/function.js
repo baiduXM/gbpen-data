@@ -100,6 +100,15 @@ $(document).ready(function() {
             return false;
         };
     });
+
+//限制个数
+    $(".xz").each(function(){   
+        var maxwidth=parseInt($(this).attr("data-limit"));
+        if($(this).text().length>maxwidth){   
+            $(this).text($(this).text().substring(0,maxwidth));    
+            $(this).html($(this).html()+'...');   
+        }    
+    });  
 	
 // 产品展示
 	if ($(".case img").length>1) {

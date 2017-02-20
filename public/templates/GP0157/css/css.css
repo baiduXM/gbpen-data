@@ -9,7 +9,7 @@ a{ color:#626262; text-decoration:none}
 a:hover{ color:#f00} 
 a img{ border:none;}
 ul li{ list-style:none;}
-div,ul,li,h1,h2,h3,h4,h5{ font-size:12px; margin:0; padding:0}
+div,ul,li,h1,h2,h3,h4,h5{ margin:0; padding:0}
 
 .wrapper{width:1003px; margin:0 auto;}
 
@@ -76,7 +76,7 @@ div,ul,li,h1,h2,h3,h4,h5{ font-size:12px; margin:0; padding:0}
 #news .inner img.newsimg {border:solid 2px #d9d9d9;height: 57px;width: auto;display: block;margin: 0 auto 5px;}
 #news .inner ul{ margin-left:6px; }
 #news .inner ul li{ width:100%; height:28px;overflow: hidden; line-height:28px; background:url(../mages/news_li.jpg) no-repeat left center;}
-#news .inner ul li a{ margin-left:5px; }
+#news .inner ul li a{ margin-left:5px; font-size: 12px; }
 #news .inner ul li a:hover{color:#2c5d04;}
 
 #about{ width:419px; height:244px; float:left; display:inline; overflow: hidden; }
@@ -86,7 +86,7 @@ div,ul,li,h1,h2,h3,h4,h5{ font-size:12px; margin:0; padding:0}
 #about .title .t-left span{font-size: 12px;color:#6b9f0c;margin-left: 3px;font-weight: normal;}
 #about .title .t-right{ float:right; }
 #about .title .t-right img{display:block;}
-#about .inner{ width:414px; line-height:25px; margin-top:18px; }
+#about .inner{ width:414px; line-height:25px; margin-top:18px; font-size: 12px; }
 #about .inner .aboutimg{margin-right:5px; float:left; display:table;width: 173px;height: 129px; }
 #about .inner .aboutimg i{display: table-cell;vertical-align: middle;}
 #about .inner .aboutimg img{max-width: 169px;max-height: 125px;border:solid 2px #d9d9d9;}
@@ -97,10 +97,10 @@ div,ul,li,h1,h2,h3,h4,h5{ font-size:12px; margin:0; padding:0}
 #contact .title .t-left{ color:#2c5d04;font-size: 15px;font-weight: bold;padding-left: 10px; font-family: "微软雅黑";}
 #contact .title .t-left i{font-size: 20px;font-weight: normal;}
 #contact .title .t-left span{font-size: 12px;color:#6b9f0c;margin-left: 3px;font-weight: normal;}
-#contact .inner{ width:231px; height:139px; margin-top:15px; line-height:24px; background:url(../images/contact_li.jpg) no-repeat right bottom;}
+#contact .inner{ width:231px; height:139px; margin-top:15px; font-size: 12px; line-height:24px; background:url(../images/contact_li.jpg) no-repeat right bottom;}
 #contact .inner span{ font-weight:bold; font-size:14px;}
 
-#contact .subinner{ width:220px; height:139px; margin-top:15px; line-height:24px; background:url(../images/contact_li.jpg) no-repeat right bottom; margin-left:10px;}
+#contact .subinner{ width:220px;font-size: 12px; height:139px; margin-top:15px; line-height:24px; background:url(../images/contact_li.jpg) no-repeat right bottom; margin-left:10px;}
 #contact .subinner span{ font-weight:bold; font-size:14px;}
 
 .culture{ width:221px; height:61px;}
@@ -122,12 +122,12 @@ div,ul,li,h1,h2,h3,h4,h5{ font-size:12px; margin:0; padding:0}
 #products .inner .bd ul li .pic a{display: table-cell;vertical-align: middle;}
 #products .inner .bd ul li .pic img{ max-width:174px; max-height:120px; border:1px solid #bfbfbf; }
 #products .inner .bd ul li .pic a:hover img{ border-color:#999;  }
-#products .inner .bd ul li .title1{ line-height:24px; width: 100%;text-align: center;}
+#products .inner .bd ul li .title1{ line-height:24px; width: 100%;text-align: center;font-size: 12px;}
 #products .inner .bd ul li .title1 a:hover{color:#2c5d04;}
 
 #footer_bg{ width:100%; height:auto; background:url(../images/footer_bg.jpg) repeat-x bottom; margin-top:16px;}
 #footer{ width:1003px; height:auto; margin:0 auto; text-align:center; margin-top:5px;}
-.Copyright{ margin:6px 0; line-height:24px;}
+.Copyright{ margin:6px 0; line-height:24px; font-size: 12px;}
 .Copyright a:hover{color:#1e7100;}
 
 .sidebar{ width:232px; float:left; display:inline;margin-left:8px;}
@@ -136,7 +136,7 @@ div,ul,li,h1,h2,h3,h4,h5{ font-size:12px; margin:0; padding:0}
 .subnav { width:215px;}
 .subnav  ul{ width:213px; margin:0 auto; margin-top:5px;position: relative; }
 .subnav  ul li.sub1{ width: 100%;position: relative; }
-.subnav  ul li.sub1 a{padding-left:20px; border-bottom:dashed 1px #ccc; background:url(../images/sub1_ico.jpg) no-repeat 5px;display: block;width: 190px;height:30px;line-height: 30px;overflow: hidden;}
+.subnav  ul li.sub1 a{padding-left:20px;font-size: 14px; border-bottom:dashed 1px #ccc; background:url(../images/sub1_ico.jpg) no-repeat 5px;display: block;width: 190px;height:30px;line-height: 30px;overflow: hidden;}
 .subnav  ul li.sub2{padding-left:20px;  line-height:24px;}
 .subnav  ul li.sub2 a{padding-left:20px; border-bottom:dashed 1px #ccc; display: block;width: 170px;height:24px;line-height: 24px;overflow: hidden;}
 .subnav  ul li.sub3{padding-left:20px; line-height:24px;}
@@ -151,7 +151,7 @@ div,ul,li,h1,h2,h3,h4,h5{ font-size:12px; margin:0; padding:0}
 .crumb span a{color:#59b202;}
 .crumb span a:hover{text-decoration: underline;}
 
-.article{ background:url(../images/main_bg.jpg) repeat-y; padding:0 15px; min-height: 400px;height:auto;}
+.article{ background:url(../images/main_bg.jpg) repeat-y; padding:0 15px; min-height: 400px; font-size: 14px;}
 
 .news_list  li{width: 100%;height:30px;line-height:30px;background: url(../images/news_li.jpg) no-repeat left center;text-indent: 10px;border-bottom: 1px dashed #ddd;}
 .news_list  li a{display: inline-block;width: 80%;float: left;font-size: 14px;}

@@ -1,0 +1,132 @@
+{
+	"bottomnavs": {
+        "value": [
+            {
+                "name": "电话", 
+                "image": "icon/2.png", 
+                "data": "0592-2323232", 
+                "type": "tel", 
+                "enable": 1
+            }, 
+            {
+                "name": "短信", 
+                "image": "icon/3.png", 
+                "data": "13489990000", 
+                "type": "sms", 
+                "enable": 1
+            }, 
+            {
+                "name": "咨询", 
+                "image": "icon/5.png", 
+                "data": "0000001@53kf", 
+                "type": "im", 
+                "enable": 1
+            }, 
+            {
+                "name": "地图", 
+                "image": "icon/4.png", 
+                "data": "http://...", 
+                "type": "link", 
+                "enable": 1
+            }, 
+            {
+                "name": "分享", 
+                "image": "icon/8.png", 
+                "data": "", 
+                "type": "share", 
+                "enable": 1
+            }
+        ], 
+        "description": "底部导航", 
+        "type": "navs"
+    }, 
+    "catlist":[
+    	{
+    		"id": 1, 
+            "name": "关于我们", 
+            "p_id": 0, 
+            "url": "#",  
+            "childmenu": null
+		},
+    	{
+    		"id": 2, 
+            "name": "促销活动", 
+            "p_id": 0, 
+            "url": "#",  
+            "childmenu": [
+            	{
+            		"id": 10, 
+		            "name": "二级分类", 
+		            "p_id": 2, 
+		            "url": "#",  
+		            "childmenu": null
+            	},
+            	{
+            		"id": 11, 
+		            "name": "二级分类", 
+		            "p_id": 2, 
+		            "url": "#",  
+		            "childmenu": null
+            	}
+            ]
+		},
+    	{
+    		"id": 3, 
+            "name": "热销商品", 
+            "p_id": 0, 
+            "url": "#",  
+            "childmenu": [
+            	{
+            		"id": 12, 
+		            "name": "二级分类", 
+		            "p_id": 3, 
+		            "url": "#",  
+		            "childmenu": null
+            	},
+            	{
+            		"id": 13, 
+		            "name": "二级分类", 
+		            "p_id": 3, 
+		            "url": "#",  
+		            "childmenu": null
+            	}
+            ]
+		},
+    	{
+    		"id": 4, 
+            "name": "最新产品", 
+            "p_id": 0, 
+            "url": "#",  
+            "childmenu": [
+            	{
+            		"id": 14, 
+		            "name": "二级分类", 
+		            "p_id": 4, 
+		            "url": "#",  
+		            "childmenu": null
+            	},
+            	{
+            		"id": 15, 
+		            "name": "二级分类", 
+		            "p_id": 4, 
+		            "url": "#",  
+		            "childmenu": null
+            	}
+            ]
+		},
+    	{
+    		"id": 5, 
+            "name": "意见反馈", 
+            "p_id": 0, 
+            "url": "#",  
+            "childmenu": null
+		},
+    	{
+    		"id": 6, 
+            "name": "联系我们", 
+            "p_id": 0, 
+            "url": "#",  
+            "childmenu": null
+		}
+    ]
+}
