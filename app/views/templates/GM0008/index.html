@@ -12,6 +12,8 @@
   }
 {/if}
 </script>
+
+
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no,minimal-ui">
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -63,7 +65,7 @@
               {foreach item=slidepic from=$global.image_first}
               <img src="{$slidepic.image}" width="100%">{/foreach}</div>
             <div class="imgbg"></div>
-            <div class="abouts">
+            <!-- <div class="abouts">
               <div class="lieanst">
                 <div class="toplinea"></div>
                 <div class="toplinear"></div>
@@ -73,7 +75,7 @@
                 <div class="toplinea"></div>
                 <div class="toplinear"></div>
               </div>
-            </div>
+            </div> -->
             <div class="menulist">
               {foreach item=nav_list from=$navs}
               {* 仅输出类型为 5内容单页 和 外链的栏目（包括5留言板、7微信、8直达号功能） *}

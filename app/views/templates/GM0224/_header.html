@@ -18,17 +18,14 @@
         </div>
 </nav>
 <!-- banner -->
- <div class="banner">    
-     <div id="slideBox" class="slideBox">
-        <div class="hd">
-             <ul style=""></ul>
-        </div>
-        <div class="bd">
-            <ul>
+ <div class="banner">
+      <div class="swiper-container swiper-banner">
+          <ul class="swiper-wrapper banner-img">
               {foreach item=slidepic from=$global.slidepics}
-                <li><a class="pic" href="{$slidepic.link}"><img src="{$slidepic.image}"/></a></li>
+                <li class="swiper-slide"><a class="pic" href="{$slidepic.link}"><img src="{$slidepic.image}"/></a></li>
               {/foreach}
-            </ul>
-        </div>         
-     </div>
+          </ul>
+          <!-- Add Pagination -->
+          <div class="swiper-dote"><ul></ul></div>
+      </div>
  </div>

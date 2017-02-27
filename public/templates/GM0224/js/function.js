@@ -4,41 +4,26 @@ $(document).ready(function(){
 	//返回顶部
     $(".back-top").click(function(){$("#quickbar-wrap-body").animate({scrollTop :0}, 800)})
    
-
+    //banner滚动
+    $(".swiper-banner").swiper({
+        pagination: '.swiper-dote ul',
+        autoplay : 2500,
+        paginationClickable :true,
+        paginationElement : 'li',
+    }) 
    
-	//banner滚动
-	TouchSlide({
-		slideCell:"#slideBox",
-        titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
-        mainCell:".bd ul", 
-        effect:"leftLoop", 
-        prevCell:".slide_left",
-        nextCell:".slide_right",
-        autoPage:true,//自动分页
-        autoPlay:true,
-        interTime:10000,//自动播放)
-        pnLoop:"ture" // 前后按钮不循环
-
-    });
 	$(".more2").click(function(){
 
 		$(".hide-class").slideToggle()	
 		$(".more2 i").toggleClass("down");
 	})
-	// 产品展示    
-	TouchSlide({
-		slideCell:"#picScroll",
-        titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
-        mainCell:".bd ul", 
-        effect:"leftLoop", 
-        prevCell:".slide_left",
-        nextCell:".slide_right",
-        autoPage:true,//自动分页
-        autoPlay:true,
-        interTime:6000,//自动播放)
-        pnLoop:"ture" // 前后按钮不循环
-
-    });
+	//new滚动
+    $(".swiper-new").swiper({
+        autoplay : 2500,
+        paginationClickable :true,
+        prevButton:'.swiper-button-prev',
+        nextButton:'.swiper-button-next'
+    }) 
     // prodt滚动
     TouchSlide({
         slideCell:"#slideBox2",
