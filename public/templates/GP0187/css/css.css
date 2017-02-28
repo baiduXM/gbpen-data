@@ -1,6 +1,8 @@
-body{ color:#000; font-family:Microsoft Yahei,Arial, Helvetica, sans-serif;background:url(../images/bg.jpg) repeat-y center;}
-body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,input,textarea,div{margin:0;padding:0; list-style:none; line-height:24px; font-size:12px; font-weight:normal}
-body,div,ul,li,dl,dt,dd{ font-size:12px;}
+body{ color:#000; font-family:Microsoft Yahei,Arial, Helvetica, sans-serif;background:url(../images/bg.jpg) repeat-y center;font-size:12px;line-height:24px;font-weight:normal }
+/*body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,input,textarea,div{margin:0;padding:0; list-style:none; line-height:24px; font-size:12px; font-weight:normal}
+body,div,ul,li,dl,dt,dd{ font-size:12px;}*/
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ol,pre,form,input,textarea,div{margin:0;padding:0; list-style:none; line-height:24px; font-size:12px; font-weight:normal}
+body,div,dl,dt,dd{ font-size:12px;}
 .clearfix:after { content:'\20'; display:block; height:0; clear:both; }
 .clearfix { *zoom:1; font-size:0px;}
 a{ color:#000; text-decoration:none}
@@ -41,7 +43,7 @@ strong{display: block;margin: 0 auto;overflow: hidden;text-overflow: ellipsis;wh
 .link{ padding:10px;}
 
 #banner{ width:1002px; margin:auto; height:350px; overflow:hidden}
-
+#banner .hd{display: none;}
 #nav{ width:1002px; margin:auto; background:url(../images/nav_bg.jpg) top center repeat-x; height:41px; border:1px solid #fff}
 
 
@@ -101,7 +103,7 @@ width:100%; position:relative; z-index:100; margin-top:0px; overflow:hidden }
 
 
 
-.category ul li .firsta{ text-align:left; height:27px; line-height:27px; text-indent:28px; background:url(../images/icon.jpg) no-repeat 15px 9px; border-bottom:solid 1px #ccc; width:180px; margin:auto; display:block; overflow:hidden}
+.category ul li .firsta{font-size: 12px; text-align:left; height:27px; line-height:27px; text-indent:28px; background:url(../images/icon.jpg) no-repeat 15px 9px; border-bottom:solid 1px #ccc; width:180px; margin:auto; display:block; overflow:hidden}
 .category ul li a.firsta{ color:#333333;}
 .category ul li a:hover.firsta { color:#FF0000}
 

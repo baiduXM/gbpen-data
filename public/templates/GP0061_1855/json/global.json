@@ -1,0 +1,123 @@
+{
+	"top_tel": {
+		"value": "4000-127-808",
+		"description": "头部电话号码",
+		"type": "text"
+	},
+	"slidepics": {
+		"value": [{
+			"title": "banner1",
+			"image": "images/banner.jpg",
+			"link": "article/1.html",
+			"description": "大图轮播1"
+		}, {
+			"title": "banner2",
+			"image": "images/banner.jpg",
+			"link": "http://www.baidu.com",
+			"description": "大图轮播2"
+		},{
+			"title": "banner3",
+			"image": "images/banner.jpg",
+			"link": "http://www.baidu.com",
+			"description": "大图轮播3"
+		}],
+		"description": "多图轮播",
+		"type": "images",
+		"config": {
+			"width": 1920,
+			"height": 500
+		}
+	},
+	"links": {
+		"value": [{
+			"title": "百度",
+			"image": "images/f1.jpg",
+			"link": "http://www.baidu.com"
+		}, {
+			"title": "易尔通",
+			"image": "images/f2.jpg",
+			"link": "http://www.baidu.com"
+		}, {
+			"title": "谷歌",
+			"image": "images/f3.jpg",
+			"link": "http://www.baidu.com"
+		}, {
+			"title": "腾讯",
+			"image": "images/f4.jpg",
+			"link": "http://www.baidu.com"
+		}, {
+			"title": "小米",
+			"image": "images/f5.jpg",
+			"link": "http://www.baidu.com"
+		}, {
+			"title": "易尔通",
+			"image": "images/f2.jpg",
+			"link": "http://www.baidu.com"
+		}, {
+			"title": "谷歌",
+			"image": "images/f3.jpg",
+			"link": "http://www.baidu.com"
+		}, {
+			"title": "腾讯",
+			"image": "images/f4.jpg",
+			"link": "http://www.baidu.com"
+		}, {
+			"title": "小米",
+			"image": "images/f5.jpg",
+			"link": "http://www.baidu.com"
+		}, {
+			"title": "小米",
+			"image": "images/f5.jpg",
+			"link": "http://www.baidu.com"
+		}],
+		"description": "友情链接",
+		"type": "images",
+		"config": {
+			"width": 104,
+			"height": 45
+		}
+	},
+	"img_bg6": {
+		"value": {
+			"title": "大背景图6",
+			"image": "images/bannerbg.png",
+			"link": ""
+		},
+		"description": "banner下方图片",
+		"type": "image",
+		"config": {
+			"height": 106,
+			"width":710
+		}
+	},
+    "second_navs1":{
+    	"value":{},
+    	"description":"第二导航（底部）第一个分类",
+		"type": "list"	
+    },
+    "second_navs2":{
+    	"value":{},
+    	"description":"第二导航（底部）第二个分类",
+		"type": "list"	
+    },
+    "second_navs3":{
+    	"value":{},
+    	"description":"第二导航（底部）第三个分类",
+		"type": "list"	
+    },
+    "second_navs4":{
+    	"value":{},
+    	"description":"第二导航（底部）第四个分类",
+		"type": "list"	
+    },
+    "second_navs5":{
+    	"value":{},
+    	"description":"第二导航（底部）第五个分类",
+		"type": "list"	
+    },
+    "second_navs6":{
+    	"value":{},
+    	"description":"第二导航（底部）第六个分类",
+		"type": "list"	
+    }
+}
