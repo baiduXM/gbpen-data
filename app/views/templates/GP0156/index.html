@@ -12,6 +12,7 @@
 
     {/if}
     </script>
+    
 <meta http-equiv="x-ua-compatible" content="ie=8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="{$keywords}" />
@@ -163,16 +164,16 @@
 			<h2 class="name"><a href="{$global.contact.link}">{$global.contact.en_name}</a></h2>
 			<h3 class="name"><a href="{$global.contact.link}">{$global.contact.name}</a></h3>
 		</div>
-		<div class="online-cont">
+		<div class="online-cont" id="div_area0">
 			<div class="online">
-				<div class="tit"><a href="">{$index.feedback.name}</a></div>
-				<form action="{$index.feedback.posturl}">
+				<div class="tit"><a data-type="title">{$index.feedback.name}</a></div>
+				<form method="post">
 					<div id="text">
-						<input type="text" value="姓名" name="name" class="text">
-						<input type="text" value="电话" name="telephone" class="text">
-						<input type="text" value="邮箱" name="email" class="text">
+						<input type="text" value="姓名" name="name" class="text" data-type="inset">
+						<input type="text" value="电话" name="telephone" class="text" data-type="inset">
+						<input type="text" value="邮箱" name="email" class="text" data-type="inset">
 					</div>
-					<textarea name="content" id="" placeholder="请输入您的留言内容"></textarea>
+					<textarea name="content" id="" data-type="inset" placeholder="请输入您的留言内容"></textarea>
 					<input type="submit" value="提交" class="submit">
 				</form>
 			</div>
