@@ -79,6 +79,15 @@
           <img src="{$index.list3.image}" />
 		  </div>
         </a>
+<div class="xq">
+          <ul>
+            {foreach item=article from=$index.list3.data}
+            <li>
+              <a href="{$article.link}">{$article.title}</a>
+            </li>
+            {/foreach}
+          </ul>
+        </div>
       </div>
     </div>
   </div>

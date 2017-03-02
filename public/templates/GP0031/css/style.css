@@ -32,15 +32,15 @@ i,em{font-style:normal;}
 		.header{height:auto; overflow: hidden; width: 1000px; position: absolute; left: 50%; margin-left: -500px; z-index: 1; top:0; }
 		.logo{height:98px; overflow: hidden; }
 		.logo img{display: block; height: 98px; overflow: hidden;}
-		.mune{height:419px;background:rgba(10,21,28,.9); width:178px;padding: 37px 0 ; position: relative;}
+		.mune{height:419px;background: url(../images/bg.png); width:178px;padding: 37px 0 ; position: relative;}
 		.nav {padding:0;margin: 0; width: 100%;}
 	 	.nav .nLi{line-height: 42px;}
 		.nav .nLi  a{ display:block;text-align:center; color:#cad2d8; font:16px/42px "微软雅黑";   }
-		.nav .sub{ display:none;width:124px; background:rgba(198,121,21,.7); height:419px;padding: 37px 0 ;position: absolute; left:178px; top: 0; }
+		.nav .sub{ display:none;width:124px; background: url(../images/bg1.png); height:419px;padding: 37px 0 ;position: absolute; left:178px; top: 0; }
 		.nav .sub li{ zoom:1; overflow:hidden; line-height:24px; padding:0 15px;}
 		.nav .sub li a{ display:block; background: url(../images/re.png) no-repeat left center; overflow:hidden;  font-size: 14px; color:#ffe8cb; }
 		.nav .sub li a:hover{ background: none; }
-		.nav .nLi  a:hover , .nav .current a {color:#ffffff;background:rgba(198,121,21,1);}
+		.nav .nLi  a:hover , .nav .current a {color:#ffffff;background:#c67915;}
 		
 		.telphone{ width: 280px;padding:10px; height: 64px; background: #603d15; color: #b67c3b; font-size: 12px;}
 		.telphone span{background: url(../images/tel.png) no-repeat left; color: #ffe157; font: 26px/28px "微软雅黑"; display: block;padding-left: 35px; }
