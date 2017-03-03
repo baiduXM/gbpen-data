@@ -41,14 +41,14 @@
                     <ul>
                         {foreach name=slidepics item=slidepic from=$global.slidepics}
                         <li><a href="{$slidepic.link}"><img src="{$slidepic.image}"></a></li>
-                        {/foreach} 
+                        {/foreach}
                     </ul>
                 </div>
                 <div class="btns">
                     <a class="prev" href="javascript:void(0)"></a>
                     <a class="next" href="javascript:void(0)"></a>
                 </div>
-            </div>	
+            </div>
         </div>
 
         <div class="nav">
@@ -69,7 +69,7 @@
                 {$num=$num+1}
                 {if $num==6} {$num=1} {/if}
                 {if $nav@index eq 6}{break}{/if}
-                {/foreach}		
+                {/foreach}
             </ul>
         </div>
 
@@ -119,16 +119,26 @@
                             </div>
                         </div>
                         <div class="book">
-                            <h3><img src="{$site_url}images/i2.png"/>{$index.book.name}</h3>
-                            <!--表单嵌入-->
+<!--                            <h3 ><img src="{$site_url}images/i2.png"/>{$index.book.name}</h3>
+                            表单嵌入
                             <div id="div_area0" class="form_css0">
                                 <form class="form_css0">
                                     <p class="kz" data-limit="58">{$index.word}</p>
                                     <input type="text" placeholder="学生姓名" class="short short1" />
                                     <input type="text" placeholder="年龄" class="short"/>
                                     <input type="text" placeholder="联系电话" class="long"/>
-                                    <!-- <input type="submit" value="立即预约"/> -->
+                                     <input type="submit" value="立即预约"/>
                                     <a href="{$index.book.link}">立即预约</a>
+                                </form>
+                            </div>-->
+                            <div id="div_area0" class="form_css0">
+                                <h3><img src="{$site_url}images/i2.png"/><span data-type="title"></span></h3>
+                                <form method="post" action="">
+                                    <p class="kz" data-limit="58" data-type="description">{$index.word}</p>
+                                    <input type="text" placeholder="学生姓名" class="short short1" data-type="inset"/>
+                                    <input type="text" placeholder="年龄" class="short" data-type="inset"/>
+                                    <input type="text" placeholder="联系电话" class="long" data-type="inset"/>
+                                    <input type="submit" value="立即预约"/>
                                 </form>
                             </div>
                             <!--表单嵌入end-->
@@ -143,7 +153,7 @@
                     <a href="{$index.class.link}"><h1>{$index.class.name}</h1></a>
                     <div class="box1">
                         <div class="box box_l">
-                            <div class="bigimg_div">				
+                            <div class="bigimg_div">
                                 <div id="play" class="focusBox">
                                     <ul class="img_ul ">
                                         {foreach name=class item=class from=$index.class.data}
@@ -191,7 +201,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="main_div">
+                <div class="main_div" >
                     <a href="{$index.pro.link}"><h1>{$index.pro.name}</h1></a>
                     <div class="box">
                         <ul class="class_list">
