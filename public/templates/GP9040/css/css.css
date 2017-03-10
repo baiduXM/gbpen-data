@@ -203,7 +203,7 @@ ul.tab li{width: 80px;height: 30px;line-height: 30px;margin-bottom: 5px;color: #
 .first{/*padding: 10px 0 10px 28px;*/}
 .first>li{margin-bottom: 8px;}
 .first>li>a{display: block;border-bottom: 1px solid #d0d0d0;font-size: 14px;color: #0073bd;}
-.first>li>a>span{display: block;color: #636363;height:28px;line-height: 28px;padding-left:45px;font-size: 14px;background: url(../images/arrow.png) 178px center no-repeat;border-radius: 4px;-webkit-border-radius: 4px;}
+.first>li>a>span{display: block;color: #636363;height:28px;line-height: 28px;padding-right:30px;padding-left: 8px; overflow: hidden; font-size: 14px;background: url(../images/arrow.png) 178px center no-repeat;border-radius: 4px;-webkit-border-radius: 4px;}
 .first>li>a:hover span{color: #fff;background: #426db1 url(../images/arrowhover.png) 178px center no-repeat;margin-bottom: 8px;}
 .second{margin-left: 30px;display: none;}
 .second>li>a{display: block;border-bottom: 1px dashed #ccc;line-height: 28px;color: #0073bd;background: url(../images/sarrow.png) left center no-repeat;padding-left: 15px;}

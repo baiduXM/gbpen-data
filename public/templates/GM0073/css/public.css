@@ -144,7 +144,7 @@ a{ color:#333}
 /*list-text*/
 .list_text ul li,.insub_text ul li { padding-bottom:20px;  margin-bottom:20px; border-bottom:dashed 1px; border-bottom-color:rgba(0,0,0,0.2)}
 .list_text ul li .text_title1,.insub_text ul li .in_title{ font-size:1.2em;  line-height:26px; margin-top:5px;width:100%; display:block; white-space:nowrap; text-overflow:ellipsis; overflow:hidden;  height:26px; background:url(../images/sub2_ico.jpg) no-repeat 5px; padding-left:20px;}
-.list_text ul li .text_data1,.insub_text ul li .in_data{ font-size:12px; line-height:20px; opacity:0.3;filter:Alpha(opacity=30);padding-left:20px; background:url(../images/resizeApi.png) no-repeat  100px;background-size:auto 60%;}
+.list_text ul li .text_data1,.insub_text ul li .in_data{ font-size:12px; line-height:20px; opacity:0.3;filter:Alpha(opacity=30);padding-left:20px; }
 .list_text ul li .text_des1,.insub_text ul li .in_des{ line-height:20px; height:40px;padding-left:20px;opacity:0.5;filter:Alpha(opacity=50); overflow:hidden}
 @media screen and (min-width: 320px) and (max-width: 480px){
 .list_text ul li ,.insub_text ul li{ padding-bottom:10px; margin-bottom:10px;}	

@@ -32,11 +32,6 @@ jQuery('.anli .picMarquee').slide({mainCell:"ul.picList",autoPlay:true,effect:"l
 	 
  	var ul=$(".current").children('.clearfix')
  	 var a=$(".current").children('a')
- 	if (ul.length>0) {
-        a.attr("href","javascript:void(0)")
- 		a.click(function() {
- 		$(this).next().slideToggle()
- 	});
- 	};
+ 	
  });
 

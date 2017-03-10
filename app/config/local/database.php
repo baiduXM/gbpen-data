@@ -57,7 +57,7 @@ return array(
 			'host'      => '182.61.47.52',
 			'database'  => 'unify_db',
 			'username'  => 'dingchao',
-			'password'  => 'pengdingchao',
+			'password'  => '12t21t',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => 'up_',

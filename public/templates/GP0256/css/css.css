@@ -16,7 +16,7 @@ body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, fo
 ol,p,dl,li{list-style:none;}
 
 
-.wrap{ width:100%; height: auto;overflow:hidden;  position: relative; min-width:1000px;background: url(../images/footbg.png) center bottom no-repeat;font-family: Microsoft YaHei;}
+.wrap{ width:100%; height: auto;overflow:hidden;  position: relative; min-width:1000px;/*background: url(../images/footbg.png) center bottom no-repeat;*/font-family: Microsoft YaHei;}
 .public{ width:1200px; height:auto; overflow:hidden; margin:0px auto; position:relative;}/*公用标签*/
 .fl{ float:left; display:inline;}/*左浮动标签*/
 .fr{ float:right; display:inline;}/*右浮动标签*/

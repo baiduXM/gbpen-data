@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+
 <script type="text/javascript">
 		// 跳转PC页面
 		{if $site_another_url}
@@ -69,12 +71,12 @@
         </div>
         <div class="boxmain relate">
         	<h1 class="boxmain-top relate-top">相关产品</h1>
-            <div class="relate-m" style="height:116px; overflow:hidden;">
+            <div class="relate-m" style="overflow:hidden;">
             	<div class="swiper-container thumbs-cotnainer">
 		<div class="swiper-wrapper">
 		{foreach item=article from=$related}
 			<div class="swiper-slide">
-				<div class="related-list1"><a href="{$article.link}"><img src="{$article.image}" width="176" height="176"><dt>{$article.title}</dt></a></div>
+				<div class="related-list1"><a href="{$article.link}"><img src="{$article.image}"><dt>{$article.title}</dt></a></div>
 			</div>
 			{/foreach}
             
