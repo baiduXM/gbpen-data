@@ -183,7 +183,7 @@ ul.tab li{width: 80px;height: 30px;line-height: 30px;margin-bottom: 5px;color: #
 .on h3 a{color: #fff !important;}
 /*.menu>ul>li>h3>a:hover{background: url(../images/hoverbg.png) repeat-x;}*/
 .sub{font-size:12px;  display:none; width:107px; position:absolute;background:#426db1;/* left:18px; */line-height:26px;z-index: 100;top: 45px;left: 18px;  }
-.sub li{ zoom:1;text-align: center;height:26px;}
+.sub li{ zoom:1;text-align: center;height:26px; overflow: hidden;}
 .sub a{ display:block;color: #f4f4f4;background: #426e9d; }
 .sub a:hover{ background:#2e549b;  }
 

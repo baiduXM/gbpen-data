@@ -29,7 +29,7 @@ figure{line-height: 0;}
 .nav .nLi h3{ float:left;width: 100%;}
 .nav .nLi h3 a{ overflow: hidden;display:block;color:#2e2e2e;width: 100%;height:40px; text-align:center;font:bold 14px/40px "宋体"; margin: 6px 0;background: url(../images/navr_15.png) no-repeat right;}
 .nav .nLi h3 a:hover,.nav .nLi.on h3 a,.nav .nLi.current h3 a{color: #b91c22;border-radius:10px;}
-.nav .sub{background:rgba(250,250,250,0.8);padding: 20px 0; display:none;left:0; top:47px;  position:absolute;line-height:26px;width: 100%;border-radius: 10px; z-index: 9999 }
+.nav .sub{background:url(../images/nav_bg.png);padding: 20px 0; display:none;left:0; top:47px;  position:absolute;line-height:26px;width: 100%;border-radius: 10px; z-index: 9999 }
 .nav .sub li{ zoom:1; }
 .nav .sub a{ display:block;text-align:center;line-height:28px; height:28px; font-size:14px; overflow: hidden;color: #4b5c66;}
 .nav .sub a:hover{color: #b91c22; }

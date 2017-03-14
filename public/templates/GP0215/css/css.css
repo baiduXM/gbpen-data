@@ -31,10 +31,11 @@ strong{display: block;margin: 0 auto;overflow: hidden;text-overflow: ellipsis;wh
 #header .search_btn{ background:#2db023; border:none; width:53px; height:31px; float:left;left:0px; top:0px; color:#FFF; font-size:16px; line-height:28px; }
 
 #nav_bg{ width:100%; background:url(../images/nav_bg.jpg) repeat-x; height:48px;}
-#nav ul li{ float:left; text-align:center}
+#nav ul li{ float:left; text-align:center; position:relative;height:48px;}
 #nav ul li p{ height:48px; overflow:hidden; line-height:48px;}
 #nav ul li a{ color:#000000; padding:0 5px; display:block; font-size:14px; line-height:48px; }
 #nav ul li a:hover{ background:#2db023; height:48px; display:block; color:#FFF;}
+#nav ul li ul.sub{ position:absolute;left:0;top:48px; z-index:10000; width:100%}
 
 #nav ul li .cc{background:#2db023;height:40px; line-height:40px;display:none; text-align:center; 
 width:100%; position:relative; z-index:100; margin-top:0px; }

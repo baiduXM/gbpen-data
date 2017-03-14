@@ -1,0 +1,55 @@
+
+<header>
+	<section class="headtop">        		
+<div class="header">
+			<div class="head-l">
+				<div class="logo"><a href="{$site_url}"><img src="{$logo}"  alt="{$title}"/></a></div>
+			</div>
+			<div class="head-r">
+				<div class="tel">{$contact.telephone} </div>
+				<div class="search">    
+                <form action="{$search_action}" method="GET">
+    		<input type="text" name="s" value="" class="text_01" />
+    </form>
+<a href="###"></a></div>
+			</div>
+		</div>
+           
+<div class="menu main_nav-percent">       
+<ul id="nav" class="nav clearfix">
+			<li class="nLi on" style="width:{100/($navs|count+1)}%">
+				<h3><a href="{$site_url}">首页</a></h3>
+			</li>
+            {foreach name=navs item=nav from=$navs}
+			<li  class="fl{if $nav.current} current{/if} nLi" style="width:{100/($navs|count+1)}%">
+					<h3><a href="{$nav.link}">{$nav.name}</a></h3>
+				<ul class="sub clearfix">
+                {if $nav.childmenu}
+					{foreach key=key item=nav_list from=$nav.childmenu}
+					<li class="{if $nav.current}current{/if}"><a href="{$nav_list.link}">{$nav_list.name}</a></li>
+					{/foreach}
+                    {/if}
+				</ul>
+			</li>
+          {/foreach}
+                                          
+		</ul>
+             
+       </div>        
+        
+	<div class="banner">
+		<ul class="pics">
+        {foreach name=slidepics item=slidepicss from=$global.slidepics}
+		<li><a href="{$slidepicss.link}" target="_blank"><img src="{$slidepicss.image}" alt="{$slidepicss.title}" /></a></li>
+           {/foreach}   
+		</ul>
+		<a class="prev" href="javascript:void(0)"></a>
+		<a class="next" href="javascript:void(0)"></a>
+	</div>             
+              
+ </section>
+ </header>
+ 
+
+
+

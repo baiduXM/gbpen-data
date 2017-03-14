@@ -39,7 +39,8 @@ function adaption(selector,li_w,li_h){
 	}
 /*首页产品列表图片自适应*/
  adaption("#case .inner ul li .case_img",240,240)
- 
+  adaption("#case1 .inner ul li .case_img",240,240)
+ adaption("#case2 .inner ul li .case_img",240,240)
 
 	 
 /*图文内页图片自适应*/	 
@@ -135,5 +136,19 @@ $(document).ready(function() {
 			auto: 3000,
 			speed: 1000
 		}).css({visibility:"visible"});
+                $('#prizes1 .photos-content.enable').jCarouselLite({
+			btnPrev: '#prizes a.photos-prev',
+			btnNext: '#prizes a.photos-next',
+			visible: 4,
+			auto: 3000,
+			speed: 1000
+		}).css({visibility:"visible"});
 
+                $('#prizes2 .photos-content.enable').jCarouselLite({
+			btnPrev: '#prizes a.photos-prev',
+			btnNext: '#prizes a.photos-next',
+			visible: 4,
+			auto: 3000,
+			speed: 1000
+		}).css({visibility:"visible"});
 });

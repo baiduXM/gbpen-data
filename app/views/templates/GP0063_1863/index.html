@@ -105,7 +105,60 @@
 
 </div>
 </div>
+<div class="case_bg">
+<div id="case1" class="wrapper">
+<div class="title"><span><a href="{$index.factory_view.link}"><img src="{$site_url}images/mo2.jpg" width="83" height="35" /></a></span><b>{$index.factory_view.name}</b>{$index.factory_view.en_name}</div>
 
+<div class="inner">
+<ul class="clearfix">
+
+<div id="prizes1">
+ <div class="photos">                        
+    <div class="photos-content {if $index.factory_view.data|count>4} enable{/if}" >
+        <ul>           
+ {foreach name=factory_view item=factory_view from=$index.factory_view.data}
+<li><div class="case_img"><img src="{$factory_view.image}"/></div><a href="{$factory_view.link}">{$factory_view.title}</a></li>
+ {if $factory_view@index+1 == 11}{break}{/if}
+{/foreach}
+                                              </ul>
+                              
+                                        </div>                
+                                    </div>
+                                </div>
+
+</ul>
+
+</div>
+
+</div>
+</div>
+<div class="case_bg">
+<div id="case2" class="wrapper">
+<div class="title"><span><a href="{$index.factory_aptitude.link}"><img src="{$site_url}images/mo2.jpg" width="83" height="35" /></a></span><b>{$index.factory_aptitude.name}</b>{$index.factory_aptitude.en_name}</div>
+
+<div class="inner">
+<ul class="clearfix">
+
+<div id="prizes2">
+ <div class="photos">                        
+    <div class="photos-content {if $index.factory_aptitude.data|count>4} enable{/if}" >
+        <ul>           
+ {foreach name=factory_aptitude item=factory_aptitude from=$index.factory_aptitude.data}
+<li><div class="case_img"><img src="{$factory_aptitude.image}"/></div><a href="{$factory_aptitude.link}">{$factory_aptitude.title}</a></li>
+ {if $factory_aptitude@index+1 == 11}{break}{/if}
+{/foreach}
+                                              </ul>
+                              
+                                        </div>                
+                                    </div>
+                                </div>
+
+</ul>
+
+</div>
+
+</div>
+</div>
 
 <div id="links" class="wrapper">
 <div class="title">友情链接</div>
