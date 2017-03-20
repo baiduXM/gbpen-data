@@ -11,11 +11,10 @@ body{background: #ffffff;}
 .body{position: relative; width:100%; height:100%; min-width:320px; max-width:640px; overflow:hidden;}
 .htop{width: 100%;height:auto;overflow: hidden;}
 /*header*/
-.head{width: 100%;height: 2.95rem;z-index: 2;position: relative;border-top: 2px solid #d63333;}
-.head .logo{width: 8.3rem; height:2.95rem;position: absolute;top: 0;left: 50%;transform:translateX(-50%);display: table-cell;text-align: center;vertical-align: middle;z-index: 3;}
+.head{width: 100%;height: 2.95rem;z-index: 2;position: relative;border-top: 2px solid #d63333; position:relative}
+.head .logo{}
 .head .logo img{max-width: 100%;max-height: 100%;}
-.head .iconfont{font-size:1.1rem;color: #0f0f0f;font-style: normal;padding: 0 0.5rem;line-height: 2.8rem;float: right;z-index: 3;position: relative;}
-.head .top-bg{width: 100%;height: 1.1rem;background: #ffffff; box-shadow: 0px 0px 10px #d1d1d1;position: absolute;bottom: 0;left: 0;z-index: 2;}
+.head .iconfont{font-size:1.1rem;color: #0f0f0f;font-style: normal;padding: 0 0.5rem;line-height: 2.8rem;float: right;z-index: 3;position: relative; position:absolute; top:30%; right:5%; z-index:1000}
 /*banner*/
 .banner{position: relative;width: 100%;height: auto;overflow: hidden;}
 .swiper-banner{position: relative;z-index: 1;width:16rem;height:auto;overflow: hidden;}

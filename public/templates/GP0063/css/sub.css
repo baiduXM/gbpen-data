@@ -12,6 +12,7 @@ strong{display: block;margin: 0 auto;overflow: hidden;text-overflow: ellipsis;wh
 
 .list_imagetext ul li .text_box .text_title span.out1{ background:url(../images/news.gif) no-repeat; width:30px; height:15px; float:inherit; display:inline-block; margin-left:10px; }
 .list_image ul li {
+	text-align: center;
 	position:relative;
 	overflow:hidden;
 	margin:0 1%;
@@ -49,6 +50,7 @@ strong{display: block;margin: 0 auto;overflow: hidden;text-overflow: ellipsis;wh
 	
 	height: 100%;
 }
+.clearfix ul li p{width: 100%;height: 24px;overflow: hidden;}
 
 .list_imagetext ul li { padding:0 2% 15px 0; margin-bottom:20px; border-bottom:dashed 1px #ccc; }
 .list_imagetext ul li .text_box{ display: inline-block;vertical-align:top;}

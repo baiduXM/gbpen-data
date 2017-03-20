@@ -1,6 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+    <!-- 实时预览调试代码，模板开发完成后删除 -->
+    
+    <!-- 调试代码 End -->
     <script type="text/javascript">
     // Ìø×ªÊÖ»úÒ³Ãæ
     {if $site_another_url}
@@ -130,8 +133,8 @@
                     {$num=$article@index+1}
                     <li><a href="{$article.link}">
                         <i>{$index.$num}</i>
-                        <h6 class="opacity">{$article.name}</h6>
-                        <p class="opacity">{$article.description}</p>
+                        <h6>{$article.name}</h6>
+                        <p>{$article.description}</p>
                     </a></li>
                     {if $num eq 4}{break}{/if}
                 {/foreach}

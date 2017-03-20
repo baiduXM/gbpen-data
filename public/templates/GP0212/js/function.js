@@ -29,7 +29,7 @@ window.onload=function(){
  
  
  
- 
+ jQuery(".picScroll-left").slide({mainCell:".bd ul",autoPlay:true,effect:"leftMarquee",vis:4,interTime:50});
 
 function adaption(selector,li_w,li_h){
 		$(selector).each(function(i){

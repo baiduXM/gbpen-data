@@ -7,8 +7,7 @@
 		"description":"首页侧边栏导航",
 		"value":{},
 		"type":"list"
-	}
-		,
+	},
 	
 	
 	
@@ -32,12 +31,6 @@
 		
 	},	
 	
-
-
-
-		
-
-	
 	    "pro":{
 		"description": "产品中心",
 		"value": {},
@@ -50,7 +43,20 @@
 		
 		
 		
-		
+		"case":{
+		"description": "工程案例",
+		"value": {},
+		"type": "list",
+		"config": {
+			"width":240,
+			"height":240
+		}
+	},
+	"caseOff":{
+		"description":"首页是否显示图片轮播,默认1,开启",
+		"value":"1",
+		"type":"text"
+	},
 		
 	
 		"news":{

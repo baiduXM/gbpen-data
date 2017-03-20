@@ -11,10 +11,10 @@
       </div>
      <div class="navs_bg"> 
        <div class="navs">
-           <ul>
+           <ul class="menus">
               {$limit=9}
               {if $limit gt $navs|count}{$limit=$navs|count}{/if}
-              <li  style="width:{100/($limit+1)}%"><a class="current" href="{$site_url}">网站首页</a></li>
+              <li  style="width:{100/($limit+1)}%"><a href="{$site_url}">网站首页</a></li>
               {foreach item=nav from=$navs}
                 <li style="width:{100/($limit+1)}%" class="{if $nav.current} current{/if}">
                   <a href="{$nav.link}">{$nav.name}</a>

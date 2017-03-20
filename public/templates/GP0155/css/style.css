@@ -30,7 +30,7 @@ ol,p,dl,li{list-style:none;}
 #header .navs ul li{height: 50px; width: 142px;text-align: center;line-height: 50px; float: left;background: url(../images/style0.jpg)right center no-repeat ; }
 #header .navs ul li:last-child{ background: none;}
 #header .navs ul li a{width:100%;height: 50px; font-size:14px;color: #ffffff;display: block;overflow: hidden;}
-#header .navs ul li a.current{background: #0c47a0;}
+#header .navs ul li a.current,#header .navs ul li a.in{background: #0c47a0;}
 #header .navs ul li a:hover{background: #0c47a0;}
 #header .navs ul li .erji{ height:auto; background:#145776; z-index:2; display:none;}
 #header .navs ul li .erji li{width: 100%;height: 30px;line-height: 30px; float:inherit;border-bottom: 1px solid #ffffff;background: #145776; padding: 0; }

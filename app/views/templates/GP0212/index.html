@@ -41,17 +41,40 @@
         </ul>
       </div>
     </div>
-    <div class="products clearfix">
+    <div class="products">
       <div class="bd" style="width:715px; height:450px; overflow:hidden">
         <div class="ulWrap"> {foreach item=pro from=$index.pro.data}
           <li><a href="{$pro.link}">
             <div class="pic"><img src="{$pro.image}"  /></div>
             <div class="text">{$pro.title}</div>
             </a></li>
-          {/foreach} </div>
+          {/foreach} 
+          </div>
       </div>
     </div>
-  </div>
+    </div>
+    {if $index.caseOff eq 1}
+    <div class="probox">
+      <h2 class="content_title"><em><b>{$index.pro_list.en_name}</b><br/><span>{$index.pro_list.name}</span></em></h2>
+      <div class="probg"></div>
+        <div class="picScroll-left clear">      
+          <a class="prev"></a>
+          <div class="bd">
+            <ul class="picList clear">
+                {foreach name=case item=case from=$index.case.data}
+                <li><a href="{$case.link}">
+                      <div class="pic"><img src="{$case.image}"  /></div>
+                      <div class="text">{$case.title}</div>
+                    </a>
+              </li>
+                {/foreach}
+             </ul>
+          </div>
+          <a class="next"></a>
+        </div>
+    </div>
+    {/if}
+  
   <div class="about">
     <div class="title"><span><a href="{$index.about.link}"><img src="{$site_url}images/more.png" /></a></span>
       <p><img src="{$site_url}images/icon.png" /></p>

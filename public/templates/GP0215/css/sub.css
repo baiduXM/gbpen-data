@@ -1,7 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
 strong{display: block;margin: 0 auto;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
-.second{ display:none}
+.second{ display:none; padding-bottom: 16px;}
 .module_page{ width:100%;  line-height:20px;margin-top:30px;text-align:center; height:30px;}
 .module_page a{ text-decoration:none; color:#fff; /*color:#0c2d63;*/color:#fff; border:1px solid #848484; background:#848484;padding:3px 4px;}
 .module_page span{ padding-left:20px; padding-right:20px;}
@@ -31,7 +31,7 @@ strong{display: block;margin: 0 auto;overflow: hidden;text-overflow: ellipsis;wh
 }
 
 
-.list_image  p{ height:27px; line-height:27px; overflow:hidden}
+.list_image p{ height:27px; line-height:27px; overflow:hidden; font-size: 12px; text-align: center;}
 
 /*.list_image ul li{ float:left; text-align:center; margin:15px;}
 .list_image ul li img{ display:block; padding:2px; border:solid 1px #ccc; }

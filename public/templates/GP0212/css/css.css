@@ -1,4 +1,4 @@
-body{ color:#343434; font-family:Microsoft Yahei,Arial, Helvetica, sans-serif; background:#FFF; }
+body{ color:#343434; font-family:Microsoft Yahei,Arial, Helvetica, sans-serif; background:#FFF; overflow-x: hidden; }
 body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,input,textarea,div{margin:0;padding:0; list-style:none; line-height:24px; font-size:12px; font-weight:normal}
 body,div,ul,li,dl,dt,dd{ font-size:12px;}
 .clearfix:after { content:'\20'; display:block; height:0; clear:both; }
@@ -7,7 +7,7 @@ a{ color:#303440; text-decoration:none; }
 a:hover{ color:#ff0000; } 
 img{ border:none;}
 .c{ clear:both}
-
+span,b,i{ font-style: normal;}
 .wrapper{width:1100px; margin:0 auto;  }
 
 display:block; white-space:nowrap; text-overflow:ellipsis; overflow:hidden;
@@ -92,6 +92,27 @@ width:100%; position:relative; z-index:100; margin-top:0px; }
 .about .about_text{ display:inline-block; vertical-align:top;*display:inline;*zoom:1; height:175px; overflow:hidden; font-size:13px; line-height:30px; color:#343434; text-indent:2em;}
 .about .about_text a{ color:#ff0000;}
 
+.probox{ width: 1100px; margin:20px auto; }
+.probg{width: 100%;height: 295px;overflow: hidden;background: url(../images/probg.jpg) no-repeat center;position: absolute;bottom: 0;}
+.content_title{ width: 100%; text-align: center;}
+.content_title em{ display: inline-block;background:url(../images/hd2bj.png) no-repeat; width: 380px; height: 180px;}
+.content_title b{ position: relative; top: 76px; font-size: 32px; color: #0258ad; text-transform: uppercase;}
+.content_title span{ font-size: 30px; color: #fd8000; position: relative; top: 96px;}
+.picScroll-left{ width:1100px; position:relative;margin: 0 auto}
+.picScroll-left .bd{width: 1100px; overflow: hidden;margin: 0 auto;}
+.picScroll-left .bd ul{ zoom:1; margin: 0 auto;}
+.picScroll-left .bd ul li{ float:left; width:260px; margin:20px 8px 0 8px; display:block; text-align:center; vertical-align:middle;}
+.picScroll-left .bd ul li a{ overflow:hidden; display: block; font-size: 16px;}
+.picScroll-left .bd ul li a img{display:block; margin:0 auto; width: 238px; border: 1px solid #989aa0;}
+.picScroll-left .bd ul li a span{line-height: 60px;overflow: hidden; display: block; text-align:center;}
+.picScroll-left .bd ul li .text{ padding-top:10px; height:20px; overflow:hidden; font-size:14px;}
+.picScroll-left .bd ul li:hover a span h5{ font-weight:bold; color:#333333;}
+.picScroll-left .prev{ display:block;  width:46px; height:46px;position: absolute;left: -40px;top: 46%;overflow:hidden;
+	 cursor:pointer; background:url(../images/scroll_prev.png) no-repeat;}
+.picScroll-left .next{display:block;  width:46px; height:46px;position: absolute;right: -64px;top: 46%;overflow:hidden;
+	 cursor:pointer; background:url(../images/scroll_next.png) no-repeat;}
+
+
 
 .news{ float:right; width:471px;}
 .news .title{ background:url(../images/news_bg.png) no-repeat; width:471px; height:42px; overflow:hidden; color:#fff; font-size:14px; line-height:40px;}
@@ -171,8 +192,8 @@ ul.third li a.thirda:hover{}
 
 .crumb span{ padding-left:25px; float:right; color:#a19a9a; padding-right:20px; font-size:12px; font-weight:normal; height:22px; line-height:32px; margin-top:0px; color:#fff; line-height:26px;}
 .crumb span a{ color:#fff;  }
-
-	
+.quickbar_hoverbox li{ font-size: 16px !important; line-height: 29px !important;}
+.quickbar_nav ul{height: 100% !important;}
 
 
 
