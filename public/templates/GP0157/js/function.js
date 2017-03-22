@@ -29,22 +29,13 @@ $(document).ready(function(){
     });
 
 	
-	/*内页三级菜单下拉*/
-    jQuery(".secondul").slide({
-      titCell:".sub2", //鼠标触发对象
-      targetCell:".sub2 ul", //与titCell一一对应，第n个titCell控制第n个targetCell的显示隐藏
-      effect:"slideDown", //targetCell下拉效果
-      delayTime:300 , //效果时间
-      triggerTime:0, //鼠标延迟触发时间（默认150）
-      defaultPlay:false,//默认是否执行效果（默认true）
-      });
-    jQuery(".firstul").slide({
-      titCell:".sub1", //鼠标触发对象
-      targetCell:".secondul", //与titCell一一对应，第n个titCell控制第n个targetCell的显示隐藏
-      effect:"slideDown", //targetCell下拉效果
-      delayTime:300 , //效果时间
-      triggerTime:0, //鼠标延迟触发时间（默认150）
-      defaultPlay:false,//默认是否执行效果（默认true）
+    $('.firstul li a').click(function() {
+        $(this).parent().siblings().find('.secondul').stop(true,true).slideUp();
+        $(this).siblings(".secondul").stop(true,true).slideToggle();
+        $(this).siblings(".secondul").children('li').children('a').click(function() {
+              $(this).parent().siblings().find('.three').stop(true,true).slideUp();
+              $(this).siblings(".three").stop(true,true).slideToggle();
+        });
       });
 
 	
@@ -60,8 +51,6 @@ $(document).ready(function(){
     if($(".focus img").length<2){
         $(".focus").find("a").css("display","none");
     }
-
-
 });
   
 

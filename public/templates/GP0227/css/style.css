@@ -220,6 +220,7 @@ form#search{height: 24px;width: 178px;overflow: hidden;margin: 10px auto 15px;bo
 .product li a i{display: table-cell;width: 240px;height: 300px;overflow: hidden;text-align: center;vertical-align: middle;}
 .product li a .name{width: 230px;padding: 0 5px;height: 25px;font-size: 14px;color: #ffffff;line-height: 25px;position: absolute;left: 0px;bottom: -25px;}
 .product li a .name em{display: block;width: 100%;height: 100%;background: #000000;filter: Alpha(opacity=60);-webkit-opacity: 0.6;-moz-opacity: 0.6;-ms-opacity: 0.6;-o-opacity: 0.6;opacity: 0.6;position: absolute;left: 0px;top: 0px;}
+ul.product li img{ width:100%; height:auto}
 .product li a .name span{display: block;width: 100%;height: 100%;position: relative;z-index: 10;text-align: center;overflow: hidden;}
 
 /*产品详细页*/

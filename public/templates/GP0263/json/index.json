@@ -1,0 +1,50 @@
+{	
+	"list1": {
+		"value": {},
+		"description": "banner下方左上侧栏目",
+		"type": "list"
+	},
+	"list2": {
+		"value": {},
+		"description": "左侧中间文字列表",
+		"type": "list"
+	}, 
+	"list3": {
+		"value": {},
+		"description": "banner下方右侧图片列表",
+		"type": "list",
+		"config": {
+			"width": 165,
+			"height": 165
+		}	
+	},
+    "list4": {
+		"value": {},
+		"description": "右侧中间滚动图片列表",
+		"type": "list",
+		"config": {
+			"width": 165,
+			"height": 165
+		}	
+	},
+	"list5": {
+		"value": {},
+		"description": "底部上方中间单页面",
+		"type": "page",
+		"config": {
+			"nav_width": 125,
+			"nav_height": 125
+		}	
+	},
+	"list6": {
+		"value": {},
+		"description": "底部上方右侧文字列表",
+		"type": "list",
+		"config": {
+			"nav_width": 110,
+			"nav_height": 110
+		}	
+	}
+}
+
+

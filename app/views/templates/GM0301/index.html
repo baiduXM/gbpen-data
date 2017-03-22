@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="text/javascript">
+  // 跳转PC页面
+  {if $site_another_url}
+      if (!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+          location.href = '{$site_another_url}';
+      }
+  {/if}
+  </script>
+  <!-- 实时预览调试代码，模板开发完成后删除 -->
+
+  <meta name="x5-orientation" content="portrait">
+  <title>{$title}</title>
+  <meta name="keywords" content="{$keywords}" />
+  <meta name="description" content="{$description}" />
+  <link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no,minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta content="telephone=no, email=no" name="format-detection">
+  <!-- 启用360浏览器的极速模式(webkit) -->
+  <meta name="renderer" content="webkit">
+  <!-- 避免IE使用兼容模式 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+  <meta name="HandheldFriendly" content="true">
+  <!-- 微软的老式浏览器 -->
+  <meta name="MobileOptimized" content="320">
+  <!-- uc强制竖屏 -->
+  <meta name="screen-orientation" content="portrait">
+  <meta name="x5-orientation" content="portrait">
+  <link rel="stylesheet" href="{$site_url}css/reset.css" /> 
+  <link href="{$site_url}css/css.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="{$site_url}css/idangerous.swiper.css">
+  <script type="text/javascript" src="{$site_url}js/jquery.min.js"></script>
+  <script src="{$site_url}js/TouchSlide.1.1.js"></script>
+  <script src="{$site_url}js/idangerous.swiper-2.0.min.js"></script>
+  <script type="text/javascript" src="{$site_url}js/simple-app.js"></script>
+  <script type="text/javascript" src="{$site_url}js/fontsize.js"></script>
+  <script type="text/javascript" src="{$site_url}js/function.js"></script>
+  
+  <script type="text/javascript">
+    window.addEventListener('load', function(){
+     setTimeout(function(){ window.scrollTo(0, 1); }, 100);
+  });//safari浏览器可以通过此代码来隐藏地址栏
+  </script>
+  {$headscript}
+</head>
+<body>
+<div class="index-wrap">
+    {include file='./_header.html'}    
+    <div id="banner" class="swiper-container">
+      <div class="swiper-wrapper">
+          {foreach item=slidepic from=$global.slidepics}
+            <div class="swiper-slide"><a href="{$slidepic.link}"><img src="{$slidepic.image}"  class="swiper-no-swiping"></a></div>
+          {/foreach}
+      </div>
+      <div class="pagination"></div>
+    </div>
+     <section>
+        {foreach item=mIndexCat from=$mIndexCats}
+        {if $mIndexCat.type eq 4}
+          {if $mIndexCat.showtype eq 1}
+          <div class="about">
+            <a href="{$mIndexCat.link}" class="img_div">
+              <img src="{$mIndexCat.image}">             
+            </a>
+            <div class="text">
+              <p>{$mIndexCat.description|unescape:"html"}</p>
+              <a href="{$mIndexCat.link}">more+</a>    
+            </div>
+          </div>
+          {/if}
+        {* 仅输出类型为 4单页内容 的栏目（关于我们、联系我们） *}
+        {elseif $mIndexCat.type eq 1}
+          {if $mIndexCat.showtype eq 1}
+          <div class="news">
+              <div class="news_tit">
+                <h2>{$mIndexCat.name}</h2>
+                <a href="{$mIndexCat.link}">more+</a>
+              </div>
+              <div class="news_main">
+                <ul class="news_list clearfix">
+                  {$limit = 10}
+                  {foreach item=list2 from=$mIndexCat.data}
+                  <li><a href="{$list2.link}">{$list2.title}</a><span>{$list2.pubtimestamp|date_format:'%Y-%m-%d'}</span></li>
+                  {if $list2@index+1 gte $limit}{break}{/if}            
+                  {/foreach}
+                </ul>
+              </div>
+            </div>
+            {/if}
+        {elseif $mIndexCat.type eq 2}
+              {if $mIndexCat.showtype eq 1}
+                  <div class="wrap1">
+                    <div class="stitle">{$mIndexCat.name}</div>
+                        <div id="demo" class="qimo8">
+                          <div class="qimo">
+                            <div id="demo1">
+                              <ul class="clear">
+                                  {foreach item=list1 from=$mIndexCat.data}
+                                      <li><a href="{$list1.link}"><img src="{$list1.image}"><em>{$list1.title}</em></a></li>
+                                  {/foreach}
+                              </ul>
+                            </div>
+                            <div id="demo2"></div>
+                          </div>
+                        </div>
+                        <a class="more1" href="{$mIndexCat.link}">MORE+<em></em></a>
+                    </div>
+                {/if}
+              {/if}
+        {/foreach}
+    </section>
+    {include file='./_footer.html'}  
+</div>
+</body>
+</html>

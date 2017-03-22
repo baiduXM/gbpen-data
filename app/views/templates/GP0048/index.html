@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <script type="text/javascript">
@@ -18,11 +18,10 @@
 <link href="{$site_url}css/css.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="{$site_url}js/jquery-1.11.3.js"></script>
 <script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.js"></script>
-<script type="text/javascript" src="http://common.mn.sina.com.cn/public/resource/lib/jquery.jcarousellite.js">
+<script type="text/javascript" src="{$site_url}js/jquery.jcarousellite.js">
 </script>
-
 <script type="text/javascript" src="{$site_url}js/global.js"></script>
-<script type="text/javascript" src="{$site_url}js/index.js"></script>
+
 <title>{$title}</title>
 {$headscript}
 </head>
@@ -49,7 +48,7 @@
                         <div id="pic">
                             <ul>
                                 {foreach item=pro from=$index.news.data}
-                                  <li><a href="{$pro.link}"><img src="{$pro.image}"><h2>{$pro.title|truncate:15:"…"}</h2></a></li>
+                                  <li><a href="{$pro.link}"><img src="{$pro.image}"><h2>{$pro.title}</h2></a></li>
                                 {/foreach}
                             </ul>
                         </div>

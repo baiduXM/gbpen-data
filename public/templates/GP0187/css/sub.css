@@ -78,9 +78,9 @@ ul.inner_pages a:hover{ text-decoration:underline}
 .slideBoxb .hd ul{ overflow:hidden; zoom:1; float:left; display:none;  }
 .slideBoxb .hd ul li{ float:left; margin-right:2px;  width:15px; height:15px; line-height:14px; text-align:center; background:#fff; display:none; cursor:pointer; }
 .slideBoxb .hd ul li.on{ background:#f00; color:#fff; }
-.slideBoxb .bd{ position:relative; height:100%; z-index:0;  margin:0px auto; text-align:center;   }
-.slideBoxb .bd li{ zoom:1; vertical-align:middle; }
-.slideBoxb .bd img{ display:block;  border:1px solid #ddd; padding:1px; margin:0px auto; text-align:center; }
+.slideBoxb .bd{ position:relative; height:460px; z-index:0;  margin:0px auto; text-align:center;   }
+.slideBoxb .bd li{ zoom:1; vertical-align:middle; height: 460px; margin:0px auto;}
+.slideBoxb .bd img{border:1px solid #ddd; padding:1px; margin:0px auto;max-width: 100%; text-align:center; height: 450px; }
 
 		/* 下面是前/后按钮代码，如果不需要删除即可 */
 .slideBoxb .prev,
@@ -88,7 +88,7 @@ ul.inner_pages a:hover{ text-decoration:underline}
 .slideBoxb .next{ left:auto; right:3%; background:url(../images/next.png) right no-repeat; }
 .slideBoxb .prevStop{ display:none;  }
 .slideBoxb .nextStop{ display:none;  }
-
+.slideBoxb .tempWrap{ margin: 0 auto; }
 
 h1.inner_news_tit{ line-height:20px; font-size:16px; text-align:center; font-size:14px;   font-weight: bold; }
 h2.inner_news_time{height:25px; line-height:25px;color:#888; padding-left:10px; margin-bottom:8px; border-bottom:solid 1px #ccc; font-size:12px; text-align:center; padding-bottom:8px; padding-top:0;}

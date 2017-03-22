@@ -9,7 +9,7 @@ a{ color:#000; text-decoration:none}
 a:hover{ color:#f00} 
 img{ border:none;}
 .c{ clear:both}
-
+li{ list-style: none; }
 .wrapper{width:1002px; margin:0 auto; }
 
 
@@ -106,9 +106,10 @@ width:100%; position:relative; z-index:100; margin-top:0px; overflow:hidden }
 .category ul li .firsta{font-size: 12px; text-align:left; height:27px; line-height:27px; text-indent:28px; background:url(../images/icon.jpg) no-repeat 15px 9px; border-bottom:solid 1px #ccc; width:180px; margin:auto; display:block; overflow:hidden}
 .category ul li a.firsta{ color:#333333;}
 .category ul li a:hover.firsta { color:#FF0000}
-
+ul.third li a.thirda{ color:#333333; font-size: 12px;}
+ul.second>li>ul{ display: none;}
 ul.second li .seconda{ t text-align:left;  height:23px; line-height:23px; padding-left:25%;  margin:auto;}
-ul.second li a.seconda{display:block; color:#333333; }
+ul.second li a.seconda{display:block; color:#333333; font-size: 12px; }
 ul.second li a.seconda:hover{color:#f00}
 ul.third li a.thirda{ padding-left:32%; margin:auto;color:#edbb41; color:#333333;  display:block; line-height:35px; height:30px; overflow:hidden;}
 ul.third li a.thirda:hover{color:#FF0000}
@@ -126,7 +127,7 @@ ul.third li a.thirda:hover{color:#FF0000}
 
 .tel1{ width:200px; margin-top:10px; background:#ebeae6 url(../images/containter_bg.jpg) repeat-x bottom ; }
 .tel1 h2{ background:url(../images/sub_contact.jpg) no-repeat; height:25px; line-height:25px; font-weight:bold; font-size:14px; text-indent:28px; color:#FFFFFF; overflow:hidden; width:111px; overflow:hidden }
-.tel1 .inner{ width:140px; background:url(../images/contact_bg1.jpg) right bottom no-repeat;  padding-top:15px; padding-left:5px; padding-right:55px; color:#555555; line-height:26px; font-family:Arial;}
+.tel1 .inner{  background:url(../images/contact_bg1.jpg) right bottom no-repeat;  padding-top:15px; padding-left:6px; padding-right:6px; color:#555555; line-height:26px; font-family:Arial;}
 
 .main{ width:760px; float:right; padding-right:12px; display:inline;}
 
@@ -135,7 +136,7 @@ ul.third li a.thirda:hover{color:#FF0000}
 .crumb a{color:#999999;}
 .crumb a:hover{color:#a02d30;}
 .article { color:#555555; }
-.article img{ max-width:750px;}
+.article img{ max-width:640px;}
 
 
 .alefttitle{ height:35px; border-bottom:3px solid #fe0000; line-height:35px; background:url(../images/title.jpg) no-repeat 5px; text-indent:35px; font-size:15px; font-weight:bold; color:#636363; overflow:hidden}

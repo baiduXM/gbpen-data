@@ -72,8 +72,8 @@ ul.nav>li>a:hover{background: url(../images/lihover.png) repeat-x;}
 .title a{float: right;font-size: 12px;color: #666;}
 .title a:hover{color:#d30101}
 .col-nr{position: relative;}
-.col-nr a{display:block;border-bottom:1px solid #fff;width: 320px; position: relative;}
-.col-nr a img{width: 100%; position:relative; overflow:hidden;}
+.col-nr a{display:block;border-bottom:1px solid #fff;width: 320px;text-align: center; overflow: hidden; position: relative;}
+.col-nr a img{max-width: 100%;max-height: 200px; text-align: center;}
 .col-nr a h2{width:300px;height: 37px;line-height: 37px;background: url(../images/navhoverbg.png) repeat;position: absolute;bottom: 0;padding: 0 10px;color: #fff;}
 .col-nr a h2 span{display: inline-block;width: 21px;height: 21px;background: url(../images/aboutico.png)  no-repeat;float: right;margin: 8px 0;}
 /*case*/
@@ -82,7 +82,7 @@ ul.nav>li>a:hover{background: url(../images/lihover.png) repeat-x;}
 .focus #pic{width:320px;overflow:hidden;}
 .focus #pic ul{/*width:1216px;*/float:left;}
 .focus #pic li{width:320px;float:left;}
-.focus #pic li img{width:100%;float:left;position:relative;overflow:hidden;}
+.focus #pic li img{max-width:100%;display: inline;height: 200px;}
 .focus #pic li a:hover h2{text-decoration: underline;}
 .focus .tip-bg{width:320px;height:37px;background:url(../images/navhoverbg.png) repeat;position:absolute;left:0;bottom:0;z-index:12;display: none;}
 .focus #tip{display:none;width:96px;height:14px;position:absolute;left:104px;bottom:3px;z-index:13;}

@@ -149,7 +149,11 @@ $("#daohang,#header_menu,#fixed_menu").click(function(){
 
 	})		
 	//返回顶部开始
-	$(".back-top").click(function(){$(".quickbar-wrap-body").animate({scrollTop :0}, 800)})
+	 $(".back-top").click(function() {
+      $("body,#quickbar-wrap-body").animate({scrollTop:0}, 600);
+      return false;
+  	});
+
 	$("#share_btn").click(function(){
 		$(".newsclass").addClass("show")
 		$(".opacity2").show()
