@@ -10,7 +10,7 @@ body{ font-size: 14px; }
 
 strong{display: block;margin: 0 auto;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
 
-.wrapper{width:1100px; margin:0 auto;}
+.wrapper{width:1000px; margin:0 auto;}
 
 #header h1{width:585px;height:103px;float:left; position:relative;   }
 #header h1 a{display:block;height:103px;width:585px; position:absolute; bottom:0px; left:0;}
@@ -89,8 +89,8 @@ strong{display: block;margin: 0 auto;overflow: hidden;text-overflow: ellipsis;wh
 
 
 
-#pro{ width:1100px; margin-top:15px; }
-#pro .title{ background:url(../images/pro_title.jpg) top center no-repeat; height:48px; line-height:63px; color:#666666; font-size:9px;font-family:Microsoft Yahei; padding-left:58px;}
+#pro{ width:1000px; margin-top:15px; }
+#pro .title{ background:url(../images/pro_title.jpg) top left no-repeat; height:48px; line-height:63px; color:#666666; font-size:9px;font-family:Microsoft Yahei; padding-left:58px;}
 #pro .title span{ float:right; margin-right:25px; margin-top:25px; }
 #pro .title b{ font-size:14px; color:#0653b0;}
 #pro .inner{ background:url(../images/peo_innerbg.jpg) top center no-repeat; height:454px; overflow:hidden; padding-top:20px; margin-top:10px; padding-left:20px; padding-right:20px;}
@@ -121,7 +121,7 @@ strong{display: block;margin: 0 auto;overflow: hidden;text-overflow: ellipsis;wh
 
 
 /*sidebar css*/
-.sidebar{ width:233px; float:left; margin-left:10px; margin-top:10px; display:inline; }
+.sidebar{ width:233px; float:left;margin-top:10px; display:inline; }
 
 .list_class{ margin-bottom:15px;}
 .subnav { background:#1164c4;-moz-border-radius: 6px; -webkit-border-radius: 6px;  border-radius:6px; margin-bottom:35px; padding-bottom:15px;}
@@ -159,7 +159,7 @@ ul.third li a.thirda:hover{color:#1062c1}
 
 
 /*main css*/
-.main{ float:right; width:761px; margin-top:10px; margin-right:10px;  display:inline;}
+.main{ float:right; width:761px; margin-top:10px;display:inline;}
 
 
 .crumb{ height:44px;line-height:44px;  color:#1f6cc7; font-size:14px; font-weight:bold;  text-indent:30px; padding-top:0px; background:url(../images/crumb_bg.jpg) top center no-repeat; overflow:hidden  }

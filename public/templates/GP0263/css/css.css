@@ -1,22 +1,22 @@
 @charset "utf-8";
 *{margin:0px;padding: 0px;}
 ul,ol,li,dl,dt,dd {margin:0px;padding:0px;list-style-type: none;}
-a{color:#029202;font-size:12px; font-weight:normal; font-family:Verdana, Arial, Helvetica, sans-serif; text-decoration:none; }
+a{color:#029202;font-size:12px; font-weight:normal;text-decoration:none; }
 h1,h2,h3,h4,h5,h6{ font-size:14px; font-weight:normal;}
-a:hover{color:#333;font-size:12px; font-weight:normal; font-family:Verdana, Arial, Helvetica, sans-serif; text-decoration:none; }
+a:hover{color:#333;font-size:12px; font-weight:normal;text-decoration:none; }
 a img{border:0; margin:0px; padding:0px;}
-body {font-family: Arial, Helvetica, sans-serif;font-size: 12px;font-style: normal;margin:0px;padding:0px;width:100%;font-weight: bold; background:#EFEFEF;}
+body {font-family:"微软雅黑",Microsoft Yahei, Arial, Helvetica, sans-serif;font-size: 12px;font-style: normal;margin:0px;padding:0px;width:100%;font-weight: bold; background:#EFEFEF;}
 .clear{clear:both; line-height:0px; font-size:0px;height:0px;}
 .all{width:1002px;height:auto;margin:0px auto;overflow:hidden;}
 
 /*头部*/
 .top{width:100%;height:12px; background:#49CE00;}
-.logo{ width:1002px; height:94px; margin:0px auto; overflow:hidden;}
+.logo{ width:1002px; height:94px; margin:0px auto; overflow:hidden; position:relative;}
 h2.logo_pic{ float:left;position: relative;width: 564px;height: 94px;overflow: hidden;}
 h2.logo_pic a{width: 100%;height: 100%;overflow: hidden;display: block;}
 h2.logo_pic a img{max-width: 100%;max-height: 100%;overflow: hidden;display: block;margin: auto 0;}
 h2.sc{ float:right; margin-right:5px; line-height:30px; font-size:12px; font-weight:normal; color:#666666; padding-top:10px;}
-h2.sc span{display: block;font-family: "微软雅黑";color: #009915;font-size: 16px;position: absolute;left:1006px;top:67px;font-weight: bold;}
+.logo span{display: block;color: #009915;font-size: 16px;position: absolute;right:5px;top:52px;font-weight: bold;}
 h2.sc a{ color:#666666;}
 h2.sc a:hover{ color:#02ADFC;}
 
@@ -78,7 +78,7 @@ h4.contact_pic{ margin:0px auto;}
 .about{float:left;width:350px; height:238px;overflow:hidden;}
 h2.top_about{width:98%;height:39px; line-height:39px; margin:0px auto;font-family: "微软雅黑";color: #009802;font-size: 15px;font-weight: bold;text-indent: 10px;}
 
-span.more{position: relative; float:right;width:581px;height:auto;overflow: hidden;line-height:43px; font-size:12px;text-align: right; margin-right:10px; color:#029202; font-weight:normal;}
+span.more{position: relative; float:right;/*width:581px;*/height:auto;overflow: hidden;line-height:43px; font-size:12px;text-align: right; margin-right:10px; color:#029202; font-weight:normal;}
 span.more ul{display: inline-block;text-indent: 8px;}
 span.more li{display: inline;}
 .about_content{width:340px;height:auto;overflow:hidden;padding-left:10px;}
@@ -131,12 +131,17 @@ span.time{float:right;margin-right:5px;font-weight:normal;font-size:12px;}
 /*承接工程css*/
 h2.nytop_gongcheng{width:100%;height:38px;background:url(../images/ny-chengjie.gif) left top no-repeat;}
 .nypro_detail{width:100%; height:auto;margin:0px auto;vertical-align:middle; text-align:center;}
-.nypro_detail img{height:232px;width:330px;border:3px #efefef solid;margin:10px auto;}
+.nypro_detail img{height:232px;max-width: 100%; border:3px #efefef solid;margin:10px auto;}
 /*.focus .pic{ position:relative; z-index:0; margin: 0 auto;border:3px #efefef solid}
 .focus .pic li{width: 330px !important;}
 .focus .pic img {display: block;width:330px;height: auto;margin: 0 auto;}*/
 .nypro_detail h3{width:100%;height:auto;line-height:24px;color:#000;font-size:12px; text-align:center;font-weight:normal;text-indent:24px;}
-.nypro_detail_text{width:100%;height:auto;color:#333;font-size:12px;line-height:24px;text-indent:24px;margin:0px auto; font-weight:normal;}
+.nypro_detail_text{width:100%;height:auto;color:#333;font-size:12px;line-height:24px; margin-top: 20px;}
+.det-img{ position: relative; }
+.det-img span{ position: absolute; cursor: pointer;top: 50%; font-size: 28px; color: #666; }
+.det-img span:hover{ color: #029202; }
+.det-img span.ulprev{ left:50px; }
+.det-img span.ulnext{ right:50px; }
 
 
 /*新闻css*/
@@ -164,7 +169,7 @@ h2.module_news_Details span{ float:right; text-align:right; padding-right:10px;}
 h2.module_news_Details span a{color:#333;} 
 h2.module_news_Details span a:hover{color:#9E1E13;}
 ul.module_news_Details{width: 100%;height: 60px;overflow: hidden;}
-ul.module_news_Details li{width:96%; height:30px; line-height:30px; margin:0px auto;}
+ul.module_news_Details li{width:100%; height:30px; line-height:30px; margin:0px auto;}
 
 /*产品展示列表css*/
 h2.nytop_products{width:100%;height:38px;background:url(../images/ny-pro.gif) left top no-repeat;}
@@ -177,10 +182,10 @@ h2.photo_title{ width:100%; height:25px;overflow: hidden; line-height:25px; text
 ul.module_cases li a:hover h2.photo_title{color: #08b50a}
 
 .clear{clear: both;}
-.share{height: 40px;;margin: 0 10px;width: 300px;float: right;position: relative;}
+.share{height: 40px;;margin: 0 10px;/*width: 300px;*/float: right;padding-right: 20px; position: relative;}
 .share span{position: absolute;left:13px;top:8px;}
 .bdshare-button-style0-16{float: right;}
-.nypro_detail_text span{font-weight: bold;padding-right: 5px;}
+/*.nypro_detail_text span{font-weight: bold;padding-right: 5px;}*/
 .inner_pages{width: 100%;height: 60px;margin-top: 50px;}
 
 /*图文列表css*/

@@ -16,24 +16,24 @@
 		</div>
            
 <div class="menu main_nav-percent">       
-<ul id="nav" class="nav clearfix">
-			<li class="nLi on" style="width:{100/($navs|count+1)}%">
-				<h3><a href="{$site_url}">首页</a></h3>
-			</li>
-            {foreach name=navs item=nav from=$navs}
-			<li  class="fl{if $nav.current} current{/if} nLi" style="width:{100/($navs|count+1)}%">
-					<h3><a href="{$nav.link}">{$nav.name}</a></h3>
-				<ul class="sub clearfix">
-                {if $nav.childmenu}
-					{foreach key=key item=nav_list from=$nav.childmenu}
-					<li class="{if $nav.current}current{/if}"><a href="{$nav_list.link}">{$nav_list.name}</a></li>
-					{/foreach}
-                    {/if}
-				</ul>
-			</li>
-          {/foreach}
-                                          
-		</ul>
+	<ul id="nav" class="nav clearfix">
+		<li class="nLi" style="width:{100/($navs|count+1)}%">
+			<a href="{$site_url}">首页</a>
+		</li>
+	    {foreach name=navs item=nav from=$navs}
+		<li  class="fl nLi" style="width:{100/($navs|count+1)}%">
+				<a href="{$nav.link}">{$nav.name}</a>
+			<ul class="sub clearfix">
+	        {if $nav.childmenu}
+				{foreach key=key item=nav_list from=$nav.childmenu}
+				<li class=""><a href="{$nav_list.link}">{$nav_list.name}</a></li>
+				{/foreach}
+	            {/if}
+			</ul>
+		</li>
+	  {/foreach}
+	                                  
+	</ul>
              
        </div>        
         

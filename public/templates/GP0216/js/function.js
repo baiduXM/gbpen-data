@@ -3,16 +3,8 @@
 
 $(document).ready(function() {
 	
-	
-	
-	
-	
-	
   $(".products .inner").slide({mainCell:".bd ul",autoPlay:true,effect:"leftMarquee",vis:4,interTime:50});
-  $(".slideBox").slide({mainCell:".bd ul",autoPlay:true});
-
- 
-	  
+  $(".slideBox").slide({mainCell:".bd ul",interTime:5000,autoPlay:true});
  
   $(".products ul li").hover(
 	
@@ -27,37 +19,16 @@ $(document).ready(function() {
 		 $(this).find(".bg").css("backgroundImage","none")
 		$(this).find(".more").animate({top:-175,opacity:"0"})		  
   })
-  
-  
-  
-  
-  
-  
+   
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
 window.onload=function(){
-	
-	
 	
 	 $(".news .inner").each(
  function(){
 	 $(this).find(".news_text").width($(this).width()-$(this).find(".tu_img img").width()-30)
 	 }
  )
- 
-
 function adaption(selector,li_w,li_h){
 		$(selector).each(function(i){
 		img_i=$(selector).eq(i).find("img")
@@ -78,11 +49,6 @@ function adaption(selector,li_w,li_h){
 /*首页产品列表图片自适应*/
 adaption(".products .inner ul li .pic",190,190)
 
-
-
-
-
-	 
 /*图文内页图片自适应*/	 
  $(".list_imagetext ul li").each(
  function(){
@@ -91,9 +57,7 @@ adaption(".products .inner ul li .pic",190,190)
 	 $(this).find(".text_box").width(wid2-wid1-11)
 	 }
  )
- 
 
-  
 /*	 $(".yc ul li").each(function(){
 		 var ww=$(this).find("img").width();
    $(this).find("p").width(ww);
@@ -103,7 +67,6 @@ adaption(".products .inner ul li .pic",190,190)
 
 $(document).ready(function() {
 	
-
 /*产品详细页图片自适应*/
 	$(".bd li").each(function(i){
 	if($(".bd li").eq(i).find("img").width() > 640){
@@ -134,16 +97,13 @@ $(document).ready(function() {
         returnDefault: false //鼠标移走后返回默认状态，例如默认频道是"预告片"，鼠标移走后会返回"预告片"（默认false）
     });
 
-	
-	
 /*产品详细页*/
     jQuery(".slideBoxb").slide({
         mainCell: ".bd ul",
         autoPlay: true,
         effect: "leftLoop"
     });
-	
-	
+
  // 兼容低版本IE
     $(function() {
         if (window.PIE) {

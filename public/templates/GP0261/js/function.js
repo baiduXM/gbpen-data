@@ -30,7 +30,16 @@ $(document).ready(function(){
 				delayTime:300 , //效果时间
 				triggerTime:0, //鼠标延迟触发时间（默认150）
 				returnDefault:true //鼠标移走后返回默认状态，例如默认频道是"预告片"，鼠标移走后会返回"预告片"（默认false）
-			});	
+			});
+	// 导航当前状态
+    var num=window.location.href.split("/").length-1;    
+    var index=window.location.href.split("/")[num];
+
+    if(index==null || index==0){
+        $("ul.nav>li:eq(0)>a").addClass('in')
+    }else{
+        $("ul.nav>li>a[href^='"+index+"']").addClass('in')
+    }	
 
 				jQuery('.picMarquee').slide({mainCell:"ul.picList",autoPlay:true,effect:"leftMarquee",vis:6,interTime:50});
 				$('.tempWrap').css('width','100%');	

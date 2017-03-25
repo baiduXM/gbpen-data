@@ -8,9 +8,10 @@ jQuery(document).ready(function($) {
 	    $(this).parent().siblings().find(".third").slideUp()
 	    $(this).siblings(".third").slideToggle()
 	})
-	if ($(".module_PhotoScroll").length>0) {
-		jQuery(".module_PhotoScroll").slide({mainCell:"ul",autoPlay:true,effect:"leftMarquee",vis:4,interTime:50});
-	};
+	// if ($(".module_PhotoScroll").length>0) {
+	// 	jQuery(".module_PhotoScroll").slide({mainCell:"ul",autoPlay:true,effect:"leftMarquee",vis:4,interTime:50});
+	// };
+	jQuery(".det-img").slide({ mainCell:"ul",prevCell:".ulprev",nextCell:".ulnext",effect:"leftLoop", autoPlay:true, delayTime:300});
 
 });
 

@@ -30,8 +30,8 @@ ol,p,dl,li{list-style:none;}
 .head{width: 1200px;margin: 0 auto;overflow: hidden;position: relative;height: 100%;z-index: 20}
 .menu{width: 48px;height: 56px;padding: 12px 0 0 14px;float: left;background: url(../images/menubg.png) no-repeat;margin-right: 20px;}
 .menu .menubar{width: 33px;height: 21px;background: url(../images/menuicon.png) no-repeat;}
-.logo{padding-top: 15px;height: 53px;float: left;width: 102px;overflow: hidden;}
-.logo a{display: table-cell;text-align: center;height: 53px;width: 102px;}
+.logo{ height: 100px;float: left;width: 500px;overflow: hidden;}
+.logo a{display: block;text-align: center;height: 100%;width: 100%;}
 .logo a img{max-width: 100%;max-height: 100%;vertical-align: middle;}
 /*.logo img{height: 53px;}*/
 .topbg{width: 1920px;left:50%;margin-left:-960px;height:1000px;background: url(../images/ye.png) right center no-repeat;position: absolute;top: 0;z-index: 10;}

@@ -50,13 +50,25 @@
  {include file="./_pro_right_nav.html"}
             
    
-   <div class="module_PhotoScroll">
+   <div class="module_PhotoScrol">
               <div class="pro_main">
-          <div class="nypro_detail"> 
-            <img src="{$article.image}" width="330" height="232" />
-            <h3>{$article.title}</h3>
+          <div class="nypro_detail">
+            <div class="det-img focus">
+              <ul>
+              {foreach item=image from=$article.images}
+                <li>
+                <img src="{$image.image}" /><h3>{$image.title}</h3>
+                </li>
+              {/foreach}
+              </ul>
+              {if $article.images|count gt 1}
+                <span class="ulprev">&lt;</span>
+                <span class="ulnext">&gt;</span>
+              {/if}
+            </div>
+           
           </div>
-          <div class="nypro_detail_text"><span>详细说明:</span>{include file="./_pro_xq.html"}</div>
+          <div class="nypro_detail_text">{include file="./_pro_xq.html"}</div>
           <div class="share">
    {include file="./_share.html"}
    </div>

@@ -27,13 +27,13 @@ p{line-height:25px;}
 .nav{ width:1000px; margin:0px auto; height:35px; line-height:35px;   position:relative; z-index:1;  }
 .nav a{ color:#fff;  }
 .nav .nLi{ float:left;  position:relative; display:inline; background:url(../images/nav_li.png) no-repeat right center;}
-.nav .nLi h3{ display:block;}
-.nav .nLi h3 a{ display:block; font-family:"微软雅黑"; font-size:16px; text-align:center; width:100%; height:35px; overflow:hidden;}
+.nav .nLi{ display:block;}
+.nav .nLi a{ display:block; font-family:"微软雅黑"; font-size:16px; text-align:center; width:100%; height:35px; overflow:hidden;}
 .nav .sub{ display:none; width:100%; left:0; top:35px;  position:absolute; filter:alpha(opacity=80); -moz-opacity:0.85;  opacity:0.8; background:#0b9df5; line-height:26px; }
 .nav .sub li{ zoom:1; }
 .nav .sub a{ display:block; padding:0 0px; text-align:center; margin:0px auto; width:100%;line-height: 32px;height: 32px;overflow: hidden;}
 .nav .sub a:hover{ color:#3c1e0f; background:#fff; }
-.nav .on h3 a{ color:#ff4800;}
+.nav li a.in{ color:#ff4800;}
 
 
 

@@ -147,7 +147,7 @@ header{ position:relative; border-top:7px solid #166aa9}
 .list_imagetext ul li .text_box{ float:right; width:71%;}
 .list_imagetext ul li .text_box .text_title{ font-size:1.2em;  line-height:26px; margin-top:5px;width:100%; display:block; white-space:nowrap; text-overflow:ellipsis; overflow:hidden;  height:26px;}
 .list_imagetext ul li .text_box .text_data{ font-size:12px; line-height:20px; color:rgba(0,0,0,0.8)}
-.list_imagetext ul li .text_box .text_des{ padding-top:7px; line-height:20px; height:40px; overflow:hidden}
+.list_imagetext ul li .text_box .text_des{ margin-top:7px; line-height:20px; height:40px; overflow:hidden}
 @media screen and (min-width: 320px) and (max-width: 480px){
 .list_imagetext ul li .text_box .text_title{ font-size:14px; margin:0; line-height:21px; height:21px;} 
 .list_imagetext ul li .text_box .text_des{  line-height:20px; height:40px; overflow:hidden; font-size:12px; padding-top:0}
