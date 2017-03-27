@@ -1,4 +1,16 @@
 $(document).ready(function(){
+	(function(){
+			$('.searchbox').focus(function(){
+				if($(this).val()=='请输入关键字'){
+					$('.searchbox').val('');
+				}
+		});
+		$('.searchbox').blur(function(){
+			if($(this).val()==''){
+				$('.searchbox').val('请输入关键字')
+			}
+		});		
+	})();
 	 jQuery(".focus").slide({ titCell:"#tip li", mainCell:"#pic ul",effect:"left",autoPlay:true,delayTime:200 })
 
 		// 产品展示
