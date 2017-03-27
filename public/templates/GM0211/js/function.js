@@ -238,7 +238,7 @@ $(document).ready(function(){
 	$(".second>dd>a").click(function () {
 	    $(this).parent().siblings().find(".third").slideUp()
 	    $(this).siblings(".third").slideToggle()
-	    return false;
+	    // return false;
 	})
 
 	
