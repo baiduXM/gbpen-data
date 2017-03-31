@@ -74,7 +74,7 @@ width:100%; position:relative; z-index:100; margin-top:0px; }
 .products ul li .pic{ width:165px; height:165px; overflow:hidden;  border:1px solid #989aa0; }
 .products ul li .pic img{ display:block; }
 
-.products ul li .text{ padding-top:10px; height:20px; overflow:hidden; font-size:14px;font-weight: bolder}
+.products ul li .text{ padding-top:10px; height:20px; overflow:hidden; font-size:14px;font-weight: bolder; white-space: nowrap;}
 
 .products .bd{ width:715px; margin:auto; height:450px; overflow:hidden;}
 
