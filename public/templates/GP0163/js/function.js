@@ -2,31 +2,35 @@
 $(document).ready(function() {
 
 // 导航
-	var num = window.location.href.split("/").length - 1;
-	var index = window.location.href.split("/")[num];
+	// var num = window.location.href.split("/").length - 1;
+	// var index = window.location.href.split("/")[num];
 	
-	if (index == null ||index == 0) {
-		$("ul.menu>li:eq(0)>a").addClass('in')
-	} else {
-		$("ul.menu>li>a[href^='"+index+"']").addClass('in')
-	}
-	if ($("ul.menu>li>a").hasClass('in')) {
-		var initial = $("ul.menu>li>a.in").parent("li").position().left;
-		var liWidth = ($("ul.menu>li>a.in").width()-12)/2;
-	} else {
-		var initial = $("ul.menu>li:eq(0)").position().left;
-		var liWidth = ($("ul.menu>li:eq(0)").width()-12)/2;
-	};
-	$(".triangle").css({left:initial,marginLeft:liWidth});
-	$("ul.menu>li").mouseover(function(){
-		var thisWidth = ($(this).children('a').width()-12)/2;
-		var leftPosition = $(this).position().left;
-		$(".triangle").stop(true,false).animate({left:leftPosition,marginLeft:thisWidth}, 500);
-	});
-	$("ul.menu").mouseleave(function(event) {
-		$(".triangle").stop(true, true).animate({left:initial,marginLeft:liWidth},500);
-	});
+	// if (index == null ||index == 0) {
+	// 	$("ul.menu>li:eq(0)>a").addClass('in')
+	// } else {
+	// 	$("ul.menu>li>a[href^='"+index+"']").addClass('in')
+	// }
+	// if ($("ul.menu>li>a").hasClass('in')) {
+	// 	var initial = $("ul.menu>li>a.in").parent("li").position().left;
+	// 	var liWidth = ($("ul.menu>li>a.in").width()-12)/2;
+	// } else {
+	// 	var initial = $("ul.menu>li:eq(0)").position().left;
+	// 	var liWidth = ($("ul.menu>li:eq(0)").width()-12)/2;
+	// };
+	// $(".triangle").css({left:initial,marginLeft:liWidth});
+	// $("ul.menu>li").mouseover(function(){
+	// 	var thisWidth = ($(this).children('a').width()-12)/2;
+	// 	var leftPosition = $(this).position().left;
+	// 	// $(".triangle").stop(true,false).animate({left:leftPosition,marginLeft:thisWidth}, 500);
+	// });
+	// $("ul.menu").mouseleave(function(event) {
+	// 	$(".triangle").stop(true, true).animate({left:initial,marginLeft:liWidth},500);
+	// });
 	//三角形滑块结束
+	if (!($("ul.menu>li>a").hasClass('on'))) {
+		$("ul.menu>li").first().find("a").addClass('on');
+	}
+	
 
 	// 计算二级栏目left值
 	$(".menu-list").each(function(index, el) {

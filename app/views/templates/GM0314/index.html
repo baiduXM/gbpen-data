@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- 实时预览调试代码，模板开发完成后删除 -->
+    
+    <!-- 调试代码 End -->
+    <script type="text/javascript">
+        // 跳转PC页面
+        {if $site_another_url}
+            if (!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+                location.href = '{$site_another_url}';
+            }
+            {/if}
+    </script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no,minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta content="telephone=no, email=no" name="format-detection">
+    <!-- 启用360浏览器的极速模式(webkit) -->
+    <meta name="renderer" content="webkit">
+    <!-- 避免IE使用兼容模式 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+    <meta name="HandheldFriendly" content="true">
+    <!-- 微软的老式浏览器 -->
+    <meta name="MobileOptimized" content="320">
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <meta name="keywords" content="{$keywords}" />
+    <meta name="description" content="{$description}" />
+    <link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
+    <title>{$title}</title>
+    <link rel="stylesheet" href="{$site_url}css/animate.min.css"/>
+    <link rel="stylesheet" href="{$site_url}css/swiper-3.4.1.min.css"/>
+    <script src="{$site_url}js/jquery-1.11.1.min.js"></script>
+    <script src="{$site_url}js/swiper-3.4.1.min.js"></script>
+    <script src="{$site_url}js/swiper.animate1.0.2.min.js"></script>
+    <script src="{$site_url}js/html5shiv.js"></script>
+    <link rel="stylesheet" href="{$site_url}css/css.css"/>
+    <script src="{$site_url}js/js.js"></script>
+    <script type="text/javascript">
+        window.addEventListener('load', function(){
+            setTimeout(function(){ window.scrollTo(0, 1); }, 100);
+        });//safari浏览器可以通过此代码来隐藏地址栏
+    </script>
+    {$headscript}
+</head>
+<body>
+<div id="index-wrap">
+    {include file="./_header.html"}
+    <section>
+        <div id="sec-banner">
+            <!--<div class="banner_title">
+                <img src="{$global.banner_title.image}" alt=""/>
+            </div>-->
+            <div id="banner" class="swiper-container">
+                <div class="swiper-wrapper">
+                    {foreach item=slidepic from=$global.slidepics}
+                    <div class="swiper-slide"><a href="{$slidepic.link}"><img src="{$slidepic.image}" alt=""/></a></div>
+                    {/foreach}
+                </div>
+            </div>
+            <div class="swiper-pagination banner_run"></div>
+        </div>
+    </section>
+    <section>
+        <div id="sec-index">
+            {foreach name=mIndexCats item=mIndexCat from=$mIndexCats}
+            {if $mIndexCat.type eq 2}
+                {if $mIndexCat.showtype eq 1}
+                <div class="sec1">
+                    <div class="sec1_title">
+                        <h3>{$mIndexCat.name}</h3>
+                    </div>
+                    <div class="sec1_content">
+                        <ul>
+                            {foreach item=article from=$mIndexCat.data}
+                            <li>
+                                <a href="{$article.link}">
+                                    <div class="img_bg">
+                                        <div class="img">
+                                            <img src="{$article.image}" alt=""/>
+                                        </div>
+                                    </div>
+                                    <div class="h3">
+                                        <h3>{$article.title}</h3>
+                                    </div>
+                                </a>
+                            </li>
+                            {if $article@index+1 eq 4}{break}{/if}
+                            {/foreach}
+                        </ul>
+                    </div>
+                </div>
+                {/if}
+            {elseif $mIndexCat.type eq 4}
+                {if $mIndexCat.showtype eq 1}
+                <div class="sec2">
+                    <div class="bg1"></div>
+                    <div class="content">
+                        <div class="sec2_title">
+                            <a href="{$mIndexCat.link}">
+                                <h3>{$mIndexCat.name}</h3>
+                            </a>
+                        </div>
+                        <div class="sec2_content">
+                            <a href="{$mIndexCat.link}">
+                                {$mIndexCat.description}
+                            </a>
+                        </div>
+                    </div>
+                    <div class="bg2"></div>
+                </div>
+                {/if}
+            {/if}
+            {/foreach}
+        </div>
+    </section>
+    {include file="./_footer.html"}
+</div>
+{$footscript}
+</body>
+</html>

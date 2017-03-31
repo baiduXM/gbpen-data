@@ -30,11 +30,9 @@ $(".baner").css({"margin-top":$('.logo').height()/2})
 $(".header .sj").css({"top":$('.logo').height()/2 , "border-bottom-width":$('.logo').height()*0.5 ,"border-right-width":$('.logo').height()*0.25})
 $(".header .sj1").css({"top":$('.logo').height()/2 , "border-bottom-width":$('.logo').height()*0.5 ,"border-left-width":$('.logo').height()*0.25})
 $(window).resize(function(){
-
  $(".baner").css({"margin-top":$('.logo').height()/2})
  $(".header .sj").css({"top":$('.logo').height()/2 , "border-bottom-width":$('.logo').height()*0.5,"border-right-width":$('.logo').height()*0.25})
  $(".header .sj1").css({"top":$('.logo').height()/2 , "border-bottom-width":$('.logo').height()*0.5 ,"border-left-width":$('.logo').height()*0.25})
-
 }
 )
 /*美工专属区域*/
@@ -66,7 +64,7 @@ $(window).resize(function(){
                                         var alimat6 = $(".decurlits");
                                         alimat6.height(heights6);
 	img.src=$(".prolist img").attr("src");
-	$(".index-wrap").height($(".wrap").height())
+	// $(".index-wrap").height($(".wrap").height())
 	$(".class-m").height($(".class").outerHeight()-$(".class-top").outerHeight())
 	$(".menulist dl").height($(".menulist dl").width())
 	$(".menu").height($(".menulist dl").outerHeight())
@@ -90,7 +88,7 @@ $(window).resize(function(){
 			
 			
 	$(".class-m").height($(".class").outerHeight()-$(".class-top").outerHeight())
-	 $(".index-wrap").height($(".wrap").height()+$(".quickbar-tips").height()) 
+	 // $(".index-wrap").height($(".wrap").height()+$(".quickbar-tips").height()) 
 	//赖加载
 	
 	});
@@ -154,7 +152,7 @@ $(window).resize(function(){
 		
 	$(".tell-icon .close").click(function(){
 		$(".tell-icon").removeClass("display-block")
-		$(".index-wrap").height($(window).height()-$(".fixed").height())
+		// $("#quickbar-wrap-body").height($(window).height()-$(".fixed").height())
 		return false
 	})
 	
@@ -207,7 +205,7 @@ $(window).resize(function(){
 
 	})		
 	//返回顶部开始
-	$(".back-top").click(function(){$(".index-wrap").animate({scrollTop :0}, 800)})
+	$(".back-top").click(function(){$("#quickbar-wrap-body").animate({scrollTop :0}, 800)})
 	$("#share_btn").click(function(){
 		$(".newsclass").addClass("show")
 		$(".opacity2").show()

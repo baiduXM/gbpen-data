@@ -29,7 +29,7 @@ i,em{font-style:normal;}
 /*全局变量end*/
 
 /*首页 开始*/
-		.header{height:auto; overflow: hidden; width: 1000px; position: absolute; left: 50%; margin-left: -500px; z-index: 1; top:0; }
+		.header{height:98px;width: 1000px; position: absolute; left: 50%; margin-left: -500px; z-index: 1; top:0; }
 		.logo{height:98px; overflow: hidden; }
 		.logo img{display: block; height: 98px; overflow: hidden;}
 		.mune{height:419px;background: url(../images/bg.png); width:178px;padding: 37px 0 ; position: relative;}
@@ -63,7 +63,7 @@ i,em{font-style:normal;}
 		.slideBox .nextStop{ display:none;  }
 		
 		/*焦点广告 结束*/
-	.content{  clear: both; position: relative; width: 1000px; height: auto; margin: 0 auto; background: #fff;}
+	.content{  clear: both; position: relative; width: 1000px; height: auto; margin: 0 auto; background: #fff; display: table;}
 	.about{height:auto; overflow: hidden; background: #ffffff; padding: 25px; width: 262px;}
 	.about h3{ color: #aa855b; font: 18px/36px "微软雅黑";}
 	.about h3 a:hover{color: #d78d07;}
@@ -85,7 +85,7 @@ i,em{font-style:normal;}
 	.products h3{ height: 64px; overflow: hidden; background: #cdab85; padding:0 25px;color: #ffffff; font: 18px/64px "微软雅黑";}
 	.products h3 a{ float: right; width: 45px; height: 20px; line-height: 20px; text-align: center; background: #faf5f2; color: #967e58; font-size: 12px; margin-top: 25px; }
 	.products h3 a:hover{color: #4c3316;}
-	.products h3 a:before{content: ""; width: 670px; height: 10px; border-bottom: 1px dashed #ecd5ba; display:block; position: absolute; left: 250px;}
+	/*.products h3 a:before{content: ""; width: 670px; height: 10px; border-bottom: 1px dashed #ecd5ba; display:block; position: absolute; left: 250px;}*/
 	.picMarquee-left{ width:952px; height:auto; overflow:hidden; position:relative;padding:24px;}
 	.picMarquee-left .bd{padding:0px; }
 	.picMarquee-left .bd ul{ zoom:1;height: 100% !important; }

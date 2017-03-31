@@ -1,15 +1,16 @@
 <section>
 
-      <div class="picMarquee">
-				<ul class="picList1">
-					{$pronum=$index.list2.data|count}<!-- 计算产品的数量-->
-                        {for $item=1 to 5}
-					{foreach  name=list2 item=article from=$index.list2.data}
-                         <li><a href="{$article.link}" class="pic"><img src="{$article.image}" /></a>
+      <div class="bd picMarquee">
+      
+      <ul>
+          {foreach item=article from=$index.list2.data}
+          <li><a href="{$article.link}" class="pic"><img src="{$article.image}" /></a>
                          <a href="{$article.link}" class="title">{$article.title} </a></li>
-                    {/foreach}
-                    {/for}
-				</ul>
+          {/foreach}
+        </ul>
+      
+      
+				
 
 			</div>
 </section>

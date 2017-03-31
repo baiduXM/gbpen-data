@@ -1,0 +1,29 @@
+<div id="aside_nav">
+    <ul id="aside-nav">
+        {foreach item=nav from=$pagenavs}
+        <li>
+            <div class="bg_1"></div>
+            <div class="bg_2">
+                <a href="{if $nav.childmenu}javascript:;{else}{$nav.link}{/if}">{$nav.name}<span>+</span></a>
+                {if $nav.childmenu}
+                <ul>
+                    {foreach key=key item=nav_list from=$nav.childmenu}
+                    <li>
+                        <a href="{if $nav_list.childmenu}javascript:;{else}{$nav_list.link}{/if}">{$nav_list.name}</a>
+                        {if $nav_list.childmenu}
+                        <ul>
+                            {foreach key=key item=nav_listsec from=$nav_list.childmenu}
+                            <li><a href="{$nav_listsec.link}">{$nav_listsec.name}</a></li>
+                            {/foreach}
+                        </ul>
+                        {/if}
+                    </li>
+                    {/foreach}
+                </ul>
+                {/if}
+            </div>
+            <div class="bg_3"></div>
+        </li>
+        {/foreach}
+    </ul>
+</div>

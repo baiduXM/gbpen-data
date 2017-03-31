@@ -37,6 +37,6 @@
  		}
  		
  	}
- 	conter_H('.about','.news','.content');
+ 	// conter_H('.about','.news','.content');
 
  });

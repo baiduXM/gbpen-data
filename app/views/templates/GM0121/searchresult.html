@@ -92,23 +92,18 @@
             </ul>  
 
             <div class="searchbox">
-              <form action="">
-                <input class="sinp" type="text" value="请输入关键字" name="s" />
+              <form action="{$search_action}" method="GET">
+                <input class="sinp" type="text" name="s" value="" placeholder="请输入关键字"/>
                 <input class="sbtn" type="submit" value="搜索" />
               </form>
+              
             </div>          
             <div class="searchlist">
                 <ul class="news-list">
-                  <li><a href=""><h2>如何对待舌尖上的浪费 各国各出奇招（欧美篇）</h2><span>2014-05-15</span></a></li>
-                  <li><a href=""><h2>如何对待舌尖上的浪费 各国各出奇招（欧美篇）</h2><span>2014-05-15</span></a></li>
-                  <li><a href=""><h2>如何对待舌尖上的浪费 各国各出奇招（欧美篇）</h2><span>2014-05-15</span></a></li>
-                  <li><a href=""><h2>如何对待舌尖上的浪费 各国各出奇招（欧美篇）</h2><span>2014-05-15</span></a></li>
-                  <li><a href=""><h2>如何对待舌尖上的浪费 各国各出奇招（欧美篇）</h2><span>2014-05-15</span></a></li>
-                  <li><a href=""><h2>如何对待舌尖上的浪费 各国各出奇招（欧美篇）</h2><span>2014-05-15</span></a></li>
-                  <li><a href=""><h2>如何对待舌尖上的浪费 各国各出奇招（欧美篇）</h2><span>2014-05-15</span></a></li>
-                  <li><a href=""><h2>如何对待舌尖上的浪费 各国各出奇招（欧美篇）</h2><span>2014-05-15</span></a></li>
-                  <li><a href=""><h2>如何对待舌尖上的浪费 各国各出奇招（欧美篇）</h2><span>2014-05-15</span></a></li>
-                  <li><a href=""><h2>如何对待舌尖上的浪费 各国各出奇招（欧美篇）</h2><span>2014-05-15</span></a></li>
+                {foreach item=article from=$search.data}
+                  <li><a href="{$article.link}"><h2>{$article.title}</h2><span>{$article.pubtimestamp|date_format:'%Y-%m-%d'}</span></a></li>
+                {/foreach}
+                  
                 </ul>
                 <div class="next1"><a href="{$page_links.prev_link}">上一页</a><span>{$page_links.current_page}/  {$page_links.page_count}</span><a href="{$page_links.next_link}">下一页</a></div>
                     

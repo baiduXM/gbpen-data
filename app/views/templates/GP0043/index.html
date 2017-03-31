@@ -22,6 +22,7 @@
     <script type="text/javascript" src="{$site_url}js/jquery_banner.js"></script>
     <script type="text/javascript" src="{$site_url}js/jquery_pic.js"></script>
     <script type="text/javascript" src="{$site_url}js/left_nav.js"></script>
+    <script type="text/javascript" src="{$site_url}js/function.js"></script>
     <title>{$title}</title>
     {$headscript}
 </head>
@@ -61,23 +62,21 @@
             <div class="right2">
                 <h3 class="title"><a href="{$index.list4.link}" class="more1"></a><img src="{$site_url}images/tit_l_27.png" height="5" width="28" alt="" /><span>{$index.list4.name}</span><img src="{$site_url}images/tit_r_29.png" height="5" width="28" /></h3>
                 <div class="anli">
-                    <div class="picMarquee">
-                        <!-- 下轮滚 -->
-                        <ul class="picList">
-                            {foreach item=article from=$index.list4.data} {if $article@index % 2 == 0}
-                            <li>
-                                <a href="{$article.link}" class="pic"><img src="{$article.image}" /></a>
-                                <a href="{$article.link}" class="title">{$article.title}</a></li>
-                            {/if} {/foreach}
-                        </ul>
-                        <ul class="picList">
-                            {foreach item=article from=$index.list4.data} {if $article@index % 2 != 0}
-                            <li>
-                                <a href="{$article.link}" class="pic"><img src="{$article.image}" /></a>
-                                <a href="{$article.link}" class="title">{$article.title}</a></li>
-                            {/if} {/foreach}
-                        </ul>
-                    </div>
+                <div class="inner">
+                <div class="bd "> 
+                {foreach item=article from=$index.list4.data}
+      <div class="ulWrap">
+     
+               <li><a href="{$article.link}"><div class="pic"><img src="{$article.image}" /></div>{$article.title}</a></li>
+         
+          
+       </div> {/foreach}
+       
+       
+                
+       
+    </div> </div>
+             
                 </div>
             </div>
         </div>

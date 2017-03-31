@@ -9,9 +9,15 @@ jQuery(".hxz").slide({mainCell:".bd ul",autoPlay:true,effect:"leftMarquee",vis:5
 
 jQuery(".pro_det").slide({mainCell:"ul",autoPlay:true,effect:"leftMarquee",vis:4,interTime:50});
 
-jQuery('.gd .picMarquee').slide({mainCell:"ul.picList1",autoPlay:true,effect:"leftMarquee",vis:5,interTime:50});
+jQuery(".gd").slide({mainCell:".bd ul",autoPlay:true,effect:"leftMarquee",vis:5,interTime:50});	
 
-jQuery('.anli .picMarquee').slide({mainCell:"ul.picList",autoPlay:true,effect:"leftMarquee",vis:4,interTime:50}); 
+jQuery(".anli .inner li").each(function(i){
+jQuery(".anli .inner li").slice(i*2,i*2+2).wrapAll("<ul></ul>")
+})
+jQuery(".anli .inner").slide({mainCell:".bd .ulWrap",autoPlay:true,effect:"leftMarquee",vis:4,interTime:50});
+
+
+
 
  // 导航下拉
 
@@ -28,15 +34,20 @@ jQuery('.anli .picMarquee').slide({mainCell:"ul.picList",autoPlay:true,effect:"l
     });
 
 
-
-	 
- 	var ul=$(".current").children('.clearfix')
+var ul=$(".current").children('.clearfix')
  	 var a=$(".current").children('a')
  	if (ul.length>0) {
-        a.attr("href","javascript:void(0)")
+     
  		a.click(function() {
  		$(this).next().slideToggle()
  	});
+ 	
+	
+	
+	
+	
+	 
+ 
  	};
  });
 

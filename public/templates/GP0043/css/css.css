@@ -91,12 +91,14 @@ h3.title a.more1{float: right;width: 35px;height: 11px;display: block;background
 .about_xq .ms{line-height: 23px;/*width: 544px;*/height: 143px;overflow: hidden;}
 .right2{margin-top: 10px;width: 100%;height: auto;overflow: hidden;}
 .anli{border: 1px solid #e2c898;padding: 0 18px;background: #fef4e2;}
-.anli .picMarquee{width:100%;height:427px;overflow: hidden;}
-.anli .picMarquee .tempWrap{width:100% !important;height:188px;overflow: hidden;margin:18px auto 0px;}
-.anli .picMarquee li{float: left;width:160px;height:100%;overflow: hidden;margin: 0 8px;}
-.anli .picMarquee li a.pic{width: 100%;height:147px;overflow: hidden;display: block;}
-.anli .picMarquee li a.title{width: 100%;height: 42px;line-height: 42px;display: block;text-align: center;}
-
+.anli .bd{width:100%;height:427px;overflow: hidden;}
+.anli .bd .tempWrap{width:100% !important;height:410px;overflow: hidden;margin:18px auto 0px;}
+.anli .bd li{float: left;width:170px;overflow: hidden;margin: 0 8px;}
+.anli .bd li .pic{width:165px;height:165px;margin:auto; overflow:hidden; border:1px solid #ddd}
+.anli .bd li .pic img{ display:block}
+.anli .bd li a.title{width: 100%;height: 42px;line-height: 42px;display: block;text-align: center;}
+.anli .bd{ width:700px; overflow:hidden}
+.anli ul{ width:180px; overflow:hidden; float:left}
 /*footer*/
 .footer{width: 1003px;height:86px;text-align: center;line-height: 24px;margin: 0 auto;color: #f1ca81;padding-top: 15px;}
 .footer a{color: #f1ca81;}

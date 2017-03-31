@@ -1,49 +1,16 @@
-body {
-	color:#666;
-	font-family:Arial, Helvetica, sans-serif;
-	background:#00bfff;
-}
-body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, input, textarea, div {
-	margin:0px;
-	padding:0px;
-	list-style:none;
-	line-height:24px;
-	font-size:12px;
-	font-weight:normal;
-}
-body, div, ul, li, dl, dt, dd {
-	font-size:12px;
-}
-.clearfix:after {
-	content:'\20';
-	display:block;
-	height:0;
-	clear:both;
-}
-.clearfix {
-*zoom:1;
-	font-size:0px;
-}
-a {
-	color:#666;
-	text-decoration:none
-}
-a:hover {
-	color:#ff0000;
-	text-decoration:none;
-}
-img {
-	border:none;
-}
-.c {
-	clear:both
-}
-.wrapper {
-	width:1010px;
-	margin:0 auto;
-}
+body{ color:#666; font-family:Microsoft Yahei,Arial, Helvetica, sans-serif; background:#00bfff;}
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ol,pre,form,input,textarea{margin:0;padding:0; list-style:none; line-height:24px; font-size:12px; font-weight:normal}
+ul,li{margin:0; padding:0;list-style:none; font-weight:normal;}
+a{ color:#666; text-decoration:none; }
+a:hover{ color:#ff0000; } 
+img{ border:none;}
+.clearfix:after { content:'\20'; display:block; height:0; clear:both; }
+.clearfix { *zoom:1; }
+.wrapper{width:1010px; margin:0 auto;}
 
+display:block; white-space:nowrap; text-overflow:ellipsis; overflow:hidden;
 strong{display: block;margin: 0 auto;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+
 
 #header {
 }
