@@ -29,7 +29,7 @@
       <div class="wide"><b> {$index.about.en_name}</b>{$index.about.name}</div>
     </h2>
     <div class="inner">
-      <div class="about_img"><img src="{$index.about.image}" /></div>
+      <div class="about_img"><a href="{$index.about.link}"><img src="{$index.about.image}" /></a></div>
       <div class="text"> <a href="{$index.about.link}">{$index.about.description}</a> </div>
     </div>
   </div>
@@ -38,7 +38,7 @@
       <div class="wide"><b>{$index.news.en_name}</b>{$index.news.name}</div>
     </h2>
     <div class="inner">
-      <div class="news_img"><img src="{$index.news.image}" /></div>
+      <div class="news_img"><a href="{$index.news.link}"><img src="{$index.news.image}" /></a></div>
       <div class="text">
         <ul>
           {foreach name=news item=news from=$index.news.data}

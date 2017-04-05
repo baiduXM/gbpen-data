@@ -62,11 +62,11 @@
     
       {foreach name=news item=news from=$index.news.data}
      <li>
-        <div class="picture">
+        <div class="picture"><a href="{$news.link}">
           <div class="line"></div>
           <div class="time">{$news.pubtimestamp|date_format:'%m-%d'}</div>
           <div class="short"></div>
-          <img src="{$news.image}" /> </div>
+          <img src="{$news.image}" /></div></a> 
         <h2><a href="{$news.link}">{$news.title}</a></h2>
         <div class="word">{$news.description} </div>
         <div class="more"><a href="{$news.link}"><img src="{$site_url}images/news_more.png" /></a></div>

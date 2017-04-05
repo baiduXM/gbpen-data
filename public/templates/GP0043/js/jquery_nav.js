@@ -5,16 +5,16 @@
  $(document).ready(function($) {
 	 
 	 
-jQuery(".hxz").slide({mainCell:".bd ul",autoPlay:true,effect:"leftMarquee",vis:5,interTime:50});
+    jQuery(".hxz").slide({mainCell:".bd ul",autoPlay:true,effect:"leftMarquee",vis:5,interTime:50});
 
-jQuery(".pro_det").slide({mainCell:"ul",autoPlay:true,effect:"leftMarquee",vis:4,interTime:50});
+    jQuery(".pro_det").slide({mainCell:"ul",autoPlay:true,effect:"leftMarquee",vis:4,interTime:50});
 
-jQuery(".gd").slide({mainCell:".bd ul",autoPlay:true,effect:"leftMarquee",vis:5,interTime:50});	
+    jQuery(".gd").slide({mainCell:".bd ul",autoPlay:true,effect:"leftMarquee",vis:5,interTime:50});
 
-jQuery(".anli .inner li").each(function(i){
-jQuery(".anli .inner li").slice(i*2,i*2+2).wrapAll("<ul></ul>")
-})
-jQuery(".anli .inner").slide({mainCell:".bd .ulWrap",autoPlay:true,effect:"leftMarquee",vis:4,interTime:50});
+    jQuery(".anli .inner li").each(function(i){
+        jQuery(".anli .inner li").slice(i*2,i*2+2).wrapAll("<ul></ul>")
+    })
+    jQuery(".anli .inner").slide({mainCell:".bd",autoPlay:true,effect:"leftMarquee",vis:4,interTime:50});
 
 
 

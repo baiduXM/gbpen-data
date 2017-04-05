@@ -9,6 +9,8 @@
         parent.location.href = '{$site_another_url}';
     } {/if}
     </script>
+
+
     
     <!-- 调试代码 End -->
     <meta http-equiv="x-ua-compatible" content="IE=9,chrome=1" />
@@ -53,30 +55,38 @@
         </div>
         <div class="contant_right">
             <div class="right1">
-                <h3 class="title"><img src="{$site_url}images/tit_l_27.png" height="5" width="28" alt="" /><span>{$index.list3.name}</span><img src="{$site_url}images/tit_r_29.png" height="5" width="28" /></h3>
+                <h3 class="title">
+                    <img src="{$site_url}images/tit_l_27.png" height="5" width="28" alt="" />
+                    <span>{$index.list3.name}</span>
+                    <img src="{$site_url}images/tit_r_29.png" height="5" width="28" />
+                </h3>
                 <div class="about_xq">
                     <div class="about-pic"><img src="{$index.list3.image}" alt="" /></div>
                     <div class="ms"><a href="{$index.list3.link}">{$index.list3.description}</a></div>
                 </div>
             </div>
             <div class="right2">
-                <h3 class="title"><a href="{$index.list4.link}" class="more1"></a><img src="{$site_url}images/tit_l_27.png" height="5" width="28" alt="" /><span>{$index.list4.name}</span><img src="{$site_url}images/tit_r_29.png" height="5" width="28" /></h3>
+                <h3 class="title">
+                    <a href="{$index.list4.link}" class="more1"></a>
+                    <img src="{$site_url}images/tit_l_27.png" height="5" width="28" alt="" />
+                    <span>{$index.list4.name}</span>
+                    <img src="{$site_url}images/tit_r_29.png" height="5" width="28" />
+                </h3>
                 <div class="anli">
-                <div class="inner">
-                <div class="bd "> 
-                {foreach item=article from=$index.list4.data}
-      <div class="ulWrap">
-     
-               <li><a href="{$article.link}"><div class="pic"><img src="{$article.image}" /></div>{$article.title}</a></li>
-         
-          
-       </div> {/foreach}
-       
-       
-                
-       
-    </div> </div>
-             
+                    <div class="inner">
+                        <div class="bd ">
+                            {foreach item=article from=$index.list4.data}
+
+                                <li>
+                                    <a href="{$article.link}">
+                                        <div class="pic"><img src="{$article.image}" /></div>
+                                        {$article.title}
+                                    </a>
+                                </li>
+
+                            {/foreach}
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
