@@ -88,6 +88,16 @@
 			"width": 100,
 			"height": 100
 		}
+	},
+	"telOff":{
+		"description":"底部是否显示“火热加盟热线”,默认1,显示",
+		"value":"1",
+		"type":"text"
+	},
+	"telDes":{
+		"description":"填写'0',则填写此处",
+		"value":" ",
+		"type":"text"
 	}
 	
 }

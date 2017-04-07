@@ -18,8 +18,11 @@
                  </a>
                  <div class="tel">
                      <span>{$contact.telephone}</span>
+                     {if $global.telOff eq 1}
                      <p>火热加盟热线</p>
-
+                      {else}
+                      <p>{$global.telDes}</p>
+                     {/if}
                  </div>
              </div>
          </div>
