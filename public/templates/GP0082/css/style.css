@@ -147,11 +147,12 @@
 .content .left_c .l_list .firstli:hover{background: #6eb17d;color:#fff;}
 .content .left_c .l_list .firstli.on{background: #6eb17d;color:#fff;}
 .content .left_c .l_list .firstli.on .c{color:#fff;}
-.l_list .secondul{background: #e6e6e6;}
+.l_list .secondul{background: #e6e6e6;display: none;}
 .l_list .secondli{color:#333;text-indent: 20px;}
 .l_list .secondli .cc{color:#333;}
 .l_list .secondli.on a{color: #6eb17d;text-decoration:underline;}
 .l_list .secondli:hover .cc{color: #6eb17d;text-decoration:underline; }
+.l_list .secondli ul{display: none;}
 .l_list .secondli ul li{text-indent: 40px;}
 .l_list .secondli ul li.on a{color:#6eb17d;text-decoration:underline;}
 .l_list .secondli ul li:hover a{color:#6eb17d;text-decoration:underline;}
