@@ -1,0 +1,48 @@
+{
+    "links": {
+        "value": [{
+            "title": "易尔通",
+            "image": "",
+            "link": "{site_url}article/1.html"
+        }, {
+            "title": "易尔通",
+            "image": "",
+            "link": "{site_url}article/2.html"
+        }, {
+            "title": "易尔通",
+            "image": "images/link_img.jpg",
+            "link": "{site_url}article/4.html"
+        }],
+        "description": "友情链接",
+        "type": "images",
+        "config": {
+            "width": 0,
+            "height": 0
+        }
+    },
+    "qq":{
+        "description":"在线qq联系",
+        "value":"tencent://message/?uin=123456&Site=工具啦&Menu=yes",
+        "type":"text"
+    },
+    "wx": {
+        "value":
+        {
+            "title": "wx",
+            "image": "images/weixin.PNG",
+            "link": "www.baidu.com",
+            "description": "image"
+        },
+        "description": "微信二维码",
+        "type": "image",
+        "config": {
+            "width": 122,
+            "height": 122
+        }
+    },
+    "wb":{
+        "description":"微博地址",
+        "value":"http://www.weibo.com/?c=spr_sinamkt_buy_kuping_weibo_t104",
+        "type":"text"
+    }
+}

@@ -1,0 +1,68 @@
+{   
+	"bgimg": {
+		"value": {
+			"title": "内页背景图",
+			"image": "images/ny_bg.png",
+			"link": "http://www.baidu.com/"
+		},
+		"description": "内页背景图",
+		"type": "image",
+		"config": {
+			"width":1920,
+			"height": 1240
+		}
+	},
+	"pagenavss": {
+		"value": {},
+		"description": "侧边栏目列表（当前栏目无子栏目时展示的目标栏目）",
+		"type": "list",
+		"config": {
+			"filter": "list,page",
+			"mustchild": true
+		}
+	},
+	"links": {
+		"value": [{
+			"title": "百度",
+			"image": "images/link.jpg",
+			"link": "http://www.baidu.com",
+			"description": "友情链接1"
+		}, {
+			"title": "淘宝",
+			"image": "images/link.jpg",
+			"link": "http://www.baidu.com",
+			"description":"友情链接2"
+		},{
+			"title": "京东",
+			"image": "images/link.jpg",
+			"link": "http://www.baidu.com",
+			"description":"友情链接3"
+		},
+		{
+			"title": "搜狐网",
+			"image": "images/link.jpg",
+			"link": "http://www.baidu.com",
+			"description":"友情链接5"
+		},
+		{
+			"title": "豆网",
+			"image": "images/link.jpg",
+			"link": "http://www.baidu.com",
+			"description":"友情链接6"
+		},
+		{
+			"title": "环球网",
+			"image": "images/link.jpg",
+			"link": "http://www.baidu.com",
+			"description":"友情链接6"
+		}
+		],
+		"description": "页脚友情链接",
+		"type": "images",
+		"config":{
+			"width":89,
+			"height":39
+		  }
+	    }
+	
+}

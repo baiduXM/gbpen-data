@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <script type="text/javascript">
@@ -101,7 +101,7 @@
 {foreach name=lnav item=lnav from=$index.left_nav.childmenu}
              <li><a href="{$lnav.link}">{$lnav.name}</a></li>
             
-            {if $lnav@index+1 == 10}{break}{/if}
+            {if $lnav@index+1 == 6}{break}{/if}
            {/foreach}
 
 

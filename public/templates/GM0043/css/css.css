@@ -126,7 +126,7 @@ ul.news-list li a:before{ top:5px; left:0px; text-indent:0px; height:28px; line-
 .fix-font{ position: absolute; right:0px; top:40px; z-index:99999}
 
 .bigimgbox { height: auto; margin: 10px auto; overflow: hidden;  width: 80%;}
-.search{width: 30rem;height: auto;overflow: hidden;text-align: center;margin: 1rem auto;font-size: 1.2rem;color: #7d7d7d;line-height: 2rem;}
+.search{width:100%;height: auto;overflow: hidden;text-align: center;margin: 1rem auto;font-size: 1.2rem;color: #7d7d7d;line-height: 2rem;}
 .search mark{background: none;font-size: 1.6rem;color: rgba(122,43,43,1);}
 
 @keyframes opacity{

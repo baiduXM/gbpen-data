@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html manifest="huancun.manifest">
+<head>
+    <!-- 实时预览调试代码，模板开发完成后删除 -->
+    
+    <!-- 调试代码 End -->
+    <script type="text/javascript">
+        // 跳转PC页面
+        {if $site_another_url}
+            if (!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+                location.href = '{$site_another_url}';
+            }
+            {/if}
+    </script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no,minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta content="telephone=no, email=no" name="format-detection">
+    <!-- 启用360浏览器的极速模式(webkit) -->
+    <meta name="renderer" content="webkit">
+    <!-- 避免IE使用兼容模式 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+    <meta name="HandheldFriendly" content="true">
+    <!-- 微软的老式浏览器 -->
+    <meta name="MobileOptimized" content="320">
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <meta name="keywords" content="{$keywords}" />
+    <meta name="description" content="{$description}" />
+    <link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
+    <title>{$title}</title>
+    <link rel="stylesheet" href="{$site_url}css/animate.min.css"/>
+    <link rel="stylesheet" href="{$site_url}css/swiper-3.4.1.min.css"/>
+    <script src="{$site_url}js/swiper-3.4.1.min.js"></script>
+    <script src="{$site_url}js/swiper.animate1.0.2.min.js"></script>
+    <script src="{$site_url}js/html5shiv.js"></script>
+    <script src="{$site_url}js/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="{$site_url}css/css.css"/>
+    <script src="{$site_url}js/js.js"></script>
+    <script type="text/javascript">
+        window.addEventListener('load', function(){
+            setTimeout(function(){ window.scrollTo(0, 1); }, 100);
+        });//safari浏览器可以通过此代码来隐藏地址栏
+    </script>
+</head>
+<body>
+<div id="index-wrap">
+    {include file="./_header.html"}
+    <section>
+        <div id="aside_nav">
+            <div class="left">
+                <h3>{$list.en_name}</h3>
+                <h4>{$list.name}</h4>
+            </div>
+            <!--<div class="right">
+                <div class="fenlei" id="aside_nav_click">分类<span></span></div>
+                &lt;!&ndash; <div class="zi">字</div>&ndash;&gt;
+            </div>-->
+        </div>
+       
+        <div id="product_aside">
+            <div class="product_content">
+                <ul>
+                    {foreach name=article item=article from=$list.data}
+                    <li>
+                        <a href="{$article.link}">
+                            <div><img src="{$article.image}" alt=""/></div>
+                            <h3>{$article.title}</h3>
+                        </a>
+                    </li>
+                    {if $article@index+1 == 8} {break} {/if}
+                    {/foreach}
+                    <div class="clear"></div>
+                </ul>
+            </div>
+            <div class="page_num">
+                <span><a href="{$page_links.first_link}" class="public_color">首页</a></span>
+                <span><a href="{$page_links.prev_link}" class="public_color">上一页</a></span>
+                <span>{$page_links.current_page}/{$page_links.page_count}</span>
+                <span><a href="{$page_links.next_link}" class="public_color">下一页</a></span>
+                <span><a href="{$page_links.last_link}" class="public_color">尾页</a></span>
+            </div>
+        </div>
+    </section>
+    {include file="./_footer.html"}
+</div>
+
+{$footscript}
+</body>
+</html>

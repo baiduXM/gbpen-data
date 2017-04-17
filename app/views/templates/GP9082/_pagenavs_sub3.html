@@ -6,12 +6,12 @@
 <div class="l_list">
 	<ul class="firstul">
 	{foreach name=pagenavs item=nav from=$pagenavs}
-		<li class="firstli {if $nav.current} on {/if}">><a href="{$nav.link}" class="c">{$nav.name}</a>
+		<li class="firstli {if $nav.current} on {/if}">><a href="{if $nav.childmenu}javascript:; {else} {$nav.link}{/if}" class="c">{$nav.name}</a>
 			<ul class="secondul">	
 			{if $nav.childmenu}
 				{foreach item=nav_list from=$nav.childmenu}
-					<li class="secondli {if $nav_list.current} on {/if}">><a href="{$nav_list.link}" class="cc">{$nav_list.name}</a>	
-						<ul>
+					<li class="secondli {if $nav_list.current} on {/if}">><a href="{if $nav_list.childmenu}javascript:; {else} {$nav_list.link}{/if}" class="cc">{$nav_list.name}</a>	
+						<ul class="thrul">
 						{if $nav_list.childmenu}
 						{foreach item=nav1_list from=$nav_list.childmenu}
 							<li class="{if $nav1_list.current} on {/if}"><a href="{$nav1_list.link}">{$nav1_list.name}</a></li>
@@ -34,12 +34,12 @@
 <div class="l_list">
 	<ul class="firstul">
 	{foreach name=pagenavs item=nav from=$_pagenavs_sub3.pagenavs.childmenu}
-		<li class="firstli">><a href="{$nav.link}" class="c">{$nav.name}</a>
+		<li class="firstli">><a href="{if $nav.childmenu}javascript:; {else} {$nav.link}{/if}" class="c">{$nav.name}</a>
 			<ul class="secondul">	
 			{if $nav.childmenu}
 				{foreach item=nav_list from=$nav.childmenu}
-					<li class="secondli">><a href="{$nav_list.link}" class="cc">{$nav_list.name}</a>
-						<ul>
+					<li class="secondli">><a href="{if $nav_list.childmenu}javascript:; {else} {$nav_list.link}{/if}" class="cc">{$nav_list.name}</a>
+						<ul class="thrul">
 						{if $nav_list.childmenu}
 						{foreach item=nav1_list from=$nav_list.childmenu}
 							<li><a href="{$nav1_list.link}">{$nav1_list.name}</a></li>

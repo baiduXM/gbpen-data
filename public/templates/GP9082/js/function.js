@@ -69,23 +69,44 @@
 		
 	  	
 		  /*内页三级菜单下拉*/
-	  	jQuery(".secondul").slide({
-				titCell:".secondli", //鼠标触发对象
-				targetCell:".secondli ul", //与titCell一一对应，第n个titCell控制第n个targetCell的显示隐藏
-				effect:"slideDown", //targetCell下拉效果
-				delayTime:300 , //效果时间
-				triggerTime:0, //鼠标延迟触发时间（默认150）
-				defaultPlay:true,//默认是否执行效果（默认true）
-				});
-	  	jQuery(".firstul").slide({
-				titCell:".firstli", //鼠标触发对象
-				targetCell:".firstli ul", //与titCell一一对应，第n个titCell控制第n个targetCell的显示隐藏
-				effect:"slideDown", //targetCell下拉效果
-				delayTime:300 , //效果时间
-				triggerTime:0, //鼠标延迟触发时间（默认150）
-				defaultPlay:true,//默认是否执行效果（默认true）
-				returnDefault:true 
-				});
+	  	// jQuery(".secondul").slide({
+				// titCell:".secondli", //鼠标触发对象
+				// targetCell:".secondli ul", //与titCell一一对应，第n个titCell控制第n个targetCell的显示隐藏
+				// effect:"slideDown", //targetCell下拉效果
+				// delayTime:300 , //效果时间
+				// triggerTime:0, //鼠标延迟触发时间（默认150）
+				// defaultPlay:true,//默认是否执行效果（默认true）
+				// });
+	  	// jQuery(".firstul").slide({
+				// titCell:".firstli", //鼠标触发对象
+				// targetCell:".firstli ul", //与titCell一一对应，第n个titCell控制第n个targetCell的显示隐藏
+				// effect:"slideDown", //targetCell下拉效果
+				// delayTime:300 , //效果时间
+				// triggerTime:0, //鼠标延迟触发时间（默认150）
+				// defaultPlay:true,//默认是否执行效果（默认true）
+				// returnDefault:true 
+				// });
+				$(function(){
+				    $(".firstul > li > a").click(function(){
+					     $(this).addClass("xz").parents().siblings().find("a").removeClass("xz");
+						 $(this).parents().siblings().find(".secondul").hide(300);
+						 $(this).siblings(".secondul").toggle(300);
+						 $(this).parents().siblings().find(".secondul > li > .secondli").hide().parents().siblings().find(".thr_nr").hide();
+						
+					})
+					
+				    $(".secondul > li > a").click(function(){
+				        $(this).addClass("sen_x").parents().siblings().find("a").removeClass("sen_x");
+				        $(this).parents().siblings().find(".thrul").hide(300);	
+					    $(this).siblings(".thrul").toggle(300);	
+					})
+
+				    $(".thrul > li > a").click(function(){
+					     $(this).addClass("xuan").parents().siblings().find("a").removeClass("xuan");
+						 $(this).parents().siblings().find(".thr_nr").hide();	
+					     $(this).siblings(".thr_nr").toggle();
+					})
+				})
 
 	  	
 		//限制字符个数

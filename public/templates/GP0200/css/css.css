@@ -181,9 +181,9 @@ form.search input.submit{width: 54px;height: 32px;overflow: hidden;background: u
 .focusBox { position: relative; width:486px; height:auto; overflow: hidden;margin: 16px auto 0;}
 .focusBox .tempWrap{width: 325px !important;margin: 0 auto}
 .focusBox ul{width: 325px;height: auto;overflow: hidden;margin: 0 auto;}
-.bigImg{width: 325px;height: 421px;overflow: hidden;margin: 0 auto;background: url(../images/bigImg.png) no-repeat;display: table;}
-.bigImg span{display: table-cell;vertical-align: middle;}
-.bigImg span img { max-width:298px; max-height:397px; display: block;margin: 10px 12px 11px 13px;padding: 1px;background: #f3f4ef;}
+.bigImg{width: 325px;height: 421px;overflow: hidden;margin: 0 auto;background:#f3f4ef url(../images/bigImg.png) no-repeat;}
+.bigImg span{width: 325px;height: 421px; display: table-cell;text-align: center; vertical-align: middle;}
+.bigImg span img { max-width:296px; max-height:397px;}
 
 .focusBox .prev,.focusBox .next { width:30px; height:48px; position:absolute; top:50%;margin-top: -30px; z-index:3;}
 .focusBox .prev { background-image:url(../images/pn.png); background-position:0 0; left:0 }

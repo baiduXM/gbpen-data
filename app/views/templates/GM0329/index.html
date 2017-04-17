@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html manifest="huancun.manifest">
+<head>
+<!-- 实时预览调试代码，模板开发完成后删除 -->
+    
+    <!-- 调试代码 End -->
+    <script type="text/javascript">
+    // 跳转PC页面
+    {if $site_another_url}
+      if (!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+        location.href = '{$site_another_url}';
+      }
+    {/if}
+    </script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no,minimal-ui">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta content="telephone=no, email=no" name="format-detection">
+<!-- 启用360浏览器的极速模式(webkit) -->
+<meta name="renderer" content="webkit">
+<!-- 避免IE使用兼容模式 -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+<meta name="HandheldFriendly" content="true">
+<!-- 微软的老式浏览器 -->
+<meta name="MobileOptimized" content="320">
+<!-- uc强制竖屏 -->
+<meta name="screen-orientation" content="portrait">
+<!-- QQ强制竖屏 -->
+<meta name="x5-orientation" content="portrait">
+<title>{$title}</title>
+<meta name="keywords" content="{$keywords}" />
+<meta name="description" content="{$description}" />
+<link rel="stylesheet" href="{$site_url}css/public.css" /> 
+<link rel="stylesheet" href="{$site_url}css/swiper-3.3.1.min.css" /> 
+<script src="{$site_url}js/TouchSlide.1.1.js"></script>
+<script type="text/javascript" src="{$site_url}js/jquery.min.js"></script>
+<script type="text/javascript" src="{$site_url}js/swiper-3.3.1.jquery.min.js"></script>
+<script type="text/javascript" src="{$site_url}js/function.js"></script>
+<script type="text/javascript" src="{$site_url}js/simple-app.js"></script>
+<script type="text/javascript">
+	window.addEventListener('load', function(){
+   setTimeout(function(){ window.scrollTo(0, 1);}, 100);
+});//safari浏览器可以通过此代码来隐藏地址栏
+</script>
+{$headscript}
+</head>
+<body>
+    <!-- 主体内容 -->
+    <div class="index-wrap">
+      <div class="htop">
+        <header class="head">
+          <div class="logo"><img src="{$logo}" width="100%"></div>
+        </header>
+        <!-- banner -->
+         <div class="banner">
+            <!-- 头部导航 -->
+            <nav class="menulist">
+                  <div class="swiper-nav swiper-container">
+                    <a class="arrow-left" href="">&lt;</a>
+                    <a class="arrow-right" href="">&gt;</a>
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide"><a href="{$site_url}">网站首页</a></div>
+                      {foreach item=nav from=$navs}
+                      <div class="swiper-slide"><a href="{$nav.link}">{$nav.name}</a></div>
+                      {/foreach}
+                    </div>
+                  </div>
+            </nav> 
+            <div class="swiper-container swiper-banner">
+                <ul class="swiper-wrapper banner-img">
+                    {foreach item=slidepic from=$global.slidepics}
+                      <li class="swiper-slide"><a class="pic" href="{$slidepic.link}"><img src="{$slidepic.image}"/></a></li>
+                    {/foreach}
+                </ul>
+                <!-- Add Pagination -->
+                <div class="swiper-dote"><ul></ul></div>
+            </div>
+         </div> 
+      </div> 
+      <!-- 内容 -->
+      <section>
+      {foreach item=mIndexCat from=$mIndexCats}
+      {if $mIndexCat.type eq 4}
+        {if $mIndexCat.showtype eq 1}
+        <div class="aboutbox">
+            <div class="ab_left fl pr">
+               <div class="abimg"><img src="{$mIndexCat.image}"></div>
+               <p class="title pa"><a href="{$mIndexCat.link}"><span class="db tc">{$mIndexCat.name}</span>MORE+</a></p>
+            </div>
+            <div class="ab_right fr">
+                {$mIndexCat.description}<a href="{$mIndexCat.link}">【查看详细】</a>
+            </div>
+        </div>
+        {/if}
+      {elseif $mIndexCat.type eq 2}
+        {if $mIndexCat.showtype eq 1}
+        <div class="anlibox pr">
+             <ul class="an_list">
+              {foreach item=anli from=$mIndexCat.data}
+                <li><a href="{$anli.link}" class="db">
+                  <div class="alimg"><img src="{$anli.image}"></div>
+                  <p class="al_name pa">{$anli.title}</p>
+                </a></li>
+                {if $anli@index+1 == 4}{break}{/if}
+              {/foreach}
+             </ul>
+             <p class="title pa"><a href="{$mIndexCat.link}"><span class="db tc">{$mIndexCat.name}</span>MORE+</a></p>
+        </div>
+        {/if}
+      {elseif $mIndexCat.type eq 1}
+        {if $mIndexCat.showtype eq 1}
+        <div class="newbox pr">
+             <div class="lidec"><a href="{$mIndexCat.data[0].link}">
+                <div class="decl fl"><div class="imgdiv dtc tc"><img src="{$mIndexCat.data[0].image}"></div></div>
+                <div class="decr fr">
+                     <dd>{$mIndexCat.data[0].title}</dd>
+                     <dt>{$mIndexCat.data[0].description}</dt>
+                </div>
+             </a></div>
+             <ul class="newlist">
+                 <li><a href="{$mIndexCat.data[1].link}">{$mIndexCat.data[1].title}</a></li>
+                 <li><a href="{$mIndexCat.data[2].link}">{$mIndexCat.data[2].title}</a></li>
+                 <li><a href="{$mIndexCat.data[3].link}">{$mIndexCat.data[3].title}</a></li>
+             </ul>
+             <!-- <ul class="newlist">
+                {$sum=1}
+                {foreach item=new from=$mIndexCat.data}
+                 <li><a href="{$new.link}">{$new.title}</a></li>
+                 {$sum=$sum+1}
+                {if $new@index+1 == 3}{break}{/if}
+                {/foreach}
+             </ul> -->
+             <p class="title pa"><a href="{$mIndexCat.link}"><span class="db tc">{$mIndexCat.name}</span>MORE+</a></p>
+        </div>
+        {/if}
+      {/if} 
+      {/foreach}
+        <div class="contact">
+             <p class="title fl"><a href="{$global.tact.link}"><span class="db tc">{$global.tact.title}</span>MORE+</a></p>
+             <div class="tact fr">
+                  <p>{$contact.company} </p>
+                  <span>地 址：{$contact.address} </span> 
+                  <span>电 话：{$contact.telephone}</span>
+                  <span>传 真：{$contact.fax}</span> 
+                  <span>邮 箱：{$contact.mail}</span>
+                    
+             </div>
+        </div>
+      </section>
+      <footer class="foot"><span class="back-top">TOP</span>
+        {$footprint}</p>
+      </footer>
+      {$footscript}
+    </div>
+</body>
+</html>

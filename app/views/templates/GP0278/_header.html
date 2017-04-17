@@ -16,7 +16,7 @@
             {if $navs|count lt $limit}{$limit = $navs|count}{/if}
            
             {foreach name=navs item=nav from=$navs}
-            <li class="fl{if $nav.current} current{/if} aa" style="width:{100/($limit+1)}%">
+            <li class="fl{if $nav.current} current{/if} aa" style="width:{100/($navs|count)}%">
                 <a href="{$nav.link}">{$nav.name}</a>
                 <ul class="sub clearfix">
                     {if $nav.childmenu} {foreach key=key item=nav_list from=$nav.childmenu}

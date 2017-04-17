@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="text/javascript">
+  // 跳转PC页面
+  {if $site_another_url}
+      if (!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+          location.href = '{$site_another_url}';
+      }
+  {/if}
+  </script>
+  <!-- 实时预览调试代码，模板开发完成后删除 -->
+
+  <meta name="x5-orientation" content="portrait">
+  <title>{$title}</title>
+  <meta name="keywords" content="{$keywords}" />
+  <meta name="description" content="{$description}" />
+  <link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no,minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta content="telephone=no, email=no" name="format-detection">
+  <!-- 启用360浏览器的极速模式(webkit) -->
+  <meta name="renderer" content="webkit">
+  <!-- 避免IE使用兼容模式 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+  <meta name="HandheldFriendly" content="true">
+  <!-- 微软的老式浏览器 -->
+  <meta name="MobileOptimized" content="320">
+  <!-- uc强制竖屏 -->
+  <meta name="screen-orientation" content="portrait">
+  <meta name="x5-orientation" content="portrait">
+  <link rel="stylesheet" href="{$site_url}css/reset.css" /> 
+  <link href="{$site_url}css/css.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="{$site_url}css/swiper.min.css">
+  <script type="text/javascript" src="{$site_url}js/jquery.min.js"></script>
+  <script src="{$site_url}js/idangerous.swiper-2.0.min.js"></script>
+  <script src="{$site_url}js/TouchSlide.1.1.js"></script>
+
+  <script type="text/javascript" src="{$site_url}js/simple-app.js"></script>
+  <script type="text/javascript" src="{$site_url}js/fontsize.js"></script>
+  <script type="text/javascript" src="{$site_url}js/function.js"></script>
+  <script type="text/javascript">
+    window.addEventListener('load', function(){
+     setTimeout(function(){ window.scrollTo(0, 1); }, 100);
+  });//safari浏览器可以通过此代码来隐藏地址栏
+  </script>
+  {$headscript}
+</head>
+<body>
+<div class="index-wrap">
+    <div class="header">
+        <a href="" class="logo"><img src="{$logo}"></a>
+        <a href="#" class="menuico" id="quickbar-showcats"><img src="{$site_url}images/icon6.png" /></a>
+        <em class="shu"></em>
+        <div class="search">  
+        <div class="searcha">
+          <input type="submit" class="search1" value="">
+        </div>
+        <form class="searchb" action="searchresult.html?s=" method="GET" name="fm">
+          <input type="text" name="s" class="txt1" placeholder="请输入搜索关键字">
+          <input type="submit" class="search1" value="">
+        </form>
+        </div> 
+     </div>
+     <div id="banner" class="swiper-container">
+      <div class="swiper-wrapper">
+          {foreach item=slidepic from=$global.slidepics}
+            <div class="swiper-slide"><a href="{$slidepic.link}"><img src="{$slidepic.image}"  class="swiper-no-swiping"></a></div>
+          {/foreach}
+      </div>
+      <div class="pagination"></div>
+    </div>
+     <section>
+        {foreach item=mIndexCat from=$mIndexCats}
+        {if $mIndexCat.type eq 4}
+          {if $mIndexCat.showtype eq 2}
+        <div class="about">
+          <div class="index_title">
+            <h2 class="about_tit">{$mIndexCat.name}<em></em></h2>
+            <a class="index_more fr" href="{$mIndexCat.link}">MORE+</a>
+          </div>
+          <div class="about_cont">
+            <div class="text">
+              {$mIndexCat.description|unescape:"html"}
+            </div>
+            <a href="{$mIndexCat.link}" class="img_div">
+              <img src="{$mIndexCat.image}">             
+            </a>
+          </div>
+        </div>
+        {/if}
+        {if $mIndexCat.showtype eq 1}
+        <div class="news contact">
+          <div class="index_title">
+            <h2 class="about_tit fr">{$mIndexCat.name}<em></em></h2>
+            <a class="index_more" href="{$mIndexCat.link}">MORE+</a>
+          </div>
+          <div class="contact_info">
+            <p>地址：{$contact.address}</p>
+            <p>电话：{$contact.telephone}</p>
+            <p>传真：{$contact.fax}</p>
+            <p>联系人：{$contact.name}</p>
+            <p>投诉邮箱：{$contact.mail}</p>
+          </div>
+        </div>
+        {/if}
+        {elseif $mIndexCat.type eq 1}
+          {if $mIndexCat.showtype eq 1}
+          <div class="news">
+            <div class="index_title">
+              <h2 class="about_tit fr">{$mIndexCat.name}<em></em></h2>
+              <a class="index_more" href="{$mIndexCat.link}">MORE+</a>
+            </div>
+            <ul class="news_list clearfix">
+              {$limit = 3}
+              {foreach item=list1 from=$mIndexCat.data}
+              <li><a href="{$list1.link}"><h2>{$list1.title}</h2><p>{$list1.description}</p><span>{$list1.pubtimestamp|date_format:'%Y.%m.%d'}</span></a></li> 
+              {if $list1@index+1 gte $limit}{break}{/if}        
+              {/foreach}
+            </ul>
+            </div>
+          {/if}
+          {elseif $mIndexCat.type eq 3}
+          {if $mIndexCat.showtype eq 1}
+            <div class="tlist">
+              <div class="index_title">
+                <h2 class="about_tit">{$mIndexCat.name}<em></em></h2>
+                <a class="index_more fr" href="{$mIndexCat.link}">MORE+</a>
+              </div>
+              <ul class="infoList clearfix">
+                {$limit = 2}
+                {foreach item=list2 from=$mIndexCat.data}                  
+                  <li class="li1"><a href="{$list2.link}"><div class="on_img"><img src="{$list2.image}"></div><h2>{$list2.title}</h2></a></li>
+                {if $list2@index+1 gte $limit}{break}{/if}        
+                {/foreach}
+                {$limit = 3}
+                {foreach item=list2 from=$mIndexCat.data}                  
+                  <li class="li2"><a href="{$list2.link}"><div class="on_img"><img src="{$list2.image}"></div><h2>{$list2.title}</h2></a></li>
+                {if $list2@index+1 gte $limit}{break}{/if}        
+                {/foreach}
+              </ul>
+            </div>
+            {/if}
+
+          {/if}
+        {/foreach}
+
+    </section>
+    </div>
+    {include file='./_footer.html'}  
+</div>
+</body>
+</html>

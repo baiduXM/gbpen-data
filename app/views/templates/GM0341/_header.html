@@ -1,0 +1,19 @@
+<header>    
+     <div class="header">
+        <a href="{$site_url}" class="logo"><img src="{$logo}"></a>
+        <a href="#" class="menuico" id="quickbar-showcats"><img src="{$site_url}images/icon6.png" /></a>
+     </div>
+     <div class="menu">
+        <a class="arrow-left" href="javascript:;">&lt;</a> 
+        <a class="arrow-right" href="javascript:;">&gt;</a>
+        <div class="swiper-nav swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><a href="{$site_url}">网站首页</a></div>
+            {foreach name=navs item=nav from=$navs}
+            <div class="swiper-slide"><a href="{$nav.link}">{$nav.name}</a></div>
+            {/foreach}  
+          </div>
+        </div>
+    </div>
+</header>
+

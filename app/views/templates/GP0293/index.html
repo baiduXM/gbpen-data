@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>{$title}</title>
+    <script type="text/javascript">
+        // 跳转手机页面
+        {if $site_another_url}
+            if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+                location.href = '{$site_another_url}';
+            } {/if}
+    </script>
+    
+    <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1" />
+    <meta name="keywords" content="{$keywords}" />
+    <meta name="description" content="{$description}" />
+    <script src="{$site_url}js/jquery-1.9.1.min.js"></script>
+    <script src="{$site_url}js/html5shiv.js"></script>
+    <link rel="stylesheet" href="{$site_url}css/animate.min.css"/>
+    <script src="{$site_url}js/swiper-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="{$site_url}css/style.css"/>
+    <script src="{$site_url}js/js.js"></script>
+    {$headscript}
+</head>
+<body>
+<div style="overflow: hidden">
+    <div id="index_header">
+        {include file='./_header.html'}
+        <div id="banner">
+            <div id="banner">
+                <ul id="banner-pic">
+                    {foreach item=slidepic from=$index.slidepics}
+                    <li><a href="{$slidepic.link}"><img src="{$slidepic.image}" alt=""/></a></li>
+                    {/foreach}
+                </ul>
+                <div class="run">
+                    <ul id="run">
+                        {foreach item=slidepic from=$index.slidepics}
+                        <li></li>
+                        {/foreach}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section>
+        <div id="index_content">
+            <div id="sec1">
+                <div class="sec1_content">
+                    <div class="title">
+                        <h3><a href="{$index.about.link}">{$index.about.en_name}</a></h3>
+                        <h4><a href="{$index.about.link}">{$index.about.name}</a></h4>
+                    </div>
+                    <div class="content">
+                        <div class="h3"><a href="{$index.about.link}"><h3>{$index.about.description}</h3></a></div>
+                        <div class="nr">
+                            {$index.about.content|unescape:"html"}
+                        </div>
+                        <a href="{$index.about.link}" class="a">查看更多</a>
+                    </div>
+                    <div class="img">
+                        <a href="{$index.about.link}"><img src="{$index.about.image}" alt=""/></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div id="sec2">
+            <div class="sec2_content">
+                <div class="title">
+                    <span><img src="{$site_url}images/tubaio1.png" alt=""/></span>
+                    <h4><a href="">{$index.news.name}</a></h4>
+                    <div class="zhixian"></div>
+                    <h3><a href="">{$index.news.en_name}</a></h3>
+                    <div class="left" id="sec2_left"><</div>
+                    <div class="right" id="sec2_right">></div>
+                </div>
+                <div class="content">
+                    <div class="sec2_banner" id="sec2_banner">
+                        <ul id="news_list">
+                            {foreach item=news from=$index.news.data}
+                            <li>
+                                <a href="{$news.link}">
+                                    <div class="img">
+                                        <img src="{$news.image}" alt=""/>
+                                    </div>
+                                    <div class="nr">
+                                        <h3>{$news.title}</h3>
+                                        <div class="nr_nr">{$news.description}</div>
+                                    </div>
+                                    <div class="bottom">
+                                        <span class="ckgd">查看更多</span>
+                                        <span class="rq">{$news.pubtimestamp|date_format:'%Y.%m.%d'}</span>
+                                    </div>
+                                </a>
+                            </li>
+                            {/foreach}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="sec3">
+            <div class="sec3_content">
+                <div class="top">
+                    <div class="left">
+                        <div class="one">
+                            <a href=""><img src="{$index.pro_list.image}" alt=""/></a>
+                            <div class="title"><a href="{$index.pro_list.link}">{$index.pro_list.name}</a></div>
+                        </div>
+                        <div class="two">
+                            <a href="">{$index.pro_list.description}</a>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <img src="{$index.pro_right_bg.image}" alt=""/>
+                    </div>
+                </div>
+
+                <div class="three" id="index_product">
+                    <div class="left"><img id="pro_img" src="{$index.products.data[0].image}" alt=""/></div>
+                    <div class="right">
+                        <div class="title">
+                            <h3><a href="{$index.products.link}">{$index.products.en_name}</a></h3>
+                            <h4><a href="{$index.products.link}">{$index.products.name}</a></h4>
+                        </div>
+                           <!-- {foreach item=category from=$index.products.childmenu}
+                            <h3>{$category.name}</h3>
+                            <ul>
+                            {foreach item=mes from=$category.data}
+                                <li>
+                                    {$mes.title}
+                                </li>
+                            {/foreach}
+                            </ul>
+                            {/foreach}-->
+                        <div class="list">
+                            <ul id="pro_title">
+                                {foreach item=category from=$index.products.childmenu}
+                                <li>{$category.name}</li>
+                                {if $category@index+1 eq 4}{break}{/if}
+                                {/foreach}
+                            </ul>
+                        </div>
+                        <div class="detail" id="pro_detail">
+                            {foreach item=pro_page from=$category.data}
+                            <div class="detail_list">
+                                <h3>{$pro_page.title}</h3>
+                                <div class="nr">{$pro_page.description}</div>
+                            </div>
+                            {if $pro_page@index+1 eq 3}{break}{/if}
+                            {/foreach}
+                        </div>
+                        <div class="img-list" id="pro_list">
+                            {foreach item=category from=$index.products.childmenu}
+                            <ul>
+                                {foreach item=pro from=$category.data}
+                                <li>
+                                    <div class="img">
+                                        <img src="{$pro.image}" alt=""/>
+                                        <span class="bg">{$pro.title}</span>
+                                    </div>
+                                </li>
+                                {if $pro@index+1 eq 3}{break}{/if}
+                                {/foreach}
+                            </ul>
+                            {if $category@index+1 eq 4}{break}{/if}
+                            {/foreach}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="scrolltop">
+        <div class="t"><div class="tb"></div></div>
+        <div class="top" id="top_click">
+            <h3>返回顶部</h3>
+            <h4>back to top</h4>
+        </div>
+    </div>
+    {include file='./_footer.html'}
+</div>
+
+</body>
+</html>

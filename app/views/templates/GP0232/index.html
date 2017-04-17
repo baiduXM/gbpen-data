@@ -34,10 +34,17 @@
       <div class="inner"> {$index.about.description} </div>
       <div class="about_bot">
         <ul>
+        {if $index.pro_list.childmenu}
           {foreach name=lnav item=lnav from=$index.pro_list.childmenu}
           <li><a href="{$lnav.link}">{$lnav.name}</a></li>
           {if $lnav@index+1 == 4}{break}{/if}
           {/foreach}
+        {else}
+          {foreach name=lnav item=lnavv from=$navs}
+          <li><a href="{$lnavv.link}">{$lnavv.name}</a></li>
+          {if $lnavv@index+1 == 4}{break}{/if}
+          {/foreach}
+        {/if}
         </ul>
       </div>
     </div>

@@ -1,0 +1,40 @@
+<div class="header_r">
+    <div class="head">
+        <div class="logo">
+            <a class="middle" href="{$site_url}">
+                <img class="max" src="{$logo}" alt=""/>
+            </a>
+        </div>
+        <div class="nav">
+            <ul id="nav">
+                {$limit=10}
+                {if $navs|count lt $limit}{$limit = $navs|count}{/if}
+                <li style="width:{100/($limit+1)}%">
+                    <a href="{$site_url}">网站首页</a>
+                </li>
+                {foreach item=nav from=$navs}
+                <li style="width:{100/($limit+1)}%">
+                    <a href="{$nav.link}">{$nav.name}</a>
+                    {if $nav.childmenu}
+                    <ul>
+                        {foreach key=key item=nav_list from=$nav.childmenu}
+                        <li><a href="{$nav_list.link}">{$nav_list.name}</a></li>
+                        {/foreach}
+                    </ul>
+                    {/if}
+                </li>
+                {if $nav@index+1 eq $limit}{break}{/if}
+                {/foreach}
+            </ul>
+        </div>
+        <div class="search transition" id="search_h">
+
+            <form action="searchresult.html?s=" method="GET" name="fm">
+                <!--<i class="iconfont">&#xe636;</i>-->
+                <input type="submit" class="s_btn" id="quickbar_submit" value="">
+                <input type="text" id="name" name="s" class="s_ipt">
+            </form>
+        </div>
+    </div>
+</div>
+<div class="header_bg"></div>

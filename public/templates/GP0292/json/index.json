@@ -1,0 +1,60 @@
+{
+	"banner": {
+		"value": {
+			"title": "首页banner",
+			"image": "images/banner.jpg",
+			"link": "http://www.baidu.com/"
+		},
+		"description": "首页banner",
+		"type": "image",
+		"config": {
+			"width":1920,
+			"height": 930
+		}
+	},
+	"lvguan": {
+		"value": {
+			"title": "首页旅馆二字",
+			"image": "images/logo_z.png",
+			"link": "http://www.baidu.com/"
+		},
+		"description": "首页旅馆二字",
+		"type": "image",
+		"config": {
+			"width":114,
+			"height": 230
+		}
+	},
+	"about": {
+		"description": "单页面(关于我们)",
+		"value": {},
+		"type": "page",
+		"config": {
+			"nav_width": 282,
+		    "nav_height": 213
+		}
+	},
+	"pro":{
+		"description": "产品中心",
+		"value": {},
+		"type": "list",
+		"config": {
+			"width":1178,
+			"height":547
+		}
+	},
+	"news":{
+		"description": "新闻中心",
+		"value": {},
+		"type": "list",
+		"config": {
+			"star_only": true			
+		}	
+	},
+	"contact":{
+		"description": "联系我们",
+		"value": {},
+		"type": "page"	
+	}
+	
+}

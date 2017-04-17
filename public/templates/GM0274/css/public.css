@@ -11,8 +11,8 @@ body{background: #ffffff;}
 .body{position: relative; width:100%; height:100%; min-width:320px; max-width:640px; overflow:hidden;}
 .htop{width: 100%;height:auto;overflow: hidden;}
 /*header*/
-.head{width: 100%;height: 3rem;z-index: 2;position: relative;box-shadow: 0px 0px 8px #36a1bb;}
-.head .logo{width: 9.5rem; height: 3rem;position: absolute;top: 0;left: 50%;transform:translateX(-50%);display: table-cell;text-align: center;vertical-align: middle;}
+.head{width: 100%;z-index: 2;position: relative;box-shadow: 0px 0px 8px #36a1bb;}
+.head .logo{width: 100%; }
 .head .logo img{max-width: 100%;max-height: 100%;}
 /*banner*/
 .banner{position: relative;width: 100%;height: auto;overflow: hidden;}

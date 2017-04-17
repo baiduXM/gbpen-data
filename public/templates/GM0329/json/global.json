@@ -1,0 +1,42 @@
+{
+	"slidepics": {
+		"value": [{
+			"title": "测试图1",
+			"image": "images/banner.jpg",
+			"link": "http://www.baidu.com"
+		}, {
+			"title": "测试图2",
+			"image": "images/banner.jpg",
+			"link": "http://www.baidu.com"
+		},{
+			"title": "测试图3",
+			"image": "images/banner.jpg",
+			"link": "http://www.baidu.com"
+		}],
+		"description": "大轮滚图",
+		"type": "images",
+		"config": {
+			"width": 640,
+			"height": 360
+		}
+	},
+	"tact": {
+		"value": {
+			"title": "联系方式",
+			"image": "images/bar.jpg",
+			"link": "http://www.baidu.com"
+		},
+		"description": "联系方式",
+		"type": "image",
+		"config": {
+			"width": 60,
+			"height": 30
+		}
+	},
+	"case":{
+		"value":"案例说明",
+		"description":"案例说明",
+		"type":"text"
+	}
+	
+}

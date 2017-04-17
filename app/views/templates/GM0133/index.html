@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html manifest="huancun.manifest">
 <head>
 <!-- 实时预览调试代码，模板开发完成后删除 -->
@@ -12,7 +12,9 @@
 			}
 		{/if}
 		</script>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no,minimal-ui">
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
@@ -53,19 +55,15 @@
 {$headscript}
 </head>
 <body>
-<div class="body">
-  <div class="wrap page-active">
     <div class="index-wrap">
       {include file="./_header.html"}
       <section> 
         {foreach name=mIndexCats item=mIndexCat from=$mIndexCats}
         {if $mIndexCat.type eq 4}
-
-        
         
         <div id="in_page" class="wrapper">
         <div class="inner">
-        <h2 class="in_h2"><a href="{$mIndexCat.link}"><div class="in_zh">{$mIndexCat.name}</div><div class="in_en">A{$mIndexCat.en_name}</div></a></h2>
+        <h2 class="in_h2"><a href="{$mIndexCat.link}"><div class="in_zh">{$mIndexCat.name}</div><div class="in_en">{$mIndexCat.en_name}</div></a></h2>
         <p>{$mIndexCat.description}</p>
        </div>
        <div class="pic"><img src="{$mIndexCat.image}"></div>
@@ -117,8 +115,6 @@
       
     <footer class="foot" ><a class="back-top">∧</a>{$footprint}</footer></div>
     </div>
-  </div>
   {$footscript}
-  </div>
 </body>
 </html>

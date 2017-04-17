@@ -54,7 +54,7 @@ header{ position:relative;}
 
 /*内页面包屑*/
 .boxmain_d{ position:relative}
-.boxmain-top{ overflow:hidden;     position:relative; text-align:left; z-index:100;   margin-top:15px; margin-bottom:0px; background:url(../images/bg.jpg) repeat-x bottom; width:98%; paddingleft:2% }
+.boxmain-top{ overflow:hidden;position:relative; text-align:left; z-index:100;   margin-top:15px; margin-bottom:0px; background:url(../images/bg.jpg) repeat-x bottom; width:98%; padding-left:2% }
 .boxmain-top .text{  border-bottom:6px solid #ae4b00; padding-bottom:3px; width:50%;}
 .boxmain-top .text .sub_zh{font-size:18px; height:25px; line-height:25px; overflow:hidden; display:inline-block; text-align:left; color:#ae4b00; max-width:55%;text-overflow: ellipsis;white-space: nowrap;}
 .boxmain-top .text .sub_en{font-weight:normal; font-size:12px; text-transform:uppercase; text-transform:uppercase;  height:20px; line-height:20px; overflow:hidden;  display:inline-block; text-align:left; margin-left:3px;  max-width:40%; text-overflow: ellipsis;white-space: nowrap;}
@@ -98,7 +98,7 @@ header{ position:relative;}
 .font dl.normal,.font-normal{ font-size:15px;}
 .font dl.small,.font-small{ font-size:13px;}
 
-.fixed-top{z-index:100000; position: absolute; top:0px; left:0px; width:100%; background:rgba(0,0,0,.3); height:35px; line-height:35px; color:#fff;
+.fixed-top{z-index:10; position: fixed; top:0px; left:0px; width:100%; background:rgba(0,0,0,.3); height:35px; line-height:35px; color:#fff;
  font-size:1.14em; overflow:hidden; text-align:center;}
 .fixed-btn{ background:rgba(0,0,0,.3);color:#1a0121; padding:0px 10px; float:right;font-size:0.9em;}
 .back{ float:left;  text-indent:0px;  text-align:center;}
@@ -186,7 +186,7 @@ header{ position:relative;}
 /*content-pro*/
 .index_show{ width:98%; margin:auto; margin-top:45px;}
 /*content-pro*/
-
+form.elegant-aero{display: block;}
 
 
 

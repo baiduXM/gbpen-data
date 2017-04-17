@@ -12,6 +12,7 @@
 			}
 		{/if}
 		</script>
+  
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no,minimal-ui">
 <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -40,11 +41,11 @@
 <link rel="stylesheet" rev="stylesheet" href="{$site_url}css/style_{$stylecolor}.css" type="text/css" />
 <script src="{$site_url}js/TouchSlide.1.1.js"></script>
 <script type="text/javascript" src="{$site_url}js/jquery.min.js"></script>
-<script type="text/javascript" src="{$site_url}js/function.js"></script>
 <script type="text/javascript" src="{$site_url}js/share.js"></script>
 <script src="{$site_url}js/idangerous.swiper-2.0.min.js"></script>
 <script src="{$site_url}js/idangerous.swiper.3dflow-2.0.js"></script>
 <script src="{$site_url}js/simple-app.js"></script>
+  <script type="text/javascript" src="{$site_url}js/function.js"></script>
 <script type="text/javascript">
 	window.addEventListener('load', function(){
    setTimeout(function(){ window.scrollTo(0, 1); }, 100);
@@ -52,8 +53,6 @@
 </script>
 </head>
 <body>
-<div class="body">
-  <div class="wrap page-active">
     <h1 class="fixed-top">
       <span class="fixed-btn back"><a href="javascript:window.history.back()">返回</a></span>
       <span class="fixed-btn more2" id="font">字+</span>
@@ -83,8 +82,6 @@
       </section>
     <footer class="foot" ><a class="back-top">∧</a>{$footprint}</footer></div>
     </div>
-  </div>
   {$footscript}
-</div>
 </body>
 </html>
