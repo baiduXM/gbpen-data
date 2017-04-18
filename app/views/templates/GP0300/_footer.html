@@ -1,0 +1,12 @@
+
+
+ <div class="link"><span style="color:#fff; font-family:'微软雅黑'; padding-right:14px;">友情链接：</span>
+{foreach name=link item=link from=$global.links}
+  <a href="{$link.link}">{$link.title}</a> 
+  {if $article@global+1 == 5}{break}{/if} |
+{/foreach}
+<!--  <a href="#">厦门易尔通网络科技有限公司</a>|<a href="#">厦门易尔通网络科技有限公司</a>|<a href="#">厦门易尔通网络科技有限公司</a>|<a href="#">厦门易尔通网络科技有限公司</a>|<a href="#">厦门易尔通网络科技有限公司</a>  -->
+ </div>
+    <div class="foot">{$footprint}</div>
+
+{$footscript}

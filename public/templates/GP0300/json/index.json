@@ -1,0 +1,59 @@
+{
+	
+    "about_us": {
+		"description": "关于我们",
+		"value": {},
+		"type": "page"
+	},
+    "news": {
+		"description": "新闻中心",
+		"value": {},
+		"type": "list"
+	},
+	"pro":{
+		"value": [
+			{
+				"title": "测试图2",
+				"image": "images/img.jpg",
+				"link": "http://www.baidu.com"
+			},{
+				"title": "测试图3",
+				"image": "images/img.jpg",
+				"link": "http://www.baidu.com"
+			}
+		],
+		"description": "产品中心",
+		"type": "list"
+	},
+	"about_img": {
+		"value": [{
+			"title": "Gooseberry and Elderflower Tower Cakes",
+			"image": "images/img.jpg",
+			"link": "article/1.html",
+			"description": "Although it isn't gooseberry season anymore, I thought I would publish this recipe now because it wo..."
+		}, {
+			"title": "测试图2",
+			"image": "images/img.jpg",
+			"link": "http://www.baidu.com"
+		},{
+			"title": "测试图3",
+			"image": "images/img.jpg",
+			"link": "http://www.baidu.com"
+		}, {
+			"title": "测试图4",
+			"image": "images/img.jpg",
+			"link": "http://www.baidu.com"
+		},{
+			"title": "测试图5",
+			"image": "images/img.jpg",
+			"link": "http://www.baidu.com"
+		}],
+		"description": "关于我们多图轮播",
+		"type": "images",
+		"config": {
+			"width": 178,
+			"height": 137,
+			"limit": 5
+		}
+	}
+}
