@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html manifest="huancun.manifest">
 	<head>
 		<!-- 实时预览调试代码，模板开发完成后删除 -->
 		
@@ -29,11 +29,13 @@
 		<link rel="stylesheet" href="{$site_url}css/public.css" /> 
 		<link href="{$site_url}css/css.css" rel="stylesheet" type="text/css" />
 		<link href="{$site_url}css/swipe.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" rev="stylesheet" href="{$site_url}css/style_{$stylecolor}.css" type="text/css" />
 		<script src="{$site_url}js/TouchSlide.1.1.js"></script>
 		<script type="text/javascript" src="{$site_url}js/jquery.min.js"></script>
 		<script type="text/javascript" src="{$site_url}js/function.js"></script>
 		<script type="text/javascript" src="{$site_url}js/share.js"></script>
 		<script src="{$site_url}js/idangerous.swiper-2.0.min.js"></script>
+		<script src="{$site_url}js/idangerous.swiper.3dflow-2.0.js"></script>
 		<script src="{$site_url}js/simple-app.js"></script>
 		<script type="text/javascript">
 			window.addEventListener('load', function(){
@@ -50,14 +52,14 @@
       <div class="boxmain_d">
         <div class="main">
           <div class="searchresult">
-            <p class="public_color">共搜索到{$search.total}个结果</p>
+            <p class="public_color">A total of {$search.total} results</p>
             <ul>
-            	{foreach name=article item=article from=$search.data}<!--search_content_start-->
-                 <li><a href="search_$link" class="public_color">search_$title</a></li>
-				<!--search_content_end-->{/foreach}
+            	{foreach name=article item=article from=$search.data}
+                 <li><a href="{$article.link}" class="public_color">{$article.title}</a></li>
+				{/foreach}
             </ul>
             
-                <div class="next1 public_color"><a href="{$page_links.first_link}" class="public_color">首页</a><a href="{$page_links.prev_link}" class="public_color">上一页</a>{$page_links.current_page}/{$page_links.page_count}　<a href="{$page_links.next_link}" class="public_color">下一页</a><a href="{$page_links.last_link}" class="public_color">尾页</a></div>
+                <div class="next1 public_color"><a href="{$page_links.first_link}" class="public_color">Home</a><a href="{$page_links.prev_link}" class="public_color">Prev</a>{$page_links.current_page}/{$page_links.page_count}　<a href="{$page_links.next_link}" class="public_color">Next</a><a href="{$page_links.last_link}" class="public_color">Last</a></div>
             
           </div>
         </div>
@@ -65,6 +67,7 @@
     </div>
   </section>
       <footer class="foot bg1" ><a class="back-top">∧</a>{$footprint}</footer>
-</div>{$footscript}
+	{$footscript}
+</div>
 </body>
 </html>
