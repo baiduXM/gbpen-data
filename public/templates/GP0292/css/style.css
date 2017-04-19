@@ -144,10 +144,10 @@ background-color:rgba(0,0,0,.8);filter:progid:DXImageTransform.Microsoft.gradien
 #footer .foot .copy{text-align: center;color: #4d4d4d;padding-top: 10px;}
 
 /*内页*/
-.ny_head{width: 100%;height: 92px;position: absolute;top: 0;z-index: 2;background-color:rgba(255,255,255,.9);filter:progid:DXImageTransform.Microsoft.gradient(startcolorstr=#2fffffff,endcolorstr=#2fffffff);}
+.ny_head{width: 100%;height: 92px;position: absolute;top: 0;z-index: 2;background-color:rgba(255,255,255,.6);filter:progid:DXImageTransform.Microsoft.gradient(startcolorstr=#2fffffff,endcolorstr=#2fffffff);}
 .ny_head .ny_top{width: 1200px;height: 92px;margin: 0 auto;}
-.ny_head .ny_top .logo{width: 124px;height: 92px;float: left;}
-.ny_top .logo a{width: 124px;height: 92px;display: table-cell;text-align: center;vertical-align: middle;}
+.ny_head .ny_top .logo{width:180px;height: 92px;float: left;}
+.ny_top .logo a{width: 180px;height: 92px;display: table-cell;text-align: center;vertical-align: middle;}
 .ny_head .ny_top .ny_nav{width: 900px;height: 92px;float: right;}
 .ny_top .ny_nav .nmenu{width:100%;height: 100%;}
 .ny_top .ny_nav .nmenu li{height: 100%;float: left;position: relative;}
