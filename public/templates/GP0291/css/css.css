@@ -132,6 +132,10 @@ width:100%; position:relative; z-index:100; margin-top:0px; }
 .alefttitle{ background:url(../images/alefttitle.png) no-repeat; height:29px; overflow:hidden; line-height:29px; padding-left:30px; font-size:23px; font-weight:bold; color:#4b4b7d; margin-bottom:45px;} 
 .alefttitle b{ color:#787878; font-size:15px; font-weight:normal;}
 
+
+
+
+
 /*sidebar css*/
 .sidebar{ width:240px; float:left; overflow:hidden; margin-top:15px;}
 
@@ -154,12 +158,12 @@ ul.third li a.thirda:hover{ color:#FFF;}
 
 
 /*main css*/
-.main{  padding-left:40px; padding-top:15px; padding-bottom:30px;}
+.main{ width:792px; float:right;  padding-left:40px; padding-top:15px;}
 
 .crumb{ float:right; font-size:14px; color:#fff; font-weight:normal; line-height:25px; height:25px; overflow:hidden; background:#4b4b7d; text-align:center; border-radius:12px; padding:0 15px; margin-top:3px; margin-bottom:25px; }
 .crumb a{ color:#fff; }
 
-.article { margin-top:0px; float:right; width:792px; background:url(../images/main.png) repeat-y left; padding-left:37px;  padding-top:25px;}
+.article { margin-top:0px; float:right; width:792px; background:url(../images/main.png) repeat-y left; padding-left:37px;  padding-top:25px; padding-bottom:25px;}
 .article img{ max-width:792px; overflow:hidden}
 
 

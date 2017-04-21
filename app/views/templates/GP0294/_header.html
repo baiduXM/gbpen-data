@@ -8,14 +8,10 @@
             </div>
             <div class="nav">
                 <ul id="nav">
-                    {$limit=8}
+                    {$limit=9}
                     {if $navs|count lt $limit}{$limit = $navs|count}{/if}
-                    <li>
-                        <a href="{$site_url}">网站首页</a>
-                        <ul></ul>
-                    </li>
                     {foreach item=nav from=$navs}
-                    <li>
+                    <li class="{if $nav.current}current{/if}">
                         <a href="{$nav.link}">{$nav.name}</a>
                         <ul>
                             {if $nav.childmenu}

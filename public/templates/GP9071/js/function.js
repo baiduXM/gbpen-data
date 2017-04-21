@@ -211,7 +211,8 @@ $(document).ready(function() {
                 focus: { background: 'url(images/button.png) no-repeat 0 0', border: '0' }
             }
         });
-/*产品滚动js*/		
+/*产品滚动js*/
+	if ($('#prizes').length >0) {
 		$('#prizes .photos-content.enable').jCarouselLite({
 			btnPrev: '#prizes a.photos-prev',
 			btnNext: '#prizes a.photos-next',
@@ -219,5 +220,6 @@ $(document).ready(function() {
 			auto: 3000,
 			speed: 1000
 		}).css({visibility:"visible"});
+	}
 
 });

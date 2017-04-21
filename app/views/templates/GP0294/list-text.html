@@ -22,7 +22,7 @@
     <script src="{$site_url}js/function.js"></script>
 </head>
 <body>
-<div id="index-wrap">
+<div id="index-wrap" style="background: url({$global.bj1.image}) center top no-repeat; background-size: 100% 100%;">
     {include file="./_header.html"}
     <section>
         <div id="aside">
@@ -39,7 +39,6 @@
                             <ul>
                                 {foreach item=article from=$list.data}
                                 <li><a href="{$article.link}">{$article.title}</a><span>{$article.pubtimestamp|date_format:'%Y-%m-%d'}</span></li>
-                                {if $article@index+1 eq 8}{break}{/if}
                                 {/foreach}
                             </ul>
                         </div>

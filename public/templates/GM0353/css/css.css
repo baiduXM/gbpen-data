@@ -1,0 +1,72 @@
+
+/*标题样式*/
+.in_h2{ width:100%;border-radius:15px;  overflow:hidden; background:#c7b290; color:#402511; margin-bottom:4%}
+.in_h2 .ch{ width:60%; font-size:16px;line-height:35px; height:35px; background:url(../images/h2_bg.png) no-repeat left; padding-left:3%; float:left; color:#402511; margin-left:2%;overflow: hidden;text-overflow: ellipsis;white-space: nowrap; }
+.in_h2 .more{  line-height:35px; height:35px; float:right; text-transform:uppercase; font-size:13px; margin-right:3%}
+
+
+
+
+@media screen and (min-width: 320px) and (max-width: 480px){
+.in_h2 .ch{ padding-left:7%;}
+
+
+
+}
+/*标题样式*/
+.inner{ margin-top:10px;}
+.wrapper{ width:96%; margin:5% auto; }
+
+
+
+
+
+#in_page .tit { margin:auto;  overflow: hidden;text-overflow: ellipsis;white-space: nowrap; color:#f97100; font-size:22px; height:25px; line-height:25px; padding-bottom:15px; text-transform:uppercase; text-align:center; position:relative}
+#in_page .tit:before{ position:absolute; content:""; width:10%; height:1px; background:#f97100; left:45%; bottom:0}
+
+
+
+#in_page .inner{ }
+#in_page .inner .pix{ width:30%; float:left;}
+#in_page .inner .pix img{ width:100%}
+#in_page .inner p{ width:65%; line-height:30px; height:120px; overflow:hidden; font-size:14px; color:#402511; margin:5% auto; font-size:14px; }
+
+
+#in_text{ }
+#in_text ul li{  width:100%;  line-height:35px; line-height:35px; overflow:hidden; margin-bottom:6%}
+#in_text ul li .pix{ width:25%; float:left;}
+#in_text ul li .pix img{ width:100%}
+
+#in_text ul li .right{ width:73%; float:right;}
+#in_text ul li h2{ background:#c7b290; }
+#in_text ul li h2 span{ width:60%; float:left;  line-height:35px; line-height:35px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap; font-size:16px;  padding-left:2%; color:#402511;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+#in_text ul li h2 .date{ font-size:12px; color:#402511; float:right; margin-right:10px;}
+
+
+#in_text ul li .in_des{ line-height:25px; height:50px; overflow:hidden; color:#6a686; margin-top:5px;}
+@media screen and (min-width: 320px) and (max-width: 480px){
+#in_text ul li .pix{ width:35%; }
+#in_text ul li .right{ width:62%; }
+	
+	
+}
+
+
+
+
+#in_image{   position:relative; padding-top:3%  }
+
+#in_image .inner{   margin:auto; }
+#in_image ul{ width:98%; margin:auto; position:relative; z-index:2 }
+#in_image ul li{ float:left;margin:1.6%; width:29%; border:3px solid #b39c78 }
+#in_image ul li .pix{ position:relative;}
+#in_image ul li .bottom{ width:48px; height:11px; margin:auto;margin-top:-2px; position:relative; z-index:10}
+#in_image ul li .in_protitle{  width:100%; background:#006db2; position:relative; z-index:11; height:35px; line-height:35px;margin-top:5px;display: block;margin: 0 auto;overflow: hidden;text-overflow: ellipsis;white-space: nowrap; color:#fff; text-align:center; margin-top:5px;}
+
+
+@media screen and (min-width: 320px) and (max-width: 480px){
+#in_image ul li{  width:28%; }
+}
+@media screen and (min-width: 480px) {
+}
+

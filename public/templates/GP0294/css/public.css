@@ -47,8 +47,8 @@ img{
     width: 100%;
     height: 970px;
     overflow: hidden;
-    background: url("../images/index_bg.jpg");
-    background-size: 100% 100%;
+    /*background: url("../images/index_bg.jpg");
+    background-size: 100% 100%;*/
     position: relative;
 }
 #index-wrap-content{
@@ -98,8 +98,6 @@ img{
     float: left;
     width: 113px;
     margin-left: 10px;
-
-
     -moz-border-radius: 40px; /* Firefox */
     -webkit-border-radius: 40px; /* Safari 和 Chrome */
     border-radius: 40px; /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */
@@ -122,10 +120,10 @@ img{
     white-space: nowrap;
     overflow: hidden;
  }
-#header .head .nav>ul>li:hover{
+#header .head .nav>ul>li:hover,#header .head .nav>ul>li.current{
     background: #ffffff;
 }
-#header .head .nav>ul>li:hover>a{
+#header .head .nav>ul>li:hover>a,#header .head .nav>ul>li.current>a{
     color: #386a8f;
 }
 /*#header .head .nav>ul>li:hover>a::before{
@@ -301,6 +299,7 @@ ul.mainbav>li>a:hover span.blur{
     height: 278px;
     position: relative;
     overflow: hidden;
+    background: #fff;
 }
 #index_content .section .sec2 .bottom a{
     width: 234px;
@@ -339,6 +338,7 @@ ul.mainbav>li>a:hover span.blur{
     height: 277px;
     position: relative;
     overflow: hidden;
+    background: #fff;
 }
 #index_content .section .sec3 .top a{
     width: 234px;
@@ -522,6 +522,7 @@ ul.mainbav>li>a:hover span.blur{
     height: 287px;
     position: relative;
     overflow: hidden;
+    background: #fff;
 }
 #index_content .section .sec4 .bottom a{
     width: 234px;
@@ -763,9 +764,8 @@ ul.mainbav>li>a:hover span.blur{
 }
 #aside .aside_content .aside_nav>ul>li>ul{
     position: absolute;
-    top: 5px;
+    top: 40px;
     left: 0;
-    padding-top: 35px;
     padding-bottom: 50px;
     display: none;
 }
@@ -1176,6 +1176,7 @@ ul.mainbav>li>a:hover span.blur{
 #aside_c{
     width: 100%;
     margin-top: 64px;
+
 }
 #aside_c .aside_content{
     width: 1200px;
@@ -1201,11 +1202,12 @@ ul.mainbav>li>a:hover span.blur{
 #aside_c .aside_content .aside_r .aside_n{
     width: 100%;
     margin-top: 16px;
-    overflow: hidden;
+    /*overflow: hidden;*/
+    display: table;
 }
 #aside_c .aside_content .aside_nav{
     height: 50px;
-    overflow: hidden;
+    /*overflow: hidden;*/
     float: left;
 }
 #aside_c .aside_content .aside_nav h3{
@@ -1235,7 +1237,18 @@ ul.mainbav>li>a:hover span.blur{
     padding: 0 20px;
     line-height: 50px;
     float: left;
-    text-align: center}
+    text-align: center;
+    position: relative;
+}
+#aside_c .aside_content .aside_nav ul li ul li a{
+    color: #666;
+    font-size: 14px;
+}
+
+#aside_c .aside_content .aside_nav ul ul{
+    position: absolute; top: 30px;display: none;
+}
+#aside_c .aside_content .aside_nav ul ul ul{display: none;}
 #aside_c .aside_content .aside_nav ul li a{
     color: #434a5d;
     font-size: 16px;
@@ -1289,6 +1302,7 @@ ul.mainbav>li>a:hover span.blur{
 .page-article{
     width: 100%;
     margin-top: 30px;
+    margin-bottom: 20px;
 }
 .page-article >a{
     width: 100%;

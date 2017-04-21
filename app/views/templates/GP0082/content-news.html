@@ -1,4 +1,4 @@
-<!DOCTYPE>
+﻿<!DOCTYPE>
 <html>
 <head>
 <script type="text/javascript">
@@ -46,7 +46,7 @@
 			<div class="main">
 				<div class="main_tit">{$article.title}</div>
 				<div class="time">{$article.pubdate}<a href="{$article.category.link}">[返回列表]</a></div>
-				<div>{$article.content}</div>
+				<div>{$article.content|unescape:"html"}</div>
 				<div class="np">
 					<ul>
 						<li><a href="{$article.prev.link}">上一篇：{$article.prev.title}</a></li>

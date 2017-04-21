@@ -28,9 +28,7 @@
 {include file='./_header.html'}
 <div class="inner_page">
 	<div class="inner_main">
-		{foreach name=article1 item=article1 from=$list.data} 
 		<ul class="news_list clearfix">
-		{$limit = 2}
 		{foreach name=article1 item=article1 from=$list.data} 
 			<li>
 				<a href="{$article1.link}" class="clearfix">
@@ -44,10 +42,8 @@
 					</div>
 				</a>
 			</li>
-		{if $article1@index+1 gte $limit}{break}{/if}  
 		{/foreach}
 		</ul>
-		{/foreach}
 		{include file='./_page.html'}
 	</div>
 </div>

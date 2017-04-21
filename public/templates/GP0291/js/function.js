@@ -3,11 +3,13 @@ $(document).ready(function() {
 
 <!--产品展示-->	
 
-$(".products").slide({mainCell:".bd ul",autoPlay:true,effect:"leftMarquee",vis:4,interTime:50});
+$(".products").slide({mainCell:".bd ul",autoPlay:true,effect:"leftMarquee",vis:3,interTime:50});
+		
 
+$(".news .inner ul li:odd").addClass("news1");
+$(".news .inner ul li:even").addClass("news2");
+});
 
-$(".news .inner ul li:odd").addClass("news1")
-$(".news .inner ul li:even").addClass("news2")
 
 
 window.onload=function(){
@@ -62,7 +64,7 @@ adaption(".products .inner ul li .pic",300,300)
   
 }
 
-
+$(document).ready(function() {
 						   
 <!--大图-->
 $("#banner .slideBox").slide({mainCell:".bd ul",effect:"leftLoop",autoPlay:true, trigger:"click",interTime:4000});	

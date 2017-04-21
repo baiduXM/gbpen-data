@@ -22,7 +22,7 @@
     <script src="{$site_url}js/function.js"></script>
 </head>
 <body>
-<div id="index-wrap">
+<div id="index-wrap" style="background: url({$global.bj1.image}) center top no-repeat; background-size: 100% 100%;">
     {include file="./_header.html"}
     <section>
         <div id="aside">
@@ -50,7 +50,6 @@
                                         <span class="rq">{$article.pubtimestamp|date_format:'%Y.%m.%d'}</span>
                                     </div>
                                 </li>
-                                {if $article@index+1 eq 3}{break}{/if}
                                 {/foreach}
                             </ul>
                         </div>
