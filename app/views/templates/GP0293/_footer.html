@@ -1,11 +1,11 @@
-<footer>
+﻿<footer>
     <div id="footer">
         <div class="foot">
             <div class="link">
                 <span>友情链接：</span>
                 <ul>
                     {foreach name=friend item=friend from=$_footer.links}
-                    <li><a href="">{$friend.title}</a></li>
+                    <li><a href="{$friend.link}">{$friend.title}</a></li>
                     {/foreach}
                 </ul>
             </div>

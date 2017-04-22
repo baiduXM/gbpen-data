@@ -9,6 +9,7 @@
         {/if}
     </script>
     
+
     <meta http-equiv="x-ua-compatible" content="ie=7" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="{$keywords}" />
@@ -35,10 +36,10 @@
                 <span>
                     <a href="{$site_url}"><img src="{$site_url}images/ico3.jpg" width="14" height="14" />Home</a>
                     {foreach item=nav from=$posnavs}
-                        <a href="{$nav.link}">-{$article.category.name}</a>
+                        <a href="{$nav.link}">-{$article.category.en_name}</a>
                     {/foreach}
                 </span>
-                <h2><img src="{$site_url}images/ico2.jpg" width="10" height="10" />{$article.category.name}</h2>
+                <h2><img src="{$site_url}images/ico2.jpg" width="10" height="10" />{$article.category.en_name}</h2>
             </div>
             <div class="article ">
                 <div class="descripimg">
@@ -64,11 +65,11 @@
                 </div>
                 <div class="descriptcot">
                     <div class="text_p">
-                        product name：{$article.title}<br />
+                        {$article.title}<br />
                     </div>
                 </div>
                 <div class="moule_edot">
-                    <b style="font-size:14px;">product presentation</b>
+                    <!-- <b style="font-size:14px;">product presentation</b> -->
                     <br /> {$article.content|unescape:"html"}
                 </div>
                 <div style="height:30px;overflow: hidden; padding-top:7px; margin-top:15px;color:#000; float:right;">

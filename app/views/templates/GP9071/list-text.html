@@ -9,6 +9,7 @@
         {/if}
     </script>
     
+
     <meta http-equiv="x-ua-compatible" content="ie=8" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="{$keywords}" />
@@ -40,10 +41,10 @@
                 <span>
                     <a href="{$site_url}"><img src="{$site_url}images/ico3.jpg" width="14" height="14" />Home</a>
                     {foreach item=nav from=$posnavs}
-                    <a href="{$nav.link}">-{$nav.name}</a>
+                    <a href="{$nav.link}">-{$nav.en_name}</a>
                     {/foreach}
                 </span>
-                <h2><img src="{$site_url}images/ico2.jpg" width="10" height="10" />{$list.name}</h2>
+                <h2><img src="{$site_url}images/ico2.jpg" width="10" height="10" />{$list.en_name}</h2>
             </div>
             <div class="article">
                 <div class="list_text">

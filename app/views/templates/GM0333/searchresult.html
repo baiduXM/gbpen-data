@@ -33,15 +33,15 @@
     <meta name="description" content="{$description}" />
     <link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
     <title>{$title}</title>
-    <link rel="stylesheet" href="{$site_url}/css/animate.min.css"/>
-    <link rel="stylesheet" href="{$site_url}/css/swiper-3.4.1.min.css"/>
-    <link rel="stylesheet" href="{$site_url}/css/public.css"/>
-    <script src="{$site_url}/js/swiper-3.4.1.min.js"></script>
-    <script src="{$site_url}/js/swiper.animate1.0.2.min.js"></script>
-    <script src="{$site_url}/js/html5shiv.js"></script>
+    <link rel="stylesheet" href="{$site_url}css/animate.min.css"/>
+    <link rel="stylesheet" href="{$site_url}css/swiper-3.4.1.min.css"/>
+    <link rel="stylesheet" href="{$site_url}css/public.css"/>
+    <script src="{$site_url}js/swiper-3.4.1.min.js"></script>
+    <script src="{$site_url}js/swiper.animate1.0.2.min.js"></script>
+    <script src="{$site_url}js/html5shiv.js"></script>
     <script src="{$site_url}js/TouchSlide.1.1.js"></script>
     <script src="{$site_url}js/jquery-1.9.1.min.js"></script>
-    <script src="{$site_url}/js/function.js"></script>
+    <script src="{$site_url}js/function.js"></script>
     <script type="text/javascript">
         window.addEventListener('load', function(){
             setTimeout(function(){ window.scrollTo(0, 1); }, 100);
@@ -67,17 +67,16 @@
             <span class="result">以下是关键字“<em>{$search.keyword}</em>“的搜索结果</span>
             <div class="list_content">
                 <ul>
-                    {foreach item=arcitle from=$list.data}
-                    <li><a href="{$arcitle.link}"><h3>{$arcitle.title}</h3><span>{$arcitle.pubtimestamp|date_format:'%Y/%m/%d'}</span></a></li>
-                    {if $arcitle@index+1 eq 6}{break}{/if}
+                    {foreach item=arcitle from=$search.data}
+                    <li><a href="{$arcitle.link}"><span>{$arcitle.pubtimestamp|date_format:'%Y/%m/%d'}</span><h3>{$arcitle.title}</h3></a></li>
                     {/foreach}
                 </ul>
             </div>
         </div>
         <div class="page-content">
-            <a href="{$article.prev.link}">上一篇</a>
+            <a href="{$article.prev.link}">上一页</a>
             <a class="back" href="javascript:window.history.back()">返回</a>
-            <a href="{$article.next.link}">下一篇 </a>
+            <a href="{$article.next.link}">下一页</a>
         </div>
         <div id="scrolltop">
             <div class="t"><div class="tb"></div></div>

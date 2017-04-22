@@ -11,10 +11,10 @@
            
             {foreach name=navs item=nav from=$navs}
             <li class="fl{if $nav.current} current{/if} aa" style="width:{100/($limit+1)}%">
-                <a href="{$nav.link}">{$nav.name}</a>
+                <a href="{$nav.link}">{$nav.en_name}</a>
                 <ul class="sub clearfix">
                     {if $nav.childmenu} {foreach key=key item=nav_list from=$nav.childmenu}
-                    <li class="{if $nav.current}current{/if} cc"><a href="{$nav_list.link}">{$nav_list.name}</a></li>
+                    <li class="{if $nav.current}current{/if} cc"><a href="{$nav_list.link}">{$nav_list.en_name}</a></li>
                     {/foreach} {/if}
                 </ul>
             </li>
