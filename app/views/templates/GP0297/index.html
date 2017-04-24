@@ -28,7 +28,7 @@
 <body>
 <div class="wrap">
 	<div class="header">
-		<div class="public head">
+		<div class="head">
 			<div class="logo fl">
 				<a href="{$site_url}"><img src="{$logo}"/></a>
 			</div>
@@ -78,24 +78,24 @@
 			<div class="classify_btn">
 				<ul>
 				{$num=1}
-				{foreach name=pro item=pro from=$index.pro.childmenu}
+				{foreach name=classfy item=classfy from=$index.classfy.childmenu}
 					{if $num>3}{break}{/if}
 					<li class="first_ji">
-						<a href="{$pro.link}">
-							<h3 class="kz" data-limit="4">{$pro.name}</h3>
-							<span class="kz" data-limit="8">{$pro.en_name}</span>
+						<a href="{$classfy.link}">
+							<h3 class="kz" data-limit="4">{$classfy.name}</h3>
+							<span class="kz" data-limit="8">{$classfy.en_name}</span>
 						</a>
 						<ul>
-						{if $index.pro.childmenu}
-						{foreach item=pro1_list from=$index.pro.childmenu}
+						{if $index.classfy.childmenu}
+						{foreach item=classfy1_list from=$index.classfy.childmenu}
 							{if $num>6}{break}{/if}
-							<li class="sec_ji"><a href="{$pro1_list.link}" class="a3" data-limit="4">{$pro1_list.name}</a></li>
+							<li class="sec_ji"><a href="{$classfy1_list.link}" class="a3" data-limit="4">{$classfy1_list.name}</a></li>
 						{/foreach}
 						{/if}
 						</ul>
 					</li>
 				{$num=$num+1}
-				{if $pro@index eq 3}{break}{/if}
+				{if $classfy@index eq 3}{break}{/if}
 				{/foreach}
 				</ul>
 			</div>

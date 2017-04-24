@@ -12,6 +12,7 @@
       }
     {/if}
     </script>
+    
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no,minimal-ui">
 <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -66,7 +67,7 @@
                      {$article.content|unescape:"html"}
              </div>
                 <ul class="page1">
-                    <li><a class="xz" href="javascript:window.history.back()">返&nbsp;回</a></li>
+                    <li><a class="xz" href="javascript:window.history.back(-1)">返&nbsp;回</a></li>
                     <li><a class="xz" href="{$article.prev.link}">上一篇</a></li>
                     <li><a class="xz" href="{$article.next.link}">下一篇</a></li>
                 </ul>

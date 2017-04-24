@@ -9,7 +9,15 @@
 			"nav_width":234
 		}
 	},
-	
+	"classfy":{
+		"description":"首页分类",
+		"value":{},
+		"type":"list",
+		"config": {
+			"filter": "list,page",
+			"mustchild": true
+		}	
+	},
 	"pro":{
 		"description":"产品展示",
 		"value":{},
