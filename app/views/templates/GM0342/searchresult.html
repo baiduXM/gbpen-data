@@ -97,9 +97,9 @@
       </div>
       <div class="inner_main">
         <h5 class="sear">以下是关键词“{$search.keyword}”的搜索结果</h5>
-        <ul class="news_list1 clearfix">
+        <ul class="news_list1 news_list3 clearfix">
           {foreach item=list2 from=$search.data}                                
-          <li class="clearfix"><span class="fl">{$list2.pubtimestamp|date_format:'<em>%y-%m</em><i>%d</i>'}</span><a class="fr" href="{$list2.link}">{$list2.title}</a></li>          
+          <li class="clearfix"><a href="{$list2.link}">{$list2.title}</a></li>          
           {/foreach}
         </ul>
         {include file='./_page.html'} 

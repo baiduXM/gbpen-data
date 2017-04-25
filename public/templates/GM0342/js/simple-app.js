@@ -2,7 +2,7 @@ $(function(){
 	//Init Navigation
 	var holdPosition = 0;
 	var nav = $('.swiper-nav').swiper({
-		slidesPerView:6,
+		slidesPerView:3,
 		freeMode:true,
 		freeModeFluid:true,
 		paginationClickable: true,

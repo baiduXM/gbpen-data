@@ -54,15 +54,15 @@
                             <div class="bd">
                                 <ul>
                                     {foreach name=image item=image from=$article.images}
-                                    <li><a href="{$image.link}"><img src="{$image.image}" /></a></li>
+                                    <li><img src="{$image.image}" /></li>
                                     {/foreach}
                                 </ul>
                             </div>
                         </div>
                         <div class="right_details">
                         	<ul>
-                            	<li class="det-title">标题：{$article.title}</li>
-                                <li class="det-des">简介：{$article.description}</li>
+                            	<li class="det-title">{$article.title}</li>
+                                <li class="det-des">：{$article.description}</li>
                             </ul>
                         </div>
                         

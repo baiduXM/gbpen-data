@@ -8,9 +8,13 @@ jQuery(document).ready(function(){
 
 		
 // 内页
-	$(".first li a").click(function(){		
-		$(this).next(".second").slideToggle(300);
-		// return false;
-		})	
+	$(".first li a").click(function(){
+        $(this).next(".second").slideToggle(300);
+        // return false;
+    })
+    $(".second li a").click(function(){
+        $(this).next(".three").slideToggle(300);
+        // return false;
+    })
 
 });

@@ -70,29 +70,7 @@
         <em>{$list.en_name}</em></div>
         <a href="" class="classfiy">分类↓</a>
       </div>
-      <div class="navs">
-          <ul class="mtree transit">
-          {foreach item=nav from=$pagenavs}
-            <li class="{if $nav.current}current{/if}"><a href="{$nav.link}" class="firstli kz">{$nav.name}<span></span></a>
-            {if $nav.childmenu}
-                <ul>
-                    {foreach item=nav_list from=$nav.childmenu}
-                    <li class="{if $nav_list.current}current{/if}"><a href="{$nav_list.link}" class="kz">{$nav_list.name}<span></span></a>
-                        {if $nav.childmenu}
-                        <ul>
-                            {foreach item=nav_list from=$nav.childmenu}
-                            <li class="{if $nav_list.current}current{/if}"><a href="{$nav_list.link}" class="kz">{$nav_list.name}</a></li>
-                            {/foreach}
-                        </ul>
-                        {/if}
-                    </li>
-                    {/foreach}
-                </ul>
-                {/if}
-            </li>
-            {/foreach}
-          </ul>
-      </div>
+      {include file='./_pagenavs_sub3.html'}
       <div class="inner_main">
         <ul class="news_list1 clearfix">
           {foreach item=list2 from=$list.data}                                

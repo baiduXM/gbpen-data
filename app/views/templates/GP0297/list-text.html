@@ -38,10 +38,10 @@
 			<div class="main_div clear">
 				{include file='./_pagenavs_sub3.html'}
 				<div class="news_right fl">
-					<div class="newslist">
+					<div class="newslist4">
 						<ul>
 						{foreach name=article item=article from=$list.data}
-							<li><a href="{$article.link}" class="kz" data-limit="32">{$article.title}</a><span>{$article.pubtimestamp|date_format:'%Y-%m-%d'}</span></li>
+							<li><a href="{$article.link}" class="clearfix"><span class="fl">{$article@index+1}</span><div class="ninfo fr"><h2>{$article.title}</h2><p>{$article.description}</p></div></a></li>
 						{/foreach}
 						</ul>
 					</div>

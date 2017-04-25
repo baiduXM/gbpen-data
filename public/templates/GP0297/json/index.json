@@ -18,6 +18,24 @@
 			"mustchild": true
 		}	
 	},
+	"classfy1":{
+		"description":"首页分类",
+		"value":{},
+		"type":"list",
+		"config": {
+			"filter": "list,page",
+			"mustchild": true
+		}	
+	},
+	"classfy2":{
+		"description":"首页分类",
+		"value":{},
+		"type":"list",
+		"config": {
+			"filter": "list,page",
+			"mustchild": true
+		}	
+	},
 	"pro":{
 		"description":"产品展示",
 		"value":{},
@@ -40,6 +58,11 @@
 			"nav_height": 127,
 			"nav_width":424
 		}
+	},
+	"video": {
+		"value": "http://player.youku.com/player.php/Type/Folder/Fid/25949051/Ob/1/sid/XMTI5NDQyNDkzNg==/v.swf",
+		"description": "视频",
+		"type": "text"
 	}
 	
 }

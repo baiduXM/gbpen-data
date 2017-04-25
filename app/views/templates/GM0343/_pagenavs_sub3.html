@@ -1,22 +1,23 @@
-﻿<ul class="first">
-  {foreach name=pagenavs item=nav from=$pagenavs}
-      <li><a href="{$nav.link}">{$nav.name}</a><i style="{if $nav.childmenu}{else}display: none;{/if}">+</i>
+﻿<div class="navs">
+  <ul class="mtree transit">
+    {foreach item=nav from=$pagenavs}
+      <li class="{if $nav.current}current{/if}"><a href="{$nav.link}" class="firstli kz">{$nav.name}</a>
       {if $nav.childmenu}
-          <ul class="second">
-          {foreach key=key item=nav_list from=$nav.childmenu}
-            <li><a href="{$nav_list.link}">{$nav_list.name}</a><i style="{if $nav.childmenu}{else}display: none;{/if}">+</i>
-             {if $nav_list.childmenu}
-                <ul class="third">
-                {foreach key=key item=nav_listsec from=$nav_list.childmenu}
-                  <li><a href="{$nav_listsec.link}">{$nav_listsec.name}</a></li>
-                {/foreach}
-                </ul>
-               {/if}
-            </li>
-            {/foreach}
+          <ul>
+              {foreach item=nav_list from=$nav.childmenu}
+              <li class="{if $nav_list.current}current{/if}"><a href="{$nav_list.link}" class="kz">{$nav_list.name}</a>
+                  {if $nav_list.childmenu}
+                  <ul>
+                      {foreach item=nav_list1 from=$nav_list.childmenu}
+                      <li class="{if $nav_list1.current}current{/if}"><a href="{$nav_list1.link}" class="kz">{$nav_list1.name}</a></li>
+                      {/foreach}
+                  </ul>
+                  {/if}
+              </li>
+              {/foreach}
           </ul>
           {/if}
       </li>
       {/foreach}
-    
-</ul> 
+    </ul>
+</div>

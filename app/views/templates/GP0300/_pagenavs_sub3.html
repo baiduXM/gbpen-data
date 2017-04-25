@@ -9,37 +9,50 @@
 		<ul class="first">
 			{foreach name=pagenavs item=nav from=$pagenavs}
 			<li class="{if $nav.current}current{/if}">
-				<a href="{if count($nav.childmenu) eq 0}javascript:;{else}{$nav.link}{/if}">{$nav.name}</a>
+				<a href="{if $nav.childmenu}javascript:;{else}{$nav.link}{/if}">{$nav.name}</a>
 				{if $nav.childmenu}
 				<ul class="second">
 					{foreach key=key item=nav_list from=$nav.childmenu}
-					<li class="{if $nav_list.current}current{/if}"><a href="{$nav_list.link}">{$nav_list.name}</a></li>
+						<li class="{if $nav_list.current}current{/if}">
+							<a href="{if $nav_list.childmenu}javascript:;{else}{$nav.link}{/if}">{$nav_list.name}</a>
+							{if $nav_list.childmenu}
+							<ul class="three">
+								{foreach key=key item=nav_lists from=$nav_list.childmenu}
+									<li class="{if $nav_lists.current}current{/if}"><a href="{$nav_lists.link}">{$nav_lists.name}</a></li>
+								{/foreach}
+							</ul>
+							{/if}
+						</li>
 					{/foreach}
 				</ul>
 				{/if}
 			</li>
 			{/foreach}
 		</ul>
-
      </div>
-
-
 </nav>
 {else}	<!-- 让客服自己选择，如果当前无子栏目 展现的目标栏目 -->
 <nav class="news">
-	
      <h1 class="news_top">{$_pagenavs_sub3.posnavs[0].name}</h1>
-	 
      <div class="class_m">
 	 	<!-- 下表为0的面包屑导航正好是一级栏目的当前栏目 -->
 		<ul class="first">
 			{foreach name=pagenavs item=nav from=$_pagenavs_sub3.pagenavs.childmenu}
 			<li class="{if $nav.current}current{/if}">
-				<a href="{$nav.link}">{$nav.name}</a>
+				<a href="{if $nav.childmenu}javascript:;{else}{$nav.link}{/if}">{$nav.name}</a>
 				{if $nav.childmenu}
 				<ul class="second">
 					{foreach key=key item=nav_list from=$nav.childmenu}
-					<li class="{if $nav_list.current}current{/if}"><a href="{$nav_list.link}">{$nav_list.name}</a></li>
+					<li class="{if $nav_list.current}current{/if}">
+						<a href="{if $nav_list.childmenu}javascript:;{else}{$nav.link}{/if}">{$nav_list.name}</a>
+						{if $nav_list.childmenu}
+						<ul class="three">
+							{foreach key=key item=nav_lists from=$nav_list.childmenu}
+							<li class="{if $nav_lists.current}current{/if}"><a href="{$nav_lists.link}">{$nav_lists.name}</a></li>
+							{/foreach}
+						</ul>
+						{/if}
+					</li>
 					{/foreach}
 				</ul>
 				{/if}

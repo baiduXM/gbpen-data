@@ -25,9 +25,7 @@
 
 <body>
 <div class="wrap">
-	<!-- 导入头部文件 -->
     {include file='./_header.html'}
-
 	<div class="about_main">
 		<div class="public about_div">			
 			<h5>您所在的位置：<a href="{$site_url}">首页</a>
@@ -42,7 +40,6 @@
 					<div class="date"><span>时间：{$article.pubdate}</span><a href="{$article.category.link}">【返回列表】</a></div>
 					<div class="line">
 						{$article.content}
-						<img src="{$article.image}"/>
 						<div class="share" style="float:right;">
 	                      {shareExt shareText=$article.content|unescape:"html"|strip_tags|truncate:140:"…" sharePic=$article.image}
 	                    </div>
@@ -59,9 +56,7 @@
 			<div class="border_bottom"></div>
 		</div>
 	</div>
-
 	{include file='./_footer.html'}
-
 </div>
 </body>
 </html>

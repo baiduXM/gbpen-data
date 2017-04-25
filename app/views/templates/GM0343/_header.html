@@ -3,14 +3,11 @@
         <a href="#" class="menuico" id="quickbar-showcats"><img src="{$site_url}images/icon6.png" /></a>
         <a href="" class="logo"><img src="{$logo}"></a>
         <div class="search">  
-            <div class="searcha">
-            	<input type="submit" class="search1" value="">
-            </div>
-            <form class="searchb" action="searchresult.html?s=" method="GET" name="fm">
-            	<input type="text" name="s" class="txt1" placeholder="请输入搜索关键字">
-            	<input type="submit" class="search1" value="">
+            <form class="searchb" action="{$search_action}" method="GET">
+              <input type="text" name="s" class="txt1" placeholder="请输入搜索关键字">
+              <input type="submit" name="" class="search1" value="">
             </form>
-        </div> 
+        </div>
      </div>
      <div id="banner1" class="swiper-container">
         <div class="swiper-wrapper">
@@ -21,4 +18,3 @@
         <div class="pagination"></div>
       </div>
 </header>
-

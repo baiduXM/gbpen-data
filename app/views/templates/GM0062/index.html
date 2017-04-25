@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<!-- 实时预览调试代码，模板开发完成后删除 -->
-		
+        
 		<!-- 调试代码 End -->
 		<script type="text/javascript">
 		// 跳转PC页面
@@ -80,10 +80,10 @@
         </dl>
         <dl>
            {foreach item=nav from=$navs}     
-                 {if  $nav@index == 0 && $nav@index == 1} 
-                <dd class="{if $nav.current}current{/if}"><span><a href="{$nav.link}">{$nav.name}</a></span></dd>            
+                 {if  $nav@index eq 0 || $nav@index eq 1}
+                <dd class="ddthird"><span><a href="{$nav.link}">{$nav.name}</a></span></dd>
             
-              {elseif $nav@index > 1}    
+              {elseif $nav@index gt 1}
              
                <dd class="ddthird"><span><a href="{$nav.link}">{$nav.name}</a></span></dd>            
           

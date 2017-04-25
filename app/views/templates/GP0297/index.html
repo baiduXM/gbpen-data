@@ -27,76 +27,54 @@
 
 <body>
 <div class="wrap">
-	<div class="header">
-		<div class="head">
-			<div class="logo fl">
-				<a href="{$site_url}"><img src="{$logo}"/></a>
-			</div>
-			<div class="navbar fl">
-				<ul id="nav">
-					<li class="mainlevel" style="width:{100/(($navs|count)+1)}%"><a href="{$site_url}"><img class="none" src="{$site_url}images/left_white.png"/>首页<img class="none" src="{$site_url}images/right_white.png"/></a></li> 
-	                
-	                {foreach name=navs item=nav from=$navs}             
-					<li class="{if $nav.current} current{/if} mainlevel" style="width:{100/(($navs|count)+1)}%"><a href="{$nav.link}"><img class="none" src="{$site_url}images/left_white.png"/>{$nav.name}<img class="none" src="{$site_url}images/right_white.png"/></a>
-	                {if $nav.childmenu}
-	                    <ul>
-	                    {foreach key=key item=nav_list from=$nav.childmenu}
-	                        <li><a href="{$nav_list.link}">{$nav_list.name}</a></li>
-	                    {/foreach}
-	                    </ul>
-	                {/if}
-	            	</li>                   				
-	                {/foreach}
-		        </ul>
-			</div>
-		</div>
-	</div>
-	<div class="banner">
-	    <div id="slideBox" class="slideBox" >
-	        <div class="hd">
-	            <ul><li></li><li></li><li></li></ul>
-	        </div>
-	        <div class="bd">
-	            <ul>
-	            {$video=null}
-	            {foreach name=slidepics item=slidepic from=$global.slidepics}
-	                <li><a href="{$slidepic.link}" target="_blank"><img src="{$slidepic.image}" alt="{$slidepic.title}"/></a></li>
-	            {if $slidepic@index+1 eq $slidepic|count-1}{break}{/if}
-		          {/foreach}
-		          {foreach item=slidepic from=$global.slidepics}
-		            {if $slidepic@index+1 eq $slidepic|count}
-		              {$video=$slidepic.link}
-		            {/if}
-		          {/foreach}
-	            </ul>
-	        </div>
-	    </div>
-	</div>
+	{include file='./_header.html'}
 	<div class="content1">
 		<em class="line1"></em>
 		<div class="public main1">
 			<div class="classify_btn">
 				<ul>
-				{$num=1}
-				{foreach name=classfy item=classfy from=$index.classfy.childmenu}
-					{if $num>3}{break}{/if}
 					<li class="first_ji">
 						<a href="{$classfy.link}">
-							<h3 class="kz" data-limit="4">{$classfy.name}</h3>
-							<span class="kz" data-limit="8">{$classfy.en_name}</span>
+							<h3 class="kz" data-limit="4">常识</h3><br/>
+							<span class="kz" data-limit="8">VIEM</span>
 						</a>
 						<ul>
 						{if $index.classfy.childmenu}
 						{foreach item=classfy1_list from=$index.classfy.childmenu}
+							{if $num>8}{break}{/if}
+							<li class="sec_ji"><a href="{$classfy1_list.link}" class="a3" data-limit="4">{$classfy1_list.name}</a></li>
+						{/foreach}
+						{/if}
+						</ul>
+					</li>
+					<li class="first_ji">
+						<a href="{$classfy1.link}">
+							<h3 class="kz" data-limit="4">诊疗</h3><br/>
+							<span class="kz" data-limit="8">CLINICS</span>
+						</a>
+						<ul>
+						{if $index.classfy1.childmenu}
+						{foreach item=classfy1_list from=$index.classfy1.childmenu}
 							{if $num>6}{break}{/if}
 							<li class="sec_ji"><a href="{$classfy1_list.link}" class="a3" data-limit="4">{$classfy1_list.name}</a></li>
 						{/foreach}
 						{/if}
 						</ul>
 					</li>
-				{$num=$num+1}
-				{if $classfy@index eq 3}{break}{/if}
-				{/foreach}
+					<li class="first_ji">
+						<a href="{$classfy2.link}">
+							<h3 class="kz" data-limit="4">护理</h3><br/>
+							<span class="kz" data-limit="8">NURSE</span>
+						</a>
+						<ul>
+						{if $index.classfy2.childmenu}
+						{foreach item=classfy1_list from=$index.classfy2.childmenu}
+							{if $num>6}{break}{/if}
+							<li class="sec_ji"><a href="{$classfy1_list.link}" class="a3" data-limit="4">{$classfy1_list.name}</a></li>
+						{/foreach}
+						{/if}
+						</ul>
+					</li>
 				</ul>
 			</div>
 			<div class="aboutus">
@@ -109,15 +87,8 @@
 				</div>
 				<div class="m fr">
 					<a href="{$index.about_us.link}" class="ver_btn fl">{$index.about_us.name}</a>
-		            <div class="video1 fr"><video
-		                id="my-player"
-		                class="video-js"
-		                controls
-		                preload="auto"
-		                poster="//vjs.zencdn.net/v/oceans.png"
-		                data-setup='{}'>
-		              <source src="{$video}" type="video/mp4"></source>           
-		            </video>
+		            <div class="video1 fr">
+		            	<embed src="{$index.video}" allowFullScreen="true" quality="high" width="368" height="236" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
 		            </div>
 		          </div>
 			</div>
