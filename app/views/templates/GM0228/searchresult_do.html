@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html manifest="huancun.manifest">
 <head>
 <!-- 实时预览调试代码，模板开发完成后删除 -->
     
@@ -69,7 +69,7 @@
               </div>
       </nav>
        <div class="box_titles">
-          <h2><i>{$list.name}</i>
+          <h2><i>{$posnavs[0].name}</i>
             <span class="more">分类 ↓</span>
           </h2>
           {include file="./_nnav.html"}
@@ -77,20 +77,19 @@
       <!-- 内容 -->
       <section class="cont">
         <div class="cont_ny">
-          <ul class="newlist">
-            {foreach item=imgtext from=$list.data}
-              <li>
-                 <div class="new_left">
-                      <p class="new_d"><span>{$imgtext.pubtimestamp|date_format:'%m'}</span>{$imgtext.pubtimestamp|date_format:'%d'}</p>
-                      <div class="img_div"><img src="{$imgtext.image}"></div>
-                 </div>
-                 <div class="new_right">
-                      <dd>{$imgtext.title}</dd>
-                      <dt>{$imgtext.description}</dt>
-                      <a href="{$imgtext.link}" class="nmore">查看详情<i>></i></a>
-                 </div>
-              </li>
-            {/foreach}
+          {if $search.total eq 0}
+               <p class="result">没有查找到相关数据！</p>
+            {else}                
+               <p class="result">以下是关键字“{$search.keyword}”的搜索结果</p>
+          {/if}
+          <ul class="newlist2">
+            {foreach item=result from=$search.data}<!--search_content_start-->
+              <li><a href="search_$link">
+                 <dd>search_$title</dd>
+                 <span>search_$pubdate</span>
+                 <dt>search_$description</dt>
+              </a></li>
+            <!--search_content_end-->{/foreach} 
           </ul>
           {include file="./_page.html"}
         </div>

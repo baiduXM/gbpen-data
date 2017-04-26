@@ -86,8 +86,8 @@ body{width:16rem;height: auto;background: url(../images/bg_01.jpg) center top no
 .newlist li .new_left .img_div{width: 4rem;height: 4.1rem;display: table-cell;text-align: center;vertical-align: middle;position: absolute;bottom: 0;right:0;}
 .newlist li .new_left .img_div img{max-width: 100%;max-height: 100%;}
 .newlist li .new_right{width: 8.8rem;height: 4.5rem;float: right;}
-.newlist li .new_right dd{padding-top: 0.4rem; width: 100%;height: 0.7rem;font-size: 0.6rem;color: #333;line-height: 0.7rem;overflow: hidden;}
-.newlist li .new_right dt{padding-top: 0.3rem; width: 100%;height: 2.4rem;font-size: 0.55rem;line-height: 0.8rem;overflow: hidden;}
+.newlist li .new_right dd{margin-top: 0.4rem; width: 100%;height: 0.7rem;font-size: 0.7rem;color: #333;line-height: 0.7rem;overflow: hidden;}
+.newlist li .new_right dt{margin-top: 0.3rem; width: 100%;height: 2.4rem;font-size: 0.6rem;line-height: 0.8rem;overflow: hidden;}
 .newlist li .new_right a.nmore{display: block;width: 3.2rem;height: 0.8rem;padding-left: 0.4rem;font-size: 0.45rem;line-height: 0.8rem;color: #ffffff;background:#ba061f;border-radius: 1rem;}
 .newlist li .new_right a.nmore i{display: block;width: 0.5rem;height: 0.5rem;background: #ffffff;border-radius: 50%;color: #ba061f;font-style: normal;font-size: 0.5rem;float: right;line-height: 0.5rem;text-align: center;margin: 0.13rem 0.23rem 0 0;}
 .page{padding: 0.6rem 0; width: 100%;height: 0.8rem;text-align: center;line-height: 0.8rem;}
@@ -108,9 +108,9 @@ body{width:16rem;height: auto;background: url(../images/bg_01.jpg) center top no
 .ny-top .span{width: 1.5rem;height: auto;text-align: center; font-size: 0.6rem;color: #ffffff;line-height: 1.6rem;float: right;margin-right: 0.5rem;position: absolute;right: 0;z-index: 3;}
 .cont_ny .title{text-align: center; font-size: 0.7rem;color: #333333;width: 100%;height: auto;line-height: 0.8rem;padding-top: 0.4rem;}
 .cont_ny .time{width: 100%;height:1.1rem;text-align: center;font-size: 0.5rem;color: #999999;line-height: 1.1rem;display: block;}
-.cont_ny .page1{width:5.5rem;height: auto;overflow: hidden;margin: 0 auto;padding: 1rem 0;}
-.cont_ny .page1 li{width:0.825rem;height:2.5rem;float: left; padding: 0.2rem 0.45rem;}
-.cont_ny .page1 li a{color: #666666; width: 0.9rem;height: 2.4rem;display: block;writing-mode: tb-rl;letter-spacing:0.05rem;line-height:0.95rem;text-align: center;font-size:0.55rem;
+.cont_ny .page1{height: auto;overflow: hidden;margin: 0 auto;padding: 1rem 0; text-align: center;}
+.cont_ny .page1 li{width:0.825rem;height:2.5rem; padding: 0.2rem 0.45rem; display: inline-block;}
+.cont_ny .page1 li a{color: #666666; width: 0.9rem;height: 2.4rem;display: block;writing-mode:vertical-rl;letter-spacing:0.05rem;line-height:0.95rem;text-align: center;font-size:0.55rem;
                          background: url(../images/libg.png) center center no-repeat;background-size:0.9rem 2.4rem; padding: 4px 0;overflow: hidden;}
 .cont_ny .page1 li a:hover{color: #ffffff;background: url(../images/lihover.png) center center no-repeat;background-size:0.825rem 2.4rem;}
 /*pro*/
