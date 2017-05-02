@@ -32,7 +32,7 @@ header #quickbar-showcats .slide-nav{color: #f6921e;font-size: 1.5rem;position: 
 .menu{width: 94%;height: auto;overflow: hidden;margin: 0 auto;position: absolute;left: 3%;top: 3%;}
 .navlist{width: 100%;height: auto;overflow: hidden;}
 .navlist li{width: 28%;height: 1.5rem;overflow: hidden;background: #f6921e;float: left;margin: 1.5% 2.66%;}
-.navlist li a{color: #fff;font-size: 0.9rem;text-align: center;line-height: 1.5rem;height: 1.5rem;overflow: hidden;display: block;}
+.navlist li a{color: #fff;font-size: 0.6rem;text-align: center;line-height: 1.5rem;height: 1.5rem;overflow: hidden;display: block;}
 
 /*foot*/
 .foot{ padding:0.2rem 2.3rem 0.2rem 0.2rem;height:auto; color:#fff;font-size: 0.8rem;text-align:left;  position:relative; background: #f6921e;}
@@ -117,9 +117,9 @@ header #quickbar-showcats .slide-nav{color: #f6921e;font-size: 1.5rem;position: 
 
 /*pro_det*/
 .focusBox { position: relative; width: 12.9rem; height:auto; overflow: hidden;margin: 0 auto 0.5rem;}
-.focusBox .hd{width: 2.15rem;height: 0.6rem;overflow: hidden;background: rgba(255,255,255,0.39);border-radius: 10px;position: absolute;bottom: 0.25rem;left: 50%;margin-left: -1.075rem;z-index: 999}
-.focusBox .hd ul{width: 2rem;height: 0.25rem;overflow: hidden;margin: 0.175rem auto;}
-.focusBox .hd ul li{width: 0.25rem;height: 0.25rem;overflow: hidden;background: #fff;float: left;margin: 0 0.2rem;border-radius: 50%;}
+.focusBox .hd{height: 0.6rem;position: absolute;bottom: 0.25rem;left: 50%;z-index: 999}
+.focusBox .hd ul{height: 0.3rem;padding:0.15rem 0; border-radius: 10px;overflow: hidden;background: rgba(0,0,0,.9);text-align:center;margin-left: -50%;}
+.focusBox .hd ul li{width: 0.3rem;height: 0.3rem;line-height: 100rem;background: #fff;display: inline-block; margin: 0 0.1rem;border-radius: 50%;}
 .focusBox .hd ul li.on{background: #f6921e;color: #f6921e;}
 .focusBox .bd{width: 12.9rem;height: auto;overflow: hidden;}
 .focusBox .bd ul{width: 100%;height: auto;overflow: hidden;margin: 0 auto;}

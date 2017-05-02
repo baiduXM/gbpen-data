@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html manifest="huancun.manifest">
+<html>
 <head>
 <!-- 实时预览调试代码，模板开发完成后删除 -->
     
@@ -73,7 +73,7 @@
       <section>
         <div class="probox">
              <div class="pro_top">
-                 <div class="left"><div class="datu"><img src="{$global.indexx.image}"></div></div>
+                 <div class="left"><div class="datu"><img src="{$global.indexx[0].image}"></div></div>
                  <div class="right">
                   <a href="{$navs[0].link}" class="icon1"><img src="{$navs[0].image}"></a>
                   <p>{$navs[0].name}</p>
@@ -100,17 +100,17 @@
                    <a href="{$navs[5].link}" class="icon"><img src="{$navs[5].image}"></a>
                    <p>{$navs[5].name}</p>
                  </li>
-                 <li class="li6">
+<!--                  <li class="li6">
                    <a href="list-image.html" class="icon more">+</a>
                    <p>查看更多</p>
-                 </li>
+                 </li> -->
              </ul>
         </div>
         <div class="newbox">
           {foreach item=mIndexCat from=$mIndexCats}
           {if $mIndexCat.type eq 1}
             {if $mIndexCat.showtype eq 1}
-             <div class="nav2">{$mIndexCat.name}<a href="{$mIndexCat.link}">MORE+</a></div>  <div class="new">
+             <div class="nav2">{$mIndexCat.name}<a href="{$mIndexCat.link}">MORE+</a></div><div class="new">
                   <ul class="new-list">
 
                   <div class="new-top"><a href="{$mIndexCat.data[0].link}">

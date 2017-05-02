@@ -5,12 +5,13 @@
 
 .header{ width:100%; height: auto; overflow:hidden;position:relative; z-index:1; background:url(../images/huac.png) no-repeat top; background-size:100% auto;}
 .logo{width:100%; height: auto; overflow:hidden;}
+.logo img{max-width: 100%;max-height: 100px;}
 .header_menu{ width:46px; height:46px; position:absolute; top:50%; -webkit-transform:translate(0,-50%); right:15px; background:#fff;-webkit-mask-repeat:no-repeat; -webkit-mask-image: url(../icon/f_i1.png);-webkit-mask-size:46px auto;} 
 .foot{ background:#2e364c; padding:8px; height:auto; overflow:hidden; text-align: left;  position:relative; color:#ffffff; text-align:center;}
 
 
 /*panle导航开始*/
-.class{width:240px;  height:100%; z-index:7; background:#556946; position: absolute; top:0px; left:0px; color:#333333;  }
+.class{width:240px;  height:100%; z-index:7; background:#17a0b4; position: absolute; top:0px; left:0px; color:#333333;  }
 .class-top{ height:40px; overflow:hidden; line-height:40px; font-size:1.3em;  background:#d4a31f;padding-left:15px; color:#fff;}
 .class-close{ width:40px; height:40px; line-height:38px;float:right; display:inline; text-align:center; font-size:1.4em; position:relative; color:#fff}
 .class-close:before{ width:24px; height:24px; content:""; border-radius:100%; background:rgba(255,255,255,0.1); position:absolute; top:50%; left:50%; -webkit-transform:translate(-50%,-50%)}
@@ -19,11 +20,11 @@
 .overflow{ height:100%; overflow:hidden;}
 ul.class-list{ padding:0px; margin:0px; height:auto; overflow:hidden;}
 ul.class-list li{ height: auto; line-height:35px; overflow:hidden;  font-size:1.15em; text-indent:15px;}
-ul.class-list li .icon{ color:#c2dfb9; width:35px; height:35px; text-align:center; float:right; display:inline;text-indent:0px; font-size:1.2em;}
+ul.class-list li .icon{ color:#edfdff; width:35px; height:35px; text-align:center; float:right; display:inline;text-indent:0px; font-size:1.2em;}
 ul.class-list li a{ color:#fff; display:block;}
 ul.class-list li .icon1{ display:none;}
 ul.class-list li.menu_body dl{ height:28px; line-height:28px; overflow:hidden; font-size:0.9em;background:url(../images/li.png) 15px center no-repeat; padding-left:13px;  }
-ul.class-list li.menu_body dl a{ color:#c2dfb9; display:block;}
+ul.class-list li.menu_body dl a{ color:#edfdff; display:block;}
 ul.class-list li.menu_body dl a:active{ background:rgba(255,255,255,0.1);}
 ul.class-list li.cur{background:rgba(0,0,0,0);}
 ul.class-list li.cur .icon1{ display:block;}

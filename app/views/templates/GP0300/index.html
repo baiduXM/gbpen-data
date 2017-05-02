@@ -9,30 +9,28 @@
         }
     {/if}
     </script>
- 
 
-<meta name="keywords" content="{$keywords}"/>
-<meta name="description" content="{$description}"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Content-Language" content="zh-CN">
+    <meta name="keywords" content="{$keywords}"/>
+    <meta name="description" content="{$description}"/>
+    <title>{$title}</title>
 <link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta http-equiv="Content-Language" content="zh-CN">
-
 <link href="{$site_url}css/css.css" rel="stylesheet" type="text/css" />
 
 <script type="text/javascript" src="{$site_url}js/jquery-1.11.3.js"></script>
 <script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.js"></script>
-<script type="text/javascript" src="http://common.mn.sina.com.cn/public/resource/lib/jquery.jcarousellite.js">
-</script>
+<script type="text/javascript" src="{$site_url}js/jquery.jcarousellite.js"></script>
 <script type="text/javascript" src="{$site_url}js/function.js"></script>
 <script type="text/javascript" src="{$site_url}js/index.js"></script>
-<title>{$title}</title>
+
 {$headscript}
 </head>
 
 <body>
 <div class=" main">
 	<!-- 导入头部文件 -->
-    {include file='./_header.html'}
+    {include file="./_header.html"}
     <div class="content">
     	<div class="left">
         	<div class="news">
@@ -46,7 +44,6 @@
                             </a></li>
                             {if $new@index+1 == 4}{break}{/if}
                         {/foreach}
-
                </ul>
                 </div>
             </div>
@@ -62,13 +59,17 @@
                         <div class="focusBox">
                             <div class="bd">
                                     <ul>
-                                        {foreach name=image item=image from=$index.about_img}
-                                         <li><a href="{$image.link}"><img src="{$image.image}" /></a></li>
+                                        {foreach name=image item=imagee from=$index.about_img}
+                                         <li><a href="{$imagee.link}"><img src="{$imagee.image}" /></a></li>
                                         {/foreach}                
                                     </ul>
                             </div>
                             <div class="hd">
-                                    <ul><li class="on">1</li><li>2</li><li>3</li><li>4</li><li>5</li></ul>
+                                <ul>
+                                    {foreach name=image item=imagea from=$index.about_img}
+                                        <li class="{if $imagea.current}on{/if}">{$imagea@index+1}</li>
+                                    {/foreach}
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -94,7 +95,7 @@
         </div>
     </div>
    <!-- 导入底部文件 -->
-   {include file='./_footer.html'}
+   {include file="./_footer.html"}
 </div>
 </body>
 </html>

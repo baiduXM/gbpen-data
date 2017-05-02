@@ -52,7 +52,7 @@
             <a href="{$text.link}">
                 <b></b>
                 <span>{$text.title}</span>
-                <time class=" rt" datetime="{$text.pubdate}" pubdate="pubdate">{$text.pubdate}</time>
+                <time class=" rt"  datetime="{$text.pubtimestamp|date_format:'%Y-%m-%d'}">{$text.pubtimestamp|date_format:'%Y-%m-%d'}</time>
             </a>
         </li>
         {/foreach}

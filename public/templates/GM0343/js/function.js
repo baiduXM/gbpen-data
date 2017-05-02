@@ -9,12 +9,16 @@ $(document).ready(function(){
 				});
 
 	(function(){
+		if($('.searcha').css('display')=='block'){
 			$('.search').click(function(){
 				$('.txt1').animate({opacity:"100",left:'-11.6rem'},1000)
+				$('.searcha').css('display','none')
 			
 			});
+		};
 			$(document).click(function(){
 			    $('.txt1').animate({opacity:"0",left:'-2rem'},1000)
+			   $('.searcha').css('display','block')
 			});
 			
 			$(".search").click(function(event){

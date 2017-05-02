@@ -59,6 +59,12 @@
                     </nav>
                 </div>
             {elseif $mIndexCat.showtype eq 2}
+                <div id="cont3" >
+                    <a href="{$global.banner.link}"><img src="{$global.banner.image}" alt=""></a>
+                    <div class="bg">
+                        <img src="{$site_url}images/img_20.png" alt="">
+                    </div>
+                </div>
                 <div id="cont4">
                     <p class="cont1-title"><a href="{$mIndexCat.link}"> <b class="craft-lt"></b><span>{$mIndexCat.name}</span><b class="craft-rt"></b></a></p>
                     <div class="news">
@@ -96,20 +102,13 @@
                       </div>
                     </div>
                  </div>
-            {elseif $mIndexCat.showtype eq 2}
-                 <div id="cont3" >
-                    <a href="{$global.banner.link}"><img src="{$global.banner.image}" alt=""></a>
-                    <div class="bg">
-                        <img src="{$site_url}images/img_20.png" alt="">
-                    </div>
-                </div>
         {/if}
         {elseif $mIndexCat.type eq 4}
              {if $mIndexCat.showtype eq 1}
                 <div id="cont5" >
                     <p class="cont1-title"><a href="{$mIndexCat.link}"> <b class="craft-lt"></b><span>{$mIndexCat.name}</span><b class="craft-rt"></b></a></p>
                     <div class="about-us">
-                        <p >{$mIndexCat.description}<a href="{$mIndexCat.link}">[详细]</a></p>
+                        <p >{$mIndexCat.description}</p><a href="{$mIndexCat.link}">[详细]</a>
                     </div>
                 </div>
              {/if}

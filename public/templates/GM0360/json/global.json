@@ -1,0 +1,33 @@
+{
+	"slidepics": {
+		"value": [{
+			"title": "测试图1",
+			"image": "images/slide_1.jpg",
+			"link": "http://www.baidu.com"
+		}, {
+			"title": "测试图2",
+			"image": "images/slide_1.jpg",
+			"link": "http://www.baidu.com"
+		}],
+		"description": "大轮滚图",
+		"type": "images",
+		"config": {
+			"width": 640,
+			"height": 295,
+			"limit": 2
+		}
+	},
+	"load_img":{
+		"value": {
+			"title": "XXX",
+			"image": "images/about_b.png",
+			"link": ""
+		},
+		"description": "首页关于我们模块左下角的模糊背景图",
+		"type": "image",
+		"config": {
+			"width":565,
+			"height": 565
+		}
+	}
+}

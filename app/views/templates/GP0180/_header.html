@@ -5,7 +5,7 @@
         <li><a href="{$site_url}">首页</a></li>
         {foreach item=nav from=$navs}
             <li>
-                <a href="{$nav.link}">{$nav.name}</a>
+                <a href="{$nav.link}" class="{if $nav.current}in{/if}">{$nav.name}</a>
                 {if $nav.childmenu}
                     <i></i>
                     <ul class="subnav">

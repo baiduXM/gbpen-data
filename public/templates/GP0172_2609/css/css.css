@@ -225,7 +225,7 @@ ol,p,dl,li{list-style:none;}
 /*pro-det*/
 
 .pro-det h2{font-size: 20px;text-align: center;margin-bottom: 15px;color: #32a9aa;line-height: 30px;}
-.mod18{width:397px;height:350px;margin:0 auto 20px;position:relative;/*background:#f7f7f7;*/}
+.mod18{width:400px;margin:0 auto 20px;position:relative;/*background:#f7f7f7;*/}
 .mod18 .btn{position:absolute;width:30px;height:30px;/*top:336px;*/cursor:pointer;z-index:99;/*font-size:50px;font-weight:bold;*/bottom: 19px;}
 .mod18 .prev{left:20px;background:url(../images/pnbtn.png) 0 0 no-repeat;}
 .mod18 #prevTop,.mod18 #nextTop{top:213px;width:24px;height:38px;display: none;}
@@ -234,10 +234,10 @@ ol,p,dl,li{list-style:none;}
 .mod18 .next{right:20px;background:url(../images/pnbtn.png) -30px 0 no-repeat;}
 .mod18 li{float:left;}
 .mod18 .cf li{position:relative;color:#fff;}
-.mod18 .cf .pic{display:table-cell;width:580px;height:430px;text-align: center;vertical-align: middle;}
-.mod18 .picBox{height:350px;position:relative;overflow:hidden;}
-.mod18 .picBox ul{height:350px;position:absolute;}
-.mod18 .picBox li{width:397px;height:350px;}
+.mod18 .cf .pic{width:400px;height:400px;text-align: center;}
+.mod18 .picBox{height:400px;position:relative;overflow:hidden;}
+.mod18 .picBox ul{position:absolute;}
+.mod18 .picBox li{width:400px;height:400px;}
 .mod18 .picBox li img{border-radius: 10px;}
 .mod18 .picBox li img,.mod18 .listBox li img{max-width: 100%;max-height: 100%;vertical-align: middle;}
 .mod18 .listBox{width:267px;height:54px;position:absolute;overflow:hidden;bottom: 7px;left: 50%;margin-left: -133px;}
