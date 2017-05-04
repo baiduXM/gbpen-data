@@ -1,0 +1,31 @@
+<div class="header">
+	<div class="public1">
+		<div class="logo">
+			<a href="{$site_url}"><img src="{$logo}"></a>
+		</div>
+		<div class="nav">
+			<ul>
+				<li class="nav_li"><a href="{$site_url}" class="a">网站首页</a></li>
+				{foreach name=navs item=nav from=$navs}
+				<li class="nav_li"><a href="{$nav.link}" class="a">{$nav.name}</a>
+				{if $nav.childmenu}
+					<ul class="sub">
+					{foreach key=key item=nav_list from=$nav.childmenu}
+						<li><a href="{$nav_list.link}">• {$nav_list.name}</a></li>
+					{/foreach}
+					</ul>
+				{/if}
+				</li>
+				{if $nav@index eq 4}{break}{/if}
+				{/foreach}
+			</ul>
+		</div>
+		<div class="right">
+			<p>{$contact.telephone}</p>
+			<form action="{$search_action}" method="GET">
+				<input type="text" name="s" placeholder="请输入搜索内容"/>
+				<input type="submit"/>
+			</form>
+		</div>
+	</div>
+</div>

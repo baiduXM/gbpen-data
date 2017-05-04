@@ -1,0 +1,20 @@
+	<div class="head">
+		<div class="logo fl"><a href="{$site_url}"><img src="{$logo}"></a></div>
+		<div class="nav fl">
+			<ul class="one">
+				<li><a href="{$site_url}">网站首页</a></li>
+				{foreach item=nav from=$navs}
+				<li class="{if $nav.current}cu{/if}" style="width:{100/($navs|count+1)}%">
+					<a href="{$nav.link}">{$nav.name}</a>
+					{if $nav.childmenu}
+					<ul class="two">
+						{foreach item=subnav from=$nav.childmenu}
+						<li><a href="{$subnav.link}">{$subnav.name}</a></li>
+						{/foreach}
+					</ul>
+					{/if}
+				</li>
+				{/foreach}
+			</ul>
+		</div>
+	</div>
