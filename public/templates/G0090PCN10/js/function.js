@@ -1,3 +1,66 @@
+window.onload=function(){
+	
+
+$(".about").each(
+ function(){
+	 $(this).find(".about_text").width($(this).width()-$(this).find(".about_img img").width()-55)
+	 }
+ )		
+
+
+
+
+
+
+function adaption(selector,li_w,li_h){
+		$(selector).each(function(i){
+		img_i=$(selector).eq(i).find("img")
+	    if(img_i.width() >= li_w&&img_i.width()>=img_i.height()){
+          img_i.width("100%");}
+        else if(img_i.height() > li_h){
+         img_i.height("100%");}
+	   var img_h=img_i.height()	
+       var img_w=img_i.width()												
+       var mar_t=Math.floor((li_h-img_h)*0.5);
+       var mar_l=Math.floor((li_w-img_w)*0.5);
+  	   $(this).css({"padding-top":mar_t+"px","padding-left":mar_l+"px"})
+	   $(this).width($(this).width()-mar_l);
+	   $(this).height($(this).height()-mar_t);
+		})
+	}
+
+
+adaption(".products .inner ul li .pic",285,285)
+
+
+
+	$(".article .bd li").each(function(i){
+	if($(".article .bd li").eq(i).find("img").width() > 640){
+       $(".article .bd li").eq(i).find("img").width("99%");
+}
+
+		})
+
+	 
+/*图文内页图片自适应*/	 
+ $(".list_imagetext ul li").each(
+ function(){
+	 var wid1=$(this).find(".img_box img").width();
+	 var wid2=$(this).width();
+	 $(this).find(".text_box").width(wid2-wid1-11)
+	 }
+ )
+ 
+
+  
+/*	 $(".yc ul li").each(function(){
+		 var ww=$(this).find("img").width();
+   $(this).find("p").width(ww);
+  });*/
+  
+}
+
+
 $(document).ready(function() {
 <!--美工-->
 
@@ -37,69 +100,6 @@ $(".link").slide({mainCell:".bd ul",autoPlay:true,effect:"leftMarquee",vis:8,int
 
 
 
-window.onload=function(){
-	
-<!--关于我们--
-
-$(".about").each(
- function(){
-	 $(this).find(".about_text").width($(this).width()-$(this).find(".about_img img").width()-55)
-	 }
- )		
-
-
-
-
-
-
-function adaption(selector,li_w,li_h){
-		$(selector).each(function(i){
-		img_i=$(selector).eq(i).find("img")
-	    if(img_i.width() >= li_w&&img_i.width()>=img_i.height()){
-          img_i.width("100%");}
-        else if(img_i.height() > li_h){
-         img_i.height("100%");}
-	   var img_h=img_i.height()	
-       var img_w=img_i.width()												
-       var mar_t=Math.floor((li_h-img_h)*0.5);
-       var mar_l=Math.floor((li_w-img_w)*0.5);
-  	   $(this).css({"padding-top":mar_t+"px","padding-left":mar_l+"px"})
-	   $(this).width($(this).width()-mar_l);
-	   $(this).height($(this).height()-mar_t);
-		})
-	}
-/*首页产品列表图片自适应*/
-
-adaption(".products .inner ul li .pic",285,285)
-
-
-
-/*产品详细页图片自适应*/
-	$(".bd li").each(function(i){
-	if($(".bd li").eq(i).find("img").width() > 640){
-       $(".bd li").eq(i).find("img").width("99%");
-}
-
-		})
-
-	 
-/*图文内页图片自适应*/	 
- $(".list_imagetext ul li").each(
- function(){
-	 var wid1=$(this).find(".img_box img").width();
-	 var wid2=$(this).width();
-	 $(this).find(".text_box").width(wid2-wid1-11)
-	 }
- )
- 
-
-  
-/*	 $(".yc ul li").each(function(){
-		 var ww=$(this).find("img").width();
-   $(this).find("p").width(ww);
-  });*/
-  
-}
 
 $(document).ready(function() {
 						   

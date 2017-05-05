@@ -75,7 +75,7 @@
              <div class="pro_top">
                  <div class="left">
                    <div class="datu">
-                    {foreach item=slidepic from=$global.indexx}
+                    {foreach item=slidepic from=$global.slidepics}
                       <img src="{$slidepic.image}">
                       {if $slidepic@index eq 0}{break}{/if}
                     {/foreach}
