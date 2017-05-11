@@ -1,0 +1,29 @@
+<div class="contact wap">
+	<div class="cont w">
+		<div class="hotline f_l">
+			<img src="{$site_url}images/phone_65.png">
+			<p>{$global.hotline}</p>
+		</div>
+		<div class="mail f_l">
+			<img src="{$site_url}images/mail_62.png">
+			<p>{$global.mail}</p>
+		</div>
+		<div class="addr f_l">
+			<img src="{$site_url}images/addr_68.png">
+			<p>{$global.addr}</p>
+		</div>
+	</div>
+</div>
+
+<div class="tail wap">
+	<div class="link w">
+		友情链接：
+		{foreach key=key item=link from=$global.link}
+		<a href="{$link.link}" target="_blank">{$link.title}</a></li>
+		{/foreach}	
+	</div>
+	<div class="footer w">
+		{$footprint}
+	</div>
+</div>
+{$footscript}

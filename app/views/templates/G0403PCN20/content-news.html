@@ -13,7 +13,7 @@
 
     <meta name="keywords" content="{$keywords}"/>
     <meta name="description" content="{$description}"/>
-	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 	<title>{$title}</title>
 	<link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
 	<link rel="stylesheet" type="text/css" href="{$site_url}css/master.css">
@@ -43,7 +43,7 @@
 				</div>
 				<div class="right_below">
 					<div class="news_det_tit">{$article.title}</div>
-					<div class="news_det_tim">类别：{$article.category.name}     发布时间：{$article.pubtimestamp|date_format:'%Y年%m月%d日'}
+					<div class="news_det_tim">类别：{$article.category.name}     发布时间：{$article.pubdate}
 					浏览：{$article.viewcount} <a href="javascript:window.history.back()"> [返回] </a></div>
 					<hr />
 					<div class="news_det">{$article.content|unescape:"html"}</div>

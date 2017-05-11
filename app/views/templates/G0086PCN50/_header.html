@@ -1,0 +1,75 @@
+
+
+
+
+
+    <div class="nytop">
+        <div class="nyheader">
+            <div class="head">
+                <div class="menu"><div class="menubar"></div></div>
+                <div class="logo"><a href="{$site_url}"><img src="{$logo}" alt=""></a></div>
+
+            </div>
+        </div>
+        <div class="nybanner">
+          <div id="slideBox" class="slideBox">
+            <div class="hd">
+              <ul><li></li><li></li><li></li></ul>
+            </div>
+            <div class="bd">
+              <ul>
+                {foreach name=slidepics item=slidepic from=$global.slidepics}
+                    <li><a href="{$slidepic.link}"><img src="{$slidepic.image}" /></a></li>
+                {/foreach}
+              </ul>
+            </div>
+            <a class="prev" href="javascript:void(0)"></a>
+            <a class="next" href="javascript:void(0)"></a>        
+          </div>  
+        </div>
+           
+    </div>
+    <div class="nav-wrap">
+        <div class="nav">
+            <ul>
+                {$limit = 5}
+               <li><a href="{$site_url}">网站首页</a></li> 
+
+                {foreach name=navs item=nav from=$navs}
+                <li>
+                    <a href="{$nav.link}">{$nav.name}</a>      
+                    {if $nav.childmenu}
+                        <ul class="subnav">
+                            {foreach key=key item=nav_list from=$nav.childmenu}
+                            <li class="{if $nav.current}current{/if}"><a href="{$nav_list.link}">{$nav_list.name}</a></li>
+                            {/foreach}
+                        </ul>
+                    {/if}
+                </li>
+                {if $nav@index+1 gte $limit}{break}{/if}
+                {/foreach}
+            </ul>
+            <div class="close">关闭</div>
+        </div>       
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
