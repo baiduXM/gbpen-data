@@ -1,7 +1,0 @@
-<section>
-	<ul class="module_news">
-              {foreach name=article item=article from=$list.data}
-                <li><a href="{$article.link}"><span>{$article.pubtimestamp|date_format:'%Y-%m-%d'}</span>{$article.title}</a></li>
-                {/foreach}
-            </ul>
-</section>
