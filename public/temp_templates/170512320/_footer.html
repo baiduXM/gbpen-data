@@ -1,0 +1,27 @@
+        	<div class="flink">
+               <span class="flinktitle">友情链接</span>
+               <div class="picMarquee-left">
+			<div class="hd">
+				<a class="next"></a>
+				<a class="prev"></a>
+			</div>
+			<div class="bd">
+				<ul class="picList">
+                {foreach key=key item=link from=$global.links}
+					<li>
+						<div class="pic"><a href="#" target="_blank"><img src="{$link.image}" /></a></div>
+					</li>
+                 {/foreach}
+				</ul>
+			</div>
+		</div>
+            </div>
+<div class="midfoter">
+            <a href="{$site_url}">首页</a> |
+                        {foreach name=navs item=nav from=$navs}
+                            <a href="{$nav.link}" >{$nav.name}</a> |
+                        {/foreach}<br>                             
+            
+              版权所有{$footprint} {$contact.company} {$global.contactusfoot}
+            </div>
+        {$footscript}
