@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+
+    <script type="text/javascript">
+    {if $site_another_url}
+        if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+            location.href = '{$site_another_url}';
+        }
+    {/if}
+    </script>
+    
+    <meta name="keywords" content="{$keywords}"/>
+    <meta name="description" content="{$description}"/>
+	<meta http-equiv="x-ua-compatible" content="ie=8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>{$title}</title>
+	<link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
+	<link rel="stylesheet" type="text/css" href="{$site_url}css/master.css">
+	<script src="{$site_url}js/jquery-1.9.1.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.1.js"></script>
+	<script type="text/javascript" src="{$site_url}js/nav.js"></script>
+	<script type="text/javascript" src="{$site_url}js/function.js"></script>
+	{$headscript}
+</head>
+<body>
+	<div class="wrap">
+			<div class="banner">
+				<div class="slider">
+					<div class="bd">
+						<ul>
+							{foreach item=slidepics from=$index.slidepics}
+							<li><a href="{$slidepics.link}"><img src="{$slidepics.image}"></a></li>
+							{/foreach}
+						</ul>
+					</div>
+					<div class="hd">
+						<ul>
+							{foreach item=slidepics from=$index.slidepics}
+							<li></li>
+							{/foreach}
+						</ul>
+					</div>
+					<a class="prev" href="javascript:void(0)"></a>
+					<a class="next" href="javascript:void(0)"></a>
+				</div>
+			</div>
+			<div class="header header_index">
+				{include file='./_header.html'}
+			</div>
+			<div class="pro_show">
+				<div class="pro_bg"></div>
+				<div class="picScroll">
+					<div class="bd">
+						<ul class="picList">
+							{foreach item=picList from=$index.picList.data}
+							<li><a href="{$picList.link}"><img src="{$picList.image}"><span class="name0">{$picList.title}</span><em class="em2"></em></a></li>
+							{/foreach}
+						</ul>
+					</div>
+					<div class="hd">
+						<ul>
+							{foreach item=picList from=$index.picList.data}
+							<li></li>
+							{/foreach}
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="show">
+				<ul>
+					{foreach item=show from=$navs}
+					<li class="showcase"><a href="{$show.link}"><span class="cn fl">{$show.name}</span><span class="fl">丨</span><span class="en fl">{$show.en_name}</span><strong class="plus fr">＋</strong></a></li>
+					{/foreach}
+				</ul>
+			</div>
+			<div class="footer footer_index">
+				{include file='./_footer.html'}
+			</div>
+
+	</div>	
+	
+</body>
+</html>

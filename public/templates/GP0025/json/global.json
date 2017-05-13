@@ -1,0 +1,79 @@
+{
+ "slidepics":{
+	"value":[{
+		
+		"title":"测试图1",
+		"image":"images/banner.jpg",
+		"link":"http://www.baidu.com"
+	},{
+		"title":"测试图1",
+		"image":"images/banner.jpg",
+		"link":"http://www.baidu.com"
+	
+	},{
+		"title":"测试图1",
+		"image":"images/banner.jpg",
+		"link":"http://www.baidu.com"
+	
+	}
+	
+	],
+	"description":"大轮滚动",
+	"type":"images",
+	"config": {
+			"width": 1000,
+			"height": 323,
+			"limit": 3
+ 
+			}
+ 
+ },
+ "second_navs": {
+		"value": {},
+		"description": "第二导航（顶部）",
+		"type": "navs",
+		"config": {
+			"limit":3
+		}
+	},
+	"ftlogo": {
+		"value": {},
+		"description": "底部logo",
+		"type": "page",
+		"config": {
+			"width": 155,
+			"height": 77
+			
+		}
+	},
+		
+"contact": {
+		"value": {},
+		"description": "联系我们",
+		"type": "page",
+		"config": {
+			"width": 320,
+			"height": 88
+			}
+	},
+	"Recruitment": {
+		"value": {},
+		"description": "人才招聘",
+		"type": "page",
+		"config": {
+			"width": 320,
+			"height": 88
+			}
+	},
+	"Feedback": {
+		"value": {},
+		"description": "意见反馈",
+		"type": "page",
+		"config": {
+			"width": 320,
+			"height": 88
+			}
+	}
+	
+ }
+ 

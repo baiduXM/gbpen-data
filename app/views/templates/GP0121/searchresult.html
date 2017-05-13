@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script type="text/javascript">
+    // Ìø×ªÊÖ»úÒ³Ãæ
+    {if $site_another_url}
+        if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+            location.href = '{$site_another_url}';
+        }
+    {/if}
+    </script>
+
+<!--  -->
+<meta name="keywords" content="{$keywords}"/>
+<meta name="description" content="{$description}"/>
+<link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Language" content="zh-CN">
+
+<link rel="stylesheet" type="text/css" href="{$site_url}css/style.css"/>
+<script type="text/javascript" src="http://common.mn.sina.com.cn/public/resource/lib/jquery.jcarousellite.js"></script>
+<script type="text/javascript" src="{$site_url}js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.js"></script>
+<script type="text/javascript" src="{$site_url}js/function.js"></script>
+<script type="text/javascript" src="{$site_url}js/html5.js"></script>
+<title>{$title}</title>
+</head>
+<body>
+    <div class='wrapper'>
+    {include file='./_header.html'}
+        <div class='content public'>
+            {include file='./_left.html'}
+            <div class='right fr'>
+                <h3 class="title">
+                    <div class="location">当前位置：
+                        <a href="{$site_url}">首页</a>
+                        {foreach item=nav from=$posnavs}
+                         >> <a href="{$nav.link}">{$nav.name}</a>
+                        {/foreach}
+                    </div>
+                    <em>{$list.name}</em>
+                </h3>
+                <div class="article">
+                    <div class="search">
+                        {if $search.total eq 0}
+                            <p class="search_res">以下是您输入的关键字<mark>“{$search.keyword}”</mark>，搜索的结果有<mark>{$search.total}</mark>条。</p>
+                        {else}
+                            <p class="search_res">以下是您输入的关键字<mark>“{$search.keyword}”</mark>，搜索的结果有<mark>{$search.total}</mark>条。</p>
+                            <ul class="ny_news_list">
+                                {foreach item=article from=$search.data}
+                                <li><a href="{$article.link}">
+                                    <time class="date" datetime="{$article.pubymd}" pubdate="pubdate">{$article.pubymd}</time>{$article.title}
+                                </a></li>
+                                {/foreach}
+                            </ul>
+                            {include file='./_page.html'}
+                        {/if}
+                    </div>
+                </div>
+            </div>
+        </div>
+    {include file='./_footer.html'}
+    </div>
+</body>
+</html>

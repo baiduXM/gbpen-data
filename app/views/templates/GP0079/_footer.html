@@ -1,0 +1,16 @@
+<div class="footer">
+  <div class="publicfoote">
+    <div class="fpwprd">
+      <a href="{$site_url}">首页</a> |
+      {foreach name=navs item=nav from=$navs}
+      <a href="{$nav.link}" >{$nav.name}</a> |
+    {/foreach}
+    </div>
+    <div class="fpwprd">
+      {foreach name=links item=links from=$global.hlink}
+        <a href="{$links.link}" >{$links.title}</a> |
+      {/foreach}
+    </div> 
+  {$footprint}    
+  </div>
+</div>

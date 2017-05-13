@@ -1,0 +1,134 @@
+<div class="sidebar">
+  <div class="subnav">
+  
+  <div class="shadow"><img src="{$site_url}images/yy.jpg" /></div>
+  
+    <div class="list_class"> 
+<!-- 二级栏目列表（展示到三级子栏目） -->
+{if $pagenavs}
+<nav>
+
+    <div class="alefttitle">
+    
+    <div class="title">
+<h2>
+ <span class="icon">{$posnavs[0].icon}</span>
+    <span class="cn"> {$posnavs[0].name}</span>
+</h2>
+    <span class="en">{$posnavs[0].en_name} </span>
+    </div>
+    
+    
+   </div>	
+
+    <div class="category">	
+
+	<ul class="listbg clearfix">
+		{foreach name=pagenavs item=nav from=$pagenavs}
+		<li class="first">
+			<a href="{if $nav.childmenu}javascript:;{else}{$nav.link}{/if}" class="firsta {if $nav.selected}selected{/if}">{$nav.name}</a>
+            {if $nav.childmenu}
+			<ul class="second clearfix">
+				{foreach key=key item=nav_list from=$nav.childmenu}                
+				<li><a href="{if $nav_list.childmenu}javascript:;{else}{$nav_list.link}{/if}" class="seconda {if $nav_list.selected}selected{/if}"> {$nav_list.name}</a>
+                    {if $nav_list.childmenu}
+                    <ul class="third clearfix">
+                        {foreach key=key item=nav_listsec from=$nav_list.childmenu}
+                        <li><a href="{$nav_listsec.link}" class="{if $nav_listsec.selected}selected{/if} thirda">{$nav_listsec.name}</a></li>
+                        {/foreach}
+                    </ul>
+                    {/if} 
+                </li>                 
+				{/foreach}
+			</ul>
+			{/if}            
+		</li>
+		{/foreach}
+	</ul>           
+
+    </div>
+</nav>
+        
+        
+{else}	<!-- 让客服自己选择，如果当前无子栏目 展现的目标栏目 -->
+<nav>
+   <div class="alefttitle">
+   <div class="title">
+<h2>
+ <span class="icon">{$_aside.pagenavs.icon}</span>
+    <span class="cn">  {$_aside.pagenavs.name}</span>
+</h2>
+    <span class="en">{$_aside.pagenavs.en_name}</span>
+    </div>
+   
+   
+  </div>		
+  <div class="category"> 
+	<ul class="listbg clearfix">
+		{foreach name=pagenavs2 item=nav from=$_aside.pagenavs.childmenu}
+		<li class="first">
+			<a href="{if $nav.childmenu}javascript:;{else}{$nav.link}{/if}" class="firsta">{$nav.name}</a>
+			{if $nav.childmenu}
+			<ul class="second clearfix">
+				{foreach key=key item=nav_list from=$nav.childmenu}
+				<li><a href="{if $nav_list.childmenu}javascript:;{else}{$nav_list.link}{/if}" class="seconda">{$nav_list.name}</a>
+                    {if $nav_list.childmenu}
+                    <ul class="third clearfix">
+                        {foreach key=key item=nav_listsec from=$nav_list.childmenu}
+                        <li><a href="{$nav_listsec.link}" class="thirda">{$nav_listsec.name}</a></li>
+                        {/foreach}
+                    </ul>
+                    {/if}                 
+                </li>
+				{/foreach}
+			</ul>
+			{/if}
+		</li>
+		{/foreach}
+	</ul>  
+    </div>
+             
+
+</nav>
+
+{/if}
+
+
+
+      
+
+    
+    
+
+ </div>
+
+  </div>
+  
+  
+  
+  <div class="contact">
+<div class="title">
+<h2>
+ <span class="icon">{$global.contact_us.icon}</span>
+    <span class="cn">{$global.contact_us.name}</span>
+</h2>
+    <span class="en">{$global.contact_us.en_name} </span>
+    </div>
+    
+<div class="inner"><b>{$contact.company} </b><br />
+地址：{$contact.address}	<br />
+手机：{$contact.mobile} <br />
+Q  Q：{$contact.qq}</div>
+
+</div>
+  
+  
+  
+</div>
+
+
+
+
+
+
+

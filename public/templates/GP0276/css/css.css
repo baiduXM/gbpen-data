@@ -1,0 +1,191 @@
+body{ color:#32322d; font-family:Microsoft Yahei,Arial, Helvetica, sans-serif; background:#fff;}
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ol,pre,form,input,textarea{margin:0;padding:0; list-style:none; line-height:24px; font-size:12px; font-weight:normal}
+ul,li{margin:0; padding:0;list-style:none; font-weight:normal;}
+a{ color:#32322d; text-decoration:none; }
+a:hover{ color:#c80211; } 
+img{ border:none;}
+.clearfix:after { content:'\20'; display:block; height:0; clear:both; }
+.clearfix { *zoom:1; }
+
+.wrapper{width:1188px; margin:0 auto; }
+
+display:block; white-space:nowrap; text-overflow:ellipsis; overflow:hidden;
+strong{display: block;margin: 0 auto;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+
+#header{ position:relative;}
+
+#logo{width:685px;height:116px; float:left; position:relative; }
+#logo a{display:block;width:685px;height:116px;position:absolute;bottom: 0px; left:0;}
+#logo img{max-width:685px; max-height:116px; position:absolute; top:0; left:0; right:0; bottom:0;}
+
+.tel{ max-width:440px; float:right; margin-top:65px; background:url(../images/tel.png) no-repeat; padding-left:43px; padding-right:14px; font-size:23px; line-height:28px; height:28px; overflow:hidden; color:#fa0101;}
+
+.search{ width:202px; position:absolute; right:16px; top:30px; background:url(../images/sou_by.png) no-repeat; height:27px; overflow:hidden;}
+
+.search_area{ float:left; width:178px; background:none; border:none; height:27px; line-height:27px; color:#b9b9b9; text-indent:15px;}
+
+.search_btn{ float:right; width:24px; background:url(../images/sou_td.png) no-repeat; border:none; height:27px; overflow:hidden;}
+
+
+#nav_bg{ width:100%; background:url(../images/nav_bg.jpg) repeat-x; height:46px;}
+#nav{}
+#nav ul li { float:left; height:46px;}
+#nav ul li a{ color:#FFF; font-size:14px; padding:0 20px;  display:block;}
+#nav ul li a:hover{ background:#292929; }
+#nav ul li p{ height:46px; overflow:hidden; line-height:46px; text-align:center;}
+
+#nav ul li .cc{background:#292929; height:40px; line-height:40px;display:none; text-align:center; 
+width:100%; position:relative; z-index:100; margin-top:0px; }
+#nav ul li .cc:hover{}
+#nav ul li .cc a{width:92%; margin:auto;color:#fff; padding:0 4%; overflow:hidden; height:40px; line-height:40px;}
+#nav ul li .cc a:hover{ text-decoration:underline;color:#fff;}
+
+#banner{ width:100%; height:405px; overflow:hidden;}
+
+
+#container{ margin-top:60px; padding:0 5px; width:1178px;}
+
+.about{}
+.about .about_img{ display:inline-block;*display:inline;*zoom:1; height:370px; overflow:hidden; margin-right:54px;}
+.about .about_img img{ height:100%; display:block;}
+
+.about .about_text{ display:inline-block; vertical-align:top;*display:inline;*zoom:1; height:370px; overflow:hidden; color:#7f7f7b;}
+
+.about .about_text .title{ font-size:30px; color:#32322d; padding-top:62px;}
+.about .about_text .title b { line-height:32px; height:32px; overflow:hidden; display:block;}
+.about .about_text .title p{ color:#666666; margin-top:5px; margin-bottom:15px; height:24px; overflow:hidden; text-transform:uppercase;}
+
+.about .about_text .word{ line-height:30px; height:120px; overflow:hidden;}
+
+.about .about_text .more{ border:1px #d4d4d3 solid; border-radius:12px; width:94px; height:34px; overflow:hidden; line-height:34px; text-align:center; margin-top:22px;}
+.about .about_text .more a{ color:#7f7f7b;}
+.about .about_text .more a:hover{ color:#fff; background:#c80211; transition: all 0.8s ease-in-out 0s; display:block;}
+
+.news{ padding-top:58px;}
+.news .title{ text-align:center;}
+.news .title b{ border-left:2px #c80211 solid; border-right:2px #c80211 solid; font-size:30px; font-weight:normal; line-height:30px; height:30px; overflow:hidden; width:270px; display:block; margin:auto;}
+.news .title p{ text-transform:uppercase; font-size:15px; height:24px; overflow:hidden; margin-top:3px;}
+.news .inner{ }
+.news .inner .news_left{ width:600px; float:left; padding-top:63px;}
+.news .inner .news_left_img{ height:180px; margin-bottom:9px; text-align:center}
+.news .inner .news_left_img img{ height:100%; margin:auto}
+
+.news .inner .news_left_text{ font-size:14px; color:#32322d; line-height:26px;}
+.news .inner .news_left_text h2{ font-size:20px; color:#32322d; margin-top:21px; margin-bottom:12px; height:24px; overflow:hidden;}
+.news .inner .news_left_text h2 span{ float:right; font-size:15px;}
+.news .inner .news_left_text h2 a:hover{ font-weight:bold;}
+.news .inner .news_left_text .word{ height:52px; overflow:hidden; margin-bottom:14px;}
+.news .inner .news_left_text .more{ width:184px; height:40px; overflow:hidden; font-size:18px; line-height:40px; background:#32322d; text-align:center;}
+.news .inner .news_left_text .more a{ color:#FFF;}
+.news .inner .news_left_text .more a:hover{ color:#fff; background:#c80211; transition: all 0.8s ease-in-out 0s; display:block;}
+
+.news .inner .news_right{ width:512px; float:right; padding-top:25px;} 
+
+.news .news_text{ display:inline-block; vertical-align:top;*display:inline;*zoom:1; line-height:46px; height:380px; overflow:hidden;}
+
+.news .news_text ul{}
+.news .news_text ul li{ width:512px; height:70px; overflow:hidden; padding-top:30px; padding-bottom:25px; border-bottom:1px #ebe7e7 solid;}
+
+.news .news_text ul li .date{float:left; width:54px; margin-right:35px; overflow:hidden;}
+.news .news_text ul li a b{ font-size:45px; color:#4f5561; font-weight:normal; text-align:center;}
+.news .news_text ul li p{ font-size:13px; text-align:center; color:#32322d; height:24px; overflow:hidden;}
+
+.news .news_text ul li a h2{ font-size:17px; color:#32322d; font-weight:bold; line-height:22px; height:22px; overflow:hidden;}
+.news .news_text ul li a h3{ height:45px; overflow:hidden;}
+
+
+
+
+.products{ margin-top:60px;}
+.products .title{ width:280px; height:175px; overflow:hidden; background:#c80211 url(../images/product.png) no-repeat center; float:left; padding-top:100px; text-align:center;}
+.products .title b{ font-size:30px; font-weight:normal; color:#FFFFFF; line-height:34px; height:34px; overflow:hidden; display:block; }
+.products .title p{ width:150px; margin:auto; text-transform:uppercase; color:#FFFFFF; font-size:14px; border-top:1px #fff solid; margin-top:8px; line-height:34px; height:34px; overflow:hidden; }
+
+
+.products .inner{ width:886px; float:right; height:345px;}
+
+.products .inner ul li{ float:left; width:275px; margin-right:25px; text-align:center;}
+.products .inner ul li a{ color:#303030; font-size:14px;}
+
+.products .inner ul li .pic{ width:275px; height:275px; overflow:hidden;} 
+.products .inner ul li .pic img{ display:block; }
+
+.products .inner ul li .text{ width:275px; margin:auto; text-align:center; line-height:32px; height:32px; overflow:hidden; color:#dddcdb; border:1px #e7e5e5 solid; margin-top:12px;}
+.products .inner ul li a:hover .text{ color:#FFFFFF; background:#c80211;}
+.products .inner .bd{ width:886px; margin:auto; height:345px; overflow:hidden;}
+
+
+
+#footer_bg{ background:#c80211; margin-top:40px; }
+#footer{ padding:10px 38px; width:1124px;}
+
+.copyright{ float:left; color:#fff; width:875px;}
+.copyright a{ color:#fff;}
+
+.q_link{ float:right; padding-top:3px;}
+
+
+#sub_container{ position:relative;}
+
+
+
+/*sidebar css*/
+.sidebar{ position:absolute; width:185px; float:left; margin-top:-56px; }
+
+.subnav{ background:#c2330c; border:1px #b81f16 solid; }
+
+.subnav .alefttitle{ background:#c7332b; border:1px #821515 solid; border-bottom:none; color:#fff; width:177px; margin:auto; height:54px; margin-top:3px; line-height:56px; font-size:24px; overflow:hidden; font-weight:bold; text-align:center; }
+
+
+
+.category{ width:177px; margin:auto; border-left:1px #821515 solid; border-right:1px #821515 solid; border-bottom:1px #821515 solid; margin-bottom:3px; }
+
+.category ul{ background:#FFF; padding-bottom:10px; padding:10px 0;}
+.category ul li .firsta{ width:148px; margin:auto; height:30px; overflow:hidden; line-height:30px; display:block; font-size:13px; font-weight:bold;}
+.category ul li a.firsta{ color:#000000; background:url(../images/firsta.png) no-repeat right; padding-right:8px;}
+.category ul li a:hover.firsta{ color:#c80211;}
+
+
+
+ul.second li .seconda{ background:#e3e3e3 url(../images/seconda.png) no-repeat 27px 14px; border-top:1px #e4e4e4 solid; border-bottom:1px #e4e4e4 solid; line-height:21px; height:10px; display:block; overflow:hidden; width:167px; margin:auto; text-indent:42px; padding:5px 10px 15px 0;}
+ul.second li a.seconda{ color:#898989;}
+ul.second li a.seconda:hover{color:#c80211;}
+
+ul.second li .thirda{ display:block; line-height:32px; height:32px; overflow:hidden; width:165px; margin:auto; text-indent:55px; padding-right:13px; border-bottom:1px #898989 dashed;}
+ul.third li a.thirda{ color:#898989;}
+ul.third li a.thirda:hover{ color:#c80211;}
+
+
+/*main css*/
+.main{ float:right; width:911px; margin-right:45px; margin-top:8px;}
+
+.crumb{ background:url(../images/main.png) no-repeat bottom; color:#000; font-size:24px; line-height:54px; height:54px; overflow:hidden; text-indent:24px; margin-bottom:20px;}
+
+
+.crumb span{ float:right; font-size:12px; color:#9d9c9c; height:24px; line-height:24px; overflow:hidden; text-indent:18px; padding-right:20px; padding-top:20px;}
+.crumb span a{ color:#9d9c9c;}
+
+
+.article { width:870px; margin:auto;}
+.article img{ max-width:870px; overflow:hidden}
+
+
+		.slideBox{ width:100%; height:405px; overflow:hidden; position:relative;  }
+		.slideBox .hd{ height:15px; overflow:hidden; position:absolute; right:5px; bottom:5px; z-index:1; }
+		.slideBox .hd ul{ overflow:hidden; zoom:1; float:left;  }
+		.slideBox .hd ul li{ float:left; margin-right:2px; border-radius:12px; width:15px; height:15px; line-height:14px; text-align:center; background:#fff; cursor:pointer; }
+		.slideBox .hd ul li.on{ background:#f00; color:#fff; }
+		.slideBox .bd{ position:relative; height:100%; z-index:0;   }
+		.slideBox .bd li{ zoom:1; vertical-align:middle; }
+		.slideBox .bd img{ width:100%; height:405px; display:block;  }
+
+		/* 下面是前/后按钮代码，如果不需要删除即可 */
+		.slideBox .prev,
+		.slideBox .next{ position:absolute; left:3%; top:50%; margin-top:-25px; display:block; width:32px; height:40px;
+	   	 
+		 background:#000 url(../images/slider-arrow.png) -110px 5px no-repeat; filter:alpha(opacity=50);opacity:0.5; z-index:999;   }
+		.slideBox .next{ left:auto; right:3%; background-position:8px 5px; }
+		.slideBox .prev:hover,
+		.slideBox .next:hover{ filter:alpha(opacity=100);opacity:1;  }
+		.slideBox .prevStop{ display:none;  }
+		.slideBox .nextStop{ display:none;  }

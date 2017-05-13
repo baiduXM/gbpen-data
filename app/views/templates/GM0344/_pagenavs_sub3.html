@@ -1,0 +1,23 @@
+﻿<div class="navs">
+    <ul class="mtree transit">
+    {foreach item=nav from=$pagenavs}
+      <li class="{if $nav.current}current{/if}"><a href="{$nav.link}" class="firstli"><em>.</em>{$nav.name}<span>></span></a>
+      {if $nav.childmenu}
+          <ul>
+              {foreach item=nav_list from=$nav.childmenu}
+              <li class="{if $nav_list.current}current{/if}"><a href="{$nav_list.link}">{$nav_list.name}<span>></span></a>
+                  {if $nav_list.childmenu}
+                  <ul>
+                      {foreach item=nav_list1 from=$nav_list.childmenu}
+                      <li class="{if $nav_list1.current}current{/if}"><a href="{$nav_list1.link}">{$nav_list1.name}</a></li>
+                      {/foreach}
+                  </ul>
+                  {/if}
+              </li>
+              {/foreach}
+          </ul>
+          {/if}
+      </li>
+      {/foreach}
+    </ul>
+</div>

@@ -1,0 +1,46 @@
+{	
+	"intro":{
+		"description": "公司简介",
+		"value": {},
+		"type": "page"
+	},
+	"news":{
+		"description": "新闻资讯",
+		"value": {},
+		"type": "list"
+	},
+	"list1":{
+		"value":{},
+		"description":"首页下方三张图片列表",
+		"type":"list",
+		"config":{
+			"width":122,
+			"height": 147,
+			"en":"english"
+		}
+	},
+	"nav1":{
+		"description":"首页中间六边形块内的第一个导航",
+		"value":{},
+		"type":"nav",
+		"config":{
+			
+		}
+	},
+	"nav2":{
+		"description":"首页中间六边形块内的第二个导航",
+		"value":{},
+		"type":"nav",
+		"config":{
+			
+		}
+	},
+	"nav3":{
+		"description":"首页中间六边形块内的第三个导航",
+		"value":{},
+		"type":"nav",
+		"config":{
+
+		}
+	}
+}

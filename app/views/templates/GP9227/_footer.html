@@ -1,0 +1,14 @@
+
+	<footer id="footer">
+		<div class="chaining">
+	    	<span>LIKS：</span>
+	        {foreach item=links from=$global.links}
+	            {if $links@index neq 0} | {/if}
+	            <a href="{$links.link}">{$links.title}</a>
+	        {/foreach}
+	    </div>
+		<div class="foot">
+			{$footprint}
+		</div>
+	</footer>
+{$footscript}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+		// 跳转PC页面
+		{if $site_another_url}
+			if (!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+				location.href = '{$site_another_url}';
+			}
+		{/if}
+		</script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--  -->
+<meta name="keywords" content="{$keywords}" />
+<meta name="description" content="{$description}" />
+<link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
+<meta name="viewport" content="width=device-width,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no,minimal-ui">
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta content="telephone=no" name="format-detection">
+<title>{$title}</title>
+<link href="{$site_url}css/css.css" rel="stylesheet" type="text/css" />
+<link href="{$site_url}css/swipe.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="{$site_url}css/public.css" /> 
+<script src="{$site_url}js/TouchSlide.1.1.js"></script>
+<script src="{$site_url}js/jquery.min.js"></script>
+<script type="text/javascript" src="{$site_url}js/function.js"></script>
+<script type="text/javascript" src="{$site_url}js/share.js"></script>
+<script src="{$site_url}js/idangerous.swiper-2.0.min.js"></script>
+<script src="{$site_url}js/simple-app.js"></script>
+
+</head>
+
+<body>
+
+
+<h1 class="boxmain-top fixed-top"><span class="back"><a href="javascript:window.history.back()">返回</a></span><span class="more2" id="font">字+</span>{$article.category.name}</h1>
+<div class="font fix-font">
+      <dl class="big">大</dl>
+      <dl class="normal">中</dl>
+      <dl class="small">小</dl>
+      </div>
+
+    <section>
+    	<div class="boxmain ny-wrap">
+        	<div class=" news_detail">
+            	<h1 class="title1">{$article.title}</h1>
+                <dl class=" title2">post time: {$article.pubdate}</dl>
+                <div class="edite">
+                	<p style=" padding-bottom:7px;">     {$article.content|unescape:"html"}</p>  
+                    
+                     </div>
+                <div class="next2">
+            	<dl>
+                <span class="nextleft">上一篇：</span>
+                <span class="nextright"><a href="{$article.prev.link}">{$article.prev.title}</a></span>
+                </dl>
+                <dl>
+                <span class="nextleft">下一篇：</span>
+                <span class="nextright"><a href="{$article.next.link}">{$article.next.title}</a></span>
+                </dl>
+            </div>
+            </div>
+        	
+        </div>
+        <div class="boxmain relate">
+        	<h1 class="boxmain-top relate-top">相关新闻</h1>
+            <div class="relate-m">
+            	<ul class="newstlist1">
+				{foreach item=article from=$related}
+                	<li><a href="{$article.link}"><span class="date">[{$article.pubdate}]</span>{$article.title}</a></li>
+                    {/foreach}
+                </ul>
+            </div>
+        </div>
+        	
+    </section>
+    <footer class="foot"><div class="back-top" id="quickbar-backtotop"><A href="#">TOP</A></div>版权所有：{$footprint}</footer>
+
+{$footscript}
+</body>
+</html>

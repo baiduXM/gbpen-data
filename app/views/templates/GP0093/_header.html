@@ -1,0 +1,45 @@
+    <div class="header">
+        <div class="logo"><a href="{$site_url}"><img src="{$logo}"/></a></div>
+        <div class="rihgshow">
+            <div class="telsa">{$contact.telephone}</div>
+        </div>
+    </div>
+    <div id="menu" class="menu">
+        <ul>
+            <li><a href="{$site_url}"> 首 页 </a></li>
+
+            {foreach name=navs item=nav from=$navs}
+            <li>
+                <a href="{$nav.link}"><span id="width">{$nav.name}</span></a>
+                {if $nav.childmenu}
+                <ul class="nav_list">
+                    {foreach key=key item=nav_list from=$nav.childmenu}
+                    <li><a href="{$nav_list.link}">{$nav_list.name}</a></li>
+                    {/foreach}
+                </ul>
+                {/if}
+            </li>
+            {/foreach}
+        </ul>
+    </div>
+    <div class="datu">
+        <div class="banners">
+            <div class="focusBox" style="margin:0 auto">
+      			<ul class="pic">
+                    {foreach name=slidepics item=slidepic from=$global.slidepics}
+                        <li><a target="_blank" href="{$slidepic.link}"><img src="{$slidepic.image}"></a></li>
+                    {/foreach}
+      			</ul>
+      			<div class="around">
+                <a class="prev" href="javascript:void(0)"></a>
+                <a class="next" href="javascript:void(0)"></a>   
+            </div>
+      			<ul class="hd">
+    				{foreach name=slidepics item=slidepic from=$global.slidepics}
+                        <li></li>
+                    {/foreach}
+      			</ul>
+          	</div>
+        </div>
+        <div class="babbbg"></div>
+    </div>

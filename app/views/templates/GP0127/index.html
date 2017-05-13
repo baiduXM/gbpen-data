@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script type="text/javascript">
+    // Ìø×ªÊÖ»úÒ³Ãæ
+    {if $site_another_url}
+        if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+            location.href = '{$site_another_url}';
+        }
+    {/if}
+    </script>
+
+<!--  -->
+<meta name="keywords" content="{$keywords}"/>
+<meta name="description" content="{$description}"/>
+<link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Language" content="zh-CN">
+
+<link rel="stylesheet" type="text/css" href="{$site_url}css/style.css"/>
+<script type="text/javascript" src="{$site_url}js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.js"></script>
+<script type="text/javascript" src="{$site_url}js/function.js"></script>
+<script type="text/javascript" src="{$site_url}js/index.js"></script>
+<script type="text/javascript" src="{$site_url}js/html5.js"></script>
+<title>{$title}</title>
+{$headscript}
+</head>
+<body>
+    <div class="wrap">
+        <div class="public">
+            {include file='./_header.html'}
+            <div class="content">
+                <div class="left fl">
+                    <div class="class">
+                        <h1 class="class-top"><span class="more_01"><a href="{$index.product.link}">更多>></a></span>{$index.product.name}</h1>
+                        <div class="class-m">
+                            <p><img src="{$index.product.image}"/></p>
+                            <ul class="first">
+                                {foreach item=nav from=$index.product.childmenu}
+                                    <li><a href="{$nav.link}">{$nav.name}</a></li>
+                                {/foreach}
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="class contact">
+                        <h1 class="class-top">{$index.contact}</h1>
+                        <div class="contact-m">
+                            {$index.contact_way}
+                        </div>
+                    </div>
+                </div>
+                <div class="right fr">
+                    <div class="about fl">
+                        <h1 class="about-top"><span class="more"><a href="{$index.about.link}">更多>></a></span>{$index.about.name}</h1>
+                        <div class="about-m">
+                            <div class="img fl"><img src="{$index.about.image}"></div>
+                            <dl class="nr">{$index.about.content|unescape:"html"}</dl>
+                        </div>
+                    </div>
+                    <div class="class case fr">
+                        <h1 class="class-top">{$index.case.name}<span class="more_01"><a href="{$index.case.link}">更多></a></span></h1>
+                        <div class="class-m case-m">
+                            <div class="focusBox1" style="margin:0 auto">
+                                <ul class="pic">
+                                    {foreach item=case from=$index.case.data}
+                                        <li><a href="{$case.linl}"><img src="{$case.image}"></a></li>
+                                        {if $case@index+1 eq 8}{break}{/if}
+                                    {/foreach}
+                                </ul>
+                                <ul class="hd">
+                                    {foreach item=case from=$index.case.data}
+                                        <li>{$case@index+1}</li>
+                                        {if $case@index+1 eq 8}{break}{/if}
+                                    {/foreach}
+                                </ul> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pro fl">
+                        <h1 class="pro-top"><span class="more" style="margin-right:15px;"><a href="{$index.pro1.link}">更多>></a></span>{$index.pro1.name}</h1>
+                        <div class="picMarquee-left">
+                            <div class="hd_01">
+                                <ul class="picList">
+                                    {foreach item=pro1 from=$index.pro1.data}
+                                        <li><a href="{$pro1.link}">
+                                            <img src="{$pro1.image}">
+                                            <p>{$pro1.title}</p>
+                                        </a></li>
+                                    {/foreach}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pro fl">
+                        <h1 class="pro-top"><span class="more" style="margin-right:15px;"><a href="{$index.pro2.link}">更多>></a></span>{$index.pro2.name}</h1>
+                        <div class="picMarquee-left">
+                            <div class="hd_01">
+                                <ul class="picList">
+                                    {foreach item=pro2 from=$index.pro2.data}
+                                        <li><a href="{$pro2.link}">
+                                            <img src="{$pro2.image}">
+                                            <p>{$pro2.title}</p>
+                                        </a></li>
+                                    {/foreach}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {include file='./_footer.html'}
+        </div>
+    </div>
+</body>
+</html>

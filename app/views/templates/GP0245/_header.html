@@ -1,0 +1,32 @@
+
+<div id="header">
+    <div class="head">
+        <div class="logo"><a href="{$site_url}"><img src="{$logo}" /></a></div>
+        <div class="head-top">
+            <p class="telphone">{$contact.telephone}</p>
+            <form action="{$search_action}" method="GET" class="head-search">
+                <input type="text" name="s" value="" placeholder="请输入搜索内容"/>
+                <button class="search-btn" value="搜索" type="submit"><img src="{$site_url}images/map.png"></button>
+            </form>
+        </div>
+        <ul class="menu">
+            <li><a href="{$site_url}">网站首页</a></li>
+            {foreach item=nav from=$navs}
+                <li>
+                    <a href="{$nav.link}">{$nav.name}</a>
+                    {if $nav.childmenu}
+                    <div class="menu-list">
+                        <b><i></i></b>
+                        <ul class="list-li">
+                            {foreach key=key item=nav_list from=$nav.childmenu}
+                            <li class="opacity"><a href="{$nav_list.link}">{$nav_list.name}</a></li>
+                            {/foreach}
+                        </ul>
+                    </div>
+                    {/if}
+                </li>
+            {/foreach}
+            <div class="triangle"><b></b><span></span></div>
+        </ul>
+    </div>
+</div>

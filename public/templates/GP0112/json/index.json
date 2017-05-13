@@ -1,0 +1,32 @@
+{
+	
+    "about_us": {
+		"description": "底部的内容单页（如关于我们）",
+		"value": {},
+		"type": "page",
+		"config":{
+			"nav_width":310,
+			"nav_height":198
+		}
+	},
+	"pro_nav":{
+		"description":"右上侧产品分类",
+		"value":{},
+		"type":"list",
+		"config":{
+			"nav_width":275,
+			"nav_height":136
+		}
+	},
+
+	"sell":{
+		"description": "左上侧图片列表",
+		"value": {},
+		"type": "list",
+		"config":{
+			"width":205,
+			"height":216
+		}	
+	}
+}                     
+

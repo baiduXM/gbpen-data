@@ -1,0 +1,41 @@
+{
+	"slidepics_index": {
+		"value": [{
+			"title": "测试图1",
+			"image": "images/baner.jpg",
+			"link": "http://www.baidu.com"
+		}, {
+			"title": "测试图2",
+			"image": "images/baner.jpg",
+			"link": "http://www.baidu.com"
+		}],
+		"description": "首页轮滚图",
+		"type": "images",
+		"config": {
+			"width": 750,
+			"height": 1334,
+			"limit": 4
+		
+		}
+	},
+	"slidepics": {
+		"value": [{
+			"title": "测试图1",
+			"image": "images/baner.jpg",
+			"link": "http://www.baidu.com"
+		}, {
+			"title": "测试图2",
+			"image": "images/baner.jpg",
+			"link": "http://www.baidu.com"
+		}],
+		"description": "内页轮滚图",
+		"type": "images",
+		"config": {
+			"width": 750,
+			"height": 352,
+			"limit": 4
+		
+		}
+	}
+	
+}

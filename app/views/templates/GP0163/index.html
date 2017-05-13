@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script type="text/javascript">
+    // Ìø×ªÊÖ»úÒ³Ãæ
+    {if $site_another_url}
+        if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+            location.href = '{$site_another_url}';
+        }
+    {/if}
+    </script>
+
+
+
+<meta name="keywords" content="{$keywords}"/>
+<meta name="description" content="{$description}"/>
+<link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Language" content="zh-CN">
+
+<link rel="stylesheet" type="text/css" href="{$site_url}css/style.css"/>
+<script type="text/javascript" src="{$site_url}js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.js"></script>
+<script type="text/javascript" src="{$site_url}js/function.js"></script>
+<script type="text/javascript" src="{$site_url}js/index.js"></script>
+<script type="text/javascript" src="{$site_url}js/html5.js"></script>
+<title>{$title}</title>
+{$headscript}
+</head>
+<body>
+	<div id="wrapper">
+		{include file='./_header.html'}
+		<div class="banner">
+		    <ul class="picture">
+		        {foreach item=slidepics from=$index.slidepics}
+		            <li><a href="{$slidepics.link}"><img src="{$slidepics.image}"></a></li>
+		        {/foreach}
+		    </ul>
+		    <div class="dot">
+		        <ol>
+		            {foreach item=slidepics from=$index.slidepics}
+		                <li></li>
+		            {/foreach}
+		        </ol>
+		    </div>
+		</div>
+		<div class="content">
+			<div class="side-top">
+				<div class="side-hd">
+					<a href="{$index.product.link}" class="more">MORE</a>
+					<h2>{$index.product.name}</h2><h3>{$index.product.en_name}</h3>
+				</div>
+				<div class="fabric">
+					<a href="javascript:void(null)" class="prev"></a>
+					<div class="fabric-list">
+						<ul>
+							{foreach item=pro from=$index.product.data}
+							<li><a href="{$pro.link}"><em></em><b></b>
+								<i><img src="{$pro.image}"></i>
+								<div class="cleaner">
+									<h4>{$pro.title}</h4>
+									<p>{$pro.description}</p>
+								</div>
+							</a></li>
+							{/foreach}
+						</ul>
+					</div>
+					<a href="javascript:void(null)" class="next"></a>
+				</div>
+			</div>
+			<div class="side-mid">
+				<div class="side-hd">
+					<a href="{$index.about.link}" class="more">MORE</a>
+					<h2>{$index.about.name}</h2><h3>{$index.about.en_name}</h3>
+				</div>
+				<div class="side-about">
+					<div class="synopsis"><em></em>
+						<span>
+							<article>
+								{$index.about.description}
+							</article>
+							<a href="{$index.about.link}" class="access" onMouseover="shake(this,'onmouseout')"></a>
+						</span>
+					</div>
+					<div class="synopsis-img"><i><img src="{$index.about.image}"></i></div>
+				</div>
+			</div>
+			<div class="side-nether">
+				<div class="side-hd">
+					<a href="{$index.business.link}" class="more">MORE</a>
+					<h2>{$index.business.name}</h2><h3>{$index.business.en_name}</h3>
+				</div>
+				<ul class="business">
+					{foreach item=bus from=$index.business.data}
+					<li><a href="{$bus.link}">
+						<img src="{$bus.image}">
+						<div class="shade"><p>{$bus.title}</p><i></i><em></em></div>
+					</a></li>
+					{if $bus@index+1 eq 6}{break}{/if}
+					{/foreach}
+				</ul>
+			</div>
+			<div class="side-bottom">
+				<div class="side-hd">
+					<a href="{$index.news.link}" class="more">MORE</a>
+					<h2>{$index.news.name}</h2><h3>{$index.news.en_name}</h3>
+				</div>
+				<div class="side-news">
+					<div class="press-img">
+						<ul>
+							{foreach item=pic from=$index.pic}
+								<li><a href="{$pic.link}"><img src="{$pic.image}"></a></li>
+							{/foreach}
+						</ul>
+						<ol>
+							{foreach item=pic from=$index.pic}
+							<li></li>
+							{/foreach}
+						</ol>
+					</div>
+					<ul class="press">
+						{foreach item=press from=$index.news.data}
+						<li><a href="{$press.link}">
+							<i><img src="{$press.image}"></i>
+							<div class="press-list">
+								<h3>{$press.title}</h3>
+								<p>{$press.description}[查看更多]</p>
+								<time datetime="{$press.pubtimestamp|date_format:'%Y-%m-%d'}">[{$press.pubtimestamp|date_format:'%Y-%m-%d'}]</time>
+							</div>
+						</a></li>
+						{/foreach}
+					</ul>
+				</div>
+			</div>
+			<div class="chaining">
+				<span>友情链接：</span>
+				{foreach item=links from=$index.links}
+		            <a href="{$links.link}"><img src="{$links.image}"></a>
+		        {/foreach}
+			</div>
+		</div>
+		{include file='./_footer.html'}
+	</div>
+</body>
+</html>

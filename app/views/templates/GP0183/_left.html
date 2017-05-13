@@ -1,0 +1,58 @@
+
+	<div class="box">
+		{if $pagenavs}
+			<h2>{$posnavs[0].name} / <span>{$posnavs[0].en_name}</span></h2>
+			<ul class="first">
+				{foreach item=nav from=$pagenavs}
+				<li>
+					<a href="{$nav.link}"><span>{$nav.name}</span></a>
+					{if $nav.childmenu}
+					<i></i>
+					<ul class="second">
+						{foreach item=nav_list from=$nav.childmenu}
+						<li>
+							<a href="{$nav_list.link}"><span>{$nav_list.name}</span></a>
+							{if $nav_list.childmenu}
+							<ul class="third">
+								{foreach item=nav_last from=$nav_list.childmenu}
+									<li><a href="{$nav_last.link}">{$nav_last.name}</a></li>
+								{/foreach}
+							</ul>
+							{/if}
+						</li>
+						{/foreach}
+					</ul>
+					{/if}
+				</li>
+				{/foreach}
+			</ul>
+		{else}  <!-- 无子栏目时 -->
+			<h2>{$global.pagenavs.name} / <span>{$global.pagenavs.en_name}</span></h2>
+			<div class="box">
+				<ul class="first">
+					{foreach item=nav from=$global.pagenavs.childmenu}
+					<li>
+						<a href="{$nav.link}"><span>{$nav.name}</span></a>
+						{if $nav.childmenu}
+						<i></i>
+						<ul class="second">
+							{foreach item=nav_list from=$nav.childmenu}
+							<li>
+								<a href="{$nav_list.link}"><span>{$nav_list.name}</span></a>
+								{if $nav_list.childmenu}
+								<ul class="third">
+									{foreach item=nav_last from=$nav_list.childmenu}
+										<li><a href="{$nav_last.link}">{$nav_last.name}</a></li>
+									{/foreach}
+								</ul>
+								{/if}
+							</li>
+							{/foreach}
+						</ul>
+						{/if}
+					</li>
+					{/foreach}
+				</ul>
+			</div>
+		{/if}
+	</div>

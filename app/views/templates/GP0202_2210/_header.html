@@ -1,0 +1,26 @@
+
+<header id="header">
+    <div class="logo"><a href="{$site_url}"><img src="{$logo}" /></a></div>
+    <div class="head">
+        <ul class="nav" id="nav">
+            <li><a href="{$site_url}">网站首页</a></li>
+            {foreach item=nav from=$navs}
+                <li>
+                    <a href="{$nav.link}">{$nav.name}</a>
+                    {if $nav.childmenu}
+                        <div class="subnav">
+                            <div class="triangle"></div>
+                            <ul class="nav-list">
+                                {foreach key=key item=subnav from=$nav.childmenu}
+                                <li><a href="{$subnav.link}">{$subnav.name}</a></li>
+                                {/foreach}
+                                <em></em>
+                            </ul>
+                        </div>
+                    {/if}
+                </li>
+            {/foreach}
+            <div class="lump"></div>
+        </ul>
+    </div>
+</header>

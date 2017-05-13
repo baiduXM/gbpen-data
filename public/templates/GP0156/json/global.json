@@ -1,0 +1,68 @@
+{	
+	"hotline": {
+		"value": "咨询热线：",
+		"description": "头部热线",
+		"type": "text"
+	},
+	"slidepics": {
+		"value": [{
+			"title": "测试图1",
+			"image": "images/banner_09.jpg",
+			"link": "http://www.baidu.com"
+		}, {
+			"title": "测试图2",
+			"image": "images/banner_09.jpg",
+			"link": "http://www.baidu.com"
+		}, {
+			"title": "测试图3",
+			"image": "images/banner_09.jpg",
+			"link": "http://www.baidu.com"
+		}],
+		"description": "大轮滚图",
+		"type": "images",
+		"config": {
+			"width": 1920,
+			"height": 462
+		}
+	},
+	"contact": {
+		"value": {},
+		"description": "底部上方单页面以及内页左侧下方单页面",
+		"type": "page",
+		"config": {
+			"nav_width": 200,
+			"nav_height": 111
+		}	
+	},
+	"content": {
+		"value": "公司地址：厦门市思明区软件园二期观日路36号201单元\r\n联系电话：0592-3503777\r\n传真：0592-3503003\r\n投诉邮箱：tousu@xm12t.com",
+		"description": "底部上方右侧单页面内容",
+		"type": "textarea"
+	},
+	"conts": {
+		"value": "<em>400-807-9400</em><span>客服热线：(工作时间9:00 - 18:00)</span><p>厦门市思明区软件园二期观日路36号201单元</p>",
+		"description": "内页左侧下方单页面内容",
+		"type": "textarea"
+	},
+	"link": {
+		"value": [{
+			"title": "百度",
+			"image": "",
+			"link": "http://www.baidu.com"
+		}, {
+			"title": "易尔通",
+			"image": "",
+			"link": "http://www.12t.cn"
+		},{
+			"title": "百度",
+			"image": "",
+			"link": "http://www.baidu.com"
+		}, {
+			"title": "易尔通",
+			"image": "",
+			"link": "http://www.12t.cn"
+		}],
+		"description": "底部友情链接",
+		"type": "images"
+	}
+}

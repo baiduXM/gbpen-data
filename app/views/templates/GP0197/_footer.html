@@ -1,0 +1,17 @@
+<div class="footer">
+         <div class="fot">
+              <div class="nav">
+                  <ul class="menus">
+                    {$limit=10}
+                    {if $navs|count lt $limit}{$limit=$navs|count}{/if}
+                  <li style="width:{(100/($limit+1))}%"><a href="{$site_url}"><p class="navname {if $nav.current}current{/if}">首页</p><span>HOME</span></a></li>
+                      {foreach item=nav from=$navs}
+                      <li style="width:{(100/($limit+1))}%"><a href="{$nav.link}"><p class="navname {if $nav.current}current{/if}">{$nav.name}</p><span>{$nav.en_name}</span></a></li>
+                      {if $nav@index+1 eq $limit}{break}{/if}
+                      {/foreach}               
+                  </ul>
+              </div>
+       </div>
+        <p>{$footprint}</p>
+</div>
+  {$footscript}

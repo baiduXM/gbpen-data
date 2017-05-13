@@ -1,0 +1,28 @@
+ <div id="footer">
+      <div class="foot_top">
+           <div class="links">
+             <p><span>友情链接 / LINKS</span>
+             {foreach item=flink from=$global.links}
+              <a href="{$flink.link}">{$flink.title}</a>
+            {/foreach} </p>     
+           </div>
+      </div>
+      <div class="foot_bot">
+           <div class="foot_nav">
+                <ul>
+                  <li style="width:{100/{$navs|count+1}}%"><a href="{$site_url}">网站首页</a></li>
+                  {foreach item=nav from=$navs}
+                    <li style="width:{100/{$navs|count+1}}%">
+                      <a href="{$nav.link}">{$nav.name}</a> 
+                    </li>
+                  {/foreach} 
+               </ul> 
+           </div>
+           <div class="banq">厦门萨诺威幕墙门窗系统有限公司 闽ICP备16030621号-1</div>
+      </div>
+
+{$footscript}
+
+
+ 
+ 

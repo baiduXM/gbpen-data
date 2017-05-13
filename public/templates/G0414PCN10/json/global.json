@@ -1,0 +1,41 @@
+{
+    "nbanner": {
+        "value": [
+            {
+                "title": "banner",
+                "image": "images/header_banner.jpg",
+                "link": "www.baidu.com",
+                "description": "banner1"
+            }, {
+                "title": "banner",
+                "image": "images/header_banner.jpg",
+                "link": "www.baidu.com",
+                "description": "banner2"
+            }, {
+                "title": "banner",
+                "image": "images/header_banner.jpg",
+                "link": "www.baidu.com",
+                "description": "banner3"
+            }],
+        "description": "首页轮播",
+        "type": "images",
+        "config": {
+            "width":  1920,
+            "height": 400
+        }
+    },
+    "logo":{
+        "description":"logo",
+        "value":{
+            "title": "banner",
+            "image": "images/logo.png",
+            "link": "",
+            "description": "logo"
+        },
+        "type":"image",
+        "config":{
+            "width":147,
+            "height":170
+        }
+    }
+}

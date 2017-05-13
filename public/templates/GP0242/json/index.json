@@ -1,0 +1,127 @@
+{
+	"about": {
+		"description": "单页面(关于我们)",
+		"value": {},
+		"type": "page",
+		"config": {
+			"nav_width": 525,
+			"nav_height": 315
+		}
+	},
+	"back01": {
+		"value": {
+			"title": "背景图片",
+			"image": "images/back-011.jpg",
+			"link": "article/1.html"
+		},
+		"description": "背景图片一",
+		"type": "image",
+		"config": {
+			"width": 1920,
+			"height": 583
+		}
+	},
+	"product":{
+		"description": "首页图片列表一",
+		"value": {},
+		"type": "list",
+		"config": {
+			"showchilddata":true,
+			"star_only": true,
+			"width": 250,
+			"height": 208,
+			"nav_width":250,
+			"nav_height":208
+		}
+	},
+	"news":{
+		"description": "文字列表（左）",
+		"value": {},
+		"type": "list",
+		"config": {
+			"showchilddata":true,
+			"star_only": true,
+			"width": 232,
+			"height": 167
+		}
+	},
+	"pic": {
+		"value": [{
+			"title": "picture",
+			"image": "images/pic-01.jpg",
+			"link": "article/1.html",
+			"description": "pic1"
+		}, {
+			"title": "picture",
+			"image": "images/pic-02.jpg",
+			"link": "http://www.baidu.com"
+		}],
+		"description": "课程图片",
+		"type": "images",
+		"config": {
+			"width": 234,
+			"height": 160
+		}
+	},
+	"course":{
+		"description": "文字列表（右）",
+		"value": {},
+		"type": "list",
+		"config": {
+			"showchilddata":true,
+			"star_only": true,
+			"width": 234,
+			"height": 160
+		}
+	},
+	"back02": {
+		"value": {
+			"title": "背景图片",
+			"image": "images/back-02.jpg",
+			"link": "article/1.html"
+		},
+		"description": "背景图片二",
+		"type": "image",
+		"config": {
+			"width": 1920,
+			"height": 589
+		}
+	},
+	"case":{
+		"description": "首页底部图片列表",
+		"value": {},
+		"type": "list",
+		"config": {
+			"showchilddata":true,
+			"star_only": true,
+			"width": 308,
+			"height": 335
+		}
+	},
+	"cerdit": {
+		"description": "底部栏目",
+		"value": {},
+		"type": "page",
+		"config": {}
+	},
+	"1": {
+		"value": "正",
+		"description": "底部保障内容",
+		"type": "text"
+	},
+	"2": {
+		"value": "高",
+		"description": "底部保障内容",
+		"type": "text"
+	},
+	"3": {
+		"value": "团",
+		"description": "底部保障内容",
+		"type": "text"
+	},
+	"4": {
+		"value": "保",
+		"description": "底部保障内容",
+		"type": "text"
+	}
+}

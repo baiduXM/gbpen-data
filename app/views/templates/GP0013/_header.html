@@ -1,0 +1,43 @@
+<div class="headerbg"><h1 class='logo'><img src="{$logo}" /></h1><span class='tel'>电话：<i>{$contact.telephone} </i></span></div> 
+        <div id="menu" class="menu">
+            <ul>
+
+              
+            <li><a href="{$site_url}">首页</a></li>
+           {foreach item=nav from=$navs}	
+            <li  class="{if $nav.current}current{/if}" ><a href="{$nav.link}">{$nav.name}</a>
+				{if $nav.childmenu}
+					<ul class="clearfix">
+						{foreach item=nav_list from=$nav.childmenu}
+						<li class="{if $nav_list.current}current{/if}"><a href="{$nav_list.link}">{$nav_list.name}</a></li>
+						{/foreach}
+					</ul>
+				{/if}
+			</li>            
+       {if $nav@index+1 gte 6}{break}{/if}
+	{/foreach}			            
+            </ul>
+        </div> 
+<div class="banners">
+		<div id="slideBox" class="slideBox">
+			<div class="hd">
+				<ul>{foreach item=slidepic from=$_header.slidepics}
+        <li>{$slidepic@index+1}</li>
+        {/foreach}</ul>
+			</div>
+			<div class="bd">
+				<ul>
+					{foreach name=slidepics item=slidepic from=$_header.slidepics}
+							<li><a href="{$slidepic.link}" target="_blank"><img src="{$slidepic.image}"  alt="{$slidepic.title}"/></a></li>
+					{/foreach}   
+                    
+				</ul>
+			</div>
+
+			<!-- 下面是前/后按钮代码，如果不需要删除即可 -->
+			<a class="prev" href="javascript:void(0)"></a>
+			<a class="next" href="javascript:void(0)"></a>
+
+		</div>
+		
+		   </div>   

@@ -1,0 +1,116 @@
+<!DOCTYPE>
+<html>
+<head>
+<script type="text/javascript">
+    // 跳转手机页面
+    {if $site_another_url}
+        if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+            location.href = '{$site_another_url}';
+        }
+    {/if}
+</script>
+<!--  -->
+<meta name="keywords" content="{$keywords}"/>
+<meta name="description" content="{$description}"/>
+<link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
+<meta http-equiv="x-ua-compatible" content="ie=8"/>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>{$title}</title>
+<link href="{$site_url}css/css.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="{$site_url}js/jquery1.42.min.js"></script>
+<script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.js"></script>
+<script type="text/javascript" src="{$site_url}js/function.js"></script>
+<!--[if IE 6]>
+<script type="text/javascript" src="{$site_url}js/DD_belatedPNG_0.0.8a-min.js"></script>
+<script>
+  DD_belatedPNG.fix('.pngFix');
+</script>
+<![endif]--> 
+{$headscript}
+</head>
+
+<body>
+<!-- 导入头部文件 -->
+{include file='./_header.html'}
+
+<div id="contactiner" class="wrapper clearfix">
+<div id="sort" class="bkx">
+<h3>● {$index.pro.name} <span>{$index.pro.en_name} </span></h3>
+<div class="inner">
+<ul class="cp">
+{foreach item=pro from=$index.pro.childmenu}
+<li><span>></span><a href="{$pro.link}">{$pro.name}</a></li>
+{if $pro@index eq 8}{break}{/if}
+{/foreach}
+</ul>
+</div>
+</div>
+
+<div id="products" class="bkx bkx1">
+  <h3>● {$index.pro.name}<span>{$index.pro.en_name}</span>
+  <a href="{$index.pro.link}">+<i>MORE</i></a>
+  </h3>
+  <div class="picScroll_news w">
+    <a class="prev" href="javascript:void(0)"></a>
+    <a class="next" href="javascript:void(0)"></a>
+    <div class="bfd inner">
+       <div class="picList">
+            {foreach item=pro from=$index.pro.data}
+            <li><a href="{$pro.link}" class="pngFix"><i><img src="{$pro.image}"/></i></a><a href="{$pro.link}" class="pro_tit">{$pro.title}</a></li>
+            {/foreach}
+        </div>
+    </div>
+  </div>
+</div>
+
+<div class="c"></div>
+
+<div id="about" class="bkx bkx2">
+  <h3>● {$index.about_us.name}<span>{$index.about_us.en_name}</span>
+  <a href="{$index.about_us.link}">+<i>MORE</i></a>
+  </h3>
+  <div class="inner">
+    <span class="ab_img"><i><img src="{$index.about_us.image}"/></i></span>
+    <p>{$index.about_us.description}</p>
+  </div>
+</div>
+
+<div id="news" class="bkx bkx2">
+  <h3>● {$index.news.name}<span>{$index.news.en_name}</span>
+  <a href="{$index.news.link}">+<i>MORE</i></a>
+  </h3>
+  <div class="inner">
+    <span class="n_img"><i><img src="{$index.news.data[0].image}" class="news_img" /></i></span>
+    <b class="news_tit">{$index.news.data[0].title}</b>
+    <span class="nr">{$index.news.data[0].description}</span>
+    <ul>
+
+    {foreach item=news from=$index.news.data}
+      {if $news@index gt 0}
+        <li><span class="time">{$news.pubtimestamp|date_format:'%Y-%m-%d'}</span><a href="{$news.link}">{$news.title} </a></li>
+      {/if}
+     {if $news@index eq 2}{break}{/if}
+    {/foreach} 
+    </ul>
+    <div class="c"></div>
+  </div>
+</div>
+<div id="contact" class="bkx bkx2">
+  <h3>● {$index.contact_us.name}<span>{$index.contact_us.en_name}</span>
+  <a href="{$index.contact_us.link}">+<i>MORE</i></a>
+  </h3>
+  <div class="inner">
+    <p>联系人：{$contact.name}<br />
+    电话：{$contact.telephone}<br />
+    传真：{$contact.fax}<br />
+    手机：{$contact.mobile}<br />
+    地址：{$contact.address}</p>
+  </div>
+</div>
+</div>
+
+
+{include file='./_footer.html'}
+
+</body>
+</html>

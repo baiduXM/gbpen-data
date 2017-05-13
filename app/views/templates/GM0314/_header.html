@@ -1,0 +1,16 @@
+<header>
+    <div id="header">
+        <div class="logo"><a href="{$site_url}"><img src="{$logo}" alt=""/></a></div>
+        <div class="nav">
+            <div class="nr" id="list_wai">
+                <div class="swiper-container1" id="list_run">
+                    <div class="swiper-wrapper">
+                        {foreach item=nav from=$navs}
+                        <div class="swiper-slide"><a href="{$nav.link}">{$nav.name}</a></div>
+                        {/foreach}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

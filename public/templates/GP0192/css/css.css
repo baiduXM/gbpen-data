@@ -1,0 +1,190 @@
+body{ color:#000; font-family:Microsoft Yahei,Arial, Helvetica, sans-serif;background:#FFF; border-top:6px solid #195ca2}
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,input,textarea,div{margin:0;padding:0; list-style:none; line-height:24px; font-size:12px; font-weight:normal}
+body,div,ul,li,dl,dt,dd{ font-size:12px;}
+.clearfix:after { content:'\20'; display:block; height:0; clear:both; }
+.clearfix { *zoom:1; font-size:0px;}
+a{ color:#000; text-decoration:none}
+a:hover{ color:#195CA2} 
+img{ border:none;}
+.c{ clear:both}
+
+.wrapper{width:1002px; margin:0 auto; }
+
+display:block; white-space:nowrap; text-overflow:ellipsis; overflow:hidden;
+strong{display: block;margin: 0 auto;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+
+
+
+
+
+
+
+/*头部*/
+
+#header{ position:relative}
+
+
+#header h1{width:400px;height:87px;float:left; position:relative; }
+#header h1 a{display:block;height:87px;width:400px; position:absolute; bottom:0px; left:0;}
+#header h1 img{max-width:400px; max-height:87px; position:absolute; top:0; left:0; right:0; bottom:0; margin:auto}
+
+
+
+.search{ position:absolute; top:30px; right:9px;}
+.search_area{ background:url(../images/ser_bg.jpg); width:153px; height:26px; line-height:26px; float:left; border:none; color:#999; text-indent:24px; }
+.search_btn{ background:#0e5aa9; width:44px; height:26px; border:none; float:left; position:relative; left:0px; top:0px; color:#fff}
+
+.tel{ float:right; padding-top:48px; font-family:Microsoft Yahei; font-size:16px; margin-right:10px; color:#185da2; font-weight:bold }
+
+
+
+
+#nav{ width:1002px; margin:auto; background:url(../images/nav_bg.jpg) top center repeat-x; height:47px; border:1px solid #fff}
+
+
+#nav ul li{ float:left;  line-height:47px; height:47px; font-size:12px;  background:url(../images/nav_libg.jpg) right no-repeat; }
+#nav ul li p{ font-size:10px;  height:17px; line-height:17px; overflow: hidden;text-transform:uppercase}
+#nav ul li span{ height:24px; line-height:24px; overflow: hidden; }
+#nav ul li a{   color:#fff; line-height:28px; height:47px; text-align:center;  display:block; }
+
+
+#nav ul li .cc{background:#1f6ec0;height:40px; line-height: 40px;display: none; text-align:center; 
+width:100%; position:relative; z-index:100; margin-top:0px; overflow:hidden }
+#nav ul li .cc:hover{}
+#nav ul li .cc a{width:92%; margin:auto;color:#fff; padding:0 4%; overflow:hidden; height:40px; line-height:40px;}
+#nav ul li .cc a:hover{ text-decoration:underline;color:#fff;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#banner{ margin:auto; width:998px; border:solid 2px #999; margin-top:5px;height:260px; overflow:hidde; margin-bottom:15px;  overflow:hidden}
+
+
+
+.contect_box{width:1002px;height:auto;overflow:hidden;margin:0px auto; }
+.left{ float:left;width:227px;height:auto;margin:0px auto;overflow:hidden;}
+.cn_tel{width:206px;height:78px; background:url(../images/index-name.jpg) top center no-repeat; text-align:center; font-family:Microsoft Yahei; color:#c1081e; font-size:23px; font-weight:bold; overflow:hidden ; padding:20px 10px 10px 10px; }
+.cn_tel p{ font-size:20px; color:#fff; line-height:55px; height:55px; overflow:hidden}
+
+
+.contact{ width:227px;height:317px; margin:10px auto;background:url(../images/contact-di.jpg) left top no-repeat;}
+h3.contact_text{width:187px;height:auto; line-height:24px; font-weight:normal; padding:10px 21px 25px 21px; font-size:12px; overflow:hidden}
+
+.contact .title{ font-size:14px; font-weight:bold; color:#00276f; text-indent:24px; line-height:28px; height:28px; overflow:hidden}
+.contact .title a{color:#00276f}
+.contact .title span{ font-size:12px; font-weight:normal;margin-left:5px;}
+
+
+
+
+
+.center{float:left;width:520px;height:auto;overflow:hidden; margin:0px 11px;}
+.about{width:518px;height:192px; overflow:hidden; margin:0px auto; border:1px #C5C5C5 solid;}
+h2.about_top{width:518px; height:25px; background:url(../images/index-abou.jpg) left top no-repeat;color:#00276f; font-size:10px; text-transform:uppercase; height:25px; overflow:hidden}
+h2.about_top b{font-size:14px; font-weight:bold; color:#00276f;  line-height:25px; padding-left:15px; margin-right:5px;}
+
+.about_text{width:498px; height:auto; overflow:hidden; margin:10px; line-height:24px; font-size:12px; font-weight:normal; height:147px; overflow:hidden}
+
+.pro{width:518px;height:227px;overflow:hidden;margin:10px auto;border:1px #c5c5c5 solid;}
+h2.pro_top{width:518px; height:25px; background:url(../images/index-pro.jpg) left top no-repeat;color:#00276f; font-size:10px; text-transform:uppercase; overflow:hidden}
+h2.pro_top b{font-size:14px; font-weight:bold; color:#00276f;  line-height:25px; padding-left:15px; margin-right:5px;}
+
+.pro .inner{ margin:15px; height:175px; overflow:hidden}
+.pro ul li{ width:151px; text-align:center; float:left; margin-right:10px; height:175px; overflow:hidden}
+.pro ul li .pic{ width:145px; height:145px; overflow:hidden; border:1px solid #ccc; padding:2px;}
+.pro ul li .pic img{ display:block}
+
+
+
+.news .title{ font-size:14px; font-weight:bold; color:#00276f; text-indent:24px; line-height:28px; height:28px; overflow:hidden}
+.news .title a{color:#00276f}
+.news .title span{ font-size:12px; font-weight:normal; margin-left:5px;}
+
+.news{ float:right;width:229px; height:auto; overflow:hidden; background:url(../images/index-news.jpg) left top no-repeat;}
+ul.news_detail{width:220px; height:260px; overflow:hidden; margin-top:8px;}
+ul.news_detail li{height:28px; line-height:28px; background:url(../images/b.gif) left center no-repeat; margin-left:15px; text-indent:10px; font-size:12px; overflow:hidden}
+ul.news_detail li a{color:#000; height:28px; overflow:hidden}
+ul.news_detail li a:hover{color:#00276F;}
+h4.imgnews{ height:115px; text-align:center; margin-top:19px;}
+h4.imgnews img{ height:100%; margin:auto;border:1px solid #ccc;  }
+
+.news_right{ float:right;width:495px;height:270px;background:url(../images/news-r.jpg) left top no-repeat; margin-top:10px;}
+span.more{line-height:25px; height:25px;font-size:12px;font-weight:normal;float:right; margin-top:6px; margin-right:10px;}
+
+span.time{float:right;height:30px;line-height:30px;font-weight:normal;}
+
+
+.footer{ width:100%;margin-top:10px;background:url(../images/bottom-di.jpg) left  bottom repeat-x; padding-bottom:10px;}
+.link{ width:1002px;height:34px; background:url(../images/link-di.jpg) center top no-repeat; margin:0px auto; overflow:hidden}
+h2.link_text{width:979px;height:34px; line-height:34px; font-size:12px; color:#00276F; margin-left:20px;}
+h2.link_text a {color:#00276F;}
+h2.link_text a:hover {color:#020202;}
+.footer_text{width:1002px;margin:15px auto;line-height:30px;font-size:12px;text-align:center;font-weight:normal;color:#000;}
+.footer_text a{color:#000;}
+.footer_text a:hover{color:#CC2006;}
+
+
+
+
+
+
+.subnav{width:225px; height:auto; margin:0px auto; border:1px #C5C5C5 solid; margin-bottom:10px; }
+.alefttitle{width:225px; height:25px;background:url(../images/my-rtop.jpg) left top no-repeat; overflow:hidden;color:#002a6f; font-size:10px; line-height:25px; overflow:hidden}
+.alefttitle b{ color:#002a6f; font-size:14px; font-weight:bold; margin-right:5px; margin-left:15px;}
+
+
+
+.sidebar{float:left;width:227px;height:auto;margin:0px auto;overflow:hidden;}
+.sub_contact{ width:227px; margin:10px auto; background:url(../images/contact-di1_inner.jpg) top center repeat-y;}
+h3.contact_text{width:187px;height:auto; line-height:24px; font-weight:normal; padding:10px 21px 25px 21px; font-size:12px; overflow:hidden; height:145px; overflow:hidden }
+
+
+.sub_contact h3.contact_text{width:187px;height:auto; line-height:24px; font-weight:normal; padding:10px 21px 25px 21px; font-size:12px;  }
+
+.sub_contact .title{ font-size:14px; font-weight:bold; color:#00276f; text-indent:24px; line-height:28px; background:url(../images/contact-di1_title.jpg) top center no-repeat}
+.sub_contact .title a{color:#00276f}
+.sub_contact .title span{font-size:12px;}
+
+
+.main{ float:right; height:auto; width:758px;border:1px #C5C5C5 solid; margin:0px auto; margin-bottom:10px;}
+
+.crumb{  width:758px;height:25px; background:url(../images/my-rtop.jpg) left top no-repeat;  font-size:12px; line-height:25px; overflow:hidden}
+
+
+.crumb span{float:right; margin-right:10px; color:#000; line-height:25px; font-weight:normal;}
+.crumb span a{color:#000;}
+.crumb span a:hover{color:#830001;}
+
+.crumb h2{ color:#002a6f;  margin-left:15px; font-size:11px;}
+.crumb h2 b{font-size:15px; font-weight:bold; margin-right:5px;}
+
+.article { padding:10px;}
+.article img{ max-width:730px;}
+
+
+
+
+.category ul li a.firsta{ text-align:left; height:27px; line-height:27px; overflow:hidden; margin-top:5px; }
+.category ul li a.firsta{ display:block; background:url(../images/ico0.jpg) no-repeat 5px; font-size:12px; text-align:left; text-indent:33px; height:30px; overflow:hidden;  line-height:30px; display:block;width:85%; padding-left:3%;  margin:auto; color:#706d6d; border-bottom:1px #706d6d dashed;margin-bottom:10px;}
+.category ul li a:hover.firsta { color:#002870; display:block; background:url(../images/ico0.jpg) no-repeat 5px;}
+
+ul.second li a.seconda{ font-size:12px; text-align:left; text-indent:33px; height:30px; overflow:hidden;  line-height:30px; display:block;width:85%; padding-left:15%;  margin:auto; color:#706d6d; border-bottom:none;}
+ul.second li a.seconda:hover{ color:#002870}
+
+ul.third li a.thirda{ font-size:12px; text-align:left; text-indent:33px; height:30px; overflow:hidden;  line-height:30px; display:block;width:85%; padding-left:27%;  margin:auto; color:#706d6d; background:url(../images/icon2.jpg) no-repeat 15px 10px; }
+ul.third li a.thirda:hover{color:#002870}
+

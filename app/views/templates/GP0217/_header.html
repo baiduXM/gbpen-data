@@ -1,0 +1,51 @@
+<div class="top_bg">
+<div id="top_inner" class="wrapper clearfix">
+<h2>{$global.tel}</h2>
+
+<div class="search"><form action="{$search_action}" method="GET">
+  <input type="text" name="s" value=""placeholder="请输入关键字"  class="search_area" />
+  <input type="submit" class="search_btn"  value=" "/>
+</form></div>
+
+</div></div>
+
+
+<div id="header" class="clearfix wrapper">
+<div class="logo"><a href="{$site_url}"><img src="{$logo}" alt="{$title}" height="100%"></a></div>
+<div id="nav" >
+ <ul class="clearfix">
+            {$limit = 7}
+            {if $navs|count lt $limit}{$limit = $navs|count}{/if}
+           
+            {foreach name=navs item=nav from=$navs}
+            <li class="fl{if $nav.current} current{/if} aa" style="width:{100/($limit+1)}%">
+                <p><a href="{$nav.link}">{$nav.name}</a></p>
+                <ul class="sub clearfix">
+                    {if $nav.childmenu} {foreach key=key item=nav_list from=$nav.childmenu}
+                    <li class="{if $nav.current}current{/if} cc"><p><a href="{$nav_list.link}">{$nav_list.name}</a></p></li>
+                    {/foreach} {/if}
+                </ul>
+            </li>
+            {if $nav@index+1 eq $limit}{break}{/if}
+            {/foreach}
+        </ul>
+ 
+ </div>
+</div>
+<div id="banner"><div id="kinMaxShow" style="display:none;"> 
+{foreach name=slidepics item=slidepic from=$global.slidepics}
+      <div> <a href="{$slidepic.link}" target="_blank"><img src="{$slidepic.image}" alt="{$slidepic.title}"  /></a></div>
+      {/foreach} </div></div>
+
+
+
+
+
+
+
+
+ 
+ 
+
+
+

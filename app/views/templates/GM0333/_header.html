@@ -1,0 +1,16 @@
+<header>
+    <div id="header">
+        <div class="logo"><a class="middle" href="{$site_url}"><img class="max" src="{$logo}" alt=""/></a></div>
+        <i class="nav iconfont" id="quickbar-showcats">&#xe603;</i>
+    </div>
+    <div id="banner">
+        <div class="swiper-container banner">
+            <div class="swiper-wrapper">
+                {foreach item=slidepic from=$global.slidepics}
+                <div class="swiper-slide"><a class="middle" href="{$slidepic.link}"><img class="max" src="{$slidepic.image}" alt=""/></a></div>
+                {/foreach}
+            </div>
+            <div class="swiper-pagination banner_run"></div>
+        </div>
+    </div>
+</header>

@@ -1,0 +1,17 @@
+<footer id="footer">
+	<div class="foot_top">
+    <div class="foot_top1">
+         <span>合作伙伴：</span>
+		<ul>
+		 {foreach name=friend item=friend from=$global.links}
+            <li><a href="{$friend.link}">
+              <div class="pic"><img src="{$friend.image}" /></div>
+              </a></li>
+            {/foreach}	</ul>
+	</div></div>
+
+	<div class="foot">
+		{$footprint}
+	</div>
+</footer>
+{$footscript}

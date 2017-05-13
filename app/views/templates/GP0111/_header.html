@@ -1,0 +1,66 @@
+<header class="">
+  <div class="head_outsidl">
+    <div class="head">
+      <h2 class="logo f_l">
+        <a href="{$site_url}">
+          <img src="{$logo}" height="128" max-width="387" class="logoimg"/>
+        </a>
+      </h2>
+      <div class="menu f_r">
+        <ul class="nav clearfix" id="nav">
+          {$limit = 5}
+          <li class="nLi" style="width: {100/($limit+1)}%">
+            <h3>
+              <a href="{$site_url}">网站首页</a>
+            </h3>
+          </li>
+          {foreach item=nav from=$navs}
+          <li class="nLi {if $nav.current}current{/if}" style="width: {100/($limit+1)}%">
+            <h3>
+              <a href="{$nav.link}">{$nav.name}</a>
+            </h3>
+            {if $nav.childmenu}
+            <ul class="sub">
+              {foreach item=nav_list from=$nav.childmenu}
+              <li class="{if $nav_list.current}current{/if}">
+                <a href="{$nav_list.link}">{$nav_list.name}</a>
+              </li>
+              {/foreach}
+            </ul>
+            {/if}
+          </li>
+          {if $nav@index+1 gte $limit}{break}{/if}
+                  {/foreach}
+        </ul>
+      </div>
+    </div>
+
+  </div>
+  <div class="banner">
+
+    <div id="slideBox" class="slideBox p_r">
+      <!--         <div class="hd">
+      <ul>
+        {foreach item=slidepic from=$index.slidepics}
+        <li>{$slidepic@index+1}</li>
+        {/foreach}
+      </ul>
+    </div>
+    -->
+    <div class="bd">
+      <ul>
+        {foreach item=slidepic from=$index.slidepics}
+        <li>
+          <a href="{$slidepic.link}">
+            <img src="{$slidepic.image}" alt="{$slidepic.title}" />
+          </a>
+        </li>
+        {/foreach}
+      </ul>
+    </div>
+    <!--    <a class="prev" href="javascript:void(0)"></a>
+  <a class="next" href="javascript:void(0)"></a>
+  -->
+</div>
+</div>
+</header>

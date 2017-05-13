@@ -1,0 +1,16 @@
+<div class="page">
+    <div class="ym">
+      <a href="{$page_links.first_link}">&lt;&lt;</a>
+      <a href="{$page_links.prev_link}">&lt;</a>
+      {foreach item=near_link key=near_page from=$page_links.nears_link}
+	       {if $near_page == $page_links.current_page}
+	        <a class="current">{$near_page}</a>
+	       {else}
+	        
+	       {/if}
+	  {/foreach}
+      <a href="{$page_links.next_link}">&gt;</a>
+      <a href="{$page_links.last_link}">&gt;&gt;</a>
+    </div>
+    <i>{$page_links.current_page}/{$page_links.page_count}</i>
+</div>

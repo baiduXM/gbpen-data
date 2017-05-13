@@ -1,0 +1,174 @@
+body{ color:#e5ae76; font-family:Microsoft Yahei,Arial, Helvetica, sans-serif;background:url(../images/by.gif) repeat; }
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,input,textarea,div{margin:0;padding:0; list-style:none; line-height:24px; font-size:12px; font-weight:normal}
+body,div,ul,li,dl,dt,dd{ font-size:12px;}
+.clearfix:after { content:'\20'; display:block; height:0; clear:both; }
+.clearfix { *zoom:1; font-size:0px;}
+a{ color:#e5ae76; text-decoration:none}
+a:hover{ color:#f60} 
+img{ border:none;}
+.c{ clear:both}
+
+.wrapper{width:1002px; margin:0 auto; }
+
+display:block; white-space:nowrap; text-overflow:ellipsis; overflow:hidden;
+strong{display: block;margin: 0 auto;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+
+/*header css*/
+#header{ background:url(../images/top-by.jpg) top no-repeat; overflow:hidden; }
+#header .top{ height:115px; overflow:hidden; position:relative;  }
+
+#header .logo{width:500px;height:110px;float:left; position:relative; background:url(../images/logo.jpg) no-repeat;}
+#header .logo a{display:block;height:110px;width:500px; position:absolute; bottom:0px; left:0;}
+#header .logo img{max-width:500px; max-height:110px; position:absolute; top:0; left:0; right:0; bottom:0; margin:auto}
+
+#header .search{  position:absolute; right:25px; top:20px;}
+#header .search_area{ background:url(../images/sou_by.png) no-repeat; width:182px; height:26px; line-height:26px; float:left; border:none; text-indent:24px; color:#000; }
+#header .search_btn{ background:url(../images/sou-td.png) top center no-repeat; width:29px; height:26px; border:none; float:left; position:relative; left:0px; top:0px;}
+
+.search .search_area::-webkit-input-placeholder { color:#926e2d; }
+.search .search_area::-moz-input-placeholder { color:#926e2d; }
+
+
+
+
+#header .tel{ float:right; margin-top:60px;  height:50px; overflow:hidden; background:url(../images/tel.png) bottom left no-repeat; color:#e9b43a; padding-left:58px; font-size:20px; line-height:50px; margin-right:20px;}
+
+
+#header .nav{ height:70px; text-align:center; background:url(../images/nav-by.jpg) repeat-x;}
+#header .nav ul li p{ height:70px; line-height:70px; overflow:hidden}
+#header .nav ul li{ float:left;height:70px; width:125px; text-align:center; position:relative; font-weight:bold; }
+#header .nav ul li a{  z-index:11; display:block; font-size:14px; color:#fff0ab; line-height:70px; font-weight:normal; }
+#header .nav ul li a:hover{ color:#eacb3f; }
+
+#header .nav ul li .cc{background:#582301;height:40px; line-height:40px;display:none; text-align:center; width:100%; position:relative; z-index:100; margin-top:0px; overflow:hidden }
+#header .nav ul li .cc:hover{}
+#header .nav ul li .cc a{width:92%; margin:auto;color:#fcf594; padding:0 4%; overflow:hidden; height:40px; line-height:40px;}
+#header .nav ul li .cc a:hover{ text-decoration:underline;color:#fcf594; }
+
+
+/*banner css*/
+#banner{margin:0px auto;width:100%; text-align:center; height:417px; padding:42px 0px 18px 0px; overflow:hidden; background:url(../images/ban-by.jpg) top no-repeat;  }
+#banner-tm{margin:0px auto; width:963px; text-align:center;}
+
+
+/*container css*/
+
+#container{width:1002px; margin:0px auto; overflow:hidden;}
+
+/*about css*/
+.about{ margin-top:10px;}
+.about h3{height:39px; line-height:30px; font-size:10px; overflow:hidden; color:#d4a430; background:url(../images/about-tby.jpg) top no-repeat;}
+.about h3 b{ color:#f1bf44; font-size:16px; padding-right:5px; padding-left:30px; font-weight:normal;}
+.about h3 span{float:right; padding-top:10px;padding-right:10px ;}
+
+.about .inner {padding:10px; line-height:26px; height:200px; overflow:hidden; width:983px;}
+.about .inner .about_img { display:inline-block;*display:inline;*zoom:1; height:180px; margin-right:13px; overflow:hidden; border:5px #dfa844 solid;} 
+.about .inner .about_img img{height:100%; display:block;} 
+
+.about .about_text{ display:inline-block; vertical-align:top;*display:inline;*zoom:1; line-height:24px; height:190px; overflow:hidden;}
+
+/*newcon css*/
+.newcon{float:left;width:1002px; margin-top:10px; }
+
+/*news css*/
+.news{float:left;width:690px; }
+.news h3{height:36px; line-height:32px; overflow:hidden; background:url(../images/new-by.gif) bottom no-repeat;}
+.news h3 b{ color:#f1bf44; font-size:16px; padding-right:5px; padding-left:30px; font-weight:normal;}
+.news h3 span{float:right; padding-top:10px; padding-right:10px;  font-size:12px; font-weight:normal;}
+.news .inner {padding:10px; width:672px; }
+
+.news .tu_img {  display:inline-block;*display:inline;*zoom:1; height:153px; margin-right:13px; overflow:hidden; border:5px #dfa844 solid;}
+.news .tu_img img{height:100%; display:block;} 
+
+.news .news_text{ display:inline-block; vertical-align:top;*display:inline;*zoom:1; line-height:24px; height:190px; overflow:hidden;}
+
+.news .news_text ul{list-style:none; height:164px; overflow:hidden;}
+.news .news_text ul li{list-style:none;line-height:28px; height:28px; overflow:hidden;  font-weight: normal; text-indent:24px;background:url(../images/new-dian.gif) 8px  no-repeat; }
+.news .news_text a{ display:block; line-height:28px; height:28px; overflow:hidden;}
+.news .news_text a:hover{ color:#edbb41;}
+.news .news_text span{ float:right;padding-right:10px }
+
+/*rinmcon css*/
+.rinmcon{float:right;width:278px;  }
+.rinmcon h3{ height:39px; line-height:44px; background:url(../images/con-td.gif) no-repeat;}
+.rinmcon h3 b{ color:#f1bf44; font-size:16px; padding-right:5px; padding-left:30px; font-weight:normal;}
+
+.rinmcon .inner {padding:0px 10px 0px 20px;  text-align:left; background:url(../images/con-by.gif) top no-repeat; line-height:22px; min-height:165px; }
+.rinmcon .inner strong{ padding-top:12px;}
+
+/*product css*/
+.products {float:left;width:1002px; margin-top:10px;}
+
+.products h3{ height:39px; line-height:30px; overflow:hidden; background:url(../images/about-tby.jpg) top no-repeat;}
+.products h3 b{ color:#f1bf44; font-size:16px; padding-right:5px; padding-left:30px; font-weight:normal;}
+.products h3 span{float:right; padding-top:10px; padding-right:10px;  font-size:12px; font-weight:normal;}
+
+.products .inner { padding:10px;}
+.products .inner ul{ height:170px; overflow:hidden;} 
+.products .inner ul li img{ display:block;}
+.products .inner ul li{ float:left; height:170px;  width:140px; overflow:hidden; margin-right:10px; text-align:center; }
+.products .inner ul li .pic{ width:130px; height:130px;overflow:hidden; margin:auto; margin-top:5px; border:5px solid #dfa844 }
+.products .inner ul li .pic img{ display:block;}
+
+.products .bd{ width:970px; margin:auto; overflow:hidden;}
+
+
+/*footer css*/
+#footer{ margin:0 auto;text-align:center; color:#e5ae76; padding-top:15px; background:url(../images/tom-by.jpg) top no-repeat #62260a; clear:both;  width:993px;}
+
+#footer .inner{ padding:0 15px}
+#footer .inner a{ color:#e5ae76;}
+
+.link{ width:900px; margin:auto; padding-top:0px; text-align:center;}
+.link h2{ color:#e5ae76; float:left; }
+.link .neirong{ color:#e5ae76; float:left; }
+.link .neirong a{ color:#e5ae76; padding:0 5px;}
+
+
+/*sidebar css*/
+.sidebar{ width:278px; float:left; margin-left:10px; margin-top:10px; display:inline;  }
+
+.list_class{ margin-bottom:15px;}
+
+.subnav .alefttitle{ height:39px; line-height:44px; background:url(../images/con-td.gif) no-repeat; overflow:hidden}
+.subnav .alefttitle b{ color:#f1bf44; font-size:16px; padding-right:5px; padding-left:30px; font-weight:normal; overflow:hidden}
+
+.subnav-tu{float:left; width:245x; margin-top:10px;}
+
+.category{  padding:10px 5px ;background:url(../images/subnav-cen.gif) repeat-y;}
+.category ul{}
+.category ul li .firsta{ width:252px; margin:auto; height:32px; overflow:hidden; line-height:32px;text-align:left; text-indent:85px; color:#edbb41;font-size:14px;  margin-top:5px;
+ background:url(../images/sub-xuan.gif) center no-repeat; display:block;}
+.category ul li a.firsta{ color:#edbb41;font-size:14px;}
+.category ul li a:hover.firsta { color:#fff;}
+
+ul.second li .seconda{ text-align:left;  height:28px; line-height:28px; text-indent:60px; overflow:hidden; margin:auto}
+ul.second li a.seconda{display:block; color:#e5ae76;background:url(../images/new-dian.gif) 45px no-repeat; }
+ul.second li a.seconda:hover{color:#FF0000}
+ul.third li a.thirda{ padding-left:25%; margin:auto;color:#edbb41; color:#e5ae76;  display:block; line-height:35px; height:30px; overflow:hidden;}
+ul.third li a.thirda:hover{color:#FF0000}
+
+/*nynmcon css*/
+
+.nynmcon{ margin-top:10px; margin-left:6px;  display:inline;}
+.nynmcon h3{ color:#94cf35;text-transform:uppercase; font-size:12px; font-weight:bold; background:url(../images/contact.jpg) no-repeat; height:43px; line-height:43px; }
+.nynmcon h3 b{ color:#70ca09; font-size:19px; margin-right:5px; padding-left:15px;}
+.nynmcon .inner{ background:url(../images/left_line.jpg) repeat-y; height:100px; padding-left:15px; padding-right:10px; padding-top:8px; color:#333333; overflow:hidden;}
+.nynmcon .inner img{ display:block;}
+
+
+
+/*main css*/
+.main{ float:right; width:690px; margin-top:10px; margin-right:10px;  display:inline;}
+
+
+.crumb{ height:30px;line-height:30px;  color:#e5ae76; font-size:14px; font-weight:bold;  text-indent:30px; padding-top:0px;  background:url(../images/new-by.gif) bottom no-repeat; overflow:hidden  }
+
+.crumb p{ width:300px; font-weight:bold; font-size:14px; line-height:20px; height:24px; overflow:hidden;}
+
+.crumb span{ float:right;  color:#e5ae76;padding-right:10px; font-size:12px; font-weight:normal;}
+.crumb span a{  color:#e5ae76; }
+
+.article {  padding:10px 10px 10px 10px;}
+
+.article img{ max-width:650px}

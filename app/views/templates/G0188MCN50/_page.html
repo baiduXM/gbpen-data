@@ -1,0 +1,17 @@
+<div class="course-list bot">
+    <div class="cou-page clear ">
+        <span class=" prev lt"><a href="{$page_links.prev_link}">上一页</a></span>
+        <ul class="lt">
+            {foreach item=near_link key=near_page from=$page_links.nears_link}
+            {if $near_page == $page_links.current_page}
+            <li class=" current"><a>{$near_page}</a></li>
+            {else}
+            <li ><a href="{$near_link}">{$near_page}</a></li>
+            {/if}
+            {/foreach}
+        </ul>
+
+        <span class="next rt"><a href="{$page_links.next_link}">下一页</a></span>
+        <span class="total rt"><a >{$page_links.page_count}</a></span>
+    </div>
+</div>

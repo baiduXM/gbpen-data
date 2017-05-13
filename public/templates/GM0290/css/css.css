@@ -1,0 +1,82 @@
+/*标题样式*/
+
+@media screen and (min-width: 320px) and (max-width: 480px){
+
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px){
+
+}
+
+
+
+
+#in_text{ background:#f7c510; padding:4% 0}
+#in_text h2{ margin-bottom:5%}
+#in_text .h2_bg{ width:30%;height:40px; font-size:18px; margin:auto; text-align:center; position:relative}
+#in_text .h2_bg:after{ width: 100%;height:30px; border:2px solid #595959;position:absolute; content:""; top:9px; left:0%; z-index:999}
+#in_text .h2_bg .en{ background:#f7c510; padding:0 12%;width:60%; margin:auto; position:absolute; left:9%; z-index:10000;height:20px; line-height:20px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap; color:#2d2d2d; font-weight:bold}
+#in_text .h2_bg .ch{ background:#f7c510; padding:0 1%; display: inline-block;width:60%;z-index:10000;position:absolute; bottom:-10px;left:19%; height:20px; line-height:20px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap; color:#000}
+#in_text ul li{ background:url(../images/sub2_ico.png) 34px 20px no-repeat; padding-left:8%; width:90%; font-size:13px; line-height:44px}
+#in_text .text{ max-width:80%; float:left;overflow: hidden;text-overflow: ellipsis;white-space: nowrap}
+#in_text ul li span{ float:right;}
+
+@media screen and (min-width: 320px) and (max-width: 480px){
+#in_text .h2_bg{ width:42%; font-size:16px;}
+#in_text .h2_bg .en{ padding:0 5%;width:75%; left:9%;}
+#in_text .h2_bg .ch{	 padding:0 2%;width:70%;bottom:-10px;left:14%;}
+#in_text .text{ max-width:73%; }
+#in_text ul li{ background:url(../images/sub2_ico.png) 11px 17px no-repeat; padding-left:6%; line-height:40px}
+}
+
+
+
+
+#in_page{}
+#in_page{ background: url(../images/page_bg.png) bottom no-repeat #454344; background-size:100%; padding:4% 0 14% 0}
+#in_page h2{ margin-bottom:15%}
+#in_page .h2_bg{ width:30%;height:40px; font-size:18px; margin:auto; text-align:center; position:relative}
+#in_page .h2_bg:after{ width: 100%;height:30px; border:2px solid #a7a7a7;position:absolute; content:""; top:9px; left:0%; z-index:999}
+#in_page .h2_bg .en{ background:#454344; padding:0 12%;width:60%; margin:auto; position:absolute; left:9%; z-index:10000;height:20px; line-height:20px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap; color:#fff; font-weight:bold;}
+#in_page .h2_bg .ch{ background:#454344; padding:0 1%; display: inline-block;width:60%;z-index:10000;position:absolute; bottom:-10px;left:19%; height:20px; line-height:20px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;color:#f7c510; }
+
+#in_page .inner{ }
+#in_page .in_bg{ background:#252122; padding:4% 0; position:relative; width:93%; margin:auto;}
+#in_page .page_img{ position:absolute; left:3%; top:-20px; width:37%}
+#in_page .page_img img{ width:100%}
+#in_page .in_bg .text{ width:54%; float:right; font-size:14px; color:#d2d0d0; line-height:24px; height:96px; overflow:hidden; margin-right:2%}
+@media screen and (min-width: 320px) and (max-width: 480px){
+#in_page h2{ margin-bottom:8%}
+#in_page .page_img{ left:2%; top:-5px; width:42%}
+#in_page .in_bg{padding:3% 0; position:relative; width:96%;}
+#in_page .h2_bg{ width:42%; font-size:16px;}
+#in_page .h2_bg .en{ padding:0 5%;width:75%; left:9%;}
+#in_page .h2_bg .ch{padding:0 2%;width:70%;bottom:-10px;left:14%;}
+#in_page .in_bg .text{ width:48%;line-height:22px; height:84px;font-size:12px; }
+}
+
+#in_image{}
+#in_image h2{ margin-bottom:6%}
+#in_image .h2_bg{ width:30%;height:40px; font-size:18px; margin:auto; text-align:center; position:relative}
+#in_image .h2_bg:after{ width: 100%;height:30px; border:2px solid #a7a7a7;position:absolute; content:""; top:9px; left:0%; z-index:999}
+#in_image .h2_bg .en{ background:#fff; padding:0 12%;width:60%; margin:auto; position:absolute; left:9%; z-index:10000;height:20px; line-height:20px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap; color:#454344; font-weight:bold;}
+#in_image .h2_bg .ch{ background:#fff; padding:0 1%; display: inline-block;width:60%;z-index:10000;position:absolute; bottom:-10px;left:19%; height:20px; line-height:20px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;color:#e8a401; }
+#in_image ul li{ float:left; width:29%; margin:0 2% 2% 2%; border:1px solid #dddddd; position:relative}
+#in_image .pro_img{ width:100%;}
+#in_image .text{ font-size:12px; height:18px; line-height:18px; color:#7a7a7a; text-align:center;overflow: hidden;text-overflow: ellipsis;white-space: nowrap; margin:3% 0 5% 0}
+#in_image .pro_bot{ width:40%; height:2px; background:#393738; position:absolute; bottom:0px; margin-left:30%; left:0;}
+@media screen and (min-width: 320px) and (max-width: 480px){
+#in_image ul li{ width:29%; margin:0 1% 2% 2%;}
+#in_image .in_bg{padding:3% 0; position:relative; width:96%;}
+#in_image .h2_bg{ width:42%; font-size:16px;}
+#in_image .h2_bg .en{ padding:0 5%;width:75%; left:9%;}
+#in_image .h2_bg .ch{padding:0 2%;width:70%;bottom:-10px;left:14%;}
+}
+
+
+
+
+
+
+
+

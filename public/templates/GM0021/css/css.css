@@ -1,0 +1,103 @@
+﻿.pro{ margin:9px; height:auto;}
+.pro_top{ height:35px; overflow:hidden; font-size:1.12em; color:#4b4631;font-weight:bold;}
+.pro_top .title{ float:left; position:relative;}
+.pro_top .title:after{ width:8px; height:8px; border:1px solid #d00100; border-left:0px; border-bottom:0px; content:""; position:absolute; right:-10px; top:5px;}
+/* 本例子css -------------------------------------- */
+.picScroll{ margin:0px auto; position:relative }
+.picScroll .hd{ height:15px; line-height:15px;   overflow:hidden; text-align:left; position:absolute; right:0px; top:-30px;  }
+.picScroll .hd ul{ float:right;   }	
+.picScroll .hd li{ float:left; width:8px; height:8px; background:#4b4631; margin:0 5px; overflow:hidden; 
+-webkit-border-radius:8px; -moz-border-radius:8px; border-radius:8px; text-indent:-999px; font-size:0px; }
+.picScroll .hd .on{ background:#d00100;  }
+
+ul.imgbox-ul{font-size: 0;}
+ul.picture1{ width:100%; height:auto; overflow:hidden; }
+ul.picture1 li{font-size: 14px; margin:0px 0px; height:auto; overflow:hidden; display: inline-block; width:49.5%;}
+ul.picture1 li div{ margin:0px 6px; height:auto; overflow:hidden; position:relative; }
+ul.picture1 li div img{ vertical-align:top; width:100%; border:2px solid #fff; box-sizing: border-box }
+ul.picture1 li div .title{height:25px; line-height:25px;width:100%; padding-top:4px;white-space: nowrap;
+text-overflow: ellipsis; overflow:hidden; font-size:1.1em; font-weight:bold; }
+ul.picture1 li div .nr{  height:20px; line-height:20px;white-space: nowrap;
+text-overflow: ellipsis; overflow:hidden;}
+ul.picture1 li a{ display:block;}
+.more{ width:50%; height:25px; overflow:hidden; background:#00668e; border-radius:3px; color:#fff; text-align:center; line-height:25px; margin:8px auto 0px;}
+.more a{ color:#fff;}
+.more a:active{ background:rgba(0,0,0,0.1)}
+
+.boxmain{ padding:10px 10px 5px; height:auto; overflow:hidden; background:#00668e; margin:15px auto 0px; clear:both}
+.news{ background:#087ba8; width:100%; height:auto; overflow:hidden; color:#fff}
+.news .img{ float:left;}
+.news .edite{ padding:6px; height:auto; overflow:hidden;}
+.news dt.title{ height:24px; overflow:hidden; font-size:1.16em;}
+.news .more1{ height:24px; overflow:hidden;}
+.news .more1 a{ display:block; color:#fff; font-size:0.9em;}
+
+.ny_boxmain{ width:100%; height:auto; overflow:hidden; position:relative;}
+.nybaner{ width:100%; height:auto; overflow:hidden;}
+.boxmain-top{ height:45px; overflow:hidden; line-height:45px; color:#000; font-size:1.12em; background:#005679; width:100%;display:-webkit-box;display:-moz-box;display:-o-box;display:-ms-box;display:box;}
+.ny_title{-webkit-box-flex:1;-moz-box-flex:1;-o-box-flex:1;-ms-box-flex:1;box-flex:1; text-align:center; color:#fff; font-size:1.12em;}
+.more2{height:45px; width:55px;background:rgba(0,0,0,0.1); display:inline-table;  text-align:center; color:#fff; overflow:hidden; vertical-align:top  }
+#up{ display: none;}
+.hide-class{ height:auto; overflow:hidden; display:none; background:#00668e}
+.hide-class dl{ height:auto; overflow:hidden; line-height:30px;  position:relative; border-bottom:1px solid #0075a3}
+.hide-class dl:before{ height:30px; width:37px; content:"-"; position:absolute; right:0px; top:0px;color:#fff;text-align:center; }
+.hide-class dl a{ display:block;padding:0px 20px 0px 15px;color:#fff}
+.hide-class dl a:active {background:rgba(0,0,0,0.1);}
+.font{ width:55px; text-align:center;background:rgba(0,60,84,0.8);position:absolute; top:45px; right:0px; display:none; z-index:9999}
+.font dl{ height:30px; line-height:30px; color:#fff; text-align:center; }
+.font dl.big,.font-big{ font-size:1.3em; line-height:1.6em; }
+.font dl.normal,.font-normal{ font-size:1.0em;}
+.font dl.small,.font-small{ font-size:0.9em;}
+.boxmain-m{ padding:7px; height:auto; overflow:hidden;}
+.ny_menu{background:#fff;-webkit-mask-repeat:no-repeat; -webkit-mask-image: url(../icon/f_i1.png);-webkit-mask-size:35px auto; width:35px; height:35px; margin:5px auto; display:block;}
+ul.news_list{ margin:0px; padding:0px;}
+ul.news_list li{ padding:10px; height:75px; overflow:hidden; border-bottom:1px solid #aea384}
+ul.news_list li .date{ width:75px; height:75px; line-height:75px; border-radius:100%; background:#00668e; float:left; margin-right:10px; text-align:center; position:relative; color:#fff; font-size:1.02em;}
+ul.news_list li .date span{ font-size:1.2em;}
+ul.news_list li .date:before{ position:absolute; width:69px; height:69px; border:1px dashed #fff; border-radius:100%; content:""; top:2px; left:2px;}
+ul.news_list li dt.title{ height:26px; overflow:hidden; font-size:1.2em;white-space: nowrap;text-overflow: ellipsis;}
+ul.news_list li dd.nr{ height:45px; overflow:hidden; line-height:22px;}
+
+
+.next1{ clear:both; height:auto; overflow:hidden; text-align:center;margin:15px 7px; }
+.next1 a{ padding:2px 7px;background:#a78e5c; color:#fff; margin:0px 5px; border-radius:3px; }
+.next1 a.cu{ background:#00668e  }
+
+ul.picture2{ padding:7px; height:auto; overflow:hidden; box-sizing:border-box}
+ul.picture2 li{ margin:10px 0px;}
+.bigimgbox{ width:90%; margin:20px auto 0px; height:auto; overflow:hidden;}
+.bigimg{ border:1px solid #fff; overflow:hidden;width: 59%;left: 20%;}
+.bigimgtitle{width:70%; height:35px; font-size:1.12em; color:#00668e; margin:0px auto; text-align:center; line-height:35px;}
+.prodetail{ padding:0px 0px 7px;}
+.prodetail .title2{ border-bottom:1px solid #bababa; color:#aa0000; line-height:30px;}
+
+.slideBox1{ position:relative; overflow:hidden; margin:0px auto; border:2px solid #fff; /* 设置焦点图最大宽度 */ }
+.slideBox1 .bd li{ position:relative; text-align:center;  }
+.slideBox1 .bd li img{ background:url(images/loading.gif) center center no-repeat;  vertical-align:top; width:100%;/* 图片宽度100%，达到自适应效果 */}
+.slideBox1 .bd li a{ -webkit-tap-highlight-color:rgba(0,0,0,0);  }  /* 去掉链接触摸高亮 */
+.slideBox1 .bd li .tit{ display: none; width:100%;  position:absolute; bottom:0; text-indent:10px; height:28px; line-height:28px; background:url(images/focusBg.png) repeat-x; color:#fff;  text-align:left;  }
+.slideBox1 .hd{ width:100%; height:12px; left:0px; bottom:0px; position:absolute; z-index:5}
+.slideBox1 .hd ul{ position:absolute; left:50%; -webkit-transform: translate(-50%,0)}
+.slideBox1 .hd ul li{ width:12px; height:5px; border-radius:4px; background:#cbbe9b; float:left; font-size:0px; text-indent:-9999px; margin:0px 2px;}
+.slideBox1 .hd ul li.on{ background:#0075a3}
+.prodetail{ padding:7px; height:auto; overflow:hidden; color:#333333}
+
+.next2{ clear:both; height:auto; overflow:hidden;margin:15px 7px; border-top:1px dotted #292929; padding-top:5px; }
+.next2 dl a{ width:100%; height:24px; overflow:hidden;white-space: nowrap;text-overflow: ellipsis; color:#232323; display:block;}
+
+.news_detail{ height:auto; overflow:hidden; padding:10px 0px 10px; }
+.news_detail .title1{ height:auto; overflow:hidden; text-align:center; font-size:1.15em; color:#282828; padding:4px 0px;}
+.news_detail .title2{ height:30px; text-align:center; color:#666666; border-bottom:1px dotted #bbbbbb }
+.news_detail .title2 .back_list{ padding:2px 5px; text-decoration:underline;border-radius:3px; color:#00668e; margin-left:4px;}
+@media screen and (min-width: 320px) and (max-width: 480px){
+.news{height:100px; overflow:hidden;}
+.news .img{ width:150px; height:100px; overflow:hidden;}
+.news dd.nr{ height:44px; line-height:22px; overflow:hidden; padding-top:4px;}
+ul.picture2 li{ width:50%; }
+}
+@media screen and (min-width: 480px) {
+.news{height:160px; overflow:hidden;}
+.news .img{ width:240px; height:160px; overflow:hidden;}
+.news dd.nr{ height:104px; line-height:26px; overflow:hidden; padding-top:4px;}
+ul.picture2 li{ width:33%}
+}

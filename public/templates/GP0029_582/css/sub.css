@@ -1,0 +1,112 @@
+@charset "utf-8";
+/* CSS Document */
+
+.second{ display:none}
+.module_page{ width:100%;  line-height:20px;margin-top:30px;text-align:center; height:30px;}
+.module_page a{ text-decoration:none; color:#555454; /*color:#0c2d63;*/color:#633100; border:1px solid #ffffff; background:#ccc6c2;padding:3px 4px;}
+.module_page span{ padding-left:20px; padding-right:20px;}
+.module_page a:hover,.module_page a.current{ text-decoration:none; color:#fff; background:#8c8c8c}
+.module_page  select{ margin-left:5px; color:#000;}
+
+
+/*.list_image ul li{ float:left; text-align:center; margin:15px 9px; width:218px}
+.list_image ul li img{ display:block; padding:2px; border:solid 1px #ccc; width:212px; height:160px; }
+*/
+
+.list_image ul li {
+	position:relative;
+	overflow:hidden;
+	margin:0 1%;
+	display: inline-block;
+	width: 30%; margin-bottom:20px;
+}
+.list_image ul li .img{
+	position:relative;
+	width: 98%%;
+	background-color: #fff;
+	text-align: center;
+	padding: 1%; border:solid 1px #CCC;
+}
+.list_image ul li img {
+	width: 100%;
+	height: auto;
+}
+
+
+.list_text ul li{ border-bottom:dashed 1px #ccc; height:32px; line-height:32px; background:url(../images/text_ico.jpg) no-repeat 5px; padding:0 10px 0 15px;}
+.list_text ul li span{ float:right; color:#999}
+
+/*
+.list_imagetext ul li { padding:0 10px 20px 10px;  margin-bottom:20px; border-bottom:dashed 1px #ccc}
+.list_imagetext ul li .img_box{ float:left; width:100px;}
+.list_imagetext ul li .img_box img{ padding:2px; border:solid 1px #CCC}
+*/
+.list_imagetext ul li .img_box {
+	position:relative;
+	overflow:hidden;
+	margin-right:3%;
+	display: inline-block;
+	width: 20%; 
+}
+
+.list_imagetext ul li .img_box img{
+	width: 100%;
+	height: auto;
+}
+
+.list_imagetext ul li { padding:0 2% 20px 0; margin-bottom:20px; border-bottom:dashed 1px #ccc}
+.list_imagetext ul li .text_box{ display: inline-block; width:77%; vertical-align:top}
+
+/*.list_imagetext ul li .text_box{ float:right; width:77%;}
+*/.list_imagetext ul li .text_box .text_title{ border-bottom:dashed 1px #CCC; padding:5px}
+.list_imagetext ul li .text_box .text_title b{ font-weight:bold; color:#900; font-size:14px;}
+.list_imagetext ul li .text_box .text_title span{ float:right}
+.list_imagetext ul li .text_word{ padding:5px;}
+.list_imagetext ul li .text_word span{ padding-left:10px; }
+.list_imagetext ul li .text_word span a{color:#f00}
+.list_imagetext ul li .text_word span a:hover{ text-decoration:underline}
+
+
+.descripimg{ background:none; width:100%; height:auto; overflow:hidden;margin-bottom:15px;}
+.descriptcot{margin:0px; padding:0px; text-align:center; margin:0px auto;width:300px; position:relative;}
+.text_p{ color:#2eb866;padding:0px; text-align:center }
+ul.inner_pages{ padding-top:8px;margin:10px auto 0px; margin-left:0px; border-top:1px dotted #ccc;}
+ul.inner_pages li{line-height:26px;color:#333;}
+ul.inner_pages a{color:#333;}
+ul.inner_pages a:hover{color:#469c18}
+
+
+.slideBoxb{ width:100%;position:relative;}
+.slideBoxb .hd{ height:15px; overflow:hidden; position:absolute; right:5px; bottom:5px; z-index:1; display:none; }
+.slideBoxb .hd ul{ overflow:hidden; zoom:1; float:left; display:none;  }
+.slideBoxb .hd ul li{ float:left; margin-right:2px;  width:15px; height:15px; line-height:14px; text-align:center; background:#fff; display:none; cursor:pointer; }
+.slideBoxb .hd ul li.on{ background:#f00; color:#fff; }
+.slideBoxb .bd{ position:relative; height:100%; z-index:0;  margin:0px auto; text-align:center;   }
+.slideBoxb .bd li{ zoom:1; vertical-align:middle; overflow:hidden }
+.slideBoxb .bd img{ display:block;  border:1px solid #ddd; padding:1px; margin:0px auto; text-align:center;}
+
+		/* 下面是前/后按钮代码，如果不需要删除即可 */
+.slideBoxb .prev,
+.slideBoxb .next{ position:absolute; left:3%; top:50%; margin-top:-25px; display:block; width:32px; height:40px; background:url(../images/prev.png) left no-repeat;}
+.slideBoxb .next{ left:auto; right:3%; background:url(../images/next.png) right no-repeat; }
+.slideBoxb .prevStop{ display:none;  }
+.slideBoxb .nextStop{ display:none;  }
+
+
+h1.inner_news_tit{height:20px; line-height:20px; font-size:14px; text-align:center; font-size:14px;   font-weight: bold; }
+h2.inner_news_time{height:25px; line-height:25px;color:#808080; padding-left:10px; margin-bottom:8px; border-bottom:solid 1px #ccc; text-align:center; padding-bottom:8px; }
+h2.inner_news_time a{ color:#808080;}
+h2.inner_news_time a:hover{ color:#4e3012; text-decoration:underline;}
+h2.inner_news_time span{ float:right; text-align:right; padding-right:10px;}
+
+.search_res{ height:50px; line-height:50px; color:#4e3012; font-weight:bold; font-size:16px; text-align:center; margin:20px auto;}
+ul.resultbox{ width:100%; height:auto; overflow:hidden;}
+ul.resultbox li{ margin-bottom:10px;}
+ul.resultbox .nlist_a{padding-left:20px;  border-bottom:none; line-height:39px; height:39px; background:url(../images/text_ico.jpg) no-repeat 5px; border-bottom:dashed 1px #999  }
+ul.resultbox .nlist_a span{ float:right}
+ul.resultbox  .nlist_word{ padding:10px 0 0 0 }
+ul.resultbox  .nlist_word span{ margin-left:10px; }
+ul.resultbox  .nlist_word span a{color:#F00}
+ul.resultbox  .nlist_word span a:hover{ text-decoration:underline}
+.searchtxt{font-size: 14px;text-align: center;padding:20px 0;overflow: hidden;color: #797979;font-family: Microsoft YaHei;}
+

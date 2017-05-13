@@ -1,0 +1,21 @@
+<div class="footer">
+	<div class="footer-l">
+		{$footprint} 
+	</div>
+	<div class="footer-r">
+		<select name="友情链接" id=""  onchange="javascript:location.href=this.value;">
+			{foreach item=link key=key from=$global.link}
+				<option value="{$link.link}">{$link.title}</option>
+			{/foreach}
+		</select>
+		<ul>
+			<li><a href="{$global.icons[0].link}" target="_blank"><img src="{$global.icons[0].image}"></a></li>
+			<li>
+				<a href="javascript:void(0)"><img src="{$global.icons[1].image}"></a>
+				<div class="up-box"><i><img src="{$global.wxewm.image}"></i></div>
+			</li>
+			<li><a href="{$global.icons[2].link}" target="_blank"><img src="{$global.icons[2].image}"></a></li>
+		</ul>
+	</div>
+</div>
+{$footscript}

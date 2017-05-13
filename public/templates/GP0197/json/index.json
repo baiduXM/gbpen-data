@@ -1,0 +1,75 @@
+{	
+	"pro":{
+		"description": "栏目推荐1",
+		"value": {},
+		"type": "list",
+		"config": {
+			"nav_width":193,
+			"nav_height":207
+		}
+	},
+	"pro1":{
+		"description": "栏目推荐2",
+		"value": {},
+		"type": "list",
+		"config": {
+			"nav_width":193,
+			"nav_height":207
+		}
+	},
+	"pro2":{
+		"description": "栏目推荐3",
+		"value": {},
+		"type": "list",
+		"config": {
+			"nav_width":193,
+			"nav_height":207
+		}
+	},
+	"pro3":{
+		"description": "栏目推荐4",
+		"value": {},
+		"type": "list",
+		"config": {
+			"nav_width":193,
+			"nav_height":207
+		}
+	},
+	"textPro":{
+		"description": "栏目推荐文本1",
+		"value": "金",
+		"type": "text"
+	},
+	"textPro1":{
+		"description": "栏目推荐文本2",
+		"value": "木",
+		"type": "text"
+	},
+	"textPro2":{
+		"description": "栏目推荐文本3",
+		"value": "水",
+		"type": "text"
+	},
+	"textPro3":{
+		"description": "栏目推荐文本4",
+		"value": "火",
+		"type": "text"
+	},
+
+	"ywimg": {
+		    "value": {
+			"title": "bgimg",
+			"image": "images/yaneu.png",
+			"link": "article/1.html",
+			"description": "首页右边图片",
+			"config":{}
+		    },
+			"description": "首页右边图片（单图）",
+			"type": "image",
+			"config": {
+				"width":535,
+				"height":842
+			    }
+	}
+	
+}

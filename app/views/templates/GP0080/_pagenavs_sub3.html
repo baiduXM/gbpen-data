@@ -1,0 +1,65 @@
+<!-- 二级栏目列表（展示到三级子栏目） -->
+{if $pagenavs}
+<div class="left_title">
+	{$posnavs[0].name} ·
+	<span>{$posnavs[0].en_name}</span>
+</div>
+<ul class="list aboutNav">
+	{foreach name=pagenavs item=nav from=$pagenavs}
+	<li class="{if $nav.current}current{/if}">
+		<a href="{if $nav.childmenu}javascript:;{else}{$nav.link}{/if}">{$nav.name}</a>
+		{if $nav.childmenu}
+		<dl class="second">
+			{foreach key=key item=nav_list from=$nav.childmenu}
+			<dd class="{if $nav_list.current}current{/if}">
+				<a href="{if $nav_list.childmenu}javascript:;{else}{$nav_list.link}{/if}">{$nav_list.name}</a>
+				{if $nav_list.childmenu}
+				<dl class="third">
+					{foreach key=key item=nav_listsec from=$nav_list.childmenu}
+					<dt class="{if $nav_listsec.current}current{/if}">
+						<a href="{$nav_listsec.link}">{$nav_listsec.name}</a>
+					</dt>
+					{/foreach}
+				</dl>
+				{/if}
+			</dd>
+			{/foreach}
+		</dl>
+		{/if}
+	</li>
+	{/foreach}
+</ul>
+{else}
+<!-- 让客服自己选择，如果当前无子栏目 展现的目标栏目 -->
+
+<h3 class="left_title" >
+	{$_pagenavs_sub3.pagenavs.name} .
+	<span>{$_pagenavs_sub3.pagenavs.en_name}</span>
+</h3>
+
+<ul class="list aboutNav">
+	{foreach name=pagenavs2 item=nav from=$_pagenavs_sub3.pagenavs.childmenu}
+	<li class="{if $nav.current}current{/if}">
+		<a href="{if $nav.childmenu}javascript:;{else}{$nav.link}{/if}">{$nav.name}</a>
+		{if $nav.childmenu}
+		<dl class="second">
+			{foreach key=key item=nav_list from=$nav.childmenu}
+			<dd class="{if $nav_list.current}current{/if}">
+				<a href="{if $nav_list.childmenu}javascript:;{else}{$nav_list.link}{/if}">{$nav_list.name}</a>
+				{if $nav_list.childmenu}
+				<dl class="third">
+					{foreach key=key item=nav_listsec from=$nav_list.childmenu}
+					<dt class="{if $nav_listsec.current}current{/if}">
+						<a href="{$nav_listsec.link}">{$nav_listsec.name}</a>
+					</dt>
+					{/foreach}
+				</dl>
+				{/if}
+			</dd>
+			{/foreach}
+		</dl>
+		{/if}
+	</li>
+	{/foreach}
+</ul>
+{/if}

@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script type="text/javascript">
+    // Ìø×ªÊÖ»úÒ³Ãæ
+    {if $site_another_url}
+        if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+            location.href = '{$site_another_url}';
+        }
+    {/if}
+    </script>
+
+<!--  -->
+<meta name="keywords" content="{$keywords}"/>
+<meta name="description" content="{$description}"/>
+<link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Language" content="zh-CN">
+
+<link rel="stylesheet" type="text/css" href="{$site_url}css/style.css"/>
+<script type="text/javascript" src="{$site_url}js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.js"></script>
+<script type="text/javascript" src="{$site_url}js/function.js"></script>
+<script type="text/javascript" src="{$site_url}js/index.js"></script>
+<script type="text/javascript" src="{$site_url}js/html5.js"></script>
+<title>{$title}</title>
+{$headscript}
+</head>
+<body>
+	<div id="wrapper">
+        {include file='./_header.html'}
+        <div class="content">
+            <div id="banner">
+                <ul class="picture">
+                    {foreach item=slidepics from=$index.slidepics}
+                        <li><a href="{$slidepics.link}"><img src="{$slidepics.image}"></a></li>
+                    {/foreach}
+                </ul>
+                <div class="scroll">
+                    <a class="sPrev" href="javascript:void(null)"></a>
+                    <div class="dot">
+                        <ol>
+                            {foreach item=slidepics from=$index.slidepics}
+                                <li><a href="javascript:void(nuill)"><img src="{$slidepics.image}"><em></em></a></li>
+                            {/foreach}
+                        </ol>
+                        <div class="border"></div>
+                    </div>
+                    <a class="sNext" href="javascript:void(null)"></a>
+                </div>
+            </div>
+            <div class="center">
+                <div class="middle">
+                    <div class="address"><img src="{$site_url}images/landmark.png">地址：{$contact.address}</div>
+                    <div class="phone"><img src="{$site_url}images/phone.png">电话：{$contact.telephone}</div>
+                    <form id="search" action="{$search_action}" name="search">
+                        <input type="text" name="s" id="keyword" placeholder="请输入搜索关键字" />
+                        <button class="button"><img src="{$site_url}images/map.png"></button>
+                    </form>
+                </div>
+            </div>
+            <div class="column1">
+                <div class="company">
+                    <h2>{$index.about.name}</h2>
+                    <div class="introduction">{$index.about.description}</div>
+                    <a href="{$index.about.link}">了解更多</a>
+                    <div class="about-img"><i><img src="{$index.about.image}"></i></div>
+                </div>
+                <div class="roll">
+                    <div class="press">
+                        <i><img src="{$index.news.data[0].image}"></i>
+                        <h4><a href="{$index.news.data[0].link}">
+                            <time datetime="{$index.news.data[0].pubtimestamp|date_format:'%Y-%m-%d'}">{$index.news.data[0].pubtimestamp|date_format:'%Y-%m-%d'}</time>{$index.news.data[0].title}
+                        </a></h4>
+                        <p>{$index.news.data[0].description}</p>
+                    </div>
+                    <ul class="roll-list">
+                        {foreach item=press from=$index.news.data}
+                            <li><a href="{$press.link}">
+                                <time datetime="{$press.pubtimestamp|date_format:'%Y-%m-%d'}">{$press.pubtimestamp|date_format:'%Y-%m-%d'}</time>{$press.title}
+                            </a></li>
+                            {if $press@index+1 eq 3}{break}{/if}
+                        {/foreach}
+                    </ul>
+                </div>
+            </div>
+            <div class="column2">
+                <h2><a href="{$index.case.link}" title="查看更多"></a>{$index.case.name}</h2>
+                <div class="apartment">
+                    <ul>
+                        {foreach item=case from=$index.case.data}
+                            <li>
+                                <i><img src="{$case.image}"></i>
+                                <h4>{$case.title}</h4>
+                                <p><a href="{$case.link}">查看详情</a>{$case.description}</p>
+                            </li>
+                        {/foreach}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        {include file='./_footer.html'}
+    </div>
+</body>
+</html>

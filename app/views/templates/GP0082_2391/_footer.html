@@ -1,0 +1,19 @@
+<div class="footer">
+		<div class="link_div">
+			<div class="link public">
+				<span>友情链接</span>
+				<span>|</span>
+				<ul>
+				{foreach item=flink from=$global.links}
+					<li><a href="{$flink.link}">{$flink.title}</a></li>
+					{if $flink@index+1==11}{break}{/if} 
+				{/foreach} 
+				</ul>
+			</div>
+		</div>
+			<div class="copyright public">
+				<p>{$footprint}</p>
+			</div>
+	</div>
+
+{$footscript}

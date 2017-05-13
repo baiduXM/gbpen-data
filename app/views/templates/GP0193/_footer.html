@@ -1,0 +1,16 @@
+<div class="tailbg">
+	<div class="tail">
+		<div class="tail-left">
+			<select name="友情链接" id=""  onchange="javascript:location.href=this.value;">
+				{foreach item=link key=key from=$global.link}
+					<option value="{$link.link}">{$link.title}</option>
+				{/foreach}
+			</select>
+		</div>
+		<div class="footer">
+			{$footprint}  
+		</div>
+	</div>
+</div>
+
+{$footscript}

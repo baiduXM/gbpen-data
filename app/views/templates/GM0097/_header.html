@@ -1,0 +1,32 @@
+
+<header class="he p_r">
+
+			    <h3 class="trapezoid">
+				    <a href="#" id="quickbar-showcats">
+				    	<i class="demo-icon icon-th-list slide-nav  iconnav p_a" style="width: 40px;height: 24px;margin-top: 55%;"></i>
+				    </a>
+			    </h3>
+				<img src="{$logo}" class="logo" alt="">
+				
+				
+				</header>
+				 <div class="banners p_r">
+            	<canvas id="canvas"></canvas>
+           
+				<div class="banner swiper-container margin">
+			        <ul class="swiper-wrapper">
+			         
+					{foreach name=slidepics item=slidepic from=$global.slidepics}
+					<li class="swiper-slide"><a class="pic" href="{$slidepic.link}" target="_blank"><figure><img src="{$slidepic.image}" alt="{$slidepic.title}" /></figure></a></li>
+					{/foreach}
+			        </ul>
+			      
+			        
+			        
+			        <div class="swiper-button-next"></div>
+			        <div class="swiper-button-prev"></div>     
+			    </div>
+            </div>
+
+
+

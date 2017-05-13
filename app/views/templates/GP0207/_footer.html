@@ -1,0 +1,19 @@
+<div class="foot">
+	<div class="public">
+		<div class="link">
+			<span>友情链接</span>
+			{foreach item=flink from=$global.links}
+			<a href="{$flink.link}"><img src="{$flink.image}"></a>
+			{/foreach}
+		</div>
+		<div class="bot_nav" id="bot_nav">
+			<a href="{$site_url}">网站首页</a><span>/</span>
+			{foreach name=navs item=nav from=$navs}
+			<a href="{$nav.link}">{$nav.name}</a><span>/</span>
+			{/foreach}
+		</div>
+		<p>{$footprint}</p>
+		<a href="" class="top" id="top"></a>
+	</div>
+</div>
+{$footscript}

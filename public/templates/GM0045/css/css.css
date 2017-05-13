@@ -1,0 +1,65 @@
+.index_edite{ height:60px; overflow:hidden; line-height:20px; text-align:center; color:#d9b56c; padding-top:6px;}
+.menu{ height:auto; overflow:hidden;}
+ul.nav{ margin:0px; padding:0px; height:auto; overflow:hidden}
+ul.nav li{ width:33.3%; float:left; display:inline; height:auto; overflow:hidden;}
+ul.nav li .menu_list{ border:2px solid #d9b56c;  margin:11px 17px;letter-spacing:10px; border-radius:100%; height:auto; overflow:hidden; position:relative; background:rgba(255,255,255,0.1)}
+ul.nav li .menu_list span{ position:absolute; top:50%; left:50%; width:60px; -webkit-transform:translate(-50%,-50%); padding-left:20px;}
+ul.nav li .menu_list a{ display:block; color:#d9b56c; height:100%; width:100%;}
+
+.about_top{height:35px; line-height:35px; overflow:hidden; background:#04224d; text-align:center; color:#d9b56c; font-size:1.12em;}
+.about_class{ width:55px; height:35px; overflow:hidden;  text-align:center; font-size:0.9em;  overflow:hidden; position:relative}
+.about_class a{ color:#d9b56c;}
+#fixed_menu:before{ content:""; width:100%; height:100%; position:absolute; top:0px; left:0px;background:#d9b56c;-webkit-mask-repeat:no-repeat; -webkit-mask-position:center center; -webkit-mask-image: url(../icon/f_i1.png);-webkit-mask-size:32px auto;}
+
+.hide-class{ height:auto; overflow:hidden; display:none; margin:5px 7px 0px; }
+.hide-class dl{ height:auto; overflow:hidden; line-height:30px;  position:relative; background:#04224d;  margin-bottom:5px;}
+.hide-class dl:before{ height:30px; width:30px; content:"●"; position:absolute; left:0px; top:0px;color:#d9b56c; text-align:center; overflow:hidden; font-size:0.7em; }
+.hide-class dl a{ display:block;padding:0px 20px 0px 25px;color:#d9b56c}
+.hide-class dl a:active {background:rgba(0,0,0,0.1);}
+#up{ display: none;}
+#up,#down{ font-size:0.8em;}
+.ny_foot{ background:#04224d}
+.boxm_m{ padding:8px; height:auto; overflow:hidden;}
+.bigimg_font{ text-align:center; color:#c22a29; padding:5px 0px;}
+.bigimg_font span{ padding:0px 7px;}
+.font dl{ height:30px; line-height:30px;  text-align:center; }
+.font dl.big,.font-big{ font-size:1.3em; }
+.font dl.normal,.font-normal{ font-size:1.0em;}
+.font dl.small,.font-small{ font-size:0.9em;}
+
+ul.newslist{ height:auto; overflow:hidden; padding:0px 5px;}
+ul.newslist li{ padding:13px 0px; height:auto; overflow:hidden;  border-bottom:1px solid #e6ebf2}
+ul.newslist li img{ width:136px; height:106px; overflow:hidden; float:left; display:inline; margin-right:16px; }
+ul.newslist li dt{ height:36px; line-height:36px; overflow:hidden; font-size:1.12em; color:#d9b56c;white-space: nowrap;text-overflow: ellipsis;}
+ul.newslist li dt.date{ color:#c22a29; height:20px; overflow:hidden; line-height:20px; }
+ul.newslist li dd{ height:44px; line-height:22px; overflow:hidden; color:#fff}
+.next1{ clear:both; height:auto; overflow:hidden; text-align:center;margin:15px 7px; }
+.next1 a{ padding:2px 7px;background:#04224d; color:#fff; margin:0px 5px; border-radius:3px; }
+.next1 a.cu{ background:#c22a29  }
+
+.news_detail{ height:auto; overflow:hidden; padding:5px 0px 10px; }
+.news_detail .title1{ height:auto; overflow:hidden; text-align:center; font-size:1.15em; color:#8a8faf}
+
+ul.picture2{ height:auto; overflow:hidden; }
+ul.picture2 li{ height:auto; overflow:hidden; float:left; display: inline;}
+ul.picture2 li div{ margin:0px 4px; height:auto; overflow:hidden; }
+ul.picture2 li div .img{ padding:2px; height:auto; overflow:hidden; box-shadow:0px 0px 3px rgba(0,0,0,0.2); margin:3px; }
+ul.picture2 li div .title1{color:#fff;height:36px; line-height:36px; text-align:center; white-space: nowrap;text-overflow: ellipsis; overflow:hidden; }
+ul.picture2 li a{ display:block; color:#04224d;}
+
+.bigimg_font{ text-align:center; color:#c22a29; padding:2px 0px;}
+.bigimg_font span{ padding:0px 7px;}
+.bigimg{ width:85%; height:auto; overflow:hidden; margin:5px auto 10px; padding:2px; height:auto; overflow:hidden; box-shadow:0px 0px 3px rgba(0,0,0,0.2);}
+.bigimgtitle{ line-height:24px; text-align:center; color:#f3e6cd; font-size:1.12em; }
+@media screen and (min-width: 320px) and (max-width: 480px){
+ul.newslist li dt{ height:30px; line-height:30px;}
+ul.newslist li img{ width:25%; height:76px; margin-right:12px;}
+ul.newslist li dd{ height:26px; overflow:hidden; line-height:26px;}
+ul.picture2 li{ width:50%}
+}
+
+@media screen and (min-width: 480px) {
+ul.nav li .menu_list{ margin:20px;}
+ul.nav li .menu_list span{ width:80px; font-size:1.20em; padding-left:28px; }
+ul.picture2 li{ width:33.3%}
+}

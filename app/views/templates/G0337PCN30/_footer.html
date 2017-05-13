@@ -1,0 +1,26 @@
+<div class="footer">
+	<div class="public">
+		<div class="logo2">
+			<a href="{$site_url}"><img src="{$logo}"></a>
+		</div>
+		<div class="contact">
+			<div class="des">
+				<h3>{$global.word2}</h3>
+				<p>{$footprint}</p>
+			</div>
+			<div class="link">
+				友情链接：
+				{foreach item=flink from=$global.links}
+				<a href="{$flink.link}">{$flink.title}</a><span>—</span>
+				{/foreach}
+			</div>
+		</div>
+		<div class="erweima">
+			<ul>
+				<li><img src="{$global.icon1.image}"><p>{$global.icon1.title}</p></li>
+				<li><img src="{$global.icon2.image}"><p>{$global.icon2.title}</p></li>
+			</ul>
+		</div>
+	</div>
+</div>
+{$footscript}

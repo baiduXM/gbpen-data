@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script type="text/javascript">
+    // Ìø×ªÊÖ»úÒ³Ãæ
+    {if $site_another_url}
+        if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+            location.href = '{$site_another_url}';
+        }
+    {/if}
+    </script>
+
+
+<meta name="keywords" content="{$keywords}"/>
+<meta name="description" content="{$description}"/>
+<link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Language" content="zh-CN">
+
+<link rel="stylesheet" type="text/css" href="{$site_url}css/style.css"/>
+<script type="text/javascript" src="http://common.mn.sina.com.cn/public/resource/lib/jquery.jcarousellite.js"></script>
+<script type="text/javascript" src="{$site_url}js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.js"></script>
+<script type="text/javascript" src="{$site_url}js/function.js"></script>
+<script type="text/javascript" src="{$site_url}js/index.js"></script>
+<script type="text/javascript" src="{$site_url}js/html5.js"></script>
+<title>{$title}</title>
+{$headscript}
+</head>
+<body>
+	<div id="wrapper">
+		{include file='./_header.html'}
+		<div class="head-back">
+			<div class="cloud-01"></div>
+			<div class="photographer"></div>
+			<div class="light">
+				<h6 class="lamplet opacity"></h6>
+				<h6 class="biglight opacity"></h6>
+			</div>
+			<div class="rainbow"><img src="{$site_url}images/rainbow.jpg"></div>
+		</div>
+	    <div id="matter">
+	    	<div class="side-top">
+		    	<div id="banner">
+			        <div class="picture opacity focus">
+			        	<ul>
+				            {foreach item=slidepics from=$index.slidepics}
+				                <li><a href="{$slidepics.link}"><img src="{$slidepics.image}"></a></li>
+				            {/foreach}
+				        </ul>
+			        </div>
+			        <div class="dot opacity focus">
+			            <ol>
+			                {foreach item=slidepics from=$index.slidepics}
+			                    <li></li>
+			                {/foreach}
+			            </ol>
+			        </div>
+		    		<div class="banner-border">
+		    			<div class="trapezoid-top trapezoid opacity"><em></em><i></i></div>
+		    			<div class="trapezoid-bottom trapezoid opacity"><em></em><i></i></div>
+		    			<div class="triangle-left triangle opacity"></div>
+		    			<div class="triangle-right triangle opacity"></div>
+		    		</div>
+			    </div>
+		    	<div class="cloud-02"></div>
+		    </div>
+		    <div class="side-middle">
+		    	<div class="side-latest">
+		    		<div class="side-hd">
+		    			<h2><span>{$index.latest.name}</span><i>{$index.latest.en_name}</i></h2>
+		    			<div class="stick stick-left"><em></em></div>
+		    			<div class="stick stick-right"><em></em></div>
+		    		</div>
+		    		<ul class="latest">
+		    			<li class="latest-01 opacity"><a href="{$index.latest.data[0].link}">
+		    				<i><img src="{$index.latest.data[0].image}"></i>
+		    				<p class="latest-title">{$index.latest.data[0].title}</p>
+		    			</a></li>
+		    			{foreach item=article from=$index.latest.data}
+		    				{if $article@index gt 0}
+		    				<li class="latest-0{$article@index+1}"><a href="{$article.link}">
+		    					<i><img src="{$article.image}"></i>
+		    					<p class="latest-list">{$article.title}</p>
+		    				</a></li>
+		    				{if $article@index+1 eq 5}{break}{/if}
+		    				{/if}
+		    			{/foreach}
+		    			<a href="{$index.latest.link}" id="more">查看更多</a>
+		    		</ul>
+		    	</div>
+		    	<div class="jag"></div>
+		    	<div class="side-active">
+		    		<div class="side-hd">
+		    			<h2><span>{$index.picture.name}</span><i>{$index.picture.en_name}</i></h2>
+		    		</div>
+		    		<div class="active">
+		    			<div class="activities">
+		    				<ul>
+		    					{foreach item=article from=$index.picture.data}
+		    					<li><a href="{$article.link}">
+		    						<i><img src="{$article.image}"></i>
+		    						<div class="price">
+		    							<div class="price-list">
+		    								<h4>{$article.title}</h4>
+		    								<span>{$article.description}</span>
+		    							</div>
+		    						</div>
+		    					</a></li>
+		    					{/foreach}
+		    				</ul>
+		    			</div>
+		    			<a href="{$index.picture.link}" id="more">查看更多</a>
+		    		</div>
+		    	</div>
+		    </div>
+		    <div class="side-bottom">
+		    	<div class="side-hd">
+	    			<h2><span>{$index.about.name}</span><i>{$index.about.en_name}</i></h2>
+	    		</div>
+		    	<div class="side-about">
+		    		<article>
+		    			{$index.about.content|unescape:"html"}
+		    			<a href="{$index.about.link}">[查看详细]</a>
+		    		</article>
+		    	</div>
+		    	<div class="side-img"><img src="{$index.about.image}"></div>
+		    </div>
+			<div class="cloud-03"></div>
+	    </div>
+		{include file='./_footer.html'}
+	</div>
+</body>
+</html>

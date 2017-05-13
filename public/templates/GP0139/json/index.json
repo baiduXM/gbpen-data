@@ -1,0 +1,40 @@
+{
+	
+    "about_us": {
+		"description": "关于我们",
+		"value": {},
+		"type": "page"
+	},
+	"news":{
+		"description": "新闻中心",
+		"value": {},
+		"type": "list",
+		"config": {
+			"nav_height":159,
+			"nav_width":115
+		}
+	},
+	"contact_name": {
+		"description": "右侧栏目标题",
+		"value": "联系我们",
+		"type": "text"
+	},
+	"contact_con": {
+		"description": "右侧栏目内容",
+		"value": "电话：0592-23232232",
+		"type": "textarea"
+	},
+	"pro":{
+		"description":"产品展示",
+		"value":{},
+		"type":"list",
+		"config": {
+			"height": 160,
+			"width":120
+		}
+	}
+		
+}
+               
+
+

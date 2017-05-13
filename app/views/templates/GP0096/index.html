@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"class="no-js" lang="en">
+
+<head>
+<script type="text/javascript">
+    // 跳转手机页面
+    {if $site_another_url}
+    if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+        location.href = '{$site_another_url}';
+    } {/if}
+    </script>
+
+<meta http-equiv="x-ua-compatible" content="ie=7" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="{$keywords}" />
+<meta name="description" content="{$description}" />
+<link href="{$site_url}css/css.css" rel="stylesheet" type="text/css" />
+<!--[if lt IE 9]>
+	<script src="js/html5.js"></script>
+<![endif]-->
+
+<script type="text/javascript" src="{$site_url}js/jquery-1.9.1.min.js"></script>
+
+<script type="text/javascript" src="http://common.mn.sina.com.cn/public/resource/lib/jquery.jcarousellite.js"></script>
+<script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.js"></script>
+<script type="text/javascript" src="{$site_url}js/jquery.kinMaxShow-1.0.min.js"></script>
+<script type="text/javascript" src="{$site_url}js/function.js"></script>
+<style>
+.tx1 {
+	behavior: url(pie.htc);
+}
+</style>
+<title>{$title}</title>
+{$headscript}
+</head>
+<body>
+
+{include file='./_header.html'}
+
+
+
+
+
+
+ 
+<div id="container" class="wrapper clearfix"> 
+    <div id="news"  class="bt">
+	<div class="title "><div class="bg">
+      <div class="math public_color">{$index.news.en_name}</div>
+      <div class="text">
+       <div class="in_zh public_color">{$index.news.name}</div>
+      <div class="in_en public_color">{$index.news.en_name}</div>
+      
+      </div></div><span><a href="{$index.news.link}">更多>></a></span> </div>
+      
+	 <div class="inner">
+	  <ul>
+      
+       {foreach name=news item=news from=$index.news.data}
+     <li><a href="{$index.news.link}">{$news.title}</a></li>
+  {if $news@index+1 == 5}{break}{/if}
+{/foreach}
+       
+      
+        
+        
+	  </ul>
+	 </div>
+	</div>
+	
+	<div id="products" class="bt">
+	 <div class="title "><div class="bg">
+      <div class="math public_color">{$index.pro.en_name}</div>
+      <div class="text">
+       <div class="in_zh public_color">{$index.pro.name}</div>
+      <div class="in_en public_color">{$index.pro.en_name}</div>
+      
+      </div></div><span><a href="{$index.pro.link}">更多>></a></span> </div>
+	 <div class="inner">
+	 <div class="bd" style=" margin-left:25px; height:117px; overflow:hidden">
+	 <ul class="clearfix">
+     
+     {foreach item=pro from=$index.pro.data}
+         <li><a href="{$pro.link}"><div class="pic"><img src="{$pro.image}" /></div></a></li>
+            {/foreach}
+   
+	</ul>
+    </div>
+	 </div>
+	</div>
+	
+	<div id="contact" class="bt">
+	<div class="title "><div class="bg">
+      <div class="math public_color">{$index.contact_us.en_name}</div>
+      <div class="text">
+       <div class="in_zh public_color">{$index.contact_us.name}</div>
+      <div class="in_en public_color">{$index.contact_us.en_name}</div>
+      
+      </div></div><span><a href="{$index.contact_us.link}">更多>></a></span></div>
+      
+	 <div class="inner">
+<h2>{$contact.telephone}</h2>
+<b>联系人：</b>{$contact.name} <br />
+<b>手　机：</b>{$contact.mobile}<br />
+<b>传　真：</b>{$contact.fax}<br />
+<b>地　址：</b>{$contact.address}
+	 </div>
+	</div>
+   
+   <div class="c"></div>
+	
+	<div id="case" class="bt">
+	 <div class="title "><div class="bg bg1">
+      <div class="math public_color">{$index.case.en_name}</div>
+      <div class="text">
+       <div class="in_zh public_color">{$index.case.name}</div>
+      <div class="in_en public_color">{$index.case.en_name}</div>
+      
+      </div></div><span><a href="{$index.case.link}">更多>></a></span></div>
+	<div class="inner">
+    <div class="bd" style=" margin-left:10px; margin-right:10px; height:170px; overflow:hidden">
+	 <ul class="clearfix">
+     
+     {foreach item=case from=$index.case.data}
+         <li><a href="{$case.link}"><div class="pic"><img src="{$case.image}" /></div>{$case.title}</a></li>
+            {/foreach}
+    
+	</ul>
+    </div>
+	</div>
+	</div>
+	
+	<div id="friendlink" class="clearfix">
+	  <h2><img src="{$site_url}images/friendlink.jpg" /></h2>
+	  <div class="inner">
+	  {foreach name=friend item=friend from=$global.links}
+		    <a href="{$friend.link}">{$friend.title}</a> |
+		 	{/foreach}
+	  </div>
+	</div>
+</div>
+ 
+{include file="./_footer.html"}
+
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+{
+	"news":{
+		"value": {},
+		"description": "首页文字列表(新闻中心)",
+		"type": "list",
+		"config": {
+			"star_only": true
+		}
+	},
+	"about": {
+		"description": "首页(关于我们)",
+		"value": {},
+		"type": "page",
+		"config": {
+			"nav_width": 210,
+			"nav_height": 100
+		}
+	},
+	"contact":{
+		"description":"联系方式",
+		"type":"page",
+		"value": {},
+		"config": {}
+	},
+	"pro":{
+		"description":"单排滚动图片",
+		"type":"list",
+		"value":{},
+		"config": {
+			"star_only": true,
+			"width": 168,
+			"height": 144
+		}
+	}
+	
+}

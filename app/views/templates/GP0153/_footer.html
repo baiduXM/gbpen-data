@@ -1,0 +1,16 @@
+
+<div class="link">
+    <span>友情链接</span>
+    {foreach name=flink item=flink from=$global.links}
+     <a href="{$flink.link}">{$flink.title}</a>
+    {/foreach}
+<!--           <a href="">百度</a><a href="">谷歌</a><a href="">友情链接</a><a href="">友情链接</a><a href="">友情链接</a><a href="">友情链接</a><a href="">友情链接</a><a href="">友情链接</a><a href="">友情链接</a> -->
+</div>
+<div class="foot">
+    <p>{$footprint} </p>
+
+</div>
+
+
+
+{$footscript}

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html manifest="huancun.manifest">
+<head>
+
+<script type="text/javascript">
+  // 识别为手机客户端，自动跳转手机页面
+  {if $site_another_url}
+    if (!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+      location.href = '{$site_another_url}';
+    }
+  {/if}
+</script>
+<meta name="keywords" content="{$keywords}" />
+<meta name="description" content="{$description}" />
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no,minimal-ui">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta content="telephone=no, email=no" name="format-detection">
+<!-- 启用360浏览器的极速模式(webkit) -->
+<meta name="renderer" content="webkit">
+<!-- 避免IE使用兼容模式 -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+<meta name="HandheldFriendly" content="true">
+<!-- 微软的老式浏览器 -->
+<meta name="MobileOptimized" content="320">
+<!-- uc强制竖屏 -->
+<meta name="screen-orientation" content="portrait">
+<!-- QQ强制竖屏 -->
+<meta name="x5-orientation" content="portrait">
+<title>{$title}</title>
+<link rel="stylesheet" href="{$site_url}css/reset.css" /> 
+<link rel="stylesheet" href="{$site_url}css/public.css" /> 
+<link href="{$site_url}css/css.css" rel="stylesheet" type="text/css" />
+<link href="{$site_url}css/swipe.css" rel="stylesheet" type="text/css" />
+<script src="{$site_url}js/TouchSlide.1.1.js"></script>
+<script type="text/javascript" src="{$site_url}js/jquery.min.js"></script>
+<script type="text/javascript" src="{$site_url}js/function.js"></script>
+<script type="text/javascript" src="{$site_url}js/share.js"></script>
+<script src="{$site_url}js/idangerous.swiper-2.0.min.js"></script>
+<script src="{$site_url}js/idangerous.swiper.3dflow-2.0.js"></script>
+<script src="{$site_url}js/simple-app.js"></script>
+<script type="text/javascript">
+	window.addEventListener('load', function(){
+   setTimeout(function(){ window.scrollTo(0, 1); }, 100);
+});//safari浏览器可以通过此代码来隐藏地址栏
+</script>
+
+</head>
+<body>
+<div class="body">
+
+<div class="wrap page-active">
+
+
+ 
+<div class="toaptww">
+<h1 class="nyboxmain-top fixed-top"><span class="morefont" id="first">分类 <span id="down"> &or;</span><span id="up"> &and; </span></span><span class="more2" id="font">字体+</span>{$article.category.name}</h1>
+<div class="font">
+            	<dl class="big">大</dl>
+                <dl class="normal">中</dl>
+                <dl class="small">小</dl>
+</div>
+ <div class="hide-class">
+ {foreach name=pagenavs item=nav from=$pagenavs}
+         <dl><a href="{$nav.link}"><span>▲</span>{$nav.name}</a></dl>
+         {if $nav.childmenu}
+               {foreach item=nav_list from=$nav.childmenu}
+               <dl><a href="{$nav_list.link}"><span>▲</span><span>▲</span>{$nav_list.name}</a></dl>
+                       {if $nav_list.childmenu} 
+                               {foreach item=nav_list2 from=$nav_list.childmenu}
+                               <dl><a href="{$nav_list2.link}"><span>▲</span><span>▲</span><span>▲</span>{$nav_list2.name}</a></dl>
+                               {/foreach}
+                       {/if}
+               {/foreach}
+         {/if}
+ {/foreach} 
+</div>    
+</div> 
+<div class="index-wrap">
+<section>
+      	<div class="nyboxmain fix-boxmain">
+        	<div class="bimgs">
+<div class="baner">
+	<div id="slideBox" class="slideBox">
+    <div class="hd">
+            <ul></ul>
+              </div>
+	<div class="bd">
+		<ul>
+    {foreach item=image from=$article.images}
+			<li><img src="{$image.image}" style="border: 1px solid #c3c1c1;padding:2px;"/></li>
+    {/foreach}
+		</ul>
+	</div>
+	
+			</div>
+			
+            
+   </div>            
+            </div>
+        	<div class="ab_list">
+               <div class="pors_p">
+               	 
+                 <div class="pingsword">
+                <center>
+                {$article.title}<br/>
+                {$article.pubtimestamp|date_format:'%Y.%m.%d'}
+                </center>
+                 </div>
+               </div> 
+               <div class="pingw">
+                {$article.content|unescape:"html"}
+               </div>
+               <div class="edite">
+              
+               </div>
+
+          <div class="ab_list">
+<div class="news_detail">
+             
+                <div class="next2">
+              <dl>
+                    <a href="{$article.prev.link}">
+                        上一条：{$article.prev.title}
+                    </a>
+                </dl>
+                <dl>
+                    <a href="{$article.next.link}">
+                        下一条：{$article.next.title}
+                    </a>
+                </dl>
+            </div>                                                        
+                        </div>                       
+                     
+            </div>  
+   <ul class="labout_list">
+   {foreach item=article from=$related}
+        	<li>
+              <div class="pro_showlist">
+            <a onclick="javascript:window.location.href='{$article.link}'">
+                     <div class="pings_s">
+                          <div class="pirls_t">
+                              <div class="pimgs">
+                              <img src="{$article.image} " width="100%">
+                              </div>
+                              <div class="prord">
+                              {$article.title}<b>{$article.pubtimestamp|date_format:'%Y.%m.%d.'}</b>
+                              </div>
+                          </div>
+                      </div>
+                      </a> 
+                      </div>           
+            </li>
+            {if $article@index == 2}{break}{/if}
+        	{/foreach}                            
+        	                                               
+            </ul>
+            </div>              
+        </div>	
+</section>
+<footer class="foot" style="background-color: #f58883;margin-bottom: 35px;">{$footprint}</footer>       
+</div>   	
+</div>
+</div>
+
+</body>
+</html>
+{$footscript}

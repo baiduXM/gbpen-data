@@ -1,0 +1,65 @@
+{
+	
+	"slidepics": {
+		"value": [{
+			"title": "banne1",
+			"image": "images/banner.jpg",
+			"link": "javascript:;",
+			"description": "梅多克康瑞干红葡萄酒，法国原瓶进口，AOC级别的典藏。梅多克康瑞干红葡萄酒，法国原瓶进口，AOC级别的典藏。梅多克康瑞干红葡萄酒。"
+		}, {
+			"title": "banne2",
+			"image": "images/banner.jpg",
+			"link": "http://www.baidu.com",
+			"description": "梅多克康瑞干红葡萄酒，法国原瓶进口，AOC级别的典藏。梅多克康瑞干红葡萄酒，法国原瓶进口，AOC级别的典藏。梅多克康瑞干红葡萄酒。"
+		},{
+			"title": "banne3",
+			"image": "images/banner.jpg",
+			"link": "http://www.baidu.com",
+			"description": "梅多克康瑞干红葡萄酒，法国原瓶进口，AOC级别的典藏。梅多克康瑞干红葡萄酒，法国原瓶进口，AOC级别的典藏。梅多克康瑞干红葡萄酒。"
+		}],
+		"description": "首页多图轮播",
+		"type": "images",
+		"config": {
+			"width": 1920,
+			"height": 499
+		}
+	},
+	"note_txt":{
+		"value": "最新公告",
+		"description": "最新公告文字提示",
+		"type": "text"
+	},
+	"notes":{
+		"description": "文字列表（如最新公告）",
+		"value": {},
+		"type": "list"
+	},
+	"pro":{
+		"description": "图片列表（如产品展示）",
+		"value": {},
+		"type": "list",
+		"config":{
+			"width":231,
+			"height":156
+		}	
+	},	
+	"news": {
+		"description": "文字列表（如新闻中心）",
+		"value": {},
+		"type": "list",
+		"config":{
+			"width":128,
+			"height":82
+		}	
+	},    
+	"about_us": {
+		"description": "内容单页（如关于我们）",
+		"value": {},
+		"type": "page",
+		"config":{
+			"nav_width":490,
+			"nav_height":130
+		}	
+	}
+}                     
+

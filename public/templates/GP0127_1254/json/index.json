@@ -1,0 +1,63 @@
+{
+	"product":{
+		"description": "首页侧边栏",
+		"value": {},
+		"type": "list",
+		"config": {
+			
+		}
+	},
+	"contact": {
+		"description": "联系方式",
+		"value": "联系我们",
+		"type": "text"
+	},
+	"contact_way":{
+		"description":"侧边联系我们",
+		"value":"联系人：X先生\r\n手机：13489990000\r\n联系电话：0592-23232232\r\n传真：0592-8686886\r\n联系地址：厦门市思明区软件园...\r\n",
+		"type":"textarea"
+	},
+	"about": {
+		"description": "单页面(关于我们)",
+		"value": {},
+		"type": "page",
+		"config": {
+			"nav_width": 159,
+			"nav_height": 119
+		}
+	},
+	"case":{
+		"description": "右侧案例焦点播放",
+		"value": {},
+		"type": "list",
+		"config": {
+			"showchilddata":true,
+			"star_only": true,
+			"width": 158,
+			"height": 113,
+			"limit": 8
+		}
+	},
+	"pro1":{
+		"description": "首页第一行图片滚动列表",
+		"value": {},
+		"type": "list",
+		"config": {
+			"showchilddata":true,
+			"star_only": true,
+			"width": 161,
+			"height": 108
+		}
+	},
+	"pro2":{
+		"description": "首页第二行图片滚动列表",
+		"value": {},
+		"type": "list",
+		"config": {
+			"showchilddata":true,
+			"star_only": true,
+			"width": 161,
+			"height": 108
+		}
+	}
+}

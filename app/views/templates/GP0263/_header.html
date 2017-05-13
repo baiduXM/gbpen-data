@@ -1,0 +1,46 @@
+<header>
+<section>
+      <div class="logo">
+          <h2 class="logo_pic"><a href="{$site_url}"><img src="{$logo}"></a></h2>
+          <h2 class="sc">
+               <a href="$site_url}" onclick="SetHome(this,window.location)">设为首页</a> | 
+               <a href="#"  onclick="AddFavorite(window.location,document.title)" >加入收藏</a>
+          </h2>
+          <span>咨询电话：{$contact.mobile} </span>
+      </div>
+      
+</section>
+<section>
+    <div class="header_menu">   
+        <ul id="nav" class="module_menu">
+             {foreach item=nav from=$navs}
+                 <li class="{if $nav.current}current{/if} nLi"><a href="{$nav.link}">{$nav.name}</a></li>
+             {/foreach}
+        </ul>
+    </div>
+</section>
+ <section>
+ <div class="banners">
+    <div id="slideBox" class="slideBox">
+      <div class="hd">
+      <ul>
+      {foreach item=slidepic from=$_header.slidepics}
+        <li>{$slidepic@index+1}</li>
+        {/foreach}
+        </ul>
+      </div>
+      <div class="bd">
+        <ul>
+                     {foreach item=slidepic from=$_header.slidepics}
+                              <li><a href="{$slidepic.link}" target="_blank"><img src="{$slidepic.image}" alt="{$slidepic.title}" /></a></li>
+                     {/foreach}
+                </ul>
+      </div>
+
+      <!-- 下面是前/后按钮代码，如果不需要删除即可 -->
+      <a class="prev" href="javascript:void(0)"></a>
+      <a class="next" href="javascript:void(0)"></a>
+
+    </div>
+    </div></section>
+</header>

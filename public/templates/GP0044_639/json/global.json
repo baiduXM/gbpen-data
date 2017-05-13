@@ -1,0 +1,42 @@
+{
+	"news":{
+		"description":"最新消息",
+		"value":{},
+		"type":"list"
+		},
+	"contact_us": {
+		"value": "地址：龙海市海澄镇大众北路45号\r\n电话：0596-6758586 \r\n手机：13110658551 \r\n邮箱：kojis@163.com \r\n联系人：蔡总\r\n  ",
+		"description": "联系我们",
+		"type": "textarea"
+	},
+	"banner": {
+		"value": {
+			"title": "内页大图",
+			"image": "images/ny-banner.jpg",
+			"link": "article/1.html"
+		},
+		"description": "内页大图",
+		"type": "image",
+		"config": {
+			"width": 1920,
+			"height": 304
+		}
+	},
+	"list1":{
+		"description":"第二导航第1个子栏目",
+		"value":{},
+		"type":"list",
+		"config":{
+			"filter":"list,page"
+		}
+	},
+	"list2":{
+		"description":"第二导航第2个子栏目",
+		"value":{},
+		"type":"list",
+		"config":{
+			"filter":"list,page"
+		}
+	}
+	
+}

@@ -1,0 +1,18 @@
+<div class="banner2">
+	<div id="slideBox2" class="slideBox2" >
+		<div class="hd">
+			<ul><li></li><li></li><li></li></ul>
+		</div>
+		<div class="bd">
+			<ul>
+				{foreach name=slidepics item=slidepic from=$global.slidepics2}
+		        <li><a href="{$slidepic.link}"><img src="{$slidepic.image}"></a></li>
+		        {/foreach}
+			</ul>
+		</div>
+		<div class="btns">
+			<a class="prev" href="javascript:void(0)"></a>
+    		<a class="next" href="javascript:void(0)"></a>
+		</div>
+	</div>
+</div>

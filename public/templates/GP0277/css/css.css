@@ -1,0 +1,187 @@
+body{ color:#6c6c6c; font-family:Microsoft Yahei,Arial, Helvetica, sans-serif; background:#ffffff; }
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,input,textarea,div{margin:0;padding:0; list-style:none; line-height:24px; font-size:12px; font-weight:normal}
+body,div,ul,li,dl,dt,dd{ font-size:12px;}
+.clearfix:after { content:'\20'; display:block; height:0; clear:both; }
+.clearfix { *zoom:1; font-size:0px;}
+a{ color:#6c6c6c; text-decoration:none; }
+a:hover{ color:#3172c2; } 
+img{ border:none;}
+.c{ clear:both}
+
+.wrapper{width:1200px; margin:0 auto; }
+
+display:block; white-space:nowrap; text-overflow:ellipsis; overflow:hidden;
+strong{display: block;margin: 0 auto;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+
+
+
+#header{ height:103px; position:relative;}
+
+#logo{width:600px;height:100%;float:left; position:relative; }
+#logo a{display: block;height:100%;width:600px;position: absolute;top: 0px; left:0;}
+#logo img{max-width:600px; max-height:100%; position:absolute; top:0; left:0; right:0; bottom:0; }
+
+.contel{ position: absolute; right: 220px;top:34px;cursor: pointer; font-size: 16px; line-height: 30px;}
+.contact_tel{ cursor: pointer; color: #333; display: inline-block; font-size: 30px; border: none; position: relative;top: 3px; font-weight: bold;}
+#header .search{  position:absolute; right:0px; top:36px; right:26px;}
+#header .search_area{ background:url(../images/sou_by.png) no-repeat; width:140px; height:33px; line-height:33px; float:left; border:none; color:#b4b4b4; font-size:14px; text-indent:24px; }
+#header .search_btn{ background:url(../images/sou_td.png) top center no-repeat; width:37px; height:33px; border:none; float:left; position:relative; left:0px; top:0px;}
+
+#nav_bg{ width:100%; height:50px; background:#2687ff;}
+
+#nav{}
+#nav ul li{ float:left; text-align:center; height:50px; background:url(../images/nav_line.jpg) no-repeat right; }
+#nav ul li p{ line-height:50px; height:50px; overflow:hidden;}
+#nav ul li a{ color:#FFF; padding:0 5px; display:block; font-size:16px; margin-right:4px; line-height:50px; }
+#nav ul li a:hover{ background:#f2a31a; display:block; color:#FFF;}
+
+#nav ul li .cc{background:#ffffff;height:40px; line-height: 40px;display: none; text-align:center; 
+width:100%; position:relative; z-index:100; margin-top:0px; }
+#nav ul li .cc:hover{}
+#nav ul li .cc a{width:92%; margin:auto;color:#0253ac; padding:0 4%; overflow:hidden; height:40px; line-height:40px;}
+#nav ul li .cc a:hover{ text-decoration:underline;color:#fff;}
+
+#banner{ width:100%; height:515px; overflow:hidden; position: relative;}
+
+#container{}
+
+.products { position:relative; z-index:1000; top:-24px;}
+
+.products h2{ float:left; color:#ffffff; width:230px; height:235px; overflow:hidden; background:#4d9cfd; text-transform:uppercase;}
+.products h2 b{ font-size:22px; margin-left:45px; margin-top:65px; display:block; height:20px; line-height:20px; overflow:hidden; font-weight:normal; margin-right:4px; }
+.products h2 p{ height:26px; line-height:26px; overflow:hidden; margin-left:45px; margin-top:10px; display:block; font-size:22px;}
+.products h2 p a{ color:#fefefe;}
+
+.products h2 span{ width:102px; height:28px; line-height:28px; overflow:hidden; margin-left:45px; margin-top:14px; display:block; font-size:12px; text-align:center; font-weight:normal; border:1px #fefeff solid; font-style:normal; background:#3173c1}
+.products h2 span a{ color:#fefefe;}
+
+.products .inner{ float:right; width:960px; padding-right:10px; height:214px; overflow:hidden; padding-top:21px; display:inline; background:url(../images/pro_by.png) right no-repeat;}
+
+.products .inner .bd{ width:870px; margin:auto; overflow:hidden;}
+
+.products .inner ul li{ float:left; width:192px; margin-right:34px; display:inline; margin-right:26px; }
+.products .inner ul li a{ overflow:hidden; position:relative; display:block}
+.products .inner ul li a:hover{}
+
+.products .inner ul li .pic{ width:190px; height:190px; overflow:hidden; border:1px #cccccc solid; }
+.products .inner ul li .pic img{ display:block;}
+
+
+
+.products ul li .more{ width:140px; margin:auto; color:#FFF; text-align:center; position:absolute; z-index:10; margin:0px 25px; height:35px; overflow:hidden; display:block; margin-top:-95px; line-height:33px; background:#f2a31a; border:1px #FFF solid; }
+
+
+.about{ width:393px; float:left; margin-top:29px; display:inline;}
+
+.about h2{ height:50px; border-bottom:1px #cdcdcd solid;} 
+.about h2 span{ float:right; height:22px; line-height:22px; overflow:hidden; background:url(../images/more.jpg) no-repeat left; margin-top:17px; padding-left:26px; padding-right:9px;}
+.about h2 span a{ color:#8e8d8d;}
+.about h2 span a:hover{ color:#0065b5;}
+.about h2 p{ background:url(../images/line.jpg) no-repeat left bottom; font-size:18px; line-height:51px; height:51px; overflow:hidden; color:#4d9cfd;}
+
+.about .inner{}
+
+.about_img{ height:104px; margin-top:12px; margin-bottom:13px; text-align:center}
+.about_img img{ max-height:100%; max-width:80%; margin:auto}
+
+.about .text{ line-height:22px; height:66px; overflow:hidden;}
+.about .text a{ color:#f2a31a;}
+
+.line{ margin-top:45px; float:left;}
+
+.news{ float:left; width:415px; margin-top:29px; display:inline;}
+.news h2{ height:50px; border-bottom:1px #cdcdcd solid;  } 
+.news h2 span{ float:right; height:22px; line-height:22px; overflow:hidden; background:url(../images/more.jpg) no-repeat left; margin-top:17px; padding-left:26px; padding-right:9px;}
+.news h2 span a{ color:#8e8d8d;}
+.news h2 span a:hover{ color:#0065b5;}
+.news h2 p{ background:url(../images/line.jpg) no-repeat left bottom; font-size:18px; line-height:51px; height:51px; overflow:hidden; color:#4d9cfd;}
+
+.news .inner{ height:190px; overflow:hidden;}
+
+.news .inner .tu_img { height:180px; overflow:hidden; display:inline-block;*display:inline;*zoom:1; margin-top:10px; margin-right:6px; border:1px #efefef solid;}
+
+.news .inner .tu_img img{height:100%; display:block;} 
+
+
+.news .news_text{display:inline-block; vertical-align:top;*display:inline;*zoom:1;  line-height:24px; height:179px; overflow:hidden; margin-top:10px; margin-right:13px; }
+
+.news .news_text ul{ list-style:none; height:180px; overflow:hidden;}
+.news .news_text ul li{list-style:none; border-bottom:1px #e2e2e2 dashed; line-height:28px; height:28px; overflow:hidden;}
+.news .news_text a{ display:block; line-height:28px; height:28px; color:#6c6c6c; overflow:hidden;}
+.news .news_text a:hover{ color:#3172c2;}
+
+
+.right_line{margin-top:45px; float:left;}
+
+
+.contact{ width:322px; float:right; margin-top:29px; display:inline;}
+
+.contact h2{ height:50px; border-bottom:1px #cdcdcd solid; } 
+.contact h2 span{ float:right; height:22px; line-height:22px; overflow:hidden; background:url(../images/more.jpg) no-repeat left; margin-top:17px; padding-left:26px; padding-right:9px;}
+.contact h2 span a{ color:#8e8d8d;}
+.contact h2 span a:hover{ color:#0065b5;}
+.contact h2 p{ background:url(../images/line.jpg) no-repeat left bottom; font-size:18px; line-height:51px; height:51px; overflow:hidden; color:#4d9cfd;}
+
+.contact .inner{ overflow:hidden;}
+
+.contact_img{ height:104px; margin-top:12px; margin-bottom:12px; text-align:center}
+.contact_img img{ height:100%; margin:auto}
+
+.contact .text{ line-height:22px; height:66px; overflow:hidden;}
+
+#footer{ text-align:center; background:#676767; margin-top:60px; padding-top:10px; color:#fff;}
+
+.link_bg{ background:url(../images/link_line.jpg) bottom repeat-x;}
+.link{ text-align:center; padding-top:6px; padding-bottom:11px; color:#e3e3e3;}
+.link b{ font-weight:normal; color:#e3e3e3; font-size:12px;}
+.link a{ color:#e3e3e3; padding:0 10px; font-size:12px; }
+
+#footer .copyright{ padding:10px 0; color:#e3e3e3; line-height:21px; }
+#footer .copyright a{ color:#e3e3e3;}
+
+/*sidebar css*/
+.sidebar{ width:240px; float:left; margin-top:30px; margin-left:40px; display:inline; }
+
+.subnav{}
+
+.subnav .alefttitle{ background:url(../images/alefttitle_line.jpg) bottom no-repeat; width:240px; height:95px;}
+
+.subnav .alefttitle b{ float:left; color:#fff; font-size:24px; margin:21px 55px 0 30px; font-weight:normal; height:26px; overflow:hidden;}
+
+.subnav .alefttitle p{ float:left; color:#fff; font-size:16px; margin:1px 55px 0 30px; height:26px; overflow:hidden; }
+
+.category{ width:238px; margin:auto; padding-top:12px; padding-bottom:30px; }
+.category ul{}
+.category ul li .firsta{ background:#a1a1a1 url(../images/firsta.png) no-repeat 23px 13px; display:block; width:180px; margin:auto; padding-left:45px; padding-right:13px; line-height:38px; height:38px; overflow:hidden; margin-bottom:5px;}
+.category ul li a.firsta{ color:#FFF; font-size:14px;}
+.category ul li a:hover.firsta{ background:#4d9cfd url(../images/firsta.png) no-repeat 23px 13px; display:block;}
+
+ul.second li .seconda{ width:178px; margin:auto; line-height:38px; height:38px; overflow:hidden;}
+ul.second li a.seconda{ color:#717171; background:url(../images/seconda.png) 30px 15px no-repeat; display:block; height:38px; overflow:hidden; padding-left:50px; padding-right:10px;  border-bottom:1px #b6b6b6 dashed; font-size:14px;}
+ul.second li a.seconda:hover{}
+
+ul.second li .thirda{ width:210px; margin:autoa; height:28px; overflow:hidden; }
+ul.third li a.thirda{ width:175px; margin:auto; display:block; background:url(../images/thirda.png) 18px 8px no-repeat; no-repeat; display:block;  color:#5c5c5c; margin-top:6px; padding-left:35px; line-height:28px; height:28px; overflow:hidden; font-size:14px;}
+ul.third li a.thirda:hover{color:#ffffff; background:#4d9cfd url(../images/thirda2.png) 18px 8px no-repeat;}
+
+
+/*main css*/
+.main{ float:right; width:870px; margin-top:30px; margin-right:12px; display:inline;}
+
+.crumb{ border-bottom:1px #d1d1d1 solid; background:url(../images/crumb.jpg) left bottom no-repeat; font-size:22px; color:#4d9cfd; margin-top:10px; height:32px; line-height:28px; overflow:hidden;}
+
+
+.crumb span{ float:right; color:#838383; padding-right:20px; padding-left:100px; font-size:14px; font-weight:normal; height:22px; line-height:32px; }
+.crumb span a{  color:#838383; }
+
+.article { padding:10px;  margin-bottom:20px; }
+.article img{ max-width:810px; overflow:hidden}
+
+
+
+.quickbar_nav ul li.quickbar_phone .quickbar_hoverbox li{font-size: 24px;line-height: 59px;text-align: center;}
+
+.hd{ position: absolute; bottom: 20px;  left: 50%; }
+.hd ul{ margin-left: -50%; }
+.hd ul li{ border-radius: 100%;opacity: 0.8; background: #000; width:12px; height: 12px; margin-left: 10px; display: inline-block; }
+.hd ul li.on{ background: #ff0000; }

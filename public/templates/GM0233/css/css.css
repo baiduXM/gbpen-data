@@ -1,0 +1,110 @@
+
+/*标题样式*/
+.in_h2{ width:100%;    text-align:center; position:relative; text-align:center; border-bottom:1px solid #cccccc }
+.in_h2 .text{ width:80%;  line-height:35px; height:35px; display:inline-block  }
+.in_h2 .text .in_zh{max-width:40%;   text-align:center; font-size:20px;line-height:35px; height:35px;  position:relative; display:inline-block; text-align:left; position:relative;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;
+}
+.in_h2 .text .in_en{max-width:40%; display:inline-block; margin-left:4px;font-size:16px;color:#cecccc; text-transform:uppercase;  line-height:30px; height:30px;  overflow: hidden;text-overflow: ellipsis;white-space: nowrap;
+  }
+
+
+
+
+.in_more{height:24px; padding:0px 7px; margin-top:4px;border-radius:5px; line-height:24px; text-indent:0px; display:block; text-align:center; color:#fff; background:#c0c0c0; font-size:0.9em; float:right;  position:relative; z-index:99999; margin-left:5px; margin-right:5px; }
+@media screen and (min-width: 320px) and (max-width: 480px){
+.in_h2 .text{ font-size:14px; }
+.in_h2 .text span{ font-size:12px;}
+
+
+
+}
+/*标题样式*/
+.inner{ margin-top:10px;}
+.wrapper{ width:100%; margin:auto;  }
+
+
+
+#in_page{ width:100%; margin:auto; margin-top:5%; position:relative; padding:3% 0}
+#in_page .bg{ width:100%; height:80%; background:#f54c54; left:0px; top:0px; position:absolute; z-index:1}
+
+#in_page h2{ width:94%; margin:auto;position:relative; text-align:center; z-index:2; padding-top:3% }
+#in_page .biaoti{  width:50%;  margin:auto; border-bottom:1px solid #fff; padding-bottom:10px;}
+#in_page .biaoti .in_zh{ width:80%;  margin:auto; font-size:20px; color:#fff; margin-top:4px; height:25px; line-height:25px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;  height:20px; line-height:20px; text-align:center}
+#in_page .biaoti .in_en{ width:80%; margin:auto; font-size:15px; text-transform:uppercase; color:#fff;  height:25px; line-height:25px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap; height:20px; line-height:20px; text-align:center}
+#in_page .biaoti .heart{ width:16%; height:3px; margin:auto; position:absolute; bottom:-1px; left:42%; background:#fdd101}
+
+#in_page .inner{ position:relative;z-index:2; padding:4%; width:92%;}
+#in_page .inner .pix{ width:85%; margin:auto; margin-top:10px;}
+#in_page .inner p{ width:100%; line-height:30px; height:150px; overflow:hidden; font-size:14px; color:#fff; }
+
+
+
+
+#in_text{  width:96%; margin:auto; margin-top:5%}
+#in_text h2{ border-bottom:1px solid  rgba(0,0,0,.3)}
+#in_text h2 .text{ display:inline-block; min-width:30%; max-width:70%; border-bottom:2px solid #f54c54; margin-bottom:-1px;}
+#in_text h2 .text .in_zh{ font-size:18px; display:inline-block; color:#000;  line-height:30px; height:30px;text-overflow: ellipsis;white-space: nowrap;max-width:45%; overflow:hidden }
+#in_text h2 .text .in_en{ font-size:12px; color:rgba(0,0,0,.5); display:inline-block; line-height:30px; height:30px; text-transform:uppercase;text-overflow: ellipsis;white-space: nowrap; display:inline-block; max-width:45%; overflow:hidden}
+
+
+#in_text .inner ul{  width:97%; margin:auto; margin-top:10px;}
+#in_text ul li{  width:100%;  display: block;margin: 25px auto;  padding-bottom:15px; }
+#in_text ul li .date{ width:15%; float:left; background:#f54c54; text-align:center; position:relative}
+#in_text ul li .date .year{ font-size:30px; color:#fff}
+#in_text ul li .date .month{ font-size:15px; color:#fff;}
+#in_text ul li .date:after{ position:absolute; content:""; top:45%; right:-8px;  width: 0;
+    height: 0;
+	 border-top: 5px solid transparent;
+    border-left: 8px solid #f54c54;
+    border-bottom: 5px solid transparent;
+	
+	}
+
+#in_text ul li .tit{ width:82%; float:left; margin-left:2%; display:inline;}
+#in_text ul li .tit h2{ height:25px; line-height:25px; display: block;margin: 0 auto;overflow: hidden;text-overflow: ellipsis;white-space: nowrap; color:#000; font-size:16px;  text-align:left}
+#in_text ul li .tit .word{ height:40px; line-height:20px; overflow:hidden; color:#595959}
+
+@media screen and (min-width: 320px) and (max-width: 480px){
+	#in_text ul li .date{ width:25%;}
+	#in_text ul li .tit{ width:71%; margin-left:4%; }
+	#in_text h2 .text{ min-width:54%}
+	}
+
+
+#in_image{ width:100%; margin:auto; margin-top:5%;   }
+#in_image h2{ width:94%; margin:auto;position:relative; text-align:center}
+#in_image .biaoti{  width:50%;  margin:auto;  border-bottom:1px solid #f54c54; padding-bottom:15px;}
+#in_image .biaoti .in_zh{ width:80%;  margin:auto; font-size:20px; color:#f54c54; margin-top:4px; height:25px; line-height:25px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap; border-bottom:1px solid #fff; height:20px; line-height:20px; text-align:center}
+#in_image .biaoti .in_en{ width:80%; margin:auto; font-size:15px; text-transform:uppercase; color:#f54c54;  height:25px; line-height:25px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap; height:20px; line-height:20px; text-align:center}
+#in_image .biaoti .heart{ width:23px; height:21px; margin:auto; position:absolute; bottom:-10px; left:48%}
+#in_image .inner{   margin:auto; margin-top:25px; }
+#in_image ul{ width:98%; margin:auto; }
+#in_image ul li{ float:left;margin:2%; width:29%;position:relative;  }
+#in_image ul li .pix{ position:relative;}
+
+
+#in_image ul li .in_protitle{ width:100%;border-bottom:2px solid #f54c54; margin:auto;  height:40px; line-height:40px; text-align:center; font-size:14px;    padding:0 5px; overflow: hidden;text-overflow: ellipsis;white-space: nowrap; margin-top:5px;  }
+#in_image ul li .in_protitle:after{ position:absolute; content:""; bottom:0px; left:48%;  width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 8px solid red;}
+
+@media screen and (min-width: 320px) and (max-width: 480px){
+#in_page .left{ position:absolute; top:20px; left:5%; width:6%;}
+#in_page .right{ position:absolute; bottom:20px; right:5%; width:6%;}
+
+#in_page h2{ font-size:18px;}	
+#in_image h2 .tit{ width:55%;}
+#in_page .inner .more{ width:30%; height:25px; line-height:25px; font-size:12px; margin-top:10px;}
+#in_page .inner .more b{  height:25px; line-height:25px; width:25px;}
+
+#in_text .inner ul{ width:96%}
+#in_text ul li .pix .date{ width:35%;}
+
+#in_image ul{ width:96%}
+#in_image ul li .in_protitle{ height:30px; line-height:30px}
+}
+@media screen and (min-width: 480px) {
+}
+

@@ -1,0 +1,85 @@
+<div class="top">
+    <div class="public">
+        <div class="tel">{$global.top_tel}</div>
+        <div class="topright">
+            <p><a href="javascript:void(0)" onclick="shoucang(document.title,window.location)">加入收藏</a>  </p>
+            <form class="search fr" action="{$search_action}" method="GET">
+                <input type="text" class="sinp fl" name="s" value="Search......" />
+                <input type="submit" class="sbtn fr" value="" />
+            </form>
+
+        </div>
+    </div>
+</div>
+<script src="js/add.js"></script>
+<div class="header">
+    <div class="head">
+        <div class="logo fl"><a href="{$site_url}" title="返回首页"><img src="{$logo}" alt=""></a></div>
+        <div class="menu fr">
+            <ul id="nav" class="nav">
+                {$limit = 6}
+                <li class="nLi on">
+                    <h3><a href="{$site_url}" target="_self">网站首页</a></h3>
+                </li>
+                {foreach name=navs item=nav from=$navs}
+                <li class="{if $nav.current}on{/if} nLi">
+                    <h3>
+                        <a href="{$nav.link}" target="_self">{$nav.name}</a>
+                    </h3>               
+                    {if $nav.childmenu}
+                        <ul class="sub">
+                            {foreach key=key item=nav_list from=$nav.childmenu}
+                            <li class="{if $nav.current}current{/if}"><a href="{$nav_list.link}">{$nav_list.name}</a></li>
+                            {/foreach}
+                        </ul>
+                    {/if}
+                </li>
+                {if $nav@index+1 gte $limit}{break}{/if}
+                {/foreach}
+            </ul> 
+        </div>
+    </div>
+</div>
+<div class="banner" style="background: url({$global.img_bg6.image}) center bottom no-repeat;">
+    <div class="fullSlide">
+        
+        <div class="bd">
+            <ul>
+                {foreach item=slidepic from=$global.slidepics}
+                    <li style="background:url({$slidepic.image}) center 0 no-repeat;"><a target="_self" href="javascript:;"></a></li>
+                {/foreach}
+
+            </ul>
+        </div>
+
+        <div class="hd">
+            <ul>
+                {foreach item=slidepic from=$global.slidepics}
+                    <li><img src="{$slidepic.image}" /></li>
+                {/foreach}
+            </ul>
+        </div>
+    </div>
+    
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

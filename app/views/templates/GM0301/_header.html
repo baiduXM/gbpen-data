@@ -1,0 +1,19 @@
+<header>
+     <div class="header">
+        <a href="" class="logo"><img src="{$logo}"></a>
+     </div>
+</header>
+<div class="menu">
+     <a class="arrow-left" href="javascript:;">&lt;</a> 
+     <a class="arrow-right" href="javascript:;">&gt;</a>
+    <div class="nav">
+      <div class="swiper-nav swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><a href="{$site_url}">网站首页</a></div>
+          {foreach name=navs item=nav from=$navs}
+          <div class="swiper-slide"><a href="{$nav.link}">{$nav.name}</a></div>
+          {/foreach}  
+        </div>
+      </div>
+    </div>
+</div>

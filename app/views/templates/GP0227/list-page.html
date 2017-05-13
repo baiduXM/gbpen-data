@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <!-- 实时预览调试代码，模板开发完成后删除 -->
+    
+    <!-- 调试代码 End -->
+    <script type="text/javascript">
+    // Ìø×ªÊÖ»úÒ³Ãæ
+    {if $site_another_url}
+        if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+            location.href = '{$site_another_url}';
+        }
+    {/if}
+    </script>
+
+<!--  -->
+<meta name="keywords" content="{$keywords}"/>
+<meta name="description" content="{$description}"/>
+<link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Language" content="zh-CN">
+
+<link rel="stylesheet" type="text/css" href="{$site_url}css/style.css"/>
+<script type="text/javascript" src="{$site_url}js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.js"></script>
+<script type="text/javascript" src="{$site_url}js/function.js"></script>
+<script type="text/javascript" src="{$site_url}js/index.js"></script>
+<script type="text/javascript" src="{$site_url}js/html5.js"></script>
+<title>{$title}</title>
+</head>
+<body>
+	<div id="wrapper">
+		{include file='./_header.html'}
+        <div class="inside">
+            {include file='./_left.html'}
+            <div class="center">
+                <div class="main-hd">
+                    <span>当前位置：
+                        <a href="{$site_url}">首页</a>
+                        {foreach item=nav from=$posnavs} - <a href="{$nav.link}">{$nav.name}</a>
+                        {/foreach}
+                    </span>
+                </div>
+                <div class="main">
+                    <article>
+                        {$list.content}
+                    </article>
+                </div>
+            </div>
+        </div>
+        {include file='./_footer.html'}
+    </div>
+</body>
+</html>

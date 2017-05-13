@@ -1,0 +1,13 @@
+<div class="footer" id="footer">
+	<div class="purple"></div>
+	<div class="public">
+		<div class="link" id="link">
+			友情链接：
+			{foreach item=flink from=$global.links}
+			<a href="{$flink.link}">{$flink.title}</a><span>|</span>
+			{/foreach}
+		</div>
+		<p>{$footprint}</p>
+	</div>
+</div>
+{$footscript}

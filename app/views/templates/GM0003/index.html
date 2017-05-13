@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html>
+<html manifest="huancun.manifest">
+<head>
+  <!-- 实时预览调试代码，模板开发完成后删除 -->
+  
+  <!-- 调试代码 End -->
+  <script type="text/javascript">
+// 跳转PC页面
+{if $site_another_url}
+    if (!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+        location.href = '{$site_another_url}';
+    }
+{/if}
+</script>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no,minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta content="telephone=no, email=no" name="format-detection">
+  <!-- 启用360浏览器的极速模式(webkit) -->
+  <meta name="renderer" content="webkit">
+  <!-- 避免IE使用兼容模式 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+  <meta name="HandheldFriendly" content="true">
+  <!-- 微软的老式浏览器 -->
+  <meta name="MobileOptimized" content="320">
+  <!-- uc强制竖屏 -->
+  <meta name="screen-orientation" content="portrait">
+  <!-- QQ强制竖屏 -->
+  <meta name="x5-orientation" content="portrait">
+  <title>{$title}</title>
+  <meta name="keywords" content="{$keywords}" />
+  <meta name="description" content="{$description}" />
+  <link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />  
+  <link rel="stylesheet" href="{$site_url}css/reset.css" />
+  <link rel="stylesheet" href="{$site_url}css/public.css" />
+  <link href="{$site_url}css/css.css" rel="stylesheet" type="text/css" />
+  <link href="{$site_url}css/swipe.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" rev="stylesheet" href="{$site_url}css/style_{$stylecolor}.css" type="text/css" />
+  <script src="{$site_url}js/TouchSlide.1.1.js"></script>
+  <script type="text/javascript" src="{$site_url}js/jquery.min.js"></script>
+  <script type="text/javascript" src="{$site_url}js/function.js"></script>
+  <script type="text/javascript" src="{$site_url}js/share.js"></script>
+  <script src="{$site_url}js/idangerous.swiper-2.0.min.js"></script>
+  <script src="{$site_url}js/idangerous.swiper.3dflow-2.0.js"></script>
+  <script src="{$site_url}js/simple-app.js"></script>
+  <script type="text/javascript">
+    window.addEventListener('load', function(){
+   setTimeout(function(){ window.scrollTo(0, 1); }, 100);
+});//safari浏览器可以通过此代码来隐藏地址栏
+</script>
+  {$headscript}
+</head>
+<body>
+  <div class="body">
+    <div class="wrap page-active">
+      <div class="index-wrap">
+        <header>
+          <div class="header">
+            <div class="logo">
+              <img src="{$logo}" width="100%"></div>
+            <div class="triedls">
+              <div class="toppic"></div>
+            </div>
+          </div>
+          {include file="./_header.html"}
+        </header>
+        <section>
+          <div class="boxmain">
+            {* 输出type为1234的栏目展现HTML，且1234每个都须定义 *}
+            {foreach name=mIndexCats item=mIndexCat from=$mIndexCats}
+            {* 仅输出类型为 2图片列表 的栏目 *}
+            {if $mIndexCat.type eq 2}
+            {* 后台选中“样式1”的展现模式： *}
+            {if $mIndexCat.showtype eq 1}
+            <div class="prod-show">
+              <div class="cplib">
+                {if $mIndexCat.childmenu}
+                <div class="prlist_a">
+                  <div class="pitlte">{$mIndexCat.name}</div>
+                  <ul class="listpp">
+                  {foreach item=nav from=$mIndexCat.childmenu}
+                    <li>
+                      <div>
+                        <a href="{$nav.link}">
+                          <span>◆</span>
+                          {$nav.name}
+                        </a>
+                      </div>
+                    </li>
+                  {/foreach}
+                  </ul>
+                </div>
+                {/if}
+                <div class="pro-show">
+                  <div class="xgcpo_t">
+                    <div class="titlead bright">
+                      <a href="{$mIndexCat.link}">更多</a>
+                    </div>
+                    <div class="titlead bright">{$mIndexCat.name}</div>
+                  </div>
+                  <div class="cpszs_show">
+                    <ul>
+                      {foreach item=article from=$mIndexCat.data}
+                      <li>
+                        <a  onclick="javascript:window.location.href='{$article.link}'">
+                          <dl>
+                            <div class="imgs">
+                              <img src="{$article.image}" width="100%"></div>
+                            <div class="imgword">{$article.title}</div>
+                          </dl>
+                        </a>
+                      </li>
+                      {if $article@index+1 eq 2}{break}{/if}
+                      {/foreach}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/if}
+            {* 仅输出类型为 3图文列表 的栏目 *}
+            {elseif $mIndexCat.type eq 3}
+            {if $mIndexCat.showtype eq 1}
+            <div class="yuan">
+              <div class="triedls">
+                <div class="toppicdown"></div>
+              </div>
+            </div>
+            <div class="bordconts">
+              <div class="sming-txt">
+                <div class="morecirle">
+                  <a href="{$mIndexCat.link}">
+                    {$mIndexCat.name}</a>
+                </div>
+                {foreach item=article from=$mIndexCat.data}
+                <ul>
+                	{if ($article@index+1)%2}
+                  <li class="nimg1">
+                    <a  onclick="javascript:window.location.href='{$article.link}'">
+                      <img src="{$article.image}" width="100%" height="112px"></a>
+                  </li>
+                  {/if}
+                  <li class="ptxt word">
+                    <a  onclick="javascript:window.location.href='{$article.link}'">
+                      <div class="decurlits {if ($article@index)%2}others{/if}">
+                        <div class="about-txt">
+                          <div class="titlea">{$article.title}</div>
+                          <div class="pp">
+                            {$article.description}
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  {if ($article@index)%2}
+                  <li class="nimg1">
+                    <a  onclick="javascript:window.location.href='{$article.link}'">
+                      <img src="{$article.image}" width="100%" height="112px"></a>
+                  </li>
+                  {/if}
+                </ul>
+                {if $article@index+1 eq 2}{break}{/if}
+                {/foreach}
+              </div>
+            </div>
+            {/if}
+            {/if}
+            {/foreach}
+          </div>
+        </section>
+        <footer class="foot" >
+          <a class="back-top">顶部&uarr;</a>
+          {$footprint}
+        </footer>
+      </div>
+      {include file="./_footer.html"}
+    </div>
+  </div>
+</body>
+</html>

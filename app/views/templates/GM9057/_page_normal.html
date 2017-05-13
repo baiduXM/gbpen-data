@@ -1,0 +1,18 @@
+<!-- page[分页] -->
+<div class="page_normal">
+	 
+    <ul class="clearfix">
+    		<li><a href="{if $page_links.current_page lt $page_links.page_count}{$page_links.next_link}{else}javascript:;{/if}">Page up</a></li>
+
+		{foreach item=near_link key=near_page from=$page_links.nears_link}
+		{if $near_page == $page_links.current_page}
+			<li class="cur"><a href="javascript:;">{$near_page}</a></li>
+		{else}
+			<li><a href="{$near_link}">{$near_page}</a></li>
+		{/if}
+		{/foreach}
+		
+		<li><a href="{if $page_links.current_page lt $page_links.page_count}{$page_links.last_link}{else}javascript:;{/if}">Page next</a></li>
+		
+	</ul>
+</div>

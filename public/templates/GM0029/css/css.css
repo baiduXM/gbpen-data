@@ -1,0 +1,111 @@
+.boxmain{ width:100%; height:auto; overflow:hidden; margin:30px auto 0px;}
+.boxmain-top{ height:48px; overflow:hidden; position:relative; text-align:center}
+.boxmain-top:before{ width:60%; height:0px; border-bottom:1px solid #c0c0c0; position:absolute; content:""; top:12px; left:0px; left:50%; transform:translate(-50%,0);-webkit-transform:translate(-50%,0); z-index:1}
+.process_top:before{ width:80%}
+.boxmain-top .en{ height:24px; line-height:24px; overflow:hidden; font-size:16px; color:#3a3a3a; z-index:2; position:relative; font-weight:bold; }
+.boxmain-top .en span{ padding:0px 10px; background:#fff; display:inline-block}
+.boxmain-top .china{ color:#666666; font-size:15px; height:20px; line-height:20px;}
+.boxmain-about{ margin:15px 6px 0px; height:auto; overflow:hidden;}
+.boxmain-about img{  margin-right:14px; float:left;}
+.boxmain-about dd{line-height:28px; overflow:hidden;}
+ul.boxmain-pro{ padding:15px 4px 0px; height:auto; overflow:hidden;}
+ul.boxmain-pro li{ width:50%; float:left; display:inline; }
+ul.boxmain-pro li div{margin:4px; height:auto; overflow:hidden; position:relative;}
+ul.boxmain-pro li div:before{ content:""; width:0px; height:0px; position:absolute;border-top:16px solid transparent;border-right:16px solid #d8dadc;border-left: 8px solid transparent; -webkit-transition:all 0.3s linear}
+ul.boxmain-pro li div img{ width:100%;}
+ul.boxmain-pro li:nth-child(1) div:before{ right:0px; bottom:0px;}
+ul.boxmain-pro li:nth-child(2) div:before{ left:-5px; bottom:5px; -webkit-transform:rotate(90deg)}
+ul.boxmain-pro li:nth-child(3) div:before{ right:-5px; top:5px;-webkit-transform:rotate(-90deg)}
+ul.boxmain-pro li:nth-child(4) div:before{ left:0px; top:0px;-webkit-transform:rotate(180deg)}
+ul.boxmain-pro li:active div:before{ opacity:0}
+
+.box_gongyi{ margin:15px auto 0px; height:auto; overflow:hidden; position:relative;}
+.box_gongyi_text{ width:45%; position:absolute; bottom:15px; left:15px; z-index:4}
+.box_gongyi_text .title{ font-size:120%; color:#000; height:35px; overflow:hidden; line-height:35px;}
+.box_gongyi_text .nr{ color:#4d4d4d; overflow:hidden;}
+
+.boxmain_nytop{ height:55px; padding:0px 5px 0px 10px;  color:#3a3a3a}
+.boxmain_nytop:before{ content:""; width:100%; height:0px; border-bottom:1px solid #c0c0c0; position:absolute; top:35px; left:0px; }
+.boxmain_nytop:after{ width:14px; height:14px; background:#000; content:""; position:absolute; top:30px; left:10px;-webkit-mask: url(../images/zz2.png) center center  no-repeat;-webkit-mask-size:14px auto;}
+.boxmain_nytop .title{ padding:0px 15px 0px 10px; background:#fff; float:left; margin-left:15px; z-index:5}
+.boxmain_nytop .title .en{ height:25px; overflow:hidden; font-size:1.3em; font-weight:bold;}
+.boxmain_nytop .title .china{ font-size:1.15em; color:#666666; height:20px; line-height:20px;}
+
+.boxmain_ny{ margin:20px auto 0px;}
+.more2{height:50px; width:43px;line-height:22px;background:#000; line-height:50px; float:right; margin-top:10px;  display:block;-webkit-mask: url(../images/zz2.png) center center  no-repeat;-webkit-mask-size:43px auto; text-align:center; color:#fff; margin-right:5px; }
+#up{ display: none;}
+.hide-class{ height:auto; overflow:hidden; display:none; width:100%; margin-top:-12px; z-index:5; position:relative; background:#141215 ; float:left;}
+.hide-class dl{ height:30px; overflow:hidden; line-height:30px;   position:relative; border-bottom:1px solid #2b282c  }
+.hide-class dl a{ display:block;height:30px; text-indent:28px;color:#dddddd;}
+.hide-class dl:before{ content:"|"; color:#dddddd; font-family:Arial, Helvetica, sans-serif; font-weight:bolder; width:30px; height:30px; position:absolute; top:0px; left:0px; text-align:center}
+.hide-class dl a:active {background:rgba(0,0,0,0.1);}
+.font{ width:43px; text-align:center;background:#141215;position:absolute; top:45px; right:10px; display:none; z-index:3; padding-top:6px;}
+.fixed-font{ right:0px; top:35px; padding-top:0px;}
+.font dl{ height:30px; line-height:30px; color:#fff; text-align:center; border-bottom:1px solid rgba(255,255,255,0.1) }
+.font dl.big,.font-big{ font-size:1.3em; }
+.font dl.normal,.font-normal{ font-size:1.0em;}
+.font dl.small,.font-small{ font-size:0.9em;}
+
+.boxmain-m{ height:auto; overflow: hidden; width:100%; }
+.edite{ height:auto; overflow:hidden; padding:8px 8px;color:#747474;}
+
+ul.newslist{ margin:0px; padding:0px 10px; height:auto; overflow:hidden;}
+ul.newslist li{ height: auto; overflow:hidden; padding:10px; border-bottom:1px dotted #868587}
+ul.newslist li .img{ width:84px; height:96px; position:relative; float:left;-webkit-mask: url(../images/zz2.png) center center  no-repeat;-webkit-mask-size:100% auto; margin-right:15px;}
+ul.newslist li .img:before{ width:45px; height:45px; background:rgba(255,255,255,0.7); text-align:center; line-height:45px; content:"+"; color:#141215; position:absolute; top:50%; left:50%; -webkit-transform: translate(-50%,-50%); border-radius:100%; font-size:2.2em}
+ul.newslist li .title{ height:24px; overflow:hidden; color:#333333;text-overflow:ellipsis;white-space:nowrap; font-size:1.12em;}
+ul.newslist li .date{ color:#333333; height:20px; line-height:20px;}
+ul.newslist li .nr{ height:44px; line-height:22px; padding-top:4px; overflow:hidden;}
+
+.next1{ clear:both; height:auto; overflow:hidden; text-align:center; padding:10px 0px 10px;margin:5px 7px; }
+.next1 a{ padding:2px 5px;background:#141215; color:#fff; margin:0px 5px; border-radius:4px; }
+.next1 a:active{  }
+
+ul.prolist{ padding:10px; height:auto; overflow:hidden;}
+ul.prolist li{ width:100%; height:auto; overflow:hidden;}
+ul.prolist li .listleft,ul.prolist li .listright{ width:50%; float:left;}
+ul.prolist li .listleft{ vertical-align:middle;}
+ul.prolist li .listleft .title{ position:absolute;overflow:hidden;
+white-space:nowrap;
+text-overflow:ellipsis; text-align:center; top:50%; left:0px; padding:0px 15px; box-sizing:border-box; width:100%; -webkit-transform:translate(0,-50%)}
+ul.prolist li .listright:before{content:""; width:0px; height:0px; position:absolute;border-top:16px solid transparent;border-right:16px solid #d8dadc;border-left: 8px solid transparent; -webkit-transition:all 0.3s linear; -webkit-transform: rotate(90deg);}
+ul.prolist li:nth-child(odd) .listright:before{ left:-4px; bottom:4px;}
+ul.prolist li:nth-child(even) .listright:before{-webkit-transform: rotate(0deg); right:0px; bottom:0px;}
+.bigimgbox{ width:80%; margin:12px auto 0px; height:auto; overflow:hidden;}
+.bigimg{ height:auto; overflow:hidden;}
+.bigimgtitle{ margin:0px auto;height:45px; line-height:45px; text-align:center; font-size:1.15em; color:#333333;}
+
+.pagebox{ margin:0px 5px 15px; padding:0px 6px; height:35px; overflow:hidden; background:#000; border-radius:4px; line-height:35px; color:#fff;display:-webkit-box;display:box;}
+.pageprve{-webkit-box-flex:1;box-flex:1;}
+.pagenext{ width:90px; text-align:center; display:inline-table; text-align:right}
+.pagebox a{ color:#fff;}
+.relatepro{ background:#eaeaea; height:110px; overflow:hidden;}
+.relatepro_m{ height:auto; overflow:hidden;}
+.relatebox{ margin:0px 7px;}
+.relatebox .title{ height:35px; line-height:35px;}
+.relatepro-top{ height:45px; line-height:45px; font-size:1.15em; padding:0px 10px}
+.relatebox a{ display:block; color:#666666}
+.news_detail{ height:auto; overflow:hidden; padding:8px 0px 10px; }
+.news_detail .title1{ height:auto; overflow:hidden; text-align:center; font-size:1.18em; color:#282828}
+.news_detail .title2{ height:30px; text-align:center; color:#666666;}
+ul.relate_list{ padding:0px 8px 8px; height:auto; overflow:hidden;}
+ul.relate_list li a{ height:25px; overflow:hidden; position:relative; line-height:25px; color:#333333; display:block; text-indent:18px;white-space: nowrap;
+text-overflow: ellipsis;}
+ul.relate_list li a:before{ width:15px; height:25px; content:""; background:#666666;-webkit-mask: url(../images/sty.png) center center  no-repeat;-webkit-mask-size:6px auto; position:absolute; top:0px; left:0px;}
+@media screen and (min-width: 320px) and (max-width:359px){
+.thumbs-cotnainer .swiper-slide {width:106px; text-align:center}	
+}
+@media screen and (min-width:360px){
+.thumbs-cotnainer .swiper-slide {width:120px; text-align:center}	
+}
+@media screen and (min-width: 320px) and (max-width: 480px){
+.boxmain-about img{ width:140px; height:172px;}
+.boxmain-about dd{ height:170px; }
+.box_gongyi_text .nr{ height:80px; line-height:20px;}
+}
+@media screen and (min-width: 480px) {
+.boxmain-about img{width:216px; height:266px;}
+.boxmain-about dd{ height:252px;}
+.box_gongyi_text{ bottom:25px; left:25px;}
+.box_gongyi_text .nr{ height:144px; overflow:hidden;}
+}

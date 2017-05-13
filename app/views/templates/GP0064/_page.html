@@ -1,0 +1,15 @@
+<div class="number">
+
+	{if $near_page ne 1}
+		<a href="{$page_links.prev_link}"><img src="{$site_url}images/jtt.png"></a>
+	{/if}
+	{foreach item=near_link key=near_page from=$page_links.nears_link}
+		{if $near_page == $page_links.current_page}
+			<a class="number_on">{$near_page}</a>
+		{else}
+			<a href="{$near_link}">{$near_page}</a>
+		{/if}
+	{/foreach}
+	<a href="{$page_links.next_link}"><img src="{$site_url}images/jt.png"></a>
+	
+</div>

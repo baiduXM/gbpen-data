@@ -1,0 +1,14 @@
+﻿
+
+    <div class="foot">
+     	<div class="f_menu">
+     		{foreach item=nav from=$navs}
+     			{if $nav@index gt 0} | {/if}
+     			<a href="{$nav.link}">{$nav.name}</a>
+     		{/foreach}
+     	</div>
+     	<div class="foot_left">
+     		{$footprint}
+     	</div>
+    </div>
+	{$footscript}

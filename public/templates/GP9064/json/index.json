@@ -1,0 +1,35 @@
+{
+	"pro":{
+		"description": "图片列表（如品种展示）",
+		"value": {},
+		"type": "list",
+		"config":{
+			"width":204,
+			"height":234
+		}	
+	},
+	"case":{
+		"description": "图片列表（如案例展示）",
+		"value": {},
+		"type": "list",
+		"config":{
+			"width":204,
+			"height":234
+		}	
+	},	
+	"news": {
+		"description": "文字列表（如新闻中心）",
+		"value": {},
+		"type": "list"
+	},    
+	"about_us": {
+		"description": "内容单页（如关于我们）",
+		"value": {},
+		"type": "page",
+		"config":{
+			"width":482,
+			"height":128
+		}	
+	}
+}                     
+

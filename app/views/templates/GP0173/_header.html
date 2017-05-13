@@ -1,0 +1,38 @@
+<div id="header">
+      <div id="slideBox" class="slideBox">
+          <div class="hd">
+            <ul>
+             {foreach item=banner from=$global.slidepics}
+              <li></li>
+             {/foreach}
+            </ul>
+          </div>
+          <div class="banner">
+            <ul>
+              {foreach item=banner from=$global.slidepics}
+              <li><a href="{$banner.link}"><img src="{$banner.image}" /></a></li>
+              {/foreach}
+            </ul>
+          </div>
+      </div>
+      <div class="logo">
+           <a href="{$site_url}"><img src="{$logo}"></a>
+      </div>
+      <div class="logo_bg"></div>
+      <div di="navs" class="navs">
+           <ul class="menu">
+            <li><a class="current" href="{$site_url}">网站首页</a></li>
+            {foreach item=nav from=$navs}
+            <li class="{if $nav.current}current{/if}"><a href="{$nav.link}">{$nav.name}</a>
+                {if $nav.childmenu}
+                 <ul class="erji none">
+                    {foreach item=nav_list from=$nav.childmenu}
+                   <li><a href="{$nav_list.link}" >{$nav_list.name}</a></li> 
+                    {/foreach}                
+                 </ul>
+                {/if}
+            </li>
+            {/foreach}           
+           </ul>
+      </div>
+</div>

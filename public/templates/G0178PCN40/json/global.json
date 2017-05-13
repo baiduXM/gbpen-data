@@ -1,0 +1,51 @@
+{
+	"hotline": {
+		"value": "服务热线：4000-808-127",
+		"description": "尾部上方服务热线",
+		"type": "text"	
+	},	
+	"mail": {
+		"value": "电子邮箱：zhanjianmei@xm12t.com",
+		"description": "尾部上方电子邮箱",
+		"type": "text"
+	 },
+	 "addr": {
+		"value": "联系地址：厦门市软件园二期观日路36号201单元",
+		"description": "尾部上方联系地址",
+		"type": "text"
+	 },
+	"link": {
+		"value": [{
+			"title": "百度",
+			"image": "images/about_18.jpg",
+			"link": "http://www.baidu.com"
+		}, {
+			"title": "易尔通",
+			"image": "images/about_18.jpg",
+			"link": "http://www.12t.cn"
+		},{
+			"title": "百度",
+			"image": "images/about_18.jpg",
+			"link": "http://www.baidu.com"
+		}, {
+			"title": "易尔通",
+			"image": "images/about_18.jpg",
+			"link": "http://www.12t.cn"
+		}],
+		"description": "底部友情链接",
+		"type": "images"
+	},
+	"bannerny": {
+		"value": {
+			"title":"",
+			"image":"images/bannerny_02.jpg",
+			"link":""
+		},
+		"description": "内页banner",
+		"type": "image",
+		"config": {
+			"width": 1920,
+			"height": 270
+		}	
+	}
+}

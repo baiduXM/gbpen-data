@@ -1,0 +1,90 @@
+{
+
+	"slidepics": {
+		"value": [{
+			"title": "banner",
+			"image": "images/banner.png",
+			"link": "article/1.html",
+			"description": "banner1"
+		}, {
+			"title": "测试图2",
+			"image": "images/banner.png",
+			"link": "http://www.baidu.com"
+		},{
+			"title": "测试图3",
+			"image": "images/banner.png",
+			"link": "http://www.baidu.com"
+		}],
+		"description": "头部大轮滚图",
+		"type": "images",
+		"config": {
+			"width": 1920,
+			"height":823
+		}
+	},
+	"slidepics1": {
+		"value": [{
+			"title": "banner",
+			"image": "images/banner2.png",
+			"link": "article/1.html",
+			"description": "banner1"
+		}, {
+			"title": "测试图2",
+			"image": "images/banner2.png",
+			"link": "http://www.baidu.com"
+		},{
+			"title": "测试图3",
+			"image": "images/banner2.png",
+			"link": "http://www.baidu.com"
+		}],
+		"description": "内页头部大轮滚图",
+		"type": "images",
+		"config": {
+			"width": 1920,
+			"height":190
+		}
+	},
+	"word2":{
+		"value": "厦门易尔通网络科技有限公司 投诉邮箱：tousu@xm12t.com",
+		"description": "自定义标题",
+		"type": "textarea"
+	},
+	"icon1":{
+		"value": {
+			"title": "扫一扫关注微博",
+			"image": "images/er.png",
+			"link": "http://www.baidu.com/"
+			},
+		"description": "二维码1",
+		"type": "image",
+		"config": {
+			"width":120,
+			"height":120
+		}
+	},
+	"icon2":{
+		"value": {
+			"title": "扫一扫关注微信",
+			"image": "images/wechat.png",
+			"link": "http://www.baidu.com/"
+			},
+		"description": "二维码2",
+		"type": "image",
+		"config": {
+			"width":120,
+			"height":120
+		}
+	},
+	"links": {
+		"value": [{
+			"title": "中国站长站",
+			"image": "images/link1.png",
+			"link": "article/1.html",
+			"description": "友情链接1"
+		}],
+		"description": "友情链接",
+		"type": "images"
+	}
+	
+	
+}

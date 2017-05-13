@@ -1,0 +1,56 @@
+{
+ "slidepics":{
+	"value":[{
+		
+		"title":"测试图1",
+		"image":"images/banner.jpg",
+		"link":"http://www.baidu.com"
+	},{
+		"title":"测试图1",
+		"image":"images/banner.jpg",
+		"link":"http://www.baidu.com"
+	
+	},{
+		"title":"测试图1",
+		"image":"images/banner.jpg",
+		"link":"http://www.baidu.com"
+	
+	}
+	
+	],
+	"description":"大轮滚动",
+	"type":"images",
+	"config": {
+			"width": 996,
+			"height": 368,
+			"limit": 3
+ 
+			}
+ 
+ },
+ "second_navs": {
+		"value": {},
+		"description": "第二导航（底部）",
+		"type": "navs",
+		"config": {
+			"limit":4
+		}
+	},
+		
+"contact": {
+		"value": {},
+		"description": "联系我们",
+		"type": "page",
+		"config": {
+			"width": 235,
+			"height": 317
+			}
+	},
+	 "contacts":{
+	"value":"地址：软件园二期观日路36号201号\r\n电话：0592-23232232\r\n传真：0592-23232232\r\nE-mail：01@eexx.me\r\n",
+	"description": "联系我们",
+	"type": "textarea"
+			}
+	
+ }
+ 

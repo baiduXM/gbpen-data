@@ -1,0 +1,61 @@
+{
+	"pro":{
+		"description":"产品列表",
+		"value":{},
+		"type":"list"
+	},
+	"about_us": {
+		"description": "关于我们",
+		"value": {},
+		"type": "page",
+		"config": {
+			"nav_height":135,
+			"nav_width":145
+		}
+	},
+	"news":{
+		"description": "新闻中心",
+		"value": {},
+		"type": "list"
+	},
+    "service":{
+		"description": "服务项目",
+		"value": {},
+		"type": "list",
+		"config": {
+			"nav_height":68,
+			"nav_width":253
+		}
+	},
+	"feedback":{
+		"description": "意见反馈",
+		"value": {},
+		"type": "list",
+		"config": {
+			"nav_height":68,
+			"nav_width":253
+		}
+	},	
+	"partner":{
+		"description": "合作伙伴",
+		"value": {},
+		"type": "list",
+		"config": {
+			"nav_height":68,
+			"nav_width":253
+		}
+	},
+	"pro2":{
+		"description":"产品展示",
+		"value":{},
+		"type":"list",
+		"config": {
+			"height": 120,
+			"width":162
+		}
+	}
+	
+}
+               
+
+

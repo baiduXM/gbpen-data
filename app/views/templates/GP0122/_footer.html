@@ -1,0 +1,13 @@
+<div class='links'>
+	<ul>
+	{foreach item=flink from=$global.links}
+    	<a href="{$flink.link}" target="_blank">{$flink.title}</a> |
+    {/foreach}
+    </ul>
+</div>
+
+<div class='footer'>
+	{$footprint}
+</div>
+
+{$footscript}

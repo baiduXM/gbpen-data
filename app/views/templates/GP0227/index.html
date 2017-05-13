@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <!-- 实时预览调试代码，模板开发完成后删除 -->
+    
+    <!-- 调试代码 End -->
+    <script type="text/javascript">
+    // Ìø×ªÊÖ»úÒ³Ãæ
+    {if $site_another_url}
+        if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+            location.href = '{$site_another_url}';
+        }
+    {/if}
+    </script>
+
+<!--  -->
+<meta name="keywords" content="{$keywords}"/>
+<meta name="description" content="{$description}"/>
+<link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Language" content="zh-CN">
+
+<link rel="stylesheet" type="text/css" href="{$site_url}css/style.css"/>
+<script type="text/javascript" src="{$site_url}js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.js"></script>
+<script type="text/javascript" src="{$site_url}js/function.js"></script>
+<script type="text/javascript" src="{$site_url}js/index.js"></script>
+<script type="text/javascript" src="{$site_url}js/html5.js"></script>
+<title>{$title}</title>
+{$headscript}
+</head>
+<body>
+	<div id="wrapper">
+		{include file='./_header.html'}
+        <div class="content">
+            <div class="column-about">
+                <h2 class="title">{$index.about.name}<span>{$index.about.en_name}</span></h2>
+                <div class="aboutus">
+                    <i><img src="{$index.about.image}"></i><em></em>
+                    <div class="aboutus-text">
+                        <h3>{$index.about.childmenu[0].name}</h3>
+                        <article>{$index.about.content|unescape:"html"}</article>
+                        <a href="{$index.about.link}">查看更多>></a>
+                    </div>
+                </div>
+            </div>
+            <div class="column-service">
+                <div class="sev-back"><img src="{$index.back01.image}"></div>
+                <div class="service">
+                    <div class="column-hd">
+                        <h2><a href="{$index.product.link}">{$index.product.name}<span>{$index.product.en_name}</span></a></h2>
+                        <i></i>
+                        <p>{$index.product.description}</p>
+                    </div>
+                    <ul class="features">
+                        {foreach item=pro from=$index.product.childmenu}
+                        <li>
+                            <a href="{$pro.link}" class="opacity">
+                                <span>
+                                    <b>{$pro.name}</b><em>{$pro.en_name}</em><p>{$pro.description}</p>
+                                </span>
+                                <div class="shade"></div>
+                            </a>
+                            <i class="opacity"><img src="{$pro.image}"></i>
+                        </li>
+                        {if $pro@index+1 eq 4}{break}{/if}
+                        {/foreach}
+                    </ul>
+                </div>
+            </div>
+            <div class="column-mid">
+                <div class="dynamic">
+                    <h2 class="title"><a href="{$index.news.link}">{$index.news.name}<span>{$index.news.en_name}</span></a></h2>
+                    <div class="dyn-first">
+                        <i><img src="{$index.news.data[0].image}"></i>
+                        <h4><a href="{$index.news.data[0].link}">{$index.news.data[0].title}</a></h4>
+                        <p>{$index.news.data[0].description}</p>
+                    </div>
+                    <ul class="mid-list">
+                        {foreach item=news from=$index.news.data}
+                            {if $news@index+1 gt 1}
+                                <li><a href="{$news.link}">
+                                    <time datetime="{$news.pubtimestamp|date_format:'%Y-%m-%d'}">{$news.pubtimestamp|date_format:'%Y-%m-%d'}</time>
+                                    {$news.title}
+                                </a></li>
+                                {if $news@index+1 eq 7}{break}{/if}
+                            {/if}
+                        {/foreach}
+                    </ul>
+                </div>
+                <div class="course">
+                    <h2 class="title"><a href="{$index.course.link}">{$index.course.name}<span>{$index.course.en_name}</span></a></h2>
+                    <ol class="course-pic">
+                        {foreach item=pic from=$index.pic}
+                            <li><a href="{$pic.link}"><img src="{$pic.image}"></a></li>
+                        {/foreach}
+                    </ol>
+                    <ul class="mid-list">
+                        {foreach item=cour from=$index.course.data}
+                            <li><a href="{$cour.link}">
+                                <time datetime="{$cour.pubtimestamp|date_format:'%Y-%m-%d'}">{$cour.pubtimestamp|date_format:'%Y-%m-%d'}</time>
+                                {$cour.title}
+                            </a></li>
+                            {if $cour@index+1 eq 6}{break}{/if}
+                        {/foreach}
+                    </ul>
+                </div>
+            </div>
+            <div class="column-customer">
+                <div class="cus-back"><img src="{$index.back02.image}"><em></em></div>
+                <div class="column-hd">
+                    <h2><a href="{$index.case.link}">{$index.case.name}<span>{$index.case.en_name}</span></a></h2>
+                    <i></i>
+                    <p>{$index.case.description}</p>
+                </div>
+                <div class="pack"><em></em>
+                    <ul class="customer">
+                        {foreach item=case from=$index.case.data}
+                            <li><a href="{$case.link}"><b></b>
+                                <i><img src="{$case.image}"></i>
+                                <div class="customer-list">
+                                    <h3>{$case.title}</h3>
+                                    <span><img src="{$site_url}images/icon-01.png"></span>
+                                    <p>{$case.description}</p>
+                                </div>
+                            </a></li>
+                        {/foreach}
+                    </ul>
+                </div>
+            </div>
+            <ul class="credit">
+                {foreach item=article from=$index.cerdit.childmenu}
+                    {$num=$article@index+1}
+                    <li><a href="{$article.link}">
+                        <i>{$index.$num}</i>
+                        <h6>{$article.name}</h6>
+                        <p>{$article.description}</p>
+                    </a></li>
+                    {if $num eq 4}{break}{/if}
+                {/foreach}
+            </ul>
+        </div>
+        {include file='./_footer.html'}
+    </div>
+</body>
+</html>

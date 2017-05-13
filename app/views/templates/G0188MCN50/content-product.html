@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{$title}</title>
+    <script type="text/javascript">
+        // 跳转PC页面
+        {if $site_another_url}
+        if (!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+            location.href = '{$site_another_url}';
+        }
+        {/if}
+    </script>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no,minimal-ui">
+    <meta name="keywords" content="{$keywords}" />
+    <meta name="description" content="{$description}" />
+    <link rel="stylesheet" href="{$site_url}css/swiper-3.3.1.min.css" />
+    <link rel="stylesheet" href="{$site_url}css/style.css">
+    <script src="{$site_url}js/TouchSlide.1.1.js"></script>
+    <script type="text/javascript" src="{$site_url}js/jquery.min.js"></script>
+    <script type="text/javascript" src="{$site_url}js/swiper-3.3.1.jquery.min.js"></script>
+    <script type="text/javascript" src="{$site_url}js/index.js"></script>
+    <script type="text/javascript" src="{$site_url}js/simple-app.js"></script>
+    <script type="text/javascript">
+        window.addEventListener('load', function(){
+            setTimeout(function(){ window.scrollTo(0, 1);}, 100);
+        });//safari浏览器可以通过此代码来隐藏地址栏
+    </script>
+</head>
+<body>
+
+<div class="am-g det-header">
+    <a href="" class="  det-prev"><i class="iconFont">&#xe641;</i></a>
+    <a href="" class=" det-title new-set-title">{$article.title}</a>
+    <a href="" class=" det-fonts">
+         <span>字
+           <em class="proEm">
+                <img class="j-hide"  src="{$site_url}images/font-add2.png" alt="">
+                 <img class="add-show hide" src="{$site_url}images/font-add.png" alt="">
+           </em>
+        </span>
+    </a>
+</div>
+<div class="det-font hide">
+    <img class="rt" src="{$site_url}images/det-font-size.png" alt="">
+    <div class="font-size">
+        <ul>
+            <li class="big"><a href="javascript:" onclick="changeFontSize2('0.8')">大</a></li>
+            <li class="middle"><a href="javascript:" onclick="changeFontSize2('0.7')">中</a></li>
+            <li class="sm"><a href="javascript:" onclick="changeFontSize2('0.6')">小</a></li>
+        </ul>
+    </div>
+</div>
+<div class="det-content">
+    <h6>{$article.title}</h6>
+    <div class="cont-img  ">
+        {include file="./_articleBanner.html"}
+    </div>
+    <div class="det-cont-text bot">
+        <p class="det-cont-txt">{$article.description}</p>
+        <p class="det-cont-txt">{$article.content}</p>
+    </div>
+    <div class="det-cont-a">
+        <a href="{$article.prev.link}" class=" det-prev">上一个  :{$article.prev.title}</a>
+        <a href="{$article.next.link}" class="">下一个  :{$article.next.title}</a>
+    </div>
+</div>
+
+{include file="./_footer.html"}
+</body>
+</html>
+
+
+
+
+
+

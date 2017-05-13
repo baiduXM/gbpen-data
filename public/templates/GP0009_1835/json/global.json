@@ -1,0 +1,113 @@
+{
+	"slidepics": {
+		"value": [{
+			"title": "测试图1",
+			"image": "images/1.jpg",
+			"link": "",
+			"description": "首页大图"
+		}, {
+			"title": "测试图2",
+			"image": "images/1.jpg",
+			"link": ""
+		},{
+			"title": "测试图3",
+			"image": "images/1.jpg",
+			"link": ""
+		}],
+		"description": "多图轮播",
+		"type": "images",
+		"config": {
+			"width":1920,
+			"height":705,
+			"limit": 0
+		}
+	},		
+	"showpics": {
+		"value": [{
+			"title": "测试图1",
+			"image": "images/1.jpg",
+			"link": "",
+			"description": "首页大图"
+		}, {
+			"title": "测试图2",
+			"image": "images/1.jpg",
+			"link": ""
+		},{
+			"title": "测试图3",
+			"image": "images/1.jpg",
+			"link": ""
+		}],
+		"description": "左侧边第一个多图切换",
+		"type": "images",
+		"config": {
+			"width":224,
+			"height":149,
+			"limit": 0
+		}
+	},	
+	"showpictows": {
+		"value": [{
+			"title": "测试图1",
+			"image": "images/1.jpg",
+			"link": "",
+			"description": "首页大图"
+		}, {
+			"title": "测试图2",
+			"image": "images/1.jpg",
+			"link": ""
+		},{
+			"title": "测试图3",
+			"image": "images/1.jpg",
+			"link": ""
+		}],
+		"description": "左侧边第二个多图切换",
+		"type": "images",
+		"config": {
+			"width":224,
+			"height":149,
+			"limit": 0
+		}
+	},			
+	"contactusfoot":{
+		"value": "地址：厦门市软件园二期观日路36号201单元\r\n 电话：123456789\r\n 联系人：张三\r\n",
+		"description": "侧边的联系方式",
+		"type": "textarea"
+	},
+	"links": {
+		"value": [{
+			"title": "百度贴吧",
+			"image": "http://tb2.bdstatic.com/tb/static-common/img/search_logo_big_282cef2.gif",
+			"link": "http://tieba.baidu.com"
+		}, {
+			"title": "百度图片",
+			"image": "http://img0.bdstatic.com/static/common/widget/search_box_search/logo/logo_3b6de4c.png",
+			"link": "http://image.baidu.com"
+		}],
+		"description": "友情链接",
+		"type": "images",
+		"config": {
+			"width": 100,
+			"height": 60
+		}
+	},	
+	"QQ": {
+		"value": [{
+			"title": "1234567",
+			"image": "images/qq.png",
+			"link": "http://www.baidu.com"
+		}, {
+			"title": "1234567",
+			"image": "images/qq.png",
+			"link": "http://www.baidu.com"
+		}],
+
+		"description": "qq",
+		"type": "images",
+		"config": {
+			"width": 42,
+			"height": 42		
+	}
+	}	
+	
+			
+}

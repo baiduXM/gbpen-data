@@ -1,0 +1,62 @@
+{
+
+	"slidepics": {
+		"value": [{
+			"title": "banner1",
+			"image": "images/baner.jpg",
+			"link": "article/1.html",
+			"description": "大图轮播1"
+		}, {
+			"title": "banner2",
+			"image": "images/baner.jpg",
+			"link": "http://www.baidu.com",
+			"description": "大图轮播2"
+		},{
+			"title": "banner3",
+			"image": "images/baner.jpg",
+			"link": "http://www.baidu.com",
+			"description": "大图轮播3"
+		}],
+		"description": "多图轮播",
+		"type": "images",
+		"config": {
+			"width":996,
+			"height": 282
+		}
+	},
+	"links": {
+		"value": [{
+			"title": "百度",
+			"image": "images/f1.jpg",
+			"link": "http://www.baidu.com"
+		}, {
+			"title": "易尔通",
+			"image": "images/f2.jpg",
+			"link": "http://www.baidu.com"
+		}, {
+			"title": "谷歌",
+			"image": "images/f3.jpg",
+			"link": "http://www.baidu.com"
+		}, {
+			"title": "腾讯",
+			"image": "images/f4.jpg",
+			"link": "http://www.baidu.com"
+		}, {
+			"title": "小米",
+			"image": "images/f5.jpg",
+			"link": "http://www.baidu.com"
+		}],
+		"description": "友情链接",
+		"type": "images",
+		"config": {
+			"width": 104,
+			"height": 45
+		}
+	},
+	"fcontact":{
+		"value":"地址：漳州龙海市榜山镇翠林村翠林水厂机修车间 E-mail：hzs666@163.com 手机：13950108180 联系人：黄志顺总经理",
+        "description": "底部联系我们信息",
+		"type": "textarea"
+	}
+
+}
