@@ -1,0 +1,145 @@
+{
+    "about":{
+        "description":"关于我们",
+        "value":{},
+        "type":"page",
+        "config":{
+            "width":560,
+            "height":740
+        }
+    },
+    "news":{
+        "description":"新闻中心",
+        "value":{},
+        "type":"list",
+        "config":{
+            "width":242,
+            "height":242
+        }
+    },
+    "products":{
+        "description":"产品中心",
+        "value":{},
+        "type":"list",
+        "config":{
+            "width":640,
+            "height":960,
+            "showchilddata":true
+        }
+    },
+    "pro_list":{
+        "description":"最新产品",
+        "value":{},
+        "type":"list",
+        "config":{
+            "width":460,
+            "height":545,
+            "star_only":true
+        }
+    },
+    "pro_right_img": {
+        "value":
+        {
+            "title": "bg",
+            "image": "images/pic1.jpg",
+            "link": "www.baidu.com",
+            "description": "image"
+        },
+        "description": "pro_list的展示图",
+        "type": "image",
+        "config": {
+            "width": 450,
+            "height": 516
+        }
+    },
+    "dz1": {
+        "value":
+        {
+            "title": "实体门店",
+            "image": "images/pic2.jpg",
+            "link": "www.baidu.com",
+            "description": "OFFICIAL RETAIL STORE"
+        },
+        "description": "展示一",
+        "type": "image",
+        "config": {
+            "width": 585,
+            "height": 200
+        }
+    },
+    "dz2": {
+        "value":
+        {
+            "title": "花事花记",
+            "image": "images/pic2.jpg",
+            "link": "www.baidu.com",
+            "description": "FLOWERS STORY"
+        },
+        "description": "展示二",
+        "type": "image",
+        "config": {
+            "width": 585,
+            "height": 200
+        }
+    },
+    "add1": {
+        "value":
+        {
+            "title": "",
+            "image": "images/tb3.jpg",
+            "link": "www.baidu.com",
+            "description": ""
+        },
+        "description": "底部展示一",
+        "type": "image",
+        "config": {
+            "width": 300,
+            "height": 56
+        }
+    },
+    "add2": {
+        "value":
+        {
+            "title": "",
+            "image": "images/tb4.jpg",
+            "link": "www.baidu.com",
+            "description": ""
+        },
+        "description": "底部展示二",
+        "type": "image",
+        "config": {
+            "width": 300,
+            "height": 56
+        }
+    },
+    "add3": {
+        "value":
+        {
+            "title": "",
+            "image": "images/tb5.jpg",
+            "link": "www.baidu.com",
+            "description": ""
+        },
+        "description": "底部展示三",
+        "type": "image",
+        "config": {
+            "width": 300,
+            "height": 56
+        }
+    },
+    "add4": {
+        "value":
+        {
+            "title": "",
+            "image": "images/tb6.jpg",
+            "link": "www.baidu.com",
+            "description": ""
+        },
+        "description": "底部展示四",
+        "type": "image",
+        "config": {
+            "width": 300,
+            "height": 56
+        }
+    }
+}

@@ -1,0 +1,20 @@
+<footer>
+    <div class="footer">
+        <div class="link">
+            <div class="link_c">
+                <dl>
+                    <dt>友情链接</dt>
+                    {foreach name=friend item=friend from=$global.links}
+                    <dd><a href="{$friend.link}">{$friend.title}</a></dd>
+                    {/foreach}
+                </dl>
+            </div>
+        </div>
+        <div class="foot">
+            <div class="foot_c">
+                {$footprint}
+            </div>
+        </div>
+    </div>
+</footer>
+{$footscript}

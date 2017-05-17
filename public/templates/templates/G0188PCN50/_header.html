@@ -1,0 +1,23 @@
+﻿    
+    <div id="header">
+        <div id="logo"><a href="{$site_url}"><img src="{$logo}" /></a></div>
+        <nav id="nav">
+            <ul class="menu">
+                {foreach item=nav from=$navs}
+                    <li>
+                        <a href="{$nav.link}"><i><img src="{$nav.image}"></i><span>{$nav.name}</span></a>
+                        {if $nav.childmenu}
+                        <div class="menu-list"><b></b>
+                            <ul>
+                                {foreach key=key item=nav_list from=$nav.childmenu}
+                                <li><a href="{$nav_list.link}">{$nav_list.name}</a></li>
+                                {/foreach}
+                            </ul>
+                        </div>
+                        {/if}
+                    </li>
+                    {if $nav@index+1 eq 9}{break}{/if}
+                {/foreach}
+            </ul>
+        </nav>
+    </div>

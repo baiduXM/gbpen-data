@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- 实时预览调试代码，模板开发完成后删除 -->
+    
+    <!-- 调试代码 End -->
+    <script type="text/javascript">
+        // 跳转PC页面
+        {if $site_another_url}
+            if (!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+                location.href = '{$site_another_url}';
+            }
+            {/if}
+    </script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no,minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta content="telephone=no, email=no" name="format-detection">
+    <!-- 启用360浏览器的极速模式(webkit) -->
+    <meta name="renderer" content="webkit">
+    <!-- 避免IE使用兼容模式 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+    <meta name="HandheldFriendly" content="true">
+    <!-- 微软的老式浏览器 -->
+    <meta name="MobileOptimized" content="320">
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <meta name="keywords" content="{$keywords}" />
+    <meta name="description" content="{$description}" />
+    <link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
+    <title>{$title}</title>
+    <link rel="stylesheet" href="{$site_url}css/animate.min.css"/>
+    <link rel="stylesheet" href="{$site_url}css/swiper-3.4.1.min.css"/>
+    <link rel="stylesheet" href="{$site_url}css/public.css"/>
+
+    <script src="{$site_url}js/swiper-3.4.1.min.js"></script>
+    <script src="{$site_url}js/swiper.animate1.0.2.min.js"></script>
+    <script src="{$site_url}js/TouchSlide.1.1.js"></script>
+    <script src="{$site_url}js/jquery-1.9.1.min.js"></script>
+    <script src="{$site_url}js/function.js"></script>
+    <script type="text/javascript">
+        window.addEventListener('load', function(){
+            setTimeout(function(){ window.scrollTo(0, 1); }, 100);
+        });//safari浏览器可以通过此代码来隐藏地址栏
+    </script>
+    {$headscript}
+</head>
+<body>
+<div class="index-wrap">
+    {include file="./_header.html"}
+    <div class="index">
+        {foreach name=mIndexCats item=mIndexCat from=$mIndexCats}
+        {if $mIndexCat.type eq 2}
+            {if $mIndexCat.showtype eq 1}
+            <div class="sec1">
+                <div class="title">
+                    <h3 class="h3">{$mIndexCat.en_name}</h3>
+                    <span></span>
+                    <h4 class="h4">{$mIndexCat.name}</h4>
+                </div>
+                <div class="sec1_c">
+                    <div class="swiper-container2">
+                        <div class="swiper-wrapper">
+                            {foreach item=article from=$mIndexCat.data}
+                            <div class="swiper-slide">
+                                <a href="{$article.link}">
+                                    <div class="img middle"><img class="max" src="{$article.image}" alt=""/></div>
+                                    <div class="bottom">
+                                        <h3>{$article.title}</h3>
+                                        <div class="xian"></div>
+                                        <div class="nr">{$article.description}</div>
+                                    </div>
+                                </a>
+                            </div>
+                            {if $article@index+1 eq 6}{break}{/if}
+                            {/foreach}
+                        </div>
+                        <div class="swiper-button-prev swiper-button-white"></div>
+                        <a class="btn" href="{$mIndexCat.link}">查看更多</a>
+                        <div class="swiper-button-next swiper-button-white"></div>
+                    </div>
+                </div>
+            </div>
+            {/if}
+        {elseif $mIndexCat.type eq 4}
+            {if $mIndexCat.showtype eq 1}
+             <div class="sec2">
+                 <div class="title">
+                     <h3 class="h3">{$mIndexCat.en_name}</h3>
+                     <span></span>
+                     <h4 class="h4">{$mIndexCat.name}</h4>
+                 </div>
+                 <div class="sec2_c">
+                     <ul class="sec3_nav">
+                         {foreach item=about from=$mIndexCat.childmenu}
+                         <li><a href="{$about.link}">{$about.name}</a></li>
+                         {/foreach}
+                     </ul>
+                     <div class="detail">
+                         {$mIndexCat.description|unescape:"html"}
+                     </div>
+                     <a class="btn" href="{$mIndexCat.link}">查看更多</a>
+                 </div>
+             </div>
+            {/if}
+        {elseif $mIndexCat.type eq 3}
+            {if $mIndexCat.showtype eq 1}
+            <div class="sec3">
+                <div class="title">
+                    <h3 class="h3">{$mIndexCat.en_name}</h3>
+                    <span></span>
+                    <h4 class="h4">{$mIndexCat.name}</h4>
+                </div>
+                <div class="sec3_c">
+                    <div class="swiper-container3">
+                        <div class="swiper-wrapper">
+                            {foreach item=news from=$mIndexCat.data}
+                            <div class="swiper-slide">
+                                <a class="list" href="{$news.link}">
+                                    <div class="detail">
+                                        <h3 class="h3">{$news.title}</h3>
+                                        <span class="time">{$news.pubtimestamp|date_format:'%y-%m-%d'}</span>
+                                        <div class="img middle"><img class="max" src="{$news.image}" alt=""/></div>
+                                        <div class="nr">{$news.description|unescape:"html"}</div>
+                                        <span class="more">查看更多></span>
+                                    </div>
+                                </a>
+                            </div>
+                            {if $news@index+1 eq 6}{break}{/if}
+                            {/foreach}
+                        </div>
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+            {/if}
+        {/if}
+        {/foreach}
+    </div>
+    {include file="./_footer.html"}
+</div>
+</body>
+</html>

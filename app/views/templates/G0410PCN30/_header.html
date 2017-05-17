@@ -1,0 +1,40 @@
+<header>
+    <div class="header">
+        <div class="head">
+            <div class="logo"><a href="{$site_url}"><img class="max" src="{$logo}" alt=""/></a></div>
+            <div class="nav">
+                <ul>
+                    {$limit=8}
+                    {if $navs|count lt $limit}{$limit = $navs|count}{/if}
+                    <li style="width:{100/($limit+1)}%">
+                        <a href="{$site_url}"><h3>首页</h3></a>
+                    </li>
+                    {foreach item=nav from=$navs}
+                    <li class="nav_li" style="width:{100/($limit+1)}%">
+                        <a href="{$nav.link}"> <h3>{$nav.name}</h3></a>
+                        {if $nav.childmenu}
+                        <ul>
+                            {if $nav.childmenu}{foreach key=key item=nav_list from=$nav.childmenu}
+                            <li><a href="{$nav_list.link}">{$nav_list.name}</a></li>
+                            {/foreach}{/if}
+                        </ul>
+                        {/if}
+                    </li>
+                    {if $nav@index+1 eq $limit}{break}{/if}
+                    {/foreach}
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="banner">
+        <div class="swiper-container1">
+            <div class="swiper-wrapper">
+                {foreach item=banner from=$global.slidepics}
+                <div class="swiper-slide"><a href="{$banner.link}"><img src="{$banner.image}" alt=""/></a></div>
+                {/foreach}
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</header>

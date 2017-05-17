@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{$title}</title>
+    <script type="text/javascript">
+        // 跳转PC页面
+        {if $site_another_url}
+        if (!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+            location.href = '{$site_another_url}';
+        }
+        {/if}
+    </script>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no,minimal-ui">
+    <meta name="keywords" content="{$keywords}" />
+    <meta name="description" content="{$description}" />
+    <link rel="stylesheet" href="{$site_url}css/swiper-3.3.1.min.css" />
+    <link rel="stylesheet" href="{$site_url}css/style.css">
+    <script src="{$site_url}js/TouchSlide.1.1.js"></script>
+    <script type="text/javascript" src="{$site_url}js/jquery.min.js"></script>
+    <script type="text/javascript" src="{$site_url}js/swiper-3.3.1.jquery.min.js"></script>
+    <script type="text/javascript" src="{$site_url}js/index.js"></script>
+    <script type="text/javascript" src="{$site_url}js/simple-app.js"></script>
+    <script type="text/javascript">
+        window.addEventListener('load', function(){
+            setTimeout(function(){ window.scrollTo(0, 1);}, 100);
+        });//safari浏览器可以通过此代码来隐藏地址栏
+    </script>
+</head>
+<body>
+<!---顶部-->
+<div class="header">
+    <a  id="quickbar-showcats"  class=" menu-add lt" ><i class="iconFont menu">&#xe603;</i></a>
+    <a href="" class=" logo"><img src="{$logo}" alt=""></a>
+    <a href="javascript:" class=" input rt"><i class="iconFont">&#xe636;</i></a>
+    <div class="had-search hide">
+        <input class="had-input" name="airline" id="airline" type="text">
+        <input class="had-btn " type="button" onclick="input()" value="搜索">
+    </div>
+</div>
+
+
+<div class="index-new">
+    {include file="./_hadTitle.html"}
+    <div class="index-content cou">
+        <div class=" about-class coub">
+            <span><i class="i-rt" ></i>{$list.name}<i class="i-lt"></i></span>
+            <a href="javascript:" class="ab-class">分类 <img src="{$site_url}images/ab-class.png" alt=""></a>
+        </div>
+        <div class="coub">{include file="./_nav.html"}</div>
+        <div class="course-list">
+            {foreach item=article from=$list.data}
+            <a href="{$article.link}">
+                <dl>
+                    <dt><img src="{$article.image}" ></dt>
+                    <dd>{$article.title}</dd>
+                </dl>
+            </a>
+            {/foreach}
+        </div>
+        {include file="./_page.html"}
+    </div>
+</div>
+
+{include file="./_footer.html"}
+</body>
+</html>

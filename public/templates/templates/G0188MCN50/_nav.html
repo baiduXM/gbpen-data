@@ -1,0 +1,29 @@
+<div class="class-list-bg hide ">
+    <p class="class-icon"><img src="{$site_url}images/3_03.png" alt="" ></p>
+    <div class="class-list">
+        <ul>
+            {foreach item=nav from=$pagenavs}
+            <li class="tree_box " >
+                <h3><a href="{$nav.link}">{$nav.name}</a></h3>
+                {if $nav.childmenu}
+                <ul class="tree_one hide">
+                    {foreach item=nav_list from=$nav.childmenu}
+                    <li>
+                        <h4><a href="{$nav_list.link}">{$nav_list.name}</a></h4>
+                        {if $nav_list.childmenu}
+                        <ul class="tree_two hide">
+                            {foreach key=key item=nav_listsec from=$nav_list.childmenu}
+                            <li ><a href="{$nav_listsec.link}">{$nav_listsec.name}</a></li>
+                            {/foreach}
+                        </ul>
+                        {/if}
+                    </li>
+                    {/foreach}
+                </ul>
+
+                {/if}
+            </li>
+            {/foreach}
+        </ul>
+    </div>
+</div>
