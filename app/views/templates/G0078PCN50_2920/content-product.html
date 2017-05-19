@@ -17,21 +17,17 @@
 <link href="{$site_url}css/css.css" rel="stylesheet" type="text/css" />
 <link href="{$site_url}css/sub.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="{$site_url}js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="http://common.mn.sina.com.cn/public/resource/lib/jquery.jcarousellite.js"></script>
 <script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.js"></script>
 <script type="text/javascript" src="{$site_url}js/jquery.kinMaxShow-1.0.min.js"></script>
-<script type="text/javascript" src="{$site_url}js/function.js"></script>
-</head>
+<script type="text/javascript" src="{$site_url}js/function.js"></script></head>
 <body>
 <div class="bg"> {include file='./_header.html'}
   <div id="sub_container" class=" wrapper clearfix" > {include file='./_aside.html'}
-    <div class="main">
-    
-    <div class="crumb clearfix"> <span>您所在的位置：<a href="{$site_url}">首页</a> {foreach item=nav from=$posnavs} <a href="{$nav.link}">>{$nav.name}</a> {/foreach}</span>
-      <p>{$article.category.name}</p>
-    </div>
-    
-
-
+    <div class="main fr">
+      <div class="crumb"> <span>您所在的位置：<a href="{$site_url}">首页</a> {foreach item=nav from=$posnavs} <a href="{$nav.link}">>{$nav.name}</a> {/foreach}</span>
+        {$article.category.name}
+      </div>
       <div class="article ">
         <div class="descripimg">
           <div id="slideBoxb" class="slideBoxb" style="margin:0 auto">
@@ -56,7 +52,7 @@
           <div class="text_p"> 产品名称：{$article.title} <br />
           </div>
         </div>
-        <div class="moule_edot">
+        <div class="moule_edot"> <b style="font-size:14px;">产品介绍</b> <br />
           {$article.content|unescape:"html"} </div>
         <div style="height:30px;overflow: hidden; padding-top:7px; margin-top:15px;color:#000; float:right;">
           <!-- Baidu Button BEGIN -->

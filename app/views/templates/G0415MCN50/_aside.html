@@ -1,0 +1,63 @@
+<div id="content-left">
+
+    {if $pagenavs}
+    <div class="h3">
+        <h3>{$posnavs[0].name}</h3>
+    </div>
+    <div id="navlist" class="list">
+        <ul id="navtop">
+            {foreach item=nav from=$pagenavs}
+            <li>
+                <a class="ce" href="{if $nav.childmenu}javascript:;{else}{$nav.link}{/if}">{$nav.name}</a>
+                {if $nav.childmenu}
+                <ul>
+                    {foreach key=key item=nav_list from=$nav.childmenu}
+                    <li>
+                        <a class="er" href="{if $nav_list.childmenu}javascript:;{else}{$nav_list.link}{/if}">{$nav_list.name}</a>
+                        {if $nav_list.childmenu}
+                        <ul>
+                            {foreach key=key item=nav_listsec from=$nav_list.childmenu}
+                            <li><a href="{$nav_listsec.link}">{$nav_listsec.name}</a></li>
+                            {/foreach}
+                        </ul>
+                        {/if}
+                    </li>
+                    {/foreach}
+                </ul>
+                {/if}
+            </li>
+            {/foreach}
+        </ul>
+    </div>
+   {else}
+    <div class="h3">
+        <h3>{$_aside.pagenavs.name}</h3>
+    </div>
+    <div id="navlist" class="list">
+        <ul id="navtop">
+            {foreach item=nav from=$_aside.pagenavs.childmenu}
+            <li>
+                <a  href="{if $nav.childmenu}javascript:;{else}{$nav.link}{/if}">{$nav.name}</a>
+                {if $nav.childmenu}
+                <ul>
+                    {foreach key=key item=nav_list from=$nav.childmenu}
+                    <li>
+                        <a href="{if $nav_list.childmenu}javascript:;{else}{$nav_list.link}{/if}">{$nav_list.name}</a>
+                        {if $nav_list.childmenu}
+                        <ul>
+                            {foreach key=key item=nav_listsec from=$nav_list.childmenu}
+                            <li><a href="{$nav_listsec.link}">{$nav_listsec.name}</a></li>
+                            {/foreach}
+                        </ul>
+                        {/if}
+                    </li>
+                    {/foreach}
+                </ul>
+                {/if}
+            </li>
+            {/foreach}
+        </ul>
+    </div>
+    {/if}
+
+</div>

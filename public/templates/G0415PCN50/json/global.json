@@ -1,0 +1,193 @@
+{
+
+    "slidepics": {
+        "value": [
+            {
+                "title": "banner",
+                "image": "images/proxx-pic.jpg",
+                "link": "article/1.html",
+                "description": "banner1"
+            },
+            {
+                "title": "测试图2",
+                "image": "images/proxx-pic.jpg",
+                "link": "http://www.baidu.com"
+            },
+            {
+                "title": "测试图3",
+                "image": "images/proxx-pic.jpg",
+                "link": "http://www.baidu.com"
+            },
+            {
+                "title": "测试图4",
+                "image": "images/proxx-pic.jpg",
+                "link": "http://www.baidu.com"
+            },
+            {
+                "title": "测试图5",
+                "image": "images/proxx-pic.jpg",
+                "link": "http://www.baidu.com"
+            }
+        ],
+        "description": "内页多图轮播",
+        "type": "images",
+        "config": {
+            "width": 492,
+            "height": 327
+
+        }
+    },
+    "nbanner1": {
+        "value":
+            {
+                "title": "nbanner1",
+                "image": "images/aboutBanner.jpg",
+                "link": "article/1.html",
+                "description": "banner1"
+            },
+        "description": "图片列表类型栏目页面大图",
+        "type": "image",
+        "config": {
+            "width": 1920,
+            "height": 311
+        }
+    },
+    "nbanner2": {
+        "value":
+        {
+            "title": "nbanner2",
+            "image": "images/aboutBanner.jpg",
+            "link": "article/1.html",
+            "description": "banner1"
+        },
+        "description": "图文混排列表类型栏目页面大图",
+        "type": "image",
+        "config": {
+            "width": 1920,
+            "height": 311
+        }
+    },
+    "nbanner3": {
+        "value":
+        {
+            "title": "nbanner3",
+            "image": "images/aboutBanner.jpg",
+            "link": "article/1.html",
+            "description": "banner1"
+        },
+        "description": "内容单页栏目类型页面大图",
+        "type": "image",
+        "config": {
+            "width": 1920,
+            "height": 311
+        }
+    },
+    "nbanner4": {
+        "value":
+        {
+            "title": "nbanner4",
+            "image": "images/aboutBanner.jpg",
+            "link": "article/1.html",
+            "description": "banner1"
+        },
+        "description": "文字列表类型栏目页面大图",
+        "type": "image",
+        "config": {
+            "width": 1920,
+            "height": 311
+        }
+    },
+    "nbanner5": {
+        "value":
+        {
+            "title": "nbanner5",
+            "image": "images/aboutBanner.jpg",
+            "link": "article/1.html",
+            "description": "banner1"
+        },
+        "description": "新闻内容页面大图",
+        "type": "image",
+        "config": {
+            "width": 1920,
+            "height": 311
+        }
+    },
+    "nbanner6": {
+        "value":
+        {
+            "title": "nbanner6",
+            "image": "images/aboutBanner.jpg",
+            "link": "article/1.html",
+            "description": "banner1"
+        },
+        "description": "产品内容页面大图",
+        "type": "image",
+        "config": {
+            "width": 1920,
+            "height": 311
+        }
+    },
+    "nbanner7": {
+        "value":
+        {
+            "title": "nbanner6",
+            "image": "images/aboutBanner.jpg",
+            "link": "article/1.html",
+            "description": "banner1"
+        },
+        "description": "搜索结果页面大图",
+        "type": "image",
+        "config": {
+            "width": 1920,
+            "height": 311
+        }
+    },
+
+    "foot":{
+        "description":"相关链接",
+        "value":
+            [
+            {
+                "title": "测试图1",
+                "image": "images/lianjie1_35.jpg",
+                "link": "http://www.baidu.com",
+                "description": "banner1"
+            },
+            {
+                "title": "测试图2",
+                "image": "images/lianjie2_37.jpg",
+                "link": "http://www.baidu.com"
+            },
+            {
+                "title": "测试图3",
+                "image": "images/lianjie3_39.jpg",
+                "link": "http://www.baidu.com"
+            },
+            {
+                "title": "测试图4",
+                "image": "images/lianjie4_41.jpg",
+                "link": "http://www.baidu.com"
+            },
+            {
+                "title": "测试图5",
+                "image": "images/lianjie5_43.jpg",
+                "link": "http://www.baidu.com"
+            },
+            {
+                "title": "测试图6",
+                "image": "images/lianjie6_45.jpg",
+                "link": "http://www.baidu.com"
+            },
+            {
+                "title": "测试图7",
+                "image": "images/lianjie5_43.jpg",
+                "link": "images/lianjie7_47.jpg"
+            }
+            ],
+        "type":"images",
+        "config":{
+            "width":89,
+            "height":39
+        }
+    }
+}

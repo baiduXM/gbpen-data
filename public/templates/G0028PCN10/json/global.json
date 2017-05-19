@@ -1,0 +1,103 @@
+{
+	"footclass":{
+		"value": [{
+			"title": "西餐类 <span>Western class</span>",
+			"image": "images/western.jpg",
+			"link": "article/1.html",
+			"description": "友情链接1"
+		}, {
+			"title": "中餐类 <span>Chinese class</span>",
+			"image": "images/chinese.jpg",
+			"link": "http://www.baidu.com"
+		},{
+			"title": "甜点类 <span>Dessert class</span>",
+			"image": "images/dessert.jpg",
+			"link": "http://www.baidu.com"
+		}],
+		"description": "友情链接",
+		"type": "images",
+		"config": {
+			"width": 322,
+			"height": 151
+		}
+	},
+	"slidepics": {
+		"value": [{
+			"title": "banner",
+			"image": "images/banner.jpg",
+			"link": "article/1.html",
+			"description": "banner1"
+		}, {
+			"title": "测试图2",
+			"image": "images/banner.jpg",
+			"link": "http://www.baidu.com"
+		},{
+			"title": "测试图3",
+			"image": "images/banner.jpg",
+			"link": "http://www.baidu.com"
+		}, {
+			"title": "测试图2",
+			"image": "images/banner.jpg",
+			"link": "http://www.baidu.com"
+		}],
+		"description": "头部大轮滚图",
+		"type": "images",
+		"config": {
+			"width": 1920,
+			"height": 379
+		}
+	},
+	"links": {
+		"value": [{
+			"title": "中国站长站",
+			"image": "images/1.jpg",
+			"link": "article/1.html",
+			"description": "友情链接1"
+		}, {
+			"title": "华军软件园",
+			"image": "images/2.jpg",
+			"link": "http://www.baidu.com"
+		},{
+			"title": "网易163",
+			"image": "images/3.jpg",
+			"link": "http://www.baidu.com"
+		}, {
+			"title": "微软中国",
+			"image": "images/4.jpg",
+			"link": "http://www.baidu.com"
+		},{
+			"title": "优酷网",
+			"image": "images/5.jpg",
+			"link": "http://www.baidu.com"
+		},{
+			"title": "天空软件站",
+			"image": "images/5.jpg",
+			"link": "http://www.baidu.com"
+		},{
+			"title": "雅虎中国",
+			"image": "images/5.jpg",
+			"link": "http://www.baidu.com"
+		},{
+			"title": "百度",
+			"image": "images/5.jpg",
+			"link": "http://www.baidu.com"
+		}],
+		"description": "友情链接",
+		"type": "images",
+		"config": {
+			"width": 100,
+			"height": 100
+		}
+	},
+	"telOff":{
+		"description":"底部是否显示“火热加盟热线”,默认1,显示",
+		"value":"1",
+		"type":"text"
+	},
+	"telDes":{
+		"description":"填写'0',则填写此处",
+		"value":" ",
+		"type":"text"
+	}
+	
+}

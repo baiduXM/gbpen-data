@@ -1,0 +1,28 @@
+<footer>
+    <div id="footer">
+        <div class="foot">
+            <div class="foot-pic">
+                <ul>
+                    {foreach item=foot from=$global.foot}
+                    <li><a href="$foot.link"><img src="{$foot.image}" alt=""/></a></li>
+                    {/foreach}
+                    <!--<li><a href=""><img src="images/lianjie1_35.jpg" alt=""/></a></li>
+                    <li><a href=""><img src="images/lianjie2_37.jpg" alt=""/></a></li>
+                    <li><a href=""><img src="images/lianjie3_39.jpg" alt=""/></a></li>
+                    <li><a href=""><img src="images/lianjie4_41.jpg" alt=""/></a></li>
+                    <li><a href=""><img src="images/lianjie5_43.jpg" alt=""/></a></li>
+                    <li><a href=""><img src="images/lianjie6_45.jpg" alt=""/></a></li>
+                    <li><a href=""><img src="images/lianjie7_47.jpg" alt=""/></a></li>-->
+                </ul>
+            </div>
+            <div class="banquan">
+                <div class="nr">
+                    {$footprint}
+                </div>
+            </div>
+
+        </div>
+    </div>
+</footer>
+
+{$footscript}

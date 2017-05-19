@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script type="text/javascript">
+    // 跳转手机页面
+    {if $site_another_url}
+        if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+            location.href = '{$site_another_url}';
+        }
+    {/if}
+    </script>
+ 
+
+<meta name="keywords" content="{$keywords}"/>
+<meta name="description" content="{$description}"/>
+<link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Language" content="zh-CN">
+<link href="{$site_url}css/css.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="{$site_url}js/jquery-1.11.3.js"></script>
+<script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.js"></script>
+<script type="text/javascript" src="http://common.mn.sina.com.cn/public/resource/lib/jquery.jcarousellite.js">
+</script>
+
+<script type="text/javascript" src="{$site_url}js/global.js"></script>
+<script type="text/javascript" src="{$site_url}js/index.js"></script>
+<title>{$title}</title>
+
+</head>
+
+<body>
+<div class="wrap">
+<!-- 导入头部文件 -->
+    {include file='./_header.html'}
+     <div class="ny-con">
+       <div class="side-left fl">
+           <i class="topbg"></i><i class="botbg"></i>
+           <div class="ny-tit">
+               <h1><span><span class="cn">{$list.name}</span><span class="en">{$list.en_name}</span></span><i></i></h1>
+           </div>
+           <div class="locationbox">
+               <div class="location">
+                   当前位置：<a href="{$site_url}">首页</a>
+                               {foreach item=nav from=$posnavs}
+                                 &gt;&gt; <a href="{$nav.link}">{$nav.name}</a>
+                               {/foreach}
+               </div>
+           </div>
+           <div class="main">
+                      <div class="search-con">
+                           {if $search.total eq 0}
+                            <p>没有查找到相关数据！</p>
+                           {else}
+                            <p>以下是您输入的关键字“<span>{$search.keyword}</span>”，搜索结果有{$search.total}条</p>
+                            <ul class="ny-newlist">
+                                {foreach item=article from=$search.data}
+                                <li><a href="{$article.link}">{$article.title}<span class="fr">[{$article.pubdate}]</span></a></li>
+                                {if $article@index+1 eq 10}{break}{/if}
+                                {/foreach}
+                            </ul>                              
+                           {/if}
+                                  
+                      </div>
+					   <div class="paging">
+                            <a href="{$page_links.prev_link}">&laquo; 上一页</a> {foreach item=near_link key=near_page from=$page_links.nears_link} {if $near_page == $page_links.current_page}
+                            <a class="current" style="color:#cc1835;">{$near_page}</a></li>
+                            {else}
+                            <a href="{$near_link}">{$near_page}</a></li>
+                            {/if} {/foreach}
+                            <a href="{$page_links.next_link}">下一页 &raquo;</a>
+                        </div>
+           </div>
+        </div>
+  
+        <div class="side-right fr">
+            {include file='./_pagenavs_sub3.html'}
+           
+        </div>
+
+     </div>
+     {include file='./_footer.html'}
+
+</div>
+</body>
+</html>
+              
+                 
