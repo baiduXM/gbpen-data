@@ -1,0 +1,19 @@
+<footer>
+    <div id="footer">
+        <div class="foot">
+            <div class="yqlj">
+                <dl>
+                    <dt>友情链接：</dt>
+                    {foreach item=link from=$_footer.foot}
+                    <dd><a href="">{$link.description}</a></dd>
+                    {/foreach}
+                </dl>
+            </div>
+            <div class="footprint">
+                <script src="{$site_url}js/move.js"></script>
+                {$footprint}
+            </div>
+        </div>
+    </div>
+</footer>
+{$footscript}
