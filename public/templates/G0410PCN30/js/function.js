@@ -92,7 +92,7 @@ $(document).ready(function () {
         var galleryTop = new Swiper('.gallery-top', {
             autoplayDisableOnInteraction : false,
             loop:true,
-            autoplay: 34000,
+            autoplay: 4000,
             loopedSlides: 5, //looped slides should be the same
             direction : 'vertical'
         });
@@ -101,7 +101,6 @@ $(document).ready(function () {
             slidesPerView: 3,
             touchRatio: 0.2,
             loop:true,
-            autoplay: 4000,
             loopedSlides: 5, //looped slides should be the same
             slideToClickedSlide: true,
             autoplayDisableOnInteraction : false,

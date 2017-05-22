@@ -33,15 +33,15 @@
     <meta name="description" content="{$description}" />
     <link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
     <title>{$title}</title>
-    <link rel="stylesheet" href="{$site_url}/css/animate.min.css"/>
-    <link rel="stylesheet" href="{$site_url}/css/swiper-3.4.1.min.css"/>
-    <link rel="stylesheet" href="{$site_url}/css/public.css"/>
+    <link rel="stylesheet" href="{$site_url}css/animate.min.css"/>
+    <link rel="stylesheet" href="{$site_url}css/swiper-3.4.1.min.css"/>
+    <link rel="stylesheet" href="{$site_url}css/public.css"/>
 
-    <script src="{$site_url}/js/swiper-3.4.1.min.js"></script>
-    <script src="{$site_url}/js/swiper.animate1.0.2.min.js"></script>
+    <script src="{$site_url}js/swiper-3.4.1.min.js"></script>
+    <script src="{$site_url}js/swiper.animate1.0.2.min.js"></script>
     <script src="{$site_url}js/TouchSlide.1.1.js"></script>
     <script src="{$site_url}js/jquery-1.9.1.min.js"></script>
-    <script src="{$site_url}/js/function.js"></script>
+    <script src="{$site_url}js/function.js"></script>
     <script type="text/javascript">
         window.addEventListener('load', function(){
             setTimeout(function(){ window.scrollTo(0, 1); }, 100);
@@ -56,12 +56,17 @@
         <div class="iconfont s_nav" id="quickbar-showcats">&#xe603;</div>
     </div>
     <div class="searchresult">
+        {if $search.total eq 0}
+        <p class="search_res">没有查找到相关数据！</p>
+        {else}
         <span class="result">以下是关键字“<em>{$search.keyword}</em>“的搜索结果</span>
         <ul class="jg">
-            <li><a href="">sdfasdf打发第三方</a></li>
-            <li><a href="">第三方啊大搜房</a></li>
-            <li><a href="">fgdfg</a></li>
+            {foreach item=article from=$search.data}
+            <li><a href="{$article.link}">{$article.title}</a></li>
+            {if $article@index+1 eq 10}{break}{/if}
+            {/foreach}
         </ul>
+        {/if}
     </div>
     {include file="./_footer.html"}
 </div>

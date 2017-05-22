@@ -52,9 +52,15 @@
                             <span class="result">以下是关键字“<em>{$search.keyword}</em>“的搜索结果</span>
                             <div class="list-text">
                                 <div class="content">
-                                    <ul>
-                                        {foreach item=article from=$list.data}
+                                   <!-- <ul>
+                                        {foreach item=article from=$search.data}
                                         <li><span>{$article.pubtimestamp|date_format:'%Y-%m-%d'}</span><a href="{$article.link}">{$article.title}</a></li>
+                                        {if $article@index+1 eq 10}{break}{/if}
+                                        {/foreach}
+                                    </ul>-->
+                                    <ul>
+                                        {foreach item=article from=$search.data}
+                                        <li><a href="{$article.link}">{$article.title}</a></li>
                                         {if $article@index+1 eq 10}{break}{/if}
                                         {/foreach}
                                     </ul>

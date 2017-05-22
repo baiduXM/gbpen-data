@@ -59,7 +59,7 @@
             <span class="result">以下是关键字“<em>{$search.keyword}</em>“的搜索结果</span>
             <div class="content">
                 <ul>
-                    {foreach item=arcitle from=$list.data}
+                    {foreach item=arcitle from=$search.data}
                     <li>
                         <a href="{$arcitle.link}">
                             <h3 class="h3">{$arcitle.title}</h3>
