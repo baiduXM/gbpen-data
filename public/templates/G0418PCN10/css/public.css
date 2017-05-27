@@ -1,0 +1,1124 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: "微软雅黑","Microsoft Yahei";
+    font-size: 14px;
+    background: #ffffff;
+}
+a{
+    text-decoration: none;
+    display: block;
+    border: none;
+}
+li{
+    list-style: none;
+}
+h1,h2,h3,h4,h5,h6{
+    font-weight: normal;
+}
+img{
+    border: none;
+}
+.clear{
+    clear: both;
+}
+.transition{
+    -webkit-transition: all  0.2s ease-out;
+    -moz-transition: all  0.2s ease-out;
+    -o-transition: all  0.2s ease-out;
+    transition: all  0.2s ease-out;
+}
+.transition1{
+    -webkit-transition: all  1s ease-out 0.5s;
+    -moz-transition: all  1s ease-out 0.5s;
+    -o-transition: all  1s ease-out 0.5s;
+    transition: all  1s ease-out 0.5s;
+}
+.middle{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 0;
+}
+.max{
+    max-width: 100%;
+    max-height: 100%;
+}
+.nowrap{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.index-wrap{
+    width: 100%;
+    overflow: hidden;
+}
+
+
+
+@-webkit-keyframes swing{
+    20%{-webkit-transform:rotate(15deg)}
+    40%{-webkit-transform:rotate(-10deg)}
+    60%{-webkit-transform:rotate(5deg)}
+    80%{-webkit-transform:rotate(-5deg)}
+    100%{-webkit-transform:rotate(0deg)}
+}
+@-moz-keyframes swing {
+    20% {
+        -moz-transform: rotate(15deg)
+    }
+    40% {
+        -moz-transform: rotate(-10deg)
+    }
+    60% {
+        -moz-transform: rotate(5deg)
+    }
+    80% {
+        -moz-transform: rotate(-5deg)
+    }
+    100% {
+        -moz-transform: rotate(0deg)
+    }
+}
+
+
+
+.footer{
+    width: 100%;
+}
+.footer .link{
+    width: 100%;
+    background: #ffffff;
+}
+.footer .link .link_c{
+    width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.footer .link .link_c .h3{
+    width: 200px;
+    height: 74px;
+    line-height: 74px;
+    text-align: center;
+    font-size: 18px;
+    color: #749257;
+    float: left;
+    display: inline-block;
+}
+.footer .link .link_c ul{
+    overflow: hidden;
+    zoom: 1;
+}
+.footer .link .link_c ul li{
+    display: inline-block;
+    width: 94px;
+    height: 41px;
+    border: 1px solid #749257;
+    float: left;
+    margin: 16px 40px 16px 0;
+}
+
+
+
+
+.footer .foot{
+    width: 100%;
+    background: #242323;
+}
+.footer .foot .foot_c{
+    width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 14px;
+    color: #9d9d9d;
+}
+.footer .foot .foot_c a{
+    color: #9d9d9d;
+}
+.footer .foot .foot_c a:hover{
+    color: #ffffff;
+}
+
+
+.index{
+    width: 100%;
+    background: #f0f0f0;
+}
+.index_header{
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+
+.header{
+    width: 100%;
+    height: 90px;
+}
+.header .nav{
+    width: 100%;
+    text-align: center;
+}
+.header .nav>ul{
+    width: 100%;
+    display: inline-block;
+    height: 90px;
+}
+.header .nav>ul>li{
+    height: 90px;
+    padding: 13px 0;
+    box-sizing: border-box;
+    float: left;
+    position: relative;
+}
+.header .nav>ul>li>a{
+    color: #666666;
+    display: block;
+    width: 100%;
+    text-align: center;
+    line-height: 64px;
+    position: relative;
+    font-size: 16px;
+    font-weight: bolder;
+    white-space: nowrap;
+    overflow: hidden;
+
+    transform-origin:top center;
+    -webkit-transform-origin:top center;
+    -moz-transform-origin:top center;
+}
+.header .nav>ul>li:hover>a{
+    background: url("../images/nav_bg.png");
+    background-size: 100% 100%;
+    color: #f0f0f0;
+    -webkit-animation:swing 1s .2s ease both;
+    -moz-animation:swing 1s .2s ease both;
+}
+.header .nav>ul>li>ul{
+    position: absolute;
+    top: 90px;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    background: #f0f0f0;
+    display: none;
+    box-shadow: 0 1px 8px #ccc;
+}
+.header .nav>ul>li>ul>li{
+    width: 100%;
+    height: 30px;
+    border-top: 1px solid #000;
+}
+.header .nav>ul>li>ul>li:first-child{
+    border-top: 0;
+}
+.header .nav>ul>li>ul>li>a{
+    display: block;
+    width: 100%;
+    line-height: 30px;
+    text-align: center;
+    font-size: 14px;
+    color: #666666;
+}
+.header .nav>ul>li>ul>li>a:hover{
+    background: #c22a29;
+    color: #f0f0f0;
+}
+
+.banner{
+    width: 1200px;
+    height: 590px;
+    margin: 0 auto;
+    position: relative;
+}
+.banner .swiper-container{
+    width: 1200px;
+    height: 590px;
+    overflow: hidden;
+}
+
+.banner .swiper-container a{
+    width: 1200px;
+    height: 590px;
+    position: relative;
+}
+.banner .swiper-container a img{
+    width: 1200px;
+    height: 590px;
+}
+.banner .swiper-container .pagination{
+    height: 40px;
+    position: absolute;
+    left: 0;
+    padding-right: 50px;
+    box-sizing: border-box;
+    bottom:5px;
+    width: 100%;
+    text-align: right;
+}
+.banner .swiper-container .swiper-pagination-switch{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: #c22a29;
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 12px;
+    text-align: center;
+    line-height: 20px;
+    color: #ffffff;
+}
+.banner .swiper-container .swiper-active-switch{
+    background: #ffffff;
+    color: #c22a29;
+}
+
+.logo{
+    width: 370px;
+    height: 590px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 50;
+
+    transform-style: preserve-3d;
+    prespective: 100px;
+}
+.logo a{
+    width: 370px;
+    height: 590px;
+    line-height: 0;
+
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+    -webkit-transform: rotateY(120deg);
+    -moz-transform: rotateY(120deg);
+    -ms-transform: rotateY(120deg);
+    -o-transform: rotateY(120deg);
+    transform:rotateY(120deg);
+
+    transform-origin:left
+}
+.logo .rotate{
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    transform:rotateY(0deg);
+}
+.logo a img{
+    width: 370px;
+    height: 590px;
+}
+
+.sec1{
+    width: 1200px;
+    height: 65px;
+    padding: 16px 0;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+.sec1 .h3{
+    width: 130px;
+    height: 32px;
+    float: left;
+
+    position: relative;
+    margin-right: 50px;
+}
+.sec1 .h3 a{
+    font-size: 18px;
+    color: #c22a29;
+    line-height: 32px;
+    text-align: right;
+}
+.sec1 .h3:before{
+    content: url("../images/tb1.png");
+    display: inline-block;
+    width: 30px;
+    height: 32px;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    -webkit-transform-origin:top center;
+    -moz-transform-origin: top center;
+    transform-origin: top center;
+}
+.sec1 .h3:hover::before{
+    -webkit-animation:swing 1s .2s ease both;
+    -moz-animation:swing 1s .2s ease both;
+}
+
+.sec1 .news{
+    width: 1020px;
+    height: 32px;
+    overflow: hidden;
+}
+.sec1 .news .swiper-container1{
+    width: 1020px;
+    height: 32px;
+    overflow: hidden;
+}
+.sec1 .news .swiper-container1 a{
+    padding-right: 15px;
+    padding-left: 35px;
+    box-sizing: border-box;
+    line-height: 32px;
+    font-size: 14px;
+    color: #666666;
+    text-align: left;
+    position: relative;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.sec1 .news .swiper-container1 a:before{
+    content: url("../images/tb2.png");
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 26px;
+    height: 17px;
+    margin-top: 3px;
+}
+
+
+
+.aside{
+    width: 100%;
+    background: #f0f0f0;
+}
+.aside .aisie_header{
+    width: 1200px;
+    margin: 0 auto;
+}
+.aside_banner{
+    width: 1200px;
+    height: 260px;
+    position: relative;
+}
+.aside_banner .swiper-container2{
+    width: 1200px;
+    height: 260px;
+    overflow: hidden;
+}
+.aside_banner .swiper-container2 a{
+    width: 1200px;
+    height: 260px;
+    position: relative;
+}
+.aside_banner .swiper-container2 a img{
+    width: 1200px;
+    height: 260px;
+}
+.aside_banner .swiper-container2 .pagination {
+    height: 20px;
+    position: absolute;
+    left: 0;
+    text-align: center;
+    bottom: 5px;
+    width: 100%;
+    cursor: pointer;
+}
+.aside_banner .swiper-container2 .swiper-pagination-switch{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    background: #c22a29;
+    margin: 0 5px;
+    cursor: pointer;
+}
+.aside_banner .swiper-container2 .swiper-active-switch{
+    background: #ffffff;
+    color: #c22a29;
+}
+
+.aside_logo{
+    width: 167px;
+    height: 260px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 50;
+}
+.aside_logo a{
+    width: 167px;
+    height: 260px;
+    line-height: 0;
+}
+.aside_logo a img{
+    width: 167px;
+    height: 260px;
+}
+
+
+.aside_title{
+    width: 100%;
+    background: #ffffff;
+    text-align: center;
+}
+.aside_title .h3{
+    width: 1200px;
+    margin: 0 auto;
+}
+.aside_title .h3 h3{
+    display: inline-block;
+    color: #c22a29;
+    line-height: 54px;
+    max-width: 1200px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-weight: bold;
+    position: relative;
+}
+.aside_title h3:before{
+    content: " ";
+    width: 6px;
+    height: 6px;
+    position: absolute;
+    left: -15px;
+    top: 50%;
+    background: #c22a29;
+    margin-top: -3px;
+
+    -moz-border-radius: 6px; /* Firefox */
+    -webkit-border-radius: 6px; /* Safari 和 Chrome */
+    border-radius: 6px; /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */
+    z-index:2;
+    behavior: url(ie-css3.htc); /* 通知IE浏览器调用脚本作用于'box'类 */
+}
+.aside_title h3:after{
+    content: " ";
+    width: 6px;
+    height: 6px;
+    position: absolute;
+    right: -15px;
+    top: 50%;
+    background: #c22a29;
+    margin-top: -3px;
+
+    -moz-border-radius: 6px; /* Firefox */
+    -webkit-border-radius: 6px; /* Safari 和 Chrome */
+    border-radius: 6px; /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */
+    z-index:2;
+    behavior: url(ie-css3.htc); /* 通知IE浏览器调用脚本作用于'box'类 */
+}
+
+
+.aside_c{
+    width: 1200px;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+
+.aside_nav{
+    width: 100%;
+    text-align: center;
+}
+.aside_nav>ul{
+    display: inline-block;
+}
+.aside_nav>ul>li{
+    width: 106px;
+    height: 42px;
+    float: left;
+    margin-left: 20px;
+    position: relative;
+}
+.aside_nav>ul>li:first-child{
+    margin-left: 0;
+}
+.aside_nav>ul>li>a{
+    width: 100%;
+    height: 100%;
+    line-height: 42px;
+    text-align: center;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 16px;
+    background: #242323;
+
+    max-width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+    -moz-border-radius: 8px; /* Firefox */
+    -webkit-border-radius: 8px; /* Safari 和 Chrome */
+    border-radius: 8px; /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */
+    z-index:2;
+    position: relative;
+    behavior: url(ie-css3.htc); /* 通知IE浏览器调用脚本作用于'box'类 */
+}
+.aside_nav>ul>li:hover>a{
+    background: #c22a29;
+}
+.aside_nav>ul>li>ul{
+    position: absolute;
+    top: 42px;
+    left: 50%;
+    width: 80px;
+    margin-left: -40px;
+    display: none;
+    padding-top: 10px;
+}
+.aside_nav>ul>li>ul>li{
+    width: 80px;
+    height: 35px;
+    margin-bottom: 2px;
+}
+.aside_nav>ul>li>ul>li>a{
+    width: 100%;
+    height: 100%;
+    line-height: 35px;
+    text-align: center;
+    color: #666666;
+    font-size: 14px;
+    border: 1px solid #a6a5a5;
+    box-sizing: border-box;
+
+    max-width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+    -moz-border-radius: 8px; /* Firefox */
+    -webkit-border-radius: 8px; /* Safari 和 Chrome */
+    border-radius: 8px; /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */
+    z-index:2;
+    behavior: url(ie-css3.htc); /* 通知IE浏览器调用脚本作用于'box'类 */
+    position: relative;
+}
+.aside_nav>ul>li>ul>li>a:hover{
+    color: #c22a29;
+    border: 1px solid #c22a29;
+}
+
+
+
+
+
+/* list-page */
+.list-page{
+    width: 100%;
+    font-size: 14px;
+    color: #666666;
+    line-height: 28px;
+    padding-top: 80px;
+}
+.list-page img{
+    max-width: 100%;
+}
+
+
+/* list-image */
+.list-image{
+    width: 100%;
+}
+.list-image .content{
+    width: 100%;
+    height: 550px;
+    overflow: hidden;
+    padding: 90px 0;
+}
+.list-image .content ul{
+    width: 1266px;
+    height: 550px;
+}
+.list-image .content ul li{
+    width: 250px;
+    height: 250px;
+    float: left;
+    margin-right: 64px;
+    margin-bottom: 48px;
+    overflow: hidden;
+    border: 1px solid #cccccc;
+
+    -moz-border-radius: 250px; /* Firefox */
+    -webkit-border-radius: 250px; /* Safari 和 Chrome */
+    border-radius: 250px; /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */
+    z-index:2;
+    position: relative;
+    behavior: url(ie-css3.htc); /* 通知IE浏览器调用脚本作用于'box'类 */
+}
+.list-image .content ul li a{
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+
+    -moz-border-radius: 250px; /* Firefox */
+    -webkit-border-radius: 250px; /* Safari 和 Chrome */
+    border-radius: 250px; /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */
+    z-index:2;
+    position: relative;
+    behavior: url(ie-css3.htc); /* 通知IE浏览器调用脚本作用于'box'类 */
+}
+.list-image .content ul li a .img{
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -125px;
+    margin-top: -125px;
+
+
+    -moz-border-radius: 250px; /* Firefox */
+    -webkit-border-radius: 250px; /* Safari 和 Chrome */
+    border-radius: 250px; /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */
+    z-index:3;
+    behavior: url(ie-css3.htc); /* 通知IE浏览器调用脚本作用于'box'类 */
+}
+.list-image .content ul li a .img img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -125px;
+    margin-top: -125px;
+    width: 250px;
+    height: 250px;
+
+    -moz-border-radius: 250px; /* Firefox */
+    -webkit-border-radius: 250px; /* Safari 和 Chrome */
+    border-radius: 250px; /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */
+    z-index:3;
+    behavior: url(ie-css3.htc); /* 通知IE浏览器调用脚本作用于'box'类 */
+}
+.list-image .content ul li a .img_border{
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 2px solid #c22a29;
+    box-sizing: border-box;
+
+    -moz-border-radius: 250px; /* Firefox */
+    -webkit-border-radius: 250px; /* Safari 和 Chrome */
+    border-radius: 250px; /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */
+    z-index:2;
+    behavior: url(ie-css3.htc); /* 通知IE浏览器调用脚本作用于'box'类 */
+
+    -ms-transform:scale(0.6,0.6);
+    -moz-transform:scale(0.6,0.6);
+    -webkit-transform:scale(0.7,0.7);
+    -o-transform:scale(0.6,0.6);
+}
+.list-image .content ul li a .change{
+    -ms-transform:scale(1,1);
+    -moz-transform:scale(1,1);
+    -webkit-transform:scale(1,1);
+    -o-transform:scale(1,1);
+}
+
+
+
+
+
+/* page */
+.page{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+    overflow: hidden;
+}
+.page>a{
+    display: inline-block;
+    color: #333333;
+    margin-left: 15px;
+    vertical-align: middle;
+    line-height: 20px;
+}
+.page>a:first-child{
+    margin-left: 0;
+}
+.page>ul{
+    display: inline-block;
+    margin-left: 15px;
+    overflow: hidden;
+    vertical-align: middle;
+}
+.page>ul li{
+    float: left;
+    margin-right: 15px;
+    width: 20px;
+    height: 20px;
+    background: #ffffff;
+    border: 1px solid #cccccc;
+
+    -moz-border-radius: 20px; /* Firefox */
+    -webkit-border-radius: 20px; /* Safari 和 Chrome */
+    border-radius: 20px; /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */
+    z-index:2;
+    behavior: url(ie-css3.htc); /* 通知IE浏览器调用脚本作用于'box'类 */
+    position: relative;
+}
+.page>ul li:hover{
+    border: 1px solid #c22a29;
+    background: #c22a29;
+}
+.page>ul li:hover a{
+    color: #ffffff;
+}
+.page>ul li:last-child{
+    margin-right: 0;
+}
+.page>ul li a{
+    color: #333333;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+}
+.page>a:hover{
+    color: #c22a29;
+}
+.page>ul .cho{
+    border: 1px solid #c22a29;
+    background: #c22a29;
+}
+.page>ul .cho a{
+    color: #ffffff;
+}
+
+
+
+/* list-imagetext */
+.list-imagetext{
+    width: 100%;
+}
+.list-imagetext .content{
+    width: 100%;
+    overflow: hidden;
+    margin: 80px 0;
+}
+.list-imagetext .content ul{
+    width: 100%;
+}
+.list-imagetext .content ul li{
+    width: 100%;
+    height: 230px;
+    padding: 30px 0;
+    border-bottom: 1px dashed #cccccc;
+}
+.list-imagetext .content ul li .img{
+    float: left;
+    width: 356px;
+    height: 230px;
+}
+.list-imagetext .content ul li .img a{
+    width: 356px;
+    height: 230px;
+    line-height: 0;
+}
+.list-imagetext .content ul li .detail{
+    width: 820px;
+    height: 230px;
+    float: right;
+}
+.list-imagetext .content ul li .detail .h3{
+    width: 100%;
+}
+.list-imagetext .content ul li .detail .h3 a{
+    width: 100%;
+    line-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 16px;
+    color: #666666;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.list-imagetext .content ul li .detail .h3 a:hover{
+    color: #c22a29;
+}
+.list-imagetext .content ul li .detail .nr{
+    width: 100%;
+    height: 90px;
+    font-size: 14px;
+    line-height: 30px;
+    color: #666666;
+    overflow: hidden;
+}
+.list-imagetext .content ul li .detail .rq{
+    display: inline-block;
+    float: right;
+    line-height: 30px;
+    margin-top: 40px;
+    color: #666666;
+}
+
+
+
+/* list-text */
+.list-text{
+    width: 100%;
+}
+.list-text .content{
+    width: 100%;
+    overflow: hidden;
+    margin: 80px 0;
+}
+.list-text .content ul{
+    width: 100%;
+}
+.list-text .content ul li{
+    width: 100%;
+    overflow: hidden;
+    border-bottom: 1px dashed #cccccc;
+    padding-left: 30px;
+    box-sizing: border-box;
+    position: relative;
+}
+.list-text .content ul li:before{
+    content: "";
+    width: 6px;
+    height: 6px;
+    background: #6a6a6a;
+    position: absolute;
+    top: 50%;
+    margin-top: -3px;
+    left: 10px;
+
+    -moz-border-radius: 6px; /* Firefox */
+    -webkit-border-radius: 6px; /* Safari 和 Chrome */
+    border-radius: 6px; /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */
+    z-index:2;
+    behavior: url(ie-css3.htc); /* 通知IE浏览器调用脚本作用于'box'类 */
+}
+.list-text .content ul li a{
+    font-size: 14px;
+    color: #6a6a6a;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    line-height: 55px;
+}
+.list-text .content ul li a:hover{
+    color: #c22a29;
+}
+.list-text .content ul li span{
+    float: right;
+    margin-left: 30px;
+    color: #6a6a6a;
+    line-height: 55px;
+}
+
+
+
+/* page-article */
+.page-article{
+    width: 100%;
+    margin-top: 10px;
+}
+.page-article a{
+    display: block;
+    max-width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: #666666;
+    font-size: 14px;
+    line-height: 30px;
+}
+.page-article a:hover{
+    color: #c22a29;
+}
+
+
+
+/* content-news */
+.content-news{
+    width: 100%;
+}
+.content-news .content{
+    width: 100%;
+    margin-top: 80px;
+}
+.content-news{
+    width: 100%;
+}
+.content-news .content{
+    width: 100%;
+    overflow: hidden;
+    padding-bottom: 10px;
+}
+.content-news .content .title{
+    width: 100%;
+    margin-bottom: 30px;
+}
+.content-news .content .title h3{
+    text-align: center;
+    font-size: 18px;
+    color: #333333;
+    line-height: 40px;
+    margin-bottom: 20px;
+}
+.content-news .content .title .time{
+    width: 100%;
+    text-align: center;
+}
+.content-news .content .title .time span{
+    display: inline-block;
+    color: #666666;
+    font-size: 14px;
+    margin-left: 10px;
+}
+.content-news .content .title .time span a{
+    color: #c22a29;
+    font-size: 14px;
+}
+.content-news .content .detail{
+    width: 100%;
+    color: #666666;
+    font-size: 14px;
+    line-height: 28px;
+    padding: 30px 0;
+    border-bottom: 1px solid #cccccc;
+}
+.content-news .content .detail img{
+    max-width: 100%;
+}
+.content-news .content .share{
+    width: 100%;
+    text-align: right;
+    margin-top: 20px;
+}
+.content-news .content .share span{
+    display: inline-block;
+    color: #333333;
+    font-size: 12px;
+    vertical-align: middle;
+}
+
+
+
+
+/* content-product */
+.content-product{
+    width: 100%;
+}
+.content-product .content{
+    width: 100%;
+    margin-top: 80px;
+}
+.content-product .content .detail{
+    width: 100%;
+    color: #666666;
+    font-size: 14px;
+    line-height: 28px;
+    overflow: hidden;
+    padding: 30px 0;
+    border-bottom: 1px solid #cccccc;
+}
+.content-product .content .detail img{
+    max-width: 100%;
+}
+
+
+.content-product .content_banner{
+    width: 590px;
+    height: 350px;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 20px 0;
+    float: left;
+    margin-right: 30px;
+    margin-bottom: 10px;
+}
+.content-product .content_banner .swiper-container4{
+    width: 410px;
+    height: 350px;
+    overflow: hidden;
+    border: 1px solid #cccccc;
+    box-sizing: border-box;
+    float: left;
+}
+.content-product .content_banner .swiper-container4 .img{
+    width: 410px;
+    height: 350px;
+}
+.content-product .content_banner .swiper-container5{
+    width: 150px;
+    height: 350px;
+    overflow: hidden;
+    float: right;
+}
+.content-product .content_banner .swiper-container5 .img{
+    width: 150px;
+    height: 160px;
+}
+.content-product .content_banner .swiper-container5 .swiper-slide-active{
+    border: 1px solid #c22a29;
+    box-sizing: border-box;
+}
+
+
+.content-product .content_banner .swiper-container5 .swiper-button-prev{
+    position: absolute;
+    top: 25px;
+    left: 513px;
+    display: block;
+    width: 13px;
+    height: 9px;
+    background: url("../images/t1.png");
+    background-size: 100% 100%;
+}
+.content-product .content_banner .swiper-container5 .swiper-button-prev:hover{
+    background: url("../images/t2.png");
+}
+.content-product .content_banner .swiper-container5 .swiper-button-next{
+    position: absolute;
+    top: 400px;
+    right: 65px;
+    display: block;
+    width: 13px;
+    height: 9px;
+    background: url("../images/b1.png");
+    background-size: 100% 100%;
+}
+.content-product .content_banner .swiper-container5 .swiper-button-next:hover{
+    background: url("../images/b2.png");
+}
+
+
+
+
+/* searchresult */
+.searchresult{
+    width: 100%;
+    margin-top: 80px;
+}
+.searchresult .result{
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    color: #999999;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,49 @@
+<div class="header">
+		<!--<img src="{$site_url}images/leaf.png" class="leaf" />-->
+		<div class="public head">
+			<div class="logo"><a href=""><img src="{$logo}"/></a></div>
+			<div class="tel">
+				<span>服务热线</span>
+				<h3>{$contact.telephone}</h3>
+			</div>
+		</div>
+	</div>
+
+	<div class="nav">
+		<div class="public1 navbar">
+			<ul>
+				<li class="nav_li" style="width:{100/(($navs|count)+1)}%"><a href="{$site_url}">首页</a></li>
+				{foreach name=navs item=nav from=$navs}
+				<li class="{if $nav.current} current{/if} nav_li" style="width:{100/(($navs|count)+1)}%">
+					<a href="{$nav.link}">{$nav.name}</a>{if $nav.childmenu}
+					<ul class="sub">
+						{foreach key=key item=nav_list from=$nav.childmenu}
+						<li class="{if $nav.current}current{/if}"><a href="{$nav_list.link}">{$nav_list.name}</a></li>
+						{/foreach}
+					</ul>
+					{/if}
+				</li>
+				{/foreach}
+			</ul>
+		</div>
+	</div>
+
+	<div class="banner">
+		<div id="slideBox" class="slideBox" >
+			<div class="hd">
+				<ul>
+				{foreach name=slidepics item=slidepic from=$global.slidepics}
+				<li></li>
+				{/foreach}
+				</ul>
+			</div>
+			<div class="bd">
+				<ul>
+				{foreach name=slidepics item=slidepic from=$global.slidepics}
+					<li><a href="{$slidepic.link}" target="_blank"><img src="{$slidepic.image}" alt="{$slidepic.title}"/></a></li>
+				{/foreach}
+				</ul>
+			</div>
+		</div>
+		
+	</div>

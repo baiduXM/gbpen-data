@@ -21,7 +21,7 @@ a{ color:#333}
 header{}
 .start{ position:relative;  background:url(../images/header_bg.png) no-repeat; background-position:center bottom; z-index:100; height: 80px;}
 .logo{width:100%; overflow:hidden;height: 80px; z-index:100; text-align: center;/*background:#386aa7;*/}
-.logo img{ max-width: 80%; max-height:66px; }
+.logo img{ max-width: 70%; max-height:100%; }
 .header_menu{ position:absolute; right:20px; top:25%; width:5%}	
 .home{ position:absolute; left:20px; top:25%; width:5%}	
 .header_menu img,.home img{ width:100%;}																
@@ -54,7 +54,9 @@ header{}
 /*banner结束*/
 
 
-.foot{ padding:8px 58px 8px 8px; margin:0px 0px 0px; height:auto; overflow:hidden; color:#fff; text-align:left;  position:relative; background:#4a83c9}
+.foot{ margin:0px 0px 0px; height:auto; overflow:hidden; color:#fff;
+    text-align:left;  position:relative; background:#4a83c9;width:100%;}
+.foot-con{padding:8px 58px 8px 8px;}
 .foot a{ color:#fff}
 .back-top{ height:25px; width:25px; text-align:center;  overflow:hidden; right:5px; top:5px; border:1px solid #fff; border-radius:100%;  position:absolute;color:#fff; font-weight:normal; display:block;animation: lightheight 1s linear 2s infinite alternate;-webkit-animation: lightheight 1s linear infinite alternate; font-size:1.3em;}
 
