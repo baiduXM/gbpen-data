@@ -1,0 +1,31 @@
+<div id="footer">
+    <div class="foot">
+         <div class="link fl">
+              <p class="title">友情链接 / <span>LINKS</span></p>
+               <div class="linklist">
+                 {foreach item=flink from=$global.links}
+                   <a href="{$flink.link}">-&nbsp;&nbsp;{$flink.title}</a>
+                 {/foreach}
+               </div>
+         </div>
+         <div class="contact fl">
+              <p class="title">联系我们 / <span>CONTACT US</span></p>
+              <div class="con">
+                  {$global.contact}
+              </div>
+         </div>
+         <div class="gz fl">
+              <p class="title">关注我们 / <span>CONTACT US</span></p>
+              <div class="ewm tc oh">
+                {foreach item=ewm from=$global.erweima}
+                   <div class="wx"><span><img src="{$ewm.image}"></span>
+                    <p>{$ewm.title}</p></div>
+                {/foreach}
+              </div>
+         </div>
+    </div>
+    <div class="copy tc">
+         {$footprint} 
+    </div>
+</div>
+{$footscript}

@@ -1,0 +1,21 @@
+<nav id="nav">
+    <div class="container-nav">
+        <ul>
+            {foreach item=nav from=$navs}
+            <li class="{if $nav.current}current{/if}">
+                <a href="{$nav.link}">
+                    <span>{$nav.name}</span>
+                    <i>{$nav.en_name}</i>
+                </a>
+                {if $nav.childmenu}
+                <ul class="childmenu">
+                    {foreach item=nav_list from=$nav.childmenu}
+                    <li class="{if $nav_list.current}current{/if}"><a href="{$nav_list.link}">{$nav_list.name}</a></li>
+                    {/foreach}
+                </ul>
+                {/if}
+            </li>
+            {/foreach}
+        </ul>
+    </div>
+</nav>

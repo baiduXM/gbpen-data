@@ -117,10 +117,22 @@ display:none;}
 #nav ul li .cc a:hover{ color:#fff; background:#e50014}
 
 
-#seach_icon{ width:34px; height:34px; position:absolute;top:60px; right:0px; z-index:100; background:#e50014}
+#seach_icon {
+    width: 34px;
+    height: 34px;
+    position: absolute;
+    top: 60px;
+    right: 0px;
+    z-index: 100;
+    background: #e50014;
+}
+
 #seach_box{ position:absolute; right:50px; top:60px; display:none }
 #seach_box input,#seach_box img{ float:left}
-#seach_box input{ border:1px solid #999; height:32px; line-height:32px; background:none;width:200px; padding:0 5px; color:#999}
+#seach_box input.search_area{ border:1px solid #717171; height:32px; background:none;width:200px; padding:0 5px; color:#333}
+#seach_box .search_btn{ background:url(../images/search_icon2.jpg) no-repeat; width:34px; height:34px; border:none}
+
+
 
 
 .bg1{ background:url(../images/ab_bg.jpg) top center no-repeat; height:487px; width:100%; }

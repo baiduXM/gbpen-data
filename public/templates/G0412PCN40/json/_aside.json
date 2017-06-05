@@ -1,0 +1,85 @@
+{
+
+
+
+	"pagenavs": {
+		"value": {},
+		"description": "侧边栏目列表（当前栏目无子栏目时展示的目标栏目）",
+		"type": "list",
+		"config": {
+			"filter": "list,page",
+			"mustchild": true
+		}
+	
+	},
+	"list1":{
+	"description":"侧边栏第一个快捷按钮",
+	"value":{},
+	"type":"nav",
+	"config":{
+		"filter": "list,page"
+		}
+	},
+	"list1_img":{
+		"value": {
+			"image": "images/quik_btn.jpg",
+			"title": "侧边栏第一个快捷按钮图片",
+			"link": "http://www.baidu.com/"
+		},
+		"description": "侧边栏第一个快捷按钮图片",
+		"type": "image",
+		"config": {
+			"width":220,
+			"height": 80
+		}
+	},	
+	"list2":{
+	"description":"侧边栏第二个快捷按钮",
+	"value":{},
+	"type":"nav",
+	"config":{
+		"filter": "list,page"
+		}
+	},
+	"list2_img":{
+		"value": {
+			"image": "images/quik_btn1.jpg",
+			"title": "侧边栏第二个快捷按钮图片",
+			"link": "http://www.baidu.com/"
+		},
+		"description": "侧边栏第二个快捷按钮图片",
+		"type": "image",
+		"config": {
+			"width":220,
+			"height": 80
+		}
+	},	
+	"list3":{
+	"description":"侧边栏第三个快捷按钮",
+	"value":{},
+	"type":"nav",
+	"config":{
+		"filter": "page"
+		}
+	},
+	"list3_img":{
+		"value": {
+			"image": "images/sub_contact.jpg",
+			"title": "侧边栏第三个快捷按钮图片",
+			"link": "http://www.baidu.com/"
+		},
+		"description": "侧边栏第三个快捷按钮图片",
+		"type": "image",
+		"config": {
+			"width":220,
+			"height": 80
+		}
+	},
+	"aside_tel":{
+		"value":"0595-22389955",
+		"description":"侧边栏的电话",
+		"type":"text"		
+		}
+		
+	}
+	

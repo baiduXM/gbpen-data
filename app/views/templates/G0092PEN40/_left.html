@@ -1,0 +1,56 @@
+
+	<div class="box">
+		{if $pagenavs}
+			<div class="box-hd"><h2><b>{$posnavs[0].en_name}</h2><i><em></em></i></div>
+			<ul class="first">
+				{foreach item=nav from=$pagenavs}
+				<li>
+					<a href="{$nav.link}"><span>{$nav.en_name}</span><i></i></a>
+					{if $nav.childmenu}
+					<ul class="second">
+						{foreach item=nav_list from=$nav.childmenu}
+						<li>
+							<a href="{$nav_list.link}">{$nav_list.en_name}</a>
+							{if $nav_list.childmenu}
+							<ul class="third">
+								{foreach item=nav_last from=$nav_list.childmenu}
+									<li><a href="{$nav_last.link}">{$nav_last.en_name}</a></li>
+								{/foreach}
+							</ul>
+							{/if}
+						</li>
+						{/foreach}
+					</ul>
+					{/if}
+				</li>
+				{/foreach}
+			</ul>
+		{else}  <!-- 无子栏目时 -->
+			<div class="box-hd"><h2><b>{$global.pagenavs.en_name}</b></h2><i><em></em></i></div>
+			<ul class="first">
+				{foreach item=nav from=$global.pagenavs.childmenu}
+				<li>
+					<a href="{$nav.link}"><span>{$nav.en_name}</span><i></i></a>
+					{if $nav.childmenu}
+					<ul class="second">
+						{foreach item=nav_list from=$nav.childmenu}
+						<li>
+							<a href="{$nav_list.link}">{$nav_list.en_name}</a>
+							{if $nav_list.childmenu}
+							<ul class="third">
+								{foreach item=nav_last from=$nav_list.childmenu}
+									<li><a href="{$nav_last.link}">{$nav_last.en_name}</a></li>
+								{/foreach}
+							</ul>
+							{/if}
+						</li>
+						{/foreach}
+					</ul>
+					{/if}
+				</li>
+				{/foreach}
+			</ul>
+		{/if}
+	</div>
+			
+

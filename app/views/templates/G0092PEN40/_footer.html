@@ -1,0 +1,15 @@
+
+	<footer id="footer">
+		<div class="second-navs">
+			<ul class="foot-menu">
+				<li><a href="{$site_url}">HOME</a></li>
+				{foreach item=menu from=$navs}
+					<li> ｜ <a href="{$menu.link}">{$menu.en_name}</a></li>
+				{/foreach}
+			</ul>
+		</div>
+		<div class="foot">
+			{$footprint}
+		</div>
+	</footer>
+{$footscript}

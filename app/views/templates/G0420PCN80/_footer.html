@@ -1,0 +1,31 @@
+<div id="footer">
+     <div class="foot_top">
+        <div class="link">友情链接&nbsp;&nbsp;
+            {foreach item=flink from=$global.links}|
+             <a href="{$flink.link}">{$flink.title}</a>
+            {/foreach}
+        </div>
+     </div>
+     <div class="foot_bot">
+         <ul class="f_one">
+            {foreach item=nav from=$navs} 
+             <li><a href="{$nav.link}" class="one">{$nav.name}</a>
+                 {if $nav.childmenu}
+                 <ul class="f_two">
+                     {foreach item=nav_list from=$nav.childmenu}
+                     <li><a href="{$nav_list.link}">{$nav_list.name}</a></li>
+                      {if $nav_list@index+1 eq 6}{break}{/if}
+                     {/foreach}
+                 </ul>
+                 {/if}
+             </li> 
+             {if $nav@index+1 eq 6}{break}{/if}
+            {/foreach}
+             <li class="conbox"><a href="#" class="one">联系我们</a>
+                 <div class="cantact">{$global.contact}</div>
+             </li>
+         </ul>
+     </div>
+     <div class="copy tc">{$footprint}</div>
+</div>
+{$footscript}

@@ -1,0 +1,99 @@
+{   
+	"slidepics": {
+		"value": [{
+			"title": "banner",
+			"image": "images/banner.jpg",
+			"link": "article/1.html",
+			"description": "banner1"
+		}, {
+			"title": "测试图2",
+			"image": "images/banner.jpg",
+			"link": "http://www.baidu.com"
+		},{
+			"title": "测试图3",
+			"image": "images/banner.jpg",
+			"link": "http://www.baidu.com"
+		}],
+		"description": "banner图",
+		"type": "images",
+		"config": {
+			"width": 1920,
+			"height": 550
+		}
+	},
+	"rex":{
+		"value":"富硒生态茶叶，喝出品味，喝出健康！ 热线服务",
+		"description":"头部广告词",
+		"type":"text"		
+		},
+	"pagenavss": {
+		"value": {},
+		"description": "侧边栏目列表（当前栏目无子栏目时展示的目标栏目）",
+		"type": "list",
+		"config": {
+			"filter": "list,page",
+			"mustchild": true
+		}
+	},
+	"links": {
+		"value": [{
+			"title": "百度",
+			"image": "images/link.jpg",
+			"link": "http://www.baidu.com",
+			"description": "友情链接1"
+		}, {
+			"title": "淘宝",
+			"image": "images/link.jpg",
+			"link": "http://www.baidu.com",
+			"description":"友情链接2"
+		},{
+			"title": "京东",
+			"image": "images/link.jpg",
+			"link": "http://www.baidu.com",
+			"description":"友情链接3"
+		},
+		{
+			"title": "搜狐网",
+			"image": "images/link.jpg",
+			"link": "http://www.baidu.com",
+			"description":"友情链接5"
+		},
+		{
+			"title": "豆网",
+			"image": "images/link.jpg",
+			"link": "http://www.baidu.com",
+			"description":"友情链接6"
+		}
+		],
+		"description": "页脚友情链接",
+		"type": "images",
+		"config":{
+			"width":89,
+			"height":39
+		  }
+	    },
+	"contact":{
+		"value":"厦门易尔通网络科技有限公司\n\r厦门市思明区软件园二期观日路36号201单元  \n\r  电话：0592-3503575\n\r传真：0592-3503377\n\r邮箱：zhanjianmei@xm12t.com",
+		"description":"全局联系方式",
+		"type":"textarea"
+	},
+	"erweima": {
+		"value": [{
+			"title": "微信公众号",
+			"image": "images/ewm.jpg",
+			"link": "article/1.html",
+			"description": "banner1"
+		}, {
+			"title": "微信公众号",
+			"image": "images/ewm.jpg",
+			"link": "http://www.baidu.com"
+		}],
+		"description": "页脚二维码图片",
+		"type": "images",
+		"config": {
+			"width":97,
+			"height": 97
+		}
+	}
+	
+}

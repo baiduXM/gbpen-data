@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script type="text/javascript">
+    // 跳转手机页面
+    {if $site_another_url}
+        if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+            location.href = '{$site_another_url}';
+        }
+    {/if}
+    </script>
+
+<meta name="keywords" content="{$keywords}"/>
+<meta name="description" content="{$description}"/>
+<link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
+<meta http-equiv="Content-Language" content="zh-CN">
+<meta http-equiv="x-ua-compatible" content="ie=Edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Type" mrc="text/html; charset=gb2312">
+<title>{$title}</title>
+<link rel="stylesheet" href="{$site_url}css/style.css">
+<script type="text/javascript" src="{$site_url}js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript" src="{$site_url}js/main.js"></script>
+<script type="text/javascript" src="{$site_url}js/function.js"></script>
+{$headscript}
+</head>
+<body>
+  <div class="wrapper">
+      {include file='./_header.html'}
+      <div class="side">
+           <div class="side1">
+                <div class="title1 fl pr">
+                    <a href="{$index.pro.link}"><span>{$index.pro.name}</span><i>{$index.pro_text}</i></a>
+                    <div class="ye pa"><img src="{$site_url}images/ye.png"></div>
+                    <div class="y1 pa"><img src="{$site_url}images/y1.png"></div>
+                    <div class="y2 pa"><img src="{$site_url}images/y2.png"></div>
+                    <div class="y3 pa"><img src="{$site_url}images/y3.png"></div>
+                    <div class="y4 pa"><img src="{$site_url}images/y2.png"></div>
+                </div>
+                <div class="picMarquee-left fr">
+                    <div class="bd">
+                        <ul>
+                          {foreach item=pros from=$index.pro.data}
+                            <li><a href="{$pros.link}">
+                                <div class="pimg dtc tc vm"><img src="{$pros.image}"></div>
+                                <p class="tc">{$pros.title}</p>
+                            </a></li>
+                          {/foreach}
+                        </ul>
+                    </div>
+                </div>
+           </div>
+           <div class="side2">
+                <div class="mov fl">
+                    <embed src="{$index.movadr}" allowFullScreen="true" quality="high" width="400" height="223" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
+                </div>
+                <div class="about_r fr">
+                     <ul class="ab_list">
+                          <li class="current"><a class="name current tc fl" href="javascript:;"><span>{$index.about.name}</span></a> 
+                             <div class="name_det fr">
+                                 <div class="gsimg fl"><div class="imgdiv dtc tc vm"><img src="{$index.about.image}"></div></div>
+                                 <div class="pomy fr">
+                                      <div class="pomy_dec">{$index.about.description}</div>
+                                      <a href="{$index.about.link}" class="more tc fr">MORE</a>
+                                 </div>
+                             </div>
+                          </li> 
+                          <li> <a class="name tc fl" href="javascript:;"><span>{$index.news.name}</span></a> 
+                             <div class="name_det fr">
+                                 <ul class="newlist">
+                                  {foreach item=new from=$index.news.data}
+                                     <li><a href="{$new.link}"><span>{$new.pubtimestamp|date_format:'%Y - %m - %d'}</span>{$new.title}</a></li>
+                                     {if $new@index+1 eq 4}{break}{/if}
+                                  {/foreach}
+                                 </ul>
+                             </div>
+                          </li>
+                          <li> <a class="name tc fl" href="javascript:;"><span>{$index.newss.name}</span></a> 
+                             <div class="name_det fr">
+                                 <ul class="newlist">
+                                  {foreach item=new from=$index.newss.data}
+                                     <li><a href="{$new.link}"><span>{$new.pubtimestamp|date_format:'%Y - %m - %d'}</span>{$new.title}</a></li>
+                                     {if $new@index+1 eq 4}{break}{/if}
+                                  {/foreach}
+                                 </ul>
+                             </div>
+                          </li>
+                     </ul>
+                </div>
+           </div>
+      </div>
+      {include file='./_footer.html'}
+  </div>
+</body>
+</html>

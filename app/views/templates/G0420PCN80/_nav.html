@@ -1,0 +1,11 @@
+<div class="header pf">
+    <div class="logo dtc tc vm"><a href="{$site_url}"><img src="{$logo}"></a></div>
+    <div class="nav">
+        <ul class="menu">
+          <li class="current transition"><a href="{$site_url}" class="in">网站首页</a></li>
+          {foreach item=nav from=$navs}
+           <li><a href="{$nav.link}" id="width" class="transition">{$nav.name}</a></li>
+          {/foreach}
+        </ul>
+    </div>
+</div>

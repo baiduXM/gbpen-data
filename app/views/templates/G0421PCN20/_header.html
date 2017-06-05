@@ -1,0 +1,15 @@
+<div class="headpage">
+	<div class="neiyepage">
+		<div class="logo wow rotateInDownLeft"><a href="{$site_url}"><img src="{$logo}"/></a></div>
+		<div class="navBar wow rotateInDownRight">
+			<ul class="nav clearfix">
+				{foreach name=navs item=nav from=$navs}
+				<li class="{if $nav.current}on{/if} nav_li" style="width:{100/(($navs|count)-7)}%">
+					<a href="{$nav.link}"><span>0{$nav@index+1}<i></i></span><em></em><h2 class="kz" data-limit="7">{$nav.name}</h2></a>
+				</li>
+				{if $nav@index+1 gt 6}{break}{/if}
+				{/foreach}
+			</ul>
+		</div>
+	</div>
+</div>

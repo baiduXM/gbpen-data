@@ -22,13 +22,19 @@
         {/foreach}
       </ul>
     </div>
-    <div id="seach_icon"><a href="#"><img src="{$site_url}images/ico1.png" /></a></div>
-    <div id="seach_box">
-      <input type="text" value="请输入查找的关键字..." />
-      <a href="{$search_action}"><img src="{$site_url}images/search_icon2.jpg" /></A></div>
+    
+<div id="seach_icon"><a href="#"><img src="{$site_url}images/ico1.png" /></a></div>
+<div id="seach_box"><form action="{$search_action}" method="GET">
+  <input type="text" name="s"  value="请输入查找的关键字..." class="search_area" />
+  <input type="submit" class="search_btn"  value=""/>
+</form></div>  
+
+
   </div>
   
-
+  
+  
+  
   
   
 </div>

@@ -1,0 +1,48 @@
+{
+	
+	"pro":{
+		"description": "产品中心",
+		"value": {},
+		"type": "list",
+		"config": {
+			"width":200,
+			"height":228
+		}
+	},
+	"pro_text":{
+		"value":"韵语▪茶香",
+		"description":"产品推荐副标题",
+		"type":"text"		
+		},
+	"movadr":{
+		"value":"http://player.youku.com/player.php/sid/XNTkyMTM0MzY4/v.swf",
+		"description":"视频地址",
+		"type":"text"
+		},
+	"about": {
+		"description": "单页面(关于我们)",
+		"value": {},
+		"type": "page",
+		"config": {
+			"nav_width": 246,
+		    "nav_height": 153
+		}
+	},
+	"news":{
+		"description": "新闻中心",
+		"value": {},
+		"type": "list",
+		"config": {
+			"star_only": true			
+		}	
+	},
+	"newss":{
+		"description": "新闻中心",
+		"value": {},
+		"type": "list",
+		"config": {
+			"star_only": true			
+		}	
+	}
+	
+}

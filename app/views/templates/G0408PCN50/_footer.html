@@ -1,0 +1,34 @@
+<div class="footer">
+	<div class="flink">
+		<div class="picMarquee-left clear">
+	        <div class="bd">
+	            <ul class="picList clear">
+	            	{foreach item=flink from=$global.links}
+	                <li>
+	                    <div class="pic"><a href="{$flink.link}" target="_blank"><img src="{$flink.image}"></a></div>
+	                </li>
+	                {/foreach}
+	            </ul>
+	        </div>      
+	    </div>
+	</div>
+	<div class="copyright public">
+		<div class="navBar1">
+			<ul class="nav1 clearfix">
+				<li class="m" style="width:{100/(($navs|count)-1)}%"><a href="{$site_url}">网站首页</a></li>
+				{foreach name=navs item=nav from=$navs}
+				<li class="m {if $nav.current}on{/if} nav_li" style="width:{100/(($navs|count)-1)}%">| 
+					<a href="{$nav.link}">{$nav.name}</a>
+				</li>
+				{if $nav@index+1 gt 6}{break}{/if}
+				{/foreach}
+			</ul>
+		</div>
+		<div>
+			<p>公司地址：{$contact.address} 联系电话：{$contact.telephone} 传真：{$contact.fax}</p>
+		</div>
+		<p>{$footprint}</p>
+	</div>
+	</div>
+
+{$footscript}

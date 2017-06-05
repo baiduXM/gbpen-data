@@ -1,0 +1,132 @@
+<!DOCTYPE>
+<html>
+<head>
+<!-- 实时预览调试代码，模板开发完成后删除 -->
+
+<!-- 调试代码 End -->
+<script type="text/javascript">
+    // 跳转手机页面
+    {if $site_another_url}
+        if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+            location.href = '{$site_another_url}';
+        }
+    {/if}
+</script>
+
+<meta name="keywords" content="{$keywords}"/>
+<meta name="description" content="{$description}"/>
+<link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
+<meta http-equiv="x-ua-compatible" content="ie=8"/>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<link href="{$site_url}css/reset.css" rel="stylesheet" type="text/css"/>
+<link href="{$site_url}css/animate.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="{$site_url}css/jquery.fullPage.css">
+<link href="{$site_url}css/style.css" rel="stylesheet" type="text/css"/>
+<script src="{$site_url}js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.1.js"></script>
+
+<script type="text/javascript" src="{$site_url}js/jquery.fullPage.min.js"></script>
+<script type="text/javascript" src="{$site_url}js/wow.min.js"></script>
+<script src="{$site_url}js/index.js" type="text/javascript"></script>
+<script type="text/javascript" src="{$site_url}js/function.js"></script>
+<title>{$title}</title>
+{$headscript}
+</head>
+<body style="overflow: hidden; height: 100%; font-size: 100%;" class="fp-viewing-page3">
+<div id="wrapper" class="fullpage-wrapper">
+<section class="section fp-section fp-table" data-anchor="page1">
+<div class="header wow rotateInDownLeft">
+		<div class="head">
+			<div class="header1">
+				<div class="flower1"></div><div class="flower2"></div>
+				<div class="logo"><a href="{$site_url}"><img src="{$logo}"/></a></div>
+				<div class="search_box">
+					<form action="{$search_action}" method="GET">
+						<input class="txt1" type="text" name="s"/>
+						<input class="btn1" type="submit" value="" />
+					</form>
+				</div>
+			</div>
+			<div class="navBar">
+				<ul class="nav clearfix">
+					{foreach name=navs item=nav from=$navs}
+					<li class="{if $nav.current}on{/if} nav_li" style="width:{100/(($navs|count)-7)}%">
+						<a href="{$nav.link}"><span>0{$nav@index+1}<i></i></span><em></em><h2 class="kz" data-limit="7">{$nav.name}</h2></a>
+					</li>
+					{if $nav@index+1 gt 6}{break}{/if}
+					{/foreach}
+				</ul>
+			</div>
+		</div>
+	</div>
+<div class="banner fp-slide">
+	<div id="slideBox" class="slideBox" >
+		<div class="bd">
+			<ul>
+			{foreach name=slidepics item=slidepic from=$global.slidepics}
+				<li><a href="{$slidepic.link}" target="_blank"><img src="{$slidepic.image}" alt="{$slidepic.title}"/></a></li>
+			{/foreach}
+			</ul>
+		</div>
+	</div>
+	<a href="javascript:void(null)" id="down"><b></b></a>
+</div>
+</section>
+<section class="section fp-section fp-table" id="section-top" data-anchor="page2">
+	<img class="bg" src="images/bk1.png">
+	<div class="tlist1">
+	    <div class="tlist">
+	    	<ul class="pronav">
+		    	{$limit =5}
+		        {foreach item=list2 from=$index.pro.childmenu}                  
+		          <li><a class="pro_nav" href="{$list2.link}"><span class="kz" data-limit="7">{$list2.name}</span><br/><em class="kz" data-limit="8">{$list2.en_name}</em></a></li>
+		        {if $list2@index+1 gte $limit}{break}{/if}        
+		        {/foreach}
+	        </ul>
+	      <ul class="infoList clearfix">
+	        {$limit = 10}
+	        {foreach item=list2 from=$index.pro.data}                  
+	          <li><a href="{$list2.link}"><div class="on_img"><img src="{$list2.image}"></div><h2>{$list2.title}</h2><div class="mart"><em></em><p>了解花束</p></div></a></li>
+	        {if $list2@index+1 gte $limit}{break}{/if}        
+	        {/foreach}
+	      </ul>
+	    </div>
+	</div>
+	<a href="javascript:void(null)" id="down"><b style="top: 2.06116px;"></b></a>
+</section>
+<section class="section fp-section fp-table" id="section-mid" data-anchor="page3">
+	<img class="bg" src="images/bk2.png">
+	<div class="about">
+      	<a class="index_title" href="{$index.about_us.link}"></a>
+      	<a href="{$index.about_us.link}" class="text">
+	      <p>{$index.about_us.description|unescape:"html"}</p>
+	    </a>
+	    <a href="{$index.con.link}" class="contact">
+           <p>{$index.con.name}</p>
+           <div class="con_text">{$index.contact}</div>
+     	 </a>
+	    <a href="{$index.con.link}" class="img_div">
+	      <img src="{$index.con.image}">           
+	    </a>
+	</div>
+	<div class="footer">
+		<div class="picMarquee-left clear">
+	        <h2>友情链接</h2>
+	        <div class="bd">
+	            <ul class="picList clear">
+	            	{foreach item=flink from=$global.links}
+	                <li>
+	                    <div class="pic"><a href="{$flink.link}" target="_blank"><img src="{$flink.image}"></a></div>
+	                </li>
+	                {/foreach}
+	            </ul>
+	        </div>      
+	    </div>
+	    <div class="code"><em>扫一扫<br/>进入官网</em><img src="{$global.icon1.image}"></div>
+		{$footprint}
+	</div>
+</section>
+</div>
+{$footscript}
+</body>
+</html>

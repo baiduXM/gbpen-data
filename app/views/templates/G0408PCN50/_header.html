@@ -1,0 +1,59 @@
+
+<div class="header_top">
+	<div class="public header1 clearfix">
+		<span class="fl wow rotateInDownLeft">欢迎访问G宝盆统一平台模板网站！</span>
+		<div class="fr header1_r wow rotateInDownRight">
+			{foreach item=nav from=$global.pagenavs.childmenu}
+			<a href="{$nav.link}">{$nav.name}</a>|
+			{if $nav@index+1 gt 2}{break}{/if}				
+			{/foreach}
+		</div>
+	</div>
+</div>
+<div class="header">
+	<div class="public head">
+		<div class="logo wow rotateInDownLeft"><a href=""><img src="{$logo}"/></a></div>
+		<div class="navBar wow fadeInDownRight">
+			<ul class="nav clearfix">
+				<li class="m" style="width:{100/(($navs|count)+1)}%"><a class="kz" data-limit="4" href="{$site_url}">网站首页</a></li>
+				{foreach name=navs item=nav from=$navs}
+				<li class="m {if $nav.current}on{/if} nav_li" style="width:{100/(($navs|count)+1)}%">
+					<a href="{$nav.link}" class="kz" data-limit="4">{$nav.name}</a>
+					{if $nav.childmenu}
+					<ul class="sub">
+						{foreach key=key item=nav_list from=$nav.childmenu}
+						<li><a href="{$nav_list.link}">{$nav_list.name}</a></li>
+						{/foreach}
+					</ul>
+					{/if}
+				</li>
+				{if $nav@index+1 gt 6}{break}{/if}
+				{/foreach}
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="banner">
+	<div id="slideBox" class="slideBox" >
+		<div class="sect1">
+			<div class="sect2">
+		      <div class="tel fl">{$contact.telephone}</div> 
+		      <div class="search fr"><form action="{$search_action}" method="GET"><input name="s" value="请输入搜索关键字" type="text" class="txt1"><input name="" type="submit" class="btn1" value=""></form></div>   
+	      </div>
+	    </div>
+		<div class="hd">
+			<ul>
+			{foreach name=slidepics item=slidepic from=$global.slidepics}
+			<li></li>
+			{/foreach}
+			</ul>
+		</div>
+		<div class="bd">
+			<ul>
+			{foreach name=slidepics item=slidepic from=$global.slidepics}
+				<li><a href="{$slidepic.link}" target="_blank"><img src="{$slidepic.image}" alt="{$slidepic.title}"/></a></li>
+			{/foreach}
+			</ul>
+		</div>
+	</div>		
+</div>
