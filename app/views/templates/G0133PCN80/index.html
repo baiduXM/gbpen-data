@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script type="text/javascript">
+    // Ìø×ªÊÖ»úÒ³Ãæ
+    {if $site_another_url}
+        if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+            location.href = '{$site_another_url}';
+        }
+    {/if}
+    </script>
+
+<!--  -->
+<meta name="keywords" content="{$keywords}"/>
+<meta name="description" content="{$description}"/>
+<link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Language" content="zh-CN">
+
+<link rel="stylesheet" type="text/css" href="{$site_url}css/style.css"/>
+<script type="text/javascript" src="{$site_url}js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.js"></script>
+<script type="text/javascript" src="{$site_url}js/function.js"></script>
+<script type="text/javascript" src="{$site_url}js/index.js"></script>
+<script type="text/javascript" src="{$site_url}js/html5.js"></script>
+<title>{$title}</title>
+{$headscript}
+</head>
+<body>
+	<div id="wrapper">
+        {include file='./_header.html'}
+        <div class="content">
+            <div id="banner">
+                <ul class="picture">
+                    {foreach item=slidepics from=$index.slidepics}
+                        <li><a><img src="{$slidepics.image}"></a></li>
+                    {/foreach}
+                </ul>
+                <div class="arrows">
+                    <a class="next" href="javascript:void(null)"></a>
+                    <a class="prev" href="javascript:void(null)"></a>
+                </div>
+            </div>
+            <div class="press">
+                <a href="javascript:void(null)" class="unfold shrink"></a>
+                <div class="press-list">
+                    <h2>{$index.news.name}</h2>
+                    <div class="roll">
+                        <ul class="roll-list">
+                            {foreach item=news from=$index.news.data}
+                                <li><a href="{$news.link}">
+                                    <i><img src="{$news.image}"></i>
+                                    <h4>{$news.title}</h4>
+                                    <p class="overflow">{$news.description}</p>
+                                </a></li>
+                            {/foreach}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <ul class="menu">
+                <em></em>
+                {foreach item=pro from=$index.product.childmenu}
+                    <li><a href="{$pro.link}">
+                        <p>{$pro.name}</p>
+                        <div class="menuinfo">
+                            <i><img src="{$pro.image}"></i>
+                            <span>{$pro.name}</span>
+                        </div>
+                    </a></li>
+                    {if $pro@index+1 eq 4}{break}{/if}
+                {/foreach}
+            </ul>
+        </div>
+        <div class="bottom">
+            <div class="footleft">{$footprint}</div>
+            <div class="chaining footright">
+                <div class="flink">
+                    <h4><i></i>友情链接</h4>
+                    <ul class="flink-list">
+                        {foreach item=links from=$global.links}
+                            <li><a href="{$links.link}">{$links.title}</a></li>
+                        {/foreach}
+                    </ul>
+                </div>
+                <ol class="icon">
+                    {foreach item=ico from=$global.icon}
+                        <li><a href="{$ico.link}"><img src="{$ico.image}"></a></li>
+                    {/foreach}
+                </ol>
+                <div class="clone-code"><i><img src="{$global.code.image}"></i></div>
+            </div>
+        </div>
+        {$footscript}
+    </div>
+</body>
+</html>

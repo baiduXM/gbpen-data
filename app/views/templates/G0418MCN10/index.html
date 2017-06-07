@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- 实时预览调试代码，模板开发完成后删除 -->
+    
+    <!-- 调试代码 End -->
+    <script type="text/javascript">
+        // 跳转PC页面
+        {if $site_another_url}
+            if (!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+                location.href = '{$site_another_url}';
+            }
+            {/if}
+    </script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no,minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta content="telephone=no, email=no" name="format-detection">
+    <!-- 启用360浏览器的极速模式(webkit) -->
+    <meta name="renderer" content="webkit">
+    <!-- 避免IE使用兼容模式 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+    <meta name="HandheldFriendly" content="true">
+    <!-- 微软的老式浏览器 -->
+    <meta name="MobileOptimized" content="320">
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <meta name="keywords" content="{$keywords}" />
+    <meta name="description" content="{$description}" />
+    <link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
+    <title>{$title}</title>
+    <link rel="stylesheet" href="{$site_url}/css/animate.min.css"/>
+    <link rel="stylesheet" href="{$site_url}/css/swiper-3.4.1.min.css"/>
+    <link rel="stylesheet" href="{$site_url}/css/public.css"/>
+
+    <script src="{$site_url}/js/swiper-3.4.1.min.js"></script>
+    <script src="{$site_url}js/jquery-1.9.1.min.js"></script>
+    <script src="{$site_url}/js/function.js"></script>
+    <script type="text/javascript">
+        window.addEventListener('load', function(){
+            setTimeout(function(){ window.scrollTo(0, 1); }, 100);
+        });//safari浏览器可以通过此代码来隐藏地址栏
+    </script>
+    {$headscript}
+</head>
+<body>
+<div class="index-wrap">
+    {include file="./_header.html"}
+    <div class="index">
+        {foreach name=mIndexCats item=mIndexCat from=$mIndexCats}
+            {if $mIndexCat.type eq 2}
+                {if $mIndexCat.showtype eq 1}
+                <div class="sec1">
+                    <div class="sec1_bg"></div>
+                    <div class="sec1_c">
+                        <div class="sec1_title">
+                            <h3><a href="{$mIndexCat.link}">{$mIndexCat.name}</a></h3>
+                            <h4><a href="{$mIndexCat.link}">{$mIndexCat.en_name}</a></h4>
+                        </div>
+                        <div class="sec1_detail">
+                            <div class="gs">
+                                <a href="{$mIndexCat.data[0].link}">
+                                    <span class="s1">{$mIndexCat.data[0].title}</span>
+                                    <span class="s2">{$mIndexCat.data[0].description}</span>
+                                </a>
+                            </div>
+                            <div class="is"><a class="middle" href="{$mIndexCat.data[0].link}"><img class="max" src="{$mIndexCat.data[0].image}" alt=""/></a></div>
+                            <div class="is"><a href="{$mIndexCat.link}"><h3>运动系列>></h3></a></div>
+                            <div class="is mr1"><a class="middle" href="{$mIndexCat.data[1].link}"><img class="max" src="{$mIndexCat.data[1].image}" alt=""/></a></div>
+                            <div class="is mr2"><a class="middle" href="{$mIndexCat.data[2].link}"><img class="max" src="{$mIndexCat.data[2].image}" alt=""/></a></div>
+                            <div class="gs mr3">
+                                <a href="{$mIndexCat.data[1].link}">
+                                    <span class="s1">{$mIndexCat.data[1].title}</span>
+                                    <span class="s2">{$mIndexCat.data[1].description}</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {/if}
+                {if $mIndexCat.showtype eq 2}
+                <div class="sec2">
+                    <div class="sec2_c">
+                        <ul>
+                            {foreach item=article from=$mIndexCat.data}
+                            <li><a href="{$article.link}"><img class="max" src="{$article.image}" alt=""/></a></li>
+                            {if $article@index+1 eq 6}{break}{/if}
+                            {/foreach}
+                        </ul>
+                    </div>
+                    <a class="sec2_btn" href="{$article.link}">查看更多</a>
+                </div>
+                {/if}
+            {elseif $mIndexCat.type eq 1}
+                {if $mIndexCat.showtype eq 1}
+                <div class="sec3">
+                    <div class="sec3_title">
+                        <h3><a href="{$mIndexCat.link}">{$mIndexCat.name}</a></h3>
+                    </div>
+                    <div class="sec3_c">
+                        <ul>
+                            {foreach item=article from=$mIndexCat.data}
+                            <li><span>{$article.pubtimestamp|date_format:'%Y.%m.%d'}</span><a href="{$article.link}">{$article.title}</a></li>
+                            {if $article@index+1 eq 5}{break}{/if}
+                            {/foreach}
+                        </ul>
+                    </div>
+                </div>
+                {/if}
+            {/if}
+        {/foreach}
+
+    </div>
+   {include file="./_footer.html"}
+</div>
+</body>
+</html>

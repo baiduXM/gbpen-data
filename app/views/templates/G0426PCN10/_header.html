@@ -1,0 +1,42 @@
+<div class="header">
+    <div class="header_bg">
+        <div class="head">
+            <div class="logo"><a href="{$site_url}"><img src="{$global.logo.image}" alt=""/></a></div>
+            <div class="h_r">
+                <div class="hd_ss">
+                    <div class="ss">
+                        <form action="">
+                            <input class="sub" type="submit" value=""/>
+                            <input class="test" type="text"/>
+                            <span class="zzc"></span>
+                        </form>
+                    </div>
+                    <div class="dh"><span class="dh_tb"></span><h3>{$contact.telephone}</h3></div>
+                </div>
+                <div class="nav">
+                    <ul>
+                        {$limit=8}
+                        {if $navs|count lt $limit}{$limit = $navs|count}{/if}
+                        <li class="home" style="width:{100/($limit+1)}%">
+                            <a class="transition" href="{$site_url}">首页</a>
+                        </li>
+                        {foreach item=nav from=$navs}
+                        <li class="nav_li" style="width:{100/($limit+1)}%">
+                            <a class="transition" href="{$nav.link}">{$nav.name}</a>
+                            {if $nav.childmenu}
+                            <ul>
+                                {if $nav.childmenu}{foreach key=key item=nav_list from=$nav.childmenu}
+                                <li><a class="as" href="{$nav_list.link}">{$nav_list.name}</a></li>
+                                {/foreach}{/if}
+                                <div class="sjx"></div>
+                            </ul>
+                            {/if}
+                        </li>
+                        {if $nav@index+1 eq $limit}{break}{/if}
+                        {/foreach}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

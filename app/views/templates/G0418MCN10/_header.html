@@ -1,0 +1,31 @@
+<div class="header">
+    <div class="logo"><a class="middle" href="{$site_url}"><img class="max" src="{$global.logo.image}" alt=""/></a></div>
+    <div class="banner">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                {foreach item=slidepics from=$global.slidepics}
+                <div class="swiper-slide"><a href="{$slidepics.link}"><img src="{$slidepics.image}" alt=""/></a></div>
+                {/foreach}
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+    <div class="head">
+        <div class="nav_bg"></div>
+        <div class="nav">
+            <div class="nav_ul">
+                <ul>
+                    {$limit=8}
+                    {if $navs|count lt $limit}{$limit = $navs|count}{/if}
+                    <li><a href="{$site_url}">网站首页</a></li>
+
+                    {foreach item=nav from=$navs}
+                    <li><a href="{$nav.link}">{$nav.name}</a></li>
+                    {if $nav@index+1 eq $limit}{break}{/if}
+                    {/foreach}
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="nav_btn"></div>
+</div>

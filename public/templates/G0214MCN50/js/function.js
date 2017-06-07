@@ -19,7 +19,7 @@ $(document).ready(function(){
 	})();
 	(function(){
 		$('.close1').click(function(){
-			$('.contact').css('display','none')
+			$('.contact1').css('display','none')
 		});
 	})();
 	(function(){

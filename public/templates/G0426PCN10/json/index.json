@@ -1,0 +1,79 @@
+{
+    "news":{
+        "description":"新闻中心",
+        "value":{},
+        "type":"list",
+        "config":{
+
+        }
+    },
+    "products":{
+        "description":"产品中心",
+        "value":{},
+        "type":"list",
+        "config":{
+            "width":220,
+            "height":150
+        }
+    },
+    "about": {
+        "value":
+        {
+            "title": "关于我们",
+            "image": "images/gywm.jpg",
+            "link": "www.baidu.com",
+            "description": "About us"
+        },
+        "description": "关于我们",
+        "type": "image",
+        "config": {
+            "width": 59,
+            "height": 59
+        }
+    },
+    "wonder": {
+        "value":
+        {
+            "title": "精彩瞬间",
+            "image": "images/jcsj.jpg",
+            "link": "www.baidu.com",
+            "description": "Wonderful moment"
+        },
+        "description": "精彩瞬间",
+        "type": "image",
+        "config": {
+            "width": 59,
+            "height": 59
+        }
+    },
+    "join": {
+        "value":
+        {
+            "title": "加盟G宝盆",
+            "image": "images/jm.jpg",
+            "link": "www.baidu.com",
+            "description": "Join Gbaopen"
+        },
+        "description": "加盟G宝盆",
+        "type": "image",
+        "config": {
+            "width": 64,
+            "height": 59
+        }
+    },
+    "contact": {
+        "value":
+        {
+            "title": "联系我们",
+            "image": "images/lxwm.jpg",
+            "link": "www.baidu.com",
+            "description": "Contact us"
+        },
+        "description": "联系我们",
+        "type": "image",
+        "config": {
+            "width": 59,
+            "height": 59
+        }
+    }
+}

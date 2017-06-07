@@ -43,6 +43,9 @@
                     {/foreach}
                 </ul>
             </div>
+            {if $search.total eq 0}
+            <p class="keyword">没有查找到相关数据！</p>
+            {else}
             <p class="keyword">以下是您输入的搜索关键字“{$search.keyword}”的搜索结果，共{$search.total}条</p>
             <ul class="result">
                 {foreach item=article from=$search.data}
@@ -54,6 +57,7 @@
                     </li>
                 {/foreach}
             </ul>
+            {/if}
             {include file="./_page.html"}
         </div>
     </div>

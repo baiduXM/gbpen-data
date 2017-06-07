@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>{$title}</title>
+    <script type="text/javascript">
+        // 跳转手机页面
+        {if $site_another_url}
+            if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+                location.href = '{$site_another_url}';
+            } {/if}
+    </script>
+    
+    <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1" />
+    <meta name="keywords" content="{$keywords}" />
+    <meta name="description" content="{$description}" />
+    <link rel="stylesheet" href="{$site_url}css/animate.min.css"/>
+    <link rel="stylesheet" href="{$site_url}css/idangerous.swiper.css"/>
+    <link rel="stylesheet" href="{$site_url}css/public.css"/>
+    <script src="{$site_url}js/jquery-1.9.1.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="{$site_url}js/html5shiv.js"></script>
+    <![endif]-->
+    <script src="{$site_url}js/jquery.easing.1.3.js"></script>
+    <script src="{$site_url}js/idangerous.swiper.min.js"></script>
+    <script src="{$site_url}js/jquery.roundabout-1.0.min.js"></script>
+   
+    <script src="{$site_url}js/function.js"></script>
+    <script src="{$site_url}js/index.js"></script>
+    {$headscript}
+</head>
+<body>
+<div class="index-wrap">
+    {include file='./_header.html'}
+    <div class="index">
+        <div class="sec1_fix">
+            <div class="sec1_m">
+                <div class="sec1">
+                    <div class="sec1_bg">
+                        <div class="byun1"></div>
+                        <div class="byun2"></div>
+                        <div class="bird">
+                            <ul class="lamp">
+                                <li class="den"></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </div>
+                        <div class="airship1"><div class="zz"></div></div>
+                        <div class="wh"></div>
+                        <div class="gth"></div>
+                        <div class="airship2"></div>
+                    </div>
+                    <div class="banner">
+                        <div id="featured-area">
+                            <ul>
+                                {foreach item=banner from=$global.slidepics}
+                                <li><a href="{$banner.link}"><img src="{$banner.image}" alt=""/></a></li>
+                                {/foreach}
+                            </ul>
+                            <a href="javascript:void(0)" class="ban_l_btn"></a>
+                            <a href="javascript:void(0)" class="ban_r_btn"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sec2_fix">
+            <div class="section2">
+                <div class="sec2">
+                    <div class="sec2_bg">
+                        <div class="sec2_c">
+                            <div class="one">
+                                <div class="pro">
+                                    <div class="title">
+                                        <ul>
+                                            {foreach item=pro from=$index.products.data}
+                                            <li class="transition1">{$pro.title}</li>
+                                            {if $pro@index+1 eq 3}{break}{/if}
+                                            {/foreach}
+                                        </ul>
+                                    </div>
+                                    <div class="content">
+                                        <ul class="pro_list">
+                                            {foreach item=pros from=$index.products.data}
+                                            <li class="transition1">
+                                                <div class="le"><div class="img middle"><img class="max" src="{$pros.image}" alt=""/></div></div>
+                                                <div class="ri">
+                                                    <div class="nr">{$pros.description}</div>
+                                                    <a class="btn" href="{$pros.link}">MORE</a>
+                                                </div>
+                                                <div class="pro_sjx"></div>
+                                            </li>
+                                            {if $pros@index+1 eq 3}{break}{/if}
+                                            {/foreach}
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="news">
+                                    <div class="news_title mouse">
+                                        <h3>{$index.news.name}</h3>
+                                        <a class="transition1 animated" href="{$index.news.link}">Read More</a>
+                                    </div>
+                                    <div class="content">
+                                        <div class="swiper-container1">
+                                            <div class="swiper-wrapper">
+                                                {foreach item=news from=$index.news.data}
+                                                <div class="swiper-slide">
+                                                    <a class="a" href="{$news.link}">
+                                                        <div class="time">{$news.pubtimestamp|date_format:'%Y-%m-%d'}</div>
+                                                        <div class="detail">
+                                                            <div class="de_c transition">
+                                                                <h3>{$news.title}</h3>
+                                                                <div class="nr">{$news.description}</div>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                {/foreach}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="two">
+                                <ul class="link">
+                                    <li class="transition"><a href="{$index.about.link}"><img class="m1" src="{$index.about.image}" alt=""/><img class="m2" src="{$index.about.image}" alt=""/></a></li>
+                                    <li class="transition"><a href="{$index.wonder.link}"><img class="m1" src="{$index.wonder.image}" alt=""/><img class="m2" src="{$index.wonder.image}" alt=""/></a></li>
+                                    <li class="transition"><a href="{$index.join.link}"><img class="m1" src="{$index.join.image}" alt=""/><img class="m2" src="{$index.join.image}" alt=""/></a></li>
+                                    <li class="transition"><a href="{$index.contact.link}"><img class="m1" src="{$index.contact.image}" alt=""/><img class="m2" src="{$index.contact.image}" alt=""/></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    {include file='./_footer.html'}
+</div>
+</body>
+</html>

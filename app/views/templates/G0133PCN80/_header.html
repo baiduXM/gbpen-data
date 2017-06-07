@@ -1,0 +1,23 @@
+
+<header id="header">
+    <div class="head">
+        <div class="hotline"><img src="{$site_url}images/phone.png">{$contact.telephone}</div>
+        <div class="logo"><a href="{$site_url}"><img src="{$logo}" /></a></div>
+        <ul class="nav" id="nav">
+            {foreach item=nav from=$navs}
+                <li class="before">
+                    <a href="{$nav.link}">{$nav.name}</a>
+                    {if $nav.childmenu}
+                        <ul class="subnav">
+                            {foreach key=key item=subnav from=$nav.childmenu}
+                            <li><a href="{$subnav.link}">{$subnav.name}</a></li>
+                            {/foreach}
+                        </ul>
+                    {/if}
+                </li>
+            {/foreach}
+            <div class="frame"></div>
+        </ul>
+        <li class="home"><a href="{$site_url}">网站首页</a></li>
+    </div>
+</header>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+		// 跳转PC页面
+		{if $site_another_url}
+			if (!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+				location.href = '{$site_another_url}';
+			}
+		{/if}
+		</script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no,minimal-ui">
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta content="telephone=no" name="format-detection">
+
+<title>{$title}</title>
+<meta name="keywords" content="{$keywords}" />
+<meta name="description" content="{$description}" />
+<link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
+<link href="{$site_url}css/swipe.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="{$site_url}css/public.css" />
+<link href="{$site_url}css/css.css" rel="stylesheet" type="text/css" />
+<script src="{$site_url}js/TouchSlide.1.1.js"></script>
+<script src="{$site_url}js/jquery.min.js"></script>
+<script type="text/javascript" src="{$site_url}js/share.js"></script>
+<script src="{$site_url}js/idangerous.swiper-2.0.min.js"></script>
+<script src="{$site_url}js/simple-app.js"></script>
+<script type="text/javascript" src="{$site_url}js/function.js"></script>
+
+</head>
+<body>
+
+<div class="index-wrap">
+	      <div class="heaer  public_bg1">
+        <div class="logo"><img src="{$logo}" width="100%"></div>
+      </div>
+      <div class="menu public_bg1">
+        <div class="nav"> <a class="arrow-left" href="#">&lt;</a> <a class="arrow-right" href="#">&gt;</a>
+          <div class="swiper-nav swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><span><a href="{$site_url}" class=" public_color">网站首页<br>
+                <span class="en">home</span></a></span></div>
+				{foreach name=key item=nav from=$navs}
+              <div class="swiper-slide"><span><a href="{$nav.link}" class=" public_color">{$nav.name}<br>
+                <span class="en">{$nav.en_name}</span></a></span></div>
+				{/foreach}
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    <div class="main">
+    	<div class="box-id">
+            <div class=" about-m">
+              <div class="search">以下是您搜索的关键字<mark>“ {$search.keyword} ”</mark>，搜索的结果共 <mark>{$search.total}</mark> 条。</div>
+            	<ul class="news-list1 nopic">
+              {$loop_num=($page_links.current_page-1)*$page_links.per_page+1}
+				{foreach name=article item=article1 from=$search.data}
+                	<li class="public_bg1">
+                    <a href="{$article1.link}">
+                     <div class="news_title clearfix public_bg"><span>{$article1.pubdate}</span><b> {$article1.title}</b></div>
+                      <div class="news_bottom clearfix">
+                      <div class="news_content">
+                        {$article1.description} 
+						</div></div>
+                    </a></li>
+                	{/foreach}
+                   
+                    
+                </ul>
+                <div class="next1"><a href="{$page_links.prev_link}">上一页</a>{$page_links.current_page} /{$page_links.page_count}<a href="{$page_links.next_link}">下一页</a></div>
+            </div>
+        </div>
+    </div>
+<div class="foot public_bg">
+        <div class="back-top" id="quickbar-backtotop"><A href="#">TOP</A></div>
+        <div class="text">{$footprint}</div>
+      </div>
+      </div>
+{$footscript}
+</body>
+</html>
