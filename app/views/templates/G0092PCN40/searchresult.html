@@ -45,7 +45,7 @@
                         <ol class="news" id="search-list">
                         {foreach item=article from=$search.data}
                             <li><a href="{$article.link}">
-                                <time datetime="{$article.pubymd}">{$article.pubymd}</time>
+                                <time datetime="{$article.pubtimestamp|date_format:'%Y.%m.%d'}">{$article.pubtimestamp|date_format:'%Y.%m.%d'}</time>
                                 {$article.title}
                             </a></li>
                         {/foreach}

@@ -73,16 +73,6 @@ $(document).ready(function(){
     $(".ziti li.zi3").click(function(){
         $(".edite").attr('class',"edite span-zi3")
     })      
-    //字体上下拉结束
 
-   //限制字符个数
-    // $(".new-nr").each(function(){
-    //     var maxwidth=40;
-    //     if($(this).text().length>maxwidth){
-    //         $(this).text($(this).text().substring(0,maxwidth));
-    //         $(this).html($(this).html()+'...');
-    //     }
-    // });
-    
   });
   

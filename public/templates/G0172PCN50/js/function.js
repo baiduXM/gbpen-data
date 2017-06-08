@@ -11,7 +11,10 @@ jQuery(document).ready(function($) {
 	    $(".second li a").click(function(){
 	      $(this).parent().siblings().find(".third").slideUp()
 	      $(this).siblings(".third").slideToggle()
-	    })  
+	    })
+		$(".nav>li").click(function () {
+			$(this).addClass("on").siblings().removeClass("on");
+        });
 
 	    jQuery(".slideBox").slide({mainCell:".bd ul",autoPlay:true});
 	

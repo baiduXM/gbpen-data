@@ -193,7 +193,7 @@ ul.first ul{display: none;}
 /*文字列表*/
 .main .news{width: 100%;height: auto;overflow: hidden;margin:-10px 0 30px;}
 .news li{width: 100%;height: 35px;border-bottom:dashed 1px #d6d7dc;overflow: hidden;}
-.news li a{display: block;width: 710px;padding-left: 10px;overflow: hidden;height: 100%;position: relative;line-height: 35px;}
+.news li a{ width: 710px;padding-left: 10px;overflow: hidden;height: 100%;position: relative;line-height: 35px;}
 .news li a:before{content: "";display: block;width: 5px;height: 5px;background: #979797;position: absolute;left: 0px;top: 15px;}
 .news li a time{float: right;margin-left: 5px;}
 .news li a:hover{color: #0a90e7;}
