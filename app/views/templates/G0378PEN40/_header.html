@@ -16,7 +16,7 @@
       {$limit = 8}
       {if $navs|count lt $limit}{$limit = $navs|count}{/if}
       <li class=" nav1" style="width:{100/($limit+1)}%">
-        <p><a href="{$site_url}"> HOME </a></p>
+        <p><a href="{$site_url}"> Home </a></p>
       </li>
       {foreach name=navs item=nav from=$navs}
       <li class="fl{if $nav.current} current{/if} aa" style="width:{100/($limit+1)}%">

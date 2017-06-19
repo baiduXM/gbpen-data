@@ -1,0 +1,50 @@
+{
+	"slidepics": {
+		"value": [{
+			"title": "banner",
+			"image": "images/bg.jpg",
+			"link": "article/1.html",
+			"description": "banner1"
+		}, {
+			"title": "测试图2",
+			"image": "images/pro3.jpg",
+			"link": "http://www.baidu.com"
+		},{
+			"title": "测试图3",
+			"image": "images/bg.jpg",
+			"link": "http://www.baidu.com"
+		}],
+		"description": "内页banner图",
+		"type": "images",
+		"config": {
+			"width": 1920,
+			"height": 970
+		}
+	},
+	"banner":{
+		"value":"2",
+		"description":"默认1显示banner轮播",
+		"type":"text"
+		},
+	"travel": {
+		"value": [{
+			"title": "开启旅行",
+			"image": "",
+			"link": "http://www.baidu.com",
+			"description": "开启旅行连接"
+		},{
+			"title": "私人定制",
+			"image": "",
+			"link": "http://www.baidu.com",
+			"description": "开启旅行连接"
+		}
+		],
+		"description": "链接",
+		"type": "images",
+		"config":{
+			"width":89,
+			"height":10
+		  }
+	    }
+	
+}

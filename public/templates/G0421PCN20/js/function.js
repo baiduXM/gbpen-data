@@ -4,7 +4,7 @@
 	if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))){
 		new WOW().init();
 	};
-
+	
 
 		//焦点图功能，用到SuperSlide插件
 	jQuery(".w3cFocus").slide({ mainCell:".bd ul", effect:"fold", delayTime:300, autoPlay:true });
@@ -70,5 +70,4 @@
 		    $(this).html($(this).html()+'...');
 		    }
 	    });
-	
  });

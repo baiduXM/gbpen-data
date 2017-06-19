@@ -64,7 +64,7 @@
 		<div class="bd">
 			<ul>
 			{foreach name=slidepics item=slidepic from=$global.slidepics}
-				<li><a href="{$slidepic.link}" target="_blank"><img src="{$slidepic.image}" alt="{$slidepic.title}"/></a></li>
+				<li><a href="{$slidepic.link}"><img src="{$slidepic.image}" alt="{$slidepic.title}"/></a></li>
 			{/foreach}
 			</ul>
 		</div>
@@ -123,7 +123,7 @@
 	        </div>      
 	    </div>
 	    <div class="code"><em>扫一扫<br/>进入官网</em><img src="{$global.icon1.image}"></div>
-		{$footprint}
+		<div>{$footprint}</div>
 	</div>
 </section>
 </div>

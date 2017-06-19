@@ -70,7 +70,7 @@ a#down b{display: block;width: 14px;height: 60px;background: url(../images/tobot
 .picMarquee-left .bd ul li .pic{ text-align:center; border:1px solid #666666;}
 .picMarquee-left .bd ul li .pic img{ width:92px; height:42px; padding: 2px; display:block; }
 .footer p, .footer p a{color: #f2e3b4; font-size: 14px; position: relative;z-index: 5;}
-.footer .code{ position: absolute; right: 0; top:20px;}
+.footer .code{float: right;margin-top: 20px;}
 .footer .code em{ color: #ffffff; display: inline-block; position: relative;top: 50px; left: -20px;}
 .footer .code img{ width: 91px; height: 91px;}
 /*内页about*/

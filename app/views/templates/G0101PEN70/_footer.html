@@ -1,0 +1,25 @@
+<div id="footer">
+      <div class="link">
+        <span>Frindlink：</span>
+        {foreach item=flink from=$global.links}
+            <a href="{$flink.link}">{$flink.title}</a>
+        {/foreach}
+      </div>
+      <div class="foot_left">
+            <p>{$footprint}</p>           
+      </div>
+      <div class="foot_right">
+          <ul>
+            {$limit=6}
+            {if $limit gt $navs|count}{$limit=$navs|count}{/if}
+            {foreach item=fnav from=$navs}
+            <li>
+                <a href="{$fnav.link}">{$fnav.name}</a>                 
+            </li>
+            {if $fnav@index+1 eq $limit}{break}{/if}
+            {/foreach}
+          </ul>
+          <i>{$global.adr}</i>
+      </div>
+ </div>
+ {$footscript}

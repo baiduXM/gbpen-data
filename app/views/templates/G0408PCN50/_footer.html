@@ -15,9 +15,9 @@
 	<div class="copyright public">
 		<div class="navBar1">
 			<ul class="nav1 clearfix">
-				<li class="m" style="width:{100/(($navs|count)-1)}%"><a href="{$site_url}">网站首页</a></li>
+				<li class="m" style="width:{100/(($navs|count)+1)}%"><a href="{$site_url}">网站首页</a></li>
 				{foreach name=navs item=nav from=$navs}
-				<li class="m {if $nav.current}on{/if} nav_li" style="width:{100/(($navs|count)-1)}%">| 
+				<li class="m {if $nav.current}on{/if} nav_li" style="width:{100/(($navs|count)+1)}%">| 
 					<a href="{$nav.link}">{$nav.name}</a>
 				</li>
 				{if $nav@index+1 gt 6}{break}{/if}

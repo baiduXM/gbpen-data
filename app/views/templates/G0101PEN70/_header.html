@@ -1,0 +1,53 @@
+<div id="header">
+ 	  <div class="top">
+	      <div class="logo"><a href="{$site_url}"><img src="{$logo}"></a></div>	     
+	           <p>{$global.teltext}<span>{$contact.telephone}</span></p>
+	           <div di="navs" class="navs">
+		          <ul class="menu">
+		           	{$limit=9}
+	                {if $limit gt $navs|count}{$limit=$navs|count}{/if}
+		           <li style="width:{(100/($limit+1))}%">
+		           	    <a class="{if $nav.current}current{/if}" href="{$site_url}">Home</a></li>
+		            {foreach item=nav from=$navs}
+		            <li style="width:{(100/($limit+1))}%" >
+		            	<a class="{if $nav.current}current{/if}" href="{$nav.link}">{$nav.name}</a>
+		            	{if $nav.childmenu}
+			               <ul class="erji none">
+			               	{foreach item=nav_list from=$nav.childmenu}
+			                 <li>
+			                 	<a class="{if $nav.current}current{/if}" href="{$nav_list.link}" id="qig">{$nav_list.name}</a>
+			                 </li> 
+			                 {/foreach}
+			               </ul>
+			            {/if}
+		            </li>
+		            {if $nav@index+1 eq $limit}{break}{/if}
+		            {/foreach}		           
+		          </ul>
+	          </div>
+	   </div>
+ </div>
+ <div id="banner">
+      <div id="slideBox" class="slideBox">
+	      <div class="hd">
+	        <ul>
+		        {foreach item=banner from=$global.slidepics}
+	            <li></li>
+	            {/foreach}
+            </ul>
+	      </div>
+	      <div class="banner">
+	        <ul>
+	         {foreach item=banner from=$global.slidepics}
+	            <li>
+	                <a href="{$banner.link}"><img src="{$banner.image}"/></a>
+	            </li>
+             {/foreach}	        
+	        </ul>
+	      </div>
+      </div>      
+ </div>
+
+
+
+ 
