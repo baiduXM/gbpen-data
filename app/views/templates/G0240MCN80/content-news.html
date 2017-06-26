@@ -57,40 +57,42 @@
     <div class="inner_top1">
       <a class="back1 backhis" href="javascript:history.go(-1)"></a>
       <h3>{$article.category.name}</h3>
-      <a href="" class="about_more" id="font">字+<div class="font1">
-      <dl class="big">大</dl>
-      <dl class="normal">中</dl>
-      <dl class="small">小</dl>
-    </div></a>
+      <a href="" class="about_more" id="font">字+
+          <div class="font1">
+              <dl class="big">大</dl>
+              <dl class="normal">中</dl>
+              <dl class="small">小</dl>
+          </div>
+      </a>
     </div>
     <div class="wrap25">
-    <div class="navs">
-        <ul class="mtree transit">
-        {foreach item=nav from=$pagenavs}
-          <li class="{if $nav.current}current{/if}"><a href="{$nav.link}" class="firstli kz" data-limit="10">{$nav.name}</a>
-          {if $nav.childmenu}
-              <ul>
-                  {foreach item=nav_list from=$nav.childmenu}
-                  <li class="{if $nav_list.current}current{/if}"><a href="{$nav_list.link}" class="kz" data-limit="10">{$nav_list.name}</a></li>
-                  {/foreach}
-              </ul>
-              {/if}
-          </li>
-          {/foreach}
-      </ul>
-    </div>
-    <div class="inner_main">
-        <div class="about_main1 newsdetail">
-          <h3 class="inner_title">{$article.title}</h3>
-          <p class="time">发布时间：{$article.pubdate}</p>
-          {$article.content|unescape:"html"}
+        <div class="navs">
+            <ul class="mtree transit">
+            {foreach item=nav from=$pagenavs}
+              <li class="{if $nav.current}current{/if}"><a href="{$nav.link}" class="firstli kz" data-limit="10">{$nav.name}</a>
+              {if $nav.childmenu}
+                  <ul>
+                      {foreach item=nav_list from=$nav.childmenu}
+                      <li class="{if $nav_list.current}current{/if}"><a href="{$nav_list.link}" class="kz" data-limit="10">{$nav_list.name}</a></li>
+                      {/foreach}
+                  </ul>
+                  {/if}
+              </li>
+              {/foreach}
+            </ul>
         </div>
-        <div class="page1">
-            <a href="{$article.prev.link}">上一篇</a>
-            <a href="{$article.category.link}" class="back2 active">返回列表</a>
-            <a href="{$article.next.link}">下一篇</a>
-          </div>
-    </div>
+        <div class="inner_main">
+            <div class="about_main1 newsdetail">
+              <h3 class="inner_title">{$article.title}</h3>
+              <p class="time">发布时间：{$article.pubdate}</p>
+              {$article.content|unescape:"html"}
+            </div>
+            <div class="page1">
+                <a href="{$article.prev.link}">上一篇</a>
+                <a href="{$article.category.link}" class="back2 active">返回列表</a>
+                <a href="{$article.next.link}">下一篇</a>
+              </div>
+        </div>
     </div>
 </div>             
   {include file='./_footer.html'} 

@@ -265,8 +265,8 @@ $(document).ready(function(){
 	        loopedSlides: 3, //looped slides should be the same
 	        slideToClickedSlide: true
 	    });
-	    galleryTop.params.control = galleryThumbs;
-	    galleryThumbs.params.control = galleryTop;
+	    // galleryTop.params.control = galleryThumbs;
+	    // galleryThumbs.params.control = galleryTop;
 
     };
      if (document.getElementById("demo")) {

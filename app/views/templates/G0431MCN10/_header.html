@@ -1,0 +1,19 @@
+<div class="htop pr">
+    <header class="head pa">
+        <div class="logo wow zoomInRight"><div class="logoimg dtc tc vm"><img src="{$logo}"></div></div>
+        <i class="iconfont pa home"><span>&#xe603;</span></i>
+        <i class="iconfont pa navicon"><a href="{$site_url}"><span>&#xe616;</span></a></i>
+    </header>
+    <!-- banner -->
+     <div class="banner"> 
+        <div class="swiper-container swiper-banner">
+            <ul class="swiper-wrapper banner-img">
+                {foreach item=slidepic from=$global.slidepics}
+                    <li class="swiper-slide"><a class="pic" href="{$slidepic.link}"><img src="{$slidepic.image}"/></a></li>
+                {/foreach}
+            </ul>
+            <!-- Add Pagination -->
+            <div class="swiper-dote"><ul></ul></div>
+        </div>
+     </div>
+</div>

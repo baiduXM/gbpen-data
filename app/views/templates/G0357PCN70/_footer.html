@@ -1,0 +1,20 @@
+<div id="footer">
+      <div class="foot-top  wow bounceIn">
+          <ul class="cont">
+              <li class="li1">{$global.teltext}<span>{$contact.telephone}</span></li>
+              <li class="li2">
+                  <dd>{$global.tell}</dd>
+                  <dt>{$global.adr}</dt>
+              </li>
+              <li class="li3"><div class="erwei"><img src="{$global.erweima.image}"></div></li>
+          </ul>
+          <div class="link">友情链接/LINKS：
+            {foreach item=flink from=$global.links}
+              <a href="{$flink.link}">{$flink.title}</a>
+            {/foreach}
+          </div>
+      </div>
+      <div class="foot-bot"><div class="copy wow bounceInRight animated">{$footprint}</div></div>
+      <div class="bot-bg"></div>
+</div>
+{$footscript}

@@ -1,0 +1,46 @@
+<div class="header">
+    <div id="banner">
+      <ul class="picture">
+        {foreach item=banner from=$global.slidepics}
+        <li><a target="_blank" href="{$banner.link}"><img src="{$banner.image}"></a></li>
+        {/foreach}
+      </ul>
+      <ul class="dot">
+        {foreach item=banner from=$index.slidepics}
+        <li></li>
+        {/foreach}
+      </ul>
+    </div>
+    <div class="navbox">
+      <div class="logobg"></div>
+      <div class="nav-top">
+           <div class="logo wow zoomInRight animated"><div class="logoimg"><a href="{$site_url}"><img src="{$logo}"></a></div></div>
+           <div class="navs">
+              <div class="search">
+                   <div class="sear-bg1"></div>
+                   <div class="sear-bg"></div>
+                   <form class="search_div action="{$search_action}" method="GET"">
+                        <input name="s" type="text" class="input" placeholder="搜索">
+                        <input type="submit" class="btn" value="">
+                   </form>
+              </div>
+              <ul class="menus">
+                {foreach item=nav from=$navs}
+                <li><a class="{if $nav.current}current{/if}" href="{$nav.link}"><p>{$nav.name}</p></a>
+                   {if $nav.childmenu}
+                   <ul class="erji none">
+                     {foreach item=nav_list from=$nav.childmenu}
+                       <li>
+                          <a href="{$nav_list.link}"><p>{$nav_list.name}</p></a>
+                       </li> 
+                     {/foreach}
+                   </ul>
+                   {/if}
+                </li>
+                {if $nav@index+1 eq 5}{break}{/if}
+                {/foreach}
+              </ul>
+           </div>
+      </div>
+    </div>
+</div>

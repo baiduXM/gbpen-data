@@ -28,5 +28,20 @@
       "filter": "list,page",
       "mustchild": true
      }
-    }
+    },
+	
+  
+  "erwei_img":{
+  "value": {
+    	"image": "images/index_02_08.png",
+    	"title": "底部二维码图片",
+    	"link": "http://www.baidu.com/"
+  },
+  "description": "底部二维码图片"
+,   "type": "image",
+  "config": {
+    	"width":140,
+    	"height": 140
+  }
+}
 }

@@ -1,0 +1,41 @@
+<div class="box_titles">
+    <h2><i>{$list.name}&nbsp;<span>{$list.en_name}</span></i> 
+      <div class="span">字+
+          <ul>
+            <li class="zi1">大</li>
+            <li class="zi2">中</li>
+            <li class="zi3">小</li>
+          </ul>
+      </div> 
+      <span class="more">分类&nbsp;↓</span>
+    </h2>
+    <ul class="nnav pr">
+      {foreach item=nnav from=$pagenavs}
+        <li class="menu_head">
+          {if $nnav.childmenu}
+          <dl class="icon"><span class="icon2"></span></dl>
+          {/if}
+          <a href="{$nnav.link}" class="ce">{$nnav.name}</a>
+          {if $nnav.childmenu}
+          <ul class="menu_body">
+            {foreach item=navlist from=$nnav.childmenu}
+            <li>
+              {if $navlist.childmenu}
+             <dl class="icont"><span class="icont2"></span></dl>
+              {/if}
+              <a href="{$navlist.link}" class="er">{$navlist.name}</a>
+                {if $navlist.childmenu}
+                <ul class="menu_thr">
+                  {foreach item=navlists from=$navlist.childmenu}
+                  <li><a href="{$navlists.link}" class="thr">{$navlists.name}</a></li>
+                  {/foreach}
+                </ul>
+                {/if}
+            </li>
+            {/foreach}
+          </ul>
+          {/if}
+        </li>
+      {/foreach}
+    </ul>
+</div>

@@ -1,0 +1,21 @@
+    <div class="footer">
+    	<div class="c">
+    		<div class="linker">
+    			<ul class="link">
+    				<li>友情链接：</li>
+    				{foreach item=link from=$global.links}
+    				<li><a href="{$link.link}">{$link.title}</a></li>
+    				{/foreach}
+    			</ul>
+    		</div>
+    		<div class="foot">
+    			<div class="logo_bottom fl"><i><img src="{$logo}"></i></div>
+    			<div class="copyright fl">{$footprint}</div>
+    			<div class="tel fl">
+    				<p>服务热线:</p>
+    				<p class="num">{$global.quhao}<span class="big">{$global.num}</span></p>
+    			</div>
+    		</div>
+    	</div>
+    	{$footscript}
+    </div>

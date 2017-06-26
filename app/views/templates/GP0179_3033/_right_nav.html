@@ -1,0 +1,8 @@
+<div class="local">{$posnavs[0].name}
+	<i>当前位置：
+		<a href="{$site_url}">首页</a>
+		{foreach item=nav from=$posnavs}
+			 - <a href="{$nav.link}">{$nav.name}</a>
+		{/foreach}
+	</i>			
+</div>

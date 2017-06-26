@@ -1,0 +1,68 @@
+{
+	"slidepics":{
+		"value":[{
+			"title":"banner1",
+			"image":"images/banner0.jpg",
+			"link":"content-product.html"
+			},{
+			"title":"banner2",
+			"image":"images/banner0.jpg",
+			"link":"content-product.html"
+			},{
+			"title":"banner3",
+			"image":"images/banner0.jpg",
+			"link":"content-product.html"
+			}],
+		"description":"轮播大图",
+		"type":"images",
+		"config":{
+			"width":1920,
+			"height":400
+		}
+	},
+	"quhao":{
+		"value":"0592-",
+		"description":"区号",
+		"type":"text"
+	},
+	"num":{
+		"value":"3503575",
+		"description":"号码",
+		"type":"text"
+	},
+	"links":{
+		"description": "页面底部友情链接",
+		"value":[{
+			"title":"link1",
+			"image":"images/banner0.jpg",
+			"link":"content-product.html"
+			},{
+			"title":"link2",
+			"image":"images/banner0.jpg",
+			"link":"content-product.html"
+			},{
+			"title":"link3",
+			"image":"images/banner0.jpg",
+			"link":"content-product.html"
+			}],
+		"type": "images",
+		"config": {
+			"width": 144,
+			"height": 68
+		}
+	},
+	"pagenavs":{
+		"value":{},
+		"description":"侧边栏目列表",
+		"type":"list",
+		"config":{
+			"filter":"list,page",
+			"mustchild":true
+		}
+	},
+	"auther":{
+		"value":"易尔通",
+		"description":"发布者",
+		"type":"text"
+	}
+}

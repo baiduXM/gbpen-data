@@ -1,0 +1,62 @@
+{
+	"slidepics":{
+		"value":[{
+			"title":"banner1",
+			"image":"images/banner.jpg",
+			"link":"content-product.html"
+			},{
+			"title":"banner2",
+			"image":"images/banner.jpg",
+			"link":"content-product.html"
+			},{
+			"title":"banner3",
+			"image":"images/banner.jpg",
+			"link":"content-product.html"
+				}],
+		"description":"轮播大图",
+		"type":"images",
+		"config":{
+			"width":1920,
+			"height":600
+		}
+	},
+	"class":{
+		"description": "培训课程",
+		"value": {},
+		"type": "list",
+		"config": {
+			"star_only": true,
+			"width": 285,
+			"height": 38
+		}
+	},
+	"about":{
+		"description": "关于我们",
+		"value": {},
+		"type": "page",
+		"config": {
+			"nav_width": 413,
+			"nav_height": 400
+		}
+	},
+	"news":{
+		"description": "新闻中心",
+		"value": {},
+		"type": "list",
+		"config": {
+			"star_only": true,
+			"width": 390,
+			"height": 230
+		}
+	},
+	"team":{
+		"description": "教师团队",
+		"value": {},
+		"type": "list",
+		"config": {
+			"star_only": true,
+			"width": 390,
+			"height": 230
+		}
+	}
+}

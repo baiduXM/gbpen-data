@@ -1,0 +1,27 @@
+{
+	
+	"pagenavs":{
+		"description":"侧边栏目列表（当前栏目无子栏目时展示的目标栏目）",
+		"value":{},
+		"type":"list",
+		"config": {
+			"filter": "list,page",
+			"mustchild": true
+		}
+	},
+	"culture":{
+		"description":"内页分类下快捷栏目",
+		"value":{},
+		"type":"page",
+		"config": {
+			"nav_height": 65,
+			"nav_width":225
+		}
+	}
+	
+
+
+}
+               
+
+
