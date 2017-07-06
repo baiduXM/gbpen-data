@@ -1,0 +1,6 @@
+<ul class="pos-nav rt">
+    <li><a href=""><i></i>首页</a></li>
+    {foreach item=nav from=$posnavs}
+    <li class="{if $nav.current}current{/if}"> >> <a href="{$nav.link}">{$nav.name}</a></li>
+    {/foreach}
+</ul>

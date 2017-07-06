@@ -1,0 +1,8 @@
+<!---轮播图-->
+<div id="banner">
+    <div class="slider index" >
+        {foreach name=slidepics item=slidepic from=$global.slidepics}
+        <div class="slide"><a href="{$slidepic.link}" target="_blank"><img src="{$slidepic.image}" ></a></div>
+        {/foreach}
+    </div>
+</div>

@@ -46,14 +46,12 @@
                     </div>
                     <div class="c_bottom">
                         <div class="searchresult">
-                            {if $search.total eq 0}
-                            <span class="result">没有查找到相关数据！</span>
-                            {else}
+
                             <span class="result">以下是关键字“<em>{$search.keyword}</em>“的搜索结果</span>
                             <div class="list-text">
                                 <div class="content">
                                     <ul>
-                                        {foreach item=article from=$list.data}
+                                        {foreach item=article from=$search.data}
                                         <li>
                                             <a class="a" href="{$article.link}">
                                                 <div class="time">{$article.pubtimestamp|date_format:'%Y-%m-%d'}</div>
@@ -84,7 +82,7 @@
                                     <a href="{$page_links.last_link}">&gt;&gt;</a>
                                 </div>
                             </div>
-                            {/if}
+
                         </div>
                     </div>
                 </div>

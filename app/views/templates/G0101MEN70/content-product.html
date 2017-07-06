@@ -70,11 +70,11 @@
                 </ul>
               </div>
               <div class="swiper-container swiper-prodt">
-                  <div class="swiper-wrapper prodt bd">
+                  <ul class="swiper-wrapper prodt bd">
                     {foreach item=image from=$article.images}
-                      <div class="swiper-slide"><div class="pro-img"><img src="{$image.image}"></div></div>
+                      <li class="swiper-slide "><div class="pro-img"><img src="{$image.image}"></div></li>
                     {/foreach}
-                  </div>
+                  </ul>
                   <!-- Add Pagination -->
                   <div class="swiper-button-prev"></div>
                   <div class="swiper-button-next"></div>
@@ -83,9 +83,9 @@
                    {$article.content|unescape:"html"}
              </div>
              <ul class="choose">
-                <li><a href="{$article.prev.link}">上一篇：{$article.prev.title}</a></li>
-                <li><a href="{$article.next.link}">下一篇：{$article.next.title}</a></li>
-             </ul>
+                  <li><a href="{$article.prev.link}">Prev：{$article.prev.title}</a></li>
+                  <li><a href="{$article.next.link}">Next：{$article.next.title}</a></li>
+              </ul>
           </div>
       </section>
       <footer class="foot"><span class="back-top">TOP <img src="{$site_url}images/top.png"></span>

@@ -1,0 +1,15 @@
+	<div class="header">
+		<div class="logoo"><a href="{$site_url}"><img src="{$logo}"></a></div>
+		<div class="nav">
+			<div class="swiper-button-prev swiper-button-prev-nav fl"></div>
+			<div class="swiper-container swiper-container-nav">
+				<div class="swiper-wrapper swiper-wrapper-nav fl">
+					<div class="swiper-slide swiper-slide-nav"><a href="{$site_url}">网站首页</a></div>
+					{foreach item=nav from=$navs}
+						<div class="swiper-slide swiper-slide-nav"><a href="{$nav.link}">{$nav.name}</a></div>
+					{/foreach}
+				</div>
+			</div>
+			<div class="swiper-button-next swiper-button-next-nav fl"></div>
+		</div>
+	</div>

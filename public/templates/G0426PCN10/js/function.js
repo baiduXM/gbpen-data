@@ -32,13 +32,13 @@ $(document).ready(function () {
         });
         $(".sub").click(function () {
             onOff = !onOff;
-            if($(".test").val() == ""){
-                $(".ss").animate({"width":"30px"}, function () {
-                    $(".test").animate({"opacity":0,"filter":"alpha(opacity=0)"});
-                    $(".zzc").css("display","block");
-                });
-                return false;
-            }
+            // if($(".test").val() == ""){
+            //     $(".ss").animate({"width":"30px"}, function () {
+            //         $(".test").animate({"opacity":0,"filter":"alpha(opacity=0)"});
+            //         $(".zzc").css("display","block");
+            //     });
+            //     return false;
+            // }
         })
     }
 

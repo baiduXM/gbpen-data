@@ -1,0 +1,31 @@
+{if $pagenavs}
+<ul class="det-nav">
+    <li><h4><i></i><span>{$posnavs[0].name}</span></h4></li>
+    {foreach item=nav from=$pagenavs}
+        <li><a   href="{$nav.link}"><i></i><span>{$nav.name}</span></a>
+            {if $nav.childmenu}
+                <ul class="det-child hide">
+                    {foreach item=nav_list from=$nav.childmenu}
+                        <li><a href="{$nav_list.link}">{$nav_list.name}</a></li>
+                    {/foreach}
+                </ul>
+            {/if}
+        </li>
+    {/foreach}
+</ul>
+{else}
+<ul class="det-nav">
+    <li><h4><i></i><span>{$global.posnavs[0].name}</span></h4></li>
+    {foreach item=nav from=$global.pagenavs.chiildmenu}
+    <li ><a  href="{$nav.link}"><i></i><span>{$nav.name}</span></a>
+        {if $nav.childmenu}
+            <ul class="det-child hide">
+                {foreach item=nav_list from=$nav.childmenu}
+                     <li><a href="{$nav_list.link}">{$nav_list.name}</a></li>
+                {/foreach}
+            </ul>
+        {/if}
+    </li>
+    {/foreach}
+</ul>
+{/if}

@@ -1,0 +1,67 @@
+{if $pagenavs}	
+<div class="list">
+    <h3>{$posnavs[0].name}</h3>
+    <div class="listbg">
+        <ul class="first">
+        {foreach name=pagenavs item=nav from=$pagenavs}
+            <li class="yiji"><a class=" {if $nav.current} on {/if}" href="{$nav.link}">{$nav.name}</a>
+                <ul class="second">   
+                {if $nav.childmenu}
+                    {foreach item=nav_list from=$nav.childmenu}
+                        <li class="module_nav2 "><a class="{if $nav_list.current} on {/if}" href="{$nav_list.link}">{$nav_list.name}</a>    
+                            <ul >
+                            {if $nav_list.childmenu}
+                            {foreach item=nav1_list from=$nav_list.childmenu}
+                                <li class="module_nav3 "><a class="{if $nav1_list.current} on {/if}" href="{$nav1_list.link}">{$nav1_list.name}</a></li>
+                            {/foreach}
+                            {/if}
+                            </ul>                       
+                        </li>
+                    {/foreach}                      
+                {/if}
+                </ul>           
+            </li>                   
+        {/foreach}
+        </ul>
+    </div>
+</div>
+{else}
+<div class="list">
+    <h3>{$_pagenavs_sub3.pagenavs.name}</h3>
+    <div class="listbg">
+        <ul class="first">
+        {foreach name=pagenavs item=nav from=$_pagenavs_sub3.pagenavs.childmenu}
+            <li class="yiji"><a href="{$nav.link}" >{$nav.name}</a>
+                <ul class="second">   
+                {if $nav.childmenu}
+                    {foreach item=nav_list from=$nav.childmenu}
+                        <li class="module_nav2"><a href="{$nav_list.link}">{$nav_list.name}</a>    
+                            <ul >
+                            {if $nav_list.childmenu}
+                            {foreach item=nav1_list from=$nav_list.childmenu}
+                                <li class="module_nav3"><a href="{$nav1_list.link}">{$nav1_list.name}</a></li>
+                            {/foreach}
+                            {/if}
+                            </ul>                       
+                        </li>
+                    {/foreach}                      
+                {/if}
+                </ul>           
+            </li>                   
+        {/foreach}
+        </ul>
+    </div>
+</div>
+{/if}
+
+<div class="contact2">
+    <h3>联系我们</h3>
+    <div class="contacbg">
+        <div class="lixit">
+        电话：{$contact.telephone}<br />
+        传真：{$contact.fax}<br />
+        联系人：{$contact.name}<br />
+        地址：{$contact.address}<br />
+        </div>
+    </div>
+</div>  

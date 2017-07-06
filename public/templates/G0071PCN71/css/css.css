@@ -26,7 +26,7 @@ strong{display: block;margin: 0 auto;overflow: hidden;text-overflow: ellipsis;wh
 #nav{ height:70px;}
 #nav ul li p{ height:70px; line-height:70px; overflow:hidden}
 #nav ul li{float:left; height:70px; line-height:70px; font-size:14px;font-family:Microsoft Yahei; } 
-#nav ul li a{ color:#b3b3b3; display:block; text-align:center; padding:0 5px;font-family:Microsoft Yahei;; font-size:15px;}
+#nav ul li a{ color:#FFFFFF; display:block; text-align:center; padding:0 5px;font-family:Microsoft Yahei;; font-size:15px;}
 #nav ul li a:hover{ background:#e6a62d; color: #fdfaf5;}
 
 
@@ -59,7 +59,7 @@ strong{display: block;margin: 0 auto;overflow: hidden;text-overflow: ellipsis;wh
 #about .title{ background:url(../images/about_title.jpg) top center no-repeat; height:50px; line-height:50px; color:#fff; font-size:20px;}
 #about .title a{ color:#fff; font-size:20px;}
 #about .title h2{color:#fff; font-size:20px; margin-left:65px; height:50px; line-height:50px;}
-#about .title h2 span { font-size:12px; color:#808080; text-transform:uppercase}
+#about .title h2 span { font-size:12px; color:#d9d9d9; text-transform:uppercase}
 #about .inner{ margin-top:15px; height:295px; overflow:hidden}
 #about .inner .about_img{ text-align: center; height:140px; margin-bottom:10px;}
 #about .inner .about_img img{ height:100%;}
@@ -75,7 +75,7 @@ strong{display: block;margin: 0 auto;overflow: hidden;text-overflow: ellipsis;wh
 #news .title{ background:url(../images/news_title.jpg) top center no-repeat; height:50px; line-height:50px; color:#fff; font-size:20px;}
 #news .title a{ color:#fff; font-size:20px;}
 #news .title h2{color:#fff; font-size:20px; margin-left:65px; height:50px; line-height:50px;}
-#news .title h2 span { font-size:12px; color:#808080; text-transform:uppercase}
+#news .title h2 span { font-size:12px; color:#d9d9d9; text-transform:uppercase}
 #news .inner{ margin-top:15px; height:295px; overflow:hidden}
 #news .inner ul li .date{ background:url(../images/date_bg.jpg) top center no-repeat; width:77px; height:50px; overflow:hidden; text-align:center; color:#fff; font-size:14px; padding-right:5px; float:left}
 #news .inner ul li .date b{ font-size:20px; color:#fff; display:block; font-weight:normal}
@@ -93,8 +93,8 @@ strong{display: block;margin: 0 auto;overflow: hidden;text-overflow: ellipsis;wh
 
 #case{ width:268px; float:left}
 #case .title{  height:50px; line-height:50px; color:#fff; font-size:20px;}
-#case .title h2{color:#0d0d0d; font-size:20px; margin-left:15px; height:50px; line-height:50px;}
-#case .title h2 span { font-size:12px; color:#737373; text-transform:uppercase}
+#case .title h2{color:#6495ed; font-size:20px; margin-left:15px; height:50px; line-height:50px;}
+#case .title h2 span { font-size:12px; color:#b3b3b3; text-transform:uppercase}
 #case .title .more{ float:right; margin-top:20px;}
 #case .kj ul li{ float:left; background:url(../images/kj_bg.jpg) top center no-repeat; width:127px; height:32px; line-height:32px; margin-top:10px;text-align:center}
 #case .kj ul li a{ color:#fff; font-size:14px; text-align:center}
@@ -120,8 +120,8 @@ strong{display: block;margin: 0 auto;overflow: hidden;text-overflow: ellipsis;wh
 
 #pro{ width:1003px; margin:0 auto; margin-top:30px; margin-bottom:50px}
 #pro .title{  height:50px; line-height:50px; color:#fff; font-size:20px; border-bottom:3px solid #6495ed}
-#pro .title h2{color:#0d0d0d; font-size:20px; margin-left:35px; height:50px; line-height:50px;}
-#pro .title h2 span { font-size:12px; color:#737373; text-transform:uppercase}
+#pro .title h2{color:#6495ed; font-size:20px; margin-left:35px; height:50px; line-height:50px;}
+#pro .title h2 span { font-size:12px; color:#b3b3b3; text-transform:uppercase}
 #pro .title .more{ float:right; margin-top:20px;}
 #pro .inner{ height:203px; overflow:hidden}
 #pro .inner ul li{ float:left; display:inline; margin-top:15px;  margin-left:10px; margin-right:2px; text-align:center; overflow:hidden; width:180px;border:solid 1px #CCC; padding:2px;}
@@ -131,15 +131,15 @@ strong{display: block;margin: 0 auto;overflow: hidden;text-overflow: ellipsis;wh
 #pro .title p .iconfont{ color:#b3b3b3; font-size:25px; height:50px; line-height:50px; width:50px; text-align:center; margin:0 auto} 
 
 
-.fonnter_bt{ border-top:1px solid #6495ed}
+.fonnter_bt{ border-top:1px solid #6495ed;color: #ffffff}
 .links { margin-top:30px; margin-bottom:35px;}
 .links .title{ float:left; width:101px; height:31px; margin-right:15px;}
-.links .inner a{ height:31px; line-height:31px; overflow:hidden; color:#666; padding:0 15px;}
+.links .inner a{ height:31px; line-height:31px; overflow:hidden; color:#666666; padding:0 15px;}
 .links .inner a:hover{ color:#f39800}
 .links .inner{color:#666}
 
-.cpy{ padding-top:30px; padding-bottom:30px;text-align:center; width:100%; background:#6495ed; color:#666666}
-.cpy a{ color:#666}
+.cpy{ padding-top:30px; padding-bottom:30px;text-align:center; width:100%; background:#6495ed; color:#ffffff}
+.cpy a{ color:#ffffff}
 .cpy a:hover{ color:#fff}
 
 
@@ -159,7 +159,7 @@ strong{display: block;margin: 0 auto;overflow: hidden;text-overflow: ellipsis;wh
 .subnav { background:#fff}
 .subnav .alefttitle{ background:url(../images/alefttitle_bg.jpg) top center no-repeat; width:200px; height:70px; line-height:70px}
 .subnav .alefttitle h2{color:#fff; font-size:20px; height:70px; line-height:70px; text-align:center; overflow:hidden}
-.subnav .alefttitle span { font-size:12px; color:#737373; text-transform:uppercase}
+.subnav .alefttitle span { font-size:12px; color:#b3b3b3; text-transform:uppercase}
 
 
 
@@ -178,7 +178,7 @@ ul.third li a.thirda:hover{color:#1062c1}
 .sub_contact{ width:200px;}
 .sub_contact h2{background:url(../images/contact_title.jpg) top center no-repeat; height:35px; line-height:35px;}
 .sub_contact h2{color:#fff; font-size:20px; height:35px; line-height:35px; text-align:center}
-.sub_contact span { font-size:12px; color:#737373; text-transform:uppercase}
+.sub_contact span { font-size:12px; color:#b3b3b3; text-transform:uppercase}
 .sub_contact .inner{background:#ebebeb ; padding:15px;}
 
 

@@ -1,0 +1,74 @@
+{
+	
+	
+	
+	
+	"pro_list":{
+		"description":"首页侧边栏导航",
+		"value":{},
+		"type":"list"
+	},
+	
+	
+	
+	
+	
+	
+	
+		
+	"about": {
+	    "value": {},
+		"description": "关于我们",
+		
+		"type": "page",
+		
+	"config": {
+			"nav_width":175,
+			"nav_height":175
+		}
+
+		
+		
+	},	
+	
+	    "pro":{
+		"description": "产品中心",
+		"value": {},
+		"type": "list",
+		"config": {
+			"width":165,
+			"height":165
+		}
+	},
+		
+		
+		
+		"case":{
+		"description": "工程案例",
+		"value": {},
+		"type": "list",
+		"config": {
+			"width":240,
+			"height":240
+		}
+	},
+	"caseOff":{
+		"description":"首页是否显示图片轮播,默认1,开启",
+		"value":"0",
+		"type":"text"
+	},
+		
+	
+		"news":{
+		"description": "新闻中心",
+		"value": {},
+		"type": "list"
+		
+			
+	}	
+
+	
+	
+
+	
+}

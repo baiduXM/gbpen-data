@@ -1,0 +1,23 @@
+<div id="footer">
+    <div class="container foot">
+        <ul class="link ">
+            <li><a href=""><span class="lt">友情链接</span><i class="iconfont">&#xe617;</i></a>
+                <ul class="link-child hide">
+                    {foreach key=key item=link from=$global.links}
+                    <li><a href="{$link.link}">{$link.title}</a></li>
+                    {/foreach}
+                </ul>
+            </li>
+        </ul>
+        <ul class="three-logo ">
+            <li><a href=""><img src="{$site_url}images/icon_11.png" alt=""></a></li>
+            <li><a href=""><img src="{$site_url}images/icon_08.png" alt=""></a></li>
+            <li><a href=""><img src="{$site_url}images/icon_14.png" alt=""></a></li>
+        </ul>
+        <div class="copy ">
+            <p >{$footprint}</p>
+        </div>
+    </div>
+</div>
+
+{$footscript}

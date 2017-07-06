@@ -111,7 +111,7 @@
                       {$limit = 3}
                       {foreach item=list1 from=$mIndexCat.data}
                         <div class="swiper-slide">
-                            <h2>{$list1.title}</h2>
+                            <h2><a href="{$list1.link}">{$list1.title}</a></h2>
                         </div>
                       {if $list1@index+1 gte $limit}{break}{/if}  
                       {/foreach}  

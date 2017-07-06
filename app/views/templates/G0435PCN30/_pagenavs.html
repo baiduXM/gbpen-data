@@ -1,0 +1,55 @@
+{if $pagenavs}
+<div class="navBox">
+    <i></i>
+    <h4 class="nav-title">{$posnavs[0].name}</h4>
+    <ul class="one">
+        {foreach item=nav from=$pagenavs}
+        <li><a href="{$nav.link}"><span>{$nav.name}</span></a>
+            {if $nav.childmenu}
+            <ul class="two">
+                {foreach item=nav_list from=$nav.childmenu}
+                <li><a href="{$nav_list.link}"><span>{$nav_list.name}</span></a>
+                    {if $nav_list.childmenu}
+                    <ul class="three">
+                        {foreach item=nav_lists from=$nav_list.childmenu}
+                        <li><a href="{$nav_lists.link}"><span>{$nav_lists.name}</span></a></li>
+                        {/foreach}
+                    </ul>
+                    {/if}
+                </li>
+                {/foreach}
+            </ul>
+            {/if}
+        </li>
+        {/foreach}
+    </ul>
+</div>
+
+{else}<!--无子栏目时-->
+<div class="navBox">
+    <i></i>
+    <h4 class="nav-title">{$global.pagenavs[0].name}</h4>
+    <ul class="one">
+        {foreach item=nav from=$global.pagenavs.childmenu}
+        <li><a href="{$nav.link}"><span>{$nav.name}</span></a>
+            {if $nav.childmenu}
+            <ul class="two">
+                {foreach item=nav_list from=$nav.childmenu}
+                <li><a href="{$nav_list.link}"><span>{$nav_list.name}</span></a>
+                    {if $nav_list.childmenu}
+                    <ul class="three">
+                        {foreach item=nav_lists from=$nav_list.childmenu}
+                        <li><a href="{$nav_lists.link}"><span>{$nav_lists.name}</span></a></li>
+                        {/foreach}
+                    </ul>
+                    {/if}
+                </li>
+                {/foreach}
+            </ul>
+            {/if}
+        </li>
+        {/foreach}
+    </ul>
+
+</div>
+{/if}

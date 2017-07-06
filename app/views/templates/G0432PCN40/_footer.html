@@ -1,0 +1,18 @@
+	<div class="footer">
+		<div class="c linker">
+			<ul>
+				<li>友情链接：</li>
+				{foreach item=link from=$global.links}
+					<li><a href="{$link.link}">{$link.title}</a></li>
+				{/foreach}
+			</ul>
+		</div>
+		<div class="c copyright">
+			<div class="cr">{$footprint}</div>
+			<div class="erweima">
+				<i class="fr"><img src="{$global.erweima.image}"></i>
+				<span class="guanzhu fr">扫一扫关注我们</span>
+			</div>
+		</div>
+	</div>
+	{$footscript}

@@ -1,0 +1,95 @@
+
+/*标题样式*/
+.in_h2{ width:100%;border-radius:15px;  overflow:hidden; background:#c7b290; color:#402511; margin-bottom:4%}
+.in_h2 .ch{ width:60%; font-size:16px;line-height:35px; height:35px; background:url(../images/h2_bg.png) no-repeat left; padding-left:3%; float:left; color:#402511; margin-left:2%;overflow: hidden;text-overflow: ellipsis;white-space: nowrap; }
+.in_h2 .more{  line-height:35px; height:35px; float:right; text-transform:uppercase; font-size:13px; margin-right:3%}
+
+
+
+
+@media screen and (min-width: 320px) and (max-width: 480px){
+.in_h2 .ch{ padding-left:7%;}
+
+
+
+}
+/*标题样式*/
+.inner{ margin-top:10px;}
+.wrapper{ width:96%; margin:5% auto; }
+
+
+
+
+#in_page { position:relative; }
+
+
+
+#in_page .inner{ }
+#in_page .inner .pix{ width:100%;}
+#in_page .inner .pix img{ width:100%; }
+#in_page .inner .pix .ch{ height:30px; line-height:30px; background:#f07702; color:#fff; text-align:center; width:20%; position:absolute; top:5%; left:-1%;}
+#in_page .inner .pix .ch:after{ content:""; position:absolute; top:-5px; left:0px;width: 0;height: 0;border-bottom: 5px solid #f07702;border-left: 5px solid transparent;}
+
+
+
+#in_page .inner p{ width:100%; margin:auto; line-height:30px; height:120px; overflow:hidden; font-size:14px; color:#757575; margin:2% auto; font-size:14px; }
+
+
+@media screen and (min-width: 320px) and (max-width: 480px){
+#in_page .inner .pix .ch{width:25%; }
+
+}
+
+
+
+
+#in_text{ background:#fbfbfb; padding-top:3%; padding-bottom:3% }
+
+#in_text .tit { position:relative; z-index:10; width:100%; margin:auto;}
+#in_text .tit:before { position:absolute; left:0px; top:80%; height:1px; width:100%; background:#333; content:""; z-index:1}
+#in_text .tit .ch{  font-size:18px; color:#333; height:20px; line-height:20px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;
+; text-align:center;  }
+#in_text .tit .ch span{ background:#fff; position:relative; z-index:12; padding:0 15px;}
+#in_text .tit .en{ font-size:13px; text-transform:uppercase; color:#bbbbbb; height:20px; line-height:20px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap; text-align:center}
+
+#in_text ul li{  width:100%; position:relative; padding-bottom:10px; margin:3% auto }
+#in_text ul li:before{ content:""; position:absolute; bottom:0; left:3%; width:10%; height:1px; background:#999}
+
+#in_text ul li h2 { background:url(../images/news_li_bg.jpg) no-repeat left; padding-left:4%;  line-height:35px; height:35px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap; font-size:16px;  color:#354a8c;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+#in_text ul li .date{ font-size:12px; color:#999;   text-align:left; font-size:13px; margin-left:3%}
+#in_text ul li .in_des{ line-height:25px; height:50px; overflow:hidden; color:#787879; margin-top:5px; font-size:13px; width:94%; margin:2% auto}
+
+
+
+@media screen and (min-width: 320px) and (max-width: 480px){
+#in_text ul li .pix{ width:35%; }
+#in_text ul li .right{ width:62%; }
+}
+
+
+
+
+#in_image{   position:relative;    }
+#in_image .tit { position:relative; z-index:10; width:70%; margin:auto;}
+#in_image .tit .pix{ width:100%; position:absolute; left:0; top:0; z-index:100 }
+#in_image .tit .pix img{ width:100%; }
+#in_image .tit .txt{ width:70%; margin:auto; position:absolute; top:25%; left:15%; z-index:120; text-align:center}
+#in_image .tit .txt .ch{  font-size:18px; color:#fff; height:20px; line-height:20px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;
+ text-align:center; display:inline-block; max-width:40%;}
+#in_image .tit .txt .en{ font-size:13px; text-transform:uppercase; color:#fff; height:20px; line-height:20px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap; text-align:center;display:inline-block; max-width:40%; margin-left:5px}
+#in_image .inner{   margin:auto; }
+#in_image ul{ width:98%; margin:auto; position:relative; z-index:2; margin-top:4% }
+#in_image ul li{ float:left;margin:2%; width:45%; border:1px solid #fff }
+#in_image ul li .pix{ position:relative;}
+#in_image ul li .bottom{ width:48px; height:11px; margin:auto;margin-top:-2px; position:relative; z-index:10}
+#in_image ul li .in_protitle{  width:100%; background:#f07702; position:relative; z-index:11; height:35px; line-height:35px;margin-top:5px;display: block;margin: 0 auto;overflow: hidden;text-overflow: ellipsis;white-space: nowrap; color:#fff; text-align:center; margin-top:5px;}
+
+
+@media screen and (min-width: 320px) and (max-width: 480px){
+#in_image .tit { width:90%; }
+#in_image .tit .txt{  top:15%; }
+#in_image .tit .txt .ch{  font-size:16px; }
+#in_image .tit .txt .en{ font-size:12px; }
+
+}
+

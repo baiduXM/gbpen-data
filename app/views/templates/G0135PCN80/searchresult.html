@@ -33,10 +33,7 @@
      {include file='./_header.html'}
      <div class="content">
         <h1 class="ny-tit">{$list.name}
-            <span>当前位置
-           {foreach item=nav from=$pagenavs}
-             &gt; <a href="{$nav.link}">{$nav.name}</a>
-           {/foreach}</span>
+            <span>当前位置 > 搜索结果</span>
        </h1>
        <div class="seresult">
         {if $search.total eq 0}

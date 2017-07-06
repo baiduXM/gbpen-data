@@ -1,0 +1,16 @@
+{if $global.list1}
+    <div class="det-rt">
+        <h4 class="rt-name"><span >{$global.list1.name}</span></h4>
+        {foreach item=txt from=$global.list1.data}
+        <a href="{$txt.link}">
+            <dl class="rt-dl">
+                <dt><img src="images/search_03.png" alt=""></dt>
+                <dd>
+                    <h3>{$txt.title}</h3>
+                    <time><img src="images/search_07.png" alt=""><span>{$txt.pubtimestamp|date_format:'%Y-%m-%d'}</span></time>
+                </dd>
+            </dl>
+        </a>
+        {/foreach}
+    </div>
+{/if}

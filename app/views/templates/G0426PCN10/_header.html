@@ -5,9 +5,9 @@
             <div class="h_r">
                 <div class="hd_ss">
                     <div class="ss">
-                        <form action="">
-                            <input class="sub" type="submit" value=""/>
-                            <input class="test" type="text"/>
+                        <form action="{$search_action}" method="GET">
+                            <input class="sub" type="submit" value=""  />
+                            <input class="test" type="text" value="" name="s"/>
                             <span class="zzc"></span>
                         </form>
                     </div>
@@ -22,7 +22,7 @@
                         </li>
                         {foreach item=nav from=$navs}
                         <li class="nav_li" style="width:{100/($limit+1)}%">
-                            <a class="transition" href="{$nav.link}">{$nav.name}</a>
+                            <a class="transition" href="{$nav.link}">{$nav.en_name}</a>
                             {if $nav.childmenu}
                             <ul>
                                 {if $nav.childmenu}{foreach key=key item=nav_list from=$nav.childmenu}

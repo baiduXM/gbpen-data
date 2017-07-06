@@ -1,0 +1,34 @@
+{
+
+    "list1": {
+      "value":{},
+      "description": "首页轮播图",
+      "type": "list",
+      "config": {
+        "width":223,
+        "height":220
+      }
+    },
+    "pagenavs": {
+    "value": {},
+    "description": "侧边栏目列表（当前栏目无子栏目时展示的目标栏目）",
+    "type": "list",
+    "config": {
+      "filter": "list,page",
+      "mustchild": true
+     }
+    },
+    "links": {
+      "value": [{
+        "title": "百度贴吧",
+        "image": "",
+        "link": "http://tieba.baidu.com"
+      }, {
+        "title": "百度图片",
+        "image": "",
+        "link": "http://image.baidu.com"
+      }],
+      "description": "友情链接 ",
+      "type": "images"
+    }
+}

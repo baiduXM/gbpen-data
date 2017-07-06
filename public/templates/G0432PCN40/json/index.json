@@ -1,0 +1,96 @@
+{
+	"slidepics":{
+		"value":[{
+			"title":"banner1",
+			"image":"images/banner.jpg",
+			"link":"content-product.html"
+			},{
+			"title":"banner2",
+			"image":"images/banner.jpg",
+			"link":"content-product.html"
+			},{
+			"title":"banner3",
+			"image":"images/banner.jpg",
+			"link":"content-product.html"
+				}],
+		"description":"轮播大图",
+		"type":"images",
+		"config":{
+			"width":1920,
+			"height":720
+		}
+	},
+	"proad":{
+		"value":{
+			"title":"proad",
+			"image":"images/proad.jpg",
+			"link":"list-image.html",
+			"description":"扫码关注"
+			},
+		"type":"image",
+		"description":"项目展示广告语图片",
+		"config":{
+			"width":320,
+			"height":260
+		}
+	},
+	"proslider":{
+		"value":[{
+			"title":"ad1",
+			"image":"images/starpro.jpg",
+			"link":"content-product.html"
+			},{
+			"title":"ad2",
+			"image":"images/starpro.jpg",
+			"link":"content-product.html"
+			},{
+			"title":"ad3",
+			"image":"images/starpro.jpg",
+			"link":"content-product.html"
+				}],
+		"description":"项目展示广告轮播图片",
+		"type":"images",
+		"config":{
+			"width":880,
+			"height":260
+		}
+	},
+	"project":{
+		"description": "项目展示",
+		"value": {},
+		"type": "list",
+		"config": {
+			"star_only": true,
+			"width": 289,
+			"height": 200
+		}
+	},
+	"about":{
+		"description": "关于我们",
+		"value": {},
+		"type": "page",
+		"config": {
+			"nav_width": 525,
+			"nav_height": 600
+		}
+	},
+	"newslist":{
+		"description": "新闻资讯 左侧列表",
+		"value": {},
+		"type": "list",
+		"config": {
+			"width": 300,
+			"height": 420
+		}
+	},
+	"newstj":{
+		"description": "新闻资讯 右侧推荐",
+		"value": {},
+		"type": "list",
+		"config": {
+			"star_only": true,
+			"width": 300,
+			"height": 420
+		}
+	}
+}

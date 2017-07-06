@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+
+    <meta name="keywords" content="{$keywords}" />
+    <meta name="description" content="{$description}" />
+    <link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
+    <title>{$title}</title>
+    <link rel="stylesheet" href="{$site_url}css/style.css">
+    <link rel="stylesheet" href="{$site_url}css/swiper-3.3.1.min.css">
+    <script src="{$site_url}js/jquery-1.9.1.min.js"></script>
+    <script src="{$site_url}js/swiper-3.3.1.jquery.min.js"></script>
+    <script src="{$site_url}js/index.js"></script>
+
+
+</head>
+<body>
+{include file="./_header.html"}
+{include file="./_contBanner.html"}
+<div id="Y-main">
+    <div class="Y-title">
+        <div class="container">
+            <div class="Y-name ">
+                <h5>{$article.category.en_name}</h5>
+                <span><i>{$article.category.name} </i> </span>
+            </div>
+            <div class="Y-pagenavs rt">
+                <ul>
+                    <li>您当前的位置 :</li>
+                    <li>首页</li>
+                    {foreach item=nav from=$posnavs}
+                    <li>-<a href="{$nav.link}">{$nav.name}</a></li>
+                    {/foreach}
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="Y-content">
+        <div class="container" >
+            <div class="Y-lt lt">
+                {include file="./_pagenavs.html"}
+            </div>
+            <div class="Y-rt rt list-image">
+                <div class="content-news">
+                    <h5>{$article.title}</h5>
+                    <time>发布时间 : {$article.pubtimestamp|date_format:'%Y-%m-%d'}</time>
+                    <div>
+                        {$article.content|unescape:"html"}
+                    </div>
+                    <div class="share ">
+                        <div class="shareBox">
+                            {shareExt shareText=$article.content|unescape:"html"|strip_tags|truncate:140:"…" sharePic=$article.image}
+                        </div>
+                    </div>
+                    <div class="page-ul">
+                        <ul>
+                            <li><a href="{$article.prev.link}">上一篇 : {$article.prev.title}</a></li>
+                            <li><a href="{$article.next.link}">下一篇 : {$article.next.title}</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+{include file="./_footer.html"}
+{$footscript}
+</body>
+</html>

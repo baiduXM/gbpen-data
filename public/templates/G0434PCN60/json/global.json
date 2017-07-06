@@ -1,0 +1,62 @@
+{
+  "slidepics":{
+    "value":[
+      {
+        "title":"测试图1",
+        "image":"images/banner1.png",
+        "link":"http://www.baidu.com"
+      },
+      {
+        "title":"测试图2",
+        "image":"images/banner1.png",
+        "link":"http://www.baidu.com"
+      }
+    ],
+    "description":"大轮播图",
+    "type":"images",
+    "config":{
+      "width":640
+    }
+  },
+  "list1": {
+    "value": {},
+    "description": "内页右侧列表",
+    "type": "list",
+    "config": {
+      "star_only": true
+    }
+  },
+
+    "pagenavs": {
+    "value": {},
+    "description": "侧边栏目列表（当前栏目无子栏目时展示的目标栏目）",
+    "type": "list",
+    "config": {
+      "filter": "list,page",
+      "mustchild": true
+     }
+    },
+  "links": {
+    "value": [{
+      "title": "百度贴吧",
+      "image": "",
+      "link": "http://tieba.baidu.com"
+    }, {
+      "title": "百度图片",
+      "image": "",
+      "link": "http://image.baidu.com"
+    }],
+    "description": "友情链接（图片随意传）",
+    "type": "images"
+  },
+  "style": {
+    "value": {},
+    "description": "",
+    "type": "list",
+    "config": {
+      "filter": "list",
+      "mustchild": true
+    }
+  }
+
+}

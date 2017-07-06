@@ -96,7 +96,7 @@
   height: 55px;
   line-height: 55px;
   background: url(../images/tel.png) no-repeat;
-  text-indent: 45px;
+  text-indent: 46px;
   overflow: hidden;
   font-size: 24px;
   color: #e32b36;
@@ -191,23 +191,23 @@
   width: 1920px;
   height: 823px;
 }
-.title1 {
+.title1,.title2 {
   width: 100%;
   height: 95px;
   background: url(../images/title1.png) no-repeat center bottom;
   text-align: center;
 }
-.title1 h1 {
+.title1 h1,.title2 h1 {
   font-size: 30px;
   line-height: 60px;
   position: relative;
   z-index: 3;
 }
-.title1 h1 i {
+.title1 h1 i,.title2 h1 i {
   color: #e32b36;
   font-style: normal;
 }
-.title1 h3 {
+.title1 h3,.title2 h3 {
   font-size: 48px;
   margin-top: -40px;
   opacity: 0.15;
@@ -224,7 +224,7 @@
 }
 .about .main {
   text-align: center;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 28px;
   min-height: 210px;
 }
@@ -234,7 +234,7 @@
   height: 31px;
   text-align: center;
   color: #fff;
-  font-size: 12px;
+  font-size: 16px;
   background: #e32b36;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
@@ -257,17 +257,17 @@
   margin-top: 30px;
   position: relative;
 }
-.course .title1 {
+.course .title1,.course .title2 {
   height: 142px;
   background: url(../images/title2.png) no-repeat center center;
 }
-.course .title1 h1 i {
+.course .title2 h1 i {
   color: #ff8400;
 }
-.course .title1 h4 {
+.course .title2 h4 {
   font-size: 24px;
   color: #777;
-  margin-top: 50px;
+  margin-top: 74px;
 }
 .course .main {
   height: 600px;
@@ -354,7 +354,7 @@
 }
 .course .main .main_l .name_div span .more {
   font-style: normal;
-  font-size: 14px;
+  font-size: 16px;
   color: #fff;
   display: block;
   width: 72px;
@@ -452,7 +452,7 @@
 }
 .course .main .main_r li .name_div span .more {
   font-style: normal;
-  font-size: 14px;
+  font-size: 16px;
   color: #fff;
   display: block;
   width: 72px;
@@ -464,14 +464,14 @@
   position: relative;
   margin-top: 60px;
 }
-.news .title2 {
+.news .title3 {
   width: 221px;
   height: 33px;
   line-height: 30px;
   background: url(../images/title3.png) no-repeat;
   overflow: hidden;
 }
-.news .title2 h1 {
+.news .title3 h1 {
   font-size: 24px;
 }
 .news .main {
@@ -1003,6 +1003,7 @@
   text-align: center;
   margin: 20px 0 10px;
 }
+.inner .inner_r .main .news_tit img{max-width: 100%;}
 .inner .inner_r .main .news_tit h3 {
   font-size: 18px;
 }
@@ -1036,6 +1037,7 @@
   border: 1px solid #ccc;
   color: #7e7e7e;
 }
+.inner .inner_r .main .np .back i{font-size: 20px;font-style: normal;line-height: 20px;display: block;float: left;margin: 0 4px;}
 .inner .inner_r .main .np .back img {
   margin: 5px 5px 5px 10px;
   float: left;
@@ -1191,3 +1193,15 @@ ul.mtree.transit li li li > a:hover {
   color: #ff9e0f;
   background: transparent;
 }
+
+
+
+.pro_det{width:350px;height: 350px;position: relative;margin:10px auto;}
+.pro_det .prolist{width:100%;height:300px;}
+.pro_det .prolist li{width:350px;height: 300px;}
+.pro_det .prolist li .teimg{width:350px;height: 300px;display: table-cell;text-align: center;vertical-align: middle;}
+.pro_det .prolist li .teimg img{max-width: 100%;max-height: 100%;}
+.pro_det .dot{width: 100%;height: 30px;padding: 10px 0;text-align: center;}
+.pro_det .dot li{float: left;width:12px;height: 12px;background: #faf7f2;border-radius: 50%;overflow:hidden;text-indent: 30px;margin: 0 9px;}
+.pro_det .dot li.on{background:#dd3326;}
+

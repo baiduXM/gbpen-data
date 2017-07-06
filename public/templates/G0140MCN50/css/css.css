@@ -13,10 +13,10 @@
 .boxmain{ margin:8px; height:auto; position:relative; }
 .box-titles{ color:#fff; font-size:1.12em; text-align:center; height:20px; line-height:20px;}
 .box-border{  height:auto; width:100%; margin:0px auto;}
-.box-entit{ width:100%; margin:0PX auto; height:17PX; position:relative; }
-.box-entit SPAN{ width:100PX; z-index:10; position:relative; height:17PX; line-height:28PX; color:#fff;
+.box-entit{ width:100%; margin:0 auto 15px; height:25px; position:relative; }
+.box-entit SPAN{ width:100PX; z-index:10; position:relative; height:25px; line-height:25px; color:#fff;
     display:block; margin:0px auto; text-align:center; background:#749e1d;}
-.box-entit:before{ position:absolute; left:0px; width:100%; top:16px; content:""; height:1px; background:#749e1d; display:block;}
+.box-entit:before{ position:absolute; left:0px; width:100%; top:30px; content:""; height:1px; background:#749e1d; display:block;}
 .biankuang{ border:1px solid #749e1d; border-top:none; height:auto; }
 .bk1{ padding:10px; height:auto; overflow:hidden; background: #e4ecd2;}
 .bk1 a{ display:block; height:auto; width:100%;position:relative;display:-webkit-box;display:box;}

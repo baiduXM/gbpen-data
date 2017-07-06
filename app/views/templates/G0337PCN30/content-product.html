@@ -46,6 +46,14 @@
 			<div class="news_tit">
 				<h3>{$article.title}</h3>
 			</div>
+			<div class="pro_det">
+	              <ul class="prolist">
+	              	{foreach item=pros from=$article.images}
+	                <li><div class="teimg"><img src="{$pros.image}"></div></li>
+	                {/foreach}
+	              </ul>
+	              <ul class="dot">{foreach item=pros from=$article.images}<li></li>{/foreach}</ul>
+			</div>
 			{$article.content|unescape:"html"}
 			<div style="height:30px;overflow: hidden; padding-top:10px; color:#000;"><!-- Baidu Button BEGIN -->
                 <div class="share" style="float:right;">
@@ -58,14 +66,11 @@
 					<li><a href="{$article.prev.link}" class="kz" data-limit="50">上一篇：{$article.prev.title}</a></li>
 					<li><a href="{$article.next.link}"  class="kz" data-limit="50">下一篇：{$article.next.title}</a></li>
 				</ul>
-				<a href="{$article.category.link}" class="back"><img src="images/icon.png"/>返回列表</a>
+				<a href="{$article.category.link}" class="back"><i>&lt;</i>返回列表</a>
 			</div>
 		</div>
 	</div>
 </div>
-
 {include file='./_footer.html'}
-
-
 </body>
 </html>

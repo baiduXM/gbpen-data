@@ -210,9 +210,16 @@
 
  if($(".title1 h1").size()>0){
     var str=$(".title1 h1").html();
-    var target="<i>"+str.substring(0,2)+"</i>";
-    $(".title1 h1").html(target+str.substr(2));
+    var target="<i>"+str.substring(0,1)+"</i>";
+    $(".title1 h1").html(target+str.substr(1));
   }
- 
+  if($(".title2 h1").size()>0){
+    var str=$(".title2 h1").html();
+    var target="<i>"+str.substring(0,1)+"</i>";
+    $(".title2 h1").html(target+str.substr(1));
+  }
+  // 产品图片切换
+   jQuery(".pro_det").slide({ titCell:".pro_det .dot", mainCell:".prolist", effect:"left",autoPlay:true,autoPage:true});
+  
 
 });

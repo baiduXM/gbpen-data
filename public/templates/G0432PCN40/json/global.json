@@ -1,0 +1,72 @@
+{
+	"num":{
+		"value":"0592-3505557",
+		"description":"联系电话",
+		"type":"text"
+	},
+	"slidepics":{
+		"value":[{
+			"title":"banner1",
+			"image":"images/banner0.jpg",
+			"link":"content-product.html"
+			},{
+			"title":"banner2",
+			"image":"images/banner0.jpg",
+			"link":"content-product.html"
+			},{
+			"title":"banner3",
+			"image":"images/banner0.jpg",
+			"link":"content-product.html"
+			}],
+		"description":"轮播大图",
+		"type":"images",
+		"config":{
+			"width":1920,
+			"height":420
+		}
+	},
+	"links":{
+		"description": "页面底部友情链接",
+		"value":[{
+			"title":"link1",
+			"image":"images/banner0.jpg",
+			"link":"content-product.html"
+			},{
+			"title":"link2",
+			"image":"images/banner0.jpg",
+			"link":"content-product.html"
+			},{
+			"title":"link3",
+			"image":"images/banner0.jpg",
+			"link":"content-product.html"
+			}],
+		"type": "images",
+		"config": {
+			"width": 1920,
+			"height": 420
+		}
+	},
+	"erweima":{
+		"value":{
+			"title":"erweima",
+			"image":"images/erweima.png",
+			"link":"www.baidu.com",
+			"description":"扫码关注"
+			},
+		"type":"image",
+		"description":"首页底部微信二维码",
+		"config":{
+			"width":104,
+			"height":104
+		}
+	},
+	"pagenavs":{
+		"value":{},
+		"description":"侧边栏目列表",
+		"type":"list",
+		"config":{
+			"filter":"list,page",
+			"mustchild":true
+		}
+	}
+}

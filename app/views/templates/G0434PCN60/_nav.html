@@ -1,0 +1,35 @@
+<div class="hadTop">
+   <div class="container">
+       <div class="logo">
+           <b class="be"></b>
+           <i><img src="{$site_url}images/index_01_03.png" alt=""></i>
+           <a href="{$site_url}"><img src="{$logo}" alt=""></a>
+           <b class="af"></b>
+       </div>
+       <div class="nav">
+           <ul class="nav-one">
+               {$litmit=5}
+               {if $navs|count lt $litmit}{$litmit = $navs|count}{/if}
+               {foreach item=nav from=$navs}
+               <li class="oneLi" style="width:{100/($litmit)-1}%">
+                   <i><a href="{$nav.link}">{$nav.icon}</a></i>
+                   <div class="oneA">
+                       <a class="one-name" href="{$nav.link}">
+                           <b>{$nav.name}</b>
+                           <span>{$nav.en_name}</span>
+                       </a>
+                       {if $nav.childmenu}
+                       <ul class="child">
+                           {foreach item=nav_list from=$nav.childmenu}
+                           <li class="childLi"><a href="{$nav_list.link}">{$nav_list.name}</a></li>
+                           {/foreach}
+                       </ul>
+                       {/if}
+                   </div>
+               </li>
+               {if $nav@index+1 eq $litmit}{break}{/if}
+               {/foreach}
+           </ul>
+       </div>
+   </div>
+</div>

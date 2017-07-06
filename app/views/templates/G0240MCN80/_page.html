@@ -1,14 +1,14 @@
 <div class="page">
 	<a href="{$page_links.first_link}"><<</a>
 	<a href="{$page_links.prev_link}"><</a>
-	{$limit = 3}
+
 	{foreach item=near_link key=near_page from=$page_links.nears_link}
     {if $near_page == $page_links.current_page}
      <a class="on">{$near_page}</a>
      {else}
      <a href="{$near_link}" class="sq">{$near_page}</a>
      {/if}
-     {if $near_link@index+1 gte $limit}{break}{/if}  
+      
     {/foreach} 
 	<a href="{$page_links.next_link}">></a>
 	<a href="{$page_links.last_link}">>></a>

@@ -1,0 +1,17 @@
+<header>  
+<div class="header1 clearfix">
+	<div class="logo wow rollIn fl">
+		<a href="{$site_url}"><img src="{$logo}"></a>
+	</div>
+	<div class="nav wow bounceInRight fr">
+		<ul>
+			{$limit=7}
+			{if $navs|count lt $limit}{$limit=$navs|count}{/if}
+			{foreach name=navs item=nav from=$navs}
+			<li class="nav_li {if $nav.current}on{/if}" style="width:{100/($limit+1)}%"><a href="{$nav.link}" class="a"><span class="iconfont1">{$nav.icon}</span><div class="nav_r"><i>{$nav.name}</i><em>{$nav.en_name}</em></div></a></li>
+			{if $nav@index+1 eq $limit}{break}{/if}
+			{/foreach}
+		</ul>
+	</div>
+</div>
+</header>
