@@ -1,0 +1,55 @@
+		<div class="totop"><a href="#"></a></div>
+		<div class="header">
+			<div class="head">
+				<div class="c">
+					<div class="welcome fl">{$global.welcome}</div>
+					<div class="searchbox">
+						<form id="search" action="{$search_action}" name="search">
+							<input class="search_box" type="text" name="s" id="keyword" placeholder="请输入搜索关键字" />
+						</form>
+					</div>
+					<div class="tel fr">24小时服务热线：{$global.tel}</div>
+				</div>
+			</div>
+			<div class="menu c">
+				<div class="logo fl"><a href="{$site_url}"><img src="{$logo}"></a></div>
+				<div class="nav fr">
+					<ul class="one">
+						<li style="width:{100/($navs|count+1)}%"><a href="{$site_url}">首页</a></li>
+						{foreach item=nav from=$navs}
+						    <li class="{if $nav.current}cu{/if}" style="width:{100/($navs|count+1)}%">
+								<a href="{$nav.link}">{$nav.name}</a>
+								{if $nav.childmenu}
+								<ul class="two">
+									{foreach item=subnav from=$nav.childmenu}
+									<li><a href="{$subnav.link}">{$subnav.name}</a></li>
+									{/foreach}
+								</ul>
+								{/if}
+							</li>
+						{/foreach}
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="banner">
+			<div class="slider">
+				<div class="prev prev_banner"></div>
+				<div class="bd">
+					<ul>
+						{foreach item=slidepics from=$global.slidepics}
+							<li><a href="{$slidepics.link}"><img src="{$slidepics.image}"></a></li>
+						{/foreach}
+					</ul>
+				</div>
+				<div class="hd hd_banner">
+					<ul>
+						{foreach item=slidepics from=$global.slidepics}
+							<li></li>
+						{/foreach}
+					</ul>
+				</div>
+				<div class="next next_banner"></div>
+			</div>
+		</div>
+		

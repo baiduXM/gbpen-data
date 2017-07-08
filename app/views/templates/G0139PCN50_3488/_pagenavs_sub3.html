@@ -1,0 +1,76 @@
+<div class="sidebar">  
+    {if $pagenavs}
+    <div class="subnav">
+    <h2><span class="tit">{$posnavs[0].name}</span></h2>
+      <ul class="firstul">
+      {foreach name=pagenavs item=nav from=$pagenavs}
+         <li class="sub1 {if $nav.current} co {/if}">
+          <a href="{if $nav.childmenu}javascript:;{else}{$nav.link}{/if}" class="kz" data-limit="16">{$nav.name}</a>
+          {if $nav.childmenu}
+            <ul class="secondul">
+            {foreach item=nav_list from=$nav.childmenu}
+                <li class="sub2 {if $nav_list.current} ct {/if}">
+                  <a href="{if $nav_list.childmenu}javascript:;{else}{$nav_list.link}{/if}" class="kz" data-limit="14">{$nav_list.name}</a>
+                    {if $nav_list.childmenu}
+                    <ul class="three">
+                        {foreach item=nav1_list from=$nav_list.childmenu}
+                        <li class="sub3 {if $nav_list.current} ct {/if}"><a href="{$nav1_list.link}" class="kz" data-limit="12">{$nav1_list.name}</a></li>
+                        {/foreach}
+                    </ul>
+                    {/if}
+                </li>
+            {/foreach}
+            </ul>
+          {/if}
+         </li> 
+      {/foreach} 
+      </ul>
+    </div>
+    {else}
+    <h2>{$_pagenavs_sub3.pagenavs.name}</h2>
+    <div class="subnav">
+      <ul class="firstul">
+      {foreach name=pagenavs item=nav from=$_pagenavs_sub3.pagenavs.childmenu}
+         <li class="sub1">
+         <a href="{if $nav.childmenu}javascript:;{else}{$nav.link}{/if}" class="kz" data-limit="16">{$nav.name}<span class="icon">▶</span></a>
+          {if $nav.childmenu}
+            <ul class="secondul">
+            {foreach item=nav_list from=$nav.childmenu}
+                <li class="sub2">
+                <a href="{if $nav_list.childmenu}javascript:;{else}{$nav_list.link}{/if}" class="kz" data-limit="14">{$nav_list.name}</a>
+                    {if $nav_list.childmenu}
+                    <ul class="three">
+                        {foreach item=nav1_list from=$nav_list.childmenu}
+                        <li class="sub3"><a href="{$nav1_list.link}" class="kz" data-limit="12">{$nav1_list.name}</a></li>
+                        {/foreach}
+                    </ul>
+                    {/if}
+                </li>
+            {/foreach}
+            </ul>
+          {/if}
+         </li> 
+      {/foreach} 
+      </ul>
+    </div>
+    {/if}
+
+
+
+  <div id="contact" >
+      <div class="title">
+        <span class="t-left">联系我们</span>
+      </div>
+      <div class="subinner">
+        <span>{$contact.company} </span><br/>
+           电话：{$contact.telephone}<br/>
+           传真：{$contact.fax}<br/>
+           地址：{$contact.address}<br/>
+      </div>
+  </div>
+  <div class="culture">
+    <a href="{$_pagenavs_sub3.culture.link}"><img src="{$_pagenavs_sub3.culture.image}"></a>
+  </div>
+
+
+</div>

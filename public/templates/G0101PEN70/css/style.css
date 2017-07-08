@@ -77,31 +77,33 @@ ol,p,dl,li{list-style:none;}
 .about p a,.contact p{font-size: 20px;line-height: 34px;color: #fff;}
 .about .about_text{width: 845px;height: 364px;overflow: hidden; font-size: 14px;line-height: 30px;color: #fff;margin: 0 auto;text-align: center;padding: 15px 0;}
 .about .about_text img{height: 158px;padding-top: 30px;}
-#contentm .case{width: 1000px;height: 500px;margin: 0 auto;text-align: center;padding: 20px 0;position: relative;}
+#contentm .case{width: 1000px; margin: 0 auto;text-align: center;padding: 20px 0;position: relative;}
 #contentm .case:before{content:"";width: 0;height: 0; position: absolute; left: 47%;top: 0; z-index: 22;
 			border-top:30px solid #212121;border-left: 30px solid transparent;border-right: 30px solid transparent;border-bottom: 30px solid transparent;}
 .case i,.news i{padding-top: 40px;}
 .case span a,.news span a{font-size: 27px;color: #fff;line-height: 18px; position: absolute;top: 0;left: 49%;z-index: 23;}
 .case_img{width:1000px; height:532px;margin: 0 auto; }
-.case_img ul li{width: 234px;height: 158px;padding:20px 8px 0 8px;float: left;overflow: hidden;}
-.case_img ul li .c_img{width: 234px;height: 158px; text-align: center;vertical-align: middle;overflow: hidden;}
+.case_img ul li{width: 234px;height: 230px;padding:20px 8px 0 8px;float: left;overflow: hidden;}
+.case_img ul li .c_img{width: 234px;height: 230px; text-align: center;vertical-align: middle;overflow: hidden;}
 .case_img ul li .c_img a{display: block; position: relative;}
-.case_img ul li .c_img a img{height: 157px;}
+.case_img ul li .c_img a img{height: 230px;}
 .case_img ul li .c_img a .img_hover{display: none;width: 100%;height: 100%;position: absolute;left: 0px;top: 0px;}
-.img_hover em{display: block;width:234px;height:155px;position: absolute;left: 0px;top: 0px;background: #1e1f24; filter:alpha(opacity=80);-webkit-opacity:0.8; -moz-opacity:0.8; -khtml-opacity: 0.8;opacity:0.8;}
+.img_hover em{display: block;width:234px;height:230px;position: absolute;left: 0px;top: 0px;background: #1e1f24; filter:alpha(opacity=80);-webkit-opacity:0.8; -moz-opacity:0.8; -khtml-opacity: 0.8;opacity:0.8;}
 .case_img ul li .c_img a:hover .img_hover{display: block;}
-.case_img ul li .c_img a .img_hover img{position: absolute;top: 102px;left: 0px;z-index: 33;width: 100%;height: 56px;}
-.img_hover .hover_texr{width: 100%;height:28px;overflow: hidden; font-size: 12px; color: #ffffff;line-height: 28px;position: absolute;left: 0;top: 125px;z-index:44;}
+.case_img ul li .c_img a .img_hover img{position: absolute;bottom: 0; left: 0px;z-index: 33;width: 100%;height: 56px;}
+.img_hover .hover_texr{width: 100%;height:28px;overflow: hidden; font-size: 12px; color: #ffffff;line-height: 28px;position: absolute;left: 0;bottom: 0;z-index:44;}
+#pro{ height: 532px;}
+#pro .bd{ height: 532px;}
 #pro ul{ width: 250px; overflow:hidden; float:left; margin-bottom:15px;}
 #pro{width:1000px; height:532px;margin: 0 auto; }
-#pro ul li{width: 234px;height: 158px;padding:20px 8px 0 8px;float: left;overflow: hidden;}
-#pro ul li .c_img{width: 234px;height: 158px; text-align: center;vertical-align: middle;overflow: hidden;}
+#pro ul li{width: 234px;height: 230px;padding:20px 8px 0 8px;float: left;overflow: hidden;}
+#pro ul li .c_img{width: 234px;height: 230px; text-align: center;vertical-align: middle;overflow: hidden;}
 #pro ul li .c_img a{display: block; position: relative;}
-#pro ul li .c_img a img{height: 157px;}
+#pro ul li .c_img a img{height: 230px;}
 #pro ul li .c_img a .img_hover{display: none;width: 100%;height: 100%;position: absolute;left: 0px;top: 0px;}
-.img_hover em{display: block;width:234px;height:155px;position: absolute;left: 0px;top: 0px;background: #1e1f24; filter:alpha(opacity=80);-webkit-opacity:0.8; -moz-opacity:0.8; -khtml-opacity: 0.8;opacity:0.8;}
+.img_hover em{display: block;width:234px;height:230px;position: absolute;left: 0px;top: 0px;background: #1e1f24; filter:alpha(opacity=80);-webkit-opacity:0.8; -moz-opacity:0.8; -khtml-opacity: 0.8;opacity:0.8;}
 #pro ul li .c_img a:hover .img_hover{display: block;}
-#pro ul li .c_img a .img_hover img{position: absolute;top: 102px;left: 0px;z-index: 33;width: 100%;height: 56px;}
+#pro ul li .c_img a .img_hover img{position: absolute;bottom: 0;left: 0px;z-index: 33;width: 100%;height: 56px;}
 
 
 

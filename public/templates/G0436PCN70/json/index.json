@@ -1,0 +1,95 @@
+{
+	"product":{
+		"description": "banner下图片列表",
+		"value": {},
+		"type": "list",
+		"config": {
+			"star_only": true,
+			"showchilddata": true,
+			"width": 220,
+			"height": 220
+		}
+	},
+	"techonology":{
+		"description": "技术实力",
+		"value": {},
+		"type": "list",
+		"config": {
+			"star_only": true,
+			"width": 220,
+			"height": 220
+		}
+	},
+	"centerpic":{
+		"value":{
+			"title":"centerpic",
+			"image":"images/center_logo.png",
+			"link":"www.baidu.com",
+			"description":""
+			},
+		"type":"image",
+		"description":"技术实力中间图片",
+		"config":{
+			"width":220,
+			"height":220
+		}
+	},
+	"cases":{
+		"description": "案例分析",
+		"value": {},
+		"type": "list",
+		"config": {
+			"star_only": true,
+			"showchilddata": true,
+			"width": 138,
+			"height": 118
+		}
+	},
+	"about":{
+		"description": "品牌中心/关于我们",
+		"value": {},
+		"type": "page",
+		"config": {
+			"nav_width": 530,
+			"nav_height": 492
+		}
+	},
+	//单图
+	// "aboutpic":{
+	// 	"value":{
+	// 		"title":"erweima",
+	// 		"image":"images/about.jpg",
+	// 		"link":"www.baidu.com",
+	// 		"description":"pinpai"
+	// 		},
+	// 	"type":"image",
+	// 	"description":"关于我们文字下方图片",
+	// 	"config":{
+	// 		"width":530,
+	// 		"height":165
+	// 	}
+	// },
+	//轮播
+	"aboutslider":{
+		"value":[{
+			"title":"ab1",
+			"image":"images/ab_1.jpg",
+			"link":"list-image.html"
+			},{
+			"title":"ab2",
+			"image":"images/ab_2.jpg",
+			"link":"list-image.html"
+			},{
+			"title":"ab3",
+			"image":"images/ab_3.jpg",
+			"link":"list-image.html"
+				}],
+		"description":"关于我们文字下方 企业相册",
+		"type":"images",
+		"config":{
+			"width":150,
+			"height":138
+		}
+	},
+
+}

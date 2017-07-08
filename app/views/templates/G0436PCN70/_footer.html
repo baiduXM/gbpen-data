@@ -1,0 +1,48 @@
+	<div class="footer">
+		<div class="foot">
+			<div class="c">
+				<div class="contact fl">
+					<dl class="phone">
+						<dt>业务专线：</dt>
+						<dd>{$global.phone}</dd>
+					</dl>
+					<dl class="address">
+						<dt>公司地址：</dt>
+						<dd>{$global.address}</dd>
+					</dl>
+					<dl class="fax">
+						<dt>客户传真：</dt>
+						<dd>{$global.fax}</dd>
+					</dl>
+					<dl class="erweima"><i><img src="{$global.erweima.image}"></i></dl>
+				</div>
+				<div class="map fr">
+					<ul>
+						{foreach item=nav from=$navs}
+						    <li class="{if $nav.current}cu{/if}" style="width:{100/($navs|count+1)}%">
+								<a href="{$nav.link}">{$nav.name}</a>
+								{if $nav.childmenu}
+								<ul>
+									{foreach item=subnav from=$nav.childmenu}
+									<li><a href="{$subnav.link}">{$subnav.name}</a></li>
+									{/foreach}
+								</ul>
+								{/if}
+							</li>
+						{/foreach}
+					</ul>					
+				</div>
+			</div>
+		</div>
+		<div class="c bottom">
+			<ul class="linker">
+				<li>友情链接：</li>
+				{foreach item=link from=$global.links}
+					<li><a href="{$link.link}">{$link.title}</a></li>
+				{/foreach}
+			</ul>
+			<div class="copyright">{$footprint}</div>
+		</div>
+	</div>
+	{$footscript}
+	
