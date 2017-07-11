@@ -1,0 +1,33 @@
+	<div class="lx">
+		<div class="lx_y fl"><img src="{$site_url}images/tel.png"></div>
+		<div class="lx_b fr">
+			<div class="tel fl">
+				品牌营销电话：0595-86728567<br>技术服务电话：0595-86017567
+			</div>
+			<div class="sns fl"><a class="wx" alt="{$global.erweima.title}"><img src="{$global.erweima.image}"></a></div>
+			<div class="sns fl"><a class="wb"><iframe src="http://widget.weibo.com/relationship/followbutton.php?uid={$global.wb}&btn=red&style=1&language=zh_cn" width="67" height="24" frameborder="0" scrolling="no" marginheight="0"></iframe></a></div>
+		</div>
+	</div>
+	<div class="nav">
+		<span class="blue"></span>
+		<ul class="one">
+			<li><a href="{$site_url}"><p class="en">HOME</p>网站首页</a></li>
+			{foreach item=nav from=$navs}
+			<li class="{if $nav.current}cu{/if}">
+				<a href="{$nav.link}"><p class="en">{$nav.en_name}</p><p>{$nav.name}</p></a>
+				{if $nav.childmenu}
+				<ul class="two">
+					{foreach item=subnav from=$nav.childmenu}
+					<li><a href="{$subnav.link}">{$subnav.name}</a></li>
+					{/foreach}
+				</ul>
+				<img class="nav_h" src="{$site_url}images/nav_h.png" height="7" width="20">
+				{/if}
+			</li>
+			{/foreach}
+		</ul>
+	</div>
+	<div class="head">
+		<span class="logo_bg"><img src="{$site_url}images/logo_bg-1.png"></span>
+		<span class="logo"><a href="{$site_url}"><img src="{$logo}"></a></span>
+	</div>

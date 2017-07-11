@@ -102,11 +102,11 @@ ul.newlist li a h2{width: 76%;white-space: nowrap;text-overflow: ellipsis;overfl
 ul.newlist li a span{float: right;}
 ul.newlist li a:hover{color: #fff;}
 /*右栏目*/
-.side-right{width: 230px;height: 270px;background: url(../images/contactbg.jpg) top right no-repeat;margin-right:10px;}
+.side-right{width: 230px;height: 270px;background: url(../images/1bg.jpg) top right no-repeat;margin-right:10px;}
 .contact{padding: 10px;}
-.contact h2{color: #e1c5a7;font-size: 24px;font-family: Microsoft YaHei;}
-.contactbox{color: #e1c5a7;margin-top: 90px;}
-.idea{width: 215px;height: 54px;background: url(../images/yijianbg.jpg) no-repeat;margin-top: 10px;}
+.contact h2{color: #e1c5a7;font-size: 18px;font-family: Microsoft YaHei;}
+.contactbox{color: #e1c5a7;margin-top: 8px; width: 128px;}
+.idea{width: 215px;height: 54px;background: url(../images/yijianbg.jpg) no-repeat;margin-top: 78px;}
 .idea a{display: block;padding:6px 0 10px 78px;font-family: Microsoft YaHei;}
 .idea a h3{display: block;font-size: 18px; color: #240d00;line-height: 24px;width: 110px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
 .idea a span{display:block;font-size: 10px;color: #725342;line-height: 18px;width: 110px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
@@ -157,14 +157,14 @@ ul.newlist li a:hover{color: #fff;}
 ul.second>li>a.selected {background: #552901!important;}
 ul.third>li>a.selected{ color:#fff;}
 .ny-sidelt .contact{padding:10px 0;background: url(../images/nycontactbg.jpg) no-repeat;}
-.ny-sidelt .contactbox{margin-top: 120px;}
+.ny-sidelt .contactbox{margin-top: 40px;}
 /*内页right*/
 .ny-sidert{width: 690px;overflow: hidden;margin-right: 10px;height: 630px;}
 .location{height: 30px;line-height: 30px;margin:5px 0 10px;font-family: Microsoft YaHei;color: #fff;text-align: right;}
 .location a{color: #fff;}
 .location a:hover{text-decoration: underline;}
 .ny-main{ height:auto; overflow:hidden; overflow:hidden; height:auto;  border-top:none; padding:5px;height: 558px; }
-.#Scrollbar-Container{ float:right;}
+#Scrollbar-Container{ float:right;}
 .Scrollbar-Track {width:17px;height: 540px;padding-bottom: 5px; position: absolute;background: url(../images/conbar.jpg) center top no-repeat;right:11px; top: 0;}
 .Scrollbar-Handle {	position: absolute;	width:17px; background-position: center top; height:5px; margin:5px 0px; display:inline;}
  #Scroller-1 {float:left; display:inline;overflow: hidden; width: 100%; height:550px;margin:0;left: 1px;	top: 50px;}
