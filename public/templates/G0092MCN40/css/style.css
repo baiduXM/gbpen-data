@@ -8,7 +8,7 @@ input,button{padding: 0;margin: 0;border:none;background: none;}
 ul,ol,li,dl{list-style:none;margin:0; padding:0;}
 h1,h2,h3,h4,h5{font-weight:normal;}
 i,em,b{font-style:normal;font-weight:normal;list-style:none;}
-img{border: none;max-width: 100%;vertical-align: middle;}
+img{border: none;max-width: 100%;max-height: 100%;vertical-align: middle;}
 mark{background: none;}
 .fl{float: left;}.fr{float: right;}.cl{clear:both;}.tc{text-align:center;}.tr{text-align:right;}.tl{text-align:left;}.c0{color:#000;}.c3{color:#333;}.c6{color:#666;}.c9{color:#999;}.cf{color:#fff;}.vm{vertical-align:middle;}.vt{vertical-align:top;}.vb{vertical-align:bottom;}
 .oh{overflow: hidden;}.pr{position: relative;}.pa{position: absolute;}.pf{position: fixed;}.toh{white-space:nowrap;text-overflow:ellipsis; -o-text-overflow:ellipsis; overflow:hidden;}
@@ -201,6 +201,7 @@ ul.near-page li a{display: block;width: 100%;height: 100%;font-size: 1rem;line-h
 .case ul li{width: 23rem;height: auto;overflow:hidden;text-align: center;}
 h2.case-hd{width: 100%;height: auto;margin: 1rem 0;text-align: center;font-size: 1.2rem;line-height: 1.7rem}
 .case-text{width: 29.6rem;height: auto;margin: 1rem auto 0;position: relative;min-height: 24rem;}
+.case-text img{max-height:inherit;}
 
 /*搜索*/
 .search{width: 30rem;height: auto;overflow: hidden;text-align: center;margin: 1.5rem auto;font-size: 1.5rem;color: #666666;line-height: 2rem;}

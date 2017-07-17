@@ -63,7 +63,7 @@ strong{display: block;margin: 0 auto;overflow: hidden;text-overflow: ellipsis;wh
 	margin:0px auto;
 	text-align:center;
 }
-/* ÏÂÃæÊÇÇ°/ºó°´Å¥´úÂë£¬Èç¹û²»ÐèÒªÉ¾³ý¼´¿É */
+/* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç°/ï¿½ï¿½Å¥ï¿½ï¿½ï¿½ë£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÒªÉ¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ */
 #banner .slideBox .prev,  #banner .slideBox .next {
 	position:absolute;
 	left:3%;
@@ -138,9 +138,9 @@ display:none;}
 .bg1{ background:url(../images/ab_bg.jpg) top center no-repeat; height:487px; width:100%; }
 
 #about{ width:805px; float:left; }
-#about .about_img { height:458px; overflow:hidden; display:inline-block;*display:inline;*zoom:1; margin-left:15px;margin-top:25px;}
+#about .about_img { height:458px; overflow:hidden; display:inline-block;*display:inline;*zoom:1; margin-top:25px;}
 #about .about_img img{height:100%; display:block;} 
-#about .about_text{display:inline-block; vertical-align:top;*display:inline;*zoom:1;  background:#fff; padding-top:25px; height:462px; overflow:hidden; font-size:13px; line-height:33px;  }
+#about .about_text{padding-left:14px;;display:inline-block; vertical-align:top;*display:inline;*zoom:1;  background:#fff; padding-top:25px; height:462px; overflow:hidden; font-size:13px; line-height:33px;  }
 #about .about_text h1{ font-size:23px; color:#193783; line-height:30px; height:30px;}
 
 

@@ -109,7 +109,7 @@ display:none;}
 #header .search .search_area::-webkit-input-placeholder { color:#848383; }
 #header .search .search_area::-moz-input-placeholder { color:#848383; }
 
-#header .tel{ background:url(../images/ico2.png) no-repeat 8px; min_width:280px; float:right; height:35px; line-height:35px; overflow:hidden; padding-left:35px; font-size:18px; color:#7cfc00; font-family:Microsoft Yahei; margin-top:70px;}
+#header .tel{ background:url(../images/ico2.png) no-repeat 8px; min_width:280px; float:right; height:35px; line-height:35px; overflow:hidden; padding-left:35px; font-size:18px; color:#000; font-family:Microsoft Yahei; margin-top:70px;}
 #header .search_btn:hover{ background:#7cfc00 url(../images/ico1.png) top center no-repeat}
 
 
@@ -128,7 +128,7 @@ display:none;}
 #nav ul li .cc{background:#3cd002;height:40px; line-height: 40px;display: none; text-align:center; width:100%; position:relative; z-index:100; margin-top:0px;color:#fff }
 #nav ul li .cc:hover{ background:#3cd002}
 #nav ul li .cc a{width:92%; margin:auto;color:#fff; padding:0 4%; overflow:hidden; height:40px; line-height:40px;}
-#nav ul li .cc a:hover{ color:#000; background:#3cd002}
+#nav ul li .cc a:hover{ color:#306a00; background:#7cfc00}
 
 
 #banner{ width:100%; height:420px; overflow:hidden}
@@ -137,11 +137,11 @@ display:none;}
 .cn{ margin-top:30px}
 #list{width:236px; border:1px solid #d9d9d9; font-family:Microsoft Yahei; text-align:center;  float:left}
 #list .title{ background:url(../images/list_title.jpg) top center repeat-x; height:68px;}
-#list p{ width:230px; height:35px; line-height:35px; overflow:hidden; margin:0 auto;color:#f4a3a3; font-size:16px;text-transform:uppercase}
+#list p{ width:230px; height:35px; line-height:35px; overflow:hidden; margin:0 auto;color:#cefbb8; font-size:16px;text-transform:uppercase}
 #list span{  height:20px; line-height:20px; font-size:18px; color:#fff; overflow:hidden; display:block; margin:0 auto; font-weight:bold}
 #list .inner ul li{ height:42px; line-height:42px; border-bottom:1px dashed #c8c8c8; width:225px; overflow:hidden; margin:0 auto}
 #list .inner ul li a{ display:block}
-#list .inner ul li a:hover{color:#fff; background:#7cfc00; height:30px; line-height:30px; margin-top:6px;}
+#list .inner ul li a:hover{color:#000; background:#7cfc00; height:30px; line-height:30px; margin-top:6px;}
 #list .inner { height:352px; overflow:hidden; margin-top:10px;}
 
 
@@ -154,6 +154,7 @@ display:none;}
 #about .about_img { height:150px; overflow:hidden; display:inline-block;*display:inline;*zoom:1; margin-left:15px;}
 #about .about_img img{height:100%; display:block;} 
 #about .about_text{display:inline-block; vertical-align:top;*display:inline;*zoom:1; text-indent:24px; }
+#about .about_text:hover{color: #000;background: none}
 #about .inner{ line-height:22px; height:150px; overflow:hidden; margin-top:15px;}
 
 
@@ -182,7 +183,7 @@ display:none;}
 
 #contact{ margin-top:20px; border:1px solid #d9d9d9;}
 #contact .title{ background:url(../images/contact_bg.jpg) top center repeat-x; height:54px; line-height:54px; color:#fff; font-size:18px; padding-left:15px;}
-#contact .title span{ color:#feada4; font-size:14px;text-transform:uppercase}
+#contact .title span{ color:#cefbb8; font-size:14px;text-transform:uppercase}
 #contact .inner{ height:170px; overflow:hidden; background:url(../images/contact_innerbg.jpg) top center no-repeat; width:260px ; margin:0 auto; margin-top:5px;}
 #contact .title a{ color:#fff; font-weight:bold}
 
