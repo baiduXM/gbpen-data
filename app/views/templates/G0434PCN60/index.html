@@ -53,10 +53,10 @@
             </div>
             <div class="nav index-nav">
                 <ul class="nav-one inNav">
-                    {$litmit = 8}
-                    {if $navs|count lt $litmit}{$litmit = $navs|count}{/if}
+                    {$limit = 8}
+                    {if $navs|count lt $limit}{$limit = $navs|count}{/if}
                     {foreach item=nav from=$navs}
-                    <li class="oneLi"  style="width:{100/($litmit)}%">
+                    <li class="oneLi"  style="width:{100/($limit)}%">
                         <i><a href="{$nav.link}">{$nav.icon}</a></i>
                         <div class="oneA">
                             <a class="one-name" href="{$nav.link}">
@@ -72,7 +72,7 @@
                             {/if}
                         </div>
                     </li>
-                    {if $nav@index+1 eq $litmit}{break}{/if}
+                    {if $nav@index+1 eq $limit}{break}{/if}
                     {/foreach}
                 </ul>
             </div>

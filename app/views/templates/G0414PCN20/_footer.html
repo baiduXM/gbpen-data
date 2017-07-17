@@ -1,0 +1,18 @@
+<footer>
+    <div class="footer">
+        <div class="foot">
+            <div class="link">
+                <h3 class="h3">友情链接</h3>
+                <ul>
+                    {foreach item=links from=$_footer.links}
+                    <li><a href="{$links.link}"><img src="{$links.image}" alt=""/></a></li>
+                    {/foreach}
+                </ul>
+            </div>
+            <div class="footp">
+                {$footprint}
+            </div>
+        </div>
+    </div>
+</footer>
+{$footscript}

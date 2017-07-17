@@ -1,4 +1,4 @@
-{if $global.list1}
+{if $global.list1.data}
     <div class="det-rt">
         <h4 class="rt-name"><span >{$global.list1.name}</span></h4>
         {foreach item=txt from=$global.list1.data}
@@ -13,4 +13,6 @@
         </a>
         {/foreach}
     </div>
+{else}
+
 {/if}
