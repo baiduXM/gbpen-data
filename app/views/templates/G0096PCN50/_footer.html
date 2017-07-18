@@ -1,0 +1,18 @@
+<div class="foot">
+		<div class="public foot_div">
+			<div class="link">
+				<span class="fl">友情链接：</span>
+				<ul class="fl">
+				{foreach item=flink from=$global.links}
+					<li><a href="{$flink.link}">{$flink.title}</a></li>
+					{if $flink@index+1==16}{break}{/if} 
+				{/foreach} 
+				</ul>
+			</div>
+			<div class="copyright">
+				<p>{$footprint}</p>
+			</div>
+		</div>
+	</div>
+
+	{$footscript}

@@ -1,0 +1,85 @@
+{
+	
+    "about_us": {
+		"description": "关于我们",
+		"value": {},
+		"type": "page",
+		"config": {
+			"nav_height": 268,
+			"nav_width":234
+		}
+	},
+	"erweima":{
+		"value":{
+			"title":"erweima",
+			"image":"images/erweima.png",
+			"link":"www.baidu.com",
+			"description":"扫码关注"
+			},
+		"type":"image",
+		"description":"首页联系我们 二维码",
+		"config":{
+			"width":120,
+			"height":120
+		}
+	},
+	"classfy":{
+		"description":"首页分类",
+		"value":{},
+		"type":"list",
+		"config": {
+			"filter": "list,page",
+			"mustchild": true
+		}	
+	},
+	"classfy1":{
+		"description":"首页分类",
+		"value":{},
+		"type":"list",
+		"config": {
+			"filter": "list,page",
+			"mustchild": true
+		}	
+	},
+	"classfy2":{
+		"description":"首页分类",
+		"value":{},
+		"type":"list",
+		"config": {
+			"filter": "list,page",
+			"mustchild": true
+		}	
+	},
+	"pro":{
+		"description":"产品展示",
+		"value":{},
+		"type":"list",
+		"config": {
+			"height": 150,
+			"width":120
+		}
+	},
+	"news":{
+		"description": "新闻中心",
+		"value": {},
+		"type": "list"
+	},
+	"contact_us":{
+		"description": "联系我们",
+		"value": {},
+		"type": "page",
+		"config": {
+			"nav_height": 127,
+			"nav_width":424
+		}
+	},
+	"video": {
+		"value": "http://player.youku.com/player.php/Type/Folder/Fid/25949051/Ob/1/sid/XMTI5NDQyNDkzNg==/v.swf",
+		"description": "视频",
+		"type": "text"
+	}
+	
+}
+               
+
+
