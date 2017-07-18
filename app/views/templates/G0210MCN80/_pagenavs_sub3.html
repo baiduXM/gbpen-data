@@ -1,0 +1,21 @@
+<ul class="first">
+{foreach name=pagenavs item=nav from=$pagenavs}
+  <li><a href="{$nav.link}">{$nav.name}<i style="{if $nav.childmenu}{else}display: none;{/if}">+</i></a>
+  {if $nav.childmenu}
+    <ul class="second">
+    {foreach key=key item=nav_list from=$nav.childmenu}
+      <li><a href="{$nav_list.link}">{$nav_list.name}<i style="{if $nav_list.childmenu}{else}display: none;{/if}">+</i></a>
+       {if $nav_list.childmenu}
+          <ul class="third">
+          {foreach key=key item=nav_listsec from=$nav_list.childmenu}
+            <li><a href="{$nav_listsec.link}">{$nav_listsec.name}</a></li>
+          {/foreach}
+          </ul>
+         {/if}
+      </li>
+      {/foreach}
+    </ul>
+  {/if}
+  </li>
+{/foreach}
+</ul> 

@@ -32,7 +32,7 @@
       <div class="crumb"> <span>您所在的位置：<a href="{$site_url}">首页</a> {foreach item=nav from=$posnavs} <a href="{$nav.link}">>{$nav.name}</a> {/foreach}</span>
       {$article.category.name}
       </div>
-      <div class="article ">
+      <div class="article">
         <div class="descripimg">
           <div id="slideBoxb" class="slideBoxb" style="margin:0 auto">
             <div class="hd">
@@ -45,7 +45,7 @@
             <div class="bd" style="width:640px;">
               <ul>
                 {foreach item=proshowb from=$article.images}
-                <li><img src="{$proshowb.image}" alt="{$proshowb.title}"/></li>
+                <li><i><img src="{$proshowb.image}" alt="{$proshowb.title}"/></i></li>
                 {/foreach}
               </ul>
             </div>

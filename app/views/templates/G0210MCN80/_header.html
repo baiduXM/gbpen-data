@@ -1,0 +1,16 @@
+<header>
+     <div class="header">
+        <div class="logo"><img src="{$logo}" /></div>
+         <i class="iconfont hicon" id="quickbar-showcats">&#xe603;</i>
+     </div>
+</header>   
+<!-- Swiper -->
+<div id="banner" class="swiper-container">
+    <div class="swiper-wrapper">
+      {foreach name=slidepic item=slidepic from=$global.slidepics}
+      <div class="swiper-slide"><a href="{$slidepic.link}"><img src="{$slidepic.image}" alt=""></a></div>
+      {/foreach}  
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+</div>

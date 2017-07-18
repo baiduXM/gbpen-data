@@ -21,6 +21,9 @@
 
 <title>{$title}</title>
 
+<script type="text/javascript" src="{$site_url}js/jquery-1.9.1.min.js" ></script>
+<script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.js"></script>
+<script type="text/javascript" src="{$site_url}js/function.js"></script>
 </head>
 
 <body>
@@ -34,7 +37,7 @@
 			<div class="right">			
 				<div class="rightitle"><span>{$posnavs[0].en_name}</span></div>
 				<div class="info news">
-					<ul>
+					<ul class="mxh_n">
 						{foreach item=article from=$list.data}
 						<li>
 							<div class="date"><span>{$article.pubtimestamp|date_format:'%m-%d'}</span>{$article.pubtimestamp|date_format:'%Y'}</div>
@@ -46,7 +49,6 @@
 								<a href="{$article.link}" class="more">了解更多</a>
 							</div>
 						</li>
-						{if $article@index eq 3}{break}{/if}
 						{/foreach}
 					</ul>
 		 			<div class="pagenum">
@@ -68,9 +70,6 @@
 	</div>				
 	{include file="./_footer.html"} 
 
-<script type="text/javascript" src="{$site_url}js/jquery-1.9.1.min.js" ></script>
-<script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.js"></script>
-<script type="text/javascript" src="{$site_url}js/function.js"></script>
 
 </body>
 </html>

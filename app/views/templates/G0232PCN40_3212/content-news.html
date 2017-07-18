@@ -14,12 +14,18 @@
     </script>
 <meta http-equiv="x-ua-compatible" content="ie=9" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{$title}</title>
 <meta name="keywords" content="{$keywords}" />
 <meta name="description" content="{$description}" />
 <link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
 <link href="{$site_url}css/css.css" rel="stylesheet" type="text/css" />
 
-<title>{$title}</title>
+<script type="text/javascript" src="{$site_url}js/jquery-1.9.1.min.js" ></script>
+<script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.js"></script>
+<script type="text/javascript" src="{$site_url}js/jsScroller.js"></script>
+<script type="text/javascript" src="{$site_url}js/jsScrollbar.js"></script>
+<script type="text/javascript" src="{$site_url}js/function.js"></script>
+<script type="text/javascript" src="{$site_url}js/scroll.js"></script>
 
 </head>
 
@@ -47,7 +53,7 @@
                     </div>
 		 			<div class="bbs">
 		                <div class="aaa">
-							{shareExt shareText=$article.content|unescape:"html"|strip_tags|truncate:140:"…" sharePic=$article.image}
+							
 						</div>			
 					</div>
 					<div class="other">
@@ -61,12 +67,7 @@
 	</div>				
 	{include file="./_footer.html"} 
 
-<script type="text/javascript" src="{$site_url}js/jquery-1.9.1.min.js" ></script>
-<script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.js"></script>
-<script type="text/javascript" src="{$site_url}js/jsScroller.js"></script>
-<script type="text/javascript" src="{$site_url}js/jsScrollbar.js"></script>
-<script type="text/javascript" src="{$site_url}js/function.js"></script>
-<script type="text/javascript" src="{$site_url}js/scroll.js"></script>
+
 
 
 </body>
