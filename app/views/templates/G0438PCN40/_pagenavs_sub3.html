@@ -1,0 +1,55 @@
+	<div class="leftnav">
+		{if $pagenavs}
+			<h2>{$posnavs[0].name}</h2>
+			<ul class="first">
+				{foreach item=nav from=$pagenavs}
+				<li>
+					<a href="{if $nav.childmenu}javascript:; {else} {$nav.link}{/if}">{$nav.name}</a>
+					{if $nav.childmenu}
+					<i></i>
+					<ul class="second">
+						{foreach item=nav_list from=$nav.childmenu}
+						<li>
+							<a href="{if $nav_list.childmenu}javascript:; {else} {$nav_list.link}{/if}">{$nav_list.name}</a>
+							{if $nav_list.childmenu}
+							<ul class="third">
+								{foreach item=nav_last from=$nav_list.childmenu}
+									<li><a href="{if $nav_last.childmenu}javascript:; {else} {$nav_last.link}{/if}">{$nav_last.name}</a></li>
+								{/foreach}
+							</ul>
+							{/if}
+						</li>
+						{/foreach}
+					</ul>
+					{/if}
+				</li>
+				{/foreach}
+			</ul>
+		{else}  <!-- 无子栏目时 -->
+			<h2>{$_pagenavs_sub3.pagenavs.name}</h2>
+			<ul class="first">
+				{foreach item=nav from=$_pagenavs_sub3.pagenavs.childmenu}
+				<li>
+					<a href="{if $nav.childmenu}javascript:; {else} {$nav.link}{/if}">{$nav.name}</a>
+					{if $nav.childmenu}
+					<i></i>
+					<ul class="second">
+						{foreach item=nav_list from=$nav.childmenu}
+						<li>
+							<a href="{if $nav_list.childmenu}javascript:; {else} {$nav_list.link}{/if}">{$nav_list.name}</a>
+							{if $nav_list.childmenu}
+							<ul class="third">
+								{foreach item=nav_last from=$nav_list.childmenu}
+									<li><a href="{if $nav_last.childmenu}javascript:; {else} {$nav_last.link}{/if}">{$nav_last.name}</a></li>
+								{/foreach}
+							</ul>
+							{/if}
+						</li>
+						{/foreach}
+					</ul>
+					{/if}
+				</li>
+				{/foreach}
+			</ul>
+		{/if}
+	</div>

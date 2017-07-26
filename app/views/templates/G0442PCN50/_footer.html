@@ -1,0 +1,17 @@
+		<div class="linker">
+			<div class="link c">
+				<ul>
+					{foreach item=link from=$global.links}
+						<li><a href="{$link.link}">{$link.title}</a></li>
+					{/foreach}
+				</ul>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="foot c">
+				<!-- <div class="cr fl">版权所有 © 2017 厦门易尔通网络科技有限公司  闽ICP备05015420号</div>
+				<div class="te fr">人才支持：<a href="#">厦门人才网</a></div> -->
+				{$footprint}
+			</div>
+		</div>
+		{$footscript}

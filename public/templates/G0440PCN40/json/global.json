@@ -1,0 +1,38 @@
+{
+  "ban": {
+    "value":  {
+      "title": "测试图",
+      "image": "images/banners.png",
+      "link": "http://www.baidu.com"
+    },
+    "description": "内页banner图",
+    "type": "image",
+    "config": {
+      "width":1920,
+      "height":250
+    }
+  },
+
+    "pagenavs": {
+    "value": {},
+    "description": "侧边栏目列表（当前栏目无子栏目时展示的目标栏目）",
+    "type": "list",
+    "config": {
+      "filter": "list,page",
+      "mustchild": true
+     }
+    },
+  "links": {
+    "value": [{
+      "title": "百度贴吧",
+      "image": "",
+      "link": "http://tieba.baidu.com"
+    }, {
+      "title": "百度图片",
+      "image": "",
+      "link": "http://image.baidu.com"
+    }],
+    "description": "友情链接 ",
+    "type": "images"
+  }
+}

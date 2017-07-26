@@ -1,0 +1,25 @@
+<div id="header_top"><div class="header_top clearfix"><p class="fl">欢迎来到厦门易尔通网络科技有限公司</p></p><p class="fr" style="margin-left: 40px;">邮箱：{$contact.mail}</p><p class="fr">电话：{$contact.telephone}</p></div></div>
+<div id="header">
+	<div class="header">
+		<div class="logo"><a href="{$site_url}"><img src="{$logo}"/></a></div>
+		<div class="navBar">
+			<ul class="nav clearfix">
+				{foreach name=navs item=nav from=$navs}
+				<li class="m {if $nav.current}on{/if} nav_li" style="width:{100/(($navs|count))}%">
+					<a href="{$nav.link}" class="kz" data-limit="6">{$nav.name}<em></em></a>
+					{if $nav.childmenu}
+					<div class="sub clearfix">
+						<div class="fl subwrap"><img src="{$nav.image}"></div>
+						<ul class="fl">
+							{foreach key=key item=nav_list from=$nav.childmenu}
+							<li><a class="kz" data-limit="20" href="{$nav_list.link}">•{$nav_list.name}</a></li>
+							{/foreach}
+						</ul>
+					</div>
+					{/if}
+				</li>
+				{/foreach}
+			</ul>
+		</div>
+	</div>
+</div>

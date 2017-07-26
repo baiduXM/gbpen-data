@@ -1,0 +1,32 @@
+<div id="footer">
+    <div class="link ">
+        <div class="container">
+            <ul>
+                <li>友情链接 : </li>
+                {foreach key=key item=link from=$global.links}
+                <li class="fl"><a href="{$link.link}">{$link.title}</a><i>|</i></li>
+                {/foreach}
+            </ul>
+        </div>
+    </div>
+    <div class="foot">
+        <div class="container">
+            <div class="foot-logo"><img src="{$logo}" alt=""></div>
+            <div class="foot-rt rt">
+                <ul class="foot-nav">
+                    {foreach item=nav from=$navs}
+                    <li><a href="{$nav.link}">{$nav.name}</a></li>
+                    {/foreach}
+                </ul>
+                <div class="contact">
+                    <p>{$contact.company}</p>
+                    <p>{$contact.address}</p>
+                    <p><span>{$contact.telephone}</span><span>{$contact.mail}</span><span>{$contact.fax}</span></p>
+                </div>
+                <div class="copy">
+                    {$footprint}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

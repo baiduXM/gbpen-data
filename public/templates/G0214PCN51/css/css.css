@@ -15,7 +15,7 @@ img{border: none;}
 .logo{width: 530px;height: 96px;overflow: hidden;position: relative;display: block;float: left;}
 .logo img{position: absolute;top: 0;bottom: 0;max-width: 100%;max-height: 100%;margin: auto 0;}
 .tel{color: #323232;font-size: 18px;height: 24px;overflow: hidden;margin: 19px 0 53px;float: right;}
-.tel span{font-size: 22px;color: #d91515}
+.tel span{font-size: 22px;color: #0cb02b}
 .tel img{width: 20px;height: 24px;overflow: hidden;margin: 0 6px;display: block;float: left;}
 
 .searchform{width: 1002px;height: 40px;overflow: hidden;position: absolute;bottom: 147px;left: 50%;margin-left: -501px;}
@@ -60,11 +60,11 @@ form.search input.submit{width: 31px;height: 29px;overflow: hidden;background: u
 .aboedit{height: 120px;overflow: hidden;margin: 15px 0 20px;position: relative;}
 .abodet{height: 120px;overflow: hidden; line-height: 24px;}
 .more{display: block;position: absolute;right: 10px;bottom: 0;height: 24px;overflow: hidden;}
-.more:hover{color: #f32727;}
+.more:hover{color: #529b25;}
 
 .indexnews{width: 400px;height: 345px;overflow: hidden;margin: 0 20px;float: left;}
 .mor{color: #d0f5b8;font-size: 12px;line-height: 30px;height: 30px;overflow: hidden;float: right;margin-right: 10px;background: url(../images/mor_03.png) no-repeat right 12px;padding-right: 10px;}
-.mor:hover{color: #f32727}
+.mor:hover{color: #529b25}
 .focusBox { position: relative;float: left; width: 400px; height: 120px; overflow: hidden; font: 12px/1.5 Verdana, Geneva, sans-serif; text-align: left;margin-bottom: 15px;}
 .focusBox .pic li a{width: 400px;height: 120px;overflow: hidden;display: block;}
 .focusBox .pic li a img { max-width: 100%; max-height: 100%;overflow: hidden; display: block;margin: 0 auto;}
@@ -72,14 +72,14 @@ form.search input.submit{width: 31px;height: 29px;overflow: hidden;background: u
 .focusBox .txt { position: absolute; bottom: 0; z-index: 2; height: 30px; width:100%; overflow: hidden; }
 .focusBox .txt li{width: 100%;height:30px;overflow: hidden;line-height:30px; position:absolute; bottom:-30px;color: #fff;text-indent: 8px;}
 .focusBox .txt li .more{float: right;margin-right: 8px;color: #fff;line-height: 30px;height: 30px;overflow: hidden;}
-.focusBox .txt li .more:hover{color: #f32727;}
+.focusBox .txt li .more:hover{color: #529b25;}
 
 .newslist{width: 400px;height: 120px;overflow: hidden;margin-bottom: 20px;}
 .newslist ul{width: 100%;height: 120px;overflow: hidden;}
 .newslist ul li{width: 100%;height: 24px;overflow: hidden;}
 .newslist ul li a{text-indent: 8px;background: url(../images/li_07.png) no-repeat left center;display: block;height: 24px;overflow: hidden;}
 .newslist ul li a span{float: right;}
-.newslist ul li a:hover{color: #e22828}
+.newslist ul li a:hover{color: #529b25}
 
 .contact{width: 260px;height: 345px;overflow: hidden;float: left;}
 .contact .title{width: 100%;height: 30px;overflow: hidden;margin: 20px 0;color: #fff;font-size: 14px;line-height: 30px;text-indent: 8px;background: #0db02b;border-radius: 0 3px 3px 0;-webkit-border-radius: 0 3px 3px 0;-moz-border-radius: 0 3px 3px 0;}
@@ -95,7 +95,7 @@ form.search input.submit{width: 31px;height: 29px;overflow: hidden;background: u
 .products .title{width: 960px;background: none;margin: 20px}
 .products .title h2{width: 224px;height: 30px;overflow: hidden;color: #fff;font-size: 14px;line-height: 30px;text-indent: 8px;background: #0db02b;border-radius: 0 3px 3px 0;-webkit-border-radius: 0 3px 3px 0;-moz-border-radius: 0 3px 3px 0;float: left;}
 .products .title .mor{color: #0db02b;background: url(../images/li_07.png) no-repeat right 12px;}
-.products .title .mor:hover{color: #f32727}
+.products .title .mor:hover{color: #529b25}
 .picScroll{position:relative;width: 1000px;height: 180px;overflow:hidden;margin-bottom: 40px;}
 .picScroll .prev{ display:block; position:absolute; top:50%; margin-top: -20px;left:0px; width:36px; height:40px; background:url(../images/prev_next.png) no-repeat 0 center;z-index: 9}
 .picScroll .next{ display:block; position:absolute;  top:50%; margin-top: -20px;right:0px; width:36px; height:40px; background:url(../images/prev_next.png) no-repeat -36px center;z-index: 9}
@@ -129,16 +129,16 @@ form.search input.submit{width: 31px;height: 29px;overflow: hidden;background: u
 .left>ul{width: 100%;height: auto;overflow: hidden;margin: 16px 0;}
 .left>ul>li{width: 100%;height: auto;overflow: hidden;margin-bottom: 8px;}
 .left>ul>li>a{color: #323232;font: 12px/28px "微软雅黑";text-indent: 20px;;height: 28px;overflow: hidden;display: block;background: url(../images/left_03.png) no-repeat 8px center;border: 1px solid #0db02b;border-radius: 0 3px 3px 0;-webkit-border-radius: 0 3px 3px 0;-moz-border-radius: 0 3px 3px 0;}
-.left>ul>li>a:hover,.left li a.cu{color: #fff;background: #d91515 url(../images/lefth_03.png) no-repeat 8px center;border-color: #d91515;}
-.left>ul>li.current>a{color: #fff;background: #d91515 url(../images/lefth_03.png) no-repeat 8px center;border-color: #d91515;}
+.left>ul>li>a:hover,.left li a.cu{color: #fff;background: #f0b533 url(../images/lefth_03.png) no-repeat 8px center;border-color: #f0b533;}
+.left>ul>li.current>a{color: #fff;background: #f0b533 url(../images/lefth_03.png) no-repeat 8px center;border-color: #f0b533;}
 .left>ul>li>dl{display: none;margin-top: 5px}
 .left>ul>li>dl>dd>a{height: 28px;overflow: hidden;display: block;color: #323232;font: 12px/28px "微软雅黑";text-indent: 34px;}
-.left>ul>li>dl>dd>a:hover,.left li a.cu1{color: #d91515}
-.left>ul>li>dl>dd.current>a{color: #d91515}
+.left>ul>li>dl>dd>a:hover,.left li a.cu1{color: #0cb02b}
+.left>ul>li>dl>dd.current>a{color: #0cb02b}
 .left>ul>li>dl>dd>dl{display: none;}
 .left>ul>li>dl>dd>dl>dt>a{overflow: hidden;height: 26px;display: block;color: #323232;font: 12px/26px "微软雅黑";text-indent: 46px;}
-.left>ul>li>dl>dd>dl>dt>a:hover,.left li a.cu2{color: #d91515}
-.left>ul>li>dl>dd>dl>dt.current>a{color: #d91515}
+.left>ul>li>dl>dd>dl>dt>a:hover,.left li a.cu2{color: #0cb02b}
+.left>ul>li>dl>dd>dl>dt.current>a{color: #0cb02b}
 .ny{width: 224px;height: auto;overflow: hidden;background: url(../images/tel_18.png) no-repeat right bottom;}
 .ny .title{margin: 0}
 .ny .contedit{margin: 15px 0 10px}
@@ -148,20 +148,20 @@ form.search input.submit{width: 31px;height: 29px;overflow: hidden;background: u
 .local span{color: #989696;font-size: 12px}
 .local i{float: right;color: #323232;font-size: 12px;line-height: 40px;height: 40px;overflow: hidden;}
 .local i a{color: #323232;}
-.local i a:hover{color: #cc1414}
+.local i a:hover{color: #0cb02b}
 .info{margin-top: 20px;height: auto;overflow: hidden;}
 .page{font-size: 12px;line-height: 24px;height: auto;overflow: hidden;}
 
 /*news*/
 .news ul li{width: 100%;height: 24px;overflow: hidden;}
 .news ul li a{height: 24px;overflow: hidden;display: block;text-indent: 15px;background: url(../images/li_03.png) no-repeat 2px center;}
-.news ul li a:hover{color: #d91515;background: url(../images/lih_06.jpg) no-repeat 2px center;}
+.news ul li a:hover{color: #0cb02b;background: url(../images/lih_06.jpg) no-repeat 2px center;}
 .news ul li span{float: right;height: 24px;overflow: hidden;}
-.news ul li a:hover span{color: #d91515;}
+.news ul li a:hover span{color: #0cb02b;}
 .pagenumber{color: #323232;text-align:left;margin-top: 25px;height: 24px;line-height: 24px;width: 100%;overflow: hidden;}
 .pagenum{color: #323232;height: 24px;line-height: 24px;overflow: hidden;float: right;}
 .pagenum a{padding:3px 7px;color: #323232;font: 12px/24px "微软雅黑";text-align: center;overflow: hidden;margin: 0 3px;background: #dcd9d4}
-.pagenum a:hover,.pagenum a.current,.pagenum a.on{color: #fff;background: #d91515;}
+.pagenum a:hover,.pagenum a.current,.pagenum a.on{color: #fff;background: #f0b533;}
 /*.pagenum form{width: 62px;height: 24px;overflow: hidden;float: right;margin-left: 3px}
 .pagenum form select{width: 60px;height: 22px;overflow: hidden;border: 1px solid #7f9db9;color: #323232;background: #e4fad7}
 .pagenum form select option{border: 0;background: #e4fad7}*/
@@ -180,8 +180,8 @@ form.search input.submit{width: 31px;height: 29px;overflow: hidden;background: u
 .newsingdet{width: 600px;height: 82px;overflow: hidden;float: right;}
 .newsingdet h5 a{color: #323232;font: 14px/22px "微软雅黑";height: 22px;overflow: hidden;display: block;}
 .newsingdet h5 a span{float: right;color: #323232;font-family: "微软雅黑"}
-.newsingdet h5 a:hover{color: #d91515;}
-.newsingdet h5 a:hover span{color: #d91515;}
+.newsingdet h5 a:hover{color: #0cb02b;}
+.newsingdet h5 a:hover span{color: #0cb02b;}
 .newsingdet p{color: #6c6c6c;font: 12px/20px "微软雅黑";min-height: 60px;max-height: 60px;overflow: hidden;}
 
 /*news_det*/
@@ -189,14 +189,14 @@ form.search input.submit{width: 31px;height: 29px;overflow: hidden;background: u
 .news_det h5.te{color: #323232;font: 18px/24px "微软雅黑";text-align: center;width: 100%;max-height: 96px;overflow: hidden;margin-bottom: 5px;}
 .news_det .message{color: #323232;text-align: center;width: 100%;height: 24px;overflow: hidden;margin-bottom: 8px;border-top: 1px dashed #d6d8dc;}
 .news_det .message a{color: #323232;font: 12px/24px "微软雅黑";}
-.news_det .message a:hover{color: #d91515;}
+.news_det .message a:hover{color: #0cb02b;}
 .news_det p{color: #323232;font: 12px/24px "微软雅黑";}
 .bbs{width: 100%;height: 30px;overflow: hidden;margin-top: 15px;border-bottom: 1px dashed #d6d8dc;}
 .jiathis_style{float: right;}
 .bbs .aaa{float: right !important;display: inline;}
 .other{padding-top: 10px;height: 48px;overflow: hidden;color: #323232;}
 .other a{color: #323232;font: 12px/24px "微软雅黑";height: 24px;overflow: hidden;display: block;}
-.other a:hover{color:#d91515;}
+.other a:hover{color:#0cb02b;}
 
 /*pro*/
 .pro ul{ overflow:hidden; zoom:1;}
@@ -206,7 +206,7 @@ form.search input.submit{width: 31px;height: 29px;overflow: hidden;background: u
 .pro ul li a{width: 225px;height: auto;overflow: hidden;display: block;}
 .pro ul li a img{ max-width:100%; max-height:200px;overflow: hidden; display:block;margin: auto}
 .pro ul li a p{color: #323232;font-size: 12px;line-height: 30px;text-align: center;height: 30px;overflow: hidden;}
-.pro ul li a:hover p{color: #ff0000}
+.pro ul li a:hover p{color: #0cb02b}
 
 /*proing*/
 .proing{height: auto;overflow: hidden;}
@@ -217,7 +217,7 @@ form.search input.submit{width: 31px;height: 29px;overflow: hidden;background: u
 .proingimg img{display: block;max-width: 100%;max-height: 100%;margin: 0 auto;}
 .proingdet{width: 560px;height: 120px;overflow: hidden;float: right;}
 .proingdet h5 a{color: #323232;font: 14px/24px "微软雅黑";height: 24px;overflow: hidden;display: block;margin-bottom: 2px;}
-.proingdet h5 a:hover{color: #d91515;}
+.proingdet h5 a:hover{color: #0cb02b;}
 .proingdet p{color: #6c6c6c;font: 12px/24px "微软雅黑";min-height: 96px;max-height: 96px;overflow: hidden;}
 
 

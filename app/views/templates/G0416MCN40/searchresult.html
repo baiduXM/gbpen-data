@@ -59,12 +59,12 @@
             <span class="result">以下是关键字“<em>{$search.keyword}</em>“的搜索结果</span>
             <div class="content">
                 <ul>
-                    {foreach item=arcitle from=$search.data}
+                    {foreach item=arcitle from=$list.data}
                     <li>
                         <a href="{$arcitle.link}">
                             <h3 class="h3">{$arcitle.title}</h3>
-                            
-                            <div class="nr">{$arcitle.description}</div>
+                            <span class="rq">{$article.pubtimestamp|date_format:'%Y/%m/%d'}</span>
+                            <div class="nr">{$arcitle.description|unescape:"html"}</div>
                             <span class="more">查看更多</span>
                         </a>
                     </li>

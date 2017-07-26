@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<script type="text/javascript">
+    {if $site_another_url}
+        if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+            location.href = '{$site_another_url}';
+        }
+    {/if}
+    </script>
+
+    
+
+    <meta name="keywords" content="{$keywords}"/>
+    <meta name="description" content="{$description}"/>
+	<meta charset="UTF-8">
+	<title>{$title}</title>
+	<link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
+	<link rel="stylesheet" type="text/css" href="{$site_url}css/master.css">
+	<script src="{$site_url}js/jquery.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.1.js"></script>
+	<script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.1.source.js"></script>
+	<script type="text/javascript" src="{$site_url}js/function.js"></script>
+	{$headscript}
+</head>
+<body>
+	<div class="wrapper">
+		{include file='./_header.html'}
+		<div class="banner">
+			<div class="slider">
+				<div class="bd bd_banner">
+					<ul>
+						{foreach item=slidepics from=$index.slidepics}
+						<li><a href="{$slidepics.link}"><img src="{$slidepics.image}"></a></li>
+						{/foreach}
+					</ul>
+				</div>
+				<div class="hd hd_banner">
+					<ul>
+						{foreach item=slidepics from=$index.slidepics}
+						<li></li>
+						{/foreach}
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="advan c">
+			<div class="hd hd_ad">
+				<ul>
+					{foreach item=adv from=$index.advan.childmenu}
+					<li class="ad{$adv@index+1}"><a href="{$adv.link}"><span class="ctrl">{$adv.name}</span></a></li>
+						{if $adv@index+1 eq 4}{break}{/if}
+					{/foreach}
+				</ul>
+			</div>
+			<div class="bd bd_ad">
+				{foreach item=adv from=$index.advan.childmenu}
+					<div class="ad_intro">
+						<dl class="ad_img fl"><i><img src="{$adv.image}"></i></dl>
+						<dl class="ad_nr fl">{$adv.description}</dl>
+					</div>
+					{if $adv@index+1 eq 4}{break}{/if}
+				{/foreach}
+			</div>
+		</div>
+		<div class="about c">
+			<div class="headline">
+				<div class="lm fl">{$index.about.name}</div>
+				<div class="fr more"><a href="{$index.about.link}"></a></div>
+			</div>
+			<div class="about_bg">
+				<div class="about_intro">
+					<em class="about_opacity"></em>
+					<div class="about_bt">{$index.about.description}</div>
+					<div class="about_nr">
+						{$index.about.content|unescape:"html"}
+					</div>
+					<div class="about_more"><a href="{$index.about.link}">【查看更多】</a></div>
+ 
+				</div>
+			</div>
+		</div>
+		<div class="products c">
+			<div class="headline">
+				<div class="lm fl">{$index.product.name}</div>
+				<div class="fr more"><a href="{$index.product.link}"></a></div>
+			</div>
+			<div class="product_data">
+				<ul>
+					{foreach item=pro from=$index.product.data}
+						<li><a href="{$pro.link}">
+							<i><img src="{$pro.image}"></i>
+							<em class="sr_opacity"></em>
+							<div class="sr_h">{$pro.title}</div>
+						</a></li>
+						{if $pro@index+1 eq 4}{break}{/if}
+					{/foreach}
+				</ul>
+			</div>
+		</div>
+		<div class="products c">
+			<div class="headline">
+				<div class="lm fl">{$index.case.name}</div>
+				<div class="fr more"><a href="{$index.case.link}"></a></div>
+			</div>
+			<div class="product_data">
+				<ul>
+					{foreach item=ca from=$index.case.data}
+						<li><a href="{$ca.link}">
+							<i><img src="{$ca.image}"></i>
+							<em class="sr_opacity"></em>
+							<div class="sr_h">{$ca.title}</div>
+						</a></li>
+						{if $ca@index+1 eq 4}{break}{/if}
+					{/foreach}
+				</ul>
+			</div>
+		</div>
+		<div class="news c">
+			<div class="headline">
+				<div class="lm fl">{$index.news.name}</div>
+				<div class="fr more"><a href="{$index.news.link}"></a></div>
+			</div>
+			<div class="news_data">
+				<ul>
+					{foreach item=news from=$index.news.data}
+						<li><a href="{$news.link}">
+							<dl class="news_time fl">
+								<dd>{$news.pubtimestamp|date_format:'%Y'}</dd>
+								<dd>{$news.pubtimestamp|date_format:'%m-%d'}</dd>
+							</dl>
+							<dl class="news_img fl"><i><img src="{$news.image}"></i></dl>
+							<dl class="news_intro fl">
+								<dd class="news_bt">{$news.title}</dd>
+								<dd class="news_nr kz" data-limit="100">{$news.description}</dd>
+								<dd class="news_more">查看详情</dd>
+							</dl>
+						</a></li>
+						{if $news@index+1 eq 3}{break}{/if}
+					{/foreach}
+				</ul>
+			</div>
+		</div>
+		<div class="contact c">
+			<div class="headline">
+				<div class="lm fl">{$index.contact.name}</div>
+				<div class="fr more"><a href="{$index.contact.link}"></a></div>
+			</div>
+			<div class="lx">
+				<div class="map fl">
+					<!-- <iframe src="map.html" width="583" height="258" frameborder="0" scrolling="no"></iframe> -->
+					<i><img src="{$index.map.image}"></i>
+				</div>
+				<div class="lx_intro fl">
+					<div class="lx_bt">{$contact.company}</div>
+					<div class="lx_nr">
+						<!-- <dd class="leader">联系人：{$contact.name}</dd>
+						<dd class="e-mail">邮箱：{$contact.mail}</dd>
+						<dd class="phone">电话：{$contact.telephone}</dd>
+						<dd class="fax">传真：{$contact.fax}</dd>
+						<dd class="address">地址：{$contact.address}</dd> -->
+						{$index.context}
+					</div>
+				</div>
+			</div>
+		</div>
+		{include file='./_footer.html'}
+	</div>
+</body>
+</html>

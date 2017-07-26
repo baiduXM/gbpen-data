@@ -1,0 +1,18 @@
+		<div class="banner_s">	
+			<div class="slider">
+				<div class="bd bd_banner">
+					<ul>
+						{foreach item=slidepics from=$global.slidepics}
+						<li><a href="{$slidepics.link}"><img src="{$slidepics.image}"></a></li>
+						{/foreach}
+					</ul>
+				</div>
+				<div class="hd hd_banner">
+					<ul>
+						{foreach item=slidepics from=$global.slidepics}
+						<li></li>
+						{/foreach}
+					</ul>
+				</div>
+			</div>
+		</div>

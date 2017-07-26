@@ -1,0 +1,9 @@
+<div class="page fr">
+	{foreach item=near_link key=near_page from=$page_links.nears_link}
+	{if $near_page == $page_links.current_page}
+		<a class="current"><span>{$near_page}</span>/{$page_links.page_count}</a>
+	{/if}
+	{/foreach}
+	<a class="clpage last" href="{$page_links.prev_link}"></a>
+	<a class="clpage next" href="{$page_links.next_link}"></a>
+</div>

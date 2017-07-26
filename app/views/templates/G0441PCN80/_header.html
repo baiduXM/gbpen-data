@@ -1,0 +1,30 @@
+<div id="header">
+    <div class="container">
+        <div class="logo"><a href="{$site_url}"><img src="{$logo}" alt=""></a></div>
+        <ul class="nav">
+            {$limit=6}
+            {if $navs|count lt $limit}{$limit = $navs|count}{/if}
+            {foreach item=nav from=$navs}
+            <li class="{if $nav.current}current{/if} lt nav-li" style="width:{100/($limit)}%">
+                <a class="nav-a" href="{$nav.link}">{$nav.name}</a>
+                {if $nav.childmenu}
+                <ul class="chilmenu">
+                    {foreach item=nav_list from=$nav.childmenu}
+                    <li class="{if $nav_list.current}current{/if}">
+                        <a class="navC-a" href="{$nav_list.link}"><span>{$nav_list.name}</span></a>
+                    </li>
+                    {/foreach}
+                </ul>
+                {/if}
+            </li>
+            {if $nav@index+1 eq $limit}{break}{/if}
+            {/foreach}
+        </ul>
+        <div class="search ">
+            <p class="index-tell"><i class="ser iconfont">&#xe609;</i><span>{$contact.telephone}</span></p>
+            
+                <!--<input class="subBtn iconfont" type="submit" value="" name="s" >-->
+            <!--</form>-->
+        </div>
+    </div>
+</div>

@@ -1,0 +1,9 @@
+<div class="friendlink">友情链接:
+      {foreach item=flink from=$global.links}
+      <a href="{$flink.link}" class="kz" data-limit="10">{$flink.title}</a>  |    
+      {/foreach}
+</div>
+<div class="footer">
+	<div class="copyright">{$footprint}</div>
+</div>
+{$footscript}

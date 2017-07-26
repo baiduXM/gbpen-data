@@ -1,0 +1,13 @@
+<div class="footer">
+	<div class="footer1">
+		<div class="copyright">{$footprint}</div>
+		<div class="friendlink">友情链接:
+			<select name="pageselect" onchange="self.location.href=options[selectedIndex].value" >
+		      {foreach item=flink from=$global.links}
+		      <option value ="{$flink.link}">{$flink.title}</option>
+		      {/foreach}
+		     </select>
+		</div>
+	</div>
+</div>
+{$footscript}
