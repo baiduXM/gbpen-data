@@ -59,7 +59,9 @@
           <header>
                <div class="nyheader">
                   <h2>{$article.category.name}</h2>
+                  {if $pagenavs|count gt 0}
                   <span class="more2">分类 <i><img src="{$site_url}images/liarw.png" alt=""></i></span>
+                  {/if}
                   <i class="iconfont1 hicon2" id="quickbar-showcats">&#xe603;</i>
               </div>
                
