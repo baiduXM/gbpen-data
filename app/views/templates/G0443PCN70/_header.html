@@ -1,0 +1,43 @@
+<div class="header">
+    <div class="head_top">
+          <div class="logo fl"><a href="{$site_url}"><img src="{$logo}"></a></div>
+          <div class="search fr">
+             <p class="proscearch fl tc">{$global.sear}</p>
+             <form class="search_div fr" action="{$search_action}" method="GET">
+                <input name="s" type="text" class="input fr" placeholder="请输搜索关键字">
+                <input name="" type="submit" class="btn fl" value="">
+             </form>
+          </div>
+    </div>
+    <div class="nav">
+        <ul class="menu">
+          <li class="transition"><a href="{$site_url}" id="width">网站首页</a></li>
+          {foreach item=nav from=$navs}
+          <li><a href="{$nav.link}" id="width" class="transition">{$nav.name}</a>
+              {if $nav.childmenu}
+              <ul class="nav_list">
+                {foreach item=navlist from=$nav.childmenu}
+                   <li><a href="{$navlist.link}"><span>{$navlist.name}</span></a></li>
+                {/foreach}
+              </ul>
+              {/if}
+          </li>
+          {if $nav@index+1 eq 7}{break}{/if}
+          {/foreach}
+        </ul>
+    </div>
+    <div class="banbox pr">
+        <div id="banner">
+            <ul class="picture">
+              {foreach item=banner from=$global.slidepics}
+                <li><a target="_blank" href="{$banner.link}"><img src="{$banner.image}"></a></li>
+              {/foreach}
+            </ul>
+            <ul class="dot">
+              {foreach item=banner from=$global.slidepics}
+                <li></li>
+              {/foreach}
+            </ul>
+        </div>
+    </div>
+</div>

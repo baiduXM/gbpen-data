@@ -1,102 +1,95 @@
+
 $(document).ready(function() {
 
-  //隐藏导航跟wrap的切换
-	$("#home").click(function(){
-		$("#quickbar-navs").removeClass("page-prev").addClass("page-in");
-		$("#quickbar-wrap").removeClass("page-active").addClass("page-next page-in")
-		$(".quickbar-opacity2").show()
+//二级导航位置居中
+	$(".subnav").each(function(index, el) {
+		$(this).css({display:"block"}); //防止css中ul添加了display:none;暂时给予display:bock
+		var parent = $(this).parent("li")
+		var sum = 0;
+		$(this).find('li').each(function(i, r) {
+			sum += $(this).outerWidth(true); //获取二级li宽度集合
+			sum += 13;
+			return sum;
+		});
+		$(this).width(sum);
+		var half = parent.outerWidth(true)/2;
+		var wleft = parent.position().left + half; //获取父元素li中点距ul左侧距离
+		var wright = parent.parent("ul").width()-wleft; //获取父元素li中点距ul右侧距离
+			console.log(wleft)
+		// if ((wleft < sum/2) && (wright > sum/2)) { //当ul宽度的一半小于li中点距离左侧值,且大于距离右侧值
+		// 	var left = half - wleft
+		// 	$(this).css({left:left});
+		// } else 
+		if ((wright < sum/2) && (wleft > sum/2)) { //当ul宽度的一半小于li中点距离右侧值,且大于距离左侧值
+			var right = half - wright
+			$(this).css({right:right})
+		} else{
+			var mid = half - sum/2;
+			$(this).css({left:mid});
+		};
+		$(this).css({display:"none"}); //二级导航栏位置计算完毕，给予二级导航栏隐藏
 	});
 
-// 回到顶部
-	$(".totop").click(function(){
-		$("#quickbar-wrap-body,#wrapper").animate({scrollTop:0},600);
-		return false;
+// 二级导航栏淡入淡出
+	$(".nav li").hover(function() {
+		var subnavLength = $(this).find('ul.subnav').length;
+		$(this).find('ul.subnav').stop(true, true).fadeIn(100,function(){
+			if (subnavLength > 0) {
+				$(".nav_back").stop(true, true).css({display:"block"});
+			};
+		});
+	}, function() {
+		$(this).find('ul.subnav').fadeOut(100,function(){
+			$(".nav_back").css({display:"none"});
+		});
 	});
 
-// 字体大小
-	$(".size b").click(function() {
-		var b=$(this);
-		if (b.hasClass('on')) {
-			b.removeClass('on').siblings("ul").slideUp(300);
-		} else {
-			b.addClass('on').siblings("ul").slideDown(300);
+// 焦点图片切换
+	jQuery(".inside_banner").slide({ mainCell:".picture", effect:"left",  autoPlay:true, autoPage:true, trigger:"mouseover" });
+
+
+// 面包屑导航
+	$(".main_hd span a:last-child").addClass('on');
+
+// 编辑框
+	for (var j = 0; j <= $(".box>li").length; j++) {
+		if ($(".box>li:eq("+j+")").children('ul').length>0) {
+			$(".box>li:eq("+j+")").children('a').attr('href','javascript:void(null)').addClass('add');
 		}
-		return false;
-	});
-	var multiple = (document.body.clientWidth/320)*10
-	var initial = parseFloat($("#wrap").css("fontSize"))/multiple;
-	$(".size-list li,.news-hd p a").click(function() {
-		var num = parseFloat($("#wrap").css("fontSize"))/multiple;
-		var id = $(this).attr('id');
-		switch (id) {
-			case "largen":
-				num += 0.1;
-				if (num>2.4) {num=2.4}
-				break;
-			case "diminish":
-				num -= 0.1;
-				if (num<0.8) {num=0.8}
-				break;
-			default:
-				num =initial
-				break;
+	};
+	for (var j = 0; j <= $(".box_list>li").length; j++) {
+		if ($(".box_list>li:eq("+j+")").children('ul').length>0) {
+			$(".box_list>li:eq("+j+")").children('a').attr('href','javascript:void(null)').addClass('add');
 		}
-		$("#wrap").css({fontSize:num + "rem"})
-	});
+	};
 
-// 分类
-	$("#topnav ul").addClass('swiper-wrapper')
-	$("#topnav ul li").addClass('swiper-slide tc')
-	if ($("ul.first>li").length>2) {
-		$('.nav').swiper({slidesPerView: 2,freeMode: true});
-	}
+	$(".box>li>a").click(function(){
+		$(this).parent().siblings().children('ul.box_list').children('li').children('ul.box_first').slideUp(300).prev("a").removeClass("box_in");
+		if( $(this).hasClass('box_on') ){
+			$(this).removeClass("box_on").next('ul.box_list').slideUp(300);
+			if( $(this).next('ul.box_list').children('li').children('a').hasClass('box_in') ){
+				$(this).next('ul.box_list').children('li').children('a').removeClass("box_in").next('ul.box_first').slideUp(300);
+			};
+		}else {
+			$(this).next("ul.box_list").slideDown(300);
+			$(this).addClass("box_on").parent().siblings().children("ul.box_list").slideUp(500).prev("a").removeClass("box_on");
+		};
+	});	
 
-    var secnddata = new Array(); 
-	$("ul.first>li").each(function(q, se) {
-		if ($(this).children('ul').length > 0) {
-			secnddata[q] = $(this).children('ul').html();
-		}
-		return secnddata[q];
-	});
-
-	$("ul.first>li").click(function(event) {
-		if ($(this).children('ul').length > 0) {
-			if ($(this).hasClass('box-on')) {
-				$(this).removeClass('box-on').parents("#topnav").stop(true, true).animate({height:"5.6rem"}, 200);
-				$(".nav-list").find('ul.second').remove();
-			} else{
-				$(this).siblings().removeClass('box-on');
-				$(this).addClass('box-on').parents("#topnav").animate({height:"10.4rem"}, 300);
-				var i = $(this).index("ul.first>li");
-				$(".nav-list").html('<ul class="second swiper-wrapper">'+ secnddata[i] + '</ul>');
-				if ($("ul.second>li").length>2) {
-					$('.nav-list').swiper({slidesPerView: 3,freeMode: true});
-				}
-				// 三级顶部导航
-				$("ul.second>li").click(function(event) {					
-					if ($(this).children('ul').length > 0) {
-						if ($(this).hasClass('box-in')) {
-							$(this).removeClass('box-in').parents("#topnav").stop(true, true).animate({height:"10.4rem"}, 200);
-						} else{
-							$(this).siblings().removeClass('box-in');
-							$(this).addClass('box-in').parents("#topnav").animate({height:"14.4rem"}, 300);
-							var thirddata = $(this).find("ul.clone-third").html();
-							$(".nav-last").html('<ul class="third swiper-wrapper">'+ thirddata + '</ul>');
-							if ($("ul.third>li").length>3) {
-								$('.nav-last').swiper({slidesPerView: 4,freeMode: true});
-							}
-						}
-						return false;
-					};
-				});
-			}
-			return false;
+	$(".box_list>li>a").click(function(){
+		if( $(this).hasClass('box_in') ){
+			$(this).removeClass("box_in").next('ul.box_first').slideUp(300);
+		} else{
+			$(this).next("ul.box_first").slideDown(300);
+			$(this).addClass("box_in").parent().siblings().children("ul.box_first").slideUp(500).prev("a").removeClass("box_in");
 		};
 	});
-	
-// 产品展示
-	if ($(".case img").length>1) {
-    	$('.case').swiper({pagination: '.dotted p',paginationClickable: true,spaceBetween: 30,autoplay:2500,autoplayDisableOnInteraction:false});
-	}
 
-});
+// 产品展示
+if ($(".case_list img").length > 1) {
+	jQuery(".case").slide({mainCell:".case_list",autoPage:true,effect:"left",autoPlay:true,vis:1,trigger:"click",mouseOverStop:false});
+}
+
+
+
+})

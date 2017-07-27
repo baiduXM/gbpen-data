@@ -1,0 +1,54 @@
+{
+  "cont1": {
+    "value": {},
+    "description": "第一个图文列表",
+    "type": "page",
+    "config": {
+      "width": 200,
+      "height": 120,
+      "star_only": true
+    }
+  },
+  "cont2": {
+    "value": [],
+    "description": "第二个图文列表",
+    "type": "list",
+    "config": {
+      "width": 272,
+      "height": 272,
+      "star_only": true
+    }
+  },
+  "cont2Li": {
+    "value": [],
+    "description": "第二个右侧图文列表",
+    "type": "list",
+    "config": {
+      "width": 230,
+      "height": 225,
+      "star_only": true
+    }
+  },
+
+  "cont3": {
+    "value": [],
+    "description": "第三个图文列表",
+    "type": "list",
+    "config": {
+      "width":284,
+      "height": 200,
+      "star_only": true
+    }
+  },
+
+  "leftNav": {
+    "value": [
+    ],
+    "description": "",
+    "type": "list",
+    "config": {
+      "filter": "list,page",
+      "mustchild": true
+    }
+  }
+}

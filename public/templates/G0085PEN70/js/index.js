@@ -1,18 +1,13 @@
 $(document).ready(function() {
+	
+// 焦点图片切换
+	jQuery("#banner").slide({ titCell:".dot", mainCell:".picture", effect:"fold",  autoPlay:true, autoPage:true, trigger:"mouseover" });
 
-// 大图滚动
-    $('.slidepics').swiper({pagination: '.dotted p',paginationClickable: true,spaceBetween: 30,autoplay:2500,autoplayDisableOnInteraction:false});
+//产品切换
+	jQuery(".side_pro").slide({ titCell:".scroll li", mainCell:"ol", effect:"top", autoPlay:true, delayTime:300, triggerTime:50,trigger:"click" });
 
-// 图文列表切换
-    $('.column-case').swiper({pagination: '.roll-list p',paginationClickable: true,loop:true,autoplay:5000,speed:500,autoplayDisableOnInteraction:false,nextButton: '.show-next',prevButton: '.show-prev',paginationBulletRender: function (index, className) {
-            return '<span class="' + className + '">' + "0" + (index + 1) + '</span>';
-        }
-    });
+// 家居切换
+	jQuery(".fitment").slide({ mainCell:".fitment_list",effect:"left",pnLoop:false});
 
-	// $(".roll-list ol li").each(function(index, el) {
-	// 	var num = $(this).text();
-	// 	var figure = ("0"+num).substr(-2);
-	// 	$(this).text(figure)
-	// });
-
+		
 });

@@ -1,0 +1,56 @@
+<div class="side_left fl oh">
+    <p class="nnav tc pr"><span class="db oh">{$posnavs[0].name}</span><i class="db oh">{$posnavs[0].en_name}</i></p>
+    {if $pagenavs}
+    <div class="con-left-nav">               
+        <ul class="ce">
+          {foreach item=lnav from=$pagenavs}
+           <li class="{if $lnav.current}current{/if}"><a class="{if $lnav.current}current{/if}" href="{if $lnav.childmenu}javascript:;{else}{$lnav.link}{/if}">{$lnav.name}</a> 
+                {if $lnav.childmenu}
+                 <ul class="er">
+                    {foreach item=navlist from=$lnav.childmenu}
+                    <li class="e_li {if $navlist.current}current{/if}"><a href="{if $navlist.childmenu}javascript:;{else}{$navlist.link}{/if}">{$navlist.name}</a> 
+                          {if $navlist.childmenu}   
+                          <ul class="thr">
+                              {foreach item=navlists from=$navlist.childmenu}
+                               <li class="{if $navlists.current}current{/if}"> 
+                                <a  href="{$navlists.link}">{$navlists.name}</a> 
+                               </li>
+                              {/foreach}
+                          </ul>
+                          {/if}
+                    </li> 
+                    {/foreach}            
+                 </ul>
+                {/if}
+            </li>
+          {/foreach}
+        </ul>   
+    </div>
+    {else}
+    <div class="con-left-nav">               
+        <ul class="ce">
+          {foreach item=lnav from=$global.pagenavss.childmenu}
+           <li class="{if $lnav.current}current{/if}"><a class="{if $lnav.current}current{/if}" href="{if $lnav.childmenu}javascript:;{else}{$lnav.link}{/if}">{$lnav.name}</a> 
+                {if $lnav.childmenu}
+                 <ul class="er">
+                    {foreach item=navlist from=$lnav.childmenu}
+                    <li class="e_li {if $navlist.current}current{/if}"><a href="{if $navlist.childmenu}javascript:;{else}{$navlist.link}{/if}">{$navlist.name}</a> 
+                          {if $navlist.childmenu}   
+                          <ul class="thr">
+                              {foreach item=navlists from=$navlist.childmenu}
+                               <li class="{if $navlists.current}current{/if}"> 
+                                <a  href="{$navlists.link}">{$navlists.name}</a> 
+                               </li>
+                              {/foreach}
+                          </ul>
+                          {/if}
+                    </li> 
+                    {/foreach}            
+                 </ul>
+                {/if}
+            </li>
+          {/foreach}
+        </ul>   
+    </div>
+    {/if}
+</div>

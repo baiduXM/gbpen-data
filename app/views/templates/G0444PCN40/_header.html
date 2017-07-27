@@ -1,0 +1,18 @@
+<div id="header">
+    <div class="container">
+        <div class="logo "><a href="{$site_url}"><img src="{$logo}" alt=""></a></div>
+        <ul class="nav rt">
+            {foreach item=nav from=$navs}
+            <li class="{if $nav.current}current{/if}"><a href="{$nav.link}">{$nav.name}</a>
+                {if $nav.childmenu}
+                <ul class="childmenu">
+                    {foreach item=nav_list from=$nav.childmenu}
+                    <li class="{if $nav_list.current}current{/if}"><a href="{$nav_list.link}">{$nav_list.name}</a></li>
+                    {/foreach}
+                </ul>
+                {/if}
+            </li>
+            {/foreach}
+        </ul>
+    </div>
+</div>

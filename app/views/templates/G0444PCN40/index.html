@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <script type="text/javascript">
+        // 识别为手机客户端，自动跳转手机页面
+        {if $site_another_url}
+        if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+            location.href = '{$site_another_url}';
+        }
+        {/if}
+    </script>
+    <meta name="keywords" content="{$keywords}" />
+    <meta name="description" content="{$description}" />
+    <link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
+    <title>{$title}</title>
+    <link rel="stylesheet" href="{$site_url}css/style.css">
+    <link rel="stylesheet" href="{$site_url}css/jquery.bxslider.css">
+    <script src="{$site_url}js/jquery-1.9.1.min.js"></script>
+    <script src="{$site_url}js/jquery.bxslider.js"></script>
+    <script src="{$site_url}js/index.js"></script>
+    {$headscript}
+</head>
+<body>
+{include file="./_header.html"}
+{include file="./_banner.html"}
+<div id="main">
+    <div class="cont1">
+       <div class="container">
+           <span class="cont-title"><a href="{$index.cont1.link}">{$index.cont1.name}</a></span>
+           <p>{$index.cont1.description}</p>
+           <a href="{$index.cont1.link}"><img src="{$site_url}images/index_03.png" alt=""></a>
+       </div>
+    </div>
+    <div class="cont2">
+        <div class="cont2-lt">
+            <div class="listBox">
+                <span><a href="{$index.cont2.link}">{$index.cont2.name}</a></span>
+                <ul>
+                    {foreach item=nav from=$index.leftNav.childmenu}
+                        <li><a href="{$nav.link}"><span>{$nav.name}</span><i> > </i></a></li>
+                        {if $nav@index+1 == 5}{break}{/if}
+                    {/foreach}
+                </ul>
+                <a href="{$index.cont2.link}"><img src="{$site_url}images/index_07.png" alt=""></a>
+            </div>
+        </div>
+        <div class="cont2-rt">
+          <div class="cont2-li">
+              <ul class="slider1">
+                  {foreach item=article from=$index.cont2Li.data}
+                  <li class="slide">
+                      <a href="{$article.link}">
+                          <b></b>
+                          <h6>{$article.title}</h6>
+                          <span>{$article.description}</span>
+                          <em><img src="{$article.image}" alt=""></em>
+                          <i></i>
+                      </a>
+                  </li>
+                  {/foreach}
+              </ul>
+          </div>
+        </div>
+    </div>
+    <div class="cont3">
+        <div class="container">
+            <span class="cont-title"><a href="{$index.cont3.link}">{$index.cont3.name}</a></span>
+            <div class="cont3Box ">
+                <div class="slider2">
+                    {foreach item=cont3 from=$index.cont3.data}
+                    <dl class="cont3-dl slide">
+                        <dt><img src="{$cont3.image}" alt=""></dt>
+                        <dd>
+                            <h5>{$cont3.title}</h5>
+                            <p>{$cont3.description}</p>
+                            <time>{$cont3.pubtimestamp|date_format:'%Y-%m-%d'}</time>
+                            <a href="{$cont3.link}" class="cont3-more">查看详情</a>
+                        </dd>
+                    </dl>
+                    {/foreach}
+                </div>
+            </div>
+            <a href="{$index.cont3.link}" class="cont3-i"><i></i></a>
+        </div>
+    </div>
+</div>
+<div id="link">
+    <div class="container">
+        <div class="link-img"><img src="images/index_05.png" alt=""></div>
+        <ul>
+            {foreach key=key item=link from=$global.links}
+            <li class="fl"><a href="{$link.link}">{$link.title}</a></li>
+            {/foreach}
+        </ul>
+    </div>
+</div>
+{include file="./_footer.html"}
+
+</body>
+</html>

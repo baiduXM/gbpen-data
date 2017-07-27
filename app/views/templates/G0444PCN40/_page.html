@@ -1,0 +1,13 @@
+<ul class="page">
+    <li class="p-li first-link"><a href="{$page_links.prev_link}">上一页</a></li>
+    <li class="p-li prev-link"><a href="{$page_links.first_link}">首页</a></li>
+    {foreach item=near_link key=near_page from=$page_links.nears_link}
+    {if $near_page == $page_links.current_page}
+    <li class="fl current"><a>{$near_page}</a></li>
+    {else}
+    <li class="fl"><a href="{$near_link}">{$near_page}</a></li>
+    {/if}
+    {/foreach}
+    <li class="p-li next-link"><a href="{$page_links.last_link}">末页</a></li>
+    <li class="p-li last-link"><a href="{$page_links.next_link}">下一页</a></li>
+</ul>

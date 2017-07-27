@@ -1,0 +1,7 @@
+<div id="banner " class="index-banner">
+    <div  class="slider">
+        {foreach item=banner from=$global.banners}
+        <div class="slide"><a href="{$banner.link}"><img src="{$banner.image}" /></a></div>
+        {/foreach}
+    </div>
+</div>

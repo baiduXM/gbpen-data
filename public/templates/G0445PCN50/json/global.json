@@ -1,0 +1,99 @@
+{   
+	
+	"pagenavss": {
+		"value": {},
+		"description": "侧边栏目列表（当前栏目无子栏目时展示的目标栏目）",
+		"type": "list",
+		"config": {
+			"filter": "list,page",
+			"mustchild": true
+		}
+	},
+	"about_ban":{
+		"value": {
+			"title": "关于我们大图",
+			"image": "images/about.jpg",
+			"link": "http://www.baidu.com/"
+			},
+		"description": "关于我们大图",
+		"type": "image",
+		"config": {
+			"width":939,
+			"height":480
+		}
+	},
+	"pro_ban":{
+		"value": {
+			"title": "产品页大图",
+			"image": "images/bg3.jpg",
+			"link": "http://www.baidu.com/"
+			},
+		"description": "产品页大图",
+		"type": "image",
+		"config": {
+			"width":1920,
+			"height":711
+		}
+	},
+	"text2":{
+		"value":"园艺简介\n\rGardening introduction",
+		"description":"大图文字说明",
+		"type":"textarea"
+	},
+	"newimg":{
+		"value": {
+			"title": "新闻列表页图",
+			"image": "images/new2.jpg",
+			"link": "http://www.baidu.com/"
+			},
+		"description": "新闻列表页图",
+		"type": "image",
+		"config": {
+			"width":761,
+			"height":210
+		}
+	},
+	"text3":{
+		"value":"园艺新闻\n\rGardening news",
+		"description":"大图文字说明",
+		"type":"textarea"
+	},
+	"links": {
+		"value": [{
+			"title": "百度",
+			"image": "images/link.jpg",
+			"link": "http://www.baidu.com",
+			"description": "友情链接1"
+		}, {
+			"title": "淘宝",
+			"image": "images/link.jpg",
+			"link": "http://www.baidu.com",
+			"description":"友情链接2"
+		},{
+			"title": "京东",
+			"image": "images/link.jpg",
+			"link": "http://www.baidu.com",
+			"description":"友情链接3"
+		},
+		{
+			"title": "搜狐网",
+			"image": "images/link.jpg",
+			"link": "http://www.baidu.com",
+			"description":"友情链接5"
+		},
+		{
+			"title": "豆网",
+			"image": "images/link.jpg",
+			"link": "http://www.baidu.com",
+			"description":"友情链接6"
+		}
+		],
+		"description": "页脚友情链接",
+		"type": "images",
+		"config":{
+			"width":89,
+			"height":39
+		  }
+	    }
+	
+}

@@ -63,10 +63,12 @@
                     <div class="dection">
                         {if $index.video == 1}
                             <div class="video">
-                                <embed src='{$index.videolink}' allowFullScreen='true' quality='high' width='668' height='234' align='middle' allowScriptAccess='always' type='application/x-shockwave-flash'></embed>
+                                <embed src='{$index.videolink}' allowFullScreen='true' quality='high' width='334' height='234' align='middle' allowScriptAccess='always' type='application/x-shockwave-flash'></embed>
                             </div>
+                        <div class="vi-des">{$index.about.description}</div>
                         {/if}
-                        {$index.about.description}</div>
+                        {$index.about.description}
+                    </div>
                  </div>
             </div>
           </div>

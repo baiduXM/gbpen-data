@@ -76,7 +76,7 @@
       <div class="index_show">
    	   <div class="boxmain_detal">
          <div class="boxmain_d">
-        	<h1 class="boxmain-top">
+        	  <h1 class="boxmain-top">
              <span class="more3" id="first"><b>分类<span id="down"> &darr;</span><span id="up"> &uarr; </span></b></span>
              {$list.name}
             </h1>
@@ -102,9 +102,9 @@
                 </li>
                 {/foreach}                                                                                                                                           
             </ul>
-          </div>                      
+            </div>                      
           <div class="boxmain-ny-m">
-<div class="newsbg2">
+              <div class="newsbg2">
               	<ul>
                   {foreach item=article from=$list.data}
                 	<li><a onclick="javascript:window.location.href='{$article.link}'"><span>{$article.pubdate}</span>{$article.title}
@@ -121,13 +121,21 @@
                      </div>         
               </div>  	
            </div>
+            <div class="index_contact" style="padding: 0;background-color: #846755;margin-top: 10px;">
+          <div class="i_lianxi" style="margin-top: 10px;width: 80%;float: left;background-color: #846755;">
+            {$footprint}
+          </div>
+          <div style="background-color: #4a3c33;width: 50px;border-radius: 10px;color: white;text-align: center;width: 10%;float: left;margin-top: 10%;">
+            <a class="top">Top</a>
+          </div>
+       </div>    
     
         </div>           	
         </div>
        
-   </div>     
+      </div>     
    </div>  
-{$footprint}
+
     {$footscript}  
 </body>
 </html>

@@ -1,0 +1,14 @@
+<div class="page tc">
+	  <a href="{$page_links.first_link}">首页</a>
+    <a href="{$page_links.prev_link}">上一页</a>
+    {foreach item=near_link key=near_page from=$page_links.nears_link}  
+      {if $near_page == $page_links.current_page}
+        <a class="cur">{$near_page}</a> 
+      {else}
+       
+      {/if}
+    {/foreach}
+    <a href="{$page_links.next_link}">下一页</a>
+    <a href="{$page_links.last_link}">尾页</a>
+    <span>当前第{$page_links.current_page}页/总{$page_links.page_count}页</span>
+</div>
