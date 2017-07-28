@@ -28,7 +28,7 @@ strong{display: block;margin: 0 auto;overflow: hidden;text-overflow: ellipsis;wh
 #nav{ width:1200px; margin:auto;}
 #nav ul li { float:left; height:55px;}
 #nav ul li a{ color:#FFF; font-size:16px; padding:0 10px; display:block;}
-#nav ul li a:hover{ background:#d51522; }
+#nav ul li a:hover{ background:#000; }
 #nav ul li p{ height:55px; overflow:hidden; line-height:45px; text-align:center;}
 
 #nav ul li .cc{background:#000; height:40px; line-height:40px;display:none; text-align:center; 
@@ -131,7 +131,7 @@ width:100%; position:relative; z-index:100; margin-top:0px; }
 
 .subnav .alefttitle .frame{ border:1px #FFF solid; margin:10px 12px; padding-top:21px; padding-bottom:19px;}
 .subnav .alefttitle .frame b{ font-size:26px; line-height:26px; height:27px; overflow:hidden; display:block;}
-.subnav .alefttitle .frame p{ text-transform:uppercase; height:24px; overflow:hidden; display:block;}
+.subnav .alefttitle .frame p{ text-transform:uppercase; padding-top:10px; height:24px; overflow:hidden; display:block;}
 
 
 .category{}
@@ -159,8 +159,8 @@ ul.third li a.thirda:hover{ color:#bf1b20;}
 
 .crumb p{ float:left; max-width:500px; border-bottom:1px #e60112 solid; font-size:16px; color:#333333; font-weight:normal; margin-right:9px; padding-bottom:4px;}
 
-.crumb span{ float:right; background:url(../images/crumb_span.png) no-repeat left; color:#9d9c9c; height:24px; line-height:24px; overflow:hidden; text-indent:18px; padding-right:10px;text-transform: capitalize}
-.crumb span a{ color:#9d9c9c;text-transform: capitalize}
+.crumb span{ float:right; background:url(../images/crumb_span.png) no-repeat left; color:#9d9c9c; height:24px; line-height:24px; overflow:hidden; text-indent:18px; padding-right:10px;}
+.crumb span a{ color:#9d9c9c;}
 
 
 .article {}
@@ -224,7 +224,7 @@ ul.third li a.thirda:hover{ color:#bf1b20;}
 	margin:0px auto;
 	text-align:center;
 }
-/* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç°/ï¿½ï¿½Å¥ï¿½ï¿½ï¿½ë£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÒªÉ¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ */
+/* ÏÂÃæÊÇÇ°/ºó°´Å¥´úÂë£¬Èç¹û²»ÐèÒªÉ¾³ý¼´¿É */
 #banner .slideBox .prev,  #banner .slideBox .next {
 	position:absolute;
 	left:3%;

@@ -8,7 +8,7 @@
         location.href = '{$site_another_url}';
     } {/if}
     </script>
-    
+
 <meta http-equiv="x-ua-compatible" content="ie=7" />
 <title>{$title}</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -26,7 +26,7 @@
   <div id="sub_container" class=" wrapper clearfix" > {include file='./_aside.html'}
     <div class="main">
       <div class="crumb">
-<span>Your current location：<a href="{$site_url}">Home</a> {foreach item=nav from=$posnavs} <a href="{$nav.link}">>{$nav.en_name}</a> {/foreach}</span><p>{$list.en_name}</p>
+<span>您所在的位置：<a href="{$site_url}">首页</a> {foreach item=nav from=$posnavs} <a href="{$nav.link}">>{$nav.name}</a> {/foreach}</span><p>{$list.name}</p>
  </div>
       <div class="article">
         <div class="list_imagetext">
@@ -38,16 +38,12 @@
                 <div class="text_title"><a href="{$article.link}"><span>[{$article.pubtimestamp|date_format:'%Y/%m/%d'}]</span><b> {$article.title}</b></a></div>
                 <div class="text_word">
                   <div class="text_word1"> {$article.description|truncate:400:"…"}</div>
-                  <span><a href="{$article.link}">[MORE]</a></span></div>
+                  <span><a href="{$article.link}">[查看详情]</a></span></div>
               </div>
             </li>
             {/foreach}
           </ul>
-            <div class="module_page"> Page{$page_links.current_page} /  Total{$page_links.page_count} page <a href="{$page_links.first_link}">Home page</a>
-                <a href="{$page_links.prev_link}">Prev</a> {foreach name=nears_link item=near_link key=near_page from=$page_links.nears_link} {if $near_page == $page_links.current_page}
-                <a class="current">{$near_page}</a> {else} <a href="{$near_link}">{$near_page}</a> {/if} {/foreach} <a href="{$page_links.next_link}">Next</a>
-                <a href="{$page_links.last_link}">Trailer page</a>
-            </div>
+          <div class="module_page"> 第{$page_links.current_page}页/共{$page_links.page_count} 页 <a href="{$page_links.first_link}">首页</a> <a href="{$page_links.prev_link}">上一页</a> {foreach name=nears_link item=near_link key=near_page from=$page_links.nears_link} {if $near_page == $page_links.current_page} <a class="current">{$near_page}</a> {else} <a href="{$near_link}">{$near_page}</a> {/if} {/foreach} <a href="{$page_links.next_link}">下一页</a> <a href="{$page_links.last_link}">尾页</a></div>
         </div>
       </div>
     </div>

@@ -8,7 +8,7 @@
         location.href = '{$site_another_url}';
     } {/if}
     </script>
-  
+
 <meta http-equiv="x-ua-compatible" content="ie=7" />
 <title>{$title}</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -26,8 +26,8 @@
   <div id="sub_container" class=" wrapper clearfix" > {include file='./_aside.html'}
     <div class="main fr">
     
-     <div class="crumb clearfix"> <span>Your current location： <a href="{$site_url}">Home</a> {foreach item=nav from=$posnavs} <a href="{$nav.link}">>{$nav.en_name}</a> {/foreach}</span>
-      <p>{$article.category.en_name}</p>
+     <div class="crumb clearfix"> <span>您所在的位置：<a href="{$site_url}">首页</a> {foreach item=nav from=$posnavs} <a href="{$nav.link}">>{$nav.name}</a> {/foreach}</span>
+      <p>{$article.category.name}</p>
     </div>
   
 
@@ -41,8 +41,8 @@
           <!-- Baidu Button BEGIN -->
           {shareExt shareText=$article.content|unescape:"html"|strip_tags|truncate:140:"…" sharePic=$article.image} </div>
         <ul class="inner_pages" style="clear:both;">
-          <li>Prev：<a href="{$article.prev.link}">{$article.prev.title}</a></li>
-          <li>Next：<a href="{$article.next.link}">{$article.next.title}</a></li>
+          <li>上一篇：<a href="{$article.prev.link}">{$article.prev.title}</a></li>
+          <li>下一篇：<a href="{$article.next.link}">{$article.next.title}</a></li>
         </ul>
       </div>
     </div>

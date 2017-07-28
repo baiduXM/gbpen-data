@@ -99,11 +99,15 @@
  <div class="title"><a href="{$index.por_list.link}"><b>{$index.por_list.en_name}</b><p>{$index.por_list.name}</p></a></div>
  <div class="inner">
  <ul>
-  {foreach name=lnav item=lnav from=$index.pro_list.childmenu}
-  <li><a href="{$lnav.link}">{$lnav.name}</a></li>
-  {if $lnav@index+1 == 11}{break}{/if}
-  {/foreach}
+ 
+ {foreach name=por_list item=por_list from=$index.por_list.data}
+ 
+ <li><a href="{$por_list.link}">{$por_list.title}</a></li>
 
+
+ {if $news@index+1 == 11}{break}{/if}
+ {/foreach}
+ 
  </ul>
  </div>
  

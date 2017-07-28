@@ -8,7 +8,7 @@
         location.href = '{$site_another_url}';
     } {/if}
     </script>
-  
+
 <meta http-equiv="x-ua-compatible" content="ie=7" />
 <title>{$title}</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -26,29 +26,25 @@
   <div id="sub_container" class=" wrapper clearfix" > {include file='./_aside.html'}
     <div class="main fr">
     
-    <div class="crumb clearfix"> <span>Your current location：<a href="{$site_url}">Home</a> > search result</span>
-      <p>search result</p>
+    <div class="crumb clearfix"> <span>您所在的位置：<a href="{$site_url}">首页</a> > 搜索结果</span>
+      <p>搜索结果</p>
     </div>
 
 
       <div class="article">
         <div class="searchresult"> {if $search.total eq 0}
-          <p class="search_res">Didn't find the related data！</p>
+          <p class="search_res">没有查找到相关数据！</p>
           {else}
           <ul class="resultbox">
             {foreach item=article from=$search.data}
             <li>
               <div class="nlist_a"><a href="{$article.link}"><span>{$article.pubdate}</span> <b>{$article.title}</b></a></div>
-              <div class="nlist_word">{$article.description}<span><a href="{$article.link}">[MORE]</a></span></div>
+              <div class="nlist_word">{$article.description}<span><a href="{$article.link}">[查看更多]</a></span></div>
             </li>
             {if $article@index+1 == 6} {break} {/if}
             {/foreach}
           </ul>
-          <div class="module_page"> Page{$page_links.current_page} /  Total{$page_links.page_count} page <a href="{$page_links.first_link}">Home page</a>
-            <a href="{$page_links.prev_link}">Prev</a> {foreach name=nears_link item=near_link key=near_page from=$page_links.nears_link} {if $near_page == $page_links.current_page}
-            <a class="current">{$near_page}</a> {else} <a href="{$near_link}">{$near_page}</a> {/if} {/foreach} <a href="{$page_links.next_link}">Next</a>
-            <a href="{$page_links.last_link}">Trailer page</a>
-          </div>
+          <div class="module_page"> 第{$page_links.current_page}页/共{$page_links.page_count} 页 <a href="{$page_links.first_link}">首页</a> <a href="{$page_links.prev_link}">上一页</a> {foreach name=nears_link item=near_link key=near_page from=$page_links.nears_link} {if $near_page == $page_links.current_page} <a class="current">{$near_page}</a> {else} <a href="{$near_link}">{$near_page}</a> {/if} {/foreach} <a href="{$page_links.next_link}">下一页</a> <a href="{$page_links.last_link}">尾页</a></div>
           {/if} </div>
       </div>
     </div>

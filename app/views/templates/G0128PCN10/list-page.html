@@ -8,7 +8,7 @@
         location.href = '{$site_another_url}';
     } {/if}
     </script>
-    
+
 <meta http-equiv="x-ua-compatible" content="ie=7" />
 <title>{$title}</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -26,7 +26,7 @@
   <div id="sub_container" class=" wrapper clearfix" > {include file='./_aside.html'}
     <div class="main">
        <div class="crumb">
-           <span>Your current location：<a href="{$site_url}">Home</a> {foreach item=nav from=$posnavs} <a href="{$nav.link}">>{$nav.en_name}</a> {/foreach}</span><p>{$list.en_name}</p>
+<span>您所在的位置：<a href="{$site_url}">首页</a> {foreach item=nav from=$posnavs} <a href="{$nav.link}">>{$nav.name}</a> {/foreach}</span><p>{$list.name}</p>
  </div>
       <div class="article "> {$list.content|unescape:"html"} </div>
     </div>

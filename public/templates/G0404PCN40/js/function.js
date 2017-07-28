@@ -116,7 +116,12 @@ $("#banner .slideBox").slide({mainCell:".bd ul",autoPlay:true, effect:"fold", tr
             });
         }
     });
-
+    /*首页轮播*/
+    $('.sliderBan').bxSlider({
+        mode: 'fade',
+        slideWidth: "",
+       auto: true
+    });
 
 
 });

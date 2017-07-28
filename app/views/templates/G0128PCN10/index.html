@@ -8,7 +8,7 @@
         location.href = '{$site_another_url}';
     } {/if}
     </script>
-  
+
 <meta http-equiv="x-ua-compatible" content="ie=7" />
 <title>{$title}</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -26,19 +26,19 @@
 <div id="container" class="wrapper clearfix">
   <div class="about">
     <h2><span><a href="{$index.about.link}"><img src="{$site_url}images/more.png" /></a></span>
-      <div class="wide"><b> {$index.about.en_name}</b></div>
+      <div class="wide"><b> {$index.about.en_name}</b>{$index.about.name}</div>
     </h2>
     <div class="inner">
-      <div class="about_img"><a href="{$index.about.link}"><img src="{$index.about.image}" /></a></div>
+      <div class="about_img"><img src="{$index.about.image}" /></div>
       <div class="text"> <a href="{$index.about.link}">{$index.about.description}</a> </div>
     </div>
   </div>
   <div class="news">
     <h2><span><a href="{$index.news.link}"><img src="{$site_url}images/more.png" /></a></span>
-      <div class="wide"><b>{$index.news.en_name}</b></div>
+      <div class="wide"><b>{$index.news.en_name}</b>{$index.news.name}</div>
     </h2>
     <div class="inner">
-      <div class="news_img"><a href="{$index.news.link}"><img src="{$index.news.image}" /></a></div>
+      <div class="news_img"><img src="{$index.news.image}" /></div>
       <div class="text">
         <ul>
           {foreach name=news item=news from=$index.news.data}
@@ -57,7 +57,7 @@
   </div>
   <div class="products">
     <h2><span><a href="{$index.pro.link}"><img src="{$site_url}images/more.png" /></a></span>
-      <div class="wide"><b>{$index.pro.en_name}</b></div>
+      <div class="wide"><b>{$index.pro.en_name}</b>{$index.pro.name}</div>
     </h2>
     <div class="inner">
       <div id="slideBox" class="slideBox">
