@@ -82,7 +82,7 @@
         {if $mIndexCat.showtype eq 1}
         <div class="probox">
             <div class="pro-title"><div class="pro-bg"></div><em></em>
-                <a href=""><i>{$mIndexCat.name}</i><dd>{$mIndexCat.en_name}</dd></a>
+                <a href="{$mIndexCat.link}"><i>{$mIndexCat.name}</i><dd>{$mIndexCat.en_name}</dd></a>
             </div>
             <ul class="prolist">
               {foreach item=pro from=$mIndexCat.data}
