@@ -40,7 +40,7 @@
                         {/if}
                          <ul>
                            {foreach item=result from=$search.data}
-                            <li><a href="{$result.link}"><span>日期：{$result.pubtimestamp|date_format:'%Y - %m - %d'}</span>{$result.title}</a></li>
+                            <li><a href="{$result.link}"><span>{$result.pubtimestamp|date_format:'%Y - %m - %d'}</span>{$result.title}</a></li>
                            {/foreach}
                          </ul>
                          {include file='./_page.html'}

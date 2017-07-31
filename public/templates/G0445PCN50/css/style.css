@@ -163,7 +163,7 @@ mark{background: none;}
 .page3 ul li{width: 100%;height: 24px;overflow: hidden;}
 .page3 ul li a{color: #666;}
 .page3 ul li a:hover{color: #47b554;}
-.pro_page ul li a{color: #fff;}
+.pro_page ul li a{color: #666;}
 /*pro*/
 .background{width:1920px;height: 711px;position: absolute;left: 50%;margin-left: -960px;text-align: center;bottom: 0;}
 .background img{width: 100%;height:711px; display: block;min-height: none;}
@@ -183,7 +183,7 @@ mark{background: none;}
 .prolist .page,.prolist .page a{color: #fff;}
 .prolist .page a:hover{color: #47b554;}
 
-#footer .link2,#footer .link2 a,.copy2,.copy2 a{color: #fff;}
+#footer .link2,#footer .link2 a,.copy2,.copy2 a{color: #666;}
 #footer .link2 a:hover,.copy2 a:hover{color: #47b554;}
 /*pro_det*/
 .prodet{width: 1366px;height: auto;overflow: hidden;margin: 0 auto;padding-top: 82px;}
@@ -193,7 +193,7 @@ mark{background: none;}
 .pro_det .prev,.pro_det .next{display: block;width:49px;height: 87px;position: absolute;top: 190px; }
 .pro_det .prev{left: 0;}
 .pro_det .next{right: 0;}
-.prodet .dectil{width: 596px;height: auto;overflow: hidden;color: #fff;}
+.prodet .dectil{width: 596px;height: auto;overflow: hidden;color: #666;}
 .prodet .dectil .proname{width: 100%;height: auto;overflow: hidden;font-size: 30px;line-height: 40px;margin-bottom: 20px;}
 .new_dec{width: 100%;height: 362px;overflow-y: scroll;margin-bottom: 10px;}
 
@@ -208,7 +208,7 @@ mark{background: none;}
      .side_right .nav_right{width: 514px;}
      .side_right .navbox{width: 404px;}
 }
-@media (min-width:1441px)and (max-width: 1660px) {
+@media (min-width:1441px)and (max-width: 1680px) {
      .side_left{width: 784px;}
      .banbox{margin: 76px 34px;}
      .side_left .newsbox{padding-left: 34px;}
