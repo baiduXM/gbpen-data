@@ -56,11 +56,11 @@ $(document).ready(function(){
     	})
 	// 二级导航下拉
       $(".icon").click(function(){
-          $(".menu_body").slideToggle()
-          $(".font").slideUp()
-          $(".icon1").hide()
-          $(".icon2").show()    
+          $(".menu_head").toggleClass("cur")
+          $(this).siblings(".menu_body").slideToggle()
+          $(".font").slideUp()   
       })
+
   // prodt滚动
     TouchSlide({
         slideCell:"#slideBox2",
