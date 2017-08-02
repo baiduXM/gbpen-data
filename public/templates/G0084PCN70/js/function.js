@@ -28,11 +28,9 @@ $(document).ready(function() {
 	// });
 
 
-if ($("#banner").length>0) {
-	// 焦点图片切换
-	jQuery("#banner").slide({ titCell:".dot ol", mainCell:"ul.picture", effect:"left",delayTime:1000, interTime:4000  autoPlay:true,mouseOverStop:false, autoPage:true, trigger:"click" });
 
-}
+	jQuery("#banner").slide({ titCell:".dot ol", mainCell:"ul.picture", effect:"left",  autoPlay:true,mouseOverStop:false, autoPage:true, trigger:"click" });
+
 
 // 编辑框
 	var data = new Array(); 
