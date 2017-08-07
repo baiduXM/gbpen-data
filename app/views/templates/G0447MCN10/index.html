@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{$title}</title>
+	
+	<!-- 实时预览调试代码，模板开发完成后删除 -->
+	
+	<!-- 调试代码 End -->
+
+	<script type="text/javascript">
+        // 跳转PC页面
+        {if $site_another_url}
+            if (!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+                location.href = '{$site_another_url}';
+            }
+        {/if}
+    </script>
+	
+	<!-- 强制让文档的宽度与设备的宽度保持1:1，并且文档最大的宽度比例是1.0，且不允许用户点击屏幕放大浏览； -->
+	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,initial-scale=1.0"/>
+	<!-- iphone设备中的safari私有meta标签，它表示：允许全屏模式浏览 -->
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<!-- iphone的私有标签，它指定的iphone中safari顶端的状态条的样式 -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<!-- 告诉设备忽略将页面中的数字识别为电话号码\去除Android平台中对邮箱地址的识别 -->
+	<meta content="telephone=no, email=no" name="format-detection">
+	<!-- 启用360浏览器的极速模式(webkit) -->
+	<meta name="renderer" content="webkit">
+	<!-- 避免IE使用兼容模式 -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+	<meta name="HandheldFriendly" content="true">
+	<!-- 微软的老式浏览器 -->
+	<meta name="MobileOptimized" content="320">
+	<!-- uc强制竖屏 -->
+	<meta name="screen-orientation" content="portrait">
+	<!-- QQ强制竖屏 -->
+	<meta name="x5-orientation" content="portrait">
+
+	<meta name="keywords" content="{$keywords}"/>
+    <meta name="description" content="{$description}"/>
+    <link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
+	<link rel="stylesheet" type="text/css" href="{$site_url}css/swiper-3.3.1.min.css">
+	<link rel="stylesheet" type="text/css" href="{$site_url}css/master.css">
+	<script src="{$site_url}js/jquery-1.9.1.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="{$site_url}js/swiper-3.3.1.jquery.min.js"></script>
+	<script type="text/javascript" src="{$site_url}js/function.js"></script>
+	{$headscript}
+</head>
+<body>
+	<div class="wrapper">
+		<div class="logo"><a href="{$site_url}"><i><img src="{$logo}"></i></a></div>
+		<div class="nav">
+			<div class="swiper-button-prev swiper-button-prev-nav fl"></div>
+			<div class="swiper-container swiper-container-nav">
+				<div class="swiper-wrapper swiper-wrapper-nav fl">
+					<div class="swiper-slide swiper-slide-nav"><a href="{$site_url}">网站首页</a></div>
+					{foreach item=nav from=$navs}
+						<div class="swiper-slide swiper-slide-nav"><a href="{$nav.link}">{$nav.name}</a></div>
+					{/foreach}
+				</div>
+			</div>
+			<div class="swiper-button-next swiper-button-next-nav fl"></div>
+		</div>
+		<div class="swiper-container swiper-container-banner">
+			<div class="swiper-button-prev swiper-button-prev-banner fl"></div>
+			<ul class="swiper-wrapper swiper-wrapper-banner">
+				{foreach item=slidepics from=$global.slidepics}
+					<li class="swiper-slide swiper-slide-banner"><a href="{$slidepics.link}"><i><img src="{$slidepics.image}"></i></a></li>
+				{/foreach}
+			</ul>
+			<div class="swiper-button-next swiper-button-next-banner fl"></div>
+		</div>
+		{foreach name=mIndexCats item=mIndexCat from=$mIndexCats}
+			{if $mIndexCat.type eq 4}
+				{if $mIndexCat.showtype eq 1}
+					<div class="about">
+						<div class="black">
+							<div class="c">
+								<div class="head_a"><a href="{$mIndexCat.link}">
+									<dl class="title_cn_s">{$mIndexCat.name}</dl>
+									<dl class="title_en_s">{$mIndexCat.en_name}</dl>
+								</a></div>
+							</div>
+						</div>
+						<div class="about_data">
+							<dl class="about_img"><i><img src="{$mIndexCat.image}"></i></dl>
+							<dl class="about_intro">
+								<dd class="about_nr">
+									{$mIndexCat.description}
+								</dd>	
+							</dl>
+							<dd class="about_imore"><a href="{$mIndexCat.link}">【查看详细】</a></dd>
+						</div>
+					</div>
+				{else if $mIndexCat.showtype eq 2}
+					<div class="contact">
+						<div class="headline"><a href="#{$mIndexCat.link}">
+							<dl class="title_cn">{$mIndexCat.name}</dl>
+							<dl class="title_en">{$mIndexCat.en_name}</dl>
+							<em class="title_down"></em>
+						</a></div>
+						<div class="contact_data c">
+							<div class="lx">
+								<dl class="lx_bt">联系方式</dl>
+								<dl class="context">
+									{$global.context}
+								</dl>
+							</div>
+							<div class="map"><i><img src="{$global.map.image}"></i></div>
+						</div>
+					</div>
+				{/if}
+			{else if $mIndexCat.type eq 2 or $mIndexCat.type eq 3}
+				{if $mIndexCat.showtype eq 1}
+					<div class="product">
+						<div class="headline"><a href="{$mIndexCat.link}">
+							<dl class="title_cn">{$mIndexCat.name}</dl>
+							<dl class="title_en">{$mIndexCat.en_name}</dl>
+							<em class="title_down"></em>
+						</a></div>
+						<div class="pro_data c">
+							<ul>
+								{foreach item=pro from=$mIndexCat.data}
+									<li><a href="{$pro.link}">
+										<dl class="pro_img"><i><img src="{$pro.image}"></i></dl>
+										<dl class="pro_bt">{$pro.title} ＋</dl>
+									</a></li>
+									{if $pro@index+1 eq 6}{break}{/if}
+								{/foreach}
+							</ul>
+						</div>
+					</div>
+				{else if $mIndexCat.showtype eq 2}
+					<div class="news">
+						<div class="headline"><a href="{$mIndexCat.link}">
+							<dl class="title_cn">{$mIndexCat.name}</dl>
+							<dl class="title_en">{$mIndexCat.en_name}</dl>
+							<em class="title_down"></em>
+						</a></div>
+						<div class="news_data">
+							<div class="swiper-container swiper-container-pro">
+								<div class="swiper-wrapper swiper-wrapper-pro">
+									<div class="swiper-slide swiper-slide-pro">
+										<ul class="c">
+											{foreach item=news from=$mIndexCat.data}
+												{if $news@index+1 gt 0}
+												<li><a href="{$news.link}">
+													<em class="news_opacity"></em>
+													<dl class="news_img"><i><img src="{$news.image}"></i></dl>
+													<dl class="news_hover">{$news.title}</dl>
+												</a></li>
+												{/if}
+												{if $news@index+1 eq 4}{break}{/if}
+											{/foreach}
+										</ul>
+									</div>
+									<div class="swiper-slide swiper-slide-pro">
+										<ul class="c">
+											{foreach item=news from=$mIndexCat.data}
+												{if $news@index+1 gt 4}
+												<li><a href="{$news.link}">
+													<em class="news_opacity"></em>
+													<dl class="news_img"><i><img src="{$news.image}"></i></dl>
+													<dl class="news_hover">{$news.title}</dl>
+												</a></li>
+												{/if}
+												{if $news@index+1 eq 8}{break}{/if}
+											{/foreach}
+										</ul>
+									</div>
+									<div class="swiper-slide swiper-slide-pro">
+										<ul class="c">
+											{foreach item=news from=$mIndexCat.data}
+												{if $news@index+1 gt 8}
+												<li><a href="{$news.link}">
+													<em class="news_opacity"></em>
+													<dl class="news_img"><i><img src="{$news.image}"></i></dl>
+													<dl class="news_hover">{$news.title}</dl>
+												</a></li>
+												{/if}
+												{if $news@index+1 eq 12}{break}{/if}
+											{/foreach}
+										</ul>
+									</div>						
+								</div>
+							</div>
+						</div>
+					</div>
+				{/if}
+			{/if}
+		{/foreach}		
+		<div class="footer">
+			<div class="foot c">
+				<div class="copyright">
+					{$footprint}
+				</div>
+				<div class="totop"><a href="#">TOP</a></div>
+			</div>
+		</div>
+		{$footscript}
+	</div>
+</body>
+</html>

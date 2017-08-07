@@ -51,18 +51,20 @@
 				<ol class="recommend">
 					{foreach item=pro from=$index.pro.childmenu}
 					<li>
-						<div class="recommend_first"><a href="{$pro.data[{$pro@index}].link}">
-							<img src="{$pro.data[{$pro@index}].image}">
+                    
+						<div class="recommend_first"><a href="{$pro.data[0].link}">
+							<img src="{$pro.data[0].image}">
 							<article class="first_pic">
-								<span></span><h4>{$pro.data[{$pro@index}].title}</h4>
-								<p>{$pro.data[{$pro@index}].description}</p>
+								<span></span><h4>{$pro.data[0].title}</h4>
+								<p>{$pro.data[0].description}</p>
 							</article>
 						</a></div>
+                       
 						{foreach item=article from=$pro.data}
-							{if $article@index+1 gt 0}
+							{if $article@index gt 0}
 							<a href="{$article.link}"><img src="{$article.image}"></a>
 							{/if}
-						{if $article@index+1 eq 4}{break}{/if}
+						{if $article@index+1 eq 5}{break}{/if}
 						{/foreach}
 					</li>
 					{if $pro@index+1 eq 5}{break}{/if}

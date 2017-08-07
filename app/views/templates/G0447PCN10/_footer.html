@@ -1,0 +1,15 @@
+		<div class="footer">
+			<div class="foot c">
+				<div class="linker">
+					<ul>
+						{foreach item=link from=$global.links}
+							<li><a href="{$link.link}">{$link.title}</a></li>
+						{/foreach}
+					</ul>
+				</div>
+				<div class="copyright">
+					{$footprint}
+				</div>
+			</div>
+		</div>
+		{$footscript}

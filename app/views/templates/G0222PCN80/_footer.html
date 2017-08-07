@@ -4,10 +4,10 @@
 			<h3 class="linktit">友情链接</h3>
 			<div class="picScroll f_l">
 				<ul>
-					{foreach key=key item=link from=$global.link}
+					{foreach key=key item=links from=$global.link}
 						<li>
-							<a href="{$link.link}" target="_blank">
-								<img src="{$link.image}" alt="{$link.title|strip_tags}">
+							<a href="{$links.link}" target="_blank">
+								<img src="{$links.image}" alt="{$link.title|strip_tags}">
 							</a>
 						</li>	
 					{/foreach}										

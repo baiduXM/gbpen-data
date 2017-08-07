@@ -1,0 +1,40 @@
+		<div class="heading">
+			<div class="top c">
+				<div class="welcome fl">{$global.welcome}</div>
+				<div class="email fr">邮箱：{$global.mail}</div>
+				<div class="tel fr">电话：{$global.tel}</div>
+			</div>
+		</div>
+		<div class="header c">
+			<div class="logo"><a href="{$site_url}"><i><img src="{$logo}"></i></a></div>
+			<div class="nav">
+					<ul class="one">
+						
+						{foreach item=nav from=$navs}
+						    <li class="{if $nav.current}cu{/if}" style="width:{100/($navs|count)}%">
+								<a href="{$nav.link}">{$nav.name}</a>
+								{if $nav.childmenu}
+								<ul class="two">
+									{foreach item=subnav from=$nav.childmenu}
+									<li><a href="{$subnav.link}">{$subnav.name}</a></li>
+									{/foreach}
+								</ul>
+								{/if}
+							</li>
+						{/foreach}
+					</ul>
+			</div>
+		</div>
+		<div class="banner">
+			<div class="slider">
+				<div class="prev prev_banner"></div>
+				<div class="bd bd_banner">
+					<ul>
+						{foreach item=slidepics from=$global.slidepics}
+						<li><a href="{$slidepics.link}"><i><img src="{$slidepics.image}"></i></a></li>
+						{/foreach}
+					</ul>
+				</div>
+				<div class="next next_banner"></div>
+			</div>
+		</div>
