@@ -13,7 +13,7 @@
 .in_page{ }
 .in_page .inner{width:98%; margin:auto; margin-top:15px; }
 .in_page .inner .pic{ width:25%; float:left}
-.in_page .inner p{  width:73%;margin:auto; line-height:24px; height:72px; overflow:hidden;  float:left; margin-left:10px;}
+.in_page .inner p{  width:73%;margin:auto; line-height:24px; max-height:100px; overflow:hidden;  float:left; margin-left:10px;}
 
 @media screen and (min-width: 320px) and (max-width: 480px){
 .in_h2 .text .in_zh{ line-height:20px;  }
