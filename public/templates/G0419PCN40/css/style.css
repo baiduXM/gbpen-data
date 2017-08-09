@@ -32,9 +32,9 @@ p{line-height:26px;}
 .container-nav{width:1200px;margin:0 auto;}
 #nav>div>ul>li{display: inline-block;margin:0 10px;position: relative;}
 #nav>div>ul>li:last-child{margin:0;}
-#nav>div>ul>li>a{display: inline-block;width:110px;padding:25px 0;text-align: center;}
+#nav>div>ul>li>a{display: table-cell;width:110px; height: 88px; text-align: center; vertical-align: middle;}
 #nav>div>ul>li>a>span{font-size:14px;display: block;margin-bottom:-3px;width: 110px;
-    height: 20px;
+    height: 20px; line-height: 20px;
     overflow: hidden;}
 #nav>div>ul>li>a i{font-size:10px;}
 #nav>div>ul>li.current a{background: #003c94;}

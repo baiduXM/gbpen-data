@@ -33,15 +33,13 @@
     <meta name="description" content="{$description}" />
     <link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
     <title>{$title}</title>
-    <link rel="stylesheet" href="{$site_url}css/animate.min.css"/>
-    <link rel="stylesheet" href="{$site_url}css/swiper-3.4.1.min.css"/>
-    <link rel="stylesheet" href="{$site_url}css/public.css"/>
+    <link rel="stylesheet" href="{$site_url}/css/animate.min.css"/>
+    <link rel="stylesheet" href="{$site_url}/css/swiper-3.4.1.min.css"/>
+    <link rel="stylesheet" href="{$site_url}/css/public.css"/>
 
-    <script src="{$site_url}js/swiper-3.4.1.min.js"></script>
-    <script src="{$site_url}js/swiper.animate1.0.2.min.js"></script>
-    <script src="{$site_url}js/TouchSlide.1.1.js"></script>
+    <script src="{$site_url}/js/swiper-3.4.1.min.js"></script>
     <script src="{$site_url}js/jquery-1.9.1.min.js"></script>
-    <script src="{$site_url}js/function.js"></script>
+    <script src="{$site_url}/js/function.js"></script>
     <script type="text/javascript">
         window.addEventListener('load', function(){
             setTimeout(function(){ window.scrollTo(0, 1); }, 100);
@@ -50,34 +48,40 @@
 </head>
 <body>
 <div class="index-wrap">
-    <div class="aside-content">
-        <div class="content_header">
-            <a class="back" href="javascript:window.history.back()">返回</a>
-            <div class="title">搜索页</div>
+    {include file="./_header.html"}
+    <div class="aside">
+        <div class="aside_title">
+            <div class="sort">分类</div>
+            <h3 class="as_h3">搜索结果页</h3>
         </div>
-        <div class="searchresult list-text">
+        {include file="./_aside.html"}
+        <div class="searchresult">
+            {if $search.total eq 0}
+            <span class="result">没有查找到相关数据！</span>
+            {else}
             <span class="result">以下是关键字“<em>{$search.keyword}</em>“的搜索结果</span>
-            <div class="content">
-                <ul>
-                    {foreach item=arcitle from=$list.data}
-                    <li>
-                        <a href="{$arcitle.link}">
-                            <h3 class="h3">{$arcitle.title}</h3>
-                            <span class="rq">{$article.pubtimestamp|date_format:'%Y/%m/%d'}</span>
-                            <div class="nr">{$arcitle.description|unescape:"html"}</div>
-                            <span class="more">查看更多</span>
-                        </a>
-                    </li>
-                    {if $arcitle@index+1 eq 4}{break}{/if}
-                    {/foreach}
-                </ul>
-            </div>
-            <div class="page">
-                <span><a href="{$page_links.first_link}" class="public_color">首页</a></span>
-                <span><a href="{$page_links.prev_link}" class="public_color">上一页</a></span>
-                <span><a href="{$page_links.next_link}" class="public_color">下一页</a></span>
-                <span><a href="{$page_links.last_link}" class="public_color">尾页</a></span>
-            </div>
+            <div class="list-text">
+                <div class="content">
+                    <div class="content">
+                        <ul class="list">
+                            {foreach item=arcitle from=$list.data}
+                            <li><a href="{$arcitle.link}"><span>{$arcitle.pubdate}</span><h3 class="nowrap">{$arcitle.title}</h3></a></li>
+                            {if $arcitle@index+1 eq 10}{break}{/if}
+                            {/foreach}
+                        </ul>
+                    </div>
+                </div>
+                <div class="page">
+                    <div class="list">
+                        <span><a href="{$page_links.first_link}" class="public_color">首页</a></span>
+                        <span><a href="{$page_links.prev_link}" class="public_color">上一页</a></span>
+                        <span class="now">{$page_links.current_page}/{$page_links.page_count}</span>
+                        <span><a href="{$page_links.next_link}" class="public_color">下一页</a></span>
+                        <span><a href="{$page_links.last_link}" class="public_color">尾页</a></span>
+                    </div>
+                </div>
+             </div>
+            {/if}
         </div>
     </div>
     {include file="./_footer.html"}

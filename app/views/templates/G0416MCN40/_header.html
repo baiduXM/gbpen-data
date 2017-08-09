@@ -18,8 +18,8 @@
         <div class="banner">
             <div class="swiper-container">
                 <div class="swiper-wrapper">
-                    {foreach item=nbanner from=$global.nbanner}
-                    <div class="swiper-slide"><a href="{$nbanner.link}"><img src="{$nbanner.image}" alt=""/></a></div>
+                    {foreach item=slidepics from=$global.slidepics}
+                    <div class="swiper-slide"><a href="{$slidepics.link}"><img src="{$slidepics.image}" alt=""/></a></div>
                     {/foreach}
                 </div>
                 <!-- Add Pagination -->
@@ -28,3 +28,5 @@
         </div>
     </div>
 </div>
+
+
