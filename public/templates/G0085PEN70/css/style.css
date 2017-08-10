@@ -19,13 +19,13 @@ img{border: none;}
 .logo a{display: table-cell;width:400px;height: 90px;text-align: left;vertical-align: middle;}
 .logo img{max-width: 100%;max-height: 100%;}
 .menu .nav{width: 600px;height: 100%;float: left;position: relative;}
-.nav>li{height: 90px;text-align: center;display: table-cell;width: 300px;position: relative;}
-.nav>li>a{display: block;width: 100%;height: 100%;font-size: 14px;line-height: 90px;position: relative;color: #333333;}
+.nav>li{height: 90px;text-align: center; float:left;position: relative;}
+.nav>li>a{display: block;width: 90%;height: 100%; margin:auto;font-size: 14px;line-height: 90px;position: relative;color: #333333;white-space:nowrap; text-overflow:ellipsis; overflow:hidden;}
 .nav>li:hover>a{background: #e0e0e1;}
 .nav>li:hover>a:after{content: "";display: block;width: 100%;height: 4px;background: #c30605;bottom: 0px;left: 0px;position: absolute;}
 ul.subnav{display: none;width: auto;height: 45px;position: absolute;z-index: 99;top: 90px; }
-ul.subnav li{width: auto;height: 100%;float: left;max-width: 240px; padding:0 8px;}
-ul.subnav li a{line-height: 45px;display: block;width: 100%;height: 100%;}
+ul.subnav li{width: 116px;height: 100%;float: left; padding:0 2px;white-space:nowrap; text-overflow:ellipsis; overflow:hidden;}
+ul.subnav li a{line-height: 45px;display: block;}
 ul.subnav li a:hover{color: #c30605;}
 ul.subnav i{display: block;width: 1px;height: 15px;background: #333333;margin: 16px 0;float: left;}
 .menu .nav_back{display: none;width: 1920px;height: 45px;position: absolute;left: 50%;margin-left: -960px;background: #e1e1e2;bottom: -45px;z-index: 90;}
@@ -89,7 +89,7 @@ ul.subnav i{display: block;width: 1px;height: 15px;background: #333333;margin: 1
 .fitment_list ul li.fitment_right{margin-bottom: 24px;height: 520px;}
 
 .fitment_list ul li .fitment_hd{width: 352px;height: 70px;margin: 0 auto;background: url(../images/comma.png);}
-.fitment_hd h3{width: 278px;height: 100%;margin: 0 auto;text-align: center;font-size: 24px;line-height: 70px;}
+.fitment_hd h3{width: 278px;height: 100%;margin: 0 auto;text-align: center;font-size: 18px;line-height: 24px;}
 .fitment_list li span{display: block;width: 480px;height: 450px;text-align: center;background: #ffffff;overflow: hidden;box-shadow: 6px 6px 7px 0px #aeaeae;-webkit-box-shadow: 6px 6px 7px 0px #aeaeae;-ms-box-shadow: 6px 6px 7px 0px #aeaeae;-moz-box-shadow: 6px 6px 7px 0px #aeaeae;-o-box-shadow: 6px 6px 7px 0px #aeaeae;behavior:url(PIE.htc);}
 .fitment_list li img{height: 450px;width: auto;}
 .fitment_list ul li em{display: block; width: 480px;height: 90px;background: #373535;opacity: 0.75;filter:Alpha(opacity=75);zoom:1;-webkit-opacity: 0.75;-ms-opacity: 0.75;-moz-opacity: 0.75;-o-opacity: 0.75;position: absolute;left: 0px;z-index: 0;bottom: 0px;}

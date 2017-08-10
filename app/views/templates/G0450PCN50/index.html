@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<script type="text/javascript">
+    {if $site_another_url}
+        if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+            location.href = '{$site_another_url}';
+        }
+    {/if}
+    </script>
+
+    
+
+    <meta name="keywords" content="{$keywords}"/>
+    <meta name="description" content="{$description}"/>
+	<meta charset="UTF-8">
+	<title>{$title}</title>
+	<link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
+	<link rel="stylesheet" type="text/css" href="{$site_url}css/style.css">
+	<script src="{$site_url}js/jquery.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.1.js"></script>
+	<script type="text/javascript" src="{$site_url}js/function.js"></script>
+	{$headscript}
+</head>
+<body>
+	<div class="wrapper">
+		<div class="header">
+			<div class="banner">
+				<div class="bd bd_banner">
+					<ul>
+						{foreach item=slidepic from=$index.slidepics}
+						<li><a href="{$slidepic.link}"><i><img src="{$slidepic.image}"></i></a></li>
+						{/foreach}
+					</ul>
+				</div>
+				<div class="hd hd_banner">
+					<ul>
+						{foreach item=slidepicc from=$index.slidepics}
+						<li></li>
+						{/foreach}
+					</ul>
+				</div>
+			</div>
+			<div class="menu">
+				<em class="green"></em>
+				<div class="c">
+					<div class="nav">
+						<ul class="one">
+							{foreach item=snav from=$navs}
+							    <li class="{if $snav.current}cu{/if}">
+									<a href="{$snav.link}">{$snav.name}</a>
+									{if $snav.childmenu}
+									<ul class="two">
+										{foreach item=ssubnav from=$snav.childmenu}
+										<li><a href="{$ssubnav.link}">{$ssubnav.name}</a></li>
+										{/foreach}
+									</ul>
+									{/if}
+								</li>
+								{if $snav@index+1 eq 7}{break}{/if}
+							{/foreach}
+						</ul>
+					</div>
+					<div class="logo"><a href="{$site_url}"><i><img src="{$logo}"></i></a></div>
+				</div>
+			</div>
+			<div class="logo_bg"></div>
+			<div class="white"></div>
+		</div>
+		<div class="about c">
+			<em class="about_decoration"></em>
+			<div class="about_intro fl">
+				<div class="title_about"><a href="{$index.about.link}">
+					<dt class="ab_en"><span class="dot_gps">{$index.about.en_name}<em class="dott"></em></span></dt>
+					<dt class="ab_cn">{$index.about.name}</dt>
+				</a></div>
+				<div class="about_nr">
+					{$index.about.content|unescape:"html"}
+				</div>
+				<div class="about_imore"><a href="{$index.about.link}">MORE</a></div>
+			</div>
+			<div class="about_img fl">
+				<i><img src="{$index.about.image}"></i>
+				<!-- <div class="img1 fl"><i><img src="{$index.abimg1.image}"></i></div>
+				<div class="img2 fl"><i><img src="{$index.abimg2.image}"></i></div>
+				<div class="img3 fl">
+					<em class="img_opacity"></em>
+					<i><img src="{$index.about.image}"></i>
+				</div> -->
+			</div>
+		</div>
+		<div class="case">
+			<em class="case_opacity"></em>
+			<div class="c">
+				<div class="title_about title_case"><a href="{$index.case.link}">
+					<dt class="ab_en ca_en"><span class="dot_gps">{$index.case.en_name}<em class="dott"></em></span></dt>
+					<dt class="ab_cn">{$index.case.name}</dt>
+				</a></div>
+				<div class="ad">{$index.ad}</div>
+				<div class="case_data">
+					<div class="bd bd_case">
+						<ul>
+							{foreach item=cases from=$index.case.data}
+							<li><a href="{$cases.link}">
+								<dl class="case_img"><i><img src="{$cases.image}"></i></dl>
+								<dl class="case_intro">
+									<dt class="case_bt">{$cases.title}</dt>
+									<dd class="case_imore">READ MORE</dd>
+								</dl>
+							</a></li>
+							{/foreach}
+						</ul>
+					</div>
+					<div class="hd hd_case">
+						<ul>
+							{foreach item=csases from=$index.case.data}
+							<li></li>
+							{/foreach}
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="news c">
+			<div class="title_about title_case"><a href="{$index.news.link}">
+				<dt class="ab_en ne_en"><span class="dot_gps">{$index.news.en_name}<em class="dott"></em></span></dt>
+				<dt class="ab_cn">{$index.news.name}</dt>
+			</a></div>
+			<div class="news_top">
+				<div class="prev prev_news"></div>
+				<div class="bd bd_news">
+					<ul>
+						{foreach item=new from=$index.news.data}
+						<li><a href="{$new.link}">
+							<dl class="news_img fl"><i><img src="{$new.image}"></i></dl>
+							<dl class="news_introc fl">
+								<dt class="news_btc">{$new.title}</dt>
+								<dd class="news_nrc kz" data-limit="100">{$new.description}</dd>
+								<dd class="news_timec">{$new.pubtimestamp|date_format:'%Y-%m-%d'}</dd>
+								<dd class="news_imore">READ MORE</dd>
+							</dl>
+						</a></li>
+						{/foreach}
+					</ul>
+				</div>
+				<div class="next next_news"></div>
+			</div>
+			<div class="news_data">
+				<ul>
+					{foreach item=snews from=$index.newslist.data}
+						{if $snews@index+1 gt 1}
+							<li><a href="{$snews.link}">
+								<dl class="news_time fl">
+									<dd class="news_d">{$snews.pubtimestamp|date_format:'%d'}</dd>
+									<dd class="news_m">{$snews.pubtimestamp|date_format:'%Y-%m'}</dd>
+								</dl>
+								<dl class="news_intro fl">
+									<dt class="news_bt">{$snews.title}</dt>
+									<dd class="news_nr kz" data-limit="125">{$snews.description}</dd>
+								</dl>
+							</a></li>
+						{/if}
+						{if $snews@index+1 eq 4}{break}{/if}
+					{/foreach}
+				</ul>
+			</div>
+		</div>
+		{if $index.links|count gt 0}
+		<div class="linker c">
+			<ul class="link">
+				{foreach item=linkk from=$index.links}
+				<li><a href="{$linkk.link}"><i><img src="{$linkk.image}"></i></a></li>
+				{/foreach}
+			</ul>
+			<div class="title_link">
+				<dd class="lk_en">LINK</dd>
+				<dd class="lk_cn">友情链接</dd>
+			</div>
+		</div>
+		{/if}
+		<div class="footer">
+			<div class="foot c">
+				{$footprint}
+			</div>
+		</div>
+		{$footscript}
+	</div>
+</body>
+</html>

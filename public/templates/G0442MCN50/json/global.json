@@ -1,0 +1,42 @@
+{
+	"slidepics":{
+		"value":[{
+			"title":"banner1",
+			"image":"images/banner.jpg",
+			"link":"content-product.html"
+			},{
+			"title":"banner2",
+			"image":"images/banner.jpg",
+			"link":"content-product.html"
+			},{
+			"title":"banner3",
+			"image":"images/banner.jpg",
+			"link":"content-product.html"
+				}],
+		"description":"首页轮播背景图",
+		"type":"images",
+		"config":{
+			"width":640,
+			"height":360
+		}
+	},
+	"context":{
+		"value":"<dd class='leader'>联系人：詹小姐</dd><dd class='e-mail'>邮箱：zhanjianmei@xm12t.com</dd><dd class='phone'>电话：0592-3503575</dd><dd class='fax'>传真：0592-3503377</dd><dd class='address'>地址：厦门市思明区软件园二期观日路36号201单元</dd>",
+		"description":"联系方式",
+		"type":"textarea"
+	},
+	"map":{
+		"value":{
+			"title":"map",
+			"image":"images/map.jpg",
+			"link":"www.baidu.com",
+			"description":"地图"
+			},
+		"type":"image",
+		"description":"联系我们 地图",
+		"config":{
+			"width":578,
+			"height":256
+		}
+	}
+}

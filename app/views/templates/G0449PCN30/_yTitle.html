@@ -1,0 +1,17 @@
+<div class="Y-title">
+    <div class="container">
+        <div class="Y-name ">
+            <h5>{$list.en_name}</h5>
+            <span>{$list.name}</span>
+        </div>
+        <div class="Y-pagenavs rt">
+            <ul>
+                <li>您当前的位置 :</li>
+                <li>首页</li>
+                {foreach item=nav from=$posnavs}
+                <li>-<a href="{$nav.link}">{$nav.name}</a></li>
+                {/foreach}
+            </ul>
+        </div>
+    </div>
+</div>

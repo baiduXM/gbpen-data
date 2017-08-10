@@ -1,0 +1,37 @@
+{
+
+  "img": {
+    "value": {
+      "title": "微信公众号",
+      "image": "images/img3.png",
+      "link": "http://www.baidu.com/"
+    },
+    "description": "微信公众号",
+    "type": "image",
+    "config": {
+      "height": 100
+    }
+  },
+  "ban": {
+    "value": {
+      "title": "测试图2",
+      "image": "images/1_02.png",
+      "link": "http://www.baidu.com"
+    },
+    "description": "内页banner图",
+    "type": "image",
+    "config": {
+      "height": 300
+    }
+  },
+  "pagenavs": {
+    "value": {},
+    "description": "侧边栏目列表（当前栏目无子栏目时展示的目标栏目）",
+    "type": "list",
+    "config": {
+      "filter": "list,page",
+      "mustchild": true
+    }
+  }
+
+}

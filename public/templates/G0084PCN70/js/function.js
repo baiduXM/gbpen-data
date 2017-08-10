@@ -29,7 +29,7 @@ $(document).ready(function() {
 
 
 
-	jQuery("#banner").slide({ titCell:".dot ol", mainCell:"ul.picture", effect:"left",  autoPlay:true,mouseOverStop:false, autoPage:true, trigger:"click",interTime:4000 });
+	jQuery("#banner").slide({ titCell:".dot ol", mainCell:"ul.picture", effect:"left",  autoPlay:false,mouseOverStop:false, autoPage:true, trigger:"click",interTime:4000 });
 
 
 // 编辑框

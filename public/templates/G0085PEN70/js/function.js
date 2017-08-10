@@ -5,12 +5,16 @@ $(document).ready(function() {
 	$(".subnav").each(function(index, el) {
 		$(this).css({display:"block"}); //防止css中ul添加了display:none;暂时给予display:bock
 		var parent = $(this).parent("li")
-		var sum = 0;
-		$(this).find('li').each(function(i, r) {
-			sum += $(this).outerWidth(true); //获取二级li宽度集合
+		
+		/*$(this).find('li').each(function(i, r) {
+			sum += $(this).outerWidth(); //获取二级li宽度集合
+			
 			sum += 13;
 			return sum;
-		});
+			
+		});*/
+		var count=$(this).find("li").length;
+		var sum = count*125
 		$(this).width(sum);
 		var half = parent.outerWidth(true)/2;
 		var wleft = parent.position().left + half; //获取父元素li中点距ul左侧距离

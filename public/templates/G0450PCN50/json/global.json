@@ -1,0 +1,32 @@
+{
+	"slidepics":{
+		"value":[{
+			"title":"banner1",
+			"image":"images/banner_s.png",
+			"link":"content-product.html"
+			},{
+			"title":"banner2",
+			"image":"images/banner_s.png",
+			"link":"content-product.html"
+			},{
+			"title":"banner3",
+			"image":"images/banner_s.png",
+			"link":"content-product.html"
+			}],
+		"description":"轮播大图",
+		"type":"images",
+		"config":{
+			"width":1920,
+			"height":500
+		}
+	},
+	"pagenavs":{
+		"value":{},
+		"description":"侧边栏目列表",
+		"type":"list",
+		"config":{
+			"filter":"list,page",
+			"mustchild":true
+		}
+	}
+}

@@ -1,0 +1,42 @@
+	<div class="top_green"></div>
+		<div class="header header_s">
+			<div class="banner banner_s">
+				<div class="bd bd_banner bd_banner_s">
+					<ul>
+						{foreach item=slidepic from=$global.slidepics}
+						<li><a href="{$slidepic.link}"><i><img src="{$slidepic.image}"></i></a></li>
+						{/foreach}
+					</ul>
+				</div>
+				<div class="hd hd_banner">
+					<ul>
+						{foreach item=slidepic from=$global.slidepics}
+						<li></li>
+						{/foreach}
+					</ul>
+				</div>
+			</div>
+			<div class="menu">
+				<em class="green green_s"></em>
+				<div class="c">
+					<div class="nav">
+						<ul class="one">
+							{foreach item=navv from=$navs}
+							    <li class="{if $navv.current}cu{/if}">
+									<a href="{$navv.link}">{$navv.name}</a>
+									{if $navv.childmenu}
+									<ul class="two">
+										{foreach item=subnavv from=$navv.childmenu}
+										<li><a href="{$subnavv.link}">{$subnavv.name}</a></li>
+										{/foreach}
+									</ul>
+									{/if}
+								</li>
+								{if $navv@index+1 eq 7}{break}{/if}
+							{/foreach}
+						</ul>
+					</div>
+					<div class="logo logo_s"><a href="{$site_url}"><i><img src="{$logo}"></i></a></div>
+				</div>
+			</div>
+		</div>

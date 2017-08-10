@@ -1,0 +1,6 @@
+<ul class="link clearfix">
+	<li>友情链接 </li>
+	{foreach key=key item=link from=$_links_withlogo.links}
+	<li class="fl"><a href="{$link.link}"><img src="{$link.image}" alt="{$link.title}" /></a></li>
+	{/foreach}
+</ul>

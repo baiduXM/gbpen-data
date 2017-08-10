@@ -1,0 +1,25 @@
+	<div class="class_list">
+			<ul class="first">
+				{foreach item=nav from=$pagenavs}
+				    <li>
+						<a href="{if $nav.childmenu}javascript:;{else}{$nav.link}{/if}">•  {$nav.name}</a>
+						{if $nav.childmenu}
+						<ul class="second">
+							{foreach item=subnav from=$nav.childmenu}
+							<li>
+								<a href="{if $subnav.childmenu}javascript:;{else}{$subnav.link}{/if}">{$subnav.name}</a>
+								{if $subnav.childmenu}
+								<ul class="third">
+									{foreach item=lastnav from=$subnav.childmenu}
+									<li><a href="{if $lastnav.childmenu}javascript:;{else}{$lastnav.link}{/if}">{$lastnav.name}</a></li>
+									{/foreach}
+								</ul>
+								{/if}
+							</li>
+							{/foreach}
+						</ul>
+						{/if}
+				    </li>
+				{/foreach}
+			</ul>
+	</div>

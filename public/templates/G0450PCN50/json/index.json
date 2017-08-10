@@ -1,0 +1,116 @@
+{
+	"slidepics":{
+		"value":[{
+			"title":"banner1",
+			"image":"images/banner.png",
+			"link":"content-product.html"
+			},{
+			"title":"banner2",
+			"image":"images/banner.png",
+			"link":"content-product.html"
+			},{
+			"title":"banner3",
+			"image":"images/banner.png",
+			"link":"content-product.html"
+			}],
+		"description":"轮播大图",
+		"type":"images",
+		"config":{
+			"width":1920,
+			"height":918
+		}
+	},
+	"about":{
+		"description": "关于我们",
+		"value": {},
+		"type": "page",
+		"config": {
+			"nav_width": 580,
+			"nav_height": 244
+		}
+	},
+	"abimg1":{
+		"value":{
+			"title":"map",
+			"image":"images/img1.png",
+			"link":"www.baidu.com",
+			"description":"关于我们"
+			},
+		"type":"image",
+		"description":"关于我们 配图1",
+		"config":{
+			"width":322,
+			"height":178
+		}
+	},
+	"abimg2":{
+		"value":{
+			"title":"map",
+			"image":"images/img2.png",
+			"link":"www.baidu.com",
+			"description":"关于我们"
+			},
+		"type":"image",
+		"description":"关于我们 配图2",
+		"config":{
+			"width":240,
+			"height":178
+		}
+	},
+	"ad":{
+		"value":"按照现代人的理解，园林不只是作为游憩之用，而且具有保护改善环境的功能",
+		"description":"图片列表轮播上方广告语",
+		"type":"text"
+	},
+	"case":{
+		"description": "经典案例",
+		"value": {},
+		"type": "list",
+		"config": {
+			"star_only": true,
+			"showchilddata": true,
+			"width": 380,
+			"height": 250
+		}
+	},
+	"news":{
+		"description": "新闻轮播推荐",
+		"value": {},
+		"type": "list",
+		"config": {
+			"star_only": true,
+			"width": 378,
+			"height": 270
+		}
+	},
+	"newslist":{
+		"description": "新闻展示列表",
+		"value": {},
+		"type": "list",
+		"config": {
+			"width": 378,
+			"height": 270
+		}
+	},
+	"links":{
+		"description": "页面底部友情链接",
+		"value":[{
+			"title":"link1",
+			"image":"images/link.png",
+			"link":"content-product.html"
+			},{
+			"title":"link2",
+			"image":"images/link.png",
+			"link":"content-product.html"
+			},{
+			"title":"link3",
+			"image":"images/link.png",
+			"link":"content-product.html"
+			}],
+		"type": "images",
+		"config": {
+			"width": 118,
+			"height": 50
+		}
+	}
+}

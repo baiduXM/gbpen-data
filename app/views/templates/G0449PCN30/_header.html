@@ -1,0 +1,15 @@
+<div id="header">
+    <div class="container">
+        <div class="lt logo"><a href="{$site_url}"><img src="{$logo}" alt="" height="100px"></a></div>
+        <ul class="rt nav">
+            {foreach item=nav from=$navs}
+            <li class="{if $nav.current}current{/if}">
+                <a href="{$nav.link}">
+                    {$nav.icon}
+                    <span>{$nav.name}</span>
+                </a>
+            </li>
+            {/foreach}
+        </ul>
+    </div>
+</div>
