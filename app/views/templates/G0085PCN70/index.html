@@ -44,7 +44,7 @@
 	</div>
 	<div class="side_top">
 		<div class="side_hd">
-			<h2><a href="{$index.pro.link}">{$index.pro.name}<span> {$index.pro.en_name}</span></a></h2><em></em>
+			<h2><a href="{$index.pro.link}"><span> {$index.pro.en_name}</span></a></h2><em></em>
 		</div>
 		<div class="side_pro">
 			<div class="side_recommend">
@@ -76,7 +76,7 @@
 				<ul class="scroll_list">
 					<span></span>
 					{foreach item=pro from=$index.pro.childmenu}
-						<li><a href="javascript:void(null)">{$pro.name}</a></li>
+						<li><a href="javascript:void(null)">{$pro.en_name}</a></li>
 					{if $pro@index+1 eq 5}{break}{/if}
 					{/foreach}
 				</ul>
