@@ -5,26 +5,23 @@
 
 $(function(){
 
-    /********判断头部搜索框******/
-    $(".input").click(function(){
-        // if (document.getElementById('airline').value=='')
-        // {
-        //     alert('null');
-        //     document.getElementById('airline').focus();
-        // }else{
-        //     window.location.href = "searchresult.html" ;
-        // }
-        window.location.href = "searchresult.html" ;
-    });
-
     /***********index-nav**************/
-    $(".menu").click(function(){
-        $(this).siblings("ul").slideDown();
+    $(".menu-btn").click(function(){
+        $(this).siblings(".index-menu").slideDown();
     });
     $(".close").click(function(){
-        $(this).parent().parents("ul").slideUp();
+        $(this).parent().parents(".index-menu").slideUp();
     });
-
+    $(".nav li ").hover(function () {
+        $(this).find(".childmenu").slideDown();
+    }, function () {
+        $(this).find(".childmenu").slideUp();
+    });
+    $(".index-nav li ").hover(function () {
+        $(this).find(".childmenu").slideDown();
+    }, function () {
+        $(this).find(".childmenu").slideUp();
+    });
 
     /**********左侧nav**************/
     $("ul.one a").click(function(event) {

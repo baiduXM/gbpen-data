@@ -113,36 +113,15 @@
         </ul>
           </div>
           <ul class="newslist">
-		  {foreach name=article item=article from=$search.data}
-		  {if $article@index%2 == 0}
-          	 <li onclick="javascript:window.location.href='{$article.link}'">
-                <div class="list">
-                    
-                	<dt>{$article.title}</dt>
-                    <dd>{$article.description}</dd>
-					</div>
-                <div class="date">
-                	<dd class="day">{$article.pubtimestamp|date_format:"%m "}/{$article.pubtimestamp|date_format:"%d "}</dd>
-                    <dd class="year public-bor">{$article.pubtimestamp|date_format:"%y "}</dd>
-                </div>
-             </li>
-             {else}
+		        {foreach name=article item=article from=$search.data}
              <li onclick="javascript:window.location.href='{$article.link}'">
-                <div class="date">
-                	<dd class="day">{$article.pubtimestamp|date_format:"%m "}/{$article.pubtimestamp|date_format:"%d "}</dd>
-                    <dd class="year public-bor">{$article.pubtimestamp|date_format:"%y "}</dd>
-                </div>
                 <div class="list">
-                
-                	<dt>{$article.title}</dt>
+                  <dt>{$article.title}</dt>
                     <dd>{$article.description}</dd>
                 </div>
              </li>
-			 {/if}
-          	 {/foreach}
-             
+          {/foreach}
           </ul>
-		  
           <div class="next1"><a href="{$page_links.first_link}">首页</a><a href="{$page_links.prev_link}">上一页</a>{$page_links.current_page} /{$page_links.page_count}<a href="{$page_links.next_link}">下一页</a><a href="{$page_links.last_link}">尾页</a></div>
           </div>
       </div>

@@ -15,8 +15,9 @@
     <meta name="description" content="{$description}" />
     <link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
     <title>{$title}</title>
-    <link rel="stylesheet" href="{$site_url}css/style.css">
     <link rel="stylesheet" href="{$site_url}css/swiper-3.3.1.min.css">
+    <link rel="stylesheet" href="{$site_url}css/style.css">
+
     <script src="{$site_url}js/jquery-1.9.1.min.js"></script>
     <script src="{$site_url}js/swiper-3.3.1.jquery.min.js"></script>
     <script src="{$site_url}js/index.js"></script>
@@ -27,11 +28,25 @@
 <div class="in-container">
     <div id="index-had">
         <div class=" nav-cont">
-            <div class="index-menu lt">
+            <div class="menu-btn lt">
                 <i class="iconfont menu">&#xe603;</i>
-                <ul class="index-nav hide">
+            </div>
+            <div class="index-menu lt hide">
+                <ul class="index-nav">
+                    {$litmit=8}
+                    {if $navs|count lt $litmit}{$litmit = $navs|count}{/if}
                     {foreach item=nav from=$navs}
-                    <li class="{if $nav.current}current{/if}"><a href="{$nav.link}">{$nav.name}</a></li>
+                     <li class="{if $nav.current}current{/if}" style="width:{100/($litmit)-2}%">
+                         <a href="{$nav.link}">{$nav.name}</a>
+                         {if $nav.childmenu}
+                         <ul class="childmenu">
+                             {foreach item=nav_list from=$nav.childmenu}
+                             <li class="{if $nav_list.current}current{/if}"><a href="{$nav_list.link}">{$nav_list.name}</a></li>
+                             {/foreach}
+                         </ul>
+                         {/if}
+                     </li>
+                    {if $nav@index+1 eq $litmit}{break}{/if}
                     {/foreach}
                     <li class="rt"><i class="iconfont  close">&#xe62e;</i></li>
                 </ul>
@@ -41,8 +56,10 @@
             </div>
             <div class="index-ser rt">
                 <div class="ser">
-                    <input type="text" name="airline" id="airline">
-                    <i class="iconfont input">&#xe636;</i>
+                    <form action="{$search_action}" method="GET">
+                    <input  class="input-text" type="text" name="s" id="airline">
+                    <input class="input-btn" type="submit" value="">
+                    </form>
                 </div>
             </div>
         </div>
@@ -92,9 +109,9 @@
                 <div class="swiper-wrapper">
                     {foreach item=bBan from=$index.banner2}
                         <div class="swiper-slide"><a href="{$bBan.link}"><img src="{$bBan.image}" alt=""></a>
-                            
-                                
-                            <!--</p>-->
+                            <p><span class="lt">{$bBan.title}</span>
+                                <b class="rt">{$bBan.description}</b>
+                            </p>
                         </div>
                     {/foreach}
                 </div>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>{$title}</title>
+    
+    <meta http-equiv="x-ua-compatible" content="ie=7" />
+    <meta name="keywords" content="{$keywords}" />
+    <meta name="description" content="{$description}" />
+    <link rel="stylesheet" href="{$site_url}css/animate.min.css"/>
+    <link rel="stylesheet" href="{$site_url}css/swiper-3.4.1.min.css"/>
+    <link rel="stylesheet" href="{$site_url}css/style.css"/>
+    <script src="{$site_url}js/jquery-1.9.1.min.js"></script>
+    <script src="{$site_url}js/html5shiv.js"></script>
+    <script src="{$site_url}js/swiper-3.4.1.min.js"></script>
+    <script src="{$site_url}js/js.js"></script>
+</head>
+<body>
+{include file='./_header.html'}
+
+<section>
+    <div id="aside-section">
+        <div id="news-banner"  style="background: url('{$global.nbanner6.image}');">
+            <div class="about">
+                <div class="title">
+                    <h3>{$posnavs[0].name}</h3>
+                    <span></span>
+                    <h4>{$posnavs[0].en_name}</h4>
+                </div>
+            </div>
+        </div>
+        <div id="about-content">
+            <div id="dqwz">
+                <div class="wz">
+                    <span>您当前位置：<a href="{$site_url}">首页</a>{foreach item=nav from=$posnavs}<a href="{$nav.link}">>{$nav.name}</a>{/foreach}</span>
+                </div>
+            </div>
+            <div class="content">
+                {include file="./_aside.html"}
+                <div id="proxx-right">
+                    <div class="article">
+                        <h4 class="h3">{$article.title}</h4>
+                        <div id="aside_banner">
+                            <div class="swiper-container gallery-top ">
+                                <ul class="swiper-wrapper bd focusBox">
+                                    {foreach item=proshowb from=$article.images}
+                                    <li class="swiper-slide"><img src="{$proshowb.image}" alt=""/></li>
+                                    {/foreach}
+                                </ul>
+                                <!-- Add Arrows -->
+                                <div class="bottom">
+                                    <div class="swiper-container gallery-thumbs">
+                                        <ul class="swiper-wrapper">
+                                            {foreach item=proshowb from=$article.images}
+                                            <li class="swiper-slide"><img src="{$proshowb.image}" alt=""/></li>
+                                            {/foreach}
+                                        </ul>
+                                    </div>
+                                    <div class="swiper-button-next swiper-button-white"></div>
+                                    <div class="swiper-button-prev swiper-button-white"></div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="wz">
+                            {$article.content|unescape:"html"}
+                        </div>
+                        <div class=fx>
+                            {shareExt shareText=$article.content|unescape:"html"|strip_tags|truncate:140:"…" sharePic=$article.image}
+                        </div>
+                    </div>
+                    <div class="proxx-page">
+                        <span><a href="{$article.prev.link}">PREV：{$article.prev.title}</a></span>
+                        <span><a href="{$article.next.link}">NEXT：{$article.next.title}</a></span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+{include file='./_footer.html'}
+</body>
+</html>

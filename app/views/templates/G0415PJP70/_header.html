@@ -1,0 +1,42 @@
+<header>
+    <div id="header">
+        <div class="head">
+            <div class="logo"><a href="{$site_url}"><img src="{$logo}" alt=""/></a></div>
+            <div id="nav" class="nav">
+                <ul>
+                    {$limit =7}
+                    {if $navs|count lt $limit}{$limit = $navs|count}{/if}
+                    <li style="width:{100/($limit+1)}%">
+                        <a href="{$site_url}">
+                            <span>ホームページ</span>
+                            <span>HOME</span>
+                        </a>
+                    </li>
+                    {foreach name=navs item=nav from=$navs}
+                    <li class="{if $nav.current}nav-bg{/if}" style="width:{100/($limit+1)}%">
+                        <a href="{$nav.link}" >
+                            <span>{$nav.name}</span>
+                            <span>{$nav.en_name}</span>
+                        </a>
+                    </li>
+                    {if $nav@index+1 eq $limit}{break}{/if}
+                    {/foreach}
+                </ul>
+            </div>
+            <script>
+                function indexnav() {
+                    var oZsbg = document.getElementById('zsbg');
+                    if( oZsbg ){
+                        var oNav = document.getElementById('nav');
+                        var aLi = oNav.getElementsByTagName('li');
+                        for( var i=0;i<aLi.length;i++ ){
+                            aLi[i].className = "";
+                            aLi[0].className = "nav-bg";
+                        }
+                    }
+                }
+                indexnav();
+            </script>
+        </div>
+    </div>
+</header>

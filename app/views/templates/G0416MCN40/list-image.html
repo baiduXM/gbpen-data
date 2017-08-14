@@ -61,6 +61,7 @@
             <div class="content">
                 <ul>
                     {foreach name=article item=article from=$list.data}
+                    
                     <li>
                         <a href="{$article.link}">
                             <div class="img middle"><img class="max" src="{$article.image}" alt=""/></div>
@@ -68,16 +69,21 @@
                             <span>查看更多</span>
                         </a>
                     </li>
-                    {if $article@index+1 == 4} {break} {/if}
-                    {/foreach}
+                    
+              {/foreach}
+                   
                 </ul>
             </div>
             <div class="page">
                 <span><a href="{$page_links.first_link}" class="public_color">首页</a></span>
                 <span><a href="{$page_links.prev_link}" class="public_color">上一页</a></span>
+                
                 <span><a href="{$page_links.next_link}" class="public_color">下一页</a></span>
                 <span><a href="{$page_links.last_link}" class="public_color">尾页</a></span>
             </div>
+            
+         
+            
         </div>
     </div>
     {include file="./_footer.html"}

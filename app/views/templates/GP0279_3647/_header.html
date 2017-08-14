@@ -1,0 +1,74 @@
+
+<div id="header" class="wrapper clearfix">
+<div class="logo"><a href="{$site_url}"><img src="{$logo}" alt="{$title}"></a></div>
+<div class="search">
+    <div class="word">证书查询：</div>
+    <form action="{$search_action}" method="GET">
+      <input type="text" name="s" placeholder="请输入关键字" class="search_area" />
+      <input type="submit" class="search_btn"  value=""/>
+    </form>
+</div></div>
+
+
+<div class="nav_bg">
+ <div id="nav" class="wrapper clearfix">
+  <ul class="clearfix menu1">
+      {$limit = 8}
+      {if $navs|count lt $limit}{$limit = $navs|count}{/if}
+      <li class=" nav1" style="width:{100/($limit+1)}%">
+        <p><a href="{$site_url}"> 网站首页 </a></p>
+      </li>
+      {foreach name=navs item=nav from=$navs}
+      <li class="fl{if $nav.current} current{/if} aa" style="width:{100/($limit+1)}%">
+        <p> <a href="{$nav.link}"> {$nav.name} </a></p>
+        <ul class="sub clearfix">
+          {if $nav.childmenu} {foreach key=key item=nav_list from=$nav.childmenu}
+          <li class="{if $nav.current}current{/if} cc"><a href="{$nav_list.link}">{$nav_list.name}</a></li>
+          {/foreach} {/if}
+        </ul>
+      </li>
+      {if $nav@index+1 eq $limit}{break}{/if}
+      {/foreach}
+    </ul>
+</div>
+</div>
+
+
+<div id="banner">
+<div id="slideBox" class="slideBox">
+    <div class="hd">
+      <ul>
+        {foreach name=slidepics item=slidepic from=$global.slidepics}
+        <li></li>
+        {/foreach}
+      </ul>
+    </div>
+    <div class="bd">
+      <ul>
+        {foreach name=slidepics item=slidepic from=$global.slidepics}
+        <div> <a href="{$slidepic.link}" target="_blank">
+          <li style="background:url({$slidepic.image}) no-repeat center; height:520px;"></li>
+          </a></div>
+        {/foreach}
+      </ul>
+    </div>
+    <!-- 下面是前/后按钮代码，如果不需要删除即可 -->
+    <a class="prev" href="javascript:void(0)"></a> <a class="next" href="javascript:void(0)"></a> </div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,14 +1,24 @@
 <div id="header">
-    <div class="container">
+    <div class="container-h">
         <div class="lt logo"><a href="{$site_url}"><img src="{$logo}" alt="" height="100px"></a></div>
         <ul class="rt nav">
+            {$litmit=8}
+            {if $navs|count lt $litmit}{$litmit = $navs|count}{/if}
             {foreach item=nav from=$navs}
-            <li class="{if $nav.current}current{/if}">
+            <li class="{if $nav.current}current{/if}" style="width:{100/($litmit)-1}%">
                 <a href="{$nav.link}">
                     {$nav.icon}
                     <span>{$nav.name}</span>
                 </a>
+                {if $nav.childmenu}
+                <ul class="childmenu">
+                    {foreach item=nav_list from=$nav.childmenu}
+                    <li class="{if $nav_list.current}current{/if}"><a href="{$nav_list.link}">{$nav_list.name}</a></li>
+                    {/foreach}
+                </ul>
+                {/if}
             </li>
+            {if $nav@index+1 eq $litmit}{break}{/if}
             {/foreach}
         </ul>
     </div>

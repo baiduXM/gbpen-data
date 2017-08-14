@@ -182,7 +182,11 @@ if($(".list_imagetext ul li .img_box img").height()<$(".list_imagetext ul li .te
 
 	})		
 	//返回顶部开始
-	$(".back-top").click(function(){$(".index-wrap").animate({scrollTop :0}, 800)})
+	// $(".back-top").click(function(){
+		
+	// 	$('html,body').animate({scrollTop: '0px'}, 800);
+	// });
+	
 	$("#share_btn").click(function(){
 		$(".newsclass").addClass("show")
 		$(".opacity2").show()
