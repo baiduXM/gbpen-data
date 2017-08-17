@@ -1,0 +1,89 @@
+		{if $pagenavs}
+			<div class="c container_top">
+				<div class="left_top fl">
+					<div class="border_left headline">
+						<div class="bt_en">{$posnavs[0].en_name}</div>
+						<div class="bt_cn">{$posnavs[0].name}</div>
+					</div>
+				</div>
+				<div class="right_top fr">
+					<div class="here">
+						当前位置：<a href="#">首页</a>
+						{foreach item=nav from=$posnavs}
+						 - <a href="{$nav.link}">{$nav.name}</a>
+						{/foreach}
+					</div>
+				</div>
+			</div>
+			<div class="left_list">
+				<div class="c">
+					<ul class="first">
+						{foreach item=nav from=$pagenavs}
+						<li>
+							<a href="{if $nav.childmenu}javascript:;{else}{$nav.link}{/if}">{$nav.name}</a>
+							{if $nav.childmenu}
+							<ul class="second">
+								{foreach item=subnav from=$nav.childmenu}
+								<li>
+									<a href="{if $subnav.childmenu}javascript:;{else}{$subnav.link}{/if}">{$subnav.name}</a>
+									{if $subnav.childmenu}
+									<ul class="third">
+										{foreach item=lastnav from=$subnav.childmenu}
+										<li><a href="{if $lastnav.childmenu}javascript:;{else}{$lastnav.link}{/if}">{$lastnav.name}</a></li>
+										{/foreach}
+									</ul>
+									{/if}
+								</li>
+								{/foreach}
+							</ul>
+							{/if}
+					    </li>
+						{/foreach}
+					</ul>
+				</div>
+			</div>
+		{else}
+			<div class="c container_top">
+				<div class="left_top fl">
+					<div class="border_left headline">
+						<div class="bt_en">{$global.pagenavs.en_name}</div>
+						<div class="bt_cn">{$global.pagenavs.name}</div>
+					</div>
+				</div>
+				<div class="right_top fr">
+					<div class="here">
+						当前位置：<a href="#">首页</a>
+						{foreach item=nav from=$posnavs}
+						 - <a href="{$nav.link}">{$nav.name}</a>
+						{/foreach}
+					</div>
+				</div>
+			</div>
+			<div class="left_list">
+				<div class="c">
+					<ul class="first">
+						{foreach item=nav from=$global.pagenavs.childmenu}
+						<li>
+							<a href="{if $nav.childmenu}javascript:;{else}{$nav.link}{/if}">{$nav.name}</a>
+							{if $nav.childmenu}
+							<ul class="second">
+								{foreach item=subnav from=$nav.childmenu}
+								<li>
+									<a href="{if $subnav.childmenu}javascript:;{else}{$subnav.link}{/if}">{$subnav.name}</a>
+									{if $subnav.childmenu}
+									<ul class="third">
+										{foreach item=lastnav from=$subnav.childmenu}
+										<li><a href="{if $lastnav.childmenu}javascript:;{else}{$lastnav.link}{/if}">{$lastnav.name}</a></li>
+										{/foreach}
+									</ul>
+									{/if}
+								</li>
+								{/foreach}
+							</ul>
+							{/if}
+					    </li>
+						{/foreach}
+					</ul>
+				</div>
+			</div>
+		{/if}

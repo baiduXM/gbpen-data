@@ -1,0 +1,22 @@
+<div id="header">
+    <div class="had">
+        <div class="logo"><a href="{$site_url}"><img src="{$logo}" alt=""></a></div>
+        <div class="nav">
+            <ul class="nav-one">
+                {foreach item=nav from=$navs}
+                <li class="oneLi">
+                    <a href="{$nav.link}"><span>{$nav.name}</span><b>{$nav.en_name}</b></a>
+                    {if $nav.childmenu}
+                    <ul class="child">
+                        {foreach item=nav_list from=$nav.childmenu}
+                        <li class="childLi"><a href="{$nav_list.link}">{$nav_list.name}</a></li>
+                        {/foreach}
+                    </ul>
+                    {/if}
+                </li>
+                {/foreach}
+            </ul>
+        </div>
+        <div class="copy">{$footprint}</div>
+    </div>
+</div>

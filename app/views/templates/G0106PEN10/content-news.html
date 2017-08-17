@@ -24,7 +24,7 @@
 <body>
 <div class="bg"> {include file='./_header.html'}
   <div id="sub_container" class=" wrapper clearfix" > {include file='./_aside.html'}
-    <div class="main fr">
+    <div class="main">
     
      <div class="crumb clearfix"> <span>Your position：<a href="{$site_url}"> <i>home</i></a> {foreach item=nav from=$posnavs} <a href="{$nav.link}">>{$nav.name}</a> {/foreach}</span>
       <p>{$article.category.name}</p>
@@ -37,9 +37,9 @@
         <div class="edit">
           <article> {$article.content|unescape:"html"} </article>
         </div>
-        <div style="height:30px;overflow: hidden; padding-top:7px; margin-top:15px; color:#000; float:right;">
-          <!-- Baidu Button BEGIN -->
-          {shareExt shareText=$article.content|unescape:"html"|strip_tags|truncate:140:"…" sharePic=$article.image} </div>
+        <div class="share" style="height:30px;overflow: hidden; padding-top:7px; margin-top:15px; color:#000; float:right;">
+          {shareExt shareText=$article.content|unescape:"html"|strip_tags|truncate:140:"…" sharePic=$article.image}
+        </div>
         <ul class="inner_pages" style="clear:both;">
           <li>Prev：<a href="{$article.prev.link}">{$article.prev.title}</a></li>
           <li>Next：<a href="{$article.next.link}">{$article.next.title}</a></li>

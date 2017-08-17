@@ -37,26 +37,24 @@
           <div id="slideBoxb" class="slideBoxb" style="margin:0 auto">
             <div class="hd">
               <ul>
-                {foreach item=proshowb from=$article.images}
-                <li>{$proshowb@index+1}</li>
-                {/foreach}
+
+                <li></li>
+
               </ul>
             </div>
             <div class="bd" style="width:640px;">
               <ul>
-                {foreach item=proshowb from=$article.images}
-                <li><img src="{$proshowb.image}" alt="{$proshowb.title}"/></li>
-                {/foreach}
+                <li><img src="{$article.image}" alt="{$article.title}"/></li>
               </ul>
             </div>
-            <!-- 下面是前/后按钮代码，如果不需要删除即可 -->
-            <a class="prev" href="javascript:void(0)"></a> <a class="next" href="javascript:void(0)"></a> </div>
+            <!-- 下面是前/后按钮代码，如果不需要删除即可 
+            <a class="prev" href="javascript:void(0)"></a> <a class="next" href="javascript:void(0)"></a> --></div>
         </div>
         <div class="descriptcot">
-          <div class="text_p"> 产品名称：{$article.title} <br />
+          <div class="text_p"> 名称：{$article.title} <br />
           </div>
         </div>
-        <div class="moule_edot"> <b style="font-size:14px;">产品介绍</b> <br />
+        <div class="moule_edot"> <b style="font-size:14px;">详细介绍</b> <br />
           {$article.content|unescape:"html"} </div>
         <div style="height:30px;overflow: hidden; padding-top:7px; margin-top:15px;color:#000; float:right;">
           <!-- Baidu Button BEGIN -->

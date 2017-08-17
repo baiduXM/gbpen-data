@@ -1,0 +1,71 @@
+{
+    "slidepics": {
+        "value": [{
+            "title": "banner",
+            "image": "images/banner.jpg",
+            "link": "www.baidu.com",
+            "description": "banner1"
+        }, {
+            "title": "banner",
+            "image": "images/banner.jpg",
+            "link": "www.baidu.com",
+            "description": "banner1"
+        }, {
+            "title": "banner",
+            "image": "images/banner.jpg",
+            "link": "www.baidu.com",
+            "description": "banner1"
+        }],
+        "description": "内页大图轮播",
+        "type": "images",
+        "config":{
+            "width":  1920,
+            "height": 430
+        }
+    },
+    "links": {
+        "value": [{
+            "title": "百度",
+            "image": "images/link.jpg",
+            "link": "{site_url}article/1.html"
+        }, {
+            "title": "易尔通",
+            "image": "images/link.jpg",
+            "link": "{site_url}article/2.html"
+        }, {
+            "title": "新浪",
+            "image": "images/link.jpg",
+            "link": "{site_url}article/3.html"
+        }, {
+            "title": "易尔通",
+            "image": "images/link.jpg",
+            "link": "{site_url}article/4.html"
+        }],
+        "description": "友情链接",
+        "type": "images",
+        "config": {
+            "width": 0,
+            "height": 0
+        }
+    },
+
+    "lxwm":{
+        "value":{},
+        "description":"联系我们",
+        "type":"page",
+        "config":{
+
+        }
+    },
+    "bz":{
+        "value":{
+            "title":"帮助中心",
+            "link":""
+        },
+        "description":"了解常见问题及解决方法>",
+        "type":"list",
+        "config":{
+
+        }
+    }
+}

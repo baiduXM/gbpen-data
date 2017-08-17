@@ -1,0 +1,12 @@
+<div class="index-foot ">
+    <div class="container">
+        <ul class="link">
+            <li><span>友情链接 :</span>  </li>
+            {foreach key=key item=link from=$global.links}
+            <li><a href="{$link.link}">{$link.title}</a><i>|</i></li>
+            {/foreach}
+        </ul>
+        <div class="copy">{$footprint}</div>
+    </div>
+</div>
+{$footscript}

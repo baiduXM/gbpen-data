@@ -23,7 +23,7 @@
 #in_page .inner{ padding-top:10px; width:98%; margin:auto; margin-top:10px;}
 #in_page .inner .page_img{overflow:hidden; margin-top:10px; }
 #in_page .inner .page_img img{  width:100%}
-#in_page .inner p{  line-height:28px; height:112px; overflow:hidden; }
+#in_page .inner p{  line-height:28px; min-height:112px; overflow:hidden; }
 
 #in_text{  width:96%; margin:auto; margin-top:5%}
 #in_text .inner ul{  width:97%; margin:auto; margin-top:10px;}

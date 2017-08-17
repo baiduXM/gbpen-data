@@ -57,11 +57,12 @@
           </div>
         </div>
         <div class="moule_edot">
-          {$article.content|unescape:"html"} </div>
-        <div style="height:30px;overflow: hidden; padding-top:7px; margin-top:15px;color:#000; float:right;">
+          {$article.content|unescape:"html"} 
+        </div>
+        <div style="height:30px;overflow: hidden; padding-top:7px; margin-top:15px; color:#000; float:right;">
           <!-- Baidu Button BEGIN -->
           {shareExt shareText=$article.content|unescape:"html"|strip_tags|truncate:140:"…" sharePic=$article.image} </div>
-        <ul class="inner_pages" style="margin-left:15px; clear:both;">
+        <ul class="inner_pages" style="clear:both;">
           <li>Prev：<a href="{$article.prev.link}">{$article.prev.title}</a></li>
           <li>Next：<a href="{$article.next.link}">{$article.next.title}</a></li>
         </ul>

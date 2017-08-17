@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<script type="text/javascript">
+    {if $site_another_url}
+        if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+            location.href = '{$site_another_url}';
+        }
+    {/if}
+    </script>
+
+    
+
+    <meta name="keywords" content="{$keywords}"/>
+    <meta name="description" content="{$description}"/>
+	<meta charset="UTF-8">
+	<title>{$title}</title>
+	<link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
+	<link rel="stylesheet" type="text/css" href="{$site_url}css/master.css">
+	<script src="{$site_url}js/jquery.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.1.js"></script>
+	<script type="text/javascript" src="{$site_url}js/function.js"></script>
+	{$headscript}
+</head>
+<body>
+	<div class="wrapper">
+		{include file='./_header.html'}
+		<div class="about">
+			<div class="c">
+				<div class="about_intro fl">
+					<div class="headline"><a href="{$index.about.link}">
+						<div class="bt_en">{$index.about.en_name}</div>
+						<div class="bt_cn">{$index.about.name}</div>
+					</a></div>
+					<div class="about_nr">
+						{$index.about.description}
+					</div>
+					<div class="about_nav">
+						<ul>
+							{foreach item=about from=$index.about.childmenu}
+								<li><a href="{$about.link}">{$about.name}</a></li>
+								{if $about@index+1 eq 3}{break}{/if}
+							{/foreach}
+						</ul>
+					</div>
+				</div>
+				<div class="about_img fl"><i><img src="{$index.about.image}"></i></div>
+			</div>
+		</div>
+		<div class="c class">
+			<ul>
+				{foreach item=class from=$index.class.childmenu}
+					<li class="class_item{$class@index+1}"><a href="{$class.link}">
+						<div class="class_img"><i><img src="{$class.image}"></i></div>
+						<em class="opacity"></em>
+						<div class="class_bt"><dd>{$class.name}</dd></div>
+					</a></li>
+					{if $class@index+1 eq 6}{break}{/if}
+				{/foreach}
+			</ul>
+		</div>
+		<div class="border_left c">
+			<div class="headline"><a href="{$index.pro.link}">
+				<div class="bt_en">{$index.pro.en_name}</div>
+				<div class="bt_cn">{$index.pro.name}</div>
+				<div class="bt_plus">+</div>
+			</a></div>
+			<div class="room_data">
+				<ul>
+					{foreach item=pro from=$index.pro.data}
+						<li><a href="{$pro.link}">
+							<dl class="room_img fl">
+								<i><img src="{$pro.image}"></i>
+								<em class="room_opacity"></em>
+							</dl>
+							<dl class="room_intro fl">
+								<dt class="roon_bt">{$pro.title}</dt>
+								<dd class="room_time">{$pro.pubtimestamp|date_format:'%Y-%m-%d'}</dd>
+								<dd class="room_nr kz" data-limit="52">{$pro.description}</dd>
+							</dl>
+						</a></li>
+						{if $pro@index+1 eq 4}{break}{/if}
+					{/foreach}
+				</ul>
+			</div>
+		</div>
+		<div class="character">
+			<div class="c">
+				<div class="border_left headline"><a href="{$index.character.link}">
+					<div class="bt_en">{$index.character.en_name}</div>
+					<div class="bt_cn">{$index.character.name}</div>
+					<div class="bt_plus">+</div>
+				</a></div>
+				<div class="charact_data">
+					<ul>
+						{foreach item=character from=$index.character.childmenu}
+							<li class="cha{$character@index+1}"><a href="{$character.link}">
+								<dl class="cir_b">
+									<dd class="cir_s"><i>{$character.icon}</i></dd>
+								</dl>
+								<dl class="charact_bt">{$character.name}</dl>
+							</a></li>
+							{if $character@index+1 eq 6}{break}{/if}
+						{/foreach}
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="team">
+			<div class="border_left border_bottom c teacher">
+				<div class="headline"><a href="{$index.team.link}">
+					<div class="bt_en">{$index.team.en_name}</div>
+					<div class="bt_cn">{$index.team.name}</div>
+					<div class="bt_plus">+</div>
+				</a></div>
+				<div class="teamslider picFocus">
+					<em class="team_decoration"></em>
+					<div class="bd bd_team">
+						<ul>
+							{foreach item=team from=$index.team.data}
+								<li>
+									<dl class="team_img fl"><i><img src="{$team.image}"></i></dl>
+									<dl class="team_intro fl">
+										<dt class="team_bt">{$team.title}</dt>
+										<dd class="team_nr kz" data-limit="180">{$team.description}</dd>
+										<dd class="team_imore"><a href="{$team.link}">查看更多 +</a></dd>
+									</dl>
+								</li>
+								{if $team@index+1 eq 6}{break}{/if}
+							{/foreach}
+						</ul>
+					</div>
+					<div class="hd hd_team bd_jd">
+						<ul>
+							{foreach item=team from=$index.team.data}
+								<li><i><img src="{$team.image}"></i></li>
+								{if $team@index+1 eq 6}{break}{/if}
+							{/foreach}
+						</ul>
+					</div>
+					<div class="prev prev_team"></div>
+					<div class="next next_team"></div>
+				</div>
+			</div>
+		</div>
+		<div class="linker c">
+			<ul>
+				<li>友情链接：</li>
+				{foreach item=link from=$index.links}
+				<li><a href="{$link.link}">{$link.title}</a></li>
+				{/foreach}
+			</ul>
+		</div>
+		{include file='./_footer.html'}
+	</div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+{
+  "list1": {
+    "value": {},
+    "description": "第一个图文列表",
+    "type": "list",
+    "config": {
+      "width": 578,
+      "height": 260,
+      "star_only": true
+
+    }
+  },
+  "list2Bg": {
+    "value": {
+      "title": "",
+      "image": "images/bg1.png",
+      "link": ""
+    },
+    "description": "首页关于我们",
+    "type": "image",
+    "config": {
+
+    }
+  },
+  "list2": {
+    "value": {},
+    "description": "第二个单页面",
+    "type": "page",
+    "config": {
+      "width": 600,
+      "height": 420,
+      "star_only": true
+
+    }
+  },
+  "list3": {
+    "value": {},
+    "description": "第三个图文列表",
+    "type": "list",
+    "config": {
+      "width": 285,
+      "height": 200,
+      "star_only": true
+
+    }
+  },
+  "list4": {
+    "value": {},
+    "description": "第四个图文列表",
+    "type": "list",
+    "config": {
+      "width": 125,
+      "height": 115,
+      "star_only": true
+
+    }
+  }
+}

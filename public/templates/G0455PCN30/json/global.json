@@ -1,0 +1,77 @@
+{
+	"slidepics":{
+		"value":[{
+			"title":"banner1",
+			"image":"images/banner.jpg",
+			"link":"content-product.html"
+			},{
+			"title":"banner2",
+			"image":"images/banner.jpg",
+			"link":"content-product.html"
+			},{
+			"title":"banner3",
+			"image":"images/banner.jpg",
+			"link":"content-product.html"
+			}],
+		"description":"轮播大图",
+		"type":"images",
+		"config":{
+			"width":1920,
+			"height":636
+		}
+	},
+	"qqtext":{
+		"value":"5555555",
+		"type":"text",
+		"description":"首页在线QQ"
+	},
+	"tel":{
+		"value":"0592-3503551",
+		"type":"text",
+		"description":"联系电话"
+	},
+	"classify": {
+		"value": {},
+		"description": "教学课程",
+		"type": "nav",
+		"config": {
+			"filter": "ALL",
+			"mustchild":"true",
+			"nav_width": 200,
+			"nav_height": 200,
+			"width": 200,
+			"height": 120
+		}
+	},
+	"pagenavs":{
+		"value":{},
+		"description":"侧边栏目列表",
+		"type":"list",
+		"config":{
+			"filter":"list,page",
+			"mustchild":true
+		}
+	},
+	"context":{
+		"value":"<dd>公司地址：厦门市思明区软件园二期观日路36号201单元</dd><dd>联系电话：0592-3503777 </dd><dd>传真：0592-3503003</dd><dd>投诉邮箱：tousu@xm12t.com</dd>",
+		"description":"联系我们 左侧内容",
+		"type":"textarea"
+	},
+	"erweima":{
+		"value":[{
+			"title":"erweima1",
+			"image":"images/erweima.jpg",
+			"link":"content-product.html"
+			},{
+			"title":"erweima2",
+			"image":"images/erweima.jpg",
+			"link":"content-product.html"
+			}],
+		"description":"页面底部二维码",
+		"type":"images",
+		"config":{
+			"width":112,
+			"height":112
+		}
+	}
+}

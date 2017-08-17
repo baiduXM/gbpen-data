@@ -91,13 +91,13 @@ $("#banner .slideBox").slide({mainCell:".bd ul",autoPlay:true, effect:"fold", tr
 
 	
 	
-/*产品详细页*/
+/*产品详细页
     jQuery(".slideBoxb").slide({
         mainCell: ".bd ul",
         autoPlay: true,
         effect: "leftLoop"
     });
-	
+*/	
 	
  // 兼容低版本IE
     $(function() {

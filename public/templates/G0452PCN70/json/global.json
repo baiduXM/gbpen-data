@@ -1,0 +1,53 @@
+{
+  "page": {
+    "value": {
+      "title":"测试图",
+      "image":"images/about_02.png",
+      "link":""
+    },
+    "description": "中间大图",
+    "type": "image",
+    "config": {
+      "width":1023,
+      "star_only": true
+    }
+  },
+  "listImg1": {
+    "value": {
+      "title":"测试图",
+      "image":"images/new_02.png",
+      "link":""
+    },
+    "description": "内页右上背景图",
+    "type": "image",
+    "config": {
+      "width":1617,
+      "height":311,
+      "star_only": true
+    }
+  },
+  "listImg2": {
+    "value": {
+      "title":"测试图",
+      "image":"images/Pro1_02.png",
+      "link":""
+    },
+    "description": "产品背景图",
+    "type": "image",
+    "config": {
+      "width":1617,
+      "star_only": true
+    }
+  },
+
+    "pagenavs": {
+    "value": {},
+    "description": "侧边栏目列表（当前栏目无子栏目时展示的目标栏目）",
+    "type": "list",
+    "config": {
+      "filter": "list,page",
+      "mustchild": true
+     }
+    }
+
+}

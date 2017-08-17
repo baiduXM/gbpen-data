@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<script type="text/javascript">
+    {if $site_another_url}
+        if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+            location.href = '{$site_another_url}';
+        }
+    {/if}
+    </script>
+
+    
+
+    <meta name="keywords" content="{$keywords}"/>
+    <meta name="description" content="{$description}"/>
+	<meta charset="UTF-8">
+	<title>{$title}</title>
+	<link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
+	<link rel="stylesheet" type="text/css" href="{$site_url}css/master.css">
+	<script src="{$site_url}js/jquery.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.1.js"></script>
+	<script type="text/javascript" src="{$site_url}js/function.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		{include file='./_header.html'}
+		<div class="container">
+			{include file='./_left.html'}
+			<div class="border_left c  public border_bottom">
+				<div class="about_det">
+					{$list.content|unescape:"html"}
+				</div>
+			</div>
+		</div>
+		{include file='./_footer.html'}
+	</div>
+</body>
+</html>

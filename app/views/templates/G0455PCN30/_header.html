@@ -1,0 +1,67 @@
+		<div class="white_top"></div>
+		<div class="header">
+			<div class="banner">
+				<div class="bd bd_banner">
+					<ul>
+						{foreach item=slidepics from=$global.slidepics}
+						<li><a href="{$slidepics.link}"><i><img src="{$slidepics.image}"></i></a></li>
+						{/foreach}
+					</ul>
+				</div>
+				<div class="hd hd_banner">
+					<ul>
+						{foreach item=slidepics from=$global.slidepics}
+						<li></li>
+						{/foreach}
+					</ul>
+				</div>
+			</div>
+			<div class="head">
+				<div class="head_bg"></div>
+				<div class="top c">	
+					<div class="logo fl"><a href="{$site_url}"><i><img src="{$logo}"></i></a></div>
+					<div class="searchbox fr">
+						<form id="search" action="{$search_action}" name="search">
+							<input class="btn_s fl" type="submit" src="images/search.png" value="" />
+							<input class="search_box" type="text" name="s" id="keyword" placeholder="直接输入文字网站搜索" />
+						</form>
+					</div>
+					<div class="consult fr"><a target=blank href=tencent://message/?uin={$global.qqtext}&Site=工具啦&Menu=yes  alt="点击这里给我发消息">在线咨询</a></div>
+					<div class="tel fr">电话：{$global.tel}</div>
+				</div>
+			</div>
+		</div>
+		<div class="menu">
+			<div class="c">
+				<div class="left_class fl">
+					<ul>
+						<li class="classify">
+							<a href="javascript:;">{$global.classify.name}</a>
+							<ul class="classify_list">
+								{foreach item=nav from=$global.classify.childmenu}
+								<li><a href="{$nav.link}">{$nav.name}</a></li><!-- whaaaaaaaaaaaaaaaaaaaat? -->
+								{/foreach}
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="right_nav fr">
+					<div class="nav">
+						<ul class="one">
+							{foreach item=nav from=$navs}
+							    <li class="{if $nav.current}cu{/if}" style="width:{100/($navs|count)}%">
+									<a href="{$nav.link}">{$nav.name}</a>
+									{if $nav.childmenu}
+									<ul class="two">
+										{foreach item=subnav from=$nav.childmenu}
+										<li><a href="{$subnav.link}">{$subnav.name}</a></li>
+										{/foreach}
+									</ul>
+									{/if}
+								</li>
+							{/foreach}
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>

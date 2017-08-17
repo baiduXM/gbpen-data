@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <script type="text/javascript">
+        // 识别为手机客户端，自动跳转手机页面
+        {if $site_another_url}
+        if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+            location.href = '{$site_another_url}';
+        }
+        {/if}
+    </script>
+    <meta name="keywords" content="{$keywords}" />
+    <meta name="description" content="{$description}" />
+    <link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
+    <title>{$title}</title>
+    <link rel="stylesheet" href="{$site_url}css/jquery.bxslider.css">
+    <link rel="stylesheet" href="{$site_url}css/style.css">
+
+    <script src="{$site_url}js/jquery-1.9.1.min.js"></script>
+    <script src="{$site_url}js/xb_scroll.js"></script>
+    <script src="{$site_url}js/jquery.bxslider.js"></script>
+    <script src="{$site_url}js/jquery.SuperSlide.2.1.1.js"></script>
+    <script src="{$site_url}js/index.js"></script>
+
+    {$headscript}
+</head>
+<body class="index">
+{include file="./_header.html"}
+<!---轮播图-->
+<div id="banner">
+   <div class="ban">
+       <div class="slider banner" >
+           {foreach name=slidepics item=slidepic from=$index.slidepics}
+           <div class="slide"><a href="{$slidepic.link}" target="_blank"><img src="{$slidepic.image}" ></a></div>
+           {/foreach}
+       </div>
+   </div>
+</div>
+{$footscript}
+</body>
+</html>

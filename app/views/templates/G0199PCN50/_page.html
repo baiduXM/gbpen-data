@@ -1,5 +1,5 @@
 <div class="module_page">
-  <div>第{$page_links.current_page}页/共{$page_links.page_count}页　　&nbsp;
+  <div>第{$page_links.current_page}页/共{$page_links.page_count}页&nbsp;
   <a href="{$page_links.first_link}">[第一页]</a>&nbsp;
   <a href="{$page_links.prev_link}">[上一页]</a>&nbsp;
   {foreach item=near_link key=near_page from=$page_links.nears_link}
@@ -10,5 +10,6 @@
   {/if}
   {/foreach}
   <a href="{$page_links.next_link}">[下一页]</a>&nbsp;
-  <a href="{$page_links.last_link}">[最后页]</a></div>
+  <a href="{$page_links.last_link}">[最后页]</a>
+  </div>
 </div>  

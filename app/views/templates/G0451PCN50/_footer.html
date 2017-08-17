@@ -1,0 +1,54 @@
+<footer>
+    <div class="footer">
+        <div class="link">
+            <div class="link_c">
+                <h3 class="h3">友情链接</h3>
+                <ul>
+                    {foreach name=friend item=friend from=$global.links}
+                    <li><a href="{$friend.link}"><img src="{$friend.image}" alt=""/></a></li>
+                    {/foreach}
+                </ul>
+            </div>
+        </div>
+        <div class="foot_nav">
+            <div class="foot_nc">
+                <div class="foot_nl">
+                    {foreach item=nav_a from=$navs}
+                    <div class="fnc_one">
+                        <h3 class="nowrap">{$nav_a.name}</h3>
+                        <ul>
+                            {foreach item=nav_one from=$nav_a.childmenu}
+                            <li><a class="nowrap" href="{$nav_one.link}">{$nav_one.name}</a></li>
+                            {/foreach}
+                        </ul>
+                    </div>
+                    {if $nav_a@index+1 eq 4}{break}{/if}
+                    {/foreach}
+                </div>
+                <div class="foot_nr">
+                    <div class="one">
+                        <div class="title">
+                            <span class="h3">{$global.lxwm.name}</span>
+                            <span class="h4">{$global.lxwm.en_name}</span>
+                        </div>
+                        <div class="nr">{$contact.telephone}</div>
+                    </div>
+                    <div class="two">
+                        <div class="title">
+                            <span class="h3">{$global.bz.name}</span>
+                            <span class="h4">{$global.bz.en_name}</span>
+                        </div>
+                        <div class="nr"><a href="{$global.bz.link}">{$global.bz.description}</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="foot">
+            <div class="foot_c">
+                {$footprint}
+                <div class="scrolltop" id="scrolltop">TOP</div>
+            </div>
+        </div>
+    </div>
+</footer>
+{$footscript}
