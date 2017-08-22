@@ -27,7 +27,7 @@ p{line-height:26px;}
 .child .childLi a{color:#fff;font-size:18px;display: block;height:60px;line-height:60px;text-align: center;}
 .child .childLi a:hover{background: #c3161c;}
 .nav-one .oneLi:hover .child{display: block;}
-.copy{padding:20px 40px 40px 40px;}
+.copy{padding:20px 40px 40px 40px;font-size:12px;color:#4a4a4a;}
 .copy p{font-size:12px;color:#4a4a4a;line-height:20px;}
 .copy p a{font-size:12px;color:#4a4a4a; }
 .copy p a:hover{color:#c3161c;}
@@ -93,9 +93,9 @@ border-bottom:10px solid #dbdbdb;position: absolute;top:-10px;left:50%;margin-le
 .navD-child .two-li a:hover{color:#c3161c;}
 .navD-children{display: none;}
 
-.det-list{padding:25px 75px 65px 65px;}
+.det-list{padding:25px 70px 65px 65px;}
 .ser{margin:40px 0;text-align: center;color:#212121;font-size:14px;}
-.list-imgT{margin: 0 2% 56px;width:20%;display: inline-block;}
+.list-imgT{margin: 0 2% 56px;width:20%;display: inline-block;vertical-align: top;}
 .list-imgT dd h5 a{font-size:16px;line-height:25px;height:50px;overflow: hidden;color:#212121;display: block;}
 .list-imgT dd time{color:#999;font-size:12px;margin:10px 0;display: block;}
 .list-imgT dt{width:100%;height:185px;text-align: center;line-height:180px;}
@@ -104,6 +104,7 @@ border-bottom:10px solid #dbdbdb;position: absolute;top:-10px;left:50%;margin-le
 .page-l li  {display: inline-block;margin:0 5px;text-align: center;}
 .page-l li a{display: inline-block;width:20px;line-height:20px;border:1px solid #ccc;font-size:12px;color:#333;}
 .page-l li:hover a{background: #c3161c;color:#fff;border-color:#c3161c;}
+.page-l li.current a{background: #c3161c;color:#fff;border-color:#c3161c;}
 .page-l li.w a{padding:0 8px;width:auto;}
 
 

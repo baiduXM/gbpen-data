@@ -1,4 +1,35 @@
 {
+  "weibo": {
+    "value": {
+      "title": "微博",
+      "image": "",
+      "link": ""
+    },
+    "description": "头部weibo",
+    "type": "image"
+  },
+  "qq": {
+    "value": {
+      "title": "547444885",
+      "image": "",
+      "link": ""
+    },
+    "description": "头部qq",
+    "type": "image"
+  },
+  "weixin": {
+    "value": {
+      "title": "微信",
+      "image": "images/icon-2.png",
+      "link": ""
+    },
+    "description": "头部weixin",
+    "type": "image",
+    "config": {
+      "width": 93,
+      "height":93
+    }
+  },
   "banner": {
     "value": [
       {
@@ -38,7 +69,6 @@
     "description": "友情链接",
     "type": "images"
   },
-
   "pagenavs": {
     "value": {},
     "description": "侧边栏目列表（当前栏目无子栏目时展示的目标栏目）",

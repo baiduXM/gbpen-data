@@ -73,7 +73,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="news_det det">{$article.description}</div>
+			<div class="news_det det">{$article.content|unescape:"html"}</div>
 			<div class="next2">
 				<ul>
 					<li><a href="{$article.prev.link}">上一篇：{$article.prev.title}</a></li>

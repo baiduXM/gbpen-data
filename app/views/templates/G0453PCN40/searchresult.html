@@ -40,7 +40,7 @@
             <div class="det-contentBox search-result">
                 <p class="sear">以下是您输入的搜索关键字“{$search.keyword}”的搜索结果 </p>
                 <ul class="listBox list-text">
-                    {foreach item=text from=$list.data}
+                    {foreach item=text from=$search.data}
                     <li>
                         <a href="{$text.link}">
                             <p><em> ■ </em>{$text.description}</p>

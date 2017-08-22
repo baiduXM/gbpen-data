@@ -40,7 +40,7 @@
               <div class="bd" style="width:640px;">
                 <ul>
                   {foreach item=proshowb from=$article.images}
-                  <li><img src="{$proshowb.image}" alt="{$proshowb.title}"/></li>
+                  <li><div class="pimg"><img src="{$proshowb.image}" alt="{$proshowb.title}"/></div></li>
                   {/foreach}
                 </ul>
               </div>
@@ -48,12 +48,12 @@
               <a class="prev" href="javascript:void(0)"></a> <a class="next" href="javascript:void(0)"></a> </div>
           </div>
           <div class="descriptcot">
-            <div class="text_p"> 产品名称：{$article.title} <br />
+            <div class="text_p"> 名称：{$article.title} <br />
             </div>
           </div>
-          <div class="moule_edot"> <b style="font-size:14px;">产品介绍</b> <br />
+          <div class="moule_edot"> <b style="font-size:14px;">详细介绍</b> <br />
             {$article.content|unescape:"html"} </div>
-          <div style="height:30px;overflow: hidden; padding-top:7px; margin-top:15px;color:#000; float:right;">
+               <div style="height:30px;overflow: hidden; padding-top:7px; margin-top:15px;color:#000; float:right;">
             <!-- Baidu Button BEGIN -->
             {shareExt shareText=$article.content|unescape:"html"|strip_tags|truncate:140:"…" sharePic=$article.image} </div>
           <ul class="inner_pages" style="margin-left:15px; clear:both;">

@@ -60,7 +60,7 @@ $(document).ready(function () {
             autoplayDisableOnInteraction : false,
             slidesPerView: 2,
             spaceBetween: 30,
-            autoplay: 8000
+            // autoplay: 8000
         });
         $('.arrow-left').on('click', function(e){
             e.preventDefault();
@@ -80,7 +80,7 @@ $(document).ready(function () {
             var maxwidth = parseInt($(this).attr("data-limit"));
             if($(this).text().length>maxwidth){
                 $(this).text($(this).text().substring(0,maxwidth));
-                $(this).html($(this).html()+"...<a href='{$news.link}'>[详情]</a>");
+                $(this).html($(this).html()+"...<i>[详情]</i>");
             }
         });
 

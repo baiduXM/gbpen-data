@@ -26,7 +26,7 @@ strong{display: block;margin: 0 auto;overflow: hidden;text-overflow: ellipsis;wh
 	height:15px;
 	overflow:hidden;
 	position:absolute;
-	bottom:50px;
+	bottom:80px;
 	z-index:10001;
 	text-align:center;
 	width:100%;
@@ -73,7 +73,7 @@ width:100%; position:relative; z-index:100; margin-top:0px; }
 #nav ul li .cc a{width:92%; margin:auto;color:#fff; padding:0 4%; overflow:hidden; height:40px; line-height:40px;}
 #nav ul li .cc a:hover{ text-decoration:underline;color:#fff; background:none}
 
-#banner{ width:100%; height:544px; overflow:hidden}
+#banner{ width:100%; height:544px; overflow:hidden;position: relative;}
 
 #container_bg{ position:relative; z-index:1000; margin-top:-60px; text-align:center;}
 #container{ background:url(../images/cont_line.png) repeat-y; padding-bottom:30px; }

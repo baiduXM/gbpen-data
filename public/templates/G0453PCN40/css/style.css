@@ -87,8 +87,8 @@ img.desaturate { filter: grayscale(100%);
 .m1-slide .m1-bd ul li:hover .m1-des p{color:#fff;}
 .m1-slide .m1-bd{width:1200px;overflow: hidden;}
 .m1-slide .m1-hd a{display: block;position: absolute;top:50%;margin-top:-40px; color:#f8ac35;z-index:50;cursor: pointer;}
-.m1-slide .m1-hd a.prev{left:-100px;}
-.m1-slide .m1-hd a.next{right:-100px;}
+.m1-slide .m1-hd a.prev{left:-50px;}
+.m1-slide .m1-hd a.next{right:-50px;}
 .m1-slide .m1-hd a:hover{opacity: .6;}
 
 .main2{position: relative;}
@@ -212,6 +212,7 @@ img.desaturate { filter: grayscale(100%);
 .page li a{color:#808080;font-size:14px;display: inline-block;margin:0 5px;}
 .page li.w a{ width:25px;height:25px; line-height:25px;text-align: center;}
 .page li.w:hover a{ background: #f8ac35;color:#0f1937; }
+.page li.current a{ background: #f8ac35;color:#0f1937; }
 
 
 .list-imgT{overflow: hidden;   width: 942px;}
