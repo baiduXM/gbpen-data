@@ -1,0 +1,67 @@
+<div class="sidebar">  
+    {if $pagenavs}
+    <h2 class="class_top">{$posnavs[0].name}</h2>
+    <div class="subnav">
+      <ul class="firstul">
+      {foreach name=pagenavs item=nav from=$pagenavs}
+         <li class="sub1 {if $nav.current} co {/if}"><a href="{$nav.link}">{$nav.name}</a>
+            <ul class="secondul">
+            {if $nav.childmenu}
+            {foreach item=nav_list from=$nav.childmenu}
+                <li class="sub2 {if $nav_list.current} ct {/if}"><a href="{$nav_list.link}">{$nav_list.name}</a>
+                    <ul>
+                    {if $nav_list.childmenu}
+                        {foreach item=nav1_list from=$nav_list.childmenu}
+                        <li class="sub3 {if $nav_list.current} ct {/if}"><a href="{$nav1_list.link}">{$nav1_list.name}</a></li>
+                        {/foreach}
+                    {/if}
+                    </ul>
+                </li>
+            {/foreach}
+            {/if}
+            </ul>
+         </li> 
+      {/foreach} 
+      </ul>
+    </div>
+    {else}
+    <h2 class="class_top">{$_pagenavs_sub3.pagenavs.name}</h2>
+    <div class="subnav">
+      <ul class="firstul">
+      {foreach name=pagenavs item=nav from=$_pagenavs_sub3.pagenavs.childmenu}
+         <li class="sub1"><a href="{$nav.link}">{$nav.name}<span class="icon">▶</span></a>
+            <ul class="secondul">
+            {if $nav.childmenu}
+            {foreach item=nav_list from=$nav.childmenu}
+                <li class="sub2"><a href="{$nav_list.link}">{$nav_list.name}</a>
+                    <ul>
+                    {if $nav_list.childmenu}
+                        {foreach item=nav1_list from=$nav_list.childmenu}
+                        <li class="sub3"><a href="{$nav1_list.link}">{$nav1_list.name}</a></li>
+                        {/foreach}
+                    {/if}
+                    </ul>
+                </li>
+            {/foreach}
+            {/if}
+            </ul>
+         </li> 
+      {/foreach} 
+      </ul>
+    </div>
+    {/if}
+
+
+   <div class="class mr15">
+      <h2 class="class_top">联系我们</h2>
+      <div class="contact">
+      联系人：{$contact.name}<br />
+      电 话：{$contact.telephone}<br />
+      手 机：{$contact.mobile}<br />
+      传 真：{$contact.fax}<br />
+      地 址：{$contact.address}
+      </div>
+    </div> 
+
+
+</div>

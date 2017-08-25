@@ -47,15 +47,16 @@
            {include file="./_pagenavs.html"}
            <p class="ser">以下是您搜索的关键字“{$search.keyword}”，搜索的结果有{$search.total} 条</p>
            {foreach item=text from=$search.data}
-               <dl class="list-imgT">
-                   <dd>
-                       <h5><a href="{$text.link}">{$text.title}</a></h5>
-                       <time>{$text.pubtimestamp|date_format:'%Y-%m-%d'}</time>
-                   </dd>
-                   <dt>
-                       <a href="{$text.link}"><img src="{$text.image}" alt=""></a>
-                   </dt>
-               </dl>
+           <dl class="list-txt">
+               <dt>
+                   <time>{$text.pubtimestamp|date_format:'%m'}</time>
+                   <b>{$text.pubtimestamp|date_format:'%d'}</b>
+               </dt>
+               <dd>
+                   <h5><a href="{$text.link}">{$text.title}</a></h5>
+                   <p>{$text.description}</p>
+               </dd>
+           </dl>
            {/foreach}
            {include file="./_page.html"}
        </div>

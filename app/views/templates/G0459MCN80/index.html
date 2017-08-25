@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{$title}</title>
+    <script type="text/javascript">
+        // 跳转PC页面
+        {if $site_another_url}
+        if (!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+            location.href = '{$site_another_url}';
+        }
+        {/if}
+    </script>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no,minimal-ui">
+    <meta name="keywords" content="{$keywords}" />
+    <meta name="description" content="{$description}" />
+    <link rel="stylesheet" href="{$site_url}css/swiper.min.css" />
+    <link rel="stylesheet" href="{$site_url}css/style.css">
+    <script src="{$site_url}js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="{$site_url}js/swiper.min.js"></script>
+    <script  type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.1.js"></script>
+    <script type="text/javascript" src="{$site_url}js/index.js"></script>
+
+    <script type="text/javascript">
+        window.addEventListener('load', function(){
+            setTimeout(function(){ window.scrollTo(0, 1);}, 100);
+        });//safari浏览器可以通过此代码来隐藏地址栏
+    </script>
+    {$headscript}
+</head>
+<body>
+<div class="index-bg">
+   <div class="index-content">
+       <div class="search">
+           <div class="search-had ser-had">
+               <div class="back"><a class="iconfont" href="javascript:">&#xe641;</a> </div>
+               <div class="ser-name">搜索 · 分类</div>
+               <div class="ser-menu"> </div>
+           </div>
+           <div class="ser-cont">
+               <p>搜索</p>
+               <form class="  " action="{$search_action}" method="GET">
+                   <input class="input-txt" type="text" name="s" value=""  />
+                   <input class="input-btn" type="submit" value=" " />
+               </form>
+           </div>
+       </div>
+       <div class="header">
+           <div class="menu lt" id="quickbar-showcats"><i class="iconfont">&#xe603;</i></div>
+           <div class="logo"><a href="{$site_url}"><img src="{$logo}" alt=""></a></div>
+           <div class="ser rt"><i class="iconfont">&#xe636;</i></div>
+        </div>
+       <div class="index_ban">
+           <div class="swiper-container swiper-indexBan" >
+               <ul class="swiper-wrapper ">
+                   {foreach name=slidepics item=slidepic from=$global.slidepics}
+                   <li class="swiper-slide"><a href="{$slidepic.link}" target="_blank"><img src="{$slidepic.image}" ></a></li>
+                   {/foreach}
+               </ul>
+               <div class="swiper-pagination"></div>
+           </div>
+       </div>
+       <div class="main">
+           {foreach item=mIndexCat from=$mIndexCats}
+               {if $mIndexCat.type eq 4}
+                   {if $mIndexCat.showtype eq 1}
+                       <div class="main2">
+                           <div class="m-about ">
+                               <dl>
+                                   <dt><a href="{$mIndexCat.link}"><img src="{$mIndexCat.image}" alt=""></a></dt>
+                                   <dd>
+                                       <h4>
+                                           <a href="{$mIndexCat.link}"><span>{$mIndexCat.name} </span></a>
+                                           <a href="{$mIndexCat.link}" class="rt">MORE</a>
+                                       </h4>
+                                       <p>
+                                           {$mIndexCat.description}
+                                       </p>
+                                   </dd>
+                               </dl>
+                           </div>
+                       </div>
+                   {/if}
+               {elseif $mIndexCat.type eq 2}
+                   {if $mIndexCat.showtype eq 1}
+                       <div class="main3">
+                           <div class="swiper-container m3">
+                               <div class="swiper-wrapper">
+                                   {foreach item=m2 from=$mIndexCat.data}
+                                   <div class="swiper-slide"><a href="{$m2.link}"><img src="{$m2.image}" alt=""></a></div>
+                                   {/foreach}
+                               </div>
+                               <!-- Add Pagination -->
+                               <div class="swiper-pagination"></div>
+                           </div>
+                       </div>
+                   {/if}
+
+               {elseif $mIndexCat.type eq 3}
+                   {if $mIndexCat.showtype eq 1}
+                       <div class="main1">
+                           <div class="m-news">
+                               <dl>
+                                   <dd>
+                                       <b></b>
+                                       <h3>
+                                           <span class="time-y">{$mIndexCat.data[0].pubtimestamp|date_format:'%Y'}</span>
+                                           <span>{$mIndexCat.data[0].pubtimestamp|date_format:'%m-%d'}</span>
+                                       </h3>
+                                   </dd>
+                                   <dt class="rt"><a href="{$mIndexCat.data[0].link}"><img src="{$mIndexCat.data[0].image}" alt=""></a></dt>
+                               </dl>
+                               <div class="m-news-title">
+                                   <h4>
+                                       <a href="{$mIndexCat.data[0].link}"><span>{$mIndexCat.data[0].title}</span></a>
+                                       <b></b>
+                                   </h4>
+                                   <a href="{$mIndexCat.data[0].link}" class="rt">MORE</a>
+                               </div>
+                               <p class="m-news-txt">
+                                   {$mIndexCat.data[0].description}
+                               </p>
+                           </div>
+                       </div>
+                   {/if}
+               {/if}
+           {/foreach}
+       </div>
+   </div>
+</div>
+
+
+{include file="./_footer.html"}
+</body>
+</html>

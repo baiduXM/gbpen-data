@@ -46,7 +46,7 @@
             </div>
             <div id="zs" class="zs">
                 <div id="jpzs" class="jpzs">
-                    <h3 class="h3 animated lightSpeedIn"><a href="{$index.pro_list.link}">{$index.pro_list.name}</a></h3>
+                    <h3 class="h3 animated lightSpeedIn"><a href="{$index.pro_list.link}">{$index.pro_list.en_name}</a></h3>
                     <span id="in" class="jiantou"><a href="{$index.pro_list.link}"><img src="{$site_url}images/jiantou_06.png" alt=""/></a></span>
                     <div class="lunbo">
                         <ul>
@@ -59,7 +59,7 @@
                     </div>
                 </div>
                 <div id="zxzx" class="zxzx">
-                    <h1 class="h1 animated lightSpeedIn"><a href="{$index.news.link}">{$index.news.name}</a></h1>
+                    <h1 class="h1 animated lightSpeedIn"><a href="{$index.news.link}">{$index.news.en_name}</a></h1>
                     <span id="in1" class="jiantou"><a href="{$index.news.link}"><img src="{$site_url}images/jiantou_06.png" alt=""/></a></span>
                     <div id="zx"  class="zx">
                         {foreach item=news from=$index.news.data}
@@ -90,8 +90,8 @@
     <div id="section2">
         <div class="sec2">
             <div class="title">
+                
                 <h6>{$index.products.en_name}</h6>
-                <h6>{$index.products.name}</h6>
             </div>
             <div class="sec2-bottom">
                 {foreach item=product from=$index.products.data}
@@ -121,7 +121,7 @@
         <div class="sec3">
             <div class="h">
                 <h3>{$index.contact.en_name}</h3>
-                <h6>{$index.contact.name}</h6>
+            
                 <span class="left"></span>
                 <span class="right"></span>
             </div>

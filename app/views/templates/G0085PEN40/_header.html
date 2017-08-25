@@ -1,0 +1,27 @@
+<header id="head">
+	<nav class="menu">
+		<div class="logo"><a href="{$site_url}"><img src="{$logo}"></a></div>
+		<ul class="nav clearfix">
+        {$limit = 8}
+            {if $navs|count lt $limit}{$limit = $navs|count}{/if}
+			<li style="width:{100/($limit+1)}%"><a href="{$site_url}">HOME</a></li>
+			{foreach item=nav from=$navs}
+			<li  style="width:{100/($limit+1)}%">
+				<a href="{$nav.link}">{$nav.en_name}</a>
+				{if $nav.childmenu}
+				<ul class="subnav">
+					{foreach item=nav_list from=$nav.childmenu}
+					{if $nav_list@index + 1 gt 1}<i></i>{/if}
+					<li><a href="{$nav_list.link}">{$nav_list.en_name}</a></li>
+					{/foreach}
+				</ul>
+				{/if}
+			</li>
+            {if $nav@index+1 eq $limit}{break}{/if}
+			{/foreach}
+		</ul>
+		<div class="nav_back"></div>
+	</nav>
+</header>
+
+

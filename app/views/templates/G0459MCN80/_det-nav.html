@@ -1,0 +1,34 @@
+<div class="det-nav">
+    {if $pagenavs}
+    <ul class="one">
+        {foreach item=nav from=$pagenavs}
+        <li class="one-li"><a href="{$nav.link}"><span> <em>●</em> {$nav.name}</span> </a>
+            {if $nav.childmenu}
+
+            <ul class="two">
+                {foreach item=nav_list from=$nav.childmenu}
+                <li class="two-li"><a href="{$nav_list.link}"><span> {$nav_list.name}</span></a>
+                    {if $nav_list.childmenu}
+
+                    <ul class="three">
+                        {foreach item=nav_lists from=$nav_list.childmenu}
+                        <li class="three-li"><a href="{$nav_lists.link}"><span>{$nav_lists.name}</span></a></li>
+                        {/foreach}
+                    </ul>
+                    {/if}
+                </li>
+                {/foreach}
+            </ul>
+            {/if}
+        </li>
+        {/foreach}
+    </ul>
+    {/if}
+</div>
+<div class="font">
+    <ul>
+        <li class="big"><a href="javascript:" onclick="changeFontSize2('1.1')">大</a></li>
+        <li class="middle"><a href="javascript:" onclick="changeFontSize2('0.9')">中</a></li>
+        <li class="sm"><a href="javascript:" onclick="changeFontSize2('0.6')">小</a></li>
+    </ul>
+</div>

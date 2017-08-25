@@ -11,12 +11,23 @@ img{ border:none;}
 display:block; white-space:nowrap; text-overflow:ellipsis; overflow:hidden;
 strong{display: block;margin: 0 auto;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
 
+.banner{ width: 1920px; margin-left: -960px;position: relative;left: 50%; z-index: 1; height: 420px;}
+.slideBox{ overflow:hidden; position:relative; width:100%;}
+// .slideBox .hd{ height:14px;width: 100%;text-align: center; overflow:hidden; position:absolute; bottom:20px; z-index:1; }
+// .slideBox .hd ul{ overflow:hidden; zoom:1; text-align:center; }
+// .slideBox .hd ul li{display: inline-block; margin:0 10px;  width:14px; height:14px;text-indent: -9999px; background:url(../images/dot.png) no-repeat center bottom; cursor:pointer; font-size: 0;}
+// .slideBox .hd ul li.on{ background:url(../images/doth.png) no-repeat; }
+.slideBox .bd{ position:relative; height:auto; z-index:0;}
+.slideBox .bd li{ zoom:1; vertical-align:middle;height:auto; }
+.slideBox .bd li a{ display: block;}
+.slideBox .bd img{ width:100%; }
 
-#banner .slideBox {
+
+.slideBox {
 	width:100%;
 	position:relative;
 }
-#banner .slideBox .hd {
+.slideBox .hd {
 	height:15px;
 	overflow:hidden;
 	position:absolute;
@@ -25,12 +36,12 @@ strong{display: block;margin: 0 auto;overflow: hidden;text-overflow: ellipsis;wh
 	text-align:center;
 	width:100%;
 }
-#banner .slideBox .hd ul {
+.slideBox .hd ul {
 	overflow:hidden;
 	zoom:1;
 	display:inline-block;
 }
-#banner .slideBox .hd ul li {
+.slideBox .hd ul li {
 	float:left;
 	margin-right:5px;
 	width:15px;
@@ -39,57 +50,57 @@ strong{display: block;margin: 0 auto;overflow: hidden;text-overflow: ellipsis;wh
 	text-align:center;
 	background:#fff;
 	cursor:pointer;
-	border-radius:15px;
+	border-radius:15px; font-size: 0;
 }
-#banner .slideBox .hd ul li.on {
+.slideBox .hd ul li.on {
 	background:#ccc;
 	color:#fff;
 }
-#banner .slideBox .bd {
-	position:relative;
-	height:100%;
-	z-index:0;
-	margin:0px auto;
-	text-align:center;
-}
-#banner .slideBox .bd li {
-	zoom:1;
-	vertical-align:middle;
-}
-#banner .slideBox .bd img {
-	display:block;
-	border:1px solid #ddd;
-	padding:1px;
-	margin:0px auto;
-	text-align:center;
-}
-/* 下面是前/后按钮代码，如果不需要删除即可 */
-#banner .slideBox .prev,  #banner .slideBox .next {
-	position:absolute;
-	left:3%;
-	top:50%;
-	margin-top:-25px;
-	display:block;
-	width:32px;
-	height:40px;
-	background:url(../images/slider-arrow.png) -110px 5px no-repeat;
-	filter:alpha(opacity=50);
-	opacity:0.5;
-}
-#banner .slideBox .next {
-	left:auto;
-	right:3%;
-	background-position:8px 5px;
-}
-#banner .slideBox .prev:hover,  #banner .slideBox .next:hover {
-	filter:alpha(opacity=100);
-	opacity:1;
-}
-#banner .slideBox .prevStop {
-	display:none;
-}
-#banner .slideBox .nextStop {
-display:none;}
+// #banner .slideBox .bd {
+// 	position:relative;
+// 	height:100%;
+// 	z-index:0;
+// 	margin:0px auto;
+// 	text-align:center;
+// }
+// #banner .slideBox .bd li {
+// 	zoom:1;
+// 	vertical-align:middle;
+// }
+// #banner .slideBox .bd img {
+// 	display:block;
+// 	border:1px solid #ddd;
+// 	padding:1px;
+// 	margin:0px auto;
+// 	text-align:center;
+// }
+// /* 下面是前/后按钮代码，如果不需要删除即可 */
+// #banner .slideBox .prev,  #banner .slideBox .next {
+// 	position:absolute;
+// 	left:3%;
+// 	top:50%;
+// 	margin-top:-25px;
+// 	display:block;
+// 	width:32px;
+// 	height:40px;
+// 	background:url(../images/slider-arrow.png) -110px 5px no-repeat;
+// 	filter:alpha(opacity=50);
+// 	opacity:0.5;
+// }
+// #banner .slideBox .next {
+// 	left:auto;
+// 	right:3%;
+// 	background-position:8px 5px;
+// }
+// #banner .slideBox .prev:hover,  #banner .slideBox .next:hover {
+// 	filter:alpha(opacity=100);
+// 	opacity:1;
+// }
+// #banner .slideBox .prevStop {
+// 	display:none;
+// }
+// #banner .slideBox .nextStop {
+// display:none;}
 
 
 

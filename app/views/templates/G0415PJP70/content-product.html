@@ -23,16 +23,15 @@
         <div id="news-banner"  style="background: url('{$global.nbanner6.image}');">
             <div class="about">
                 <div class="title">
-                    <h3>{$posnavs[0].name}</h3>
-                    <span></span>
-                    <h4>{$posnavs[0].en_name}</h4>
+                    <h3>{$posnavs[0].en_name}</h3>
+                   
                 </div>
             </div>
         </div>
         <div id="about-content">
             <div id="dqwz">
                 <div class="wz">
-                    <span>現在の場所には：<a href="{$site_url}">ホームページ</a>{foreach item=nav from=$posnavs}<a href="{$nav.link}">>{$nav.name}</a>{/foreach}</span>
+                    <span>現在の場所には：<a href="{$site_url}">ホームページ</a>{foreach item=nav from=$posnavs}<a href="{$nav.link}">>{$nav.en_name}</a>{/foreach}</span>
                 </div>
             </div>
             <div class="content">

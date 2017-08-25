@@ -1,0 +1,33 @@
+
+
+<div class="det-had">
+    <div class="search">
+        <div class="search-had ser-had">
+            <div class="back"><a class="iconfont" href="javascript:">&#xe641;</a> </div>
+            <div class="ser-name">搜索 · 分类</div>
+            <div class="ser-menu"> </div>
+        </div>
+        <div class="ser-cont">
+            <p>搜索</p>
+            <form class="  " action="{$search_action}" method="GET">
+                <input class="input-txt" type="text" name="s" value=""  />
+                <input class="input-btn" type="submit" value=" " />
+            </form>
+        </div>
+    </div>
+    <div class="header">
+        <div id="quickbar-showcats" class="menu lt"><i class="iconfont">&#xe603;</i></div>
+        <div class="logo"><a href="{$site_url}"><img src="{$logo}" alt=""></a></div>
+        <div class="ser rt"><i class="iconfont">&#xe636;</i></div>
+    </div>
+    <div class="banner">
+        <div class="swiper-container detBan " >
+            <ul class="swiper-wrapper ">
+                {foreach name=slidepics item=slidepic from=$global.detBan}
+                <li class="swiper-slide"><a href="{$slidepic.link}" target="_blank"><img src="{$slidepic.image}" ></a></li>
+                {/foreach}
+            </ul>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</div>

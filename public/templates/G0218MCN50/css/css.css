@@ -250,7 +250,7 @@ a{
 
 
 
-#content{
+#content2{
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -259,7 +259,7 @@ a{
     position: relative;
     z-index: 10;
 }
-#content>.nr{
+#content2>.nr{
     /*width: 14.75rem;*/
     margin-left: 1.25rem;
     border-left: 1px solid #ccc;
@@ -267,42 +267,42 @@ a{
     padding-right: 1.35rem;
     box-sizing: border-box;
 }
-#content>.nr .sec1{
+#content2>.nr .sec1{
     width: 100%;
     height: 100%;
     margin-bottom: 1rem;
 
 }
-#content>.nr .sec1 .title{
+#content2>.nr .sec1 .title{
     width: 100%;
     margin-top: 0.4rem;
 }
-#content>.nr .sec1 .title h3{
+#content2>.nr .sec1 .title h3{
     display: block;
     font-family:  "Arial";
     color: #636363;
     font-weight: lighter;
     font-size: 1rem;
 }
-#content>.nr .sec1 .title .hang{
+#content2>.nr .sec1 .title .hang{
     width: 100%;
     display: block;
     position: relative;
 }
-#content>.nr .sec1 .title .xiahuaxian{
+#content2>.nr .sec1 .title .xiahuaxian{
     display: inline-block;
     width: 1.05rem;
     height: 0.125rem;
     background: #ff9678;
     vertical-align: middle;
 }
-#content>.nr .sec1 .title h4{
+#content2>.nr .sec1 .title h4{
     font-weight: normal;
     color: #ff9678;
     display: inline-block;
     vertical-align: middle;
 }
-#content>.nr .sec1 .title .yuandian{
+#content2>.nr .sec1 .title .yuandian{
     width: 0.325rem;
     height: 0.325rem;
     background: url("../images/yuanquan.png");
@@ -311,68 +311,68 @@ a{
     top: 0.225rem;
     left: -0.825rem;
 }
-#content>.nr .sec1 .sec1_nr{
+#content2>.nr .sec1 .sec1_nr{
     width: 100%;
     margin-top: 0.65rem;
 }
-#content>.nr .sec1 .sec1_nr ul{
+#content2>.nr .sec1 .sec1_nr ul{
     width: 12.5rem;
 }
-#content>.nr .sec1 .sec1_nr ul li{
+#content2>.nr .sec1 .sec1_nr ul li{
     margin-bottom: 0.65rem;
 }
-#content>.nr .sec1 .sec1_nr ul li .rq{
+#content2>.nr .sec1 .sec1_nr ul li .rq{
     display: block;
     color: #b0b0b0;
     font-weight: lighter;
 }
-#content>.nr .sec1 .sec1_nr ul li p{
+#content2>.nr .sec1 .sec1_nr ul li p{
     width: 100%;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
 }
-#content>.nr .sec1 .sec1_nr ul li p a{
+#content2>.nr .sec1 .sec1_nr ul li p a{
     color: #46a4a5;
     line-height: 0.75rem;
 }
 
-#content>.nr .sec2{
+#content2>.nr .sec2{
     width: 100%;
     height: 100%;
     margin-bottom: 1.75rem;
 }
-#content>.nr .sec2 .title{
+#content2>.nr .sec2 .title{
     width: 100%;
     margin-top: 0.4rem;
 
 }
-#content>.nr .sec2 .title h3{
+#content2>.nr .sec2 .title h3{
     display: block;
     font-family:  "Arial";
     color: #636363;
     font-weight: lighter;
     font-size: 1rem;
 }
-#content>.nr .sec2 .title .hang{
+#content2>.nr .sec2 .title .hang{
     width: 100%;
     display: block;
     position: relative;
 }
-#content>.nr .sec2 .title .xiahuaxian{
+#content2>.nr .sec2 .title .xiahuaxian{
     display: inline-block;
     width: 1.05rem;
     height: 0.125rem;
     background: #ff9678;
     vertical-align: middle;
 }
-#content>.nr .sec2 .title h4{
+#content2>.nr .sec2 .title h4{
     font-weight: normal;
     color: #ff9678;
     display: inline-block;
     vertical-align: middle;
 }
-#content>.nr .sec2 .title .yuandian{
+#content2>.nr .sec2 .title .yuandian{
     width: 0.325rem;
     height: 0.325rem;
     background: url("../images/yuanquan.png");
@@ -381,7 +381,7 @@ a{
     top: 0.225rem;
     left: -0.825rem;
 }
-#content>.nr .sec2 .sec2_nr{
+#content2>.nr .sec2 .sec2_nr{
     width: 100%;
     max-height: 5.5rem;
     overflow: hidden;
@@ -391,41 +391,41 @@ a{
     text-indent: 0.9rem;
 }
 
-#content>.nr .sec3{
+#content2>.nr .sec3{
     width: 100%;
     height: 100%;
 }
-#content>.nr .sec3 .title{
+#content2>.nr .sec3 .title{
     width: 100%;
     margin-top: 0.4rem;
 
 }
-#content>.nr .sec3 .title h3{
+#content2>.nr .sec3 .title h3{
     display: block;
     font-family:  "Arial";
     color: #636363;
     font-weight: lighter;
     font-size: 1rem;
 }
-#content>.nr .sec3 .title .hang{
+#content2>.nr .sec3 .title .hang{
     width: 100%;
     display: block;
     position: relative;
 }
-#content>.nr .sec3 .title .xiahuaxian{
+#content2>.nr .sec3 .title .xiahuaxian{
     display: inline-block;
     width: 1.05rem;
     height: 0.125rem;
     background: #ff9678;
     vertical-align: middle;
 }
-#content>.nr .sec3 .title h4{
+#content2>.nr .sec3 .title h4{
     font-weight: normal;
     color: #ff9678;
     display: inline-block;
     vertical-align: middle;
 }
-#content>.nr .sec3 .title .yuandian{
+#content2>.nr .sec3 .title .yuandian{
     width: 0.325rem;
     height: 0.325rem;
     background: url("../images/yuanquan.png");
@@ -434,39 +434,39 @@ a{
     top: 0.225rem;
     left: -0.825rem;
 }
-#content>.nr .sec3 .sec3_nr{
+#content2>.nr .sec3 .sec3_nr{
     width: 100%;
     margin-top: 0.65rem;
 }
-#content>.nr .sec3 .sec3_nr>div{
+#content2>.nr .sec3 .sec3_nr>div{
     width: 100%;
     color: #808080;
     line-height: 0.75rem;
     margin-bottom: 0.625rem;
 }
-#content>.nr .sec3 .sec3_nr .name:before{
+#content2>.nr .sec3 .sec3_nr .name:before{
     content: url("../images/tubiao_name.png");
     width: 0.5rem;
     height: 0.775rem;
     margin-right: 0.625rem;
 }
-#content>.nr .sec3 .sec3_nr .phone:before{
+#content2>.nr .sec3 .sec3_nr .phone:before{
     content: url("../images/tubia_phone.png");
     width: 0.5rem;
     height: 0.775rem;
     background-size: 100% 100%;
     margin-right: 0.625rem;
 }
-#content>.nr .sec3 .sec3_nr .tel:before{
+#content2>.nr .sec3 .sec3_nr .tel:before{
     content: url("../images/tubia_tel.png");
     width: 0.5rem;
     height: 0.775rem;
     margin-right: 0.625rem;
 }
-#content>.nr .sec3 .sec3_nr .addr{
+#content2>.nr .sec3 .sec3_nr .addr{
     line-height: 0.9rem;
 }
-#content>.nr .sec3 .sec3_nr .addr:before{
+#content2>.nr .sec3 .sec3_nr .addr:before{
     content: url("../images/tubia_addr.png");
     width: 0.5rem;
     height: 0.775rem;
@@ -542,22 +542,17 @@ a{
     height: 0.50rem;
 }
 
-#aside_nav_list{
+#aside_nav_list{display: none;
     width: 15rem;
     height: auto;
-    background: #cce4e5;
-    position: relative;
-    margin-left: 0.5rem;
-    margin-top: 0.55rem;
-    box-sizing: border-box;
+    background: #cce4e5;position: relative;
+    margin-left: 0.5rem;margin-top: 0.55rem;box-sizing: border-box;
    /* padding-left: 1.175rem;
     padding-top: 0.75rem;
     padding-bottom: 0.55rem;*/
-    font-size: 0.5rem;
-    border-radius: 0.2rem;
-    opacity: 0;
-    filter: alpha( opacity=0 );
-    margin-bottom: 0.75rem;
+    font-size: 0.5rem;border-radius: 0.2rem;
+    /*opacity: 0;
+    filter: alpha( opacity=0 );*/margin-bottom: 0.75rem;
 }
 #aside_nav_list .sjx{
     position: absolute;
@@ -572,63 +567,27 @@ a{
     -o-transform: rotate(45deg);
     transform: rotate(45deg);
 }
-#aside_nav_list>ul{
-    margin-left: 1.175rem;
-    margin-top: 0.75rem;
-    margin-bottom: 0.55rem;
-    padding-right: 1.175rem;
-    box-sizing: border-box;
-    display: block;
-    height: 0;
-    overflow: hidden;
-    font-size: 0.6rem;
+#aside_nav_list>ul#navtop{display: none;
+    margin-left: 1.175rem;margin-top: 0.75rem;margin-bottom: 0.55rem;padding-right: 1.175rem;
+    box-sizing: border-box;display: block;height:auto;overflow: hidden;font-size: 0.6rem;
 }
-#aside_nav_list>ul>li{
+#aside_nav_list>ul#navtop>li{
     margin-bottom: 0.625rem;
 }
-#aside_nav_list>ul>li:first-child{
+#aside_nav_list>ul#navtop>li:first-child{
     margin-top: 0.75rem;
 }
-#aside_nav_list>ul>li:before{
+#aside_nav_list>ul#navtop>li:before{
     /*content: url("../images/xiaoyuandian.png");*/
-    content: "";
-    width: 8px;
-    height: 8px;
-    border-radius: 100%;
-    margin-right: 0.5rem;
-    display: inline-block;
-    background: #4ca6a8;
-}
-#aside_nav_list>ul>li>a{
-    color: #2e8284;
-}
-#aside_nav_list>ul>li>ul{
-    display: block;
-    height: 0;
-    overflow: hidden;
-}
-#aside_nav_list>ul>li>ul>li{
-    margin-top: 0.6rem;
-    margin-left: 1.6rem;
-}
+    content: "";width: 8px;height: 8px;border-radius: 100%;margin-right: 0.5rem;display: inline-block;background: #4ca6a8;}
+#aside_nav_list>ul#navtop>li>a{color: #2e8284;}
+#aside_nav_list>ul#navtop>li>ul.menu_body{height:auto;overflow: hidden;display:none;}
+#aside_nav_list>ul#navtop>li>ul.menu_body>li{margin-top: 0.6rem;margin-left: 1.6rem;}
 
-#aside_nav_list>ul>li>ul>li>a{
-    color: #5d5d5d;
-    line-height: 0.6rem;
-}
-#aside_nav_list>ul>li>ul>li>ul{
-    display: block;
-    height: 0;
-    overflow: hidden;
-}
-#aside_nav_list>ul>li>ul>li>ul>li{
-    margin-top: 0.6rem;
-    margin-left: 0.55rem;
-}
-#aside_nav_list>ul>li>ul>li>ul>li>a{
-    color: #5d5d5d;
-    line-height: 0.6rem;
-}
+#aside_nav_list>ul#navtop>li>ul.menu_body>li>a{color: #5d5d5d;line-height: 0.6rem;}
+#aside_nav_list>ul#navtop>li>ul.menu_body>li>ul.menu_thr{display:none;height:auto;overflow: hidden;}
+#aside_nav_list>ul#navtop>li>ul.menu_body>li>ul.menu_thr>li{margin-top: 0.6rem;margin-left: 0.55rem;}
+#aside_nav_list>ul#navtop>li>ul.menu_body>li>ul.menu_thr>li>a{color: #5d5d5d;line-height: 0.6rem;}
 
 
 

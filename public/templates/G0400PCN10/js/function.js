@@ -61,15 +61,21 @@ adaption("#case .inner ul li .pic",220,220)
 $(document).ready(function() {
 						   
 <!--大图-->
-$("#banner .slideBox").slide({mainCell:".bd ul",autoPlay:true, effect:"fold", trigger:"click",interTime:4000});
+// $(".slideBox").slide({mainCell:".bd ul",autoPlay:true, effect:"fold", trigger:"click",interTime:4000});
 						   
-						   
+jQuery(".slideBox").slide({ titCell:".hd ul", mainCell:".bd ul", effect:"left", delayTime:1000, autoPlay:true, autoPage:true, trigger:"click",
+    mouseOverStop:true,
+      startFun:function(){
+        var timer = jQuery(".slideBox .timer");
+        timer.stop(true,true).animate({ "width":"0%" },0).animate({ "width":"100%" },1000);
+      }
+    });						   
 	
 
 /*产品详细页图片自适应*/
-	$(".bd li").each(function(i){
-	if($(".bd li").eq(i).find("img").width() > 640){
-       $(".bd li").eq(i).find("img").width("99%");
+	$(".slideBoxb .bd li").each(function(i){
+	if($(".slideBoxb .bd li").eq(i).find("img").width() > 640){
+       $(".slideBoxb .bd li").eq(i).find("img").width("99%");
 }
 
 		})

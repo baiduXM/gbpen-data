@@ -74,15 +74,9 @@
         {elseif $mIndexCat.type eq 4}
           {if $mIndexCat.showtype eq 1}
           <div class="about">
-              <div class="abg"></div>
+              
               <div class="abcon">
                <span class="title">{$mIndexCat.name}</span>
-                  <ul class="tabs">
-                    {foreach item=child from=$global.child.childmenu}
-                      <li class="{if $child.current}current{/if}"><a href="javascript:void(0);" hidefocus="true">{$child.name}</a></li>
-                      {if $child@index+1 == 3}{break}{/if}
-                    {/foreach}
-                  </ul>
                   <div class="about_nr">
                     {$mIndexCat.description}
                   </div>

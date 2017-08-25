@@ -31,6 +31,9 @@ $(document).ready(function() {
         //banner
         $('.swiper-container-banner').swiper({slidesPerView: 1,pagination: '.swiper-pagination-banner li',nextButton: '.swiper-button-next-banner',prevButton: '.swiper-button-prev-banner',paginationClickable: true,spaceBetween: 30,autoplay:2500,autoplayDisableOnInteraction:false});
         
+        //今日要闻
+        jQuery(".yaowen").slide({mainCell:".bd_xiaoxi ul",autoPlay:true, effect:"topLoop",delayTime:500, trigger:"click",interTime:4000});
+        
         //team
         $('.swiper-container-team').swiper({slidesPerView: 1,nextButton: '.swiper-button-next-team',prevButton: '.swiper-button-prev-team',paginationClickable: true,spaceBetween: 30,autoplay:2500,autoplayDisableOnInteraction:false});
         

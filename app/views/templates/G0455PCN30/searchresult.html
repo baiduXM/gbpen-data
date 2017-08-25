@@ -29,7 +29,7 @@
 			<div class="border_left c  public border_bottom">
 				<div class="hint">以下是您输入的关键字“{$search.keyword}”的搜索结果，共{$search.total}条</div>
 				<ul class="news_list">
-					{foreach item=article from=$list.data}
+					{foreach item=article from=$search.data}
 						<li><a href="{$article.link}">
 							<dt class="news_tit">{$article.title}</dt>
 							<dd class="news_date">{$article.pubtimestamp|date_format:'%Y-%m-%d'}</dd>

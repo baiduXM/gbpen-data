@@ -63,7 +63,8 @@ adaption("#pro .inner ul li .pic",275,275)
 $(document).ready(function() {
 						   
 <!--大图-->
-$("#banner .slideBox").slide({mainCell:".bd ul",autoPlay:true, effect:"fold", trigger:"click",interTime:4000});
+    $("#banner .slideBox").slide({mainCell:".bd ul",autoPlay:true, effect:"fold", trigger:"click",interTime:4000});
+// $("#banner .slideBox").slide({mainCell:".bd ul",autoPlay:true, effect:"fold", trigger:"click",interTime:4000});
 						   
 						   
 	

@@ -34,28 +34,23 @@
   </div>
 </div>
 <div id="banner">
-  <div  class="sliderBan">
-    {foreach item=banner from=$global.slidepics}
-    <div class="slide"><a href="{$banner.link}"><img src="{$banner.image}" /></a></div>
-    {/foreach}
-  </div>
-  <!--<div id="slideBox" class="slideBox">-->
-    <!--<div class="hd">-->
-      <!--<ul>-->
-        
-        <!--<li></li>-->
-        
-      <!--</ul>-->
-    <!--</div>-->
-    <!--<div class="bd">-->
-      <!--<ul>-->
-        
-        
-          
-          <!--</a></div>-->
-        
-      <!--</ul>-->
-    <!--</div>-->
-    <!--&lt;!&ndash; 下面是前/后按钮代码，如果不需要删除即可 &ndash;&gt;-->
-    <!--<a class="prev" href="javascript:void(0)"></a> <a class="next" href="javascript:void(0)"></a> </div>-->
-</div>
+  <div id="slideBox" class="slideBox">
+    <div class="hd">
+      <ul>
+        {foreach name=slidepics item=slidepic from=$global.slidepics}
+        <li></li>
+        {/foreach}
+      </ul>
+    </div>
+    <div class="bd">
+      <ul>
+        {foreach name=slidepics item=slidepic from=$global.slidepics}
+        <div> <a href="{$slidepic.link}" target="_blank">
+          <li style="background:url({$slidepic.image}) no-repeat center; height:485px;"></li>
+        </a></div>
+        {/foreach}
+      </ul>
+    </div>
+    <!-- 下面是前/后按钮代码，如果不需要删除即可 -->
+    <a class="prev" href="javascript:void(0)"></a> <a class="next" href="javascript:void(0)"></a> </div></div>
+

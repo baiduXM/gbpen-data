@@ -1,0 +1,72 @@
+{
+  "imgTop": {
+    "value": {
+      "title": "装饰图",
+      "image": "images/index_22.png",
+      "link": "http://tieba.baidu.com"
+    },
+    "description": "头部装饰图",
+    "type": "image"
+  },
+  "textTop": {
+    "value": "SELECT THE BEST INGREDIENTS DAILY",
+    "description": "nav下的广告语",
+    "type": "text"
+  },
+  "links": {
+    "value": [
+      {
+        "title": "百度贴吧",
+        "image": "images/index_03.jpg",
+        "link": "http://tieba.baidu.com"
+      }, {
+        "title": "百度图片",
+        "image": "images/index_03.jpg",
+        "link": "http://image.baidu.com"
+      }
+    ],
+    "description": "友情链接",
+    "type": "images",
+    "config": {
+      "width": 95,
+      "height": 42
+    }
+  },
+  "detBan1": {
+    "value": {
+      "title": "内页大图",
+      "image": "images/zz_03.png",
+      "link": "http://tieba.baidu.com"
+    },
+    "description": "内页大图",
+    "type": "image"
+  },
+  "detBan2": {
+    "value": {
+      "title": "内页大图",
+      "image": "images/xx_03.png",
+      "link": "http://tieba.baidu.com"
+    },
+    "description": "内页大图",
+    "type": "image"
+  },
+  "detBan3": {
+    "value": {
+      "title": "内页大图",
+      "image": "images/cc_03.png",
+      "link": "http://tieba.baidu.com"
+    },
+    "description": "内页大图",
+    "type": "image"
+  },
+  "pagenavs": {
+    "value": {},
+    "description": "侧边栏目列表（当前栏目无子栏目时展示的目标栏目）",
+    "type": "list",
+    "config": {
+      "filter": "list,page",
+      "mustchild": true
+    }
+  }
+
+}

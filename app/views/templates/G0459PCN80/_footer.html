@@ -1,0 +1,16 @@
+<div class="footer">
+    <div id="link">
+        <div class="container">
+            <ul >
+                <li>友情链接 :</li>
+                {foreach key=key item=link from=$global.links}
+                <li><a href="{$link.link}"><img src="{$link.image}" alt=""></a></li>
+                {/foreach}
+            </ul>
+        </div>
+    </div>
+    <div id="copy">
+        {$footprint}
+    </div>
+</div>
+{$footscript}

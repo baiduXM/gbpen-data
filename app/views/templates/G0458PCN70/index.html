@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <script type="text/javascript">
+        // 识别为手机客户端，自动跳转手机页面
+        {if $site_another_url}
+        if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+            location.href = '{$site_another_url}';
+        }
+        {/if}
+    </script>
+    <meta name="keywords" content="{$keywords}" />
+    <meta name="description" content="{$description}" />
+    <link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
+    <title>{$title}</title>
+    <link rel="stylesheet" href="{$site_url}css/jquery.bxslider.css">
+    <link rel="stylesheet" href="{$site_url}css/style.css">
+    <script src="{$site_url}js/jquery-1.9.1.min.js"></script>
+    <script src="{$site_url}js/jquery.bxslider.js"></script>
+    <script src="{$site_url}js/jquery.SuperSlide.2.1.1.js"></script>
+
+    <script src="{$site_url}js/index.js"></script>
+    {$headscript}
+</head>
+<body>
+<div id="banner">
+    {include file="./_banner.html"}
+    <div id="index-bg">
+        <div class="index-lt lt">
+            <img class="lt-img" src="{$site_url}images/index_01.png" alt="">
+            <div class="ltBox">
+                <div class="had">
+                    <div class="logo"><a href="{$site_url}"><img src="{$logo}" alt=""></a></div>
+                    <div class="index-nav">
+                        <ul class="nav">
+                            {$litmit=7}
+                            {if $navs|count lt $litmit}{$litmit = $navs|count}{/if}
+                            {foreach item=nav from=$navs}
+                            <li>
+                                <b>◆</b><a class="oneLi-i" href="{$nav.link}">{$nav.name}</a><em></em>
+                                {if $nav.childmenu}
+                                <ul class="child">
+                                    {foreach item=nav_list from=$nav.childmenu}
+                                    <li><i>-</i><a href="{$nav_list.link}">{$nav_list.name}</a><i>-</i></li>
+                                    {/foreach}
+                                </ul>
+                                {/if}
+                            </li>
+                            {if $nav@index+1 eq $litmit}{break}{/if}
+                            {/foreach}
+                        </ul>
+                    </div>
+                </div>
+                <div class="tel">
+                  <div class="hot-line">
+                      <span><i><img src="{$site_url}images/tel.png" alt=""> </i>24小时服务热线 : </span>
+                      <h1>{$contact.telephone}</h1>
+                      <dl>
+                          <dt><img src="{$index.ma.image}" alt=""></dt>
+                          <dd>{$index.ma.title}</dd>
+                      </dl>
+                      <p><i><img src="{$site_url}images/add.png" alt=""></i>{$contact.address}</p>
+                  </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="index-rt rt">
+            <img class="lt-img" src="{$site_url}images/index_03.png" alt="">
+        </div>
+        <div class="index-foot">
+            <div class="copy">{$footprint}</div>
+            <ul class="link">
+                <li>
+                    <a href="">
+                        <span>友情链接</span>
+                        <i class="rt"></i>
+                    </a>
+                    <ul>
+                        {foreach key=key item=link from=$global.links}
+                        <li><a href="{$link.link}">{$link.title}</a></li>
+                        {/foreach}
+                    </ul>
+                </li>
+            </ul>
+            <div class="ser">
+                <form action="{$search_action}" >
+                    <input class="ser-txt" type="text" placeholder="请输入搜索内容">
+                    <input class="ser-btn rt" type="submit" value="" name="s" >
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

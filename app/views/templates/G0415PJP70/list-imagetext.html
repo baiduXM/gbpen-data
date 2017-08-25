@@ -28,16 +28,15 @@
         <div id="news-banner"  style="background: url('{$global.nbanner2.image}');">
             <div class="about">
                 <div class="title">
-                    <h3>{$posnavs[0].name}</h3>
-                    <span></span>
-                    <h4>{$posnavs[0].en_name}</h4>
+                    <h3>{$posnavs[0].en_name}</h3>
+                    
                 </div>
             </div>
         </div>
         <div id="about-content">
             <div id="dqwz">
                 <div class="wz">
-                    <span>您当前位置：<a href="{$site_url}">首页</a>{foreach item=nav from=$posnavs}<a href="{$nav.link}">>{$nav.name}</a>{/foreach}</span>
+                    <span>您当前位置：<a href="{$site_url}">首页</a>{foreach item=nav from=$posnavs}<a href="{$nav.link}">>{$nav.en_name}</a>{/foreach}</span>
                 </div>
             </div>
             <div class="content">

@@ -1,0 +1,22 @@
+<div class="index-foot d-foot">
+    <div class="copy">{$footprint}</div>
+    <ul class="link">
+        <li>
+            <a href="">
+                <span>友情链接</span>
+                <i class="rt"></i>
+            </a>
+            <ul>
+                {foreach key=key item=link from=$global.links}
+                <li><a href="{$link.link}">{$link.title}</a></li>
+                {/foreach}
+            </ul>
+        </li>
+    </ul>
+    <div class="ser">
+        <form action="{$search_action}" >
+            <input class="ser-txt" type="text" placeholder="请输入搜索内容">
+            <input class="ser-btn rt" type="submit" value="" name="s" >
+        </form>
+    </div>
+</div>

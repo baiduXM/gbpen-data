@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script type="text/javascript">
+    // 跳转手机页面
+    {if $site_another_url}
+        if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+            location.href = '{$site_another_url}';
+        }
+    {/if}
+    </script>
+
+
+<meta name="keywords" content="{$keywords}"/>
+<meta name="description" content="{$description}"/>
+<link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Language" content="zh-CN">
+
+<link rel="stylesheet" type="text/css" href="{$site_url}css/style.css"/>
+<script type="text/javascript" src="{$site_url}js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.js"></script>
+<script type="text/javascript" src="{$site_url}js/function.js"></script>
+<script type="text/javascript" src="{$site_url}js/index.js"></script>
+<script type="text/javascript" src="{$site_url}js/html5.js"></script>
+<title>{$title}</title>
+{$headscript}
+</head>
+<body>
+
+<div class="wrapper">
+	{include file='./_header.html'}
+	<div id="banner">
+		<ul class="picture">
+			{foreach item=slidepics from=$index.slidepics}
+				<li><a target="_blank" href="{$slidepics.link}"><img src="{$slidepics.image}"></a></li>
+			{/foreach}
+		</ul>
+		<ul class="dot">
+			{foreach item=slidepics from=$index.slidepics}
+				<li></li>
+			{/foreach}
+		</ul>
+	</div>
+	<div class="side_top">
+		<div class="side_hd">
+			<h2><a href="{$index.pro.link}"><span> {$index.pro.en_name}</span></a></h2><em></em>
+		</div>
+		<div class="side_pro">
+			<div class="side_recommend">
+				<ol class="recommend">
+					{foreach item=pro from=$index.pro.childmenu}
+					<li>
+                    
+						<div class="recommend_first"><a href="{$pro.data[0].link}">
+							<img src="{$pro.data[0].image}">
+							<article class="first_pic">
+								<span></span><h4>{$pro.data[0].title}</h4>
+								<p>{$pro.data[0].description}</p>
+							</article>
+						</a></div>
+                       
+						{foreach item=article from=$pro.data}
+							{if $article@index gt 0}
+							<a href="{$article.link}"><img src="{$article.image}"></a>
+							{/if}
+						{if $article@index+1 eq 5}{break}{/if}
+						{/foreach}
+					</li>
+					{if $pro@index+1 eq 5}{break}{/if}
+					{/foreach}
+				</ol>
+			</div>
+			<div class="scroll">
+				<a class="prev" href="javascript:void(0)"></a>
+				<ul class="scroll_list">
+					<span></span>
+					{foreach item=pro from=$index.pro.childmenu}
+						<li><a href="javascript:void(null)">{$pro.en_name}</a></li>
+					{if $pro@index+1 eq 5}{break}{/if}
+					{/foreach}
+				</ul>
+				<a class="next" href="javascript:void(0)"></a>
+			</div>
+		</div>
+	</div>
+	<div class="side_mid">
+		<div class="side_fitment">
+			<div class="side_hd">
+				<h2><a href="{$index.case.link}">{$index.case.name}<span> {$index.case.en_name}</span></a></h2><em></em>
+			</div>
+			<div class="fitment">
+				<div class="fitment_list">
+					{$casenum=($index.case.data|count)/2}
+					{$num=0}
+					{for $item=1 to $casenum}
+
+						<ul>
+						{foreach item=case from=$index.case.data}
+							{if $num%2==0}
+							<li class="fitment_left">
+								<span><img src="{$index.case.data[$num].image}"></span>
+								<em></em>
+								<div class="direction">
+									<h4>{$index.case.data[$num].title}</h4>
+									<p>{$index.case.data[$num].description}</p>
+									<a href="{$index.case.data[$num].link}">查看系列产品</a>
+								</div>
+							</li>
+							{else}
+							<li class="fitment_right">
+								<div class="fitment_hd">
+									<h3>{$index.fitment}</h3>
+								</div>
+								<span><img src="{$index.case.data[$num].image}"></span>
+								<em></em>
+								<div class="direction">
+									<h4>{$index.case.data[$num].title}</h4>
+									<p>{$index.case.data[$num].description}</p>
+									<a href="{$index.case.data[$num].link}">查看系列产品</a>
+								</div>
+							</li>
+							{/if}
+							{$num=$num+1}
+							{if $num%2==0}{break}{/if}
+
+						{/foreach}
+						</ul>
+					{/for}
+				</div>
+				<div class="arrows">
+					<a class="prev" href="javascript:void(null)"></a>
+					<a class="next" href="javascript:void(null)"></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="side_bottom">
+		<div class="side_hd">
+			<h2><a href="{$index.about.link}">{$index.about.name}<span>{$index.about.en_name}</span></a></h2><em></em>
+		</div>
+		<div class="side_about">
+			<article class="side_text">
+				<h3>{$contact.company}</h3>
+				<section>
+					{$index.about.description}
+				</section>
+			</article>
+			<img src="{$index.about.image}">
+		</div>
+		<ul class="nav_side">
+			{foreach item=navside from=$index.navside.childmenu}
+			<li><a href="{$navside.link}">
+				<h4>0{$navside@index+1}</h4>
+				<span>{$navside.name}</span>
+				<i><em></em></i>
+				<p>MORE</p>
+			</a></li>
+			{if $navside@index+1 eq 4}{break}{/if}
+			{/foreach}
+		</ul>
+	</div>
+
+	{include file='./_footer.html'}
+</div>
+</body>
+</html>

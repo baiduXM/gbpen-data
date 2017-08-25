@@ -42,7 +42,7 @@ body{
     height: 76px;
 }
 #header .head .nav ul{
-    display: inline-block;
+    display: block;
     height: 76px;
     z-index: 2;
 }
@@ -84,7 +84,7 @@ body{
     width: 100%;
     font-size: 14px;
     text-align: center;
-    line-height: 26px;
+    line-height: 56px;
     white-space: nowrap;
 }
 #header .head .nav .navlibg{
@@ -613,7 +613,7 @@ body{
 }
 #section3 .sec3 .h h3{
     font-size: 30px;
-    padding-top: 10px;
+    padding-top: 35px;
 }
 #section3 .sec3 .h h6{
     font-size: 16px;

@@ -19,15 +19,26 @@ $(document).ready(function(){
         win.addEventListener(resizeEvt,recalc,false);
         doc.addEventListener('DOMContentLoaded',recalc,false);
     })(document,window);
+
+    // 分类
+        $("#aside_nav_click").click(function(){
+            $("#aside_nav_list").slideToggle()
+        })
+    // 二级导航下拉
+      $(".icon").click(function(){
+          $(".menu_body").slideToggle()   
+      })
+  // 三级导航下拉
+      $(".icont").click(function(){
+          $(".menu_thr").slideToggle()
+      })
 });
 
 window.onload = function () {
 
-
-
     banner();
 
-    asideNav();
+    // asideNav();
 
     fontSize();
 
@@ -72,7 +83,6 @@ window.onload = function () {
             };
         }
     }
-
     function banner() {
         var oBanner = document.getElementById('banner');
         if( oBanner ){
@@ -87,98 +97,102 @@ window.onload = function () {
         }
 
     }
+    
+    // var liLen=$("#aside_nav_list").length;
 
+    // if(liLen==0){
+    //     $("#aside_nav_click").hidden()
+    // }
+    // function asideNav() {
+    //     var oNanlist = document.getElementById('aside_nav_list');
+    //     if( oNanlist ){
+    //         oNavtop = document.getElementById('navtop');
+    //         var aLione = oNavtop.children;
+    //         var onOff = false;
+    //         var onOff2 = false;
+    //         var num = 0;
+    //         var num2 = 0;
 
-    function asideNav() {
-        var oNanlist = document.getElementById('aside_nav_list');
-        if( oNanlist ){
-            oNavtop = document.getElementById('navtop');
-            var aLione = oNavtop.children;
-            var onOff = false;
-            var onOff2 = false;
-            var num = 0;
-            var num2 = 0;
+    //         for( var i=0;i<aLione.length;i++ ){
+    //             aLione[i].onOff = false;
+    //             var oA = aLione[i].children[0];
+    //             aLione[i].index = i;
+    //             oA.onclick = function () {
+    //                 this.parentNode.onOff =! this.parentNode.onOff;
+    //                 num = this.parentNode.index;
+    //                 var oUltwo = aLione[num].getElementsByTagName('ul')[0];
+    //                 if( oUltwo ){
+    //                     var aLitwo = oUltwo.children;
+    //                     if( aLitwo.length>0 ){
+    //                         if( aLione[num].onOff == true ){
+    //                             oUltwo.style.height = 'auto';
+    //                             /*var height1 = (aLitwo.length)*32;*/
+    //                             var height1 = parseInt(oUltwo.offsetHeight);
+    //                             oUltwo.style.height = '0';
+    //                             startMove( oUltwo,{ height:height1 } , function () {
+    //                                 oUltwo.style.height = 'auto';
+    //                             });
+    //                         }else{
+    //                             startMove( oUltwo,{ height:0 });
+    //                         }
 
-            for( var i=0;i<aLione.length;i++ ){
-                aLione[i].onOff = false;
-                var oA = aLione[i].children[0];
-                aLione[i].index = i;
-                oA.onclick = function () {
-                    this.parentNode.onOff =! this.parentNode.onOff;
-                    num = this.parentNode.index;
-                    var oUltwo = aLione[num].getElementsByTagName('ul')[0];
-                    if( oUltwo ){
-                        var aLitwo = oUltwo.children;
-                        if( aLitwo.length>0 ){
-                            if( aLione[num].onOff == true ){
-                                oUltwo.style.height = 'auto';
-                                /*var height1 = (aLitwo.length)*32;*/
-                                var height1 = parseInt(oUltwo.offsetHeight);
-                                oUltwo.style.height = '0';
-                                startMove( oUltwo,{ height:height1 } , function () {
-                                    oUltwo.style.height = 'auto';
-                                });
-                            }else{
-                                startMove( oUltwo,{ height:0 });
-                            }
+    //                     }
+    //                     if( aLione[num].onOff == true ){
+    //                         if( aLitwo.length > 0 ){
+    //                             for( var j=0;j<aLitwo.length;j++ ){
+    //                                 aLitwo[j].onOff2 = false;
+    //                                 var oA2 = aLitwo[j].children[0];
+    //                                 aLitwo[j].index = j;
+    //                                 oA2.onclick = function () {
+    //                                     oUltwo.style.height = 'auto';
+    //                                     this.parentNode.onOff2 =! this.parentNode.onOff2;
+    //                                     num2 = this.parentNode.index;
 
-                        }
-                        if( aLione[num].onOff == true ){
-                            if( aLitwo.length > 0 ){
-                                for( var j=0;j<aLitwo.length;j++ ){
-                                    aLitwo[j].onOff2 = false;
-                                    var oA2 = aLitwo[j].children[0];
-                                    aLitwo[j].index = j;
-                                    oA2.onclick = function () {
-                                        oUltwo.style.height = 'auto';
-                                        this.parentNode.onOff2 =! this.parentNode.onOff2;
-                                        num2 = this.parentNode.index;
-
-                                        var oUlthree = aLitwo[num2].getElementsByTagName('ul')[0] ;
-                                        if( oUlthree ){
-                                            if( aLitwo[num2].onOff2 == true ){
-                                                var aLithree = oUlthree.children;
-                                                var height2 = (aLithree.length)*(aLithree[0].offsetHeight+parseInt(getStyle(aLithree[0],"marginTop")));
-                                                startMove( oUlthree,{ height:height2 } );
-                                            }else{
-                                                startMove( oUlthree,{ height:0 } );
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        var oNav_click = document.getElementById('aside_nav_click');
-        if( oNav_click ){
-            var oSpan = oNav_click.children[0];
-            var oUl = oNanlist.getElementsByTagName('ul')[0];
-            var aLi = oUl.children;
-            var onOff_click = false;
-            var old = (aLi[0].offsetHeight+parseInt(getStyle(aLi[0],'marginBottom')))*aLi.length+parseInt(getStyle(aLi[0],'marginTop'));
-            oNav_click.onclick = function () {
-                onOff_click =! onOff_click;
-                if( onOff_click ){
-                    oSpan.style.background = "url('images/zhankai.png')";
-                    oSpan.style.backgroundSize = "100% 100%";
-                    startMove( oNanlist,{opacity:100} );
-                    startMove( oUl,{height:old}, function () {
-                        oUl.style.height = 'auto';
-                    } );
-                }else{
-                    oSpan.style.background = "url('images/guanbi.png')";
-                    oSpan.style.backgroundSize = "100% 100%";
-                    old = oUl.offsetHeight;
-                    startMove( oUl,{height:0} );
-                    startMove( oNanlist,{opacity:0} );
-                }
-            }
-        }
-    }
-
+    //                                     var oUlthree = aLitwo[num2].getElementsByTagName('ul')[0] ;
+    //                                     if( oUlthree ){
+    //                                         if( aLitwo[num2].onOff2 == true ){
+    //                                             var aLithree = oUlthree.children;
+    //                                             var height2 = (aLithree.length)*(aLithree[0].offsetHeight+parseInt(getStyle(aLithree[0],"marginTop")));
+    //                                             startMove( oUlthree,{ height:height2 } );
+    //                                         }else{
+    //                                             startMove( oUlthree,{ height:0 } );
+    //                                         }
+    //                                     }
+    //                                 }
+    //                             }
+    //                         }
+    //                     }
+    //                 }
+    //             }
+    //         }
+    //     }
+    //     var oNav_click = document.getElementById('aside_nav_click');
+    //     if( oNav_click ){
+    //         var oSpan = oNav_click.children[0];
+    //         var oUl = oNanlist.getElementsByTagName('ul')[0];
+    //         var aLi = oUl.children;
+    //         var onOff_click = false;
+    //         var old = (aLi[0].offsetHeight+parseInt(getStyle(aLi[0],'marginBottom')))*aLi.length+parseInt(getStyle(aLi[0],'marginTop'));
+    //         oNav_click.onclick = function () {
+    //             onOff_click =! onOff_click;
+    //             if( onOff_click ){
+    //                 oSpan.style.background = "url('images/zhankai.png')";
+    //                 oSpan.style.backgroundSize = "100% 100%";
+    //                 startMove( oNanlist,{opacity:100} );
+    //                 startMove( oUl,{height:old}, function () {
+    //                     oUl.style.height = 'auto';
+    //                 } );
+    //             }else{
+    //                 oSpan.style.background = "url('images/guanbi.png')";
+    //                 oSpan.style.backgroundSize = "100% 100%";
+    //                 old = oUl.offsetHeight;
+    //                 startMove( oUl,{height:0} );
+    //                 startMove( oNanlist,{opacity:0} );
+    //             }
+    //         }
+    //     }
+    // }
+    
     function fontSize() {
         var oFontSize = document.getElementById('fontSize');
         if( oFontSize ){
@@ -216,18 +230,6 @@ window.onload = function () {
             }
         }
     }
-
-
-
-
-
-
-
-
-
-
-
-
 };
 
 function startMove( obj, json, fn ) {
