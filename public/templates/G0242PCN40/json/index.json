@@ -1,0 +1,54 @@
+{
+	"pro":{
+		"description": "产品系列",
+		"value": {},
+		"type": "list",
+		"config": {
+			"nav_height":50,
+			"nav_width":70,
+			"showchilddata":true
+		}
+	},
+	"about_us": {
+		"description": "关于我们",
+		"value": {},
+		"type": "page",
+		"config": {
+			"nav_height":213,
+			"nav_width":160
+		}
+	},
+	"con_img": {
+		"value": {
+			"title": "栏目图片",
+			"image": "images/hand.png",
+			"link": "http://www.baidu.com/"
+			},
+		"description": "联系我们栏目图片",
+		"type": "image",
+		"config": {
+			"height":65
+		}
+	},
+	"contact":{
+		"description": "联系我们",
+		"value": {},
+		"type": "page",
+		"config": {
+			"height":84,
+			"width":258,
+			"nav_height":65,
+			"nav_width":73
+		}
+	},
+	"news":{
+		"description": "新闻中心",
+		"value": {},
+		"type": "list"
+	}
+	
+	
+}
+               
+
+

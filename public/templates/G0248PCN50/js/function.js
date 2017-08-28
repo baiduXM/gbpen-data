@@ -12,6 +12,7 @@ jQuery(document).ready(function($) {
 	// 	jQuery(".module_PhotoScroll").slide({mainCell:"ul",autoPlay:true,effect:"leftMarquee",vis:4,interTime:50});
 	// };
 	jQuery(".det-img").slide({ mainCell:"ul",prevCell:".ulprev",nextCell:".ulnext",effect:"leftLoop", autoPlay:true, delayTime:300});
+    $("#banner .slideBox").slide({mainCell:".bd ul",autoPlay:true, effect:"fold", trigger:"click",interTime:4000});
 
 });
 

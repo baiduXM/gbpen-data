@@ -1,0 +1,6 @@
+<ul class="links clearfix">
+	<li>友情链接 :</li>
+	{foreach key=key item=link from=$_links.links}
+		<li class="fl"><a href="{$link.link}">{$link.title}</a>|</li>
+	{/foreach}
+</ul>

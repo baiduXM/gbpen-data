@@ -20,27 +20,48 @@
     </div>
 </section>
  <section>
- <div class="banners">
-    <div id="slideBox" class="slideBox">
-      <div class="hd">
-      <ul>
-      {foreach item=slidepic from=$_header.slidepics}
-        <li>{$slidepic@index+1}</li>
-        {/foreach}
-        </ul>
-      </div>
-      <div class="bd">
-        <ul>
-                     {foreach item=slidepic from=$_header.slidepics}
-                              <li><a href="{$slidepic.link}" target="_blank"><img src="{$slidepic.image}" alt="{$slidepic.title}" /></a></li>
-                     {/foreach}
+ <!--<div class="banners">-->
+    <!--<div id="slideBox" class="slideBox">-->
+      <!--<div class="hd">-->
+      <!--<ul>-->
+      
+        
+        
+        <!--</ul>-->
+      <!--</div>-->
+      <!--<div class="bd">-->
+        <!--<ul>-->
+                     
+                              
+                     
+                <!--</ul>-->
+      <!--</div>-->
+
+      <!--&lt;!&ndash; 下面是前/后按钮代码，如果不需要删除即可 &ndash;&gt;-->
+      <!--<a class="prev" href="javascript:void(0)"></a>-->
+      <!--<a class="next" href="javascript:void(0)"></a>-->
+
+    <!--</div>-->
+    <!--</div>-->
+ </section>
+    <div id="banner">
+        <div id="slideBox" class="slideBox">
+            <div class="hd">
+            <ul>
+            {foreach item=slidepic from=$_header.slidepics}
+            <li>{$slidepic@index+1}</li>
+            {/foreach}
+            </ul>
+            </div>
+            <div class="bd">
+                <ul>
+                    {foreach name=slidepics item=slidepics from=$_header.slidepics}
+                    <div> <a href="{$slidepic.link}" target="_blank">
+                        <li style="background:url({$slidepics.image}) no-repeat center; height:334px;"></li>
+                    </a></div>
+                    {/foreach}
                 </ul>
-      </div>
-
-      <!-- 下面是前/后按钮代码，如果不需要删除即可 -->
-      <a class="prev" href="javascript:void(0)"></a>
-      <a class="next" href="javascript:void(0)"></a>
-
-    </div>
-    </div></section>
+            </div>
+            <!-- 下面是前/后按钮代码，如果不需要删除即可 -->
+            <a class="prev" href="javascript:void(0)"></a> <a class="next" href="javascript:void(0)"></a> </div></div>
 </header>

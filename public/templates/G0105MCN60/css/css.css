@@ -4,8 +4,8 @@
 .in_h2 .line{ height:2px; width:100%; position:absolute; top:28%; left:0; background:rgba(0,0,0,.1)}
 .in_h2 .tit{ width:35%;  margin:auto; text-align:center; position:relative; border:2px solid rgba(0,0,0,.1); height:30px; position:relative; z-index:100; background:#fff }
 .in_h2 .biaoti{ display:inline-block; min-width:20%;  max-width:30%; margin:auto; margin-top:-15px; background:#fff; position:absolute; top:-5px; z-index:111}
-.in_h2 .biaoti .in_zh{ width:80%;  margin:auto; font-size:16px; color:#333; margin-top:4px; height:20px; line-height:20px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap; border-bottom:1px solid #fff;  text-align:center}
-.in_h2 .biaoti .in_en{ width:80%; margin:auto; font-size:18px; text-transform:uppercase; color:#333;  height:20px; line-height:20px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;  text-align:center}
+.in_h2 .biaoti .in_zh{ width:80%;  margin:auto; font-size:16px; color:#880078; margin-top:4px; height:20px; line-height:20px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap; border-bottom:1px solid #fff;  text-align:center}
+.in_h2 .biaoti .in_en{ width:80%; margin:auto; font-size:18px; text-transform:uppercase; color:#47003f;  height:20px; line-height:20px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;  text-align:center}
 
 .in_h2 .more{ width:65px; height:20px; float:right; margin-top:10px;}
 
@@ -27,7 +27,7 @@
 #in_page .page_img img{  width:100%}
 #in_page .inner .right{ width:63%; overflow:hidden; float:right }
 #in_page .inner .right span{ display:block; font-size:13px; text-transform:uppercase; line-height:35px; height:35px; overflow:hidden; border-bottom:1px solid #ccc; color:#b3b1b1;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
-#in_page .inner .right span b{ color:#333; margin-right:5px; font-size:18px; font-weight:100; line-height:35px; height:35px; display:inline-block; max-width:60%;overflow: hidden;text-overflow: ellipsis;white-space: nowrap; float:left }
+#in_page .inner .right span b{ color:#380532; margin-right:5px; font-size:18px; font-weight:100; line-height:35px; height:35px; display:inline-block; max-width:60%;overflow: hidden;text-overflow: ellipsis;white-space: nowrap; float:left }
 #in_page .inner .right p{ line-height:30px; height:120px; overflow:hidden; margin-top:6px; color:#808080; text-indent:2em;}
 
 @media screen and (min-width: 320px) and (max-width: 480px){
@@ -43,10 +43,10 @@
 
 #in_text{ width:100%; margin:auto;padding:3% 0}
 #in_text .inner{  margin:auto;  margin:15px 0} 
-#in_text ul li{  width:94%; margin:auto;   margin:3% auto;     background: rgba(51,51,51,.3); border-radius:5px;  padding:2%;  overflow:hidden}
+#in_text ul li{  width:94%; margin:auto;   margin:3% auto; background:#f9f3ff; border-radius:5px;  padding:2%;  overflow:hidden}
 #in_text ul li .pix{ width:18%; border-radius:50%; border:2px solid #f4e7ff; float:left; overflow:hidden}
 #in_text ul li .txt{ width:79%; float:right;}
-#in_text ul li .txt h2{ font-size:18px; color:#333; height:25px; line-height:25px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap; margin-bottom:5px; }
+#in_text ul li .txt h2{ font-size:18px; color:#47003f; height:25px; line-height:25px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap; margin-bottom:5px; }
 #in_text ul li .txt .in_des{ height:40px; line-height:20px; overflow:hidden; font-size:12px; color:#3f3e3e; }
 
 #in_text ul li:nth-child(even) .pix{ float:right}
