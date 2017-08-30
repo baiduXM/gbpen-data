@@ -213,6 +213,7 @@ ul.inner_pages a:hover {
 	z-index:0;
 	margin:0px auto;
 	text-align:center;
+	border:1px solid #ddd;
 }
 .slideBoxb .bd li {
 	zoom:1;
@@ -220,10 +221,11 @@ ul.inner_pages a:hover {
 }
 .slideBoxb .bd img {
 	display:block;
-	border:1px solid #ddd;
+	/*border:1px solid #ddd;*/
 	padding:1px;
 	margin:0px auto;
 	text-align:center;
+	width: 640px;
 }
 /* 下面是前/后按钮代码，如果不需要删除即可 */
 .slideBoxb .prev, .slideBoxb .next {

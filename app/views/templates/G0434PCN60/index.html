@@ -87,7 +87,7 @@
             </div>
             <div class="index-style" >
                 <ul >
-                    {foreach item=list from=$global.style.childmenu}
+                    {foreach item=list from=$index.style.childmenu}
                     <li>
                         <a href="{$list.link}">
                             <img src="{$list.image}" alt="">
@@ -100,7 +100,7 @@
                 </ul>
 
                 <div class="style-more">
-                    <a href="{$global.style.link}">
+                    <a href="{$index.style.link}">
                         <img src="{$site_url}images/index-1_25.png" alt="">
                         <span>更多</span>
                     </a>

@@ -14,7 +14,7 @@
     </script>
 <meta http-equiv="x-ua-compatible" content="ie=9" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="{$keywords}"/>
+<meta name="keywords" content="{$keywords}" />
 <meta name="description" content="{$description}" />
 <link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
 <link href="{$site_url}css/css.css" rel="stylesheet" type="text/css" />
@@ -37,13 +37,15 @@
 					<div class="sear">
 						{if $search.total eq 0}
 				            <p class="search_res">没有查找到相关数据！</p>
-				        {else}
+				            {else}
 				            <p class="t">
-				              搜索关键词为“{$search.keyword}”的产品/文章，共搜索到{$search.total}个结果：
+				              搜索关键词为“
+				              <span>{$search.keyword}</span>
+				              ”的产品/文章，共搜索到{$search.total}个结果：
 				            </p>
 				        {/if}
 					</div>
-					<ul class="mxh_s">
+					<ul>
 						{foreach item=article from=$search.data}
 						<li>
 							<div class="date"><span>{$article.pubymd}</span></div>
@@ -55,6 +57,7 @@
 								<a href="{$article.link}" class="more">了解更多</a>
 							</div>
 						</li>
+						{if $article@index eq 2}{break}{/if}
 						{/foreach}
 					</ul>
 		 			<div class="pagenum">
@@ -73,13 +76,12 @@
 				</div>
 			</div>
 		</div>
-	</div>
-	<script type="text/javascript" src="{$site_url}js/jquery-1.9.1.min.js" ></script>
-	<script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.js"></script>
-	<script type="text/javascript" src="{$site_url}js/function.js"></script>	
+	</div>				
 	{include file="./_footer.html"} 
 
-
+<script type="text/javascript" src="{$site_url}js/jquery-1.9.1.min.js" ></script>
+<script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.js"></script>
+<script type="text/javascript" src="{$site_url}js/function.js"></script>
 
 </body>
 </html>

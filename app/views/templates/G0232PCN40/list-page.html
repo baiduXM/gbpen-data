@@ -20,9 +20,7 @@
 <link href="{$site_url}css/css.css" rel="stylesheet" type="text/css" />
 
 <title>{$title}</title>
-<script type="text/javascript" src="{$site_url}js/jquery-1.9.1.min.js" ></script>
-<script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.js"></script>
-<script type="text/javascript" src="{$site_url}js/function.js"></script>
+
 </head>
 
 <body>
@@ -35,7 +33,7 @@
 			</div>
 			<div class="right">			
 				<div class="rightitle"><span>{$posnavs[0].en_name}</span></div>
-				<div class="info page mxh_a">
+				<div class="info page">
 					{$list.content|unescape:"html"}
 				</div>
 			</div>
@@ -43,7 +41,9 @@
 	</div>				
 	{include file="./_footer.html"} 
 
-
+<script type="text/javascript" src="{$site_url}js/jquery-1.9.1.min.js" ></script>
+<script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.js"></script>
+<script type="text/javascript" src="{$site_url}js/function.js"></script>
 
 </body>
 </html>
