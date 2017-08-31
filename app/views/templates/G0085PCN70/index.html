@@ -9,7 +9,7 @@
         }
     {/if}
     </script>
-
+	
 
 <meta name="keywords" content="{$keywords}"/>
 <meta name="description" content="{$description}"/>
@@ -49,18 +49,18 @@
 		<div class="side_pro">
 			<div class="side_recommend">
 				<ol class="recommend">
-					{foreach item=pro from=$index.pro.childmenu}
+					{foreach item=proA from=$index.pro.childmenu}
 					<li>
                     
-						<div class="recommend_first"><a href="{$pro.data[0].link}">
-							<img src="{$pro.data[0].image}">
+						<div class="recommend_first"><a href="{$proA.data[0].link}">
+							<img src="{$proA.data[0].image}">
 							<article class="first_pic">
-								<span></span><h4>{$pro.data[0].title}</h4>
-								<p>{$pro.data[0].description}</p>
+								<span></span><h4>{$proA.data[0].title}</h4>
+								<p>{$proA.data[0].description}</p>
 							</article>
 						</a></div>
                        
-						{foreach item=article from=$pro.data}
+						{foreach item=article from=$proA.data}
 							{if $article@index gt 0}
 							<a href="{$article.link}"><img src="{$article.image}"></a>
 							{/if}
@@ -75,9 +75,11 @@
 				<a class="prev" href="javascript:void(0)"></a>
 				<ul class="scroll_list">
 					<span></span>
-					{foreach item=pro from=$index.pro.childmenu}
-						<li><a href="javascript:void(null)">{$pro.en_name}</a></li>
-					{if $pro@index+1 eq 5}{break}{/if}
+					{foreach item=proA from=$index.pro.childmenu}
+						{foreach item=article from=$proA.data}
+							<li><a href="javascript:void(null)">{$article.title}</a></li>
+						{if $pro@index+1 eq 5}{break}{/if}
+						{/foreach}
 					{/foreach}
 				</ul>
 				<a class="next" href="javascript:void(0)"></a>

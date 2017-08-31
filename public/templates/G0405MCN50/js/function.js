@@ -224,6 +224,12 @@ $("#daohang,#header_menu,#fixed_menu").click(function(){
 		return false
 	})
 	//返回顶部结束
+
+	
+	//头部导航开始
+        $('.swiper-container-nav').swiper({slidesPerView: 4,freeMode: true,nextButton: '.swiper-button-next-nav',prevButton: '.swiper-button-prev-nav'});
+	//头部导航结束
+	
 	//分享取消按钮开始
 	$(".share-cance").click(function(){
 		$(".newsclass").removeClass("show")

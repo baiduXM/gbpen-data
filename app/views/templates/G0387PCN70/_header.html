@@ -1,0 +1,28 @@
+<header>
+    <div id="header">
+        <div class="head">
+            <div class="logo"><a href="{$site_url}"><img src="{$logo}" alt=""/></a></div>
+            <div class="nav">
+                 <ul id="nav">
+                     {$limit=8}
+                     {if $navs|count lt $limit}{$limit = $navs|count}{/if}
+                     <li  style="width:{100/($limit+1)}%">
+                         <a href="{$site_url}">首页</a>
+                     </li>
+                     {foreach  item=nav from=$navs}
+                     <li  style="width:{100/($limit+1)}%">
+                         <a href="{$nav.link}">{$nav.name}</a>
+                         <ul>
+                             {if $nav.childmenu}{foreach key=key item=nav_list from=$nav.childmenu}
+                             <li><a href="{$nav_list.link}">{$nav_list.name}</a></li>
+                             {/foreach}{/if}
+                         </ul>
+                         <div class="sjx" style="left: 50%;margin-left: -8px"></div>
+                     </li>
+                     {if $nav@index+1 eq $limit}{break}{/if}
+                     {/foreach}
+                 </ul>
+            </div>
+        </div>
+    </div>
+</header>

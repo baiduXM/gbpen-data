@@ -69,11 +69,11 @@
                <p class="lt-title">{$index.lists3.name} / {$index.lists3.en_name}</p>
 
                <dl>
-                   <dt><a href="{$index.lists3.link}"><img src="{$index.lists3.image}" alt=""></a></dt>
+                   <dt><a href="{$index.lists3.data[0].link}"><img src="{$index.lists3.data[0].image}" alt=""></a></dt>
                    <dd>
                        <h4>{$index.lists3.data[0].title}</h4>
                        <time>{$index.lists3.data[0].pubtimestamp|date_format:'%Y-%m-%d'}</time>
-                       <a href="{$index.lists3.link}"><p ><span class="texts">{$index.lists3.description} </span><i>【查看详情】</i></p></a>
+                       <a href="{$index.lists3.data[0].link}"><p ><span class="texts">{$index.lists3.data[0].description} </span><i>【查看详情】</i></p></a>
                    </dd>
                </dl>
                <ul>
