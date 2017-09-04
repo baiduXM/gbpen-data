@@ -1,0 +1,30 @@
+
+<div class="had">
+    <div class="header">
+        <a href="{$site_url}"><img src="{$logo}" alt=""></a>
+    </div>
+    <!---轮播图-->
+    <div class="banner">
+        <div class="swiper-container swiper-banner " >
+            <ul class="swiper-wrapper ">
+                {foreach name=slidepics item=slidepic from=$global.slidepics}
+                <li class="swiper-slide"><a href="{$slidepic.link}" target="_blank"><img src="{$slidepic.image}" ></a></li>
+                {/foreach}
+            </ul>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+    <div class="nav">
+        <div class="swiper-container swiper-nav " >
+            <ul class="swiper-wrapper ">
+                {foreach name=nav item=nav from=$navs}
+                <li class="swiper-slide">
+                    <a href="{$nav.link}">
+                        <span>{$nav.name}</span>
+                    </a>
+                </li>
+                {/foreach}
+            </ul>
+        </div>
+    </div>
+</div>

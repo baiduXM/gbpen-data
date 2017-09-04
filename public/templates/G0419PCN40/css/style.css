@@ -105,10 +105,10 @@ ul.cont2-ul li:hover .list2-des{display: block;}
 .cont3-lt{width:582px;display: inline-block;}
 .lt-title{font-size:18px;color:#003c94;font-weight: bold;margin-bottom:5px;width:470px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
 .cont3-lt dl{margin:15px 0 20px 0;}
-.cont3-lt dl dt{width:190px;height:110px;text-align: center;margin-right:17px;display: inline-block;
+.cont3-lt dl dt{width:190px;height:110px;text-align: center;margin-right:17px; float:left;
 background: url(../images/index_032.png) no-repeat;padding:5px;}
 .cont3-lt dl dt img{max-width:100%;max-height:100%;vertical-align: bottom;}
-.cont3-lt dl dd{width:360px;display: inline-block;}
+.cont3-lt dl dd{width:360px;float:left;}
 .cont3-lt dl dd h4{font-size:14px;color:#333;}
 .cont3-lt dl dd time{font-size:12px;color:#666;}
 .cont3-lt dl dd a{font-size:12px;color:#666;}

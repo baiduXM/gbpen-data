@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{$title}</title>
+
+    <script type="text/javascript">
+        // 跳转PC页面
+        {if $site_another_url}
+        if (!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+            location.href = '{$site_another_url}';
+        }
+        {/if}
+    </script>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no,minimal-ui">
+    <meta name="keywords" content="{$keywords}" />
+    <meta name="description" content="{$description}" />
+    <link rel="stylesheet" href="{$site_url}css/swiper-3.3.1.min.css" />
+    <link rel="stylesheet" href="{$site_url}css/style.css">
+    <script src="{$site_url}js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="{$site_url}js/swiper-3.3.1.jquery.min.js"></script>
+    <script  type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.1.js"></script>
+    <script type="text/javascript" src="{$site_url}js/index.js"></script>
+
+    <script type="text/javascript">
+        window.addEventListener('load', function(){
+            setTimeout(function(){ window.scrollTo(0, 1);}, 100);
+        });//safari浏览器可以通过此代码来隐藏地址栏
+    </script>
+    {$headscript}
+</head>
+<body>
+
+    {include file="./_header.html"}
+
+    <div class="main">
+        {foreach item=mIndexCat from=$mIndexCats}
+            {if $mIndexCat.type eq 2}
+                {if $mIndexCat.showtype eq 1}
+                    <div class="main3">
+                        <div class="s-title">
+                            <h3><span>{$mIndexCat.name}</span></h3>
+                            <a href="{$mIndexCat.link}"><img class="rt" src="{$site_url}images/index_04.png" alt=""></a>
+                        </div>
+                        <div class="m2-content">
+                            {foreach name=m3 item=m3 from=$mIndexCat.data}
+                            <a href="{$m3.link}"  class="m3-list">
+                                <dl>
+                                    <dt><img src="{$m3.image}" alt=""></dt>
+                                    <dd>
+                                        <h3>{$m3.title}</h3>
+                                        <time>{$m3.pubtimestamp|date_format:'%Y-%m-%d'}</time>
+                                        <p>{$m3.description}</p>
+                                    </dd>
+                                </dl>
+                            </a>
+                            {if $m3@index+1 == 3}{break}{/if}
+                            {/foreach}
+                        </div>
+                    </div>
+                {/if}
+            {elseif $mIndexCat.type eq 3}
+                {if $mIndexCat.showtype eq 1}
+                    <div class="main1">
+                        <div class="s-title">
+                            <h3><span>{$mIndexCat.name}</span></h3>
+                            <a href="{$mIndexCat.link}"><img class="rt" src="{$site_url}images/index_04.png" alt=""></a>
+                        </div>
+                        <div class="m1-content">
+                            <div class="swiper-container swiper-m1" >
+                                <div class="swiper-wrapper">
+                                    {foreach name=m1 item=m1 from=$mIndexCat.data}
+                                    <dl class="m1-list swiper-slide">
+                                        <dt>
+                                            <a href="{$m1.link}" ><img src="{$m1.image}" > </a>
+                                        </dt>
+                                        <dd>
+                                            <h3><a href="{$m1.link}" >{$m1.title}</a></h3>
+                                            <b>—  —</b>
+                                            <p>{$m1.description}</p>
+                                            <div class="swiper-button-next  iconfont"> &#xe645;</div>
+                                            <div class="swiper-button-prev  iconfont">   &#xe641;</div>
+                                        </dd>
+                                    </dl>
+                                    {/foreach}
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                {/if}
+
+            {elseif $mIndexCat.type eq 4}
+                {if $mIndexCat.showtype eq 1}
+                    <div class="main2">
+                        <div class="s-title">
+                            <h3><span>{$mIndexCat.name}</span></h3>
+                            <a href="{$mIndexCat.link}"> <img class="rt" src="{$site_url}images/index_04.png" alt=""></a>
+                        </div>
+                        <div class="m2-content">
+                            <div class="m2-page">
+                                {$mIndexCat.description}
+                            </div>
+                        </div>
+                    </div>
+                {/if}
+            {/if}
+        {/foreach}
+    </div>
+
+
+{include file="./_footer.html"}
+</body>
+</html>

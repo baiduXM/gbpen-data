@@ -196,6 +196,7 @@ border-top:1px solid #363636; min-height:922px; position: relative; }
 .page li a{color:#f3e84a;font-size:14px;display: inline-block}
 .page li.w a{width:30px;height:30px;line-height:30px;}
 .page li.w:hover a{background: url(../images/img3_03.png) no-repeat center center;color:#333;}
+.page li.current a{background: url(../images/img3_03.png) no-repeat center center;color:#333;}
 
 
 .list-text li{padding-bottom:30px;border-bottom:1px dashed #363636;margin-bottom:20px;}

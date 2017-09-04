@@ -1,0 +1,244 @@
+﻿/*重置*/
+@charset "utf-8";
+*{ margin:0px; padding:0px;}
+a{ color: #323232; text-decoration:none}
+a:hover{color:#c40000;}
+table{border-collapse:collapse; border-spacing:0px;}
+body{word-wrap:break-word;color: #323232;font: 12px/200% "微软雅黑";background:#fff;}
+ul,dl,li,i{list-style:none;}
+h1,h2,h3,h4,h5{/*font-size:14px;*/font-weight:normal;}
+i,em{font-style:normal;font-weight:normal;list-style:none;}
+img{border: none;}
+
+/*topbg*/
+.top{width: 1000px;height: 96px;overflow: hidden;margin: 0 auto;position: relative;}
+.logo{width: 530px;height: 96px;overflow: hidden;position: relative;display: block;float: left;}
+.logo img{position: absolute;top: 0;bottom: 0;max-width: 100%;max-height: 100%;margin: auto 0;}
+.tel{color: #323232;font-size: 18px;height: 24px;overflow: hidden;margin: 19px 0 53px;float: right;}
+.tel span{font-size: 22px;color: #d91515}
+.tel img{width: 20px;height: 24px;overflow: hidden;margin: 0 6px;display: block;float: left;}
+
+.searchform{width: 1002px;height: 40px;overflow: hidden;position: absolute;bottom: 147px;left: 50%;margin-left: -501px;}
+form.search{width: 261px;height: 29px;overflow: hidden;position: absolute;right: 4px;bottom: 15px;}
+form.search input.text{width: 216px;height: 27px;overflow: hidden;background: #fff;border: 1px solid #ccc;color: #999;font: 12px/27px "微软雅黑";padding-left: 10px;;float: left;
+				border-radius: 3px 0 0 3px;-webkit-border-radius: 3px 0 0 3px;-moz-border-radius: 3px 0 0 3px;behavior:url(PIE.htc);}
+form.search input.submit{width: 31px;height: 29px;overflow: hidden;background: url(../images/submit.png) no-repeat;border: 0;float: left;cursor: pointer;}
+
+.header{width: 100%;height: 50px;background: #4ca019;}
+.navBar{  position:relative; z-index:1; width: 1000px;height:50px;overflow: inherit;margin: 0 auto}
+.nav{ position:relative;height: 50px;}
+.nav li.m{position: relative;/*width:125px;*/height: 50px;float: left;}
+.nav h3 a{width:100%; text-align:center; color:#fff;font: 14px/50px "微软雅黑";height: 50px;overflow: hidden;display: block;background: url(../images/navr_03.png) no-repeat right center;}
+.nav>li:last-child>h3>a{background: none;}
+.nav h3 a:hover,.nav li:last-child h3 a:hover{background: #32700c;}
+.nav .sub{ display: none;/*默认隐藏*/ position:absolute; left:0px; top:50px; z-index:-1; width:100%;}
+.nav .sub li{border-bottom: 1px solid #333;height: 30px;overflow: hidden;}
+.nav .sub li a{ display:block; height:30px;overflow: hidden;color:#d7dfd2;text-align: center; font: 14px/30px "微软雅黑";width: 100% ;background: #000;opacity:0.8; filter:alpha(opacity=80);-webkit-opacity:0.8; -moz-opacity:0.8; -khtml-opacity: 0.8;}
+.nav .sub li:last-child{border-bottom: 0;}
+.nav .sub li a:hover{ color: #83ec43;}
+
+/*slider*/
+.slider{position:relative; overflow:hidden;height:400px;}
+.slider .banner{position: absolute;left: 50%;margin-left: -960px;}
+.slider .bd{ position:relative; z-index:0;}
+.slider .bd li{ height:400px; width: 1920px; overflow:hidden;}
+.slider .bd li img{ display:block;width: 1920px;}
+.slider .hd{ width:100%;position:absolute; z-index:1; bottom:16px; left:0; height:14px; line-height:14px; }
+.slider .hd ul{ text-align:center;  }
+.slider .hd ul li{ cursor:pointer; display:inline-block; *display:inline; zoom:1; width:14px; height:14px; margin:0 10px; 
+		background: #101710;overflow:hidden;vertical-align:top; line-height:9999px;}
+.slider .hd ul .on{background: #d0d3d0;}
+
+/*column*/
+.column{width: 1000px;height: 345px;overflow: hidden;margin: 20px auto;background: #e4fad7}
+.abo{width: 259px;height: 345px;overflow: hidden;float: left;margin-left: 20px;}
+.title{width: 100%;height: 30px;overflow: hidden;margin: 20px 0;color: #fff;font-size: 14px;line-height: 30px;text-indent: 8px;background: #4ca019;border-radius: 0 3px 3px 0;-webkit-border-radius: 0 3px 3px 0;-moz-border-radius: 0 3px 3px 0;}
+.title span{font-size: 12px;color: #a8ea80;}
+.aboimg{width: 259px;height: 120px;overflow: hidden;}
+.aboimg a{width: 100%;height: 100%;overflow: hidden;display: block;}
+.aboimg a img{max-width: 100%;max-height: 100%;overflow: hidden;display: block;margin: auto;}
+.aboedit{height: 120px;overflow: hidden;margin: 15px 0 20px;position: relative;}
+.abodet{height: 120px;overflow: hidden; line-height: 24px;}
+.more{display: block;position: absolute;right: 10px;bottom: 0;height: 24px;overflow: hidden;}
+.more:hover{color: #f32727;}
+
+.indexnews{width: 400px;height: 345px;overflow: hidden;margin: 0 20px;float: left;}
+.mor{color: #d0f5b8;font-size: 12px;line-height: 30px;height: 30px;overflow: hidden;float: right;margin-right: 10px;background: url(../images/mor_03.png) no-repeat right 12px;padding-right: 10px;}
+.mor:hover{color: #f32727}
+.focusBox { position: relative;float: left; width: 400px; height: 120px; overflow: hidden; font: 12px/1.5 Verdana, Geneva, sans-serif; text-align: left;margin-bottom: 15px;}
+.focusBox .pic li a{width: 400px;height: 120px;overflow: hidden;display: block;}
+.focusBox .pic li a img { max-width: 100%; max-height: 100%;overflow: hidden; display: block;margin: 0 auto;}
+.focusBox .txt-bg { position: absolute; bottom: 0; z-index: 1; height: 30px; width:100%;  background: #000; overflow: hidden; opacity:0.5; filter:alpha(opacity=50);-webkit-opacity:0.5; -moz-opacity:0.5; -khtml-opacity: 0.5;}
+.focusBox .txt { position: absolute; bottom: 0; z-index: 2; height: 30px; width:100%; overflow: hidden; }
+.focusBox .txt li{width: 100%;height:30px;overflow: hidden;line-height:30px; position:absolute; bottom:-30px;color: #fff;text-indent: 8px;}
+.focusBox .txt li .more{float: right;margin-right: 8px;color: #fff;line-height: 30px;height: 30px;overflow: hidden;}
+.focusBox .txt li .more:hover{color: #f32727;}
+
+.newslist{width: 400px;height: 120px;overflow: hidden;margin-bottom: 20px;}
+.newslist ul{width: 100%;height: 120px;overflow: hidden;}
+.newslist ul li{width: 100%;height: 24px;overflow: hidden;}
+.newslist ul li a{text-indent: 8px;background: url(../images/li_07.png) no-repeat left center;display: block;height: 24px;overflow: hidden;}
+.newslist ul li a span{float: right;}
+.newslist ul li a:hover{color: #e22828}
+
+.contact{width: 260px;height: 345px;overflow: hidden;float: left;}
+.contact .title{width: 100%;height: 30px;overflow: hidden;margin: 20px 0;color: #fff;font-size: 14px;line-height: 30px;text-indent: 8px;background: #4ca019;border-radius: 0 3px 3px 0;-webkit-border-radius: 0 3px 3px 0;-moz-border-radius: 0 3px 3px 0;}
+.contact .title a{display: block;width: 100%;height: 30px;overflow: hidden;color: #fff;font-size: 14px;line-height: 30px;text-indent: 8px;}
+.contact .title a span{font-size: 12px;color: #a8ea80;}
+.contimg{width: 260px;height: 120px;overflow: hidden;}
+.contimg a{width: 100%;height: 100%;overflow: hidden;display: block;}
+.contimg a img{max-width: 100%;max-height: 100%;overflow: hidden;display: block;margin: auto;}
+.contedit{height: 120px;overflow: hidden;margin: 15px 0 20px;}
+
+/*products*/
+.products{width: 1000px;height: 290px;overflow: hidden;margin: 0 auto 20px;background: #e4fad7}
+.products .title{width: 960px;background: none;margin: 20px}
+.products .title h2{width: 224px;height: 30px;overflow: hidden;color: #fff;font-size: 14px;line-height: 30px;text-indent: 8px;background: #4ca019;border-radius: 0 3px 3px 0;-webkit-border-radius: 0 3px 3px 0;-moz-border-radius: 0 3px 3px 0;float: left;}
+.products .title .mor{color: #559c29;background: url(../images/li_07.png) no-repeat right 12px;}
+.products .title .mor:hover{color: #f32727}
+.picScroll{position:relative;width: 1000px;height: 180px;overflow:hidden;margin-bottom: 40px;}
+.picScroll .prev{ display:block; position:absolute; top:50%; margin-top: -20px;left:0px; width:36px; height:40px; background:url(../images/prev_next.png) no-repeat 0 center;z-index: 9}
+.picScroll .next{ display:block; position:absolute;  top:50%; margin-top: -20px;right:0px; width:36px; height:40px; background:url(../images/prev_next.png) no-repeat -36px center;z-index: 9}
+.gd{width: 960px;height: 180px;overflow: hidden;margin: 0 20px}
+.picScroll ul{ width: 980px;overflow:hidden; zoom:1; }
+.picScroll ul li{float:left; width:225px ;margin-right: 20px;}
+.picScroll ul li a{width: 225px;height: 180px;overflow: hidden;display: block;position: relative;}
+.picScroll ul li a img{max-width: 100%;max-height: 100%;overflow: hidden;display: block;margin: auto;}
+.picScroll ul li a p{color: #fff;font-size: 14px;line-height: 30px;width: 100%;height: 30px;overflow: hidden;text-indent: 8px;position: absolute;left: 0;bottom: 0;z-index: 10}
+.picScroll ul li a em{width: 100%;height: 30px;overflow: hidden;display: block;position: absolute;left: 0;bottom: 0;background: #000;opacity:0.5; filter:alpha(opacity=50);-webkit-opacity:0.5; -moz-opacity:0.5; -khtml-opacity: 0.5;z-index: 9;}
+.picScroll ul li a:hover p{color: #529b25;text-align: center;text-indent: 0;}
+
+
+/*tail*/
+.tailbg{background: #559c29;height: auto;overflow: hidden;}
+.tail{width: 1000px;line-height: 24px;height: auto;overflow: hidden;margin: 20px auto 35px;color: #aed994;text-align: center;}
+.link{color: #fff;font-size: 12px;height: 24px;overflow: hidden;}
+.link a{color: #fff;margin: 0 10px}
+.link a:hover{text-decoration: underline;}
+.footer{color: #aed994}
+.footer a{color: #aed994}
+.footer a:hover{color: #fff}
+
+/*content*/
+.content{width: 1000px;height: auto;overflow: hidden;margin: 20px auto;background: #e4fad7;padding: 20px 0;}
+.left{width: 224px;height: auto;overflow: hidden;float: left;margin-left: 20px}
+.navigation{width: 224px;height: auto;overflow: hidden;}
+.leftitle{width: 100%;height: 40px;overflow: hidden;color: #fff;font-size: 16px;line-height: 40px;text-indent: 8px;background: #4ca019;border-radius: 0 3px 3px 0;-webkit-border-radius: 0 3px 3px 0;-moz-border-radius: 0 3px 3px 0;}
+.leftitle span{font-size: 12px;color: #a8ea80}
+
+.left>ul{width: 100%;height: auto;overflow: hidden;margin: 16px 0;}
+.left>ul>li{width: 100%;height: auto;overflow: hidden;margin-bottom: 8px;}
+.left>ul>li>a{color: #323232;font: 12px/28px "微软雅黑";text-indent: 20px;;height: 28px;overflow: hidden;display: block;background: url(../images/left_03.png) no-repeat 8px center;border: 1px solid #4ca019;border-radius: 0 3px 3px 0;-webkit-border-radius: 0 3px 3px 0;-moz-border-radius: 0 3px 3px 0;}
+.left>ul>li>a:hover,.left li a.cu{color: #fff;background: #d91515 url(../images/lefth_03.png) no-repeat 8px center;border-color: #d91515;}
+.left>ul>li.current>a{color: #fff;background: #d91515 url(../images/lefth_03.png) no-repeat 8px center;border-color: #d91515;}
+.left>ul>li>dl{display: none;margin-top: 5px}
+.left>ul>li>dl>dd>a{height: 28px;overflow: hidden;display: block;color: #323232;font: 12px/28px "微软雅黑";text-indent: 34px;}
+.left>ul>li>dl>dd>a:hover,.left li a.cu1{color: #d91515}
+.left>ul>li>dl>dd.current>a{color: #d91515}
+.left>ul>li>dl>dd>dl{display: none;}
+.left>ul>li>dl>dd>dl>dt>a{overflow: hidden;height: 26px;display: block;color: #323232;font: 12px/26px "微软雅黑";text-indent: 46px;}
+.left>ul>li>dl>dd>dl>dt>a:hover,.left li a.cu2{color: #d91515}
+.left>ul>li>dl>dd>dl>dt.current>a{color: #d91515}
+.ny{width: 224px;height: auto;overflow: hidden;background: url(../images/tel_18.png) no-repeat right bottom;}
+.ny .title{margin: 0}
+.ny .contedit{margin: 15px 0 10px}
+
+.right{width: 716px;height: auto;overflow: hidden;float: right;margin-right: 20px;}
+.local{color: #000;font-size: 14px;line-height: 40px;width: 100%;height: 40px;overflow: hidden;border-bottom: 1px solid #4ca019}
+.local span{color: #989696;font-size: 12px}
+.local i{float: right;color: #323232;font-size: 12px;line-height: 40px;height: 40px;overflow: hidden;}
+.local i a{color: #323232;}
+.local i a:hover{color: #cc1414}
+.info{margin-top: 20px;height: auto;overflow: hidden;}
+.page{font-size: 12px;line-height: 24px;height: auto;overflow: hidden;}
+
+/*news*/
+.news ul li{width: 100%;height: 24px;overflow: hidden;}
+.news ul li a{height: 24px;overflow: hidden;display: block;text-indent: 15px;background: url(../images/li_03.png) no-repeat 2px center;}
+.news ul li a:hover{color: #d91515;background: url(../images/lih_06.jpg) no-repeat 2px center;}
+.news ul li span{float: right;height: 24px;overflow: hidden;}
+.news ul li a:hover span{color: #d91515;}
+.pagenumber{color: #323232;text-align:left;margin-top: 25px;height: 24px;line-height: 24px;width: 100%;overflow: hidden;}
+.pagenum{color: #323232;height: 24px;line-height: 24px;overflow: hidden;float: right;}
+.pagenum a{padding:3px 7px;color: #323232;font: 12px/24px "微软雅黑";text-align: center;overflow: hidden;margin: 0 3px;background: #dcd9d4}
+.pagenum a:hover,.pagenum a.current,.pagenum a.on{color: #fff;background: #d91515;}
+/*.pagenum form{width: 62px;height: 24px;overflow: hidden;float: right;margin-left: 3px}
+.pagenum form select{width: 60px;height: 22px;overflow: hidden;border: 1px solid #7f9db9;color: #323232;background: #e4fad7}
+.pagenum form select option{border: 0;background: #e4fad7}*/
+.pagenum .number{width: 62px;height: 24px;overflow: hidden;float: right;margin-left: 3px}
+.pagenum .number select{width: 60px;height: 22px;overflow: hidden;border: 1px solid #7f9db9;color: #323232;background: #e4fad7 !important}
+.pagenum .number select option{border: 0;background: #e4fad7}
+
+
+/*newsing*/
+.newsing{height: auto;overflow: hidden;}
+.newsing ul{height: auto;overflow: hidden;}
+.newsing ul li{height: auto;overflow: hidden;padding: 20px 0;border-bottom: 1px dashed #d6d7dc;}
+.newsing ul li:first-child{padding-top: 0}
+.newsingimg{width: 98px;height: 78px;overflow: hidden;float: left;padding: 1px;border: 1px solid #d6d7dc}
+.newsingimg img{display: block;max-height: 100%;margin: 0 auto;}
+.newsingdet{width: 600px;height: 82px;overflow: hidden;float: right;}
+.newsingdet h5 a{color: #323232;font: 14px/22px "微软雅黑";height: 22px;overflow: hidden;display: block;}
+.newsingdet h5 a span{float: right;color: #323232;font-family: "微软雅黑"}
+.newsingdet h5 a:hover{color: #d91515;}
+.newsingdet h5 a:hover span{color: #d91515;}
+.newsingdet p{color: #6c6c6c;font: 12px/20px "微软雅黑";min-height: 60px;max-height: 60px;overflow: hidden;}
+
+/*news_det*/
+.news_det{height: auto;overflow: hidden;}
+.news_det h5.te{color: #323232;font: 18px/24px "微软雅黑";text-align: center;width: 100%;max-height: 96px;overflow: hidden;margin-bottom: 5px;}
+.news_det .message{color: #323232;text-align: center;width: 100%;height: 24px;overflow: hidden;margin-bottom: 8px;border-top: 1px dashed #d6d8dc;}
+.news_det .message a{color: #323232;font: 12px/24px "微软雅黑";}
+.news_det .message a:hover{color: #d91515;}
+.news_det p{color: #323232;font: 12px/24px "微软雅黑";}
+.bbs{width: 100%;height: 30px;overflow: hidden;margin-top: 15px;border-bottom: 1px dashed #d6d8dc;}
+.jiathis_style{float: right;}
+.bbs .aaa{float: right !important;display: inline;}
+.other{padding-top: 10px;height: 48px;overflow: hidden;color: #323232;}
+.other a{color: #323232;font: 12px/24px "微软雅黑";height: 24px;overflow: hidden;display: block;}
+.other a:hover{color:#d91515;}
+
+/*pro*/
+.pro ul{ overflow:hidden; zoom:1;}
+.pro ul li{width: 225px;height: auto;overflow: hidden;float: left;margin-bottom: 10px;}
+.pro ul li:nth-child(3n-1){margin: 0 20px 10px}
+.pro ul li:nth-child(10),.pro ul li:nth-child(11),.pro ul li:nth-child(12){margin-bottom: inherit;}
+.pro ul li a{width: 225px;height: auto;overflow: hidden;display: block;}
+.pro ul li a img{ max-width:100%; max-height:200px;overflow: hidden; display:block;margin: auto}
+.pro ul li a p{color: #323232;font-size: 12px;line-height: 30px;text-align: center;height: 30px;overflow: hidden;}
+.pro ul li a:hover p{color: #ff0000}
+
+/*proing*/
+.proing{height: auto;overflow: hidden;}
+.proing ul{height: auto;overflow: hidden;}
+.proing ul li{height: auto;overflow: hidden;padding: 20px 0;border-bottom: 1px dashed #d6d7dc;}
+.proing ul li:first-child{padding-top: 0}
+.proingimg{width: 138px;height: 118px;overflow: hidden;float: left;padding: 1px;border: 1px solid #d6d7dc}
+.proingimg img{display: block;max-width: 100%;max-height: 100%;margin: 0 auto;}
+.proingdet{width: 560px;height: 120px;overflow: hidden;float: right;}
+.proingdet h5 a{color: #323232;font: 14px/24px "微软雅黑";height: 24px;overflow: hidden;display: block;margin-bottom: 2px;}
+.proingdet h5 a:hover{color: #d91515;}
+.proingdet p{color: #6c6c6c;font: 12px/24px "微软雅黑";min-height: 96px;max-height: 96px;overflow: hidden;}
+
+
+/*pro_det*/
+.pro_det{height: auto;overflow: hidden;}
+.pro_det h5.te{color: #323232;font: 16px/24px "微软雅黑";text-align: center;width: 100%;max-height: 48px;overflow: hidden;padding-bottom: 5px;}
+.pro_det h5.te a{color: #323232;font-size: 12px}
+
+.focus { position: relative; width:510px; overflow: hidden; margin: 5px auto;}
+.focu { position: relative; width:500px; height:500px; overflow: hidden; margin: 5px auto;}
+.focus .pic{ position:relative; z-index:0;width: 400px !important; height: 320px; margin:0 auto;}
+.focus .pic li{width: 400px !important; height: 320px; margin:0 auto; text-align:center;}
+.focus .pic img {max-width:400px;max-height: 320px;}
+.focu img {display: block;max-width: 100%;max-height: 100%;overflow: hidden;margin: 0 auto;vertical-align: middle;}
+.focus .prev{width: 35px; height: 71px; margin: -35px 0 0;background: url(../images/pn.png) no-repeat left center; position: absolute; top: 50%;cursor: pointer;left: 0;}
+.focus .next{width: 35px; height: 71px; margin: -35px 0 0;background: url(../images/pn.png) no-repeat -35px center; position: absolute; top: 50%;cursor: pointer;right: 0;}
+.focus .prev:hover{background: url(../images/pnh.png) no-repeat left center;}
+.focus .next:hover{background: url(../images/pnh.png) no-repeat -35px center;}
+
+.pro_det p{color: #323232;height: auto;overflow: hidden; margin-top: 15px;font: 12px/24px "微软雅黑";}s
+.pro_det .img{display: block;margin: 0 auto}
+
+
+.sear{color: #6e6e6e;font: 14px/30px "微软雅黑";text-align: center;height: 30px;overflow: hidden;}

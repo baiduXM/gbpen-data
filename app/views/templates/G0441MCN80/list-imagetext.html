@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{$title}</title>
+
+    <script type="text/javascript">
+        // 跳转PC页面
+        {if $site_another_url}
+        if (!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+            location.href = '{$site_another_url}';
+        }
+        {/if}
+    </script>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no,minimal-ui">
+    <meta name="keywords" content="{$keywords}" />
+    <meta name="description" content="{$description}" />
+    <link rel="stylesheet" href="{$site_url}css/swiper-3.3.1.min.css" />
+    <link rel="stylesheet" href="{$site_url}css/style.css">
+    <script src="{$site_url}js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="{$site_url}js/swiper-3.3.1.jquery.min.js"></script>
+    <script  type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.1.js"></script>
+    <script type="text/javascript" src="{$site_url}js/index.js"></script>
+
+    <script type="text/javascript">
+        window.addEventListener('load', function(){
+            setTimeout(function(){ window.scrollTo(0, 1);}, 100);
+        });//safari浏览器可以通过此代码来隐藏地址栏
+    </script>
+</head>
+<body>
+
+{include file="./_header.html"}
+{include file="./_det-ban.html"}
+
+<div class="det-main ">
+    <div class="det-topBox">
+        <div class="det-title">
+            <div class="det-name">
+                <p><img src="{$site_url}images/about_04.png" alt=""> <span>{$list.name}</span> <b>{$list.en_name}</b></p>
+            </div>
+            <div class="title-rt rt">
+                <span class="classify">分类+</span>
+            </div>
+        </div>
+        {include file="./_det-nav.html"}
+    </div>
+    <div class="det-text">
+        <div class="list-imgT">
+            {foreach item=imgT from=$list.data}
+            <dl>
+                <dd>
+                    <h4>{$imgT.title}</h4>
+                    <time>{$imgT.pubtimestamp|date_format:'%Y-%m-%d'}</time>
+                    <p>{$imgT.description}</p>
+                    <a href="{$imgT.link}">
+                        <span>Read  More</span>
+                        <i class="iconfont">&#xe645;</i>
+                    </a>
+                </dd>
+                <dt><img src="{$imgT.image}" alt=""></dt>
+            </dl>
+            {/foreach}
+        </div>
+        {include file="./_page.html"}
+    </div>
+</div>
+
+
+
+
+{include file="./_footer.html"}
+</body>
+</html>

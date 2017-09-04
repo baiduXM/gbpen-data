@@ -44,7 +44,7 @@
 	</div>
 	<div class="side_top">
 		<div class="side_hd">
-			<h2><a href="{$index.pro.link}"><span> {$index.pro.en_name}</span></a></h2><em></em>
+			<h2><a href="{$index.pro.link}">{$index.pro.name}<span> {$index.pro.en_name}</span></a></h2><em></em>
 		</div>
 		<div class="side_pro">
 			<div class="side_recommend">
@@ -61,9 +61,7 @@
 						</a></div>
                        
 						{foreach item=article from=$pro.data}
-							{if $article@index gt 0}
 							<a href="{$article.link}"><img src="{$article.image}"></a>
-							{/if}
 						{if $article@index+1 eq 5}{break}{/if}
 						{/foreach}
 					</li>
