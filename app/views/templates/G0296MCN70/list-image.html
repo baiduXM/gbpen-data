@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- 实时预览调试代码，模板开发完成后删除 -->
+		
+		<!-- 调试代码 End -->
+		<script type="text/javascript">
+		// 跳转PC页面
+		{if $site_another_url}
+			if (!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+				location.href = '{$site_another_url}';
+			}
+		{/if}
+		</script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,minimum-scale=1.0, maximum-scale=1.5,user-scalable=no,minimal-ui">
+<meta name="keywords" content="{$keywords}" />
+<meta name="description" content="{$description}" />        
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta content="telephone=no, email=no" name="format-detection">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="HandheldFriendly" content="true">
+<meta name="MobileOptimized" content="320">
+<meta name="screen-orientation" content="portrait">
+<meta name="x5-orientation" content="portrait">
+<title>{$title}</title>
+<link rel="stylesheet" href="{$site_url}css/reset.css" /> 
+<link rel="stylesheet" href="{$site_url}css/public.css" /> 
+<link href="{$site_url}css/css.css" rel="stylesheet" type="text/css" />
+<link href="{$site_url}css/animate.css" rel="stylesheet" type="text/css" />
+<link href="{$site_url}css/swipe.css" rel="stylesheet" type="text/css" />
+<script src="{$site_url}js/TouchSlide.1.1.js"></script>
+<script type="text/javascript" src="{$site_url}js/jquery.min.js"></script>
+<script type="text/javascript" src="{$site_url}js/share.js"></script>
+<script src="{$site_url}js/idangerous.swiper-2.0.min.js"></script>
+<script src="{$site_url}js/idangerous.swiper.3dflow-2.0.js"></script>
+<script src="{$site_url}js/simple-app.js"></script>
+<script type="text/javascript" src="{$site_url}js/function.js"></script>
+<script type="text/javascript">
+	window.addEventListener('load', function(){
+   setTimeout(function(){ window.scrollTo(0, 1); }, 100);
+});//safari浏览器可以通过此代码来隐藏地址栏
+</script>
+</head>
+<body>              
+    <div class="index-wrap" style=" background:#fff">
+            <h1 class="fixed-topa">
+                  <div class="title_top">
+                  <span class="more2" id="first">分类<span id="down"> &darr;</span><span id="up"> &uarr; </span></span>
+                   <div class="menu3"  id="quickbar" ><a href="#" id="quickbar-navs-btn"><span></span></a></div>              
+                  <span class="l_name">{$list.name}</span>
+                 </div>
+                </h1>
+           <div class="hide-class">                
+             <ul>
+             {foreach name=pagenavs item=nav from=$pagenavs}
+                <li  class="{if $nav.current}current{/if}"><a href="{if $nav.childmenu}javascript:;{else}{$nav.link}{/if}" class="{if $nav.selected}selected{/if}">{$nav.name}</a>
+                {if $nav.childmenu}
+                    <ul class="second">
+                      {foreach key=key item=nav_list from=$nav.childmenu}
+                        <li class="{if $nav_list.current}current{/if}"><a href="{if $nav_list.childmenu}javascript:;{else}{$nav_list.link}{/if}"  class="{if $nav_list.selected}selected{/if}">{$nav_list.name}</a>
+                         {if $nav_list.childmenu}
+                            <ul class="third">
+                              {foreach key=key item=nav_listsec from=$nav_list.childmenu}
+                              <li class="{if $nav_listsec.current}current{/if}"><a href="{$nav_listsec.link}" class="{if $nav_listsec.selected}selected{/if}">{$nav_listsec.name}</a></li>
+                              {/foreach}
+                            </ul> 
+                           {/if}                                             
+                        </li>
+                      {/foreach}
+                    </ul>
+                    {/if}                            
+                </li>
+                {/foreach}                                                                                                                                           
+            </ul>                
+          </div>      
+    	<div class="boxmain-m">
+                	<div class="picture2">
+                    <ul>
+                    {foreach item=article from=$list.data}
+                       <li><a onclick="javascript:window.location.href='{$article.link}'"><div>
+                        <p class="img"><img src="{$article.image}" width="100%" /></p>
+                        <dl class="title1">
+                        <dd class="china">{$article.title}</dd>
+                        </dl></div></a>
+                       </li>  
+                        {/foreach} 
+                      
+          		   </ul>     
+                      <div class="next1"><a href="{$page_links.first_link}" class="cu">首页</a><a href="{$page_links.prev_link}">上一页</a><a href="{$page_links.next_link}" >下一页</a><a href="{$page_links.last_link}"  >尾页</a></div>     	
+                     </div>  
+        </div>
+<div class="foot">
+ <div class="top"><a href="#" class="back-top">∧</a></div>{$footprint} 
+</div>      
+   </div>
+
+   {*$footprint*}
+   {$footscript}  
+</body>
+</html>
