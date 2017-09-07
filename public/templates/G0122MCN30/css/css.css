@@ -15,8 +15,8 @@
 .slideBox .next{ left:auto; right:14px;background: url(../images/next.png) left top no-repeat; background-size:16px 31px;  }
 
 .box-id{ width:100%; height:auto; overflow:hidden; margin:10px auto 0px; position:relative;}
-.box-top{height:35px; line-height:35px; overflow:hidden; font-size:1.2em; color:#ffffff; text-indent:10px; background:#f4a460; }
-.more{ float:right; display:inline; padding:0px 8px; color:#fff; height:35px; border-left:1px solid #fec89a;text-indent:0px; font-size:0.8em; position:relative;}
+.box-top{height:35px; line-height:35px; overflow:hidden; font-size:1.2em; color:#ffffff; text-indent:10px; background:#8f827f; }
+.more{ float:right; display:inline; padding:0px 8px; color:#fff; height:35px; border-left:1px solid #aea5a3;text-indent:0px; font-size:0.8em; position:relative;}
 .more:before{ content:" "; background:rgba(0,0,0,0.2); width:1px; height:100%; position:absolute; top:0px; left:0px;}
 .more a{ display:block; color:#fff;}
 .about-m{ height: auto; overflow:hidden; padding:8px 5px; position:relative;}
@@ -88,7 +88,7 @@ ul.news-list li a:before{ content:"■"; position:absolute; top:5px; left:3px; t
 .next2{ border-top:1px dotted #dfdfdf; height:auto; overflow:hidden; padding:5px 0px; }
 .next2 dl{ height:auto; overflow:hidden;}
 .next2 dl a{ color:#7d695d;}
-.fixed-top{ width:100%; position: absolute; top:0px; left:0px; z-index:555; text-align:center; color:#fff; text-indent:0px; background:#f4a460;}
+.fixed-top{ width:100%; position: absolute; top:0px; left:0px; z-index:555; text-align:center; color:#fff; text-indent:0px; background:#402a1e;}
 .ny-wrap{ margin:25px auto 0px;}
 .fix-font{ position: absolute; right:0px; top:35px; z-index:99999}
 

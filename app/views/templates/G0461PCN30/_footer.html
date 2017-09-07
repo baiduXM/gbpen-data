@@ -1,0 +1,45 @@
+		<div class="footer animatedParent">
+			<div class="linker animated fadeInDown">
+				<div class="link c">
+					<ul>
+						<li>友情链接：</li>
+						{foreach item=link from=$global.links}
+							<li><a href="{$link.link}" target="_blank">{$link.title}</a></li>
+						{/foreach}
+					</ul>
+				</div>
+			</div>
+			<div class="foot c">
+				<div class="contact">
+					<div class="map fl animated fadeInLeft">
+						<ul>
+							{foreach item=nav from=$navs}
+							    <li class="{if $nav.current}cu{/if}" style="width:{100/($navs|count)}%">
+									<a href="{$nav.link}">{$nav.name}</a>
+									{if $nav.childmenu}
+									<ul class="two">
+										{foreach item=subnav from=$nav.childmenu}
+										<li><a href="{$subnav.link}">{$subnav.name}</a></li>
+										{/foreach}
+									</ul>
+									{/if}
+								</li>
+
+							{/foreach}
+						</ul>
+					</div>
+					<div class="con_intro fl animated fadeInRight">
+						<div class="con_bt">联系我们</div>
+						<dl class="con_nr">
+							{$global.context}
+						</dl>
+					</div>
+				</div>
+				<div class="copyright animated fadeInDown">
+					<!-- <div class="cr fl"><p>Copyright © 厦门易尔通网络科技有限公司 版权所有 闽ICP备xxxxxxxx号</p></div>
+					<div class="ts fr"><p>技术支持：<a href="#">厦门易尔通网络科技</a> 人才网支持：<a href="#">厦门人才网</a></p></div> -->
+					{$footprint}
+				</div>
+			</div>
+		</div>
+		{$footscript}

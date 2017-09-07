@@ -55,7 +55,7 @@
 	{foreach name=mIndexCats_list item=mIndexCat from=$mIndexCats}
 	  {if $mIndexCat.type eq 4}
     	<div class="box-id">
-        	<h1 class="box-top"><span class="more"><a href="{$mIndexCat.link}">+MORE</a></span>{$mIndexCat.name}</h1>
+        	<h1 class="box-top"><span class="more"><a href="{$mIndexCat.link}">+更多</a></span>{$mIndexCat.name}</h1>
             <div class=" about-m">
             	<div class="about-img"><img src="{$mIndexCat.image}"></div>
             	<div class="about-edite">      {$mIndexCat.description} </div>
@@ -63,7 +63,7 @@
         </div>
 		{elseif $mIndexCat.type eq 1}
         <div class="box-id">
-        	<h1 class="box-top"><span class="more"><a href="{$mIndexCat.link}">+MORE</a></span>{$mIndexCat.name}</h1>
+        	<h1 class="box-top"><span class="more"><a href="{$mIndexCat.link}">+更多</a></span>{$mIndexCat.name}</h1>
             <div class=" about-m">
                <ul class="news-list">
 			   {foreach name=mIndexCat_list item=mIndexCat_list from=$mIndexCat.data}
@@ -75,7 +75,7 @@
         </div>
 		{elseif $mIndexCat.type eq 2}
         <div class="box-id">
-        	<h1 class="box-top"><span class="more"><a href="{$mIndexCat.link}">+MORE</a></span>{$mIndexCat.name}</h1>
+        	<h1 class="box-top"><span class="more"><a href="{$mIndexCat.link}">+更多</a></span>{$mIndexCat.name}</h1>
             <div class=" about-m">
                 <ul class="picture1">
 				{foreach name=mIndexCat_list item=mIndexCat_list from=$mIndexCat.data}

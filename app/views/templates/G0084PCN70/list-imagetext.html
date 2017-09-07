@@ -1,110 +1,67 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<!-- 实时预览调试代码，模板开发完成后删除 -->
-		
-		<!-- 调试代码 End -->
-		<script type="text/javascript">
-		// 跳转PC页面
-		{if $site_another_url}
-			if (!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
-				location.href = '{$site_another_url}';
-			}
-		{/if}
-		</script>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no,minimal-ui">
-<title>{$title}</title>
-<meta name="keywords" content="{$keywords}" />
-<meta name="description" content="{$description}" />        
-<meta name="apple-mobile-web-app-capable" content="yes" />
-<meta name="apple-mobile-web-app-status-bar-style" content="black" />
-<meta content="telephone=no, email=no" name="format-detection">
-<meta name="renderer" content="webkit">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="HandheldFriendly" content="true">
-<meta name="MobileOptimized" content="320">
-<meta name="screen-orientation" content="portrait">
-<meta name="x5-orientation" content="portrait">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script type="text/javascript">
+    // Ìø×ªÊÖ»úÒ³Ãæ
+    {if $site_another_url}
+        if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+            location.href = '{$site_another_url}';
+        }
+    {/if}
+    </script>
+
+
+<meta name="keywords" content="{$keywords}"/>
+<meta name="description" content="{$description}"/>
 <link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
-<link rel="stylesheet" href="{$site_url}css/reset.css" /> 
-<link href="{$site_url}css/css.css" rel="stylesheet" type="text/css" />
-<script src="{$site_url}js/TouchSlide.1.1.js"></script>
-<script type="text/javascript" src="{$site_url}js/jquery.min.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Language" content="zh-CN">
+
+<link rel="stylesheet" type="text/css" href="{$site_url}css/style.css"/>
+<link rel="stylesheet" type="text/css" href="{$site_url}css/jquery.mCustomScrollbar.css"/>
+<script type="text/javascript" src="{$site_url}js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.js"></script>
+<script type="text/javascript" src="{$site_url}js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script type="text/javascript" src="{$site_url}js/html5.js"></script>
 <script type="text/javascript" src="{$site_url}js/function.js"></script>
-<script type="text/javascript" src="{$site_url}js/fontsize.js"></script>
-<script type="text/javascript" src="{$site_url}js/share.js"></script>
-<script src="{$site_url}js/idangerous.swiper-2.0.min.js"></script>
-<script src="{$site_url}js/idangerous.swiper.3dflow-2.0.js"></script>
-<script type="text/javascript">
-	window.addEventListener('load', function(){
-   setTimeout(function(){ window.scrollTo(0, 1); }, 100);
-});//safari浏览器可以通过此代码来隐藏地址栏
-</script>
+<title>{$title}</title>
 </head>
 <body>
-  <div class="wrap page-active">
-    <div class="index-wrap">
-      {include file="./_header.html"}
-      <section style="background:url(images/bg_02.png) no-repeat center bottom;background-size:100%">
-        <div class="detalindex" >
-          <div class="box_title">
-            <div class="box_tit_inner">
-              <h2><span class="more2" id="first">分类 <i>↓</i></span>{$list.name}</h2>
-              <div class="hide-class">
-                <ul class="aboutNav">
-                  {foreach name=pagenavs item=nav from=$pagenavs}
-                    <li class="{if $nav.current}current{/if}">
-                      <a href="{if $nav.childmenu}javascript:;{else}{$nav.link}{/if}">{$nav.name}</a>
-                      {if $nav.childmenu}
-                      <dl class="second">
-                        {foreach key=key item=nav_ls from=$nav.childmenu}
-                        <dd class="{if $nav_ls.current}current{/if}"><a href="{if $nav_ls.childmenu}javascript:;{else}{$nav_ls.link}{/if}">{$nav_ls.name}</a>
-                          {if $nav_ls.childmenu}
-                          <dl class="third">
-                              {foreach key=key item=nav_listsec from=$nav_ls.childmenu}
-                              <dt class="{if $nav_listsec.current}current{/if}"><a href="{$nav_listsec.link}">{$nav_listsec.name}</a></dt>
-                              {/foreach}
-                          </dl> 
-                          {/if}      
-                        </dd>
-                        {/foreach}
-                      </dl>
-                      {/if}
-                    </li>
-                  {/foreach} 
-                </ul>          
-              </div> 
+	<div id="wrapper">
+        <div class="sealed">
+            {include file='./_banner.html'}
+            {include file='./_header.html'}
+            <div class="inside">
+                {include file='./_left.html'}
+                <div class="right">
+                    <div class="main-hd">
+                        <span>当前位置：
+                            <a href="{$site_url}">首页</a>
+                            {foreach item=nav from=$posnavs} - <a href="{$nav.link}">{$nav.name}</a>
+                            {/foreach}
+                        </span>
+                    </div>
+                    <div class="center">
+                        <div class="main">
+                            <ul class="article">
+                                {foreach item=article from=$list.data}
+                                <li>
+                                    <i><img src="{$article.image}"></i>
+                                    <div class="article-list">
+                                        <h4><a href="{$article.link}">{$article.title}</a></h4>
+                                        <p>{$article.description}<a href="{$article.link}">【详细】</a></p>
+                                        <time datetime="{$article.pubtimestamp|date_format:'%Y.%m.%d'}">{$article.pubtimestamp|date_format:'%Y.%m.%d'}</time>
+                                    </div>
+                                </li>
+                                {/foreach}
+                            </ul>
+                        </div>
+                    </div>
+                    {include file='./_page.html'}
+                </div>
             </div>
-          </div>
-          <div class="boxmain-m">
-            <div class="newsing">
-              <ul>
-                {foreach name=article item=article from=$list.data}           
-                <li>
-                  <div class="newsingimg">
-                    <img src="{$article.image}">
-                  </div>
-                  <div class="newsingr">
-                    <h5><a href="{$article.link}">{$article.title}</a></h5>
-                    <p>{$article.description}</p>
-                  </div>
-                </li>
-                {/foreach}
-              </ul>
-              <div class="pagenum">
-                <a href="{$page_links.prev_link}">上一页</a>
-                <a class="on">第{$page_links.current_page}页</a>
-                <a href="{$page_links.next_link}">下一页</a>
-              </div>
-            </div>
-          </div>
         </div>
-      </section>     
-    <footer class="foot"><div class="back-top"><a href="#">TOP</a></div>{$footprint}</footer>  
-    {$footscript}
+        {include file='./_footer.html'}
     </div>
-  </div>
-
 </body>
 </html>

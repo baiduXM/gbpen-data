@@ -1,0 +1,48 @@
+		<div class="header_top">
+			<div class="c">
+				<div class="tel fl">咨询热线：{$global.tel}</div>
+				<div class="lianxi fr">
+					<ul>
+						<li class="wx"><a href="javascript:void(0)">关注微信</a><div class="erweima img_c"><i><img src="{$global.erweima.image}"></i></div></li>
+						<li><a href="{$global.contactt.link}">联系我们</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="header c">
+			<div class="logo img_c"><a href="{$site_url}"><i><img src="{$logo}"></i></a></div>
+			<div class="nav">
+				<ul class="one">
+					{foreach item=nav from=$navs}
+					    <li class="{if $nav.current}cu{/if}" style="width:{100/($navs|count)}%">
+							<a href="{$nav.link}">{$nav.name}</a>
+							{if $nav.childmenu}
+							<ul class="two">
+								{foreach item=subnav from=$nav.childmenu}
+								<li><a href="{$subnav.link}">{$subnav.name}</a></li>
+								{/foreach}
+							</ul>
+							{/if}
+						</li>
+					{/foreach}
+				</ul>
+			</div>
+		</div>
+		<div class="banner animatedParent">
+			<div class="bd bd_banner">
+				<ul>
+					{foreach item=slidepics from=$global.slidepics}
+					<li><a href="{$slidepics.link}"><i><img src="{$slidepics.image}"></i></a></li>
+					{/foreach}
+				</ul>
+			</div>
+			<div class="hd hd_banner">
+				<ul>
+					{foreach item=slidepics from=$global.slidepics}
+					<li></li>
+					{/foreach}
+				</ul>
+			</div>
+			<div class="prev prev_banner animated fadeInLeft"></div>
+			<div class="next next_banner animated fadeInRight"></div>
+		</div>

@@ -1,0 +1,23 @@
+		<div class="header">
+			<div class="head_menu"><i class="iconfont ftt">&#xe603;</i></div>
+			<div class="logo img_c"><a href="{$site_url}"><i><img src="{$logo}"></i></a></div>
+			<div class="sr_box" id="sr_box"><i class="iconfont ftt">&#xe636;</i></div>
+		</div>
+		<div class="nav">
+			<div class="swiper-container swiper-container-nav c">
+				<div class="swiper-wrapper swiper-wrapper-nav">
+					<div class="swiper-slide swiper-slide-nav"><a href="{$site_url}">网站首页</a></div>
+					{foreach item=nav from=$navs}
+						<div class="swiper-slide swiper-slide-nav"><a href="{$nav.link}">{$nav.name}</a></div>
+					{/foreach}
+				</div>
+			</div>
+		</div>
+		<div class="swiper-container swiper-container-banner">
+			<ul class="swiper-wrapper swiper-wrapper-banner">
+				{foreach item=slidepics from=$global.slidepics_s}
+				<li class="swiper-slide swiper-slide-banner img_c"><a href="{$slidepics.link}"><i><img src="{$slidepics.image}"></i></a></li>
+				{/foreach}
+			</ul>
+			<ul class="swiper-pagination swiper-pagination-banner"><li></li></ul>
+		</div>

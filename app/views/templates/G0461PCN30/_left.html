@@ -1,0 +1,79 @@
+			<div class="left fl animated fadeInLeft">
+				{if $pagenavs}
+					<div class="left_public">
+						<div class="left_top">{$posnavs[0].name}</div>
+						<div class="left_list">
+							<ul class="first">
+								{foreach item=nav from=$pagenavs}
+								    <li>
+										<a href="{if $nav.childmenu}javascript:;{else}{$nav.link}{/if}">{$nav.name}</a>
+										{if $nav.childmenu}
+										<ul class="second">
+											{foreach item=subnav from=$nav.childmenu}
+											<li>
+												<a href="{if $subnav.childmenu}javascript:;{else}{$subnav.link}{/if}">{$subnav.name}</a>
+												{if $subnav.childmenu}
+												<ul class="third">
+													{foreach item=lastnav from=$subnav.childmenu}
+													<li><a href="{if $lastnav.childmenu}javascript:;{else}{$lastnav.link}{/if}">{$lastnav.name}</a></li>
+													{/foreach}
+												</ul>
+												{/if}
+											</li>
+											{/foreach}
+										</ul>
+										{/if}
+								    </li>
+								{/foreach}
+							</ul>
+						</div>
+					</div>
+				{else}
+					<div class="left_public">
+						<div class="left_top">{$global.pagenavs.name}</div>
+						<div class="left_list">
+							<ul class="first">
+								{foreach item=nav from=$global.pagenavs.childmenu}
+								    <li>
+										<a href="{if $nav.childmenu}javascript:;{else}{$nav.link}{/if}">{$nav.name}</a>
+										{if $nav.childmenu}
+										<ul class="second">
+											{foreach item=subnav from=$nav.childmenu}
+											<li>
+												<a href="{if $subnav.childmenu}javascript:;{else}{$subnav.link}{/if}">{$subnav.name}</a>
+												{if $subnav.childmenu}
+												<ul class="third">
+													{foreach item=lastnav from=$subnav.childmenu}
+													<li><a href="{if $lastnav.childmenu}javascript:;{else}{$lastnav.link}{/if}">{$lastnav.name}</a></li>
+													{/foreach}
+												</ul>
+												{/if}
+											</li>
+											{/foreach}
+										</ul>
+										{/if}
+								    </li>
+								{/foreach}
+							</ul>
+						</div>
+					</div>
+				{/if}
+				<div class="left_add">
+					<div class="headline headline_p">
+						<div class="bt bt_p fl">{$global.mkk.name}</div>
+						<div class="imore imore_p fr"><a href="{$global.mkk.link}"></a></div>
+					</div>
+					<div class="made add">
+						<div class="bd bd_made bd_add">
+							<ul>
+								{foreach item=made from=$global.mkk.data}
+								<li><a href="{$made.link}">
+									<dl class="made_img add_img img_c"><i><img src="{$made.image}"></i></dl>
+									<dl class="made_bt add_bt">{$made.title}</dl>
+								</a></li>
+								{/foreach}
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>

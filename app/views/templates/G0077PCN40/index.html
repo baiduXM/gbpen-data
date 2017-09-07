@@ -64,10 +64,14 @@
       <div class="tu_img"><img src="{$index.news.image}" /></div>
       <div class="news_text">
         <ul>
-          {foreach name=news item=news from=$index.news.data}
+          <!-- {foreach name=news item=news from=$index.news.data}
           {if $news@index+1 gte 2 and $news@index+1 lte 7}
           <li><a href="{$news.link}">> {$news.title}</a></li>
           {/if}
+          {/foreach} -->
+          {foreach name=news item=news from=$index.news.data}
+          <li><a href="{$news.link}">> {$news.title}</a></li>
+          {if $news@index+1 eq 6}{break}{/if}
           {/foreach}
         </ul>
       </div>

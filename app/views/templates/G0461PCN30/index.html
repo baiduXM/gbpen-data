@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<script type="text/javascript">
+    {if $site_another_url}
+        if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+            location.href = '{$site_another_url}';
+        }
+    {/if}
+    </script>
+
+    
+
+    <meta name="keywords" content="{$keywords}"/>
+    <meta name="description" content="{$description}"/>
+	<meta charset="UTF-8">
+	<title>{$title}</title>
+	<link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
+	<link rel="stylesheet" href="{$site_url}css/animate.css">
+	<link rel="stylesheet" type="text/css" href="{$site_url}css/master.css">
+	<script src="{$site_url}js/jquery-1.9.1.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.1.js"></script>
+	<script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.1.source.js"></script>
+	<script type="text/javascript" src="{$site_url}js/function.js"></script>
+	{$headscript}
+</head>
+<body>
+	<div class="wrapper">
+		<div class="header_top">
+			<div class="c">
+				<div class="tel fl">咨询热线：{$global.tel}</div>
+				<div class="lianxi fr">
+					<ul>
+						<li class="wx"><a href="javascript:void(0)">关注微信</a><div class="erweima img_c"><i><img src="{$global.erweima.image}"></i></div></li>
+						<li><a href="{$global.contactt.link}">联系我们</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="header c">
+			<div class="logo img_c"><a href="{$site_url}"><i><img src="{$logo}"></i></a></div>
+			<div class="nav">
+				<ul class="one">
+					{foreach item=nav from=$navs}
+					    <li class="{if $nav.current}cu{/if}" style="width:{100/($navs|count)}%">
+							<a href="{$nav.link}">{$nav.name}</a>
+							{if $nav.childmenu}
+							<ul class="two">
+								{foreach item=subnav from=$nav.childmenu}
+								<li><a href="{$subnav.link}">{$subnav.name}</a></li>
+								{/foreach}
+							</ul>
+							{/if}
+						</li>
+					{/foreach}
+				</ul>
+			</div>
+		</div>
+		<div class="banner ibanner animatedParent">
+			<div class="bd bd_banner">
+				<ul>
+					{foreach item=slidepics from=$global.slidepics}
+					<li><a href="{$slidepics.link}"><i><img src="{$slidepics.image}"></i></a></li>
+					{/foreach}
+				</ul>
+			</div>
+			<div class="hd hd_banner">
+				<ul>
+					{foreach item=slidepics from=$global.slidepics}
+					<li></li>
+					{/foreach}
+				</ul>
+			</div>
+			<div class="prev prev_banner animated fadeInLeft"></div>
+			<div class="next next_banner animated fadeInRight"></div>
+		</div>
+		<div class="banner_below c animatedParent">
+			<div class="radio fl animated fadeInUp">
+				<span>最新消息： </span>
+				<div class="bd bd_radio">
+					<ul>
+						{foreach item=radio from=$index.radio.data}
+							<li><a href="{$radio.link}">{$radio.title}</a></li>
+						{/foreach}
+					</ul>
+				</div>
+			</div>
+			<div class="search_area fr animated fadeInUp">
+				<ul class="hot_key fl">
+					<li class="key">关键词搜索：</li>
+					{foreach item=key from=$index.keys}
+						<li><a href="{$key.link}">{$key.title}</a></li>
+					{/foreach}
+				</ul>
+				<div class="searchbox fl">
+					<form id="search" action="{$search_action}" name="search">
+						<input class="search_box" type="text" name="s" id="keyword" placeholder="请输入搜索关键字" />
+						<input class="btn_s fr" type="submit" src="{$site_url}images/search.png" value="" />
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="product animatedParent">
+			<div class="c">
+				<div class="hd hd_pro animated fadeInDown">
+					<ul>
+						{foreach item=pro from=$index.product.childmenu}
+							<li class="pro_li">
+								<dl class="hd_tit"><a href="{$pro.link}">{$pro.name}</a></dl>
+								<ul class="hd_list">
+									{foreach item=protwo from=$pro.data}
+										<li><a href="{$protwo.link}">{$protwo.title}</a></li>
+										{if $protwo@index+1 eq 6}{break}{/if}
+									{/foreach}
+								</ul>
+							</li>
+							{if $pro@index+1 eq 4}{break}{/if}
+						{/foreach}
+					</ul>
+				</div>
+				<div class="bd bd_pro animated fadeInUp">
+					{foreach item=pro from=$index.product.childmenu}
+						<div class="pro_card">
+							<ul>
+								{foreach item=protwo from=$pro.data}
+									<li><a href="{$protwo.link}">
+										<dl class="pro_img img_c"><i><img src="{$protwo.image}"></i><em class="pro_hover"></em></dl>
+										<dl class="pro_bt">{$protwo.title}</dl>
+									</a></li>
+									{if $protwo@index+1 eq 10}{break}{/if}
+								{/foreach}
+							</ul>
+						</div>
+						{if $pro@index+1 eq 4}{break}{/if}
+					{/foreach}
+				</div>
+			</div>
+		</div>
+		<div class="about c animatedParent">
+			<div class="headline animated bounceInDown">
+				<div class="bt fl">{$index.about.name}</div>
+				<div class="imore fr"><a href="{$index.about.link}"></a></div>
+			</div>
+			<div class="about_data">
+				<div class="hd hd_about fl animated fadeInLeft">
+					<ul>
+						{foreach item=about from=$index.about.childmenu}
+						<li><a href="{$about.link}">{$about.name}</a></li>
+						{/foreach}
+					</ul>
+				</div>
+				<div class="bd bd_about fl animated fadeInRight">
+					{foreach item=about from=$index.about.childmenu}
+					<div class="about_card">
+						<div class="about_nr fl">{$about.description}</div>
+						<div class="about_img img_c fr"><i><img src="{$about.image}"></i></div>
+					</div>
+					{/foreach}
+				</div>
+			</div>
+		</div>
+		<div class="case animatedParent">
+			<div class="c case_data">
+				<div class="bt_case animated fadeInLeft">{$index.case.name}</div>
+				<div class="hd hd_case fl animated fadeInLeft">
+					<ul>
+						{foreach item=case from=$index.case.childmenu}
+						<li><a href="{$case.link}">{$case.name}</a></li>
+						{/foreach}
+					</ul>
+				</div>
+				<div class="bd bd_case fl animated fadeInRight">
+					{foreach item=case from=$index.case.childmenu}
+					<div class="case_card">
+						<ul>
+							{foreach item=caseitem from=$case.data}
+							<li><a href="{$caseitem.link}">
+								<dl class="pro_img case_img img_c"><i><img src="{$caseitem.image}"></i><em class="pro_hover case_hover"></em></dl>
+								<dl class="pro_bt case_bt">{$caseitem.title}</dl>
+							</a></li>
+							{if $caseitem@index+1 eq 4}{break}{/if}
+							{/foreach}
+						</ul>
+					</div>
+					{/foreach}
+				</div>
+			</div>
+		</div>
+		<div class="board c animatedParent">
+			<div class="news fl animated fadeInLeft">
+				<div class="headline head_line">
+					<div class="bt fl">{$index.news.name}</div>
+					<div class="imore fr"><a href="{$index.news.link}"></a></div>
+				</div>
+				<div class="hd hd_news">
+					<ul>
+						{foreach item=news from=$index.news.childmenu}
+						<li><a href="{$news.link}">{$news.name}</a></li>
+						{/foreach}
+					</ul>
+				</div>
+				<div class="bd bd_news">
+					{foreach item=news from=$index.news.childmenu}
+					<div class="news_card">
+						<div class="news_img img_c fl"><i><img src="{$news.image}"></i></div>
+						<ul class="news_data fl">
+							{foreach item=newsitem from=$news.data}
+							<li><a href="{$newsitem.link}">
+								<dl class="news_time fl">
+									<dd class="news_d">{$newsitem.pubtimestamp|date_format:'%m-%d'}</dd>
+									<dd class="news_m">{$newsitem.pubtimestamp|date_format:'%Y'}</dd>
+								</dl>
+								<dl class="news_intro fl">
+									<dd class="news_bt">{$newsitem.title}</dd>
+									<dd class="news_nr">{$newsitem.description}</dd>
+								</dl>
+							</a></li>
+							{if $newsitem@index+1 eq 5}{break}{/if}
+							{/foreach}
+						</ul>
+					</div>
+					{/foreach}
+				</div>
+			</div>
+			<div class="making fl animated fadeInRight">
+				<div class="headline">
+					<div class="bt fl">{$global.mkk.name}</div>
+					<div class="imore fr"><a href="{$global.mkk.link}"></a></div>
+				</div>
+				<div class="made">
+					<div class="bd bd_made">
+						<ul>
+							{foreach item=made from=$global.mkk.data}
+							<li><a href="{$made.link}">
+								<dl class="made_img img_c"><i><img src="{$made.image}"></i></dl>
+								<dl class="made_bt">{$made.title}</dl>
+							</a></li>
+							{/foreach}
+						</ul>
+					</div>
+				</div>
+				<!-- <div class="headline">
+					<div class="bt fl">制作工艺</div>{$global.making.name}
+					<div class="imore fr"><a href="list-image.html"></a></div>
+				</div>
+				<div class="made">
+					<div class="bd bd_made">
+						<ul>
+							{foreach item=made from=$global.making}
+							<li><a href="{$made.link}">
+								<dl class="made_img img_c"><i><img src="{$made.image}"></i></dl>
+								<dl class="made_bt">{$made.title}</dl>
+							</a></li>
+							{/foreach}
+						</ul>
+					</div>
+				</div> -->
+			</div>
+		</div>
+		{include file='./_footer.html'}
+	</div>
+	<script src="{$site_url}js/css3-animate-it.js" type="text/javascript"></script>
+</body>
+</html>

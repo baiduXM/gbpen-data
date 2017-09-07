@@ -23,7 +23,7 @@ $(document).ready(function(){
 		$(".class").addClass("hover")
 		$(".wrap").addClass("hover1")
 		$(".opacity2").show()
-		$(".index-wrap").off('touchmove', disableScroll);
+		// $(".index-wrap").off('touchmove', disableScroll);
 	})
 	$(".class-close,.opacity2").click(function(){
 		$(".class").removeClass("hover")

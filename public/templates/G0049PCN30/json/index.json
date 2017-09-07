@@ -1,0 +1,120 @@
+{
+	"slidepics": {
+		"value": [{
+			"title": "banner",
+			"image": "images/banner.jpg",
+			"link": "article/1.html",
+			"description": "首页大图"
+		}, {
+			"title": "测试图2",
+			"image": "images/banner2.jpg",
+			"link": "http://www.baidu.com"
+		},{
+			"title": "测试图3",
+			"image": "images/banner.jpg",
+			"link": "http://www.baidu.com"
+		}],
+		"description": "首页大图滚动",
+		"type": "images",
+		"config": {
+			"width":1920,
+			"height":550,
+			"forcesize": "true",
+			"limit": 0
+		}
+	},		
+    "pro":{
+		"description": "产品中心",
+		"value": {},
+		"type": "list",
+		"config": {
+			"width": 230,
+			"height": 400,
+			"showchilddata": true
+		}	
+	},
+    "newsedit": {
+		"description": "新闻中心",
+		"value": {},
+		"type": "list",
+		"config": {
+			"width": 533,
+			"height": 350
+		}			
+	},	
+	"xwzxedit": {
+		"description": "相关资讯",
+		"value": {},
+		"type": "list",
+		"config": {
+			"width": 769,
+			"height": 404
+		}			
+	},
+	"goodsimg1":{
+		"value": {
+			"title": "首页产品图1",
+			"image": "images/food1.jpg",
+			"link": ""
+		},
+		"description": "首页产品图1",
+		"type": "image",
+		"config": {
+			"width":195,
+			"height":237
+		}
+	},
+	"goodsimg2":{
+		"value": {
+			"title": "首页产品图2",
+			"image": "images/food2.jpg",
+			"link": ""
+		},
+		"description": "首页产品图2",
+		"type": "image",
+		"config": {
+			"width":195,
+			"height":237
+		}
+	},
+	"goodsimg3":{
+		"value": {
+			"title": "首页产品图3",
+			"image": "images/food3.jpg",
+			"link": ""
+		},
+		"description": "首页产品图3",
+		"type": "image",
+		"config": {
+			"width":195,
+			"height":237
+		}
+	},
+	"goodsimg4":{
+		"value": {
+			"title": "首页产品图4",
+			"image": "images/food4.jpg",
+			"link": ""
+		},
+		"description": "首页产品图4",
+		"type": "image",
+		"config": {
+			"width":195,
+			"height":237
+		}
+	},
+	"bottomimg":{
+		"value": {
+			"title": "底部联系我们右侧图",
+			"image": "images/contimg.jpg",
+			"link": ""
+		},
+		"description": "底部联系我们右侧图",
+		"type": "image",
+		"config": {
+			"width":431,
+			"height":197
+		}
+	}
+	
+}
