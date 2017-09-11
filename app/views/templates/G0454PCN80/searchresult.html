@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     
+
     <meta charset="UTF-8">
     <script type="text/javascript">
         // 识别为手机客户端，自动跳转手机页面
@@ -36,12 +37,11 @@
         </div>
         <div class="det-rt">
             <div class="pos">
-                <span class="list_name">{$list.name}</span>
+                <span class="list_name">搜索结果</span>
                 <ul class="posnavs rt">
                     <li> 当前所在位置 :</li>
-                    {foreach item=nav from=$posnavs}
-                    <li class=""><a href="{$nav.link}">{$nav.name}</a><i> - </i></li>
-                    {/foreach}
+                    <li class=""><a href="/">首页</a><i> - </i></li>
+                    <li class="">搜索结果</li>
                 </ul>
             </div>
             <div class="det-cont">

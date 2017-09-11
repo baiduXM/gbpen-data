@@ -27,7 +27,7 @@ img{border: none;vertical-align:middle}
 .nav .sub{ display: none;/*默认隐藏*/  width:600px;position:absolute; left:0px; top:101px;margin-left: -228px;white-space: nowrap;text-align: center;background: #ffffe8}
 .nav .sub a{ color:#333;font-size: 14px;line-height: 34px;text-align: center;height:34px;overflow: hidden;margin: 0 10px}
 .nav .sub a:hover{color: #ff3c3f}
-.topbg .subbg{width: 100%;height: 34px;overflow: hidden;line-height: 34px;position: absolute;left: 0;top: 101px;background: #fff;border-bottom: 1px solid #f5ebe5;display: none;float: none;z-index: 98}
+.topbg .subbg{width: 100%;height: 34px;overflow: hidden;line-height: 34px;position: absolute;left: 0;top: 101px;background: #ffffe8;border-bottom: 1px solid #f5ebe5;display: none;float: none;z-index: 98}
 
 .nav h3 a:hover i{
 	color: #ff3c3f;
@@ -249,10 +249,10 @@ img{border: none;vertical-align:middle}
 .newsingtitle{background: #bb90bb}
 .protitle{background: #ecd45d}
 .navigation{width: 100%;height: auto;overflow: hidden;margin-top: 10px;}
-.aboutNav{width: 100%;height: 45px;position: relative;}
+.aboutNav{max-width: 100%;height: 45px;position: relative;margin: 0 auto}
 .aboutNav>li{min-width: 133px;height: auto;/*overflow: hidden;*/float: left;margin-right: 20px;}
-.aboutNav>li>a{color: #efefef;font-size: 20px;text-indent: 22px;line-height: 45px;height: 45px;overflow: hidden;display: block;border-radius:15px; border:2px solid #efefef}
-.aboutNav>li>a:hover,.navigation li a.cu,.aboutNav>li.current>a{color: #ff413c;border:2px solid #f00;border-radius:15px;}
+.aboutNav>li>a{color: #909090;font-size: 20px;text-indent: 22px;line-height: 45px;height: 45px;overflow: hidden;display: block;border:  1px solid #B7B5B5 ; border-radius: 15px;}
+.aboutNav>li>a:hover,.navigation li a.cu,.aboutNav>li.current>a{color: #ff413c;border:  1px solid #ff6785 ; border-radius: 15px;}
 .aboutNav>li>dl{/*display: none;*/width: 1200px;height: 30px;margin-top: 15px;position: absolute;left: 0;top: 45px}
 .aboutNav>li>dl>dd{float: left;color: #efefef;line-height: 30px;height: 30px;}
 .aboutNav>li>dl>dd>a{color: #efefef;font-size: 14px;line-height: 30px;height: 30px;overflow: hidden;}

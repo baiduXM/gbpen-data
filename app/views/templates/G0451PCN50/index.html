@@ -72,8 +72,8 @@
                         <div class="about">
                             <div class="bg"></div>
                             <div class="detail">
-                                <h3><a href="{$index.about.link}">{$index.about.description}</a></h3>
-                                <div class="nr">{$index.about.content|unescape:"html"}</div>
+                                <h3><a href="{$index.about.link}">{$index.about.name}</a></h3>
+                                <div class="nr">{$index.about.description}</div>
                                 <a class="btn" href="{$index.about.link}">查看更多</a>
                             </div>
                         </div>
@@ -101,9 +101,7 @@
                                         <div class="right">
                                             <h3>{$news.title}</h3>
                                             <a href="{$news.link}">
-                                            <div class="nr limit" data-limit="70">一个有关闷养的问题：“多肉到底闷养还是通风”，对这个问题有疑惑的一般都是新入门的花友，看到过不闷养依旧水灵灵的多肉，也见到过闷养的水灵灵的多...一个有关闷养的问题：“多肉到底闷养还是通风”，对这个
-                                                问题有疑惑的一般都是新入门的花友，看到过不闷养依旧水灵灵的多肉，也见到过
-                                                闷养的水灵灵的多...<i>[详情]</i></div>
+                                            <div class="nr limit" data-limit="70">{$news.description}<i>[详情]</i></div>
                                             </a>
                                         </div>
                                     </div>

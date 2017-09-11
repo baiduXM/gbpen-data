@@ -56,8 +56,9 @@ $(function(){
         prevButton: '.swiper-button-prev'
     });
     var mySwiper3 = new Swiper ('.swiper-m3', {
-        autoplay : 1500,
-        paginationClickable :true,
+          autoplay : 1500,
+         paginationClickable :true,
+        loop:true,
         nextButton: '.swiper-button-next',
         prevButton: '.swiper-button-prev'
     });

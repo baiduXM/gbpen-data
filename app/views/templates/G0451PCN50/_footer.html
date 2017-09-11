@@ -5,7 +5,7 @@
                 <h3 class="h3">友情链接</h3>
                 <ul>
                     {foreach name=friend item=friend from=$global.links}
-                    <li><a href="{$friend.link}"><img src="{$friend.image}" alt=""/></a></li>
+                    <li><a href="{$friend.link}" target="_blank"><img src="{$friend.image}" alt=""/></a></li>
                     {/foreach}
                 </ul>
             </div>
@@ -33,7 +33,7 @@
                         </div>
                         <div class="nr">{$contact.telephone}</div>
                     </div>
-                    <div class="two">
+                    <!-- <div class="two">
                         <div class="title">
                             <a href="{$global.bz.link}">
                                 <span class="h3">{$global.bz.name}</span>
@@ -41,7 +41,7 @@
                             </a>
                         </div>
                         <div class="nr"><a href="{$global.bz.link}">{$global.bz.description}</a></div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>

@@ -142,7 +142,7 @@ ul.news-list li a:before{ top:5px; left:0px; text-indent:0px; height:28px; line-
 .next2{ border-top:1px dotted #dfdfdf; height:auto; overflow:hidden; padding:5px 0px; }
 .next2 dl{ height:auto; overflow:hidden;}
 .next2 dl a{ color:#333;}
-.fixed-top{ width:100%; position: absolute; top:0px; left:0px; z-index:2; text-align:center; color:#fff; text-indent:0px; opacity:1; padding:0; height:40px; line-height:40px;   }
+.fixed-top{ width:100%; z-index:2; text-align:center; color:#fff; text-indent:0px; opacity:1; padding:0; height:40px; line-height:40px;   }
 .fixed-top div{ position:relative; z-index:1}
 
 .ny-wrap{ margin:25px auto 0px;}

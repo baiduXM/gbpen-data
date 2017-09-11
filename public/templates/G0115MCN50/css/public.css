@@ -35,7 +35,7 @@ h1,h2,h3,h4,h5{font-size:14px;margin:0;padding:0; font-weight:normal;}
 .logo-ny{width:100%; position:relative;}
 .foot{ padding:8px; margin:15px 0px 0px; height:auto;text-align:left;   color:#fff; position:relative;}
 .foot:after{display:block; background:rgba(255,255,255,0.2);content:" "; position:absolute; top:0; left:0;width:100%; padding:8px; height:100%;  }
-.foot .text{ position:relative; z-index:1 }
+.foot .text{ position:relative; z-index:1; width: 80%;}
 .back-top{ width:40px!important; height:24px!important; border-radius:15px; line-height:24px;  display:block; background:rgba(0,0,0,.3);
     text-align:center;  color:#fff; font-size:1em; position:relative;z-index:22; margin:auto; position:absolute!important;
     right:7px!important; top:7px!important;left:80%!important; overflow:hidden }

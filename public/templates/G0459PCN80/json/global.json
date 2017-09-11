@@ -1,4 +1,17 @@
 {
+  "bodyBg": {
+    "value": {
+      "title": "页面背景图",
+      "image": "images/index.jpg",
+      "link": ""
+    },
+    "description": "页面背景图",
+    "type": "image",
+    "config": {
+      "width": 1920,
+      "height": 1513
+    }
+  },
   "imgTop": {
     "value": {
       "title": "装饰图",
@@ -6,7 +19,11 @@
       "link": "http://tieba.baidu.com"
     },
     "description": "头部装饰图",
-    "type": "image"
+    "type": "image",
+    "config": {
+      "width": 150,
+      "height": 150
+    }
   },
   "textTop": {
     "value": "SELECT THE BEST INGREDIENTS DAILY",
@@ -39,7 +56,11 @@
       "link": "http://tieba.baidu.com"
     },
     "description": "内页大图",
-    "type": "image"
+    "type": "image",
+    "config": {
+      "width": 1180,
+      "height": 104
+    }
   },
   "detBan2": {
     "value": {
@@ -48,7 +69,11 @@
       "link": "http://tieba.baidu.com"
     },
     "description": "内页大图",
-    "type": "image"
+    "type": "image",
+    "config": {
+      "width": 1180,
+      "height": 104
+    }
   },
   "detBan3": {
     "value": {
@@ -57,7 +82,11 @@
       "link": "http://tieba.baidu.com"
     },
     "description": "内页大图",
-    "type": "image"
+    "type": "image",
+    "config": {
+      "width": 1180,
+      "height": 104
+    }
   },
   "pagenavs": {
     "value": {},
@@ -66,6 +95,19 @@
     "config": {
       "filter": "list,page",
       "mustchild": true
+    }
+  },
+  "listImg": {
+    "value": {
+      "title": "icon图标",
+      "image": "images/2_03.png",
+      "link": ""
+    },
+    "description": "list-image页面中图片上的图标",
+    "type": "image",
+    "config": {
+      "width": 97,
+      "height": 84
     }
   }
 

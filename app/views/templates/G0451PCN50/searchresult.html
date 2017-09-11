@@ -45,14 +45,12 @@
                 {include file='./_aside.html'}
                 <div class="aside_r">
                     <div class="aside_title">
-                        <h3 class="h3">{$posnavs[0].name}</h3>
+                        <h3 class="h3">搜索结果</h3>
                         <div class="aside_bread">
                             <h6>当前位置：</h6>
                             <ul class="clearfix">
-                                <li class="fl"><a href="/">首页</a></li>
-                                {foreach item=nav from=$posnavs}
-                                <li class="fl">&nbsp;&gt;&nbsp;<a href="{$nav.link}">{$nav.name}</a></li>
-                                {/foreach}
+                                <li class="fl"><a href="{$site_url}">首页</a></li>
+                                <li class="fl">&nbsp;&gt;&nbsp;<a>搜索结果</a></li>
                             </ul>
                         </div>
                     </div>

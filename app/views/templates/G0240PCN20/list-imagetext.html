@@ -14,6 +14,7 @@
 <meta http-equiv="x-ua-compatible" content="ie=9" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>{$title}</title>
+	
 <meta name="keywords" content="{$keywords}" />
 <meta name="description" content="{$description}" />
 <link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
@@ -26,7 +27,7 @@
 			<div class="bigtitle newsingtitle" data-limit="4">{$posnavs[0].name}</div>
 			{include file="./_pagenavs_sub3.html"} 
 			<div class="info newsing">
-				<ul>
+				<ul class="">
 					{foreach item=article from=$list.data}
 						<li>
 							<div class="newsingimg"><a href="{$article.link}"><img src="{$article.image}"></a></div>

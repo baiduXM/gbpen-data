@@ -1,0 +1,175 @@
+body{ color:#555555; font-family:Microsoft Yahei,Arial, Helvetica, sans-serif; background:#ffffff; }
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,input,textarea,div{margin:0;padding:0; list-style:none; line-height:24px; font-size:12px; font-weight:normal}
+body,div,ul,li,dl,dt,dd{ font-size:12px;}
+.clearfix:after { content:'\20'; display:block; height:0; clear:both; }
+.clearfix { *zoom:1; font-size:0px;}
+a{ color:#000000; text-decoration:none; }
+a:hover{ color:#a50000; } 
+img{ border:none;}
+.c{ clear:both}
+
+.wrapper{width:1200px; margin:0 auto; }
+
+display:block; white-space:nowrap; text-overflow:ellipsis; overflow:hidden;
+strong{display: block;margin: 0 auto;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+
+
+#header_bg{ background:url(../images/top_bg.jpg) repeat-x;} 
+#header{ height:130px; position:relative;}
+
+
+#logo{width:405px;height:110px;float:left; position:relative; margin-top:10px; }
+#logo a{display: block;height:110px;width:405px;position: absolute;bottom: 0px; left:0;}
+#logo img{max-width:405px; max-height:110px; position:absolute; top:0; left:0; right:0; bottom:0; margin:auto}
+
+
+#header .search{ position:absolute; width:301px; top:20px; right:15px;}
+#header .word{ float:left; width:60px; font-size:14px; font-weight:bold; color:#272727; padding-right:8px; height:29px; overflow:hidden; line-height:29px;}
+#header .search_area{ background:url(../images/sou_by.jpg) no-repeat; width:163px; height:29px; line-height:29px; float:left; border:none; color:#999; text-indent:10px; }
+#header .search_btn{ background:url(../images/sou_td.png) no-repeat; width:70px; height:29px; overflow:hidden; border:none; float:left; position:relative; left:0px; top:0px; font-size:14px; font-weight:bold; color:#FFF;}
+
+#nav{ width:697px; float:right; margin-top:64px;}
+#nav ul li{ float:left; font-size:14px; text-align:center; height:65px;background:url(../images/nav_line.jpg) no-repeat;}
+#nav ul li p{ height:65px; line-height:65px; overflow:hidden;font-size:14px;}
+#nav ul li a{ color:#3a3a3a; padding:0 5px; line-height:65px; text-align:center;}
+#nav ul li p:hover{ background:url(../images/nav_bot.jpg) bottom center no-repeat;}
+
+#nav ul li .cc{background:#f0f0f0;height:40px; line-height:40px;display:none; text-align:center; 
+width:100%; position:relative; z-index:100; margin-top:0px; }
+#nav ul li .cc:hover{}
+#nav ul li .cc a{width:92%; margin:auto;color:#333333; padding:0 4%; overflow:hidden; height:40px; line-height:40px; display: block;}
+#nav ul li .cc a:hover{ text-decoration:underline;color:#333333;}
+
+#banner{ width:100%; height:555px; overflow:hidden;}
+
+#container{ margin-top:48px;}
+
+.about{ width:725px; float:left; margin-left:22px; display:inline; background:url(../images/about_bg.jpg) repeat-y; }
+.about .title{ width:678px; margin:auto; height:41px; overflow:hidden; background:url(../images/about_line.jpg) bottom no-repeat;} 
+.about .title span{float:right;}
+
+.about .title h2{background:url(../images/title.jpg) no-repeat 10px 13px; height:40px; line-height:40px; overflow:hidden;color:#005196; font-size:14px;}
+.about .title h2 b{  height:40px; overflow:hidden; float:left; color:#6d6d6d; font-size:18px; margin-left:28px; line-height:40px; margin-right:9px; font-weight:normal; text-transform:uppercase;}
+
+
+
+.about .about_img{ display:inline-block;*display:inline;*zoom:1; height:173px; overflow:hidden; margin-right:15px; border:2px #a2a2a2 solid; }
+.about .about_img img{ height:100%; display:block; }
+.about .about_text{ display:inline-block; vertical-align:top;*display:inline;*zoom:1; height:177px; overflow:hidden; font-size:14px; line-height:30px; color:#555555;}
+
+.about .inner { width:678px; margin:auto; padding:30px 23px 23px 23px; height:183px; overflow:hidden;}
+
+
+
+.news{ width:415px; float:right; margin-right:25px; display:inline; background:url(../images/news_bg.jpg) repeat-y;}
+
+.news .title{ width:355px; margin:auto; height:41px; overflow:hidden; background:url(../images/about_line.jpg) bottom no-repeat;} 
+.news .title span{float:right;}
+
+.news .title h2{background:url(../images/title.jpg) no-repeat 10px 13px; height:40px; line-height:40px; overflow:hidden;color:#005196; font-size:14px;}
+.news .title h2 b{ height:40px; overflow:hidden; float:left; color:#6d6d6d; font-size:18px; margin-left:28px; line-height:40px; margin-right:9px; font-weight:normal; text-transform:uppercase;}
+
+
+
+.news .inner{ height:236px; overflow:hidden; }
+
+.news_img{ height:66px; overflow:hidden; margin-top:13px; margin-bottom:10px; text-align:center;}
+.news_img img{ height:100%; margin:auto}
+
+.news ul{ width:355px; margin:auto; height:135px; overflow:hidden;}
+.news ul li{ height:32px; overflow:hidden; line-height:32px; font-size:14px; background:url(../images/icon.jpg) no-repeat left 14px; padding-left:23px; }
+
+
+
+.products{ margin-top:10px; width:1150px; margin:auto; background:url(../images/product_bg.jpg) repeat-y;}
+
+.products .title{ width:1099px; margin:auto; height:41px; overflow:hidden; background:url(../images/product_line.jpg) bottom no-repeat;} 
+.products .title span{float:right;}
+
+.products .title h2{background:url(../images/title.jpg) no-repeat 10px 13px; height:40px; line-height:40px; overflow:hidden;color:#005196; font-size:14px;}
+.products .title h2 b{  height:40px; overflow:hidden; float:left; color:#6d6d6d; font-size:18px; margin-left:28px; line-height:40px; margin-right:9px; font-weight:normal; text-transform:uppercase;}
+
+
+
+.products .inner{ width:1099px; margin:auto; height:340px; padding-top:27px;}
+
+.products .inner ul li{ float:left; width:255px; margin-right:18px; text-align:center; border:1px #dbdbdb solid; position:relative}
+.products .inner ul li a{ color:#7a7a7a; font-size:14px;}
+
+.products .inner ul li .pic{ width:255px; height:255px; overflow:hidden; margin:auto; border-bottom:1px #f1eff0 solid;} 
+.products .inner ul li .pic img{ display:block; }
+
+.products .inner ul li .text{width:220px; margin:auto; text-align:center; line-height:43px; height:43px; overflow:hidden;}
+
+.products .inner ul li .line{ width:80px; border-bottom:#006cb1 3px solid;  position:absolute; bottom:-2px; margin:0 auto; left:90px; }
+
+.products .inner .bd{ width:1099px; margin:auto; height:305px; overflow:hidden;}
+
+
+
+#footer{ text-align:center; background:#212121; padding-top:10px; padding-bottom:5px; color:#fff;}
+
+.link{ background:url(../images/link_line.jpg) bottom repeat-x; text-align:center; display:inline-block;}
+.link b{ color:#fff; font-size:16px; background:url(../images/link.png) no-repeat left; padding-left:30px; height:40px; line-height:40px; }
+.link a{ color:#ffffff; padding:0 5px; font-size:14px; line-height:40px;}
+
+#footer .copyright{ padding:10px 0; color:#ffffff; }
+#footer .copyright a{ color:#ffffff;}
+#footer .copyright a:hover{ color:#F00}
+
+/*sidebar css*/
+.sidebar{ width:272px; float:left; margin-top:35px; margin-left:20px; display:inline; }
+
+.subnav{ width:272px; background:url(../images/sidebar_bg.jpg) repeat-y; }
+
+.subnav .alefttitle{ background:url(../images/alefttitle_line.jpg) bottom no-repeat; width:255px; margin:auto; height:41px; line-height:41px; overflow:hidden;}
+
+.subnav .alefttitle b{  color:#6d6d6d; font-size:18px; margin-left:28px; line-height:40px; margin-right:9px; font-weight:normal; text-transform:uppercase;}
+
+.subnav .alefttitle p{ color:#005196; font-size:14px; line-height:40px; text-indent:0.6cm; display: inline-block;}
+
+
+.category{  width:237px; height:auto; padding-top:20px; padding-bottom:30px; }
+.category ul{}
+.category ul li .firsta{ background:url(../images/firsta.jpg) no-repeat; display:block; width:190px; margin-left:25px; padding-left:25px; line-height:36px; height:36px; margin-bottom:15px; padding-right:12px; overflow:hidden;}
+
+.category ul li a.firsta{ color:#FFF; font-size:15px; font-weight:normal; }
+.category ul li a:hover.firsta{ background:url(../images/firsta2.jpg) no-repeat; display:block;}
+
+ul.second li .seconda{ padding-left:25px; line-height:36px; height:36px; overflow:hidden;  margin-left:65px;}
+ul.second li a.seconda{  color:#5c5c5c; background:url(../images/seconda.jpg) 3px 16px no-repeat; display:block; height:36px; overflow:hidden; }
+ul.second li a.seconda:hover{color:#FF0000}
+
+ul.third li a.thirda{ display:block; padding-left:25px; line-height:36px; height:36px; overflow:hidden; background:url(../images/thirda.jpg) 3px 16px no-repeat; display:block; margin-left:75px; color:#5c5c5c;}
+ul.third li a.thirda:hover{color:#FF0000}
+
+.subcontact{ background:url(../images/sidebar_bg.jpg) repeat-y;}
+
+.subcontact .title h2{background:url(../images/alefttitle_line.jpg) bottom no-repeat; width:255px; margin:auto; height:41px;} 
+
+.subcontact .title h2 b{ float:left; color:#6d6d6d; font-size:18px; margin-left:28px; line-height:40px; margin-right:9px; font-weight:normal; text-transform:uppercase;}
+
+.subcontact .title h2 p{ float:left; color:#005196; font-size:14px; line-height:40px; text-indent: 0.6cm; }
+
+.subcontact .inner { background:url(../images/subcontact.jpg) right bottom no-repeat; padding:8px 31px 10px 24px; line-height:28px; color:#000000; margin-right:8px;}
+.subcontact .inner h3{ font-size:16px; color:#a50000; font-weight:bold; margin-bottom:10px;}
+
+
+
+/*main css*/
+.main{ float:right; width:870px; margin-top:35px; margin-right:26px; display:inline; background:url(../images/main_bg.jpg) repeat-y;}
+
+.crumb{ background:url(../images/crumb.jpg) bottom no-repeat; width:810px; margin:auto; height:40px; overflow:hidden;}
+
+.crumb h2 { color:#6d6d6d; font-size:18px; margin-left:20px; line-height:40px; font-weight:normal; text-transform:uppercase; height:40px; overflow:hidden;}
+
+.crumb h2 b	{ color:#005196; font-size:14px;  margin-left:9px; font-weight:normal;}
+
+.crumb span{ float:right; color:#a19a9a; padding-left:30px; padding-right:30px; font-size:12px; font-weight:normal; background:url(../images/crumb_map.jpg) left no-repeat; height:40px; line-height:40px; overflow:hidden; text-align:right; }
+.crumb span a{  color:#a19a9a; }
+
+
+.article { background:url(../images/bar_bg.jpg) repeat; padding:10px 25px 0 30px;  margin-bottom:20px; }
+.article img{ max-width:810px; overflow:hidden}
+
+.quickbar_nav ul li.quickbar_phone .quickbar_hoverbox li span.num{ font-size: 24px !important; }

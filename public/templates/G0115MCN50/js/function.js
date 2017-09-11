@@ -8,11 +8,11 @@ $(document).ready(function(){
 					autoPlay:true,
 					interTime:6000 //自动播放
 				});
-	$(".index-wrap").height($(window).height()-$(".fixed").height())
+	// $(".index-wrap").height($(window).height()-$(".fixed").height())
 	$(".class-m").height($(".class").outerHeight()-$(".class-top").outerHeight())
 	$(window).resize(function(){
 		$(".class-m").height($(".class").outerHeight()-$(".class-top").outerHeight())
-		$(".index-wrap").height($(window).height()-$(".fixed").height())
+		// $(".index-wrap").height($(window).height()-$(".fixed").height())
 	})
 	
 	$("#share_btn").click(function(){

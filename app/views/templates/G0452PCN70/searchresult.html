@@ -32,19 +32,17 @@
            <img class="detBg" src="{$global.listImg1.image}" alt="">
            <div class="det-had-bg">
                <div class="list-name">
-                   <span class="name1">{$list.name}</span>
-                   <span class="name2">{$list.en_name}</span>
+                   <span class="name1">搜索结果</span>
+                   
                </div>
                <ul class="list-posnavs">
                    <li class="fl"><a href="/"> <i>▪</i> 首页</a></li>
-                   {foreach item=nav from=$posnavs}
-                   <li class="fl"> - <a href="{$nav.link}">{$nav.name}</a></li>
-                   {/foreach}
+                   <li class="fl"> - <a>搜索结果</a></li>
                </ul>
            </div>
        </div>
        <div class="det-list">
-           {include file="./_pagenavs.html"}
+           
            <p class="ser">以下是您搜索的关键字“{$search.keyword}”，搜索的结果有{$search.total} 条</p>
            {foreach item=text from=$search.data}
            <dl class="list-txt">
