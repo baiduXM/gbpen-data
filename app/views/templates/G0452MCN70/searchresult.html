@@ -39,7 +39,7 @@
         <div class="det-topBox">
             <div class="det-title">
                 <div class="det-name">
-                    <p><i></i> <span>{$list.name}</span> </p>
+                    <p><i></i> <span>{$search.data[0].category.name} </span> </p>
                 </div>
                 <div class="title-rt rt">
                     <span class="classify">分类 ↓</span>
@@ -50,11 +50,11 @@
         <div class="det-text">
             <p class="ser">搜索“{$search.keyword}”，显示的结果为{$search.total}条</p>
             {foreach item=text from=$search.data}
-            <dl class="list-txt">
-                <dt>
-                    <time>{$text.pubtimestamp|date_format:'%m'}</time>
-                    <b>{$text.pubtimestamp|date_format:'%d'}</b>
-                </dt>
+            <dl class="list-txt ser-list">
+                <!--<dt>-->
+                    
+                    
+                <!--</dt>-->
                 <dd>
                     <h5><a href="{$text.link}">{$text.title}</a></h5>
                 </dd>

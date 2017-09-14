@@ -89,11 +89,11 @@ $(function(){
                 switch (parent) {
                     case "one":
                         a.addClass("box-on");
-                         a.siblings('i').addClass('in');
+                         a.siblings('i').addClass('in').parent().siblings().children('a').siblings('i').removeClass('in');
                         break;
                     case "two":
                         a.addClass("box-in");
-                         a.siblings('i').addClass('in');
+                         a.siblings('i').addClass('in').parent().siblings().children('a').siblings('i').removeClass('in');
                         break;
                     case "three":
                         a.addClass("box-on");

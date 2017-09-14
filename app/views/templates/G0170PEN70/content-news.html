@@ -34,9 +34,10 @@
 
 
           <div id="contact1" class="clearfix ">
-              <h2>{$global.contactus_tt.en_name}</h2>
+              <h2>CONTACT US/</h2>
+              
               <div class="inner">
-              {$global.contactus}
+                  {$global.contact}
               </div>
           </div>
 
@@ -44,7 +45,7 @@
         <div id="main">
             <h2>
                 <span>location-<a href="{$site_url}">home</a>{foreach item=nav from=$posnavs}-<a href="{$nav.link}">{$nav.en_name}</a>{/foreach}</span>
-                
+                {$posnavs[0].en_name}
             </h2>
             <div class="inner">
                 <div class="content">

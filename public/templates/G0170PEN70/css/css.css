@@ -4,7 +4,7 @@ body{ margin:0; padding:0; color:#787878; font-family: "宋体"; background:url(
 .clearfix:after { content:'\20'; display:block; height:0; clear:both; }
 .clearfix { *zoom:1;}
 a{ color:#787878; text-decoration:none}
-a:hover{ color:#f00} 
+a:hover{ color:#f00}
 a img{ border:none;}
 ul li{ list-style:none;}
 
@@ -16,10 +16,7 @@ ul li{ list-style:none;}
 #header .top1{float:left; text-align:right;  width:251px; margin-top:30px;overflow: hidden; }
 .top1 input{float: left;}
 .top1 .sinp{height: 20px;margin-right: 10px;}
-.top1 .sbtn{width: 56px;height: 24px;
-color: #313131;
-/*background:url(../images/top_ss.gif) no-repeat*/
-;border: none;}
+.top1 .sbtn{width: 34px;height: 24px;background:url(../images/top_ss.gif) no-repeat;border: none;}
 .topright{display: inline-block;float: right;}
 #banner {height:354px;overflow: hidden;position: relative;}
 ul.nav{width:1003px;height:37px;position: relative;margin: 0 auto;z-index: 10;text-align: center;background: url(../images/menubg.jpg) repeat-x;}
@@ -56,7 +53,7 @@ ul.nav .on>h3 a{color: #f0ff00}
 
 
 #contact  {float:left; width:261px; padding-left:40px;}
-#contact  .inner{background:url(../images/co_contact_bg.jpg) top; height:104px; padding:6px 15px;overflow: hidden;}
+#contact  .inner{background:url(../images/co_contact_bg.jpg) top; height:104px; padding:6px 15px;}
 #pro1 {margin-top:10px;}
 /*.picMarquee-left{ width:1000px;height: 179px;overflow:hidden; position:relative;margin: 0 auto;}
 .picMarquee-left .hd{ overflow:hidden;  height:30px; background:#f4f4f4; padding:0 10px;display: none; }
@@ -114,12 +111,12 @@ ul.nav .on>h3 a{color: #f0ff00}
 .search select{width: 150px;font-size: 14px;}
 
 #contact1  { width:205px; margin-top:10px;   }
-#contact1  .inner{background:url(../images/co_contact_bg1.jpg) no-repeat top; man-height:104px; padding:6px 15px;}
+#contact1  .inner{background:url(../images/co_contact_bg1.jpg) top; height:104px; padding:6px 15px;}
 
 
 #main {margin-top:15px; float:left; padding-left:15px;}
-#main .inner{ width:725px; padding:15px;overflow: hidden}
-#main h2 { font-weight:bold; color:#777676; width:745px; border-bottom: 1px #777676 solid;  line-height:30px;}
+#main .inner{ width:725px; padding:15px;}
+#main h2 { font-weight:bold; color:#777676; width:745 px; border-bottom: 1px #777676 solid;  line-height:30px;}
 #main h2 span { color:#777676; float:right; padding-right:15px;}
 
 #main {width:725px;}

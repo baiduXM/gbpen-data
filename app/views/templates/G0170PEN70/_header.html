@@ -17,7 +17,7 @@
           <ul id="nav" class="nav">
             {$limit = 8}
             <li class="nLi on" style="width:{100/($limit+1)}%">
-                <h3><a href="{$site_url}" target="_self">homepage</a></h3>
+                <h3><a href="{$site_url}" target="_self">home</a></h3>
             </li>
             {foreach name=navs item=nav from=$navs}
             <li class="{if $nav.current}on{/if} nLi" style="width:{100/($limit+1)}%">

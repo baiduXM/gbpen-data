@@ -156,6 +156,8 @@
   line-height: 26px;
   color: #333;
 }
+.title span:hover{color:#e58e23;}
+
 .about_us {
   position: relative;
   padding: 50px 0;
@@ -329,6 +331,8 @@ color: #fff;
 .solution .title h3 {
   color: #fff;
 }
+.solution .title span:hover{color:#e58e23;}
+
 .solution .blue_bor {
   width: 334px;
   height: 200px;
@@ -415,27 +419,26 @@ color: #fff;
   overflow: hidden;
   cursor: pointer;
   position: absolute;
-  width: 14px;
-  height: 28px;
   top: 50%;
-  margin-top: -25px;
-background:#fff ;
+  background:#fff ;
   border:2px solid #7de2ff;
   color:#7de2ff;
   font-size:50px;
   text-align: center;
+
+  width:70px;height:70px;border-radius: 50%;opacity: .75;line-height:70px;
+  transition: all linear .5s;-webkit-transition: all linear .5s;
 }
 .solution #focus_Box .prev {
- 
-  width:70px;height:70px;border-radius: 50%;opacity: .75;
-  line-height:70px;
   left: -38px;
-  margin-top: -5px;
 }
 .solution #focus_Box .next {
- right: 10px;
-  width:90px;height:90px;border-radius: 50%;
-  line-height:90px;
+  right: 10px;
+
+}
+.solution #focus_Box .prev:hover,
+.solution #focus_Box .next:hover {
+  width:90px;height:90px;border-radius: 50%;opacity: 1;line-height:90px;margin-top:-19px;
 }
 .solution #focus_Box a.imgs-scroll-btn {
   display: block;
@@ -1102,4 +1105,9 @@ font-weight: bold;
 }
 
 .elegant-aero .button{background: #1f7ccc!important;color:#fff!important;}
-.elegant-aero .button:hover{color:#fff!important;}
+.elegant-aero .button:hover{color:#fff!important;background:#e58e23!important;
+ box-shadow: 1px 1px 1px #e58e23;
+    -webkit-box-shadow: 1px 1px 1px #e58e23;
+    -moz-box-shadow: 1px 1px 1px #e58e23;
+    text-shadow: 1px 1px 1px #e58e23;
+}
