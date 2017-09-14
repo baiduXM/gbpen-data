@@ -2,11 +2,11 @@
   <div class="subnav"> <img src="{$site_url}images/sidebar_top.jpg" />
     <div class="list_class">
       <!-- 二级栏目列表（展示到三级子栏目） -->
-      {if $pagenavs}
       <nav>
         <div class="alefttitle"><b>{$posnavs[0].en_name}</b>
           <p>{$posnavs[0].name}</p>
         </div>
+      {if $pagenavs}
         <div class="category">
           <ul class="listbg clearfix">
             {foreach name=pagenavs item=nav from=$pagenavs}
@@ -26,13 +26,8 @@
             {/foreach}
           </ul>
         </div>
-      </nav>
       {else}
       <!-- 让客服自己选择，如果当前无子栏目 展现的目标栏目 -->
-      <nav>
-        <div class="alefttitle"><b>{$_aside.pagenavs.en_name}</b>
-          <p>{$_aside.pagenavs.name}</p>
-        </div>
         <div class="category">
           <ul class="listbg clearfix">
             {foreach name=pagenavs2 item=nav from=$_aside.pagenavs.childmenu}
@@ -52,8 +47,9 @@
             {/foreach}
           </ul>
         </div>
-      </nav>
-      {/if} </div>
+      {/if}
+      </nav> 
+    </div>
     <img src="{$site_url}images/sidebar_bot.jpg" /> </div>
   <div class="subcontact"> <img src="{$site_url}images/sidebar_top.jpg" />
     <div class="title"><a href="{$global.contact_us.link}">

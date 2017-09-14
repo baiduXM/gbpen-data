@@ -48,8 +48,8 @@ body{background: #ffffff;}
 .navbox ul li .navbg{width:7.25rem;height: 5.6rem;}
 .navbox ul li .navbg img{max-width: none;height: 5.6rem;}
 .navbox ul li .nav_title{width: 3.25rem;height: 5.6rem;background: #000000;opacity: 0.6;top: 0;left: 0;}
-.navbox ul li .nav_title p{margin: 0.6rem 0;padding:0 0.2rem;height: 2rem;overflow: hidden;opacity: 1;color: #fff;font-size: 0.65rem;line-height: 1rem;}
-.navbox ul li .nav_title p span{font-size: 0.55rem;}
+.navbox ul li .nav_title p{margin: 0.6rem 0;padding:0 0.2rem;height: 2rem;overflow: hidden;opacity: 1;color: #fff;font-size: 0.6rem;line-height: 1rem;letter-spacing:0;word-spacing:0}
+.navbox ul li .nav_title p span{font-size: 0.5rem;}
 .navbox ul li .nav_title:before{content: "";border-left: 0.3rem solid #000;border-top:0.25rem solid transparent;border-bottom:0.25rem solid transparent;border-right:0.3rem solid transparent;
 position: absolute;right: -0.6rem;top: 1rem; }
 .navbox ul li .nav_title i{display: block;width: 0.75rem;height: 0.75rem;padding-left: 0.2rem;}

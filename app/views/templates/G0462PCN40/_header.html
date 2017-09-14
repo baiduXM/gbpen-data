@@ -1,0 +1,32 @@
+<div id="header">
+	<div id="header1">
+		<div class="header">
+			<div class="logo wow bounceInDown"><a href="{$site_url}"><img src="{$logo}"/></a></div>
+			<div class="navBar wow fadeInDown">
+				<div class="toph">
+					<div class="search_box fr">
+						<form action="{$search_action}" method="GET">
+							<input class="txt1" type="text" name="s"/>
+							<input class="btn1" type="submit" value="" />
+						</form>
+					</div>
+					<em class="tel fr">{$contact.telephone}</em>
+				</div>
+				<ul class="nav clearfix">
+					{foreach name=navs item=nav from=$navs}
+					<li class="m {if $nav.current}on{/if} nav_li" style="width:{100/(($navs|count))}%">
+						<a href="{$nav.link}" class="kz" data-limit="6">{$nav.name}<em></em></a>
+						{if $nav.childmenu}
+							<ul class="sub">
+								{foreach key=key item=nav_list from=$nav.childmenu}
+								<li><a class="kz" data-limit="20" href="{$nav_list.link}">▶ {$nav_list.name}</a></li>
+								{/foreach}
+							</ul>
+						{/if}
+					</li>
+					{/foreach}
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>

@@ -74,14 +74,14 @@ $(document).ready(function(){
     	})
 	// 二级导航下拉
       $(".icon").click(function(){
-          $(".menu_body").slideToggle()
+          $(this).siblings(".menu_body").slideToggle()
           $(".font").slideUp()
           $(".icon1").hide()
           $(".icon2").show()    
       })
   // 三级导航下拉
       $(".icont").click(function(){
-          $(".menu_thr").slideToggle()
+          $(this).siblings(".menu_thr").slideToggle()
           $(".font").slideUp()
           $(".icont1").hide()
           $(".icont2").show()    

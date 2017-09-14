@@ -1,0 +1,14 @@
+<div class="nav">
+    <div class="swiper-container swiper-nav " >
+        <ul class="swiper-wrapper ">
+            {foreach name=nav item=nav from=$navs}
+            <li class="swiper-slide">
+                <a href="{$nav.link}">
+                    {$nav.icon}
+                    <span>{$nav.name}</span>
+                </a>
+            </li>
+            {/foreach}
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{$title}</title>
+
+    <script type="text/javascript">
+        // 跳转PC页面
+        {if $site_another_url}
+        if (!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+            location.href = '{$site_another_url}';
+        }
+        {/if}
+    </script>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no,minimal-ui">
+    <meta name="keywords" content="{$keywords}" />
+    <meta name="description" content="{$description}" />
+    <link rel="stylesheet" href="{$site_url}css/swiper-3.3.1.min.css" />
+    <link rel="stylesheet" href="{$site_url}css/style.css">
+    <script src="{$site_url}js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="{$site_url}js/swiper-3.3.1.jquery.min.js"></script>
+    <script  type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.1.js"></script>
+    <script type="text/javascript" src="{$site_url}js/index.js"></script>
+
+    <script type="text/javascript">
+        window.addEventListener('load', function(){
+            setTimeout(function(){ window.scrollTo(0, 1);}, 100);
+        });//safari浏览器可以通过此代码来隐藏地址栏
+    </script>
+    {$headscript}
+</head>
+<body>
+
+    {include file="./_header.html"}
+    {include file="./_banner.html"}
+
+    <div class="main">
+        {include file="./_nav.html"}
+        {foreach item=mIndexCat from=$mIndexCats}
+            {if $mIndexCat.type eq 2}
+                {if $mIndexCat.showtype eq 1}
+                    <div class="main3">
+                        <div class="m3-cont">
+                            <div class="title">
+                                <img src="{$site_url}images/index_05.png" alt="">
+                                <div>
+                                    <h4>{$mIndexCat.name}</h4>
+                                    <b>{$mIndexCat.en_name}</b>
+                                </div>
+                                <img src="{$site_url}images/index_07.png" alt="">
+                            </div>
+                            <div class="swiper-container swiper-pro " >
+                                <ul class="swiper-wrapper ">
+                                    {foreach name=pro item=pro from=$mIndexCat.data}
+                                    <li class="swiper-slide">
+                                        <a href="{$pro.link}">
+                                            <i><img src="{$pro.image}" alt=""></i>
+                                            <h4>{$pro.title}</h4>
+                                        </a>
+                                        <!--<div class="pro-div">-->
+                                            
+                                                
+                                                
+                                            <!--</a>-->
+                                        <!--</div>-->
+                                    </li>
+                                    {/foreach}
+                                </ul>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                    </div>
+                {/if}
+            {elseif $mIndexCat.type eq 3}
+                {if $mIndexCat.showtype eq 1}
+                    <div class="main1">
+                        <div class="m1-cont">
+                            <div class="title">
+                                <img src="{$site_url}images/index_05.png" alt="">
+                                <div>
+                                    <h4>{$mIndexCat.name}</h4>
+                                    <b>{$mIndexCat.en_name}</b>
+                                </div>
+                                <img src="{$site_url}images/index_07.png" alt="">
+                            </div>
+                            <div class="swiper-container swiper-new " >
+                                <div class="swiper-wrapper ">
+                                    {foreach name=news item=news from=$mIndexCat.data}
+                                    <dl class="swiper-slide">
+                                        <dd>
+                                            <a href="{$news.link}">
+                                                <h5>{$news.title}</h5>
+                                                <time>{$news.pubtimestamp|date_format:'%Y-%m-%d'}</time>
+                                            </a>
+                                        </dd>
+                                        <dt><a href="{$news.link}"><img src="{$news.image}" alt=""></a></dt>
+                                    </dl>
+                                    {/foreach}
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                    </div>
+                {/if}
+            {elseif $mIndexCat.type eq 4}
+                {if $mIndexCat.showtype eq 1}
+                    <div class="main2">
+                        <div class="m2-cont">
+                            <div class="title">
+                                <img src="{$site_url}images/index_11.png" alt="">
+                                <div>
+                                    <h4>{$mIndexCat.name}</h4>
+                                    <b>{$mIndexCat.en_name}</b>
+                                </div>
+                                <img src="{$site_url}images/index_12.png" alt="">
+                            </div>
+
+                            <div class="m2-txt"> {$mIndexCat.content|unescape:"html"}</div>
+                        </div>
+                    </div>
+                {/if}
+            {/if}
+        {/foreach}
+    </div>
+
+
+{include file="./_footer.html"}
+</body>
+</html>

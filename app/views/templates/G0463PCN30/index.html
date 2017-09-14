@@ -1,0 +1,118 @@
+<!DOCTYPE>
+<html>
+<head>
+<!-- 实时预览调试代码，模板开发完成后删除 -->
+
+<!-- 调试代码 End -->
+<script type="text/javascript">
+    // 跳转手机页面
+    {if $site_another_url}
+        if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+            location.href = '{$site_another_url}';
+        }
+    {/if}
+</script>
+
+<meta name="keywords" content="{$keywords}"/>
+<meta name="description" content="{$description}"/>
+<link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
+<meta http-equiv="x-ua-compatible" content="ie=8"/>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<link href="{$site_url}css/animate.css" rel="stylesheet">
+<link href="{$site_url}css/style.css" rel="stylesheet" type="text/css"/>
+<script src="{$site_url}js/jquery-1.7.2.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript" src="{$site_url}js/wow.min.js"></script>
+<script type="text/javascript" src="{$site_url}js/function.js"></script>
+<title>{$title}</title>
+{$headscript}
+</head>
+<body>
+<div class="wrap">
+    {include file='./_header.html'}
+	<ul class="index_nav clear">
+	      {foreach item=nav from=$index.pagenavs.childmenu}
+	      <li class="wrapnav"><span class="yy"></span><em></em><a class="ab" href="{$nav.link}" class="kz" data-limit="7">{$nav.name}</a>
+				{if $nav.childmenu}
+				<ul class="wrapnavul">	
+				{foreach item=nav_list from=$nav.childmenu}
+					<li class="wrapnavli"><a href="{$nav_list.link}" class="kz" data-limit="8">{$nav_list.name}</a>						
+					</li>
+				{/foreach}	
+				</ul>					
+				{/if}	
+				<a href="{$nav.link}" class="more">查看更多>></a>				
+	      </li>
+	      {if $nav@index+1 gt 2}{break}{/if}        
+	      {/foreach}
+	</ul>
+	<div class="about1 clear">
+	    <div class="about">
+	      <a class="index_title" href="{$index.about_us.link}">{$index.about_us.en_name}<br><em>{$index.about_us.name}</em></a>
+	      <div class="aboutcontent clearfix">
+	          <div class="wrap_aboutimg fl"><div class="div_img"><img src="{$index.about_us.image}"></div></div>
+	          <div class="text fr">{$index.consult}</div>
+          </div>
+        </div>
+	</div>
+	<div class="news">
+    	<a class="index_title" href="{$index.news.link}">{$index.news.en_name}<br><em>{$index.news.name}</em></a>
+    	<div class="slideTxtBox">
+			<div class="hd">
+				<ul>
+					{foreach item=info from=$index.news.childmenu}
+                        <li><a href="javascript:void(null)">{$info.name}</a></li>
+                    {/foreach}
+				</ul>
+			</div>
+			<div class="bd">
+				{foreach item=list1 from=$index.news.childmenu}
+				<ul>
+					{foreach item=list2 from=$list1.data}
+					<li><a href="{$list2.link}" class="clearfix">
+							<span class="date fl">{$list2.pubtimestamp|date_format:'%Y/%m<em>%d</em>'}</span>
+							<div class="fr info">
+								<h2>{$list2.title}</h2>
+								<p>{$list2.description}</p>
+							</div>
+						</a>
+					</li>
+					{if $list2@index+1 gte 4}{break}{/if} 
+					{/foreach}
+				</ul>
+				{/foreach}
+			</div>
+		</div>
+    </div>
+    <div class="pro">
+    	<div class="pro1">
+	    	<a class="index_title" href="{$index.pro.link}">{$index.pro.en_name}<br><em>{$index.pro.name}</em></a>
+	    	<div class="slideTxtBox">
+				<div class="hd">
+					<ul>
+						{foreach item=info from=$index.pro.childmenu}
+                            <li><a href="javascript:void(null)">{$info.name}</a></li>
+                        {/foreach}
+					</ul>
+				</div>
+				<div class="bd">
+					{foreach item=info from=$index.pro.childmenu}
+					<ul class="clearfix">
+						{foreach item=list2 from=$info.data}
+						<li><a href="{$list2.link}">
+								<div class="div_img"><img src="{$list2.image}"><h2 class="title">{$list2.title}</h2><div class="hoverpic"><h2 class="title1">{$list2.title}</h2><p>{$list2.description}</p><em></em></div></div>
+							</a>
+						</li>
+						{if $list2@index+1 gte 4}{break}{/if} 
+						{/foreach}
+					</ul>
+					{/foreach}
+				</div>
+			</div>
+			<a href="{$index.pro.link}" class="morecom">查看更多>></a>
+		</div>
+    </div>
+	{include file='./_footer.html'}
+</div>
+</body>
+</html>

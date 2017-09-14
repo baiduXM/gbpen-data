@@ -1,0 +1,33 @@
+{
+	"left_nav":{
+		"value":{},
+		"type":"list",
+		"description":"首页侧边栏导航"
+	},
+    "about_us": {
+		"description": "内容单页（如关于我们）",
+		"value": {},
+		"type": "page"
+	},
+	"pro":{
+		"description": "图片列表(如产品展示)",
+		"value": {},
+		"type": "list",
+		"config":{
+			"width":133,
+			"height":109
+		}		
+	},
+	"contactus_tt": {
+		"description": "联系方式",
+		"value": {},
+		"type": "page"
+	},
+
+	"contactus": {
+		"value": "电werwrr 话:0592-7083933\r\n 手 机:1379978730\r\n 联系人:谢先生\r\n 传 真:0592-5535933\r\n 邮 箱：jms_jx@126.com \r\n 地址：厦门软件园二期观日路52号A栋201A\r\n 工厂地址：厦门市翔安区新",
+		"description": "联系方式",
+		"type": "textarea"
+	}
+}                     
+

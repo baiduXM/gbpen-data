@@ -1,0 +1,46 @@
+{
+	"pagenavs": {
+		"value": {},
+		"description": "首页banner底下栏目分类",
+		"type": "list",
+		"config": {
+			"filter": "list,page",
+			"mustchild": true
+		}
+	},
+    "about_us": {
+		"description": "关于我们",
+		"value": "",
+		"type": "page"
+	},
+	"consult": {
+		"description": "关于我们的问答",
+		"value": "<h2>Q1：你们的师资情况是怎么样的？</h2><p> A1：雄厚的师资力量是天普教育略胜一筹的资本。我们的老师们为各行各业的精英，老师们的素质较高。</p> \r\n <h2>Q1：你们的师资情况是怎么样的？</h2><p> A1：雄厚的师资力量是天普教育略胜一筹的资本。我们的老师们为各行各业的精英，老师们的素质较高。</p> \r\n <h2>Q1：你们的师资情况是怎么样的？</h2><p> A1：雄厚的师资力量是天普教育略胜一筹的资本。我们的老师们为各行各业的精英，老师们的素质较高。</p>",
+		"type": "textarea"
+	},
+	"news":{
+		"description": "新闻中心",
+		"value": {},
+		"type": "list",
+		"config": {
+			"showchilddata":true,
+			"star_only": true,
+			"height": 150,
+			"width":150
+		}	
+	},
+	"pro":{
+		"description": "产品中心",
+		"value": {},
+		"type": "list",
+		"config": {
+			"showchilddata":true,
+			"star_only": true,
+			"width": 268,
+			"height": 280
+		}
+	}
+}
+               
+
+

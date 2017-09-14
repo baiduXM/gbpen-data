@@ -1,0 +1,43 @@
+<div class="header">
+	<div class="public1">
+		<div class="logo">
+			<a href="{$site_url}"><img src="{$logo}"></a>
+		</div>
+		<div class="nav">
+			<ul>
+				<li class="nav_li" style="width:{100/(($navs|count)+1)}%"><a href="{$site_url}" class="a">首页</a></li>
+				{foreach name=navs item=nav from=$navs}
+				<li class="nav_li" style="width:{100/(($navs|count)+1)}%">
+					<a href="{$nav.link}" class="a">{$nav.name}</a>
+					{if $nav.childmenu}
+					<ul class="sub">
+					{foreach key=key item=nav_list from=$nav.childmenu}
+						<li><a href="{$nav_list.link}">{$nav_list.name}</a></li>
+					{/foreach}
+					</ul>
+					{/if}
+				</li>
+				{/foreach}
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div class="banner">
+	<div id="slideBox" class="slideBox" >
+		<div class="hd">
+			<ul>
+				{foreach name=slidepics item=slidepic from=$global.slidepics}
+				<li></li>
+				{/foreach} 
+			</ul>
+		</div>
+		<div class="bd">
+			<ul>
+				{foreach name=slidepics item=slidepic from=$global.slidepics}
+		        <li><a href="{$slidepic.link}"><img src="{$slidepic.image}"></a></li>
+		        {/foreach} 
+			</ul>
+		</div>
+	</div>	
+</div>

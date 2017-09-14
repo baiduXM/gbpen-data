@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+
+    <meta charset="UTF-8">
+    <script type="text/javascript">
+        // 识别为手机客户端，自动跳转手机页面
+        {if $site_another_url}
+        if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+            location.href = '{$site_another_url}';
+        }
+        {/if}
+    </script>
+    <meta name="keywords" content="{$keywords}" />
+    <meta name="description" content="{$description}" />
+    <link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
+    <title>{$title}</title>
+    
+    <link rel="stylesheet" href="{$site_url}css/jquery.bxslider.css">
+    <link rel="stylesheet" href="{$site_url}css/style.css">
+    <script src="{$site_url}js/jquery-1.9.1.min.js"></script>
+    <script src="{$site_url}js/jquery.bxslider.js"></script>
+    <script src="{$site_url}js/jquery.SuperSlide.2.1.1.js"></script>
+    <script src="{$site_url}js/index.js"></script>
+    {$headscript}
+</head>
+<body>
+{include file="./_header.html"}
+{include file="./_nav.html"}
+{include file="./_banner.html"}
+<div id="main">
+    <div class="main1">
+        <div class="container">
+            <ul class="m1-content">
+                {foreach item=m1 from=$index.list1.data}
+                    <li>
+                        <img src="{$m1.image}" alt="">
+                        <div class="pic">
+                            <a href="{$m1.link}">
+                                <span><b></b><i>{$m1.title}</i><b></b></span>
+                                <em>{$m1.description}</em>
+                            </a>
+                        </div>
+                    </li>
+                {if $m1@index+1 == 7}{break}{/if}
+                {/foreach}
+            </ul>
+        </div>
+    </div>
+    <div class="main2">
+        <img class="m2-bg" src="{$index.list2Bg.image}" alt="">
+        <div class="m2">
+            <div class="container">
+                <div class="m2-title">
+                    <a href="{$index.list2.link}"><span>{$index.list2.en_name}</span></a>
+                    <a href="{$index.list2.link}"><b class="rt">+</b></a>
+                </div>
+                <div class="m2-content">
+                    <dl>
+                        <dt><img src="{$index.list2.image}" alt=""></dt>
+                        <dd>
+                            <p>
+                                {$index.list2.description}
+                            </p>
+                            {foreach item=m2 from=$index.list2.childmenu}
+                            <a href="{$m2.link}">{$m2.en_name}</a>
+                            {if $m2@index+1 == 3}{break}{/if}
+                            {/foreach}
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main3">
+        <div class="container">
+            <div class="m3-title">
+                <a href="{$index.list3.link}"><span>{$index.list3.en_name}</span></a>
+                <a href="{$index.list3.link}"><b class="rt">+</b></a>
+            </div>
+            <div class="m3-content">
+                <div class="m3-tab">
+                    <i>☰</i>
+                    <ul>
+                        {foreach item=m3 from=$index.list3.childmenu}
+                            <li>{$m3.en_name}</li>
+                        {if $m3@index+1 == 10}{break}{/if}
+                        {/foreach}
+                    </ul>
+                </div>
+                <div class="m3-list">
+                    {foreach item=m3 from=$index.list3.childmenu}
+                        <ul class="m3-imgList">
+                            {foreach item=m3_list from=$m3.data}
+                                <li>
+                                    <img src="{$m3_list.image}" alt="">
+                                    <div class="pic">
+                                        <a href="{$m3_list.link}">
+                                            <span><img src="{$site_url}images/index_05.png" alt=""></span>
+                                            <p>{$m3_list.title}</p>
+                                        </a>
+                                    </div>
+                                </li>
+                            {if $m3_list@index+1 == 9}{break}{/if}
+                           {/foreach}
+                        </ul>
+                    {if $m3@index+1 == 10}{break}{/if}
+                    {/foreach}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main4">
+        <img class="m4-bg" src="{$site_url}images/bg-3.png" alt="">
+        <div class="m4">
+            <div class="container">
+                <div class="m4-lt lt">
+                    <ul>
+                        <li>{$index.list4Text}</li>
+                    </ul>
+                </div>
+                <div class="m4-rt rt">
+                    <a href="{$index.list4Img.link}"> <img src="{$index.list4Img.image}" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main5">
+        <div class="container">
+            <div class="m5-lt lt">
+                <h4 class="m5-title">
+                    <a href="{$index.list5Text.link}">
+                        <span>{$index.list5Text.en_name}</span>
+                    </a>
+                </h4>
+                <ul>
+                    {foreach item=m5 from=$index.list5Text.data}
+                        <li>
+                            <a href="{$m5.link}">
+                                <p>{$m5.title}</p>
+                                <time class="rt">{$m5.pubtimestamp|date_format:'%Y-%m-%d'}</time>
+                            </a>
+                        </li>
+                    {if $m5@index+1 == 5}{break}{/if}
+                    {/foreach}
+                </ul>
+
+            </div>
+            <div class="m5-rt rt">
+                <h4 class="m5-title">
+                    <a href="{$index.list5Img.link}">
+                    <span class="rt">{$index.list5Img.en_name}</span>
+                    </a>
+                </h4>
+                <div class="m5-rt-dl">
+                    {foreach item=m5_img from=$index.list5Img.data}
+                        <a href="{$m5_img.link}">
+                            <dl>
+                                <dt>
+                                    <img src="{$m5_img.image}" alt="">
+                                    <span><b><img src="{$site_url}images/index_05.png" alt=""></b></span>
+                                </dt>
+                                <dd>{$m5_img.title}</dd>
+                            </dl>
+                        </a>
+                    {if $m5_img@index+1 == 2}{break}{/if}
+                    {/foreach}
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="main6">
+        <div class="container">
+            <ul class="link-img">
+                {foreach item=img from=$index.linkImg}
+                    <li><a href="{$img.link}"><img src="{$img.image}" alt=""></a></li>
+                 {if $img@index+1 == 6}{break}{/if}
+                {/foreach}
+            </ul>
+        </div>
+    </div> -->
+</div>
+
+{include file="./_footer.html"}
+</body>
+</html>

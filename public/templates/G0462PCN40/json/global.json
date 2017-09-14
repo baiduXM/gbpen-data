@@ -1,0 +1,116 @@
+{
+
+	"slidepics": {
+		"value": [{
+			"title": "banner",
+			"image": "images/banner.png",
+			"link": "article/1.html",
+			"description": "banner1"
+		}, {
+			"title": "测试图2",
+			"image": "images/banner.png",
+			"link": "http://www.baidu.com"
+		},{
+			"title": "测试图3",
+			"image": "images/banner.png",
+			"link": "http://www.baidu.com"
+		}],
+		"description": "头部大轮滚图",
+		"type": "images",
+		"config": {
+			"width": 1920,
+			"height": 504
+		}
+	},
+	"picture": {
+		"value": [{
+			"title": "内页大图1",
+			"image": "images/inner.png",
+			"link": "article/1.html",
+			"description": "picture1"
+		}, {
+			"title": "内页大图2",
+			"image": "images/inner.png",
+			"link": "http://www.baidu.com"
+		},{
+			"title": "内页大图3",
+			"image": "images/inner.png",
+			"link": "http://www.baidu.com"
+		}],
+		"description": "内页头部大图",
+		"type": "images",
+		"config": {
+			"width": 1920,
+			"height": 269
+		}
+	},
+	"wchat": {
+		"value": {
+			"title": "扫扫微信",
+			"image": "images/code.png",
+			"link": "http://www.baidu.com/"
+			},
+		"description": "二维码1",
+		"type": "image",
+		"config": {
+			"width": 104,
+			"height": 104
+		}
+	},
+
+	"links": {
+		"value": [{
+			"title": "百度推广",
+			"image": "images/link1.png",
+			"link": "article/1.html",
+			"description": "友情链接1"
+		},{
+			"title": "百度推广",
+			"image": "images/link1.png",
+			"link": "article/1.html",
+			"description": "友情链接1"
+		},{
+			"title": "百度推广",
+			"image": "images/link1.png",
+			"link": "article/1.html",
+			"description": "友情链接1"
+		},{
+			"title": "百度推广",
+			"image": "images/link1.png",
+			"link": "article/1.html",
+			"description": "友情链接1"
+		},{
+			"title": "百度推广",
+			"image": "images/link1.png",
+			"link": "article/1.html",
+			"description": "友情链接1"
+		},{
+			"title": "百度推广",
+			"image": "images/link1.png",
+			"link": "article/1.html",
+			"description": "友情链接1"
+		},{
+			"title": "百度推广",
+			"image": "images/link1.png",
+			"link": "article/1.html",
+			"description": "友情链接1"
+		},{
+			"title": "百度推广",
+			"image": "images/link1.png",
+			"link": "article/1.html",
+			"description": "友情链接1"
+		},{
+			"title": "百度推广",
+			"image": "images/link1.png",
+			"link": "article/1.html",
+			"description": "友情链接1"
+		}],
+		"description": "友情链接",
+		"type": "images",
+		"config":{
+			"width":160,
+			"height":60
+		}
+	}
+	
+}

@@ -1,0 +1,66 @@
+{
+	"contactus_tt": {
+		"description": "联系方式",
+		"value": {},
+		"type": "page"
+	} ,
+	"contactus": {
+		"value": "电werwrr 话:0592-7083933\r\n 手 机:1379978730\r\n 联系人:谢先生\r\n 传 真:0592-5535933\r\n 邮 箱：jms_jx@126.com \r\n 地址：厦门软件园二期观日路52号A栋201A\r\n 工厂地址：厦门市翔安区新",
+		"description": "联系方式",
+		"type": "textarea"
+	},
+	"slidepics": {
+		"value": [{
+			"title": "banner",
+			"image": "images/banner.jpg",
+			"link": "article/1.html",
+			"description": "大图轮播1"
+		}, {
+			"title": "banner",
+			"image": "images/banner.jpg",
+			"link": "http://www.baidu.com",
+			"description": "大图轮播2"
+		},{
+			"title": "banner",
+			"image": "images/banner.jpg",
+			"link": "http://www.baidu.com",
+			"description": "大图轮播3"
+		}],
+		"description": "多图轮播",
+		"type": "images",
+		"config": {
+			"width":1920,
+			"height": 354
+		}
+	},
+	"links": {
+		"value": [{
+			"title": "易尔通",
+			"image": "images/f1.jpg",
+			"link": "http://www.12t.cn"
+		}, {
+			"title": "12t",
+			"image": "images/f2.jpg",
+			"link": "http://www.12t.com"
+		}, {
+			"title": "百度",
+			"image": "images/f3.jpg",
+			"link": "http://www.baidu.com"
+		}, {
+			"title": "腾讯",
+			"image": "images/f4.jpg",
+			"link": "http://www.baidu.com"
+		}, {
+			"title": "小米",
+			"image": "images/f5.jpg",
+			"link": "http://www.baidu.com"
+		}],
+		"description": "友情链接",
+		"type": "images",
+		"config": {
+			"width": 104,
+			"height": 45
+		}
+	}
+
+}

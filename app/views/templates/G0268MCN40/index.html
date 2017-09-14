@@ -2,7 +2,7 @@
 <html manifest="huancun.manifest">
 <head>
   <!-- 实时预览调试代码，模板开发完成后删除 -->
-    
+  
   <!-- 调试代码 End -->
   <script type="text/javascript">
 // 跳转PC页面
@@ -76,11 +76,11 @@
           </div>
         </div>
         <section>
-          {* 输出type为1234的栏目展现HTML，且1234每个都须定义 *}
+          
         {foreach name=mIndexCats item=mIndexCat from=$mIndexCats}
-        {* 仅输出类型为 3图文列表 的栏目 *}
-        {if $mIndexCat.type eq 3}
-        {* 后台选中“样式1”的展现模式： *}
+        
+        {if $mIndexCat.type eq 3 or $mIndexCat.type eq 2}
+        
         {if $mIndexCat.showtype eq 1}
           <div class="pro">
             <h1 class="pro_top">

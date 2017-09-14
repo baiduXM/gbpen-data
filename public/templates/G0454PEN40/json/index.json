@@ -1,0 +1,80 @@
+{
+
+  "list1": {
+    "value": {},
+    "description": "首页第一个图片列表",
+    "type": "list",
+    "config": {
+      "width": 230,
+      "height": 185,
+      "star_only": true
+    }
+  },
+  "list2": {
+    "value": {},
+    "description": "首页关于我们单页面",
+    "type": "page",
+    "config": {
+      "width": 480,
+      "height": 380,
+      "star_only": true
+    }
+  },
+  "list2Bg": {
+    "value": {
+      "title": "",
+      "image": "images/bg-2.png",
+      "link": ""
+    },
+    "description": "首页关于我们背景图",
+    "type": "image",
+    "config": {
+      "width": 1920,
+      "height":504
+    }
+  },
+  "list3": {
+    "value": {},
+    "description": "首页产品中心图片列表",
+    "type": "list",
+    "config": {
+      "width": 276,
+      "height": 223,
+      "showchilddata":true,
+      "star_only": true
+    }
+  },
+  "list4Text":{
+    "value": " <b>厦门易尔通网络科技有限公司</b><br> 公司地址：厦门市思明区软件园二期观日路36号201单元<br>联系电话：0592-3503777<br>传真：0592-3503003 <br>投诉邮箱：tousu@xm12t.com",
+    "description": "联系我们",
+    "type": "textarea"
+  },
+  "list4Img": {
+    "value": {},
+    "description": "联系我们",
+    "type": "page",
+    "config": {
+      "width": 515,
+      "height": 240,
+      "star_only": true
+    }
+  },
+  "list5Text": {
+    "value": {},
+    "description": "首页新闻中心",
+    "type": "list",
+    "config": {
+      "star_only": true
+    }
+  },
+  "list5Img": {
+    "value": {},
+    "description": "第五个图片列表",
+    "type": "list",
+    "config": {
+      "width": 276,
+      "height": 222,
+      "star_only": true
+    }
+  }
+}

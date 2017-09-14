@@ -1,0 +1,45 @@
+<div class="wow zoomIn footer">
+	<div class="footer1">
+		<div class="foot_wrap clearfix">
+			<div class="footleft fl">
+				<ul class="foot_nav clearfix">
+					{foreach name=navs item=nav from=$navs}
+					<li class="style-2" class="m {if $nav.current}on{/if} nav_li" style="width:{100/(($navs|count))}%">
+						<a href="{$nav.link}" class="kz" data-limit="6"><em>▶</em> {$nav.name}<em></em></a>
+						{if $nav.childmenu}
+							<ul class="sub">
+								{foreach key=key item=nav_list from=$nav.childmenu}
+								<li><a class="kz" data-limit="20" href="{$nav_list.link}">{$nav_list.name}</a></li>
+								{/foreach}
+							</ul>
+						{/if}
+					</li>
+					{/foreach}
+				</ul>
+				<div class="douban">
+					<div class="hd">
+						<h2>友情链接</h2>
+						<a class="next">></a>
+						<a class="prev"><</a>
+					</div>
+					<div class="bd">
+						<ul>
+							{foreach item=flink from=$global.links}
+							<li><a href="{$flink.link}" target="_blank">{$flink.title}</a></li>
+							{/foreach}
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="footright fr">
+				<p>全国服务热线：<br><em>{$contact.telephone}</em></p>
+				<div class="wrapweixin">
+					<div class="footimg"><img src="{$global.wchat.image}"></div>
+					<h2>扫一扫关注我们</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="copyright"><div class="footcopyright">{$footprint}</div></div>	
+{$footscript}

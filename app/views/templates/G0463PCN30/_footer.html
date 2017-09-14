@@ -1,0 +1,15 @@
+<div class="footer1">
+	<div class="footer">
+		<div class="friendlink">
+	    	<div class="checkin"><em>友情链接:</em>
+		    	{$limit = 8}
+	              {foreach item=flink from=$global.links}
+	              <a href="{$flink.link}" class="kz" data-limit="10">{$flink.title}</a> |
+	              {if $flink@index+1 gte $limit}{break}{/if}        
+	              {/foreach}
+	        </div>
+	    </div>
+		<p>{$footprint}</p>
+	</div>
+</div>
+{$footscript}
