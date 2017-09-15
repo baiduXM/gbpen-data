@@ -68,7 +68,14 @@ jQuery("#ifocus").slide({ titCell:"#ifocus_btn li", mainCell:"#ifocus_tx ul",del
 		})
 	})();
 
-
+jQuery(".txMovie").slide({ titCell:".focus_nav li", mainCell:".focus_pic", targetCell:".focus_text li", autoPlay:false,delayTime:100,startFun:function(i,p){
+	//控制小图自动翻页
+	if(i==0){ jQuery(".txMovie .navPrev").click() } else if( i%3==0 ){ jQuery(".txMovie .navNext").click()}
+	}
+});
+//小图滚动
+jQuery(".txMovie").slide({ mainCell:".focus_nav ul",prevCell:".navPrev",nextCell:".navNext",effect:"top",vis:3,scroll:3,delayTime:0,autoPage:true,pnLoop:false});
+	
 
 
 

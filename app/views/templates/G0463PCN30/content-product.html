@@ -44,28 +44,25 @@
                     <div class="main">
                         <div class="des_title">{$article.title}</div>
                         {if $article.images|count gt 1}
-                        <div id="ifocus" style="margin:0 auto 30px">
-							<div id="ifocus_pic">
-								<div id="ifocus_piclist" class="bd">
-									<ul>
-										{foreach item=proshowb from=$article.images}
-										<li><span><img src="{$proshowb.image}"/></span></li>
-										{/foreach}
-									</ul>
-								</div>
-							</div>
-							<div id="ifocus_btn">
-								<a href="javascript:;" class="prev"></a>
-								<ul>
-									{foreach item=proshowb from=$article.images}
-									<li><span><img src="{$proshowb.image}"/></span></li>
-									{/foreach}
-								</ul>
-								<a href="javascript:;" class="next"></a>
-							</div>
-						</div>
+                        <div class="txMovie bd">
+                             <ul class="focus_pic" id="focus_pic_list">
+                                {foreach item=image from=$article.images}
+                                    <li><span><img src="{$image.image}"></span></li>
+                                 {/foreach}
+                            </ul>
+                        
+                            <div class="focus_nav">
+                                <ul id="focus_smaillPic_list">
+                                    {foreach item=image from=$article.images}
+                                        <li><img src="{$image.image}"></li>
+                                    {/foreach}
+                                </ul>
+                                <a href="javascript:;" title="上一个" class="navPrev"></a>
+                                <a href="javascript:;" title="下一个" class="navNext"></a>
+                            </div>
+                        </div>
 						{else}
-						<div id="ifocus1" style="margin:0 auto 30px"> 
+						<div class="txMovie bd" id="txMovie" style="margin:0 auto 30px"> 
 							<div class="bd">
 								<ul>
 									<li><img src="{$article.image}" style="margin:0 auto; display: block;" alt="{$article.title}"/></li>

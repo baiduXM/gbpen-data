@@ -201,7 +201,7 @@ ul.first ul{display: none;}
 .main .np{font-size: 14px; color: #666666; line-height: 30px; border-top: 1px dotted #ccc; margin-top: 20px; padding:20px 0; }
 .main .np a{color: #666;}
 .main .np a:hover{ color: #f49a00;}
-#ifocus { width:570px; height:430px;}
+/*#ifocus { width:570px; height:430px;}
 #ifocus_pic { display:inline; position:relative; float:left; width:413px; height:430px; overflow:hidden; margin:6px 0 0 6px; }
 #ifocus_piclist li { width:413px; height:430px; overflow:hidden;}
 #ifocus_piclist li span{ width:413px; height:430px; display: table-cell; text-align: center;vertical-align: middle;}
@@ -216,10 +216,20 @@ ul.first ul{display: none;}
 #ifocus_btn .on span{border: 2px solid #f49a00; }
 #ifocus_btn .prev, #ifocus_btn .next{ width: 20px; height: 20px; display: block; position: absolute; left: 50%; margin-left: -10px;}
 #ifocus_btn .prev{ top: 0px;background: url(../images/prev.png) no-repeat; background-size: 100%; }
-#ifocus_btn .next{ bottom: 0px;background: url(../images/next.png) no-repeat;background-size: 100%; }
+#ifocus_btn .next{ bottom: 0px;background: url(../images/next.png) no-repeat;background-size: 100%; }*/
 .des_title{ color: #333333; font-size: 18px; text-align: center; line-height: 50px; margin-top: 30px;}
 
 
 
-
+.txMovie{width:744px; height: 560px; position:relative; margin: 0 auto 20px; }
+.focus_nav .navPrev,.focus_nav .navNext{ opacity: 1 !important; position:absolute; display:block; left: 660px !important;width: 20px; height: 20px;z-index: 99;}
+.focus_nav .navPrev{ top:0 !important;background:url(../images/prev.png) no-repeat; background-size: 100%;}
+.focus_nav .navNext{bottom:0px !important;background:url(../images/next.png) no-repeat; background-size: 100%;}
+.focus_pic{width: 560px; height: 560px; float: left;}
+.focus_pic li{ width: 560px !important; height: 560px; }
+.focus_pic li span{ width: 560px; height: 560px; text-align: center;display: table-cell; vertical-align: middle;overflow: hidden;}
+.focus_pic li img{ max-width: 100%; max-height: 100%;}
+.focus_nav{ float: right; width: 160px; margin-top:30px; height: 500px; overflow: hidden;}
+.focus_nav li{ width: 158px; height: 158px; margin-bottom: 10px; cursor: pointer; border:1px solid #ddd; clear: both !important;}
+.focus_nav li.on{ border:1px solid #315fc3;}
 

@@ -10,7 +10,7 @@
 					<ul class="second">
 						{foreach item=nav_list from=$nav.childmenu}
 						<li>
-							<a href="{$nav_list.link}">{$nav.name}</span><i>∧</i></a>
+							<a href="{$nav_list.link}">{$nav_list.name}</span><i>∧</i></a>
 							{if $nav_list.childmenu}
 							<ul class="third">
 								{foreach item=nav_last from=$nav_list.childmenu}
@@ -35,7 +35,7 @@
 					<ul class="second">
 						{foreach item=nav_list from=$nav.childmenu}
 						<li>
-							<a href="{$nav_list.link}">{$nav.name}</span><i>∧</i></a>
+							<a href="{$nav_list.link}">{$nav_list.name}</span><i>∧</i></a>
 							{if $nav_list.childmenu}
 							<ul class="third">
 								{foreach item=nav_last from=$nav_list.childmenu}
