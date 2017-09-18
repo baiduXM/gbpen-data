@@ -39,16 +39,18 @@
 
 
         <div id="about1">
-            <h2>{$_pagenavs_sub3.pagenavs.name}/<span>{$_pagenavs_sub3.pagenavs.en_name}</span></h2>
+            <h2>{$_pagenavs_sub3.pagenavs.en_name}
+				
+			</h2>
             <!-- 下表为0的面包屑导航正好是一级栏目的当前栏目 -->
 			<ul class="first">
 				{foreach name=pagenavs2 item=nav from=$_pagenavs_sub3.pagenavs.childmenu}
 				<li class="{if $nav.current}current{/if}">
-					<a href="{if $nav.childmenu}javascript:;{else}{$nav.link}{/if}">{$nav.name}</a>
+					<a href="{if $nav.childmenu}javascript:;{else}{$nav.link}{/if}">{$nav.en_name}</a>
 					{if $nav.childmenu}
 					<ul class="second">
 						{foreach key=key item=nav_list from=$nav.childmenu}
-						<li class="{if $nav_list.current}current{/if}"><a href="{$nav_list.link}">{$nav_list.name}</a>
+						<li class="{if $nav_list.current}current{/if}"><a href="{$nav_list.link}">{$nav_list.en_name}</a>
 						{if $nav_list.childmenu}
 							<ul class="third">
 								{foreach key=key item=nav_next_list from=$nav_list.childmenu}

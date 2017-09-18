@@ -34,7 +34,7 @@
 
 
           <div id="contact1" class="clearfix ">
-              <h2>CONTACT US/</h2>
+              <h2>CONTACT US</h2>
               
               <div class="inner">
                   {$global.contact}
@@ -53,7 +53,7 @@
 
                     <div class="new-dtit">
                       <h3>{$article.title}</h3>
-                      <p>Release time：{$article.pubtimestamp|date_format:'%Y-%m-%d %p %H:%M:%S'}   browse：{$article.viewcount}next <a href="{$article.category.link}">[返回]</a></p>
+                      <p>Release time：{$article.pubtimestamp|date_format:'%Y-%m-%d %p %H:%M:%S'}   browse：{$article.viewcount}next <a href="{$article.category.link}">[return]</a></p>
                     </div>
                     <div class="det-con">
                         {$article.content|unescape:"html"}

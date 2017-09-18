@@ -16,7 +16,9 @@ ul li{ list-style:none;}
 #header .top1{float:left; text-align:right;  width:251px; margin-top:30px;overflow: hidden; }
 .top1 input{float: left;}
 .top1 .sinp{height: 20px;margin-right: 10px;}
-.top1 .sbtn{width: 34px;height: 24px;background:url(../images/top_ss.gif) no-repeat;border: none;}
+.top1 .sbtn{width: 44px;height: 24px;
+    /*background:url(../images/top_ss.gif) no-repeat;*/
+    border: none;}
 .topright{display: inline-block;float: right;}
 #banner {height:354px;overflow: hidden;position: relative;}
 ul.nav{width:1003px;height:37px;position: relative;margin: 0 auto;z-index: 10;text-align: center;background: url(../images/menubg.jpg) repeat-x;}

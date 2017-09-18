@@ -1,0 +1,59 @@
+{
+	"pro": {
+		"description": "产品中心",
+		"value": {},
+		"type": "list"
+	},
+	"about_us": {
+		"description": "关于我们",
+		"value": {},
+		"type": "page",
+		"config": {
+			"nav_height":454,
+			"nav_width":1920
+		}
+	},
+	"case":{
+		"description": "精品案例",
+		"value": {},
+		"type": "list",
+		"config": {
+			"height":392,
+			"width":285
+		}
+	},
+       "video": {
+		"value": "http://player.youku.com/player.php/Type/Folder/Fid/25949051/Ob/1/sid/XMTI5NDQyNDkzNg==/v.swf",
+		"description": "视频",
+		"type": "text"
+	},
+	"news":{
+		"description": "最新资讯",
+		"value": {},
+		"type": "list"	
+	},
+"bind_div0": {
+        "value": [
+        ],
+        "description": "绑定显示区域",
+        "type": "form",
+        "config": {
+            "kind": "div",
+            "name": "div_area0"
+        }
+    },
+"bind_form0": {
+        "value": [
+        ],
+ "description": "绑定表单",
+        "type": "form",
+        "config": {
+            "kind": "form_id",
+            "form_id": "form1"
+        }
+    }
+	
+}
+               
+
+

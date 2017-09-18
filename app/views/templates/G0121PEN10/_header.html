@@ -1,0 +1,72 @@
+<div id="header" class="clearfix">
+<h1><a href="{$site_url}"><img src="{$logo}" alt="{$title}"></a></h1>
+<div class="search"><form action="{$search_action}" method="GET">
+  <input type="text" name="s"  placeholder="Please enter keywords" class="search_area" />
+  <input type="submit" class="search_btn"  value="search"/>
+</form></div>
+
+ <div class="tel">{$global.tel}</div> 
+
+</div>
+
+
+
+<div id="banner"><div id="slideBox" class="slideBox">
+					<div class="hd">
+						<ul>
+							{foreach name=slidepics item=slidepic from=$global.slidepics}
+							<li></li>
+							{/foreach}
+						</ul>
+					</div>
+					<div class="bd">
+						<ul>
+							{foreach name=slidepics item=slidepic from=$global.slidepics}
+									<li style="background:url({$slidepic.image}) no-repeat center; height:350px;"><a href="{$slidepic.link}" target="_blank"></a></li>
+							{/foreach}
+						</ul>
+					</div>
+				</div></div>
+
+<div id="nav" class="wrapper clearfix">
+
+<div class="nav-wrap">
+      <ul class="clearfix">
+
+            {$limit = 10}
+            {if $navs|count lt $limit}{$limit = $navs|count}{/if}
+              <li class=" nav1" style="width:{100/($limit+1)}%"><a href="{$site_url}"><h3>HOME</h3>
+                  <!--<p>HOME</p>-->
+              </a></li>
+            {foreach name=navs item=nav from=$navs}
+            <li class="fl{if $nav.current} current{/if} aa" style="width:{100/($limit+1)}%">
+               <a href="{$nav.link}"><h3>{$nav.en_name}</h3>
+                   
+               </a>
+                <ul class="sub clearfix">
+                    {if $nav.childmenu} {foreach key=key item=nav_list from=$nav.childmenu}
+                    <li class="{if $nav.current}current{/if} cc"><a href="{$nav_list.link}">{$nav_list.en_name}</a></li>
+                    {/foreach} {/if}
+                </ul>
+            </li>
+            {if $nav@index+1 eq $limit}{break}{/if}
+            {/foreach}
+        </ul>
+    </div>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
