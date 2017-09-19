@@ -20,5 +20,23 @@
 			"width": 1920,
 			"height": 442
 		}
+	},
+	"conimg":{
+		"description": "联系我们的背景图片",
+		"value": {
+			"title": "背景图片",
+			"image": "images/contact_li.jpg",
+			"link": "http://www.baidu.com/"
+			},
+		"type": "image",
+		"config": {
+			"height":76,
+			"width":134
+		}
+	},
+	"contact":{
+		"description": "联系我们",
+		"value": "联系我们",
+		"type": "textarea"
 	}
 }
