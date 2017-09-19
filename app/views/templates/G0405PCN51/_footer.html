@@ -1,0 +1,32 @@
+
+<div id="footer">
+<div id="links" class="wrapper">
+<div class="title">友情链接<span></span>/ links</div>
+<div class="inner">
+      <div class="bd">
+        <ul class="clearfix">
+         {foreach name=friend item=friend from=$global.links}
+          <li><a href="{$friend.link}">
+            <div class="pic"><img src="{$friend.image}" /></div>
+            </a></li>
+          {/foreach}
+        </ul>
+      </div>
+    </div>
+</div>
+
+
+<div class="cpy_bg">
+    <div class="wrapper">{$footprint}</div>
+  </div>
+
+</div>
+{$footscript}
+<!--#*
+{foreach name=navs item=nav from=$navs}
+<a href="{$nav.link}" >{$nav.name}</a> |{/foreach}
+
+<a href="index.html" target="_blank">首页</a> | {foreach name=navs item=nav from=$navs}<a href="{$nav.link}">{$nav.name}</a> | {/foreach}
+
+{$footprint}
+*#-->
