@@ -28,15 +28,7 @@
 	
 
 	
-		"por_list":{
-		"description": "产品列表",
-		"value": {},
-		"type": "list",
-			"config": {
-			"nav_width":1920,
-			"nav_height":154
-		}				
-	}   ,
+
 	
 	
 	
@@ -45,6 +37,8 @@
 		"value": {},
 		"type": "list",
 		"config": {
+			"showchilddata":true,
+			"star_only": true,
 			"width":196,
 			"height":196
 		}

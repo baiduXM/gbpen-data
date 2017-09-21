@@ -96,16 +96,16 @@
  <div class="center wrapper clearfix">
  
  <div class="por_list">
- <div class="title"><a href="{$index.por_list.link}"><b>{$index.por_list.en_name}</b><p>{$index.por_list.name}</p></a></div>
+ <div class="title"><a href="{$index.products.link}"><b>{$index.products.en_name}</b><p>{$index.products.name}</p></a></div>
  <div class="inner">
  <ul>
  
- {foreach name=por_list item=por_list from=$index.por_list.data}
+ {foreach name=por_list item=por_list from=$index.products.childmenu}
  
- <li><a href="{$por_list.link}">{$por_list.title}</a></li>
+ <li><a href="{$por_list.link}">{$por_list.name}</a></li>
 
 
- {if $news@index+1 == 11}{break}{/if}
+ {if $por_list@index+1 == 11}{break}{/if}
  {/foreach}
  
  </ul>
@@ -125,7 +125,6 @@
       <a href="{$products.link}" class="pro_img"><div class="pic"><img src="{$products.image}" /></div></a>
       <a href="{$products.link}"><div class="text">{$products.title}</div></a>
       </li>  
-     
    {/foreach}
                   
       </div>

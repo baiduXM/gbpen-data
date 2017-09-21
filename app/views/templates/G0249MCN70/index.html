@@ -46,6 +46,7 @@
 <script src="{$site_url}js/idangerous.swiper-2.0.min.js"></script>
 <script src="{$site_url}js/idangerous.swiper.3dflow-2.0.js"></script>
 <script src="{$site_url}js/simple-app.js"></script>
+    
 <script type="text/javascript">
 	window.addEventListener('load', function(){
    setTimeout(function(){ window.scrollTo(0, 1); }, 100);
@@ -70,7 +71,26 @@
 
 </a>
 </div>
- 
+      {elseif $mIndexCat.type eq 2}
+      <div id="in_image" class="xx">
+          <h2><a href="{$mIndexCat.link}">
+              <div class="en">{$mIndexCat.en_name}</div>   <div class="ch">{$mIndexCat.name}</div>
+          </a></h2>
+
+          <div class="inner">
+              <ul class="clearfix">
+                  {foreach item=article from=$mIndexCat.data}
+
+                  <li><a href="{$article.link}">
+                      <div class="news_img"><img src="{$article.image}"></div> <div class="text">{$article.title}</div>
+                  </a></li>
+
+
+                  {if $article@index+1 == 2}{break}{/if} {/foreach}
+
+              </ul>
+          </div>
+      </div>
     {elseif $mIndexCat.type eq 3}
 <div  id="in_text" class="xx">
 <h2 class="clearfix"><a href="{$mIndexCat.description}">
@@ -98,26 +118,11 @@
 
     
     </div>
-    {elseif $mIndexCat.type eq 2}
-<div id="in_image" class="xx">
-<h2><a href="{$mIndexCat.link}"> 
-<div class="en">{$mIndexCat.en_name}</div>   <div class="ch">{$mIndexCat.name}</div>
-   </a></h2>
 
-<div class="inner">
-        <ul class="clearfix">
-          {foreach item=article from=$mIndexCat.data}
- 
-<li><a href="{$article.link}">
-<div class="news_img"><img src="{$article.image}"></div> <div class="text">{$article.title}</div>
-</a></li>
 
- 
-          {if $article@index+1 == 2}{break}{/if} {/foreach}
-          
-        </ul>
-      </div>
-    </div>
+
+
+
     {/if} 
     {/foreach}
     </section>

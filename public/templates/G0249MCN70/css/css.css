@@ -43,9 +43,9 @@ h2{ }
 #in_image .text{ text-align:center; width:96%; margin:auto;overflow: hidden;text-overflow: ellipsis;white-space: nowrap; color:#1a1a1a; font-size:14px; margin-top:2%}
 @media screen and (min-width: 320px) and (max-width: 480px){
 #in_image h2 .en{ font-size:20px;}
-#in_image h2 .ch{ font-size:16px; color:#200909; position:relative;width:25%; margin:auto; padding:0 8%; margin-top:0%}
-#in_image h2 .ch:before{width:20%; height:2px; background:#200909; position:absolute;content:"";top:11px; left:0px; } 
-#in_image h2 .ch:after{width: 20%; height: 2px; background:#200909; position:absolute;content:"";top:11px; right:0px;}
+#in_image h2 .ch{ font-size:16px;  position:relative;width:25%; margin:auto; padding:0 8%; margin-top:0%}
+#in_image h2 .ch:before{width:20%; height:2px;  position:absolute;content:"";top:11px; left:0px; }
+#in_image h2 .ch:after{width: 20%; height: 2px; position:absolute;content:"";top:11px; right:0px;}
 #in_image ul li{ width:43%; margin:1%; }
 }
 
@@ -71,7 +71,7 @@ h2{ }
 #in_text h2 .ch:before{width:37%; } 
 #in_text h2 .ch:after{width: 37%;}
 #in_text .text{ line-height:24px; height:72px; }
-#in_text .text{  padding:3% 3% 0% 3%; color:#4c4c4c; font-size:14px; line-height:26px; height:78px; overflow:hidden}
+#in_text .text{  padding:3% 3% 0% 3%;  font-size:14px; line-height:26px; height:78px; overflow:hidden}
 #in_text span{ font-size:12px;}
 #in_text .news_more{ width:15%; margin-left:-10%}
 

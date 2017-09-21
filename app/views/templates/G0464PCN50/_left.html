@@ -1,0 +1,17 @@
+<div class="pos_nav">
+  {if $pagenavs}
+  <ul class="three_nav">
+    {foreach item=lnav from=$pagenavs}
+     <li><a href="{$lnav.link}" class="one"><span>{$lnav.name}</span></a>
+        {if $lnav.childmenu}
+        <ul class="nav_list">
+            {foreach item=navlist from=$lnav.childmenu}
+               <li><a href="{$navlist.link}">{$navlist.name}</a></li>
+            {/foreach} 
+        </ul>
+        {/if}
+     </li>
+    {/foreach}
+  </ul>
+  {/if}
+</div>

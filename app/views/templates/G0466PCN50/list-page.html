@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <script type="text/javascript">
+        // 识别为手机客户端，自动跳转手机页面
+        {if $site_another_url}
+        if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+            location.href = '{$site_another_url}';
+        }
+        {/if}
+    </script>
+    <meta name="keywords" content="{$keywords}" />
+    <meta name="description" content="{$description}" />
+    <link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
+    <title>{$title}</title>
+    <link rel="stylesheet" href="{$site_url}css/jquery.bxslider.css">
+    <link rel="stylesheet" href="{$site_url}css/style.css">
+    <script src="{$site_url}js/jquery-1.9.1.min.js"></script>
+    <script src="{$site_url}js/jquery.SuperSlide.2.1.1.js"></script>
+    <script src="{$site_url}js/jquery.bxslider.js"></script>
+    <script src="{$site_url}js/index.js"></script>
+</head>
+<body>
+<div class="header">
+    {include file="./_nav.html"}
+    {include file="./_det-ban.html"}
+</div>
+
+<div id="det-main">
+   <div class="container">
+       <div class="det-lt">
+           {include file="./_pagenavs.html"}
+       </div>
+       <div class="det-rt">
+           <div class="pos">
+               <span class="list_name">{$list.name}</span>
+               <ul class="posnavs rt">
+                   <li><a href="{$site_url}">首页</a></li>
+                   {foreach item=nav from=$posnavs}
+                   <li class=""><i> - </i><a href="{$nav.link}">{$nav.name}</a></li>
+                   {/foreach}
+               </ul>
+           </div>
+          <div class="det-cont">
+              <div class="txt">  {$list.content|unescape:"html"}</div>
+          </div>
+       </div>
+   </div>
+</div>
+
+{include file="./_footer.html"}
+</body>
+</html>

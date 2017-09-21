@@ -1,0 +1,91 @@
+{
+  "banner": {
+    "value": [
+      {
+        "title": "测试图2",
+        "image": "images/banner.png",
+        "link": "http://www.baidu.com"
+      },
+      {
+        "title": "测试图2",
+        "image": "images/banner.png",
+        "link": "http://www.baidu.com"
+      },
+      {
+        "title": "测试图2",
+        "image": "images/banner.png",
+        "link": "http://www.baidu.com"
+      }
+    ],
+    "description": "首页banner图",
+    "type": "images",
+    "config": {
+      "width": 1920
+    }
+  },
+  "list1": {
+    "value": {},
+    "description": "第一个图片列表",
+    "type": "page",
+    "config": {
+      "width": 440,
+      "height": 440,
+      "star_only": true
+    }
+  },
+  "list2": {
+    "value": {},
+    "description": "第二个图片页",
+    "type": "list",
+    "config": {
+      "width": 273,
+      "height": 188,
+      "showchilddata":true,
+      "star_only": true
+    }
+  },
+  "list2Bg": {
+    "value": {
+      "title": "",
+      "image": "images/img_02.png",
+      "link": ""
+    },
+    "description": "首页第二个图片页背景图",
+    "type": "image",
+    "config": {
+      "width": 1920,
+      "height":883
+    }
+  },
+  "list3": {
+    "value": {},
+    "description": "第三个图文列表",
+    "type": "list",
+    "config": {
+      "width": 378,
+      "height": 90,
+      "star_only": true
+    }
+  },
+  "linkImg": {
+    "value": [
+      {
+        "title": "百度贴吧",
+        "image": "images/index_03.jpg",
+        "link": "http://tieba.baidu.com"
+      }, {
+        "title": "百度图片",
+        "image": "images/index_03.jpg",
+        "link": "http://image.baidu.com"
+      }
+    ],
+    "description": "友情链接",
+    "type": "images",
+    "config": {
+      "width": 118,
+      "height": 48,
+      "star_only": true
+    }
+  }
+
+}

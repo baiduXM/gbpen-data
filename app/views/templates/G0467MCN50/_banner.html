@@ -1,0 +1,11 @@
+<!---轮播图-->
+<div class="banner">
+    <div class="swiper-container swiper-banner " >
+        <ul class="swiper-wrapper ">
+            {foreach name=slidepics item=slidepic from=$global.slidepics}
+            <li class="swiper-slide"><a href="{$slidepic.link}" target="_blank"><img src="{$slidepic.image}" ></a></li>
+            {/foreach}
+        </ul>
+        <div class="swiper-pagination"></div>
+    </div>
+</div>

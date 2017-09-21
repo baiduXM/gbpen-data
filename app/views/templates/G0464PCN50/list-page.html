@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html manifest="huancun.manifest">
+<head>
+<!-- 实时预览调试代码，模板开发完成后删除 -->
+    
+    <!-- 调试代码 End -->
+    <script type="text/javascript">
+    // 跳转PC页面
+    {if $site_another_url}
+      if (!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+        location.href = '{$site_another_url}';
+      }
+    {/if}
+    </script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no,minimal-ui">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta content="telephone=no, email=no" name="format-detection">
+<!-- 启用360浏览器的极速模式(webkit) -->
+<meta name="renderer" content="webkit">
+<!-- 避免IE使用兼容模式 -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+<meta name="HandheldFriendly" content="true">
+<!-- 微软的老式浏览器 -->
+<meta name="MobileOptimized" content="320">
+<!-- uc强制竖屏 -->
+<meta name="screen-orientation" content="portrait">
+<!-- QQ强制竖屏 -->
+<meta name="x5-orientation" content="portrait">
+<title>{$title}</title>
+<meta name="keywords" content="{$keywords}" />
+<meta name="description" content="{$description}" />
+<link rel="stylesheet" href="{$site_url}css/style.css">
+<script type="text/javascript" src="{$site_url}js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript" src="{$site_url}js/function.js"></script>
+</head>
+<body>
+  <div class="wrapper">
+      <div class="header head_ny">
+          <div class="logo"><a href="{$site_url}"><img src="{$logo}"></a></div>
+          <div class="raindrop"></div>
+          <div class="nav">
+              <ul class="menu">
+                  <li class="in"><a href="{$site_url}">网站首页</a></li>
+                  {foreach item=nav from=$navs}
+                      <li><a href="{$nav.link}">{$nav.name}</a></li>
+                  {if $nav@index+1 eq 8}{break}{/if}
+                  {/foreach}
+              </ul>
+              <div class="nav_er"></div>
+          </div>
+      </div>
+      <div class="side_ny fr">
+          <div class="nybox">
+               <div class="pos_top">
+                    <p>{$list.name}</p>
+                    {include file='./_left.html'}
+               </div>
+               <div class="about">
+                    <div class="about_img fl"><div class="aimgbox"><div class="aimg dtc tc vm"><img src="{$list.image}"></div></div></div>
+               </div>
+               <div class="ab_dec pr">
+                    <div class="title pa">{$list.name}</div>
+                    <div class="dectil">
+                        <div class="about_d">{$list.content|unescape:"html"}</div>
+                    </div>
+               </div>
+               <div class="yd pf"><a href="{$global.buy.link}">{$global.buy.title}</a></div>
+          </div>
+          <div class="foot tc"><br>{$footprint}</div>
+          {$footscript}
+      </div>
+  </div>
+</body>
+</html>

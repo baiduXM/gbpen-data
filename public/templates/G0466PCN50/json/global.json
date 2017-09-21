@@ -1,0 +1,54 @@
+{
+  "detBan": {
+    "value":{
+      "title": "测试图2",
+      "image": "images/about_01.png",
+      "link": "http://www.baidu.com"
+    },
+    "description": "内页banner图",
+    "type": "image",
+    "config": {
+      "width": 1920
+    }
+  },
+  "pagenavs": {
+    "value": {},
+    "description": "侧边栏目列表（当前栏目无子栏目时展示的目标栏目）",
+    "type": "list",
+    "config": {
+      "filter": "list,page",
+      "mustchild": true
+    }
+  },
+  "contact":{
+    "value": "  厦门易尔通网络科技有限公司 <br> 公司地址：厦门市思明区软件园二期观日路36号201单元&nbsp; &nbsp;&nbsp;&nbsp;  联系电话：0592-3503777  &nbsp;&nbsp;&nbsp; 邮箱：tousu@xm12t.com",
+    "description": "公司信息",
+    "type": "textarea"
+  },
+  "footImg1": {
+    "value": {
+      "title": "扫一扫关注我们",
+      "image": "images/about_08.png",
+      "link": ""
+    },
+    "description": "",
+    "type": "image",
+    "config": {
+      "width": 100,
+      "height": 100
+    }
+  },
+  "footImg2":{
+    "value":{
+      "title":"扫一扫关注我们",
+      "image":"images/about_08.png",
+      "link":""
+    },
+    "description":"",
+    "type":"image",
+    "config":{
+      "width":100,
+      "height":100
+    }
+  }
+}

@@ -129,7 +129,7 @@ width:100%; position:relative; z-index:100; margin-top:0px; }
 
 .products{ width:950px; float:right; margin-top:210px; margin-right:8px;}
 
-.products ul{ width:208px; margin-right:40px; height:520px; overflow:hidden;}
+.products ul{ width:208px; margin-right:40px; height:520px; overflow:hidden; float: left;}
 .products ul li{ float:left; width:208px; margin-right:40px;  }
 .products ul li a{ color:#343434;}
 .products ul li a:hover{ font-weight:bold; font-size:14px;}
