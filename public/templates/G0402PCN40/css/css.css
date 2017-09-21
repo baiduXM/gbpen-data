@@ -54,8 +54,11 @@ ul,li{list-style-type: none;}
 
 .head{width:581px;height: 70px;background: url(../images/black.png) right center no-repeat;position: absolute;left: 0;top: 27px;}
 .head .logo{width: 196px;height: 70px;position: absolute;top: 0px;left: 360px;display: table-cell;vertical-align: middle;text-align: center;}
-.head .logo a{width: 196px;height: 70px;display: table-cell;vertical-align: middle;text-align: center;}
-.head .logo a img{max-height: 100%;max-width: 100%;}
+/*.head .logo a{width: 196px;height: 70px;display: table-cell;vertical-align: middle;text-align: center;}
+.head .logo a img{max-height: 100%;max-width: 100%;}*/
+
+.head .logo a{width: 196px;height: 70px;display: block;vertical-align: middle;text-align: center; position:relative}
+.head .logo a img{max-height: 100%;max-width: 100%; margin:auto;position:absolute;top:0;left:0;bottom:0;right:0;}
 
 .bt{width: 1200px;height: 115px;margin: 0 auto;text-align: center;position: relative;}
 .bt .bt_cn{font-size: 22px;color: #333;padding-top: 20px;padding-bottom: 10px;}

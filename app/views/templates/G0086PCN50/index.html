@@ -25,13 +25,13 @@
 </head>
 <body>
 <div class="wrap">
-
+    <div class="footbg"><img src="{$index.footbg.image}"></div>
     <div class="top">
         <div class="header">
             <div class="head">
                 <div class="menu"><div class="menubar"></div></div>
                 <div class="logo"><a href="{$site_url}"><img src="{$logo}" alt=""></a></div>
-
+                <div class="add_tel"><span>{$global.telcontext}</span></div>
             </div>
         </div>
         <div class="banner">
@@ -78,6 +78,7 @@
     </div>
     
     <div class="content">
+    <div class="content_bg"><img src="{$index.contentbg.image}"></div>
         <div class="down"><i></i></div>
         <div class="public">
             <div class="about">
@@ -96,7 +97,7 @@
                 </div>
                 <div class="pro-list">
                     <ul>
-                    {$limit = 6}
+                    {$limit = 9}
                     {foreach name=list1 item=list1 from=$index.pro.data}
                     <li><a href="{$list1.link}"><img src="{$list1.image}"><div class="proname"><h2>{$list1.title}</h2></div></a></li>
                     

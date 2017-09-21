@@ -1,28 +1,35 @@
+$(document).ready(function() {
+<!--美工-->
+$(".products li").each(function(i){
+	$(".products li").slice(i*2,i*2+2).wrapAll("<ul></ul>")
+	})
+$(".products").slide({titCell:".hd ul",mainCell:".bd .ulWrap",autoPlay:true,effect:"leftMarquee",vis:4,interTime:50 ,trigger:"click"});
+
+
+
+
+});
+
+
 
 
 window.onload=function(){
-<!--美工-->
-	
-	$("#nav ul li:last").css({"background":"none"});
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-$("#banner .slideBox").slide({mainCell:".bd ul",autoPlay:true, effect:"fold", trigger:"click",interTime:4000});
-	
 
+
+	
+	 $(".about").each(
+ function(){
+	 $(this).find(".about_text").width($(this).width()-$(this).find(".about_img img").width()-60)
+	 }
+ )		
  
-
-$(".product ").slide({mainCell:".bd ul",autoPlay:true,effect:"leftMarquee",vis:3,interTime:50});
-
-
+ 
+ 
+ 
+ 
+ 
+ 
+ jQuery(".picScroll-left").slide({mainCell:".bd ul",autoPlay:true,effect:"leftMarquee",vis:4,interTime:50});
 
 function adaption(selector,li_w,li_h){
 		$(selector).each(function(i){
@@ -41,7 +48,8 @@ function adaption(selector,li_w,li_h){
 		})
 	}
 /*首页产品列表图片自适应*/
-adaption(".product .inner ul li .pic ",106,106)
+
+adaption(".products ul li .pic",165,165)
 
 
 
@@ -67,6 +75,11 @@ adaption(".product .inner ul li .pic ",106,106)
 }
 
 $(document).ready(function() {
+						   
+<!--大图-->
+$("#banner .slideBox").slide({mainCell:".bd ul",autoPlay:true, effect:"fold", trigger:"click",interTime:4000});
+						   
+						   
 	
 
 /*产品详细页图片自适应*/

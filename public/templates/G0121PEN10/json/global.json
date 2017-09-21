@@ -18,28 +18,45 @@
 		"description": "内页多图轮播",
 		"type": "images",
 		"config": {
-			"width": 1003,
-			"height": 350
+			"width": 1920,
+			"height": 475
+		
 		}
 	},
 	
 	
-	"tel":{
-	    "description": "首页服务热线文字信息",
-	    "value": "全国服务:0592-7083933",
+	
+		"tel":{
+    "description": "服务热线",
+        "value": "服务电话:0592-7083933",
+		
 		"type": "text"
-	},	
-	"contactus":{
+		
+	},
+
+			
+"contactus":{
         "value": "电 话:0592-7083933\r\n 手  机:1379978730\r\n 联系人:谢先生\r\n 传  真:0592-5535933\r\n 邮  箱：jms_jx@126.com \r\n 地址：厦门软件园二期观日路52号A栋201A\r\n 工厂地址：厦门市翔安区新",
 		"description": "联系方式",
 		"type": "textarea"
+		
+	},
+
+	
+	
 			
-	},	
 	"contact_us": {
 		"description": "联系我们绑定",
 		"value": {},
 		"type": "page"
+		
+
 	},
+	
+	
+	
+	
+	
 	"links": {
 		"value": [{
 			"title": "百度",
@@ -66,7 +83,8 @@
 		"type": "images",
 		"config": {
 			"width": 800,
-			"height": 280
-			}
+			"height": 280,
+			"limit": 4
+		}
 		}
 }

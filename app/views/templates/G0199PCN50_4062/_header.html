@@ -1,0 +1,54 @@
+	 <div class="wappers">
+       
+		<div class="headers">
+         	<h1 class="logo"><img src="{$logo}" height="100px"/></h1>
+                <div class="member "><a href="{$global.member.link}">{$global.member.title}</a></div>
+        	<div class="lg_right">
+                <span></span>
+                <div class="tel">{$global.tel}</div>
+            </div>
+         </div>
+		<div class="menu">
+          <ul class="nav">  
+               <li class="nav_li" style="width:{100/(($navs|count)+1)}%"><a href="{$site_url}">首页</a></li>
+                {foreach name=navs item=nav from=$navs}
+                <li class="{if $nav.current} current{/if} nav_li" style="width:{100/(($navs|count)+1)}%">
+                    <a href="{$nav.link}">{$nav.name}</a>{if $nav.childmenu}
+                    <ul class="sub">
+                        {foreach key=key item=nav_list from=$nav.childmenu}
+                        <li class="{if $nav.current}current{/if}"><a href="{$nav_list.link}">{$nav_list.name}</a></li>
+                        {/foreach}
+                    </ul>
+                    {/if}
+                </li>
+                {/foreach}
+          </ul>
+        </div> 
+                
+        <div class="banners">
+        <div id="slideBox" class="slideBox">
+			<div class="hd">
+				<ul>
+                    {$num=1}
+                    {foreach name=slidepics item=slidepic from=$global.slidepics}
+                         <li>{$num}</li>
+                         {$num=$num+1}
+                    {/foreach}     
+                </ul>
+			</div>
+			<div class="bd">
+				<ul>
+                {foreach name=slidepics item=slidepic from=$global.slidepics}
+                    <li><a href="{$slidepic.link}" target="_blank"><img src="{$slidepic.image}" alt="{$slidepic.title}"/></a></li>
+                {/foreach}
+                </ul>
+			</div>
+		</div>
+		</div>
+
+    </div>
+
+		
+        
+        
+       
