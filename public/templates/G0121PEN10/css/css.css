@@ -59,7 +59,7 @@ width:100%; position:relative; z-index:100; margin-top:0px; }
 .list .title{ width:335px; background:#303440;}
 .list .title .left{ float:left; width:41px; height:61px; padding-top:28px; padding-left:22px; background:#fabf01;}
 .list .title .right{ float:right; width:216px; height:50px; margin:20px 38px 20px 18px; overflow:hidden; font-size:14px; line-height:26px; color:#fbe3de; font-weight:bold; text-transform:uppercase;}
-.list .title .right b{ font-size:24px; height:24px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;  }
+.list .title .right b{ line-height: 50px;font-size:24px; height:24px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;  }
 .list .inner{ background:#fabf01; height:360px;}
 .list .inner ul{ height:360px; overflow:hidden;}
 .list .inner ul li{ font-size:16px; font-weight:bold; color:#303440; width:235px; margin:auto; border-bottom:1px #303440 solid; height:44px; line-height:44px; overflow:hidden; padding-left:15px;}
@@ -129,7 +129,7 @@ width:100%; position:relative; z-index:100; margin-top:0px; }
 .link_bg{ background:#303440 url(../images/link.jpg) no-repeat center top; padding-top:30px; padding-bottom:10px; }
 
 .link{ color:#fafafa;}
-.link b{ float:left; width:100px; font-size:18px; line-height:24px; padding-left:95px; padding-right:15px; font-weight:normal; color:#303440}
+.link b{  width:140px; font-size:18px; line-height:24px; padding-left:70px; padding-right:15px; font-weight:normal; color:#303440}
 .link h2{ float:right; width:880px; color:#fafafa; padding:1px 5px 0px 5px; line-height:24px; font-size:13px; display:block; }
 .link h2 a{ color:#fafafa;}
 
@@ -148,7 +148,7 @@ width:100%; position:relative; z-index:100; margin-top:0px; }
 
 .subnav .alefttitle p{ float:right; width:216px; height:50px; margin:20px 38px 20px 18px; overflow:hidden; font-size:14px; line-height:26px; color:#fbe3de; font-weight:bold; text-transform:uppercase;}
 
-.subnav .alefttitle i{ font-size:24px; height:24px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-style:normal; }
+.subnav .alefttitle i{ line-height: 50px;font-size:24px; height:24px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-style:normal; }
 
 .category{ width:335px; margin:auto; background:#fabf01; padding-bottom:30px;}
 .category ul{ padding-top:5px;}
@@ -169,7 +169,7 @@ ul.third li a.thirda:hover{}
 .sub_contact .title{ width:335px; background:#303440;}
 .sub_contact .title .left{ float:left; width:41px; height:61px; padding-top:28px; padding-left:22px; background:#fabf01;}
 .sub_contact .title .right{ float:right; width:216px; height:50px; margin:20px 38px 20px 18px; overflow:hidden; font-size:14px; line-height:26px; color:#fbe3de; font-weight:bold; text-transform:uppercase;}
-.sub_contact .title .right b{ font-size:24px; height:24px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;  }
+.sub_contact .title .right b{ line-height: 50px;font-size:24px; height:24px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;  }
 
 .sub_contact .inner{ background:#fabf01 url(../images/sub_contact.png) no-repeat right bottom; padding:30px 20px 20px 30px; line-height:30px; }
 .sub_contact .inner b{ font-size:14px;}

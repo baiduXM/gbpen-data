@@ -11,7 +11,7 @@
                 <ul class="chilmenu">
                     {foreach item=nav_list from=$nav.childmenu}
                     <li class="{if $nav_list.current}current{/if}">
-                        <a class="navC-a" href="{$nav_list.link}"><span> {$nav_list.en_name}</span><i></i></a>
+                        <a class="navC-a clearfix" href="{$nav_list.link}"><span> {$nav_list.en_name}</span><i></i></a>
                     </li>
                     {/foreach}
                 </ul>

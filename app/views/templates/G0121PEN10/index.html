@@ -19,6 +19,7 @@
 <script type="text/javascript" src="http://common.mn.sina.com.cn/public/resource/lib/jquery.jcarousellite.js"></script>
 <script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.js"></script>
 <script type="text/javascript" src="{$site_url}js/jquery.kinMaxShow-1.0.min.js"></script>
+  
 <script type="text/javascript" src="{$site_url}js/function.js"></script>
 {$headscript}
 </head>
@@ -29,13 +30,12 @@
     <div class="list">
       <div class="title clearfix">
         <div class="left"><a href="{$lnav.link}"><img src="{$site_url}images/jiao.png" /></a></div>
-        <div class="right"><b>{$index.pro_list.en_name}</b><br />
-          {$index.pro_list.name}</div>
+        <div class="right"><b>{$index.pro_list.en_name}</b></div>
       </div>
       <div class="inner">
         <ul class="clearfix">
           {foreach name=lnav item=lnav from=$index.pro_list.childmenu}
-          <li>><a href="{$lnav.link}">{$lnav.name}</a></li>
+          <li>><a href="{$lnav.link}">{$lnav.en_name}</a></li>
           {if $lnav@index+1 == 8}{break}{/if}
           {/foreach}
         </ul>
@@ -55,7 +55,7 @@
     </div>
     {if $index.caseOff eq 1}
     <div class="probox">
-      <h2 class="content_title"><em><b>{$index.case.en_name}</b><br/><span>{$index.case.name}</span></em></h2>
+      <h2 class="content_title"><em><span>{$index.case.en_name}</span></em></h2>
       <div class="probg"></div>
         <div class="picScroll-left clear">      
           <a class="prev"></a>
@@ -78,16 +78,16 @@
   <div class="about">
     <div class="title"><span><a href="{$index.about.link}"><img src="{$site_url}images/more.png" /></a></span>
       <p><img src="{$site_url}images/icon.png" /></p>
-      {$index.about.name} / <b>{$index.about.en_name}</b></div>
+      {$index.about.en_name} </div>
     <div class="inner">
       <div class="about_img"><img src="{$index.about.image}" /></div>
-      <div class="about_text"> {$index.about.description} <a href="{$index.about.link}">[查看更多...]</a> </div>
+      <div class="about_text"> {$index.about.description} <a href="{$index.about.link}">[Check out more...]</a> </div>
     </div>
   </div>
   <div class="news">
     <div class="title"><span><a href="{$index.news.link} "><img src="{$site_url}images/more.png" /></a></span>
       <p><img src="{$site_url}images/icon.png" /></p>
-      {$index.news.name}  / <b>{$index.news.en_name} </b></div>
+      {$index.news.en_name}</div>
     <div class="inner">
       <ul>
         {foreach name=news item=news from=$index.news.data}

@@ -4,7 +4,7 @@
     <div class="det-navTitle"><span>{$posnavs[0].name}</span> </div>
     <ul class="one">
         {foreach item=nav from=$pagenavs}
-        <li class="one-li"><a  href="{$nav.link}"><b>+</b> <span class="oneLi-c"> {$nav.name}</span> </a>
+        <li class="one-li clearfix"><a  href="{$nav.link}"><b>+</b> <span class="oneLi-c"> {$nav.name}</span> </a>
             {if $nav.childmenu}
             <ul class="two">
                 {foreach item=nav_list from=$nav.childmenu}

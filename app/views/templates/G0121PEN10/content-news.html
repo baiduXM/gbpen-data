@@ -20,14 +20,16 @@
 <script type="text/javascript" src="http://common.mn.sina.com.cn/public/resource/lib/jquery.jcarousellite.js"></script>
 <script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.js"></script>
 <script type="text/javascript" src="{$site_url}js/jquery.kinMaxShow-1.0.min.js"></script>
-<script type="text/javascript" src="{$site_url}js/function.js"></script></head>
+<script type="text/javascript" src="{$site_url}js/function.js"></script>
+  
+</head>
 <body>
 <div class="bg"> {include file='./_header.html'}
   <div id="sub_container" class=" wrapper clearfix" > {include file='./_aside.html'}
     <div class="main fr">
-      <div class="crumb"> <span>您所在的位置：<a href="{$site_url}">首页</a> {foreach item=nav from=$posnavs} <a href="{$nav.link}">>{$nav.name}</a> {/foreach}</span>
+      <div class="crumb"> <span>Where you are：<a href="{$site_url}"HOME</a> {foreach item=nav from=$posnavs} <a href="{$nav.link}">>{$nav.en_name}</a> {/foreach}</span>
         <p><img src="{$site_url}images/icon.png" /></p>
-       {$article.category.name}/ <b>{$article.category.en_name}</b> </div>
+       {$article.category.en_name}</div>
       <div class="article ">
         <h1 class="inner_news_tit">{$article.title} </h1>
         <h2 class="inner_news_time">{$article.pubtimestamp|date_format:'%Y-%m-%d %r '} </h2>
@@ -38,8 +40,8 @@
           <!-- Baidu Button BEGIN -->
           {shareExt shareText=$article.content|unescape:"html"|strip_tags|truncate:140:"…" sharePic=$article.image} </div>
         <ul class="inner_pages" style="clear:both;">
-          <li>上一篇：<a href="{$article.prev.link}">{$article.prev.title}</a></li>
-          <li>下一篇：<a href="{$article.next.link}">{$article.next.title}</a></li>
+          <li>PREV：<a href="{$article.prev.link}">{$article.prev.title}</a></li>
+          <li>NEXT：<a href="{$article.next.link}">{$article.next.title}</a></li>
         </ul>
       </div>
     </div>

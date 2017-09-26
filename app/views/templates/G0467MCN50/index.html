@@ -102,7 +102,7 @@
                         <div class="m2-content">
                             <ul class="m2-tab">
                                 {foreach item=m2 from=$mIndexCat.childmenu}
-                                <li class="lt"><a href="{$m2.link}">{$m2.name}</a></li>
+                                     <li class="lt"><a href="{$m2.link}">{$m2.name}</a></li>
                                 {if $m2@index+1 eq 4}{break}{/if}
                                 {/foreach}
                             </ul>
@@ -131,7 +131,7 @@
                                 <span>{$mIndexCat.en_name}</span>
                             </div>
                             <div class="m3-des">
-                                {$mIndexCat.content|unescape:"html"}
+                                {$mIndexCat.description}
                             </div>
                             <a href="{$mIndexCat.link}" class="m3-more">MORE +</a>
                         </div>
