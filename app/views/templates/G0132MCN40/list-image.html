@@ -44,6 +44,7 @@
   <script type="text/javascript" src="{$site_url}js/simple-app.js"></script>
   <script type="text/javascript" src="{$site_url}js/fontsize.js"></script>
   <script type="text/javascript" src="{$site_url}js/function.js"></script>
+    
   <script type="text/javascript">
     window.addEventListener('load', function(){
      setTimeout(function(){ window.scrollTo(0, 1); }, 100);
@@ -86,8 +87,8 @@
                   <li class="{if $nav_list.current}current{/if}"><a href="{$nav_list.link}" class="kz">{$nav_list.name}<span></span></a>
                       {if $nav.childmenu}
                       <ul>
-                          {foreach item=nav_list from=$nav.childmenu}
-                          <li class="{if $nav_list.current}current{/if}"><a href="{$nav_list.link}" class="kz">{$nav_list.name}</a></li>
+                          {foreach key=key item=nav_listsec from=$nav_list.childmenu}
+                          <li class="{if $nav_list.current}current{/if}"><a href="{$nav_list.link}" class="kz">{$nav_listsec.name}</a></li>
                           {/foreach}
                       </ul>
                       {/if}

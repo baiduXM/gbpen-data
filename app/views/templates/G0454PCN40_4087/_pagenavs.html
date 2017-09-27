@@ -1,0 +1,54 @@
+{if $pagenavs}
+<div class="det-nav">
+    <b class="detNav-bg"><img src="{$site_url}images/about_02.jpg" alt=""></b>
+    <div class="det-navTitle"><span>{$posnavs[0].name}</span> </div>
+    <ul class="one">
+        {foreach item=nav from=$pagenavs}
+        <li class="one-li clearfix"><a  href="{$nav.link}"><b>+</b> <span class="oneLi-c"> {$nav.name}</span> </a>
+            {if $nav.childmenu}
+            <ul class="two">
+                {foreach item=nav_list from=$nav.childmenu}
+                <li class="two-li"><a href="{$nav_list.link}"> <span>{$nav_list.name}</span> </a>
+                    {if $nav_list.childmenu}
+                    <ul class="three">
+                        {foreach item=nav_lists from=$nav_list.childmenu}
+                        <li class="three-li"><a href="{$nav_lists.link}"> <span>{$nav_lists.name}</span></a></li>
+                        {/foreach}
+                    </ul>
+                    {/if}
+                </li>
+                {/foreach}
+            </ul>
+            {/if}
+        </li>
+        
+        {/foreach}
+    </ul>
+</div>
+{else}
+<div class="det-nav">
+    <b class="detNav-bg"><img src="{$site_url}images/about_02.jpg" alt=""></b>
+    <div class="det-navTitle"><span>{$global.pagenavs.name}</span></div>
+    <ul class="one">
+        {foreach item=nav from=$global.pagenavs.childmenu}
+        <li class="one-li"><a  href="{$nav.link}"><b>+</b> <span class="oneLi-c"> {$nav.name}</span> </a>
+            {if $nav.childmenu}
+            <ul class="two">
+                {foreach item=nav_list from=$nav.childmenu}
+                <li class="two-li"><a href="{$nav_list.link}"> <span>{$nav_list.name}</span> </a>
+                    {if $nav_list.childmenu}
+                    <ul class="three">
+                        {foreach item=nav_lists from=$nav_list.childmenu}
+                        <li class="three-li"><a href="{$nav_lists.link}"> <span>{$nav_lists.name}</span></a></li>
+                        {/foreach}
+                    </ul>
+                    {/if}
+                </li>
+                {/foreach}
+            </ul>
+            {/if}
+        </li>
+        {/foreach}
+    </ul>
+</div>
+{/if}

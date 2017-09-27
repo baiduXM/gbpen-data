@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{$title}</title>
+    <script type="text/javascript">
+        // 跳转PC页面
+        {if $site_another_url}
+        if (!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+            location.href = '{$site_another_url}';
+        }
+        {/if}
+    </script>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no,minimal-ui">
+    <meta name="keywords" content="{$keywords}" />
+    <meta name="description" content="{$description}" />
+    <link rel="stylesheet" href="{$site_url}css/swiper-3.3.1.min.css" />
+    <link rel="stylesheet" href="{$site_url}css/style.css">
+    <script type="text/javascript" src="{$site_url}js/jquery.min.js"></script>
+    <script type="text/javascript" src="{$site_url}js/swiper-3.3.1.jquery.min.js"></script>
+    <script type="text/javascript" src="{$site_url}js/simple-app.js"></script>
+    <script src="{$site_url}js/jquery-1.9.1.min.js"></script>
+    <script src="{$site_url}js/jquery.SuperSlide.2.1.1.js"></script>
+    <script type="text/javascript" src="{$site_url}js/index.js"></script>
+    <script type="text/javascript">
+        window.addEventListener('load', function(){
+            setTimeout(function(){ window.scrollTo(0, 1);}, 100);
+        });//safari浏览器可以通过此代码来隐藏地址栏
+    </script>
+</head>
+<body>
+<div id="det-body">
+    {include file="./_header.html"}
+    <div class="index-new index-content">
+        <div class=" about-class">
+            <span><img src="{$site_url}images/pro2_07.png" alt="">{$list.name}</span>
+            <a href="javascript:" class="ab-font rt">字
+                <img id="add-show" class=" add-show" src="{$site_url}images/font-add.png" alt="">
+                <img  class="hide j-hide" src="{$site_url}images/font-add2.png" alt="">
+            </a>
+            <a href="javascript:" class="ab-class rt">分 类 ↓</a>
+        </div>
+        <div class="det-font hide" >
+            <div class="font-size">
+                <p class="class-icon"><img src="{$site_url}images/prev_08.png" alt="" ></p>
+                <ul>
+                    <li class="big"><a href="javascript:" onclick="changeFontSize2('0.8')">大</a></li>
+                    <li class="middle"><a href="javascript:" onclick="changeFontSize2('0.7')">中</a></li>
+                    <li class="sm"><a href="javascript:" onclick="changeFontSize2('0.6')">小</a></li>
+                </ul>
+            </div>
+        </div>
+        {include file="./_nav.html"}
+        <div class="news-list">
+            {foreach item=article from=$list.data}
+                <a href="{$article.link}" class="list-dl">
+                    <dl>
+                        <dt><img src="{$article.image}" alt=""></dt>
+                        <dd class="rt">
+                            <h5>{$article.title}</h5>
+                            <p class="txt">天天气不错，挺风和天天气不错，挺风和天天气不错，挺风和天天气不错，挺风和天天气不错，挺风和天天气不错，挺风和天天气不错，挺风和</p>
+                            <time>{$article.pubtimestamp|date_format:'%Y-%m-%d '}</time>
+                        </dd>
+                    </dl>
+                </a>
+            {/foreach}
+        </div>
+        {include file="./_page.html"}
+    </div>
+</div>
+
+{include file="./_footer.html"}
+</body>
+</html>

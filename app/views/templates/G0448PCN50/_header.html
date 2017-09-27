@@ -1,0 +1,29 @@
+<div class="head pa">
+    <div class="topbox">
+       <div class="logo fl"><a href="{$site_url}"><img src="{$logo}"></a></div>
+       <div class="search fr">
+          <form class="search_div fr">
+              <input name="s" type="text" class="input fl" placeholder="请输入搜索关键字">
+              <input name="" type="submit" class="btn fr" value="">
+          </form>
+       </div>
+    </div>
+</div>
+<div class="nav">
+    <ul class="menu">
+        <li class="current transition"><a href="{$site_url}">网站首页</a></li>
+        
+        {foreach item=nav from=$navs}
+        <li><a href="{$nav.link}" class="transition">{$nav.name}</a>
+          {if $nav.childmenu}
+            <ul class="nav_list">
+                {foreach item=navlist from=$nav.childmenu}
+                   <li><a href="{$navlist.link}">{$navlist.name}</a></li>
+                {/foreach}
+            </ul>
+          {/if}
+        </li>
+        {/foreach}
+        <div class="ledgement"></div>
+    </ul>
+</div>

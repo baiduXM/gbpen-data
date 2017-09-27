@@ -29,7 +29,7 @@
   <div class="product_bg clearfix">
     <div class="list">
       <div class="title clearfix">
-        <div class="left"><a href="{$lnav.link}"><img src="{$site_url}images/jiao.png" /></a></div>
+        <div class="left"><a href="{$index.pro_list.link}"><img src="{$site_url}images/jiao.png" /></a></div>
         <div class="right"><b>{$index.pro_list.en_name}</b><br />
           {$index.pro_list.name}</div>
       </div>
@@ -44,11 +44,12 @@
     </div>
     <div class="products">
       <div class="bd" style="width:715px; height:450px; overflow:hidden">
-        <div class="ulWrap"> {foreach item=pro from=$index.pro.data}
-          <li><a href="{$pro.link}">
-            <div class="pic"><img src="{$pro.image}"  /></div>
-            <div class="text">{$pro.title}</div>
-            </a></li>
+        <div class="ulWrap"> 
+          {foreach item=pro from=$index.pro.data}
+                <li><a href="{$pro.link}">
+                    <div class="pic"><img src="{$pro.image}"  /></div>
+                    <div class="text">{$pro.title}</div>
+                </a></li>
           {/foreach} 
           </div>
       </div>

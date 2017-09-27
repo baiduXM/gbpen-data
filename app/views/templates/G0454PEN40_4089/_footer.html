@@ -1,0 +1,15 @@
+
+<div id="link">
+    <div class="container">
+        <ul class="link">
+            <li>friendly link :</li>
+            {foreach key=key item=link from=$global.links}
+                <li><a target="_blank" href="{$link.link}">{$link.title}</a></li>
+            {/foreach}
+        </ul>
+    </div>
+</div>
+<div id="copy">
+    {$footprint}
+</div>
+{$footscript}

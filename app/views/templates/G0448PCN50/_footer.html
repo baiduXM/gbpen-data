@@ -1,0 +1,29 @@
+<div id="footer">
+     <div class="foot_top">
+        <div class="link">友情链接：&nbsp;
+            {foreach item=flink from=$global.links}
+             |<a href="{$flink.link}">{$flink.title}</a>
+            {/foreach}
+        </div>
+     </div>
+     <div class="foot_bot">
+        <div class="bot_l fl">
+           <div class="foot_nav">
+               <a href="" class="one">网站首页</a>
+               {foreach item=nav from=$navs}
+                |<a href="{$nav.link}" class="one">{$nav.name}</a>
+               {/foreach}
+           </div>
+           <div class="copy fl">{$footprint}</div>
+           <div class="contact fr">
+                {$global.contact}
+           </div>
+        </div>
+        <div class="bot_r fr">
+            {foreach item=ewm from=$global.ewm}
+              <span><img src="{$ewm.image}"><i>{$ewm.title}</i></span>
+            {/foreach}
+        </div>
+     </div>
+</div>
+{$footscript}

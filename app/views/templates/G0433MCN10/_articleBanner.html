@@ -1,0 +1,11 @@
+<!--文章轮播图-->
+<div class="swiper-container swiper-banner">
+    <ul class="swiper-wrapper banner-img clearfix">
+        {foreach item=articles from=$article.images}
+        <li class="swiper-slide">
+            <a >
+            <img src="{$articles.image}" alt=""  ></a></li>
+        {/foreach}
+    </ul>
+    <div class="swiper-pagination"><ul></ul></div>
+</div>

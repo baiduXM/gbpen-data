@@ -1,0 +1,79 @@
+{   
+	"slidepics": {
+		"value": [{
+			"title": "banner",
+			"image": "images/banner.jpg",
+			"link": "article/1.html",
+			"description": "banner1"
+		}, {
+			"title": "测试图2",
+			"image": "images/banner.jpg",
+			"link": "http://www.baidu.com"
+		},{
+			"title": "测试图3",
+			"image": "images/banner.jpg",
+			"link": "http://www.baidu.com"
+		}],
+		"description": "banner图",
+		"type": "images",
+		"config": {
+			"width": 1920,
+			"height": 586
+		}
+	},
+    "child_title":{
+		"value":"苗木品种标题",
+		"description":"首页产品分类标题",
+		"type":"text"
+	},
+	"child":{
+		"description": "首页产品分类",
+		"value": {},
+		"type": "list",
+		"config": {
+			"filter": "list,page"
+		}	
+	},
+	"about_bg":{
+		"value": {
+			"title": "关于我们背景图片",
+			"image": "images/bg2.jpg",
+			"link": "http://www.baidu.com/"
+			},
+		"description": "关于我们背景图片",
+		"type": "image",
+		"config": {
+			"width":1920,
+			"height":298
+		}
+	},
+	"about": {
+		"description": "单页面(关于我们)",
+		"value": {},
+		"type": "page",
+		"config": {
+			"nav_width":586,
+		    "nav_height":386
+		}
+	},
+	"news":{
+		"description": "图文列表",
+		"value": {},
+		"type": "list",
+		"config": {
+			"star_only": true,
+			"width":440,
+		    "height":116			
+		}	
+	},
+	"pro":{
+		"description": "产品中心",
+		"value": {},
+		"type": "list",
+		"config": {
+			"width":278,
+			"height":243
+		}
+	}
+	
+}

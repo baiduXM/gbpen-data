@@ -1,0 +1,32 @@
+<div id="had-top">
+    <div class="container">
+        <div class="search-top lt">
+            <form action="{$search_action}" method="GET">
+                <input class="input-sub" type="submit" value="" >
+                <input class="input-txt" type="text" name="s" placeholder="请输入搜索关键词">
+            </form>
+        </div>
+        <div class="tel-top rt">
+            <i></i>
+            <span>{$contact.telephone}</span>
+        </div>
+        <ul class="nav-top rt">
+            {$litmit=4}
+            {if $navs|count lt $litmit}{$litmit = $navs|count}{/if}
+            {foreach item=nav from=$navs}
+                <li style="width:{100/($litmit)}%"><a href="{$nav.link}">{$nav.name}</a></li>
+            {if $nav@index+1 eq $litmit}{break}{/if}
+            {/foreach}
+        </ul>
+        <ul class="icon-top rt" >
+            <li class="weibo" ><a href="{$global.weibo.link}"><i></i></a></li>
+            <li class="qq"><a href="http://wpa.qq.com/msgrd?v=3&uin={$global.qq.title}&site=qq&menu=yes"><i></i></a></li>
+            <li class="weixin">
+                <a href="javasctipt:"><i></i></a>
+                <div>
+                    <p><img src="{$global.weixin.image}" alt=""></p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

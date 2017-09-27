@@ -1,0 +1,87 @@
+{   
+	"slidepics2": {
+		"value": {
+			"title": "内页banner图",
+			"image": "images/banner2.jpg",
+			"link": "http://www.baidu.com"
+		    },
+		"description": "内页banner图",
+		"type": "image",
+		"config": {
+			"width": 1920,
+			"height": 398
+		}
+	},
+	"pagenavss": {
+		"value": {},
+		"description": "侧边栏目列表（当前栏目无子栏目时展示的目标栏目）",
+		"type": "list",
+		"config": {
+			"filter": "list,page",
+			"mustchild": true
+		}
+	},
+	"links": {
+		"value": [{
+			"title": "百度",
+			"image": "images/link1.jpg",
+			"link": "http://www.baidu.com",
+			"description": "友情链接1"
+		}, {
+			"title": "淘宝",
+			"image": "images/link1.jpg",
+			"link": "http://www.baidu.com",
+			"description":"友情链接2"
+		},{
+			"title": "京东",
+			"image": "images/link1.jpg",
+			"link": "http://www.baidu.com",
+			"description":"友情链接3"
+		},
+		{
+			"title": "搜狐网",
+			"image": "images/link1.jpg",
+			"link": "http://www.baidu.com",
+			"description":"友情链接5"
+		},
+		{
+			"title": "豆网",
+			"image": "images/link1.jpg",
+			"link": "http://www.baidu.com",
+			"description":"友情链接6"
+		}
+		],
+		"description": "页脚友情链接",
+		"type": "images",
+		"config":{
+			"width":151,
+			"height":59
+		  }
+	    },
+	    "contact":{
+			"value":"联系电话：4000-127-808 \n\r传真：0592-3503003\n\r联系人：12t先生  \n\r客户邮件：cs@12t.cn \n\r公司地址：厦门市思明区软件园二期观日路36号201单元",
+			"description":"全局联系方式",
+			"type":"textarea"
+		},
+	"ewm":{
+		"value": [{
+			"title": "微信公众号",
+			"image": "images/ewm.jpg",
+			"link": "http://www.baidu.com",
+			"description": "二维码"
+		}, {
+			"title": "微信公众号",
+			"image": "images/ewm.jpg",
+			"link": "http://www.baidu.com",
+			"description":"二维码"
+		}
+		],
+		"description": "二维码",
+		"type": "images",
+		"config": {
+			"width":91,
+			"height":91
+		}
+	}
+	
+}

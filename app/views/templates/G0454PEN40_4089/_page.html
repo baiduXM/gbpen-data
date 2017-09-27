@@ -1,0 +1,13 @@
+<ul class="page fr">
+    <li class="fl w"><a href="{$page_links.first_link}">home</a></li>
+    <li class="fl w"><a href="{$page_links.prev_link}">Page Up </a></li>
+    {foreach item=near_link key=near_page from=$page_links.nears_link}
+    {if $near_page == $page_links.current_page}
+    <li class="fl current "><a>{$near_page}</a></li>
+    {else}
+    <li class="fl "><a href="{$near_link}">{$near_page}</a></li>
+    {/if}
+    {/foreach}
+    <li class="fl w"><a href="{$page_links.next_link}"> Page Down</a></li>
+    <li class="fl w"><a href="{$page_links.last_link}"> last </a></li>
+</ul>

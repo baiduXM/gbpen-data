@@ -19,7 +19,8 @@ $(function($){
 		$('.slide').unslider({
 			arrows: false,
 			fluid: false,
-			dots: true
+			dots: true,
+                        delayTime:5000
 		});
 
 		//  Find any element starting with a # in the URL

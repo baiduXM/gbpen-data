@@ -1,0 +1,14 @@
+<div class="logo">
+    <img class="logo-bg" src="images/index_03.png" alt="">
+    <a href="{$site_url}"><img src="{$logo}" alt=""></a>
+</div>
+<div id="nav">
+    <ul class="nav">
+        {foreach item=nav from=$navs}
+        <li class="{if $nav.current}current{/if}">
+            <i><img src="{$site_url}images/index_07.png" alt=""></i>
+            <a href="{$nav.link}">{$nav.name}</a>
+        </li>
+        {/foreach}
+    </ul>
+</div>

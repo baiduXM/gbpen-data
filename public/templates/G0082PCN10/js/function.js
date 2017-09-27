@@ -1,5 +1,5 @@
 $(document).ready(function() {
-$("#banner .slideBox").slide({mainCell:".bd ul",autoPlay:true, effect:"fold", trigger:"click",interTime:4000});		
+$("#banner .slideBox").slide({mainCell:".bd ul",autoPlay:true, effect:"fold", trigger:"click",interTime:2000});		
 <!--产品中心-->	
 
 $(".products li").each(function(i){

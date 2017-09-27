@@ -1,0 +1,86 @@
+{
+  "weibo": {
+    "value": {
+      "title": "微博",
+      "image": "",
+      "link": ""
+    },
+    "description": "头部weibo",
+    "type": "image"
+  },
+  "qq": {
+    "value": {
+      "title": "547444885",
+      "image": "",
+      "link": ""
+    },
+    "description": "头部qq",
+    "type": "image"
+  },
+  "weixin": {
+    "value": {
+      "title": "微信",
+      "image": "images/icon-2.png",
+      "link": ""
+    },
+    "description": "头部weixin",
+    "type": "image",
+    "config": {
+      "width": 93,
+      "height":93
+    }
+  },
+  "banner": {
+    "value": [
+      {
+        "title": "测试图2",
+        "image": "images/banner.png",
+        "link": "http://www.baidu.com"
+      },
+      {
+        "title": "测试图2",
+        "image": "images/banner.png",
+        "link": "http://www.baidu.com"
+      },
+      {
+        "title": "测试图2",
+        "image": "images/banner.png",
+        "link": "http://www.baidu.com"
+      }
+    ],
+    "description": "首页banner图",
+    "type": "images",
+    "config": {
+      "width": 1920
+    }
+  },
+  "links": {
+    "value": [
+      {
+        "title": "百度贴吧",
+        "image": "",
+        "link": "http://tieba.baidu.com"
+      }, {
+        "title": "百度图片",
+        "image": "",
+        "link": "http://image.baidu.com"
+      }
+    ],
+    "description": "友情链接",
+    "type": "images"
+  },
+  "pagenavs": {
+    "value": {},
+    "description": "侧边栏目列表（当前栏目无子栏目时展示的目标栏目）",
+    "type": "list",
+    "config": {
+      "filter": "list,page",
+      "mustchild": true
+    }
+  },
+  "contact":{
+    "value": " <b>厦门易尔通网络科技有限公司厦门易尔通网络科技有限公司</b><br> 公司地址：厦门市思明区软件园二期观日路36号201单元<br>联系电话：0592-3503777<br>传真：0592-3503003 <br>投诉邮箱：tousu@xm12t.com",
+    "description": "公司信息",
+    "type": "textarea"
+  }
+}

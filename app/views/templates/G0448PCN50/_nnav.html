@@ -1,0 +1,13 @@
+{if $pagenavs}
+<div class="nnav">
+   {foreach item=lnav from=$pagenavs}
+     <a href="{$lnav.link}" class="{if $lnav.current}current{/if}">{$lnav.name}</a>
+   {/foreach}
+</div>
+{else}
+<div class="nnav">
+   {foreach item=lnav from=$global.pagenavss.childmenu}
+     <a href="{$lnav.link}" class="{if $lnav.current}current{/if}">{$lnav.name}</a>
+   {/foreach}
+</div>
+{/if}

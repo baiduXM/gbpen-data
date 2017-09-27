@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{$title}</title>
+    <script type="text/javascript">
+        // 跳转PC页面
+        {if $site_another_url}
+        if (!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+            location.href = '{$site_another_url}';
+        }
+        {/if}
+    </script>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no,minimal-ui">
+    <meta name="keywords" content="{$keywords}" />
+    <meta name="description" content="{$description}" />
+    <link rel="stylesheet" href="{$site_url}css/swiper-3.3.1.min.css" />
+    <link rel="stylesheet" href="{$site_url}css/style.css">
+    <script src="{$site_url}js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="{$site_url}js/jquery.min.js"></script>
+    <script type="text/javascript" src="{$site_url}js/swiper-3.3.1.jquery.min.js"></script>
+    <script type="text/javascript" src="{$site_url}js/simple-app.js"></script>
+    <script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.1.js"></script>
+    <script type="text/javascript" src="{$site_url}js/index.js"></script>
+
+    <script type="text/javascript">
+        window.addEventListener('load', function(){
+            setTimeout(function(){ window.scrollTo(0, 1);}, 100);
+        });//safari浏览器可以通过此代码来隐藏地址栏
+    </script>
+    {$headscript}
+</head>
+<body>
+<div id="body">
+    {include file="./_header.html"}
+    {foreach name=mIndexCats item=mIndexCat from=$mIndexCats}
+        {if $mIndexCat.type eq 2}
+            {if $mIndexCat.showtype eq 1}
+                <div id="banner">
+                    <div class="index-title">
+                        <img src="{$site_url}images/index_05_03.png" alt="">
+                        <h4>{$mIndexCats[0].name}</h4>
+                    </div>
+                    <div class="swiper-container swiper-banner">
+                        <ul class="swiper-wrapper">
+                            {foreach name=slide item=slide from=$mIndexCat.data}
+                            <li class="swiper-slide">
+                                <a href="{$slide.link}" >
+                                    <dl>
+                                        <dt><img src="{$slide.image}" alt=""></dt>
+                                        <dd>{$slide.title}</dd>
+                                    </dl>
+                                </a>
+                            </li>
+                            {/foreach}
+                        </ul>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            {/if}
+        {/if}
+    {/foreach}
+</div>
+
+{include file="./_footer.html"}
+</body>
+</html>
