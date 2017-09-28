@@ -1,0 +1,48 @@
+{
+
+  "banners": {
+    "value": [
+      {
+        "title": "测试图2",
+        "image": "images/index_02.png",
+        "link": "http://www.baidu.com"
+      },
+      {
+        "title": "测试图2",
+        "image": "images/index_02.png",
+        "link": "http://www.baidu.com"
+      }
+    ],
+    "description": "首页banner图",
+    "type": "images",
+    "config": {
+      "width":1920,
+      "height": 558
+    }
+  },
+
+    "pagenavs": {
+    "value": {},
+    "description": "侧边栏目列表（当前栏目无子栏目时展示的目标栏目）",
+    "type": "list",
+    "config": {
+      "filter": "list,page",
+      "mustchild": true
+     }
+    },
+	
+  
+  "erwei_img":{
+  "value": {
+    	"image": "images/index_02_08.png",
+    	"title": "底部二维码图片",
+    	"link": "http://www.baidu.com/"
+  },
+  "description": "底部二维码图片"
+,   "type": "image",
+  "config": {
+    	"width":140,
+    	"height": 140
+  }
+}
+}

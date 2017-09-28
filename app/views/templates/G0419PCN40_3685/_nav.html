@@ -1,0 +1,27 @@
+<nav id="nav">
+    <div class="container-nav">
+        <ul class="nav">
+            {$litmit=7}
+            {if $navs|count lt $litmit}{$litmit = $navs|count}{/if}
+            <li class="li-sy" style="width:{100/($litmit+1)}%">
+            <a href="{$site_url}"><span>首页</span><i>Home</i></a>
+            </li>
+            {foreach item=nav from=$navs}
+            <li class="{if $nav.current}current{/if}"  style="width:{100/($litmit+1)-1}%">
+                <a href="{$nav.link}">
+                    <span>{$nav.name}</span>
+                    <i>{$nav.en_name}</i>
+                </a>
+                {if $nav.childmenu}
+                <ul class="childmenu">
+                    {foreach item=nav_list from=$nav.childmenu}
+                    <li class="{if $nav_list.current}current{/if}"><a href="{$nav_list.link}">{$nav_list.name}</a></li>
+                    {/foreach}
+                </ul>
+                {/if}
+            </li>
+            {if $nav@index+1 eq $litmit}{break}{/if}
+            {/foreach}
+        </ul>
+    </div>
+</nav>
