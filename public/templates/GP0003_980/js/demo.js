@@ -20,7 +20,7 @@ $(function($){
 			arrows: false,
 			fluid: false,
 			dots: true,
-                        delayTime:5000
+                       delay:10000
 		});
 
 		//  Find any element starting with a # in the URL
@@ -39,7 +39,7 @@ $(function($){
 				$('html, body').animate({
 					scrollTop: pos.top,
 					scrollLeft: pos.left
-				}, 8000);
+				}, 10000);
 			}
 
 			//  Don't let them visit the url, we'll scroll you there

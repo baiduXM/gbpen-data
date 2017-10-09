@@ -1,0 +1,92 @@
+
+/*标题样式*/
+.in_h2{ width:100%;border-radius:15px;  overflow:hidden; background:#c7b290; color:#402511; margin-bottom:4%}
+.in_h2 .ch{ width:60%; font-size:16px;line-height:35px; height:35px; background:url(../images/h2_bg.png) no-repeat left; padding-left:3%; float:left; color:#402511; margin-left:2%;overflow: hidden;text-overflow: ellipsis;white-space: nowrap; }
+.in_h2 .more{  line-height:35px; height:35px; float:right; text-transform:uppercase; font-size:13px; margin-right:3%}
+
+
+
+
+@media screen and (min-width: 320px) and (max-width: 480px){
+.in_h2 .ch{ padding-left:7%;}
+
+
+
+}
+/*标题样式*/
+.inner{ margin-top:10px;}
+.wrapper{ width:100%; margin:5% auto; }
+
+
+
+
+#in_page { position:relative; }
+#in_page:before{ position:absolute; top:12%; left:2%; border:1px solid #333; content:""; height:90%; width:96%; z-index:1}
+#in_page .tit { position:relative; z-index:10; width:25%; margin:auto}
+#in_page .tit .ch{ font-size:18px; color:#333; height:20px; line-height:20px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;
+; text-align:center; background:#fff; }
+#in_page .tit .en{ font-size:13px; text-transform:uppercase; color:#bbbbbb; height:20px; line-height:20px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap; text-align:center}
+#in_page .inner{ }
+#in_page .inner p{ width:88%; margin:auto; line-height:30px; height:120px; overflow:hidden; font-size:14px; color:#402511; margin:5% auto; font-size:14px; }
+#in_page .inner .more{ width:10%; height:45px; background:#bf0000; line-height:45px; color:#fff; text-align:center; margin:auto; position:relative;z-index:11; border-left:10px solid #fff;border-right:10px solid #fff;}
+
+
+@media screen and (min-width: 320px) and (max-width: 480px){
+	#in_page .tit {  width:35%; }
+#in_page .inner .more{ width:15%}
+	
+}
+
+
+
+
+#in_text{ }
+
+#in_text .tit { position:relative; z-index:10; width:100%; margin:auto;}
+#in_text .tit:before { position:absolute; left:0px; top:80%; height:1px; width:100%; background:#333; content:""; z-index:1}
+#in_text .tit .ch{  font-size:18px; color:#333; height:20px; line-height:20px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;
+; text-align:center;  }
+#in_text .tit .ch span{ background:#fff; position:relative; z-index:12; padding:0 15px;}
+#in_text .tit .en{ font-size:13px; text-transform:uppercase; color:#bbbbbb; height:20px; line-height:20px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap; text-align:center}
+
+#in_text ul li{  width:43%;  float:left; margin:3%; border:1px solid rgba(0,0,0,.1)}
+
+#in_text ul li h2 { background:#bf0000;width:100%;   line-height:35px; height:35px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap; font-size:16px;  padding-left:2%; color:#fff;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+#in_text ul li .date{ font-size:12px; color:#402511;   text-align:center; font-size:13px; margin-top:4%}
+#in_text ul li .in_des{ line-height:25px; height:50px; overflow:hidden; color:#333; margin-top:5px; font-size:13px; width:90%; margin:4% auto}
+
+
+#in_text ul li .more{ width:30px; height:30px; line-height:30px; border-radius:50%; overflow:hidden; background:#bfbfbf;  color:#fff; font-size:18px; text-align:center;  margin:auto;margin-bottom:-15px;}
+
+@media screen and (min-width: 320px) and (max-width: 480px){
+#in_text ul li .pix{ width:35%; }
+#in_text ul li .right{ width:62%; }
+	
+	
+}
+
+
+
+
+#in_image{   position:relative; padding-top:3%; background:url(../images/pro_bg.jpg) no-repeat center; background-size:100% 85% ; padding-bottom:40px; }
+#in_image .tit { position:relative; z-index:10; width:55%; margin:auto; margin-top:6%}
+#in_image .tit:before { position:absolute; left:0px; top:80%; height:1px; width:100%; background:#bf0000; content:""; z-index:1}
+#in_image .tit .ch{  font-size:18px; color:#bf0000; height:20px; line-height:20px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;
+; text-align:center;  }
+#in_image .tit .ch span{ background:#ebebeb; position:relative; z-index:12; padding:0 5px;}
+#in_image .tit .en{ font-size:13px; text-transform:uppercase; color:#bbbbbb; height:20px; line-height:20px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap; text-align:center}
+
+#in_image .inner{   margin:auto; }
+#in_image ul{ width:98%; margin:auto; position:relative; z-index:2; margin-top:4% }
+#in_image ul li{ float:left;margin:2%; width:29%; border:1px solid #fff }
+#in_image ul li .pix{ position:relative;}
+#in_image ul li .bottom{ width:48px; height:11px; margin:auto;margin-top:-2px; position:relative; z-index:10}
+#in_image ul li .in_protitle{  width:100%; background:#006db2; position:relative; z-index:11; height:35px; line-height:35px;margin-top:5px;display: block;margin: 0 auto;overflow: hidden;text-overflow: ellipsis;white-space: nowrap; color:#fff; text-align:center; margin-top:5px;}
+
+
+@media screen and (min-width: 320px) and (max-width: 480px){
+#in_image ul li{  width:28%; }
+}
+@media screen and (min-width: 480px) {
+}
+

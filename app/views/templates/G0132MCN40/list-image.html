@@ -79,25 +79,25 @@
     </div>
     <div class="navs">
         <ul class="mtree transit clearfix">
-        {foreach item=nav from=$pagenavs}
-          <li class="{if $nav.current}current{/if}"><a href="{$nav.link}" class="firstli kz">{$nav.name}<span></span></a>
-          {if $nav.childmenu}
-              <ul>
-                  {foreach item=nav_list from=$nav.childmenu}
-                  <li class="{if $nav_list.current}current{/if}"><a href="{$nav_list.link}" class="kz">{$nav_list.name}<span></span></a>
-                      {if $nav.childmenu}
-                      <ul>
-                          {foreach item=nav_listsec from=$nav_list.childmenu}
-                          <li class="{if $nav_list.current}current{/if}"><a href="{$nav_list.link}" class="kz">{$nav_listsec.name}</a></li>
-                          {/foreach}
-                      </ul>
-                      {/if}
-                  </li>
-                  {/foreach}
-              </ul>
-              {/if}
-          </li>
-          {/foreach}
+            {foreach item=nav from=$pagenavs}
+            <li class="{if $nav.current}current{/if}"><a href="{$nav.link}" class="firstli kz">{$nav.name}<span></span></a>
+                {if $nav.childmenu}
+                <ul>
+                    {foreach item=nav_list from=$nav.childmenu}
+                    <li class="{if $nav_list.current}current{/if}"><a href="{$nav_list.link}" class="kz">{$nav_list.name}<span></span></a>
+                        {if  $nav_list.childmenu}
+                        <ul>
+                            {foreach item=nav_listsec from=$nav_list.childmenu}
+                            <li class="current"><a href="{$nav_listsec.link}" class="kz">{$nav_listsec.name}</a></li>
+                            {/foreach}
+                        </ul>
+                        {/if}
+                    </li>
+                    {/foreach}
+                </ul>
+                {/if}
+            </li>
+            {/foreach}
         </ul>
     </div>
     <div class="inner_main">

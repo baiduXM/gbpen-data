@@ -65,7 +65,7 @@
       <div class="news_text">
         <ul>
           {foreach name=news item=news from=$index.news.data}
-          {if $news@index+1 gte 2 and $news@index+1 lte 7}
+          {if $news@index+1 gte 1 and $news@index+1 lte 6}
           <li><a href="{$news.link}">> {$news.title}</a></li>
           {/if}
           {/foreach}
