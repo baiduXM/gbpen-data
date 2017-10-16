@@ -40,7 +40,7 @@
 
         <div class="content">
             <div class="news">
-                <h1 class="news_top"><span class="more"><a href="{$index.news.link}">-查看更多</a></span>{$index.news.name}</h1>
+              <h1 class="news_top"><span class="more"><a href="{$index.news.link}">-查看更多</a></span><span class="forgive">{$index.news.name}</span></h1>
                 <div class="news_m">
 
                     <ul class="news_list" style="height:168px;">
@@ -57,7 +57,7 @@
             </div>
 
             <div class="news about">
-                <h1 class="news_top"><span class="more"><a href="{$index.about_us.link}">-查看更多</a></span>{$index.about_us.name}</h1>
+              <h1 class="news_top"><span class="more"><a href="{$index.about_us.link}">-查看更多</a></span><span class="forgive">{$index.about_us.name}</span></h1>
                 <div class="about_m">
                     <img src="{$index.about_us.image}" />
                     <dl class="nr">
@@ -66,7 +66,7 @@
                 </div>
             </div> 
             <div class="news pro">
-                <h1 class="news_top"><span class="more"><a href="{$index.pro.link}">-查看更多</a></span> {$index.pro.name}</h1>
+              <h1 class="news_top"><span class="more"><a href="{$index.pro.link}">-查看更多</a></span> <span class="forgive">{$index.pro.name}</span></h1>
                 <div class="pro_m">
                     <div id="prizes">
                       <div class="photos">
@@ -88,17 +88,13 @@
                 </div>
             </div>
             <div class="news">
-                <h1 class="news_top">联系我们</h1>
+              <h1 class="news_top"><span class="forgive">联系我们</span></h1>
                 <div class="contact_m">
-                    地址：{$contact.address}<br>
-                    电话：{$contact.telephone}<br>
-                    E-mail：{$contact.mail}<br>
-                    手机：{$contact.mobile}<br>
-                    联系人：{$contact.name}
+                    {$global.context}
                 </div>
             </div>
             <div class="news case">
-                <h1 class="news_top"><span class="more"><a href="{$index.case.link}">-查看更多</a></span>{$index.case.name}</h1>
+              <h1 class="news_top"><span class="more"><a href="{$index.case.link}">-查看更多</a></span><span class="forgive">{$index.case.name}</span></h1>
                 <div class="pro_m">
      
                     <div id="prizes1">
@@ -124,7 +120,7 @@
           
 
             <div class="news pro">
-                <h1 class="news_top">友情链接</h1>
+              <h1 class="news_top"><span class="forgive">友情链接</span></h1>
                 <div class="link_m">
 
                     {foreach name=flink item=flink from=$global.links}

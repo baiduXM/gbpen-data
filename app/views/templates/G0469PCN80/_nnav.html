@@ -1,0 +1,57 @@
+{if $pagenavs}
+<div class="mainav_l fl wow fadeInLeft animated">
+    <ul class="ce">
+      {foreach item=lnav from=$pagenavs}
+        <li class="{if $lnav.current}current{/if}"><a class="{if $lnav.current}current{/if}" href="{if $lnav.childmenu}javascript:;{else}{$lnav.link}{/if}">{$lnav.name}</a>
+            {if $lnav.childmenu}  
+             <ul class="er">
+                {foreach item=navlist from=$lnav.childmenu}
+                <li class="e_li {if $navlist.current}current{/if}">
+                <a href="{if $navlist.childmenu}javascript:;{else}{$navlist.link}{/if}">{$navlist.name}</a>    
+                    {if $navlist.childmenu}
+                      <ul class="thr">
+                           {foreach item=navlists from=$navlist.childmenu}
+                           <li> 
+                            <a  href="{$navlists.link}">{$navlists.name}</a> 
+                           </li>
+                           {/foreach}
+                      </ul>
+                    {/if}
+                </li>  
+                {/foreach}          
+             </ul>
+            {/if}
+        </li> 
+      {/foreach}               
+        <div class="clear"></div>
+    </ul>
+</div>
+{else}
+<div class="mainav_l fl wow fadeInLeft animated">
+    <ul class="ce">
+      {foreach item=lnav from=$global.pagenavss.childmenu}
+        <li class="{if $lnav.current}current{/if}"><a class="{if $lnav.current}current{/if}" href="{if $lnav.childmenu}javascript:;{else}{$lnav.link}{/if}">{$lnav.name}</a>
+            {if $lnav.childmenu}  
+             <ul class="er">
+                {foreach item=navlist from=$lnav.childmenu}
+                <li class="e_li {if $navlist.current}current{/if}">
+                <a href="{if $navlist.childmenu}javascript:;{else}{$navlist.link}{/if}">{$navlist.name}</a>    
+                    {if $navlist.childmenu}
+                      <ul class="thr">
+                           {foreach item=navlists from=$navlist.childmenu}
+                           <li> 
+                            <a  href="{$navlists.link}">{$navlists.name}</a> 
+                           </li>
+                           {/foreach}
+                      </ul>
+                    {/if}
+                </li>  
+                {/foreach}          
+             </ul>
+            {/if}
+        </li> 
+      {/foreach}               
+        <div class="clear"></div>
+    </ul>
+</div>
+{/if}

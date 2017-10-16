@@ -1,0 +1,64 @@
+{
+ "slidepics":{
+   "value":[
+     {
+       "title":"测试图1",
+       "image":"images/index_01.png",
+       "link":"http://www.baidu.com"
+     },
+     {
+       "title":"测试图2",
+       "image":"images/index_01.png",
+       "link":"http://www.baidu.com"
+     },
+     {
+       "title":"测试图3",
+       "image":"images/index_01.png",
+       "link":"http://www.baidu.com"
+     }
+   ],
+   "description":"大轮播图",
+   "type":"images",
+   "config":{
+     "width":640
+   }
+ },
+  "list2Bg": {
+    "value": {
+      "title": "",
+      "image": "images/index_03.png",
+      "link": ""
+    },
+    "description": "首页第二个图片页背景图",
+    "type": "image",
+    "config": {
+      "width": 640,
+      "height":675
+    }
+  },
+  "list3Bg": {
+    "value": {
+      "title": "",
+      "image": "images/bg5_02.png",
+      "link": ""
+    },
+    "description": "首页第三个图片页背景图",
+    "type": "image",
+    "config": {
+      "width": 640,
+      "height":593
+    }
+  },
+  "detBan":{
+    "value":{
+      "title":"测试图1",
+      "image":"images/det-banner_01.png",
+      "link":"http://www.baidu.com"
+    },
+    "description":"内页大轮播图",
+    "type":"image",
+    "config":{
+      "width":640
+    }
+  }
+}

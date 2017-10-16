@@ -2,7 +2,7 @@
 {if $pagenavs}
 
 	 <div class="news">
-		<h1 class="news_top">{$posnavs[0].name}</h1>
+	 	<h1 class="news_top"><span class="forgive">{$posnavs[0].name}</span></h1>
 		<ul class="first">
 			{foreach name=pagenavs item=nav from=$pagenavs}
 			<li class="{if $nav.current}current{/if}">
@@ -38,7 +38,7 @@
 
 	 <div class="news">
 
-		<h3 class="news_top">{$_pagenavs_sub3.pagenavs.name}</h3>
+		<h3 class="news_top"><span class="forgive">{$_pagenavs_sub3.pagenavs.name}</span></h3>
 		<ul class="first">
 			{foreach name=pagenavs2 item=nav from=$_pagenavs_sub3.pagenavs.childmenu}
 			<li class="{if $nav.current}current{/if}">

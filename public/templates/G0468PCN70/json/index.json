@@ -1,0 +1,51 @@
+{
+	"slidepics":{
+		"value":[{
+			"title":"banner1",
+			"image":"images/banner.jpg",
+			"link":"content-product.html"
+			},{
+			"title":"banner2",
+			"image":"images/banner.jpg",
+			"link":"content-product.html"
+			},{
+			"title":"banner3",
+			"image":"images/banner.jpg",
+			"link":"content-product.html"
+			}],
+		"description":"轮播大图",
+		"type":"images",
+		"config":{
+			"width":1920,
+			"height":825
+		}
+	},
+	"about":{
+		"description": "关于我们",
+		"value": {},
+		"type": "page",
+		"config": {
+			"nav_width": 529,
+			"nav_height": 489
+		}
+	},
+	"case":{
+		"description": "新闻中心",
+		"value": {},
+		"type": "list",
+		"config": {
+			"width": 380,
+			"height": 330
+		}
+	},
+	"casetj":{
+		"description": "新闻中心",
+		"value": {},
+		"type": "list",
+		"config": {
+			"star_only": true,
+			"width": 380,
+			"height": 330
+		}
+	}
+}

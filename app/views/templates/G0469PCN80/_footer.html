@@ -1,0 +1,22 @@
+<div id="footer">
+    <div class="links tc wow fadeInUp animated">
+        {foreach item=link from=$global.links}
+          <a href="{$link.link}"><img src="{$link.image}"></a>
+        {/foreach}
+    </div>
+    <div class="foots">
+       <div class="foot_l fl wow fadeInLeft animated">
+          <div class="foot_bot">
+               <div class="link2">友情链接：
+                {foreach item=link from=$global.links2}
+                 <a href="{$link.link}">{$link.title}</a>
+                {/foreach}
+               </div>
+               <div class="contact">{$global.contact}</div>
+          </div>
+       </div>
+       <div class="ewm fr wow fadeInRight animated"><img src="{$global.ewm.image}"></div>
+    </div>
+      <div class="copy tc">{$footprint}</div>
+</div>
+{$footscript}

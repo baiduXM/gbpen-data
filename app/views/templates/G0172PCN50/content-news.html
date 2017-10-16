@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-
+    
     <script type="text/javascript">
     // 跳转手机页面
     {if $site_another_url}
@@ -37,18 +37,19 @@
           <div class="left">
               {include file='./_pagenavs_sub3.html'}        
                 <div class="news">
-                    <h1 class="news_top">联系我们</h1>
+                  <h1 class="news_top"><span class="forgive">联系我们</span></h1>
                     <div class="contact_m">
-                        地址：{$contact.address}<br>
+                        <!-- 地址：{$contact.address}<br>
                         电话：{$contact.telephone}<br>
                         E-mail：{$contact.mail}<br>
                         手机：{$contact.mobile}<br>
-                        联系人：{$contact.name}
+                        联系人：{$contact.name} -->
+                        {$global.context}
                     </div>
                 </div>
             </div>
           <div class="news about">
-              <h1 class="news_top"><strong class="lujin">您现在的位置：<a href="{$site_url}">首页</a>{foreach item=nav from=$posnavs}&nbsp;&gt;&gt;&nbsp;<a href="{$nav.link}">{$nav.name}</a>{/foreach}</strong>{$posnavs[0].name}</h1>
+            <h1 class="news_top"><strong class="lujin">您现在的位置：<a href="{$site_url}">首页</a>{foreach item=nav from=$posnavs}&nbsp;&gt;&gt;&nbsp;<a href="{$nav.link}">{$nav.name}</a>{/foreach}</strong><span class="forgive">{$posnavs[0].name}</span></h1>
             <div class="right_m">
             	<div class="right_news_detail">
                     	<h1>{$article.title}</h1>
@@ -71,7 +72,7 @@
             </div>
         </div>
               <div class="news pro">
-                  <h1 class="news_top">友情链接</h1>
+                <h1 class="news_top"><span class="forgive">友情链接</span></h1>
                   <div class="link_m">
 
                       {foreach name=flink item=flink from=$global.links}

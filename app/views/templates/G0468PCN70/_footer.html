@@ -1,0 +1,14 @@
+		<div class="footer c animatedParent">
+			<div class="linker animated fadeInUp">
+				<ul>
+					<li>友情链接：</li>
+					{foreach item=link from=$global.links}
+					<li><a href="{$link.link}" target="_blank">{$link.title}</a></li>
+					{/foreach}
+				</ul>
+			</div>
+			<div class="copyright animated fadeInUp">
+				{$footprint}
+			</div>
+		</div>
+		{$footscript}

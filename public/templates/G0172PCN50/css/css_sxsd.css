@@ -293,11 +293,24 @@ ul.nav > .on > h3 a {
     height: 32px;
     overflow: hidden;
     line-height: 32px;
-    background: url(../images/top_bg.jpg) left top no-repeat;
+    background: url(../images/top_bg_gray.jpg) left top repeat-x;
     font-size: 14px;
     font-weight: bold;
     color: #fff;
     text-indent: 20px;
+}
+
+.news_top .forgive{
+    height: 32px;
+    display: inline-block;
+    text-indent: 0;
+    background: url(../images/top_bg_green.jpg) left top repeat-x;
+    padding: 0 10px;
+    margin-left: -10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    overflow: hidden;
+    min-width: 56px;
 }
 
 .more {

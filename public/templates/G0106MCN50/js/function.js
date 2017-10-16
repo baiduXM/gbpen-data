@@ -39,37 +39,37 @@ $("div section .wrapper").css({"margin-top":20,"margin-bottom":20})
 	
 	
 /*标题自适应宽度*/		
-	$(".yc ul li").each(function(){
-		 var ww=$(this).find("img").width();
-   $(this).find("p").width(ww);
-  });
+	// $(".yc ul li").each(function(){
+	// 	 var ww=$(this).find("img").width();
+ //   $(this).find("p").width(ww);
+ //  });
  /*标题自适应宽度*/
  
  
  
-  var img=new Image();
-		var self5 = $(".cpszs_show");
-                                        var heights5 = $(self5).height();;
-                                        var alimat5 = $(".listpp");
-                                        alimat5.height(heights5);		
-		var self6 = $(".nimg1");
-                                        var heights6 = $(self6).height();;
-                                        var alimat6 = $(".decurlits");
-                                        alimat6.height(heights6);
-	img.src=$(".prolist img").attr("src");
-	$(".class-m").height($(".class").outerHeight()-$(".class-top").outerHeight())
-	$(".menulist dl").height($(".menulist dl").width())
-	$(".menu").height($(".menulist dl").outerHeight())
-	$(".prolist .tielbox").height($(".prolist img").height())
-	});
-	$(window).resize(function(){
-		/* $(".index-wrap").height($(window).height()-$(".fixed").height()-$(".tell-icon").height()) */
-		$(".class-m").height($(".class").outerHeight()-$(".class-top").outerHeight())
-		$(".menulist dl").height($(".menulist dl").width())
-		$(".menu").height($(".menulist dl").outerHeight())
-		$(".prolist .tielbox").height($(".prolist img").height())
+ //  var img=new Image();
+	// 	var self5 = $(".cpszs_show");
+ //                                        var heights5 = $(self5).height();;
+ //                                        var alimat5 = $(".listpp");
+ //                                        alimat5.height(heights5);		
+	// 	var self6 = $(".nimg1");
+ //                                        var heights6 = $(self6).height();;
+ //                                        var alimat6 = $(".decurlits");
+ //                                        alimat6.height(heights6);
+	// img.src=$(".prolist img").attr("src");
+	// $(".class-m").height($(".class").outerHeight()-$(".class-top").outerHeight())
+	// $(".menulist dl").height($(".menulist dl").width())
+	// $(".menu").height($(".menulist dl").outerHeight())
+	// $(".prolist .tielbox").height($(".prolist img").height())
+	// });
+	// $(window).resize(function(){
+	// 	/* $(".index-wrap").height($(window).height()-$(".fixed").height()-$(".tell-icon").height()) */
+	// 	$(".class-m").height($(".class").outerHeight()-$(".class-top").outerHeight())
+	// 	$(".menulist dl").height($(".menulist dl").width())
+	// 	$(".menu").height($(".menulist dl").outerHeight())
+	// 	$(".prolist .tielbox").height($(".prolist img").height())
 		
-	$("#about .nr dd").height($("#about img").height()-29)
+	// $("#about .nr dd").height($("#about img").height()-29)
 	if($(window).width()<400){
 		$("#about .nr dd").css({'line-height':$("#about .nr dd").height()/3+"px"})
 		}else{

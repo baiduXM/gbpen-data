@@ -1,0 +1,29 @@
+		<div class="header">
+			<div class="top">
+				<div class="c">
+					<div class="logo"><a href="{$site_url}"><i><img src="{$logo}"></i></a></div>
+					<div class="head_menu"><i class="iconfont ftt">&#xe603;</i></div>
+				</div>
+			</div>
+			<div class="banner">
+				<div class="swiper-container swiper-container-banner">
+					<ul class="swiper-wrapper swiper-wrapper-banner">
+						{foreach item=slidepics from=$global.slidepics}
+							<li class="swiper-slide swiper-slide-banner img_c"><a href="{$slidepics.link}"><i><img src="{$slidepics.image}"></i></a></li>
+						{/foreach}
+					</ul>
+					<div class="swiper-button-prev swiper-button-prev-banner"></div>
+					<div class="swiper-button-next swiper-button-next-banner"></div>
+				</div>
+			</div>
+			<div class="nav">
+				<div class="swiper-container swiper-container-nav c">
+					<div class="swiper-wrapper swiper-wrapper-nav">
+						<div class="swiper-slide swiper-slide-nav nav1"><a href="{$site_url}"><i><i class="icon iconfont">&#xe616;</i></i><span>网站首页</span></a></div>
+						{foreach item=nav from=$navs}
+							<div class="swiper-slide swiper-slide-nav nav{$nav@index+2}"><a href="{$nav.link}"><i>{$nav.icon}</i><span>{$nav.name}</span></a></div>
+						{/foreach}
+					</div>
+				</div>
+			</div>
+		</div>

@@ -138,7 +138,7 @@ ul,li{list-style-type: none;}
 .ft_m{width: auto;height:100px;border-left: 1px solid #0da3ee;border-right: 1px solid #0da3ee;margin-right: 40px;}
 .ft_m img{float: left;}
 
-.left{width: 260px;height: 640px;}
+.left{width: 260px;min-height: 640px;}
 .left_top{width: 260px;height: 74px;background:#028bcf;font-size: 26px;color: #fff;text-align: center;padding-top: 46px;white-space: nowrap;overflow: hidden;}
 .left_list{background: #eee;height: auto;}
 .left_list .lone{line-height: 50px;}

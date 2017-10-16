@@ -41,7 +41,7 @@ width:100%; position:relative; z-index:100; margin-top:0px; }
 #nav ul li .cc a{width:92%; margin:auto;color:#fff; padding:0 4%; overflow:hidden; height:40px; line-height:40px;}
 #nav ul li .cc a:hover{ text-decoration:underline;color:#fff;}
 
-#banner{ width:100%; height:515px; overflow:hidden;}
+#banner{ width:100%; height:515px; overflow:hidden; position: relative;}
 
 #container{}
 
@@ -191,7 +191,12 @@ ul.third li a.thirda:hover{color:#ffffff; background:#3172c2 url(../images/third
 
 
 
+.quickbar_nav ul li.quickbar_phone .quickbar_hoverbox li{font-size: 24px;line-height: 59px;text-align: center;}
 
+#banner .hd{ position: absolute; bottom: 20px;  left: 50%; }
+#banner .hd ul{ margin-left: -50%; }
+#banner .hd ul li{ border-radius: 100%;opacity: 0.8; background: #000; width:12px; height: 12px; margin-left: 10px; display: inline-block; }
+#banner .hd ul li.on{ background: #ff0000; }
 
 
 .quickbar_nav ol, .quickbar_nav ul{min-height:60px;}
