@@ -32,26 +32,20 @@
 		"value": {},
 		"type": "list"	
 	},
-"bind_div0": {
-        "value": [
-        ],
-        "description": "绑定显示区域",
-        "type": "form",
-        "config": {
-            "kind": "div",
-            "name": "div_area0"
-        }
-    },
-"bind_form0": {
-        "value": [
-        ],
- "description": "绑定表单",
-        "type": "form",
-        "config": {
-            "kind": "form_id",
-            "form_id": "form1"
-        }
-    }
+        "bannerbg": {
+		"value": {
+			"title": "banner背景",
+			"image": "images/timg.jpg",
+			"link": "article/1.html",
+			"description": "banner1"
+		}, 
+		"description": "banner背景",
+		"type": "image",
+		"config": {
+			"width": 1920,
+			"height":612
+		}
+	}
 	
 }
                
