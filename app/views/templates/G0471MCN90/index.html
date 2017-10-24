@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{$title}</title>
+    <script type="text/javascript">
+        // 跳转PC页面
+        {if $site_another_url}
+        if (!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+            location.href = '{$site_another_url}';
+        }
+        {/if}
+    </script>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no,minimal-ui">
+    <meta name="keywords" content="{$keywords}" />
+    <meta name="description" content="{$description}" />
+    <link rel="stylesheet" href="{$site_url}css/swiper-3.3.1.min.css" />
+    <link rel="stylesheet" href="{$site_url}css/style.css">
+    <script src="{$site_url}js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="{$site_url}js/swiper-3.3.1.jquery.min.js"></script>
+    <script src="{$site_url}js/jquery.SuperSlide.2.1.1.js"></script>
+    <script type="text/javascript" src="{$site_url}js/index.js"></script>
+
+    <script type="text/javascript">
+        window.addEventListener('load', function(){
+            setTimeout(function(){ window.scrollTo(0, 1);}, 100);
+        });//safari浏览器可以通过此代码来隐藏地址栏
+    </script>
+    {$headscript}
+</head>
+<body>
+{include file="./_header.html"}
+{include file="./_indexNav.html"}
+{include file="./_banner.html"}
+<div class="tell">
+    <i class="iconfont">&#xe609;</i>
+    <span>咨询电话 :</span>
+    <b>{$contact.telephone}</b>
+</div>
+<ul class="list-nav">
+    {foreach item=lNav from=$global.lNav.childmenu}
+    <li><a href="{$lNav.link}">{$lNav.name}</a></li>
+    {/foreach}
+</ul>
+{foreach item=mIndexCat from=$mIndexCats}
+    {if $mIndexCat.type eq 3}
+        {if $mIndexCat.showtype eq 1}
+            <div class="main1">
+                <h1 class="m1-enName">{$mIndexCat.en_name}</h1>
+                <ul class="m1-cont">
+                    <li class="m1Li">
+                        <a class="m1Li-name " href="javascript:">{$mIndexCat.name}</a>
+                        <div class="swiper-container m1-child m2Slide">
+                            <ul class="swiper-wrapper bd">
+                                {foreach name=m1Dl item=m1Dl from=$mIndexCat.data}
+                                <li class="swiper-slide ">
+                                    <a href="{$m1Dl.link}">
+                                        <div class="pic lt"><img src="{$m1Dl.image}" alt=""></div>
+                                        <div class="title lt">
+                                            <h4>{$m1Dl.title}</h4>
+                                            <time>日期 : {$m1Dl.pubtimestamp|date_format:'%Y-%m-%d'}</time>
+                                            <p class=" ">{$m1Dl.description}</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                {/foreach}
+                            </ul>
+                            <div class="swiper-pagination swiper-pagination2"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        {/if}
+    {elseif $mIndexCat.type eq 4}
+        {if $mIndexCat.showtype eq 1}
+            <div class="main2">
+                <div class="m2-cont">
+                    <p class="m2-name"><span class="lt">{$mIndexCat.name}</span>
+                        <a class="rt" href="{$mIndexCat.link}">MORE+</a></p>
+                    <div class="m2-txt">{$mIndexCat.content|unescape:"html"}</div>
+                </div>
+            </div>
+        {/if}
+    {elseif $mIndexCat.type eq 2}
+        {if $mIndexCat.showtype eq 1}
+            <div class="main3">
+                <h1 class="m1-enName">{$mIndexCat.en_name}</h1>
+                <ul class="m1-cont">
+                    <li class="m1Li">
+                        <a class="m1Li-name " href="javascript:">{$mIndexCat.name}</a>
+                        <div class="swiper-container m1-child m1Slide">
+                            <ul class="swiper-wrapper picList">
+                                {foreach name=m3Dl item=m3Dl from=$mIndexCat.data}
+                                <li class="swiper-slide">
+                                    <a href="{$m3Dl.link}">
+                                        <div class="pic "><img src="{$m3Dl.image}" alt=""></div>
+                                        <div class="title ">
+                                            <h4>{$m3Dl.title}</h4>
+                                        </div>
+                                    </a>
+                                </li>
+                                {/foreach}
+                            </ul>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        {/if}
+    {/if}
+{/foreach}
+<div class="address">
+    <div class="addBg">
+        <ul class="footCont lt">
+            <li>公司地址 : {$contact.address}</li>
+            <li>联系电话 : {$contact.mobile} </li>
+            <li>投诉邮箱 : {$contact.mail}</li>
+            <li>业务专线 : {$contact.telephone}</li>
+            <li>客户邮件 : {$contact.mail}</li>
+        </ul>
+        <dl class="footImg rt">
+            <dt><img src="{$global.footImg.image}" alt=""></dt>
+            <dd>{$global.footImg.title}</dd>
+        </dl>
+    </div>
+</div>
+{include file="./_footer.html"}
+</body>
+</html>

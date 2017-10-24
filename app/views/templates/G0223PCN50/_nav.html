@@ -1,0 +1,19 @@
+<div class="banner2">
+	<div id="slideBox2" class="slideBox2" >
+		<div class="hd">
+			<ul><li></li><li></li><li></li></ul>
+		</div>
+		<div class="bd">
+			<ul>
+				{foreach name=slidepics item=slidepic from=$global.slidepics2}
+        <div> <a href="{$slidepic.link}" target="_blank">
+          <li style="background:url({$slidepic.image}) no-repeat center; height:386px;"></li>
+          </a></div>		        {/foreach}
+			</ul>
+		</div>
+		<div class="btns">
+			<a class="prev" href="javascript:void(0)"></a>
+    		<a class="next" href="javascript:void(0)"></a>
+		</div>
+	</div>
+</div>

@@ -62,7 +62,7 @@
           <div class="list_image">
             <ul class="clearfix">
               {foreach name=article item=article from=$list.data}
-               <li><a href="{$article.link}"><div class="pro_img"><img src="{$article.image}"></div><div class="pro_a">{$article.title}</div> </li>
+               <li><a href="{$article.link}"><div class="pro_img"><img src="{$article.image}"></div><div class="pro_a">{$article.title}</div></a></li>
               {if $article@index+1 == 12} {break} {/if}
               {/foreach}
             </ul>

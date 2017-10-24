@@ -96,16 +96,18 @@
                  {if $mIndexCat.showtype eq 1}
                     <div class="main2">
                         <div class="s-title">
-                            <h3>{$mIndexCat.name}</h3>
-                            <span>{$mIndexCat.en_name}</span>
+                            <a href="{$mIndexCat.link}">
+                                <h3>{$mIndexCat.name}</h3>
+                                <span>{$mIndexCat.en_name}</span>
+                            </a>
                         </div>
                         <div class="m2-content">
-                            <ul class="m2-tab">
-                                {foreach item=m2 from=$mIndexCat.childmenu}
-                                     <li class="lt"><a href="{$m2.link}">{$m2.name}</a></li>
-                                {if $m2@index+1 eq 4}{break}{/if}
-                                {/foreach}
-                            </ul>
+                            <!--<ul class="m2-tab">-->
+                                
+                                     
+                                
+                                
+                            <!--</ul>-->
                             <div  class="m2-list">
                                 <ul>
                                     {foreach item=m2_list from=$mIndexCat.data}

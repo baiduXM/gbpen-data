@@ -45,7 +45,7 @@
 		<div class="main">
 			<div class="sear"><img src="images/sear.png"/><h4>以下是您输入关键字“{$search.keyword}”搜索到的结果，共{$search.total}条</h4></div>
 			<ul class="news_list clearfix">
-			{foreach name=article1 item=article1 from=$list.data} 
+			{foreach name=article1 item=article1 from=$search.data} 
 				<li>
 					<i>●</i><a href="{$article1.link}" class="kz" data-limit="50">{$article1.title}</a>
 					<span>{$article1.pubymd}</span>

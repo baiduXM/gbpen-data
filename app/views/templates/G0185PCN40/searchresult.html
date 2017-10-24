@@ -53,7 +53,7 @@
 				<ul class='news_ls'>
 				<div class="sear_tit">以下是您搜索的关键字“{$search.keyword}”，搜索的结果有{$search.total}条</div>
 				{foreach name=article item=result from=$search.data} 	
-					<li><a href="{$result.link}"><span class="date">[{$result.pubtimestamp|date_format:'%Y-%m-%d'}]</span> {$result.title}</a></li>
+					<li><a href="{$result.link}">{$result.title}</a></li>
 				{/foreach}
 				</ul>
 				{/if}

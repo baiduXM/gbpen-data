@@ -9,9 +9,9 @@
      <div class="foot_bot">
         <div class="bot_l fl">
            <div class="foot_nav">
-               <a href="" class="one">网站首页</a>
+               <a href="{$site_url}" class="one">网站首页</a>
                {foreach item=nav from=$navs}
-                |<a href="{$nav.link}" class="one">{$nav.name}</a>
+                 |<a href="{$nav.link}" class="one">{$nav.name}</a>
                {/foreach}
            </div>
            <div class="copy fl">{$footprint}</div>

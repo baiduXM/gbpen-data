@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{$title}</title>
+    <script type="text/javascript">
+        // 跳转PC页面
+        {if $site_another_url}
+        if (!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+            location.href = '{$site_another_url}';
+        }
+        {/if}
+    </script>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no,minimal-ui">
+    <meta name="keywords" content="{$keywords}" />
+    <meta name="description" content="{$description}" />
+    <link rel="stylesheet" href="{$site_url}css/swiper.min.css" />
+    <link rel="stylesheet" href="{$site_url}css/style.css">
+    <script src="{$site_url}js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="{$site_url}js/swiper.min.js"></script>
+    <script  type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.1.js"></script>
+    <script type="text/javascript" src="{$site_url}js/function.js"></script>
+    <script type="text/javascript" src="{$site_url}js/index.js"></script>
+
+    <script type="text/javascript">
+        window.addEventListener('load', function(){
+            setTimeout(function(){ window.scrollTo(0, 1);}, 100);
+        });//safari浏览器可以通过此代码来隐藏地址栏
+    </script>
+    {$headscript}
+</head>
+<body>
+<div class="header">
+    <div class="ser-btn"><i></i></div>
+    <form action="{$search_action}" method="GET">
+        <input class="input-sub" type="submit" value="" >
+        <input class="input-txt" type="text" name="s" placeholder="请输入搜索关键词">
+    </form>
+    <div class="logo"><a href="{$site_url}"><img src="{$logo}" alt=""></a></div>
+    <div class="menu rt" id="quickbar-showcats"><i class="iconfont">&#xe603;</i></div>
+</div>
+<div class="index_ban">
+    <div class="swiper-container swiper-indexBan" >
+        <ul class="swiper-wrapper ">
+            {foreach name=slidepics item=slidepic from=$global.slidepics}
+            <li class="swiper-slide"><a href="{$slidepic.link}" target="_blank"><img src="{$slidepic.image}" ></a></li>
+            {/foreach}
+        </ul>
+        <div class="swiper-pagination"></div>
+        <div class="bg1"> </div>
+    </div>
+</div>
+<div class="main">
+    {foreach item=mIndexCat from=$mIndexCats}
+    {if $mIndexCat.type eq 2}
+        {if $mIndexCat.showtype eq 1}
+            <div class="index-img">
+            <div class="swiper-container list1-slide">
+                <div class="swiper-wrapper">
+                    {foreach name=list1 item=list1 from=$mIndexCat.data}
+                    <div class="swiper-slide">
+                        <a href="{$list1.link}">
+                            <i><img src="{$list1.image}" alt=""></i>
+                            <span>{$list1.title}</span>
+                        </a>
+                    </div>
+                    {/foreach}
+                </div>
+                <div class="swiper-button-prev"><img src="{$site_url}images/index0_04.png" alt=""></div>
+                <div class="swiper-button-next"><img src="{$site_url}images/index0_06.png" alt=""></div>
+            </div>
+            </div>
+        {elseif $mIndexCat.showtype eq 1}
+            <div class="index-proImg">
+                <div class="m-title">
+                    <span>{$mIndexCat.name}</span>
+                    <a class="rt" href="{$mIndexCat.link}">点击查看▶</a>
+                </div>
+                <div class="index-proImg-cont">
+                    {foreach name=indexPro item=indexPro from=$mIndexCat.data}
+                    <a href="{$indexPro.link}">
+                        <dl>
+                            <dt><i><img src="{$indexPro.image}" alt=""></i></dt>
+                            <dd>{$indexPro.title}</dd>
+                        </dl>
+                    </a>
+                    {if $indexPro@index+1 == 4}{break}{/if}
+                    {/foreach}
+                </div>
+                <a class="proImg-more" href="{$mIndexCat.link}">查看更多</a>
+            </div>
+        {/if}
+    {elseif $mIndexCat.type eq 4}
+        {if $mIndexCat.showtype eq 1}
+            <div class="index-page">
+                <div class="m-title">
+                    <span>{$mIndexCat.name}</span>
+                    <a class="rt" href="{$mIndexCat.link}">点击查看▶</a>
+                </div>
+                <dl class="index-page-cont">
+                    <dt><a href="{$mIndexCat.link}"><img src="{$mIndexCat.image}" alt=""></a></dt>
+                    <dd class="rt">{$mIndexCat.description}</dd>
+                </dl>
+            </div>
+        {/if}
+
+    {elseif $mIndexCat.type eq 3}
+        {if $mIndexCat.showtype eq 1}
+            <div class="index-new">
+                <div class="m-title">
+                    <span>{$mIndexCat.name}</span>
+                    <a class="rt" href="{$mIndexCat.link}">点击查看▶</a>
+                </div>
+                <div class="index-new-cont">
+                    {foreach name=indexNew item=indexNew from=$mIndexCat.data}
+                        <a href="{$indexNew.link}">
+                            <dl>
+                                <dt><img src="{$indexNew.image}" alt=""></dt>
+                                <dd>
+                                    <h3>{$indexNew.title}</h3>
+                                    <time>{$indexNew.pubtimestamp|date_format:'%Y-%m-%d'}</time>
+                                    <p>{$indexNew.description}</p>
+                                </dd>
+                            </dl>
+                        </a>
+                        {if $indexNew@index+1 == 3}{break}{/if}
+                    {/foreach}
+                </div>
+            </div>
+        {/if}
+    {/if}
+    {/foreach}
+</div>
+
+
+{include file="./_footer.html"}
+</body>
+</html>

@@ -55,7 +55,7 @@ $(function(){
     /***********字体下拉显示***************/
     $(".ab-font,.det-fonts").click('touchstart',function(e){
         e.preventDefault();
-        $(".det-font,.add-show,.j-hide").slideToggle();
+        $(".det-font,.addShow,.j-hide").slideToggle();
     });
 
     /*******首页轮播**********/

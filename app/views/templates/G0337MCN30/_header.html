@@ -1,0 +1,14 @@
+<div class="header">
+    	<a href="{$site_url}"><img src="{$logo}"></a>
+    </div>
+    <div class="menulist">
+        <div class="navlist"> <a class="arrow-left" href="#">&lt;</a> <a class="arrow-right" href="#">&gt;</a>
+          <div class="swiper-nav swiper-container">
+            <div class="swiper-wrapper">
+              {foreach item=nav from=$navs}
+                <div class="swiper-slide"><span><a href="{$nav.link}"><div class="text">{$nav.name}</div></a></span></div>
+              {/foreach}
+            </div>
+          </div>
+        </div>
+    </div>

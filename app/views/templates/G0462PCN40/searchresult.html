@@ -35,8 +35,8 @@
             <div class="main">
                 <div class="search">以下是您输入关键词“ {$search.keyword} ”的搜索结果,共"{$search.total}"条</div>
                 <ul class="news">
-                        {foreach item=search from=$search.data}
-                            <li><a href="{$search.link}"><h2>◆ {$search.title}</h2><p class="kz" data-limit="184">{$search.description}</p><span>{$search.pubtimestamp|date_format:'%Y-%m-%d'}</span></a></li>  
+                        {foreach item=search1 from=$search.data}
+                            <li><a href="{$search1.link}"><h2>◆ {$search1.title}</h2><p class="kz" data-limit="184">{$search1.description}</p><span>{$search1.pubtimestamp|date_format:'%Y-%m-%d'}</span></a></li>  
                         {/foreach}
                     </ul>
                 {include file='./_page.html'}
