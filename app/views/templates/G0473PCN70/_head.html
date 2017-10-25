@@ -1,0 +1,12 @@
+<div class="header">
+    <div class="logo fl"><a href="{$site_url}"><img src="{$logo}"></a></div>
+    <div class="navs fr">
+         <ul class="menu">
+              <li><a href="{$site_url}"><span>INDEX</span>网站首页</a></li>
+              {foreach item=nav from=$navs}
+              <li><a href="{$nav.link}"><span>{$nav.en_name}</span>{$nav.name}</a></li>
+              {if $nav@index+1 eq 7}{break}{/if}
+              {/foreach}
+         </ul>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+<div class="header">
+    <div class="logo"><a href="{$site_url}"><img src="{$logo}" alt=""></a></div>
+    <div class="menu " id="quickbar-showcats"><i class="iconfont">&#xe603;</i></div>
+</div>
+<div class="nav">
+    <div class="swiper-container swiper-nav " >
+        <ul class="swiper-wrapper">
+            <li class="swiper-slide"><a href="{$site_url}">首页</a></li>
+            {foreach name=nav item=nav from=$navs}
+            <li class="swiper-slide">
+                <a href="{$nav.link}">
+                    <span>{$nav.name}</span>
+                </a>
+            </li>
+            {/foreach}
+        </ul>
+        <div class="swiper-button-next nav-btn iconfont"> &#xe645;</div>
+        <div class="swiper-button-prev nav-btn iconfont"> &#xe641;</div>
+    </div>
+</div>
+<div class="banner">
+    <div class="swiper-container swiper-indexBan" >
+        <ul class="swiper-wrapper">
+            {foreach name=slidepics item=slidepic from=$global.slidepics}
+            <li class="swiper-slide"><a href="{$slidepic.link}" target="_blank"><img src="{$slidepic.image}" ></a></li>
+            {/foreach}
+        </ul>
+        <div class="swiper-pagination"></div>
+    </div>
+</div>

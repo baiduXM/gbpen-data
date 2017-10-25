@@ -1,0 +1,18 @@
+<div class="picMarquee-left">
+    <div class="bd">
+        <ul class="picList clear">
+        	{foreach item=flink from=$global.links}
+            <li>
+                <div class="pic"><a href="{$flink.link}" target="_blank"><img src="{$flink.image}"></a></div>
+            </li>
+            {/foreach}
+        </ul>
+    </div>      
+</div>
+<div class="wow zoomIn footer">
+	<div class="footer1">
+		{$global.contact}
+		<div class="footcopyright">{$footprint}</div>
+	</div>
+</div>
+{$footscript}

@@ -1,0 +1,44 @@
+
+<div class="header">
+	<div class="logo wow wobble"><a href="{$site_url}"><img src="{$logo}"/></a></div>
+	<div class="navBar wow fadeInDown">
+		<ul class="nav clearfix">
+			{foreach name=navs item=nav from=$navs}
+			<li class="m {if $nav.current}on{/if} nav_li" style="width:{100/(($navs|count))}%">
+				<a href="{$nav.link}" class="kz" data-limit="6">{$nav.name}<em></em></a>
+				{if $nav.childmenu}
+					<ul class="sub">
+						{foreach key=key item=nav_list from=$nav.childmenu}
+						<li><a class="kz" data-limit="20" href="{$nav_list.link}">{$nav_list.name}</a></li>
+						{/foreach}
+					</ul>
+				{/if}
+			</li>
+			{/foreach}
+		</ul>
+	</div>
+	<div class="search_box fr">
+		<form action="{$search_action}" method="GET">
+			<input class="txt1" type="text" value="请输入关键词搜索" name="s"/>
+			<input class="btn1 wow tada" type="submit" value="" />
+		</form>
+	</div>
+</div>
+<div class="banner">
+	<div id="slideBox" class="slideBox" >
+		<div class="hd">
+			<ul>
+			{foreach name=slidepics item=slidepic from=$global.slidepics}
+			<li></li>
+			{/foreach}
+			</ul>
+		</div>
+		<div class="bd">
+			<ul>
+			{foreach name=slidepics item=slidepic from=$global.slidepics}
+				<li><a href="{$slidepic.link}" target="_blank"><img src="{$slidepic.image}" alt="{$slidepic.title}"/></a></li>
+			{/foreach}
+			</ul>
+		</div>
+	</div>		
+</div>

@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script type="text/javascript">
+    // 跳转手机页面
+    {if $site_another_url}
+        if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+            location.href = '{$site_another_url}';
+        }
+    {/if}
+    </script>
+
+<link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
+<meta http-equiv="Content-Language" content="zh-CN">
+<meta http-equiv="x-ua-compatible" content="ie=Edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Type" mrc="text/html; charset=gb2312">
+<title>{$title}</title>
+<meta name="keywords" content="{$keywords}"/>
+<meta name="description" content="{$description}"/>
+<link rel="stylesheet" href="{$site_url}css/style.css">
+<script type="text/javascript" src="{$site_url}js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript" src="{$site_url}js/main.js"></script>
+<script type="text/javascript" src="{$site_url}js/function.js"></script>
+</head>
+<body>
+  <div class="wrapper ny_wrap">
+       {include file='./_head.html'}
+       <div class="banner2"><img src="{$global.slidepics2.image}">
+            <p class="enlish pa">{$list.en_name}</p>
+       </div>
+       <div class="side">
+            {include file='./_left.html'}
+            <div class="side_r fr">
+                 <div class="posnav pr">
+                      <div class="pos_bg"><img src="{$global.pos_bg.image}"></div>
+                      <div class="pos_name pa"><span>{$list.en_name}</span>{$list.name}</div>
+                 </div>
+                 <div class="detilbox">
+                      <div class="detil about">
+                           {$list.content|unescape:"html"}
+                      </div>
+                 </div>
+            </div>
+       </div>
+       {include file='./_foot.html'}
+  </div>
+</body>
+</html>

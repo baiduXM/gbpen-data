@@ -1,0 +1,83 @@
+{   
+    
+	"slidepics2": {
+		"value": {
+			"title": "banner",
+			"image": "images/banner2.jpg",
+			"link": "article/1.html",
+			"description": "banner1"
+		},
+		"description": "内页banner图",
+		"type": "image",
+		"config": {
+			"width": 1920,
+			"height": 424
+		}
+	},
+	"pagenavss": {
+		"value": {},
+		"description": "侧边栏目列表（当前栏目无子栏目时展示的目标栏目）",
+		"type": "list",
+		"config": {
+			"filter": "list,page",
+			"mustchild": true
+		}
+	},
+	"pos_bg": {
+		"value": {
+			"title": "banner",
+			"image": "images/nybg.jpg",
+			"link": "article/1.html",
+			"description": "banner1"
+		},
+		"description": "内页banner图",
+		"type": "image",
+		"config": {
+			"width": 1920,
+			"height": 132
+		}
+	},
+	"links": {
+		"value": [{
+			"title": "百度",
+			"image": "images/link1.jpg",
+			"link": "http://www.baidu.com",
+			"description": "友情链接1"
+		}, {
+			"title": "淘宝",
+			"image": "images/link1.jpg",
+			"link": "http://www.baidu.com",
+			"description":"友情链接2"
+		},{
+			"title": "京东",
+			"image": "images/link1.jpg",
+			"link": "http://www.baidu.com",
+			"description":"友情链接3"
+		},
+		{
+			"title": "搜狐网",
+			"image": "images/link1.jpg",
+			"link": "http://www.baidu.com",
+			"description":"友情链接5"
+		},
+		{
+			"title": "豆网",
+			"image": "images/link1.jpg",
+			"link": "http://www.baidu.com",
+			"description":"友情链接6"
+		}
+		],
+		"description": "页脚友情链接",
+		"type": "images",
+		"config":{
+			"width":151,
+			"height":59
+		  }
+	    },
+	    "contact":{
+			"value":"全国服务热线：\n\r<span>0592-777777</span>",
+			"description":"全局联系方式",
+			"type":"textarea"
+		}
+	
+}
