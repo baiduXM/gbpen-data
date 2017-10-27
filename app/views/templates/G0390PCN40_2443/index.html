@@ -1,11 +1,22 @@
 <script type="text/javascript">
-    // 跳转手机页面
-    {if $site_another_url}
-      if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
-        location.href = '{$site_another_url}';
-      }
-    {/if}
-    </script>
+{if $site_another_url}
+    var system ={
+        win : false,
+        mac : false,
+        xll : false
+    };
+    var p = navigator.platform;
+    //alert(p);
+    system.win = p.indexOf("Win") == 0;
+    system.mac = p.indexOf("Mac") == 0;
+    system.x11 = (p == "X11") || (p.indexOf("Linux") == 0);
+    if(system.win||system.mac||system.xll){
+
+    }else{
+        window.top.location.href="{$site_another_url}";
+    }
+{/if}
+</script>
 
 <meta http-equiv="x-ua-compatible" content="ie=7" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -46,7 +57,7 @@ $(function() {
                         {$litmit = 6}
                         {if $navs|count lt $litmit}{$litmit = $navs|count}{/if}
                             <li class="nLi" style="width:{100/($litmit+1)-1}%">
-                                <h3><a href="{$site_url}">首页</a></h3>
+                                <h3><a href="{$site_url}">首页123</a></h3>
                             </li>
                             {foreach name=navs item=nav from=$navs}
                             <li  class="fl{if $nav.current} current{/if} nLi" style="width:{100/($litmit+1)}%">

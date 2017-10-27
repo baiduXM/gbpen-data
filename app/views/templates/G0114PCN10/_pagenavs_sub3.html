@@ -1,0 +1,53 @@
+{if $pagenavs}
+<div class="l_list wow rotateInDownLeft">
+	<ul class="firstul">
+	{foreach name=pagenavs item=nav from=$pagenavs}
+		<li class="firstli {if $nav.current}active{/if}"><a href="{if $nav.childmenu}javascript:; {else} {$nav.link}{/if}" class="c kz" data-limit="8">{$nav.name} <span class="normalem"></span></a>
+			<ul class="secondul">	
+			{if $nav.childmenu}
+				{foreach item=nav_list from=$nav.childmenu}
+					<li class="secondli"><a href="{if $nav_list.childmenu}javascript:; {else} {$nav_list.link}{/if}" class="cc kz" data-limit="7">{$nav_list.name} <span></span></a>
+						<ul class="thrul">
+						{if $nav_list.childmenu}
+						{foreach item=nav1_list from=$nav_list.childmenu}
+							<li><a href="{$nav1_list.link}" class="kz" data-limit="6">{$nav1_list.name}</a></li>
+						{/foreach}
+						{/if}
+						</ul>						
+					</li>
+				{/foreach}						
+			{/if}
+			</ul>			
+		</li>					
+	{/foreach}	
+	</ul>
+</div>
+{else}
+
+<div class="l_list wow rotateInDownLeft">
+	<ul class="firstul">
+	{foreach name=pagenavs item=nav from=$_pagenavs_sub3.pagenavs.childmenu}
+		<li class="firstli {if $nav.current}active{/if}"><a href="{if $nav.childmenu}javascript:; {else} {$nav.link}{/if}" class="c kz" data-limit="8">{$nav.name} <span>▶</span></a>
+			<ul class="secondul">	
+			{if $nav.childmenu}
+				{foreach item=nav_list from=$nav.childmenu}
+					<li class="secondli"><a href="{if $nav_list.childmenu}javascript:; {else} {$nav_list.link}{/if}" class="cc kz" data-limit="7">{$nav_list.name} <span></span></a>
+						<ul class="thrul">
+						{if $nav_list.childmenu}
+						{foreach item=nav1_list from=$nav_list.childmenu}
+							<li><a href="{$nav1_list.link}" class="kz" data-limit="6">{$nav1_list.name}</a></li>
+						{/foreach}
+						{/if}
+						</ul>						
+					</li>
+				{/foreach}						
+			{/if}
+			</ul>			
+		</li>						
+	{/foreach}	
+	</ul>
+</div>
+{/if}
+
+
+

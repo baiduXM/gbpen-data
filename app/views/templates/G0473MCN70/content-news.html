@@ -59,15 +59,7 @@
       <section> 
             <div class="cont_ent edite contentss">
                 <p class="art_title tc">{$article.title}</p>
-                <div class="swiper-container swiper-prodt">
-                    <div class="swiper-wrapper prodt">
-                      {foreach item=image from=$article.images}
-                        <div class="swiper-slide"><div class="p-img"><img src="{$image.image}"></div></div>
-                      {/foreach}
-                    </div>
-                    <!-- Add Pagination -->
-                    <div class="dot-bg"></div>
-                </div>
+                
                   {$article.content|unescape:"html"}
             </div>
             <ul class="choose">

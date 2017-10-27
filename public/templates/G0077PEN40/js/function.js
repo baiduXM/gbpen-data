@@ -139,9 +139,13 @@ $(document).ready(function() {
 /*产品详细页*/
     jQuery(".slideBoxb").slide({
         mainCell: ".bd ul",
-        autoPlay: true,
-        effect: "leftLoop"
+        autoPlay: true
+        // effect: "leftLoop"
     });
+    var proLi = $(".slideBoxb .bd li");
+    if(proLi.length <=1){
+        $(".slideBoxb .prev,.slideBoxb .next").hide();
+    }
 	
 	
  // 兼容低版本IE

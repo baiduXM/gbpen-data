@@ -1,118 +1,96 @@
+ $(document).ready(function(){
+ 	jQuery(".new-actives").slide({ mainCell:".tab-bd-in", effect:"top", delayTime:400,pnLoop:false,easing:"easeOutCubic" });
+	jQuery(".picMarquee-left").slide({mainCell:".bd ul",autoPlay:true,effect:"leftMarquee",vis:5,interTime:50});
+ 	jQuery(".nav").slide({ type:"menu",  titCell:".m", targetCell:".sub", delayTime:300, triggerTime:0,returnDefault:false  });
+	if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))){
+		new WOW().init();
+	};
+		jQuery(".focusBox2").slide({ mainCell:".pic2",effect:"fold", autoPlay:true, delayTime:300});
+jQuery(".slideBox").slide({ titCell:".hd ul", mainCell:".bd ul", effect:"left", delayTime:1000, autoPlay:true, autoPage:true, trigger:"click",
+		mouseOverStop:false,/* 鼠标移到容器层继续播放*/
+		/* 控制进度条 */
+			startFun:function(){
+				var timer = jQuery(".slideBox .timer");
+				timer.stop(true,true).animate({ "width":"0%" },0).animate({ "width":"100%" },1000);
+			}
+		});
+		//焦点图功能，用到SuperSlide插件
+	jQuery(".w3cFocus").slide({ mainCell:".bd ul", effect:"fold", delayTime:300, autoPlay:true });
 
-<!--美工区域-->
+	//按钮位移函数
+	function moveBtn(){
+				var prev=jQuery(".w3cFocus .prev");
+				var next=jQuery(".w3cFocus .next");
 
-$(document).ready(function() {
-	
-  $(".products .inner").slide({mainCell:".bd ul",autoPlay:true,effect:"leftMarquee",vis:4,interTime:50});
-  $(".slideBox").slide({mainCell:".bd ul",interTime:5000,autoPlay:true});
- 
-  $(".products ul li").hover(
-	
-	function(){
-		 $(this).find("p").animate({opacity:"1"})
-		 $(this).find(".bg").animate({opacity:"1"})
-		 $(this).find(".more").animate({top:175,opacity:"1"})
-		 },
-	
-	function(){
-		 $(this).find("p").animate({opacity:"0"})
-		 $(this).find(".bg").css("backgroundImage","none")
-		$(this).find(".more").animate({top:-175,opacity:"0"})		  
-  })
-   
-});
+				var body_w = document.body.clientWidth;
+				var side_w = (body_w - 960) / 2 -50;
 
-window.onload=function(){
-	
-	 $(".news .inner").each(
- function(){
-	 $(this).find(".news_text").width($(this).width()-$(this).find(".tu_img img").width()-30)
-	 }
- )
-function adaption(selector,li_w,li_h){
-		$(selector).each(function(i){
-		img_i=$(selector).eq(i).find("img")
-	    if(img_i.width() >= li_w&&img_i.width()>=img_i.height()){
-          img_i.width("100%");}
-        else if(img_i.height() > li_h){
-         img_i.height("100%");}
-	   var img_h=img_i.height()	
-       var img_w=img_i.width()												
-       var mar_t=Math.floor((li_h-img_h)*0.5);
-       var mar_l=Math.floor((li_w-img_w)*0.5);
-  	   $(this).css({"padding-top":mar_t+"px","padding-left":mar_l+"px"})
-	   $(this).width($(this).width()-mar_l);
-	   $(this).height($(this).height()-mar_t);
-		})
+				if(body_w < 1080)
+				{
+					prev.animate({"left":30, "opacity":0.5});
+					next.animate({"right":30, "opacity":0.5});
+				}
+				else
+				{
+					prev.animate({"left":side_w, "opacity":0.5});
+					next.animate({"right":side_w, "opacity":0.5});
+				}
 	}
+	moveBtn();
+
+	//拉伸浏览器时触发，为了适应不同浏览设备
+	jQuery(window).resize(function(){moveBtn();});
+
+ 		
+		(function(){
+			$(".firstul > li > a").click(function(){
+				if(!$(this).hasClass('xz')){
+					$(this).addClass("xz").parents().siblings().find("a").removeClass("xz");
+					$(this).find('span').addClass('activeem').removeClass('normalem');
+				} else{
+					$(this).removeClass("xz");
+					$(this).find('span').addClass('normalem').removeClass('activeem');
+				}
+			     
+				 $(this).parents().siblings().find(".secondul").hide(300);
+				 $(this).siblings(".secondul").toggle(300);
+				 $(this).parents().siblings().find(".secondul > li > .secondli").hide().parents().siblings().find(".thr_nr").hide();
+				
+			})
+			
+		    $(".secondul > li > a").click(function(){
+		    	if(!$(this).hasClass('sen_x')){
+					$(this).addClass("sen_x").parents().siblings().find("a").removeClass("sen_x");
+					$(this).find('span').addClass('actsec')
+				} else{
+					$(this).removeClass("sen_x");
+					$(this).find('span').removeClass('actsec')
+				}
+		        $(this).parents().siblings().find(".thrul").hide(300);	
+			    $(this).siblings(".thrul").toggle(300);	
+			})
+
+		    $(".thrul > li > a").click(function(){
+			     $(this).addClass("xuan").parents().siblings().find("a").removeClass("xuan");
+				 $(this).parents().siblings().find(".thr_nr").hide();	
+			     $(this).siblings(".thr_nr").toggle();
+			})
+		})();
+
+		$('.infoList li a').each(function(index) {
+			$(this).hover(function(){
+				$(this).find('.mart').stop().animate({ top:"0" },600);
+			},function(){
+				$(this).find('.mart').stop().animate({top:"-500px" },600)
+			});
+        });
+		$(".kz").each(function(){
+		    var maxwidth=parseInt($(this).attr("data-limit"));
+		    if($(this).text().length>maxwidth){
+		    $(this).text($(this).text().substring(0,maxwidth));
+		    $(this).html($(this).html()+'...');
+		    }
+	    });
+	    //创建和初始化地图函数
 	
-/*首页产品列表图片自适应*/
-adaption(".products .inner ul li .pic",190,190)
-
-/*图文内页图片自适应*/	 
- $(".list_imagetext ul li").each(
- function(){
-	 var wid1=$(this).find(".img_box img").width();
-	 var wid2=$(this).width();
-	 $(this).find(".text_box").width(wid2-wid1-11)
-	 }
- )
-
-/*	 $(".yc ul li").each(function(){
-		 var ww=$(this).find("img").width();
-   $(this).find("p").width(ww);
-  });*/
-  
-}
-
-$(document).ready(function() {
-	
-/*产品详细页图片自适应*/
-	$(".bd li").each(function(i){
-	if($(".bd li").eq(i).find("img").width() > 640){
-       $(".bd li").eq(i).find("img").width("99%");
-}
-
-		})
-
-	
-/*侧边栏*/
-		$(".listbg li a").click(function () {
-        $(this).parent().siblings().find(".second").slideUp()
-        $(this).siblings(".second").slideToggle()
-    })  
-    $(".second li a").click(function () {
-        $(this).parent().siblings().find(".third").slideUp()
-        $(this).siblings(".third").slideToggle()
-    }) 
-	
-/*导航*/
-   jQuery("#nav").slide({
-        type: "menu", // 效果类型，针对菜单/导航而引入的参数（默认slide）
-        titCell: ".aa", //鼠标触发对象
-        targetCell: ".cc", //titCell里面包含的要显示/消失的对象
-        effect: "slideDown", //targetCell下拉效果
-        delayTime: 300, //效果时间
-        triggerTime: 0, //鼠标延迟触发时间（默认150）
-        returnDefault: false //鼠标移走后返回默认状态，例如默认频道是"预告片"，鼠标移走后会返回"预告片"（默认false）
-    });
-
-/*产品详细页*/
-    jQuery(".slideBoxb").slide({
-        mainCell: ".bd ul",
-        autoPlay: false,
-        effect: "leftLoop"
-    });
-
- // 兼容低版本IE
-    $(function() {
-        if (window.PIE) {
-            $('.rounded').each(function() {
-                PIE.attach(this);
-            });
-        }
-    });
-
-
-
-});
+ });
