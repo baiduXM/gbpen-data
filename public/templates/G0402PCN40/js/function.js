@@ -4,11 +4,13 @@ $(document).ready(function() {
   	 	jQuery(".slider").slide({mainCell:".bd ul",autoPlay:true, effect:"left",delayTime:500, trigger:"click",interTime:4000});
 
         //友情链接轮播
-        jQuery(".links").slide({mainCell:".bd ul",autoPlay:true,autoPage:true, effect:"left", trigger:"click",vis:6,interTime:4000});
-        //首页banner图下面的轮播图
-        jQuery(".imgT").slide({mainCell:".bd ul",autoPlay:true,autoPage:true, effect:"left", trigger:"click",vis:4,interTime:4000});
+        jQuery(".link").slide({mainCell:".bd ul",autoPlay:true,autoPage:true, effect:"left", trigger:"click",vis:6,interTime:4000});
 
-        if ($(".pictureSlider").length > 0) {
+        //首页banner图下面的轮播图
+         jQuery(".imgT").slide({mainCell:".bd ul",autoPlay:true,autoPage:true, effect:"left", trigger:"click",vis:4,interTime:4000});
+
+
+    if ($(".pictureSlider").length > 0) {
             Carousel.init($(".pictureSlider"));
         };
 

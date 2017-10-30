@@ -50,7 +50,7 @@
 			</div>
 		</div>
 		<div class="piblic">
-			{if $index.imgV == 1}
+			{if $index.val == 1}
 			<div class="link c imgT">
 				<a href="javascript:void(0)" class="prev fl">
 					<img class="a" src="{$site_url}images/prev_icon.png" height="78" width="28">
@@ -58,7 +58,7 @@
 				</a>
 				<div class="bd linker fl">
 					<ul>
-						{foreach item=img from=$index.imgT}
+						{foreach item=img from=$index.imgs}
 						<li><a href="{$img.link}"><img src="{$img.image}"></a></li>
 						{/foreach}
 					</ul>
@@ -146,7 +146,7 @@
 				<hr class="hr"><img class="middle" src="{$site_url}images/middle.png">
 				<div class="bt_en">Links</div>
 			</div>
-			<div class="link c links">
+			<div class="link c">
 				<a href="javascript:void(0)" class="prev fl">
 					<img class="a" src="{$site_url}images/prev_icon.png" height="78" width="28">
 					<img class="ah" src="{$site_url}images/prev_icon_h.png" height="78" width="28">

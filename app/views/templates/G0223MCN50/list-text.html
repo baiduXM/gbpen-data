@@ -57,16 +57,20 @@
       <section>
         <div class="cont_ny">
             <div class="box_titles">
-                <h2><i>{$list.name}</i> 
+                <h2><i>{$list.name}</i>
+                  {if $pagenavs}
                   <span class="more">分类↓</span>
+                  {/if}
                 </h2>
                 {include file="./_nnav.html"}
             </div>
             <ul class="news">
               {foreach item=new from=$list.data}
-                <li><a href="{$new.link}">
+                <li>
+                  <a href="{$new.link}">
                      <span class="time">{$new.pubtimestamp|date_format:'%Y-%m-%d'}</span>{$new.description}
-                </a></li>
+                  </a>
+                </li>
               {/foreach}
             </ul>
             {include file="./_page.html"}

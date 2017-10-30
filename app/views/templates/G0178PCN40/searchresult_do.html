@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-
+	
     <!-- 调试代码 End -->
     <script type="text/javascript">
     // 跳转手机页面
@@ -58,9 +58,9 @@
 			         {/if}
 				</div>
 				<ul>
-					{foreach name=article item=article from=$list.data}
-			        <li><a href="{$article.link}"><span>{$article.pubtimestamp|date_format:'%Y-%m-%d'}</span>{$article.title}</a></li>
-				    {/foreach}					
+					{foreach name=article item=article from=$search.data}<!--search_content_start-->
+			        <li><a href="search_$link"><span>{$article.pubtimestamp|date_format:'%Y-%m-%d'}</span>search_$title</a></li>
+				    <!--search_content_end-->{/foreach}					
 				</ul>
 				<div class="num">
 					<a href="{$page_links.first_link}">首页</a>
