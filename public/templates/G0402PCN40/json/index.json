@@ -55,11 +55,89 @@
 			"title":"banner1",
 			"image":"images/banner.jpg",
 			"link":"content-product.html"
+			},
+			{
+				"title":"banner1",
+				"image":"images/banner.jpg",
+				"link":"content-product.html"
+			},
+			{
+				"title":"banner1",
+				"image":"images/banner.jpg",
+				"link":"content-product.html"
+			},
+			{
+				"title":"banner1",
+				"image":"images/banner.jpg",
+				"link":"content-product.html"
+			},
+			{
+				"title":"banner1",
+				"image":"images/banner.jpg",
+				"link":"content-product.html"
+			},
+			{
+				"title":"banner1",
+				"image":"images/banner.jpg",
+				"link":"content-product.html"
+			},
+			{
+				"title":"banner1",
+				"image":"images/banner.jpg",
+				"link":"content-product.html"
+			},
+			{
+				"title":"banner1",
+				"image":"images/banner.jpg",
+				"link":"content-product.html"
+			},
+			{
+				"title":"banner1",
+				"image":"images/banner.jpg",
+				"link":"content-product.html"
 			}],
 		"type": "images",
 		"config": {
 			"width": 173,
 			"height": 78
 		}
+	},
+	"imgT":{
+		"description": "首页banner图下轮播图",
+		"value":[{
+			"title":"轮播图片",
+			"image":"images/banner.jpg",
+			"link":" "
+		},
+		{
+			"title":"轮播图片",
+			"image":"images/banner.jpg",
+			"link":" "
+		},
+		{
+			"title":"轮播图片",
+			"image":"images/banner.jpg",
+			"link":" "
+		},
+		{
+			"title":"轮播图片",
+			"image":"images/banner.jpg",
+			"link":" "
+		},
+		{
+			"title":"轮播图片",
+			"image":"images/banner.jpg",
+			"link":" "
+		}],
+		"type": "images",
+		"config": {
+			"width": 273,
+			"height": 268
+		}
+	},
+	"imgV": {
+		"description": "banner下轮播图，1开启，默认关闭",
+		"value":"0",
+		"type": "text"
 	}
 }

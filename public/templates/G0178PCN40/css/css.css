@@ -203,7 +203,7 @@ a.detail:hover{color: #c22a29}
 .pro_det{height: auto;overflow: hidden;}
 .pro_det p{height: auto;overflow: hidden; margin-top: 25px;color: #333;font: 14px/26px "微软雅黑";}
 .pro_det p span{color: #333;font: 16px/28px "微软雅黑";max-height: 56px;overflow: hidden;display: block;}
-.pro_det .img{display: block;margin: 0 auto}
+.pro_det .img{display: block;margin: 0 auto;max-width: 100%;}
 .poster-main{ position:relative;width:721px;height:322px;margin: 0 auto}
 .poster-main a,.poster-main img{display:block;}
 .poster-main .poster-list{width:100%;height:322px;}

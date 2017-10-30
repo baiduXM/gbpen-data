@@ -27,7 +27,7 @@ img{ border:none;}
 
 #nav{ float:right; width:680px; margin-top:85px;}
 #nav ul li{ float:left;height:25px; line-height:25px; color:#fff; background:url(../images/libg.jpg) right center no-repeat }
-#nav ul li a{font-family:Microsoft Yahei; font-size:14px; color:#ffffff; padding: 0 20px;  font-weight:bold; }
+#nav ul li a{font-family:Microsoft Yahei; font-size:14px; color:#ffffff; padding: 0 20px;  font-weight:bold;display: inline-block; }
 #nav ul li a:hover{ background:#fff;-moz-border-radius: 15px; -webkit-border-radius: 15px;  border-radius:15px; color:#151313;height:25px; line-height:25px;}
 
 

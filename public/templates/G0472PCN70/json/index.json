@@ -1,0 +1,46 @@
+{
+  "banners": {
+    "value": [
+      {
+        "title": "测试图2",
+        "image": "images/banner.jpg",
+        "link": "http://www.baidu.com"
+      },
+      {
+        "title": "测试图2",
+        "image": "images/banner.jpg",
+        "link": "http://www.baidu.com"
+      },
+      {
+        "title": "测试图2",
+        "image": "images/banner.jpg",
+        "link": "http://www.baidu.com"
+      }
+    ],
+    "description": "首页banner图",
+    "type": "images",
+    "config": {
+      "width": 1920,
+      "height":664
+    }
+  },
+  "links": {
+    "value": [
+      {
+        "title": "百度贴吧",
+        "image": "",
+        "link": "http://tieba.baidu.com"
+      }, {
+        "title": "百度图片",
+        "image": "",
+        "link": "http://image.baidu.com"
+      }
+    ],
+    "description": "友情链接",
+    "type": "images",
+    "config": {
+      "width": 10,
+      "height": 10
+    }
+  }
+}

@@ -47,8 +47,8 @@
             </div>
             <div class="search">以下是您输入关键词“ {$search.keyword} ”的搜索结果,共"{$search.total}"条</div>
             <ul class="news">
-                {foreach item=search from=$search.data}
-                    <li><a href="{$search.link}">- {$search.title}</a></li>  
+                {foreach item=search1 from=$search.data}
+                    <li><a href="{$search1.link}">- {$search1.title}</a></li>  
                 {/foreach}
             </ul>
             {include file='./_page.html'}

@@ -50,6 +50,22 @@
 			</div>
 		</div>
 		<div class="piblic">
+			{if $index.imgV == 1}
+			<div class="link c imgT">
+				<a href="javascript:void(0)" class="prev fl">
+					<img class="a" src="{$site_url}images/prev_icon.png" height="78" width="28">
+					<img class="ah" src="{$site_url}images/prev_icon_h.png" height="78" width="28">
+				</a>
+				<div class="bd linker fl">
+					<ul>
+						{foreach item=img from=$index.imgT}
+						<li><a href="{$img.link}"><img src="{$img.image}"></a></li>
+						{/foreach}
+					</ul>
+				</div>
+				<a href="javascript:void(0)" class="next fl"><img class="a" src="{$site_url}images/next_icon.png" height="78" width="28"><img class="ah" src="{$site_url}images/next_icon_h.png" height="78" width="28"></a>
+			</div>
+			{/if}
 			<div class="bt">
 				<div class="bt_cn">{$index.about.name}</div>
 				<hr class="hr"><img class="middle" src="{$site_url}images/middle.png">
@@ -130,7 +146,7 @@
 				<hr class="hr"><img class="middle" src="{$site_url}images/middle.png">
 				<div class="bt_en">Links</div>
 			</div>
-			<div class="link c">
+			<div class="link c links">
 				<a href="javascript:void(0)" class="prev fl">
 					<img class="a" src="{$site_url}images/prev_icon.png" height="78" width="28">
 					<img class="ah" src="{$site_url}images/prev_icon_h.png" height="78" width="28">
