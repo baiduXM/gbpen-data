@@ -62,42 +62,38 @@
 			"height": 78
 		}
 	},
+	"val":{
+		"description": "banner下轮播图，1开启，默认关闭",
+		"value":"0",
+		"type": "text"
+	},
 	"imgs":{
 		"value":[{
 			"title":"轮播图片",
 			"image":"images/banner.jpg",
 			"link":" "
-			},
-			{
+			},{
 				"title":"轮播图片",
 				"image":"images/banner.jpg",
 				"link":" "
-			},
-			{
+			},{
 				"title":"轮播图片",
 				"image":"images/banner.jpg",
 				"link":" "
-			},
-			{
+			},{
 				"title":"轮播图片",
 				"image":"images/banner.jpg",
 				"link":" "
-			},
-			{
+			},{
 				"title":"轮播图片",
 				"image":"images/banner.jpg",
 				"link":" "
 			}],
 		"description": "首页banner图下轮播图",
 		"type": "images",
-		"config": {
+		"config":{
 			"width": 273,
 			"height": 268
 		}
-	},
-	"val":{
-		"description": "banner下轮播图，1开启，默认关闭",
-		"value":"0",
-		"type": "text"
 	}
 }

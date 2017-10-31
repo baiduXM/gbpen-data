@@ -276,7 +276,7 @@ ul.news-list li a span{position: absolute;right: 0;top:0;}
 
 /*pro-det*/
 .pro-img{width:414px;margin:0 auto;overflow: hidden;padding:15px 0 30px;}
-.slideBoxb{ width:414px;height: 336px; overflow:hidden; position:relative;margin: o auto;}
+.slideBoxb{ width:414px;/*height: 336px;*/height: auto; overflow:hidden; position:relative;margin: o auto;}
 .slideBoxb .hd{ height:15px; overflow:hidden; position:absolute; right:5px; bottom:5px; z-index:1; display:none; }
 .slideBoxb .hd ul{ overflow:hidden; zoom:1; float:left; display:none;  }
 .slideBoxb .hd ul li{ float:left; margin-right:2px;  width:15px; height:15px; line-height:14px; text-align:center; background:#fff; display:none; cursor:pointer; }
