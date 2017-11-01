@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{$title}</title>
+    <script type="text/javascript">
+        // 跳转PC页面
+        {if $site_another_url}
+        if (!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+            location.href = '{$site_another_url}';
+        }
+        {/if}
+    </script>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no,minimal-ui">
+    <meta name="keywords" content="{$keywords}" />
+    <meta name="description" content="{$description}" />
+    <link rel="stylesheet" href="{$site_url}css/swiper-3.3.1.min.css" />
+    <link rel="stylesheet" href="{$site_url}css/style.css">
+    <script src="{$site_url}js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="{$site_url}js/jquery.min.js"></script>
+    <script type="text/javascript" src="{$site_url}js/swiper-3.3.1.jquery.min.js"></script>
+    <script type="text/javascript" src="{$site_url}js/simple-app.js"></script>
+    <script  type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.1.js"></script>
+    <script type="text/javascript" src="{$site_url}js/index.js"></script>
+
+    <script type="text/javascript">
+        window.addEventListener('load', function(){
+            setTimeout(function(){ window.scrollTo(0, 1);}, 100);
+        });//safari浏览器可以通过此代码来隐藏地址栏
+    </script>
+</head>
+<body>
+<div id="body">
+    {include file="./_header.html"}
+    {include file="./_nav.html"}
+    {include file="./_bannerDet.html"}
+    <div class="det-main">
+        <div class="det-topBox">
+            <div class="det-title">
+                <div class="det-name">
+                    <h4>{$list.name}</h4>
+                    <h4>{$list.en_name}</h4>
+                </div>
+                <div class="title-rt rt">
+                    <span class="classify">分类 +</span>
+                </div>
+            </div>
+            <div class="det-nav">
+                {if $pagenavs}
+                <ul class="one">
+                    {foreach item=nav from=$pagenavs}
+                    <li class="one-li"><a href="{$nav.link}">{$nav.name}  <i><b></b></i></a>
+                        {if $nav.childmenu}
+                        <ul class="two">
+                            {foreach item=nav_list from=$nav.childmenu}
+                            <li class="two-li"><a href="{$nav_list.link}">•  {$nav_list.name} <i><b></b></i></a>
+                                {if $nav_list.childmenu}
+                                <ul class="three">
+                                    {foreach item=nav_lists from=$nav_list.childmenu}
+                                    <li class="three-li"><a href="{$nav_lists.link}">{$nav_lists.name}</a></li>
+                                    {/foreach}
+                                </ul>
+                                {/if}
+                            </li>
+                            {/foreach}
+                        </ul>
+                        {/if}
+                    </li>
+                    {/foreach}
+                </ul>
+                {/if}
+            </div>
+
+        </div>
+        <div class="det-text list-text">
+            <ul class="news">
+                {foreach item=text from=$list.data}
+                    <li><a href="{$text.link}">{$text.title}</a></li>
+                {/foreach}
+            </ul>
+            {include file="./_page.html"}
+        </div>
+    </div>
+</div>
+
+{include file="./_footer.html"}
+</body>
+</html>

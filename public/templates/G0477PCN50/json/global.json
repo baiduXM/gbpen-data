@@ -1,0 +1,53 @@
+{   
+    "bgimg_ny":{
+		"value": {
+			"title": "内页背景图片",
+			"image": "images/ny_bg.jpg",
+			"link": "http://www.baidu.com/"
+			},
+		"description": "内页背景图片",
+		"type": "image",
+		"config": {
+			"width":1920,
+			"height":630
+		}
+	},
+	"links": {
+		"value": [{
+			"title": "百度",
+			"image": "images/link1.jpg",
+			"link": "http://www.baidu.com",
+			"description": "友情链接1"
+		}, {
+			"title": "淘宝",
+			"image": "images/link1.jpg",
+			"link": "http://www.baidu.com",
+			"description":"友情链接2"
+		},{
+			"title": "京东",
+			"image": "images/link1.jpg",
+			"link": "http://www.baidu.com",
+			"description":"友情链接3"
+		},
+		{
+			"title": "搜狐网",
+			"image": "images/link1.jpg",
+			"link": "http://www.baidu.com",
+			"description":"友情链接5"
+		},
+		{
+			"title": "豆网",
+			"image": "images/link1.jpg",
+			"link": "http://www.baidu.com",
+			"description":"友情链接6"
+		}
+		],
+		"description": "页脚友情链接",
+		"type": "images",
+		"config":{
+			"width":95,
+			"height":42
+		  }
+	    }
+	
+}

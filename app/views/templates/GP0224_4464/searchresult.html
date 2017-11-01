@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+     <!-- 调试代码 End -->
+    <script type="text/javascript">
+    // 跳转手机页面
+    {if $site_another_url}
+      if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+        location.href = '{$site_another_url}';
+      }
+    {/if}
+    </script>
+<meta http-equiv="x-ua-compatible" content="ie=9" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{$title}</title>
+<meta name="keywords" content="{$keywords}" />
+<meta name="description" content="{$description}" />
+<link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
+<link href="{$site_url}css/css.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	{include file="./_header.html"} 
+	<div class="contentbg newsbg">
+		<div class="content">
+			<div class="bigtitle newstitle" data-limit="4">{$posnavs[0].name}</div>
+			<div class="info news">
+				<div class="sear">
+					{if $search.total eq 0}
+			            <p class="search_res">没有查找到相关数据！</p>
+			            {else}
+			            <p class="t">
+			              搜索关键词为“
+			              <span>{$search.keyword}</span>
+			              ”的产品/文章，共搜索到{$search.total}个结果：
+			            </p>
+			        {/if}
+				</div>
+				<ul>
+					{foreach item=article from=$search.data}
+						<li><a href="{$article.link}"><span>{$article.pubymd}</span>＞＞{$article.title}</a></li>
+					{/foreach}
+				</ul>
+	 			<div class="pagenum">
+					<a href="{$page_links.first_link}">首页</a>
+					<a href="{$page_links.prev_link}">上一页</a>
+					{foreach item=near_link key=near_page from=$page_links.nears_link}
+					  {if $near_page == $page_links.current_page}
+					    <a class="number on">{$near_page}</a>
+					  {else}
+					    <a  class="number" href="{$near_link}">{$near_page}</a>
+					  {/if}
+					{/foreach}
+					<a href="{$page_links.next_link}">下一页</a>
+					<a href="{$page_links.last_link}">尾页</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	{include file="./_footer.html"} 
+
+
+<script type="text/javascript" src="{$site_url}js/jquery-1.7.1.min.js" ></script>
+<script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.js"></script>
+<script type="text/javascript" src="{$site_url}js/function.js"></script>
+
+
+</body>
+</html>

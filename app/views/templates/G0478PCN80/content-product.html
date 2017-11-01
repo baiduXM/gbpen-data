@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script type="text/javascript">
+    // 跳转手机页面
+    {if $site_another_url}
+        if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+            location.href = '{$site_another_url}';
+        }
+    {/if}
+    </script>
+
+<link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
+<meta http-equiv="Content-Language" content="zh-CN">
+<meta http-equiv="x-ua-compatible" content="ie=Edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Type" mrc="text/html; charset=gb2312">
+<title>{$title}</title>
+<meta name="keywords" content="{$keywords}"/>
+<meta name="description" content="{$description}"/>
+<link rel="stylesheet" href="{$site_url}css/style.css">
+<link rel="stylesheet" href="{$site_url}css/animate.css">
+<script type="text/javascript" src="{$site_url}js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript" src="{$site_url}js/main.js"></script>
+<script type="text/javascript" src="{$site_url}js/wow.min.js"></script>
+<script type="text/javascript" src="{$site_url}js/function.js"></script>
+</head>
+<body>
+  <div class="wrapper">
+       <div class="content_ny">
+          {include file='./_header.html'}
+          <div class="image_title">{$posnavs[0].name}</div>
+          <div class="main">
+               {include file='./_nnav.html'}
+               <div class="adress fadeInLeft wow">当前位置：<a href="{$site_url}">首页</a>{foreach item=nav from=$posnavs}&nbsp;>&nbsp;<a href="{$nav.link}">{$nav.name}</a>&nbsp;{/foreach}</div>
+               <div class="detil newdec fadeInUp wow">
+                    <div class="prodec">
+                         <div class="pros1 pr bd">
+                              <ul class="prodt1">
+                                {foreach item=image from=$article.images}
+                                <li><div class="teimg dtc tc vm"><img src="{$image.image}"></div></li>
+                                {/foreach}
+                              </ul>
+                          </div>
+                         <div class="prodec_r fr"><div class="pro_title">{$article.title}</div>{$article.content|unescape:"html"}</div>
+                    </div>
+                    <h1 class="tjcp">相关推荐</h1>
+                    <div class="pros pr">
+                        <ul class="prodt">
+                          {foreach item=protj from=$related}
+                          <li><a href="{$protj.link}">
+                              <div class="teimg dtc tc vm"><img src="{$protj.image}"></div>
+                              <div class="pro_hover pa">
+                                    <span class="expand"><i>{$protj.title}</i></span>
+                              </div>
+                          </a></li>
+                          {/foreach}
+                        </ul>
+                        <ul class="dot">
+                          <li></li>
+                        </ul>
+                    </div>
+               </div>
+               <div class="chose">
+                    <span>上一篇：<a href="{$article.prev.link}">{$article.prev.title}</a></span>
+                    <span>下一篇：<a href="{$article.next.link}">{$article.next.title}</a></span>
+               </div>
+          </div>
+       </div>
+       <div class="links tc fadeInUp wow">
+          {foreach item=link from=$global.links}
+          <a href="{$link.link}"><img src="{$link.image}"></a>
+          {/foreach}
+       </div>
+       <div class="back_top pf"></div>
+       <div class="opacity2"></div>
+      <div class="navbox pf">
+          <div class="close_nav"></div>
+          <ul class="ce">
+              <li><a href="{$site_url}">首页</a></li>
+              {foreach item=nav from=$navs}
+              <li><a href="{if $nav.childmenu}javascript:;{else}{$nav.link}{/if}">{$nav.name}</a> 
+                  {if $nav.childmenu}
+                   <ul class="er">
+                      {foreach item=navlist from=$nav.childmenu}
+                        <li class="e_li"><a href="{$navlist.link}">{$navlist.name}</a></li> 
+                      {/foreach}       
+                   </ul>
+                  {/if}
+              </li>
+              {/foreach}
+              <div class="clear"></div>
+          </ul>
+          <div class="foot">{$footprint}</div>
+      </div>
+      {$footscript}
+  </div>
+</body>
+</html>

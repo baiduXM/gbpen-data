@@ -1,0 +1,13 @@
+<div class="navL"  >
+    <div class="swiper-container swiper-nav">
+        <ul class="nav swiper-wrapper">
+            {foreach item=nav from=$navs}
+            <li class="{if $nav.current}current{/if}  swiper-slide">
+                <a href="{$nav.link}">{$nav.name}</a>
+            </li>
+            {/foreach}
+        </ul>
+        <div class="swiper-button-next iconfont">&#xe645;</div>
+        <div class="swiper-button-prev iconfont">&#xe641;</div>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+<div class="head slideInDown wow animated">
+     <div class="head_n">
+          <div class="logo fl"><a href="{$site_url}"><img src="{$logo}"></a></div>
+          <div class="nav fr">
+               <ul class="menu">
+                   <li><a href="{$site_url}" id="width"><i></i>网站首页</a></li>
+                   {foreach item=nav from=$navs}
+                   <li><a href="{$nav.link}" id="width"><i>{$nav.icon}</i>{$nav.name}</a></li>
+                   {if $nav@index+1 eq 7}{break}{/if}
+                   {/foreach}
+               </ul>
+          </div>
+     </div>
+</div>

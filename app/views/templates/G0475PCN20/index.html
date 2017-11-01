@@ -1,0 +1,247 @@
+<!DOCTYPE>
+<html>
+<head>
+<!-- 实时预览调试代码，模板开发完成后删除 -->
+
+<!-- 调试代码 End -->
+<script type="text/javascript">
+    // 跳转手机页面
+    {if $site_another_url}
+        if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+            location.href = '{$site_another_url}';
+        }
+    {/if}
+</script>
+
+<meta name="keywords" content="{$keywords}"/>
+<meta name="description" content="{$description}"/>
+<link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
+<meta http-equiv="x-ua-compatible" content="ie=8"/>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<link href="{$site_url}css/reset.css" rel="stylesheet" type="text/css"/>
+<link href="{$site_url}css/animate.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="{$site_url}css/jquery.fullPage.css">
+<link href="{$site_url}css/style.css" rel="stylesheet" type="text/css"/>
+<script src="{$site_url}js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.1.js"></script>
+
+<script type="text/javascript" src="{$site_url}js/jquery.fullPage.min.js"></script>
+<script type="text/javascript" src="{$site_url}js/wow.min.js"></script>
+<script src="{$site_url}js/index.js" type="text/javascript"></script>
+<script type="text/javascript" src="{$site_url}js/function.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=1.5&ak=W9VG07YRznjWwW8o3PYgSTGhO7Vz521L"></script>
+
+<title>{$title}</title>
+{$headscript}
+</head>
+<body style="overflow: hidden; height: 100%; font-size: 100%;" class="fp-viewing-page3">
+<ul id="menu">
+	<li data-menuanchor="page1" class="active"><a href="#page1"><i></i><b></b><span>banner</span></a></li>
+	<li data-menuanchor="page2"><a href="#page2" title="关于我们"><b></b><span>关于我们</span></a></li>
+	<li data-menuanchor="page3"><a href="#page3" title="我们的优势"><b></b><span>我们的优势</span></a></li>
+	<li data-menuanchor="page4"><a href="#page4" title="课程介绍"><b></b><span>课程介绍</span></a></li>
+	<li data-menuanchor="page5"><a href="#page5" title="新闻中心"><b></b><span>新闻中心</span></a></li>
+	<li data-menuanchor="page6"><a href="#page6" title="联系我们"><b></b><span>联系我们</span></a></li>
+</ul>
+
+<div id="wrapper" class="fullpage-wrapper">
+<section class="section fp-section fp-table" data-anchor="page1">
+<div class="header">
+	<div class="header1">
+		<div class="wrap_logo wow bounceInLeft"><a href="{$site_url}" class="logo"><img src="{$logo}"></a></div>
+		<div class="navBar wow bounceInRight">
+			<ul class="nav clearfix">
+				{foreach name=navs item=nav from=$navs}
+				<li class="m {if $nav.current}active{/if} nav_li" style="width:{100/(($navs|count))}%">
+					<a href="{$nav.link}">{$nav.name}</a>
+					{if $nav.childmenu}
+					<ul class="sub">
+						{foreach key=key item=nav_list from=$nav.childmenu}
+						<li><a class="kz" data-limit="6" href="{$nav_list.link}">{$nav_list.name}</a></li>
+						{/foreach}
+					</ul>
+					{/if}
+				</li>
+				{/foreach}
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="banner fp-slide">
+	<div id="slideBox" class="slideBox" >
+		<div class="bd">
+			<ul>
+			{foreach name=slidepics item=slidepic from=$index.slidepics}
+				<li><a href="{$slidepic.link}" target="_blank"><img src="{$slidepic.image}" alt="{$slidepic.title}"/></a></li>
+			{/foreach}
+			</ul>
+		</div>
+		<div class="hd">
+			<ul>
+			{foreach name=slidepics item=slidepic from=$index.slidepics}
+				<li></li>
+			{/foreach}
+			</ul>
+		</div>
+	</div>
+</div>
+</section>
+<section class="section fp-section fp-table" id="section-top" data-anchor="page2">
+	<div class="bg"><img src="images/bk1.png"></div>
+	<div class="wrap_about clearfix">
+		<div class="div_wrap fl">
+			<div class="div_img"><img src="{$index.about_us.image}"></div>
+		</div>
+		<div class="about new-actives fr">
+		    <div class="tab-bd">
+					<div class="tab-bd-in">
+						{foreach item=list2 from=$index.about_us.childmenu}
+						  <ul>
+								<a class="index_title" href="{$list2.link}">{$list2.name}<em>{$list2.en_name}</em></a>
+						      	<h2 class="name">公司简介</h2>
+						      	<div href="{$list2.link}" class="text">
+							      	<p>{$list2.description|unescape:"html"}</p>
+							    </div>
+						  </ul>
+						  {/foreach}
+					</div>
+			</div>
+		    <div class="tab-hd">
+					<span class="step">
+						  <a href="javascript:void(0)" class="prev"><s class="arrow arrow-lthin"><s></s></s></a>
+						  <a href="javascript:void(0)" class="next"><s class="arrow arrow-rthin"><s></s></s></a>
+					</span>
+			  </div>
+		</div>
+	</div>
+</section>
+<section class="section fp-section fp-table" id="section-mid" data-anchor="page3">
+	<div class="bg"><img src="images/bk2.png"></div>
+	<div class="disvatage">
+		<a href="{$index.disvatage.link}" class="dis_title"><em>{$index.disvatage.name}</em><span>{$index.disvatage.en_name}</span></a>
+	  	<ul class="infoList clearfix">
+	        {$limit = 4}
+	        {foreach item=list2 from=$index.disvatage.data}                  
+	          <li><a href="{$list2.link}"><h2><em class="sect{$list2@index+1}"></em><span>{$list2.title}</span></h2><p>{$list2.description}</p></a></li>
+	        {if $list2@index+1 gte $limit}{break}{/if}        
+	        {/foreach}
+	      </ul>
+    </div>
+</section>
+<section class="section fp-section fp-table" id="section-mid1" data-anchor="page4">
+	<div class="bg"><img src="images/bk3.png"></div>
+	<div class="product new-actives">
+		<a href="{$index.pro.link}" class="dis_title1"><em>{$index.pro.name}</em><span>{$index.pro.en_name}</span></a>
+		<div class="tab-bd">
+				<div class="tab-bd-in">
+					{foreach item=list2 from=$index.pro.childmenu} 
+				  	<ul class="productList clearfix">
+				    	{$num=1}
+				    	{foreach item=list1 from=$list2.data}
+				    	{if $num==1}         
+				          <li><a href="{$list1.link}"><div class="div_img"><img src="{$list1.image}"></div><div class="info"><h2>{$list1.title}</h2><img src="{$site_url}images/p{$list1@index+1}.png"><em>查看详情</em></div></a></li>
+			           {$num=2}
+					   {else}
+					  		<li><a href="{$list1.link}"><div class="info info1"><h2>{$list1.title}</h2><img src="{$site_url}images/p{$list1@index+1}.png"><em>查看详情</em></div><div class="div_img"><img src="{$list1.image}"></div></a></li>
+					   {$num=1}
+				        {/if}  
+				        {if $list1@index+1 gte 3}{break}{/if}  
+				        {/foreach}
+				        
+				      </ul>
+				      {/foreach}
+				</div>
+		</div>
+		<div class="tab-hd">
+			<span class="step">
+				  <a href="javascript:void(0)" class="prev"><s class="arrow arrow-lthin"><s></s></s></a>
+				  <a href="javascript:void(0)" class="next"><s class="arrow arrow-rthin"><s></s></s></a>
+			</span>
+	  </div>
+	      <a href="{$index.pro.link}" class="promore">查看更多</a>
+    </div>
+</section>
+<section class="section fp-section fp-table" id="section-mid2" data-anchor="page5">
+	<div class="bg"><img src="images/bk4.png"></div>
+	<div class="wrap_news clearfix">
+		<a href="{$index.news.link}" class="dis_title1"><em>{$index.news.name}</em><span>{$index.news.en_name}</span></a>
+		<div class="newsindex fl">
+			<div class="div_img">
+				<img src="{$index.news.data[0].image}">
+			</div>
+			<h2>{$index.news.data[1].title}</h2>
+			<p>{$index.news.data[1].description}</p>
+			<span>{$index.news.data[1].pubtimestamp|date_format:'%Y-%m-%d'}</span>
+			<a href="{$index.pro.link}" class="promore1">More ></a>
+		</div>
+		<div class="newsindex_info new-actives fr">
+			<div class="tab-bd">
+					<div class="tab-bd-in">
+						{foreach item=list2 from=$index.news.childmenu} 
+					  	<ul class="newsinList clearfix">
+					    	{foreach item=list1 from=$list2.data}      
+					          <li><a href="{$list1.link}" class="clearfix"><div class="news_1_time fl"><span>{$list1.pubtimestamp|date_format:'%m-%d'}</span><br><em>{$list1.pubtimestamp|date_format:'%Y'}</em></div><div class="news_r_info fr"><h2>{$list1.title}</h2><p>{$list1.description}</p></div></a></li>
+					        {if $list1@index+1 gte 3}{break}{/if}  
+					        {/foreach}
+					      </ul>
+					      {/foreach}
+					</div>
+			</div>
+			<div class="tab-hd">
+				<span class="step">
+					  <a href="javascript:void(0)" class="prev"><s class="arrow arrow-lthin"><s></s></s></a>
+					  <a href="javascript:void(0)" class="next"><s class="arrow arrow-rthin"><s></s></s></a>
+				</span>
+		  </div>
+		</div>
+	</div>
+</section>
+<section class="section fp-section fp-table" id="section-bottom" data-anchor="page6">
+	<div class="contact clearfix">
+		<a href="{$index.con.link}" class="dis_title1"><em>{$index.con.name}</em><span>{$index.con.en_name}</span></a>
+		<div class="info fl">
+			<h2>Telephone</h2>
+			<p>{$contact.telephone}</p>
+		</div>
+		<div class="info fl">
+			<h2>address</h2>
+			<p>{$contact.address}</p>
+		</div>
+		<div class="info fl">
+			<h2>mailbox</h2>
+			<p>{$contact.mail}</p>
+		</div>
+		<div id="div_area0" class="fl">
+		    <form method="post" action="">
+		    	<p class="kz" data-limit="58" data-type="title" ></p>
+        		<p class="kz" data-limit="58" data-type="description" ></p>
+		        <label><span>姓     名<em>*</em></span><input type="text" class="short short1" data-type="inset" /></label>
+		        <label><span>联系地址<em>*</em></span><input type="text" class="long" data-type="inset"/></label>
+		        <label><span>留言备注<em>*</em></span><textarea></textarea></label>
+		        <input type="submit" value="提  交" name="submit" class="btn1">
+		    </form>
+		</div>
+			<iframe  style="width:600px;height:350px; float: right; border:#ccc solid 1px; margin-top: 12px; font-size:12px" frameborder=0 width=600 height=350 marginheight=0 marginwidth=0 scrolling=no src={$index.bottomnavs}></iframe>
+		
+	</div> 
+    <div id="footer">
+		<div class="footer">
+			<div class="picMarquee-left clear">
+		        友情链接：
+            	{foreach item=flink from=$global.links}
+                <a href="{$flink.link}" target="_blank">{$flink.title} </a> <em>-</em>
+                {/foreach}     
+		    </div>
+			{$footprint}
+		</div>
+	</div>
+	<style>
+		@media screen and (min-height:830px){
+			#footer{ width: 100%; background: #333333; padding: 24px 0; position: absolute; bottom: 0;}
+		}
+	</style>
+</section>
+</div>
+{$footscript}
+</body>
+</html>

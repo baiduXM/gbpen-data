@@ -1,0 +1,12 @@
+<div id="footer">
+    <div class="footer">
+        <div class="picMarquee-left clear">
+            友情链接：
+            {foreach item=flink from=$global.links}
+            <a href="{$flink.link}" target="_blank">{$flink.title} </a> <em>-</em>
+            {/foreach}     
+        </div>
+        {$footprint}
+    </div>
+</div>
+{$footscript}

@@ -8,7 +8,7 @@
         }
     {/if}
     </script>
-	
+
 	
     <meta name="keywords" content="{$keywords}"/>
     <meta name="description" content="{$description}"/>
@@ -51,6 +51,12 @@
 		</div>
 		<div class="piblic">
 			{if $index.val == 1}
+			<div class="bt">
+				<div class="bt_cn">{$index.imgs.name}</div>
+				<hr class="hr"><img class="middle" src="{$site_url}images/middle.png">
+				<div class="bt_en">{$index.imgs.en_name}</div>
+				<div class="more position"><a href="{$index.about.link}">more</a></div>
+			</div>
 			<div class="link c imgT">
 				<a href="javascript:void(0)" class="prev fl">
 					<img class="a" src="{$site_url}images/prev_icon.png" height="78" width="28">
@@ -58,7 +64,7 @@
 				</a>
 				<div class="bd linker fl">
 					<ul>
-						{foreach item=img from=$index.imgs}
+						{foreach item=img from=$index.imgs.data}
 						<li><a href="{$img.link}"><img src="{$img.image}"></a></li>
 						{/foreach}
 					</ul>

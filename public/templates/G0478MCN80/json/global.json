@@ -1,0 +1,52 @@
+{
+	"slidepics": {
+		"value": [{
+			"title": "测试图1",
+			"image": "images/banner.jpg",
+			"link": "http://www.baidu.com"
+		}, {
+			"title": "测试图2",
+			"image": "images/banner.jpg",
+			"link": "http://www.baidu.com"
+		},{
+			"title": "测试图3",
+			"image": "images/banner.jpg",
+			"link": "http://www.baidu.com"
+		}],
+		"description": "大轮滚图",
+		"type": "images",
+		"config": {
+			"width": 640,
+			"height":897
+		}
+	},
+    "ban_dec":{
+		"value":"精心设计  竭诚服务  科学管理   优质高效",
+		"description":"首页大图上文字",
+		"type":"text"
+	},
+    "ban_dec2":{
+		"value":"Carefully designed   We sincerely service  Scientific managemen",
+		"description":"首页大图上文字",
+		"type":"text"
+	},
+	"nbenner":{
+		"value": {
+			"title": "内页大图",
+			"image": "images/nbenner.jpg",
+			"link": "http://www.baidu.com/"
+			},
+		"description": "背景图片",
+		"type": "image",
+		"config": {
+			"width":614,
+			"height":200
+		}
+	},
+    "ban_dec3":{
+		"value":"遇见是天意，拥有是幸运",
+		"description":"内页大图上文字",
+		"type":"text"
+	}
+	
+}

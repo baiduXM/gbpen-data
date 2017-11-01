@@ -68,31 +68,11 @@
 		"type": "text"
 	},
 	"imgs":{
-		"value":[{
-			"title":"轮播图片",
-			"image":"images/banner.jpg",
-			"link":" "
-			},{
-				"title":"轮播图片",
-				"image":"images/banner.jpg",
-				"link":" "
-			},{
-				"title":"轮播图片",
-				"image":"images/banner.jpg",
-				"link":" "
-			},{
-				"title":"轮播图片",
-				"image":"images/banner.jpg",
-				"link":" "
-			},{
-				"title":"轮播图片",
-				"image":"images/banner.jpg",
-				"link":" "
-			}],
+		"value":{},
 		"description": "首页banner图下轮播图",
-		"type": "images",
+		"type": "list",
 		"config":{
-			"width": 273,
+			"width": 270,
 			"height": 268
 		}
 	}

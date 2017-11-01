@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{$title}</title>
+    <script type="text/javascript">
+        // 跳转PC页面
+        {if $site_another_url}
+        if (!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+            location.href = '{$site_another_url}';
+        }
+        {/if}
+    </script>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no,minimal-ui">
+    <meta name="keywords" content="{$keywords}" />
+    <meta name="description" content="{$description}" />
+    <link rel="stylesheet" href="{$site_url}css/swiper-3.3.1.min.css" />
+    <link rel="stylesheet" href="{$site_url}css/style.css">
+    <script src="{$site_url}js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="{$site_url}js/jquery.min.js"></script>
+    <script type="text/javascript" src="{$site_url}js/swiper-3.3.1.jquery.min.js"></script>
+    <script type="text/javascript" src="{$site_url}js/simple-app.js"></script>
+    <script  type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.1.js"></script>
+    <script type="text/javascript" src="{$site_url}js/index.js"></script>
+
+    <script type="text/javascript">
+        window.addEventListener('load', function(){
+            setTimeout(function(){ window.scrollTo(0, 1);}, 100);
+        });//safari浏览器可以通过此代码来隐藏地址栏
+    </script>
+    {$headscript}
+</head>
+<body>
+<div class="body">
+    {include file="./_header.html"}
+    {include file="./_banner.html"}
+    {include file="./_nav.html"}
+
+    {foreach name=mIndexCats item=mIndexCat from=$mIndexCats}
+        {if $mIndexCat.type eq 2}
+            {if $mIndexCat.showtype eq 1}
+    <div class="main1">
+        <div class="main-title">
+            <h2 class="title-name">{$mIndexCat.name}</h2>
+            <p class="title-des">{$mIndexCat.description}</p>
+        </div>
+        <div class="picFocus index-pro">
+            <div class="hd pro-nav">
+                <ul>
+                    {foreach name=pro item=pro from=$mIndexCat.data}
+                    <li><i>/</i><span>{$pro.title}</span></li>
+                    {if $pro@index+1 == 4}{break}{/if}
+                    {/foreach}
+                </ul>
+            </div>
+            <div class="bd bd1">
+                <ul>
+                    {foreach name=pro item=pro from=$mIndexCat.data}
+                    <li>
+                        <dl class="pro-dl">
+                            <dt><a href="{$pro.link}"><img src="{$pro.image}" alt=""></a></dt>
+                            <dd class="">
+                                <span>{$pro.title}</span>
+                                <p>{$pro.description}</p>
+                                <a href="{$pro.link}">查看更多>></a>
+                            </dd>
+                        </dl>
+                    </li>
+                    {if $pro@index+1 == 4}{break}{/if}
+                    {/foreach}
+                </ul>
+            </div>
+        </div>
+        <a href="{$mIndexCat.link}" class="m1-more more">MORE</a>
+    </div>
+             {elseif $mIndexCat.showtype eq 2}
+
+    <div class="main4">
+        <div class="main-title">
+            <h2 class="title-name">{$mIndexCat.name}</h2>
+            <p class="title-des">{$mIndexCat.description}</p>
+        </div>
+        <div class="m4-content">
+            <ul class="m4-nav">
+                {foreach item=m4Nav from=$mIndexCat.data}
+                <li><a href="{$m4Nav.link}">{$m4Nav.title}</a></li>
+                {if $m4Nav@index+1 == 5}{break}{/if}
+                {/foreach}
+            </ul>
+            <div class="m4-text">
+                <ul>
+                    {foreach item=m4Nav from=$mIndexCat.childmenu}
+                    <li>
+                        {foreach item=m4Nav_list from=$mIndexCat.data}
+                        <a href="{$m4Nav_list.link}">
+                            <dl class="m4-li-txt">
+                                <dt><img src="{$m4Nav_list.image}" alt=""></dt>
+                                <dd class="rt">
+                                    <h4>{$m4Nav_list.title}</h4>
+                                    <p>{$m4Nav_list.description}</p>
+                                    <time>{$m4Nav_list.pubtimestamp|date_format:'%Y-%m-%d'}</time>
+                                </dd>
+                            </dl>
+                        </a>
+                        {if $m4Nav_list@index+1 == 3}{break}{/if}
+                        {/foreach}
+                    </li>
+                    {if $m4Nav@index+1 == 5}{break}{/if}
+                    {/foreach}
+                </ul>
+            </div>
+        </div>
+        <a href="{$mIndexCat.link}" class="m4-more more">MORE</a>
+    </div>
+            {/if}
+        {elseif $mIndexCat.type eq 3}
+            {if $mIndexCat.showtype eq 1}
+                <div class="main2">
+                    <div class="main-title">
+                        <h2 class="title-name">{$mIndexCat.name}</h2>
+                        <p class="title-des">{$mIndexCat.description}</p>
+                    </div>
+                    <div class="M-cont">
+                        <div class="M2">
+                            <div class="swiper-container swiper-m2 " >
+                                <div class="swiper-wrapper ">
+                                    {foreach name=slidepics item=slidepic from=$mIndexCat.data}
+                                    <dl class="swiper-slide">
+                                        <dt >
+                                            <a href="{$slidepic.link}">
+                                                <img src="{$slidepic.image}" >
+                                            </a>
+                                        </dt>
+                                        <dd>{$slidepic.title}</dd>
+                                    </dl>
+                                    {/foreach}
+                                </div>
+                                <div class="swiper-button-next iconfont">&#xe645;</div>
+                                <div class="swiper-button-prev iconfont">&#xe641;</div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="{$mIndexCat.link}" class="m2-more more">MORE</a>
+                </div>
+            {/if}
+        {elseif $mIndexCat.type eq 4}
+            {if $mIndexCat.showtype eq 1}
+                 <div class="main3">
+                    <div class="main-title">
+                        <h2 class="title-name">{$mIndexCat.name}</h2>
+                        <p class="title-des">{$mIndexCat.description}</p>
+                    </div>
+                    <div class="m3-content">
+                        <ul class="m3-nav">
+                            {foreach item=m3Nav from=$global.list3.childmenu}
+                            <li class="">{$m3Nav.name}</li>
+                            {if $m3Nav@index+1 == 5}{break}{/if}
+                            {/foreach}
+                        </ul>
+                        <div class="m3-text">
+                            <ul>
+                                <li >
+                                    <div class="m3-textM">
+                                        <p>{$mIndexCat.description}</p>
+                                        <a href="{$mIndexCat.link}">◆  MORE</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            {/if}
+        {/if}
+    {/foreach}
+
+
+</div>
+
+{include file="./_footer.html"}
+</body>
+</html>

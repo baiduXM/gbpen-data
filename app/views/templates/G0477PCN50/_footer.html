@@ -1,0 +1,10 @@
+<div id="footer" class="slideInUp wow animated">
+        <div class="links tc">
+            <span>友情链接</span>
+            {foreach item=link from=$global.links} 
+             <a href="{$link.link}" target="_blank"><img src="{$link.image}"></a>
+            {/foreach}
+        </div>
+        <div class="copy tc">{$footprint}</div>
+  </div>
+ {$footscript}

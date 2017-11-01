@@ -1,0 +1,69 @@
+{   
+
+	"banner_ny":{
+		"value": {
+			"title": "内页大图",
+			"image": "images/about.jpg",
+			"link": "http://www.baidu.com/"
+			},
+		"description": "内页大图",
+		"type": "image",
+		"config": {
+			"width":1200,
+			"height":350
+		}
+	},
+    "ny_dec":{
+		"value":"“遇见是天意，拥有是幸运”",
+		"description":"内页大图上文字",
+		"type":"text"
+	},
+	"pagenavss": {
+		"value": {},
+		"description": "侧边栏目列表（当前栏目无子栏目时展示的目标栏目）",
+		"type": "list",
+		"config": {
+			"filter": "list,page",
+			"mustchild": true
+		}
+	},
+	"links": {
+		"value": [{
+			"title": "百度",
+			"image": "images/link.jpg",
+			"link": "http://www.baidu.com",
+			"description": "友情链接1"
+		}, {
+			"title": "淘宝",
+			"image": "images/link.jpg",
+			"link": "http://www.baidu.com",
+			"description":"友情链接2"
+		},{
+			"title": "京东",
+			"image": "images/link.jpg",
+			"link": "http://www.baidu.com",
+			"description":"友情链接3"
+		},
+		{
+			"title": "搜狐网",
+			"image": "images/link.jpg",
+			"link": "http://www.baidu.com",
+			"description":"友情链接5"
+		},
+		{
+			"title": "豆网",
+			"image": "images/link.jpg",
+			"link": "http://www.baidu.com",
+			"description":"友情链接6"
+		}
+		],
+		"description": "页脚友情链接",
+		"type": "images",
+		"config":{
+			"width":86,
+			"height":38,
+			"limit": 8
+		  }
+	    }
+	
+}

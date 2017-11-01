@@ -1,0 +1,7 @@
+{if $pagenavs}
+  <div class="posnav fadeInLeft wow">
+    {foreach item=lnav from=$pagenavs}
+     <a href="{$lnav.link}">{$lnav.name}</a>
+    {/foreach}
+  </div>
+{/if}

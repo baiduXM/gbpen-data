@@ -1150,7 +1150,7 @@
   text-align: center;
   color: #c39148;
 }
-.index_1{ background: #292929; height: 612px; }
+.index_1{ background: #292929; height: 612px;position: relative;z-index: 999; }
 .index_2{ width: 1200px; margin: 0 auto; height: 100%;}
 .index_liu{ width: 412px; height: 612px; background: #cfa972;}
 .index_liu h2{ font-weight: bold;color: #292929; font-size:16px; text-align: center; width: 100%; overflow: hidden; margin: 74px 0 46px;}

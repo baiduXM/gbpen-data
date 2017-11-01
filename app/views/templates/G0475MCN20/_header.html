@@ -1,0 +1,15 @@
+<header>    
+     <div class="header1">
+        <a href="{$site_url}" class="logo"><img src="{$logo}"></a>
+        <a class="menuico" id="quickbar-showcats"><img src="{$site_url}images/icon7.png" /></a>
+     </div>
+      <div id="banner" class="swiper-container swiper-container1">
+        <div class="swiper-wrapper">
+            {foreach item=slidepic from=$global.slidepics1}
+              <div class="swiper-slide"><a href="{$slidepic.link}"><img src="{$slidepic.image}" class="swiper-no-swiping"></a></div>
+            {/foreach}
+        </div>
+        <div class="pagination"></div>
+      </div>
+</header>
+

@@ -1,0 +1,36 @@
+<div class="header header3">
+	<div class="header1">
+		<div class="wrap_logo wow bounceInLeft"><a href="{$site_url}" class="logo"><img src="{$logo}"></a></div>
+		<div class="navBar wow bounceInRight">
+			<ul class="nav clearfix">
+				{foreach name=navs item=nav from=$navs}
+				<li class="m nav_li {if $nav.current}active{/if}" style="width:{100/(($navs|count))}%">
+					<a href="{$nav.link}">{$nav.name}</a>
+					{if $nav.childmenu}
+					<ul class="sub">
+						{foreach key=key item=nav_list from=$nav.childmenu}
+						<li><a class="kz" data-limit="6" href="{$nav_list.link}">{$nav_list.name}</a></li>
+						{/foreach}
+					</ul>
+					{/if}
+				</li>
+				{/foreach}
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="innerbanner">
+	<div id="slideBox" class="slideBox" >
+		<div class="bd">
+			<ul>
+			{foreach name=slidepics item=slidepic from=$global.slidepics}
+				<li><a href="{$slidepic.link}" target="_blank"><img src="{$slidepic.image}" alt="{$slidepic.title}"/></a></li>
+			{/foreach}
+			</ul>
+		</div>
+	</div>
+	<div class="fixbanner">
+		<h2>{$list.name}</h2>
+		<p>{$list.en_name}</p>
+	</div>
+</div>
