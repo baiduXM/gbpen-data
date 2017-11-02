@@ -7,14 +7,6 @@ $(document).ready(function(){
     //       $(".tabs li").eq(mySwiper.activeIndex).addClass('default');
     //     }
     // });
-
-      $(".kz").each(function(){
-        var maxwidth=parseInt($(this).attr("data-limit"));
-        if($(this).text().length>maxwidth){
-        $(this).text($(this).text().substring(0,maxwidth));
-        $(this).html($(this).html()+'...');
-        }
-        });
      $(".tabs li").on('click',function(e){
         e.preventDefault();
         $(".tabs .default").removeClass('default');

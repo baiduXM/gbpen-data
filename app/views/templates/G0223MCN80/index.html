@@ -74,7 +74,7 @@
           <div class="abgimg"><img src="{$mIndexCat.image}"></div>
           <div class="abdec">
             <h1 class="ab-title"><span>{$mIndexCat.name}</span><a href="{$mIndexCat.link}" class="more">More</a></h1>
-            <div class="ab-nr kz" data-limit="150">{$mIndexCat.description}</div>
+            <div class="ab-nr">{$mIndexCat.description}</div>
           </div>
         </div>
         {/if}
@@ -82,7 +82,7 @@
         {if $mIndexCat.showtype eq 1}
         <div class="probox">
             <div class="pro-title"><div class="pro-bg"></div><em></em>
-                <a href="{$mIndexCat.link}"><i>{$mIndexCat.name}</i><dd>{$mIndexCat.en_name}</dd></a>
+                <a href=""><i>{$mIndexCat.name}</i><dd>{$mIndexCat.en_name}</dd></a>
             </div>
             <ul class="prolist">
               {foreach item=pro from=$mIndexCat.data}
