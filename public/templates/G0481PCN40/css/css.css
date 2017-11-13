@@ -1,0 +1,1001 @@
+/*通用样式*/
+body {
+    color: #333;
+    font-family: Microsoft Yahei, Arial, Helvetica, sans-serif;
+    background: url(../images/body_bg.jpg) #fff;
+}
+
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ol, pre, form, input, textarea {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    line-height: 24px;
+    font-size: 12px;
+    font-weight: normal
+}
+em,i{
+    font-weight: normal;
+    font-style: normal;
+}
+
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-weight: normal;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #f00;
+}
+
+img {
+    border: none;
+}
+
+.clearfix:after {
+    content: '\20';
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+.wrapper {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.C {
+    clear: both
+}
+
+.hide {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.block {
+    display: block
+}
+
+.box_img img {
+    height: 100%
+}
+
+.box_img {
+    float: left;
+}
+
+.box_text {
+    float: right;
+}
+
+strong {
+    display: block;
+    margin: 0 auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/*公用颜色提取*/
+.color1 {
+    color: #0770b1;
+}
+
+/*公用头部样式*/
+.header_bg {
+    background: url("../images/header_bg.jpg") repeat-x top;
+    height: 103px;
+    overflow: hidden
+}
+
+#header {
+    height: 103px;
+    overflow: hidden;
+    position: relative;
+    background: url(../images/top_bg.jpg) no-repeat right bottom;
+}
+
+#header .top_tel {
+    margin-top: 30px;
+    color: #fff;
+    box-sizing: border-box;
+    font-size: 24px;
+    padding-left: 100px;
+    float: right;
+    background: url(../images/top_tel.jpg) no-repeat left top;
+    height: 82px;
+    width: 270px;
+    line-height: 24px;
+}
+
+#header .top_tel p {
+    font-size: 14px;
+    line-height: 24px;
+    color: #fefefe;
+    margin-top: 20px;
+}
+
+#header .logo {
+    width: 600px;
+    height: 104px;
+    float: left;
+    position: relative;
+}
+
+#header .logo a {
+    display: block;
+    height: 104px;
+    width: 800px;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+}
+
+#header .logo img {
+    max-width: 800px;
+    max-height: 104px;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    bottom: 0;
+    margin: auto
+}
+
+#header .search {
+    width: 160px;
+    height: 30px;
+    overflow: hidden;
+    position: absolute;
+    top: 18px;
+    right: 0;
+    border-radius: 30px;
+    background: #ffffff;
+    padding-left: 10px;
+}
+
+#header .search_area {
+    width: 118px;
+    height: 30px;
+    line-height: 31px;
+    float: left;
+    color: #333;
+    text-indent: 10px;
+    border: none;
+}
+
+#header .search_btn {
+    width: 41px;
+    height: 30px;
+    border: none;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    color: #fff;
+    cursor: pointer;
+    background: url("../images/search_area.jpg") no-repeat center
+}
+
+/*公用导航样式*/
+.nav_bg {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -600px;
+}
+
+#nav {
+    height: 54px;
+    background: url("../images/nav_bg.jpg") repeat-x top;
+    position: relative;
+    z-index: 10000;
+    border: 1px solid #ec7ca4;
+    border-top: none;
+    border-bottom: none
+}
+
+#nav .nav_left {
+    position: absolute;
+    width: 64px;
+    left: -64px;
+    top: 50%;
+    margin-top: -15px;
+    z-index: 100
+}
+
+#nav .nav_right {
+    position: absolute;
+    width: 64px;
+    right: -64px;
+    height: 64px;
+    top: 50%;
+    margin-top: -15px;
+}
+
+#nav ul li p {
+    height: 49px;
+    line-height: 49px;
+    overflow: hidden
+}
+
+#nav ul li {
+    float: left;
+    height: 54px;
+    line-height: 54px;
+    font-size: 14px;
+    font-family: Microsoft Yahei;
+}
+
+#nav ul li a {
+    color: #2f2f2d;
+    display: block;
+    text-align: center;
+    padding: 0 15px;
+    font-family: Microsoft Yahei;
+    font-size: 15px;
+    overflow: hidden;
+}
+
+#nav ul li a:hover {
+    background: #e44d84;
+    border-radius: 10px;
+}
+
+/*公用导航下拉样式*/
+#nav ul li .cc {
+    background: none;
+    padding: 4px;
+    height: 40px;
+    line-height: 40px;
+    display: none;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    z-index: 100;
+    margin-top: 0px;
+}
+
+#nav ul li .cc:hover {
+    /*background: #ea79a4;*/
+    /*border-radius: 10px;*/
+}
+
+#nav ul li .cc a {
+    width: 92%;
+    display: block;
+    background: url("../images/nav_aa.png") repeat;
+    border-radius: 10px;
+    margin: auto;
+    color: #000;
+    padding: 0 4%;
+    overflow: hidden;
+    height: 40px;
+    line-height: 40px;
+}
+
+#nav ul li .cc a:hover {
+    color: #fff;
+    background: #e44d84;
+    text-decoration: underline
+}
+
+/*公用大图样式*/
+#banner {
+    width: 100%;
+    height: 455px;
+    overflow: hidden;
+    position: relative
+}
+
+#banner .slideBox {
+    width: 100%;
+    position: relative;
+}
+
+#banner .slideBox .hd {
+    height: 15px;
+    overflow: hidden;
+    position: absolute;
+    bottom: 15px;
+    z-index: 10001;
+    text-align: center;
+    width: 100%;
+}
+
+#banner .slideBox .hd ul {
+    overflow: hidden;
+    zoom: 1;
+    display: inline-block;
+}
+
+#banner .slideBox .hd ul li {
+    float: left;
+    margin-right: 5px;
+    width: 15px;
+    height: 15px;
+    line-height: 14px;
+    text-align: center;
+    background: #fff;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+#banner .slideBox .hd ul li.on {
+    background: #f417a3;
+    color: #fff;
+}
+
+#banner .slideBox .bd {
+    position: relative;
+    height: 100%;
+    z-index: 0;
+    margin: 0px auto;
+    text-align: center;
+}
+
+#banner .slideBox .bd li {
+    zoom: 1;
+    vertical-align: middle;
+}
+
+#banner .slideBox .bd img {
+    display: block;
+    border: 1px solid #ddd;
+    padding: 1px;
+    margin: 0px auto;
+    text-align: center;
+}
+
+/* 下面是前/后按钮代码，如果不需要删除即可 */
+#banner .slideBox .prev, #banner .slideBox .next {
+    position: absolute;
+    left: 3%;
+    top: 50%;
+    margin-top: -25px;
+    display: block;
+    width: 32px;
+    height: 40px;
+    background: url(../images/slider-arrow.png) -172px 5px no-repeat;
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+}
+
+#banner .slideBox .next {
+    left: auto;
+    right: 3%;
+    background-position: -54px 5px;
+}
+
+#banner .slideBox .prev:hover, #banner .slideBox .next:hover {
+    filter: alpha(opacity=100);
+    opacity: 1;
+}
+
+#banner .slideBox .prevStop {
+    display: none;
+}
+
+#banner .slideBox .nextStop {
+    display: none;
+}
+
+/*公用底部样式*/
+.links_bg {
+    margin-top: 40px;
+    height: 66px;
+    line-height: 66px;
+    width: 100%;
+    color: #f4c5d3;
+    font-size: 14px;
+    background: url(../images/link_bg.jpg) repeat-x left center;
+    background-size: auto 100%;
+}
+
+.links_bg span{
+    display: inline-block;
+    color: #fff;
+    background: url("../images/link_bg-02.jpg") no-repeat left;
+    width: 120px;
+    padding-left: 34px;
+    box-sizing: border-box;
+}
+.links_bg a {
+    color: #f4c5d3;
+    font-size: 14px;
+}
+
+.links_bg a:hover {
+    color: #1a0121;
+}
+
+.cpy {
+    color: #6e6e6e;
+    text-align: center;
+    padding: 10px 0 10px 0
+}
+.cpy a{
+    color: #6e6e6e;
+
+}
+.cpy a:hover{
+    color: #f00;
+}
+
+/*首页主体部分的样式，可以自行编辑*/
+#container {
+    margin-top: 44px;
+}
+
+#about {
+    float: left;
+    box-sizing: border-box;
+    width: 626px;
+    height: 462px;
+    border: 1px solid #ffe5ee;
+}
+
+#about h2 {
+    height: 54px;
+    width: 100%;
+    overflow: hidden;
+    background: url("../images/icion_2.jpg") repeat-x bottom;
+}
+
+#about h2 em {
+    background: url("../images/icion_1.jpg") no-repeat 18px 22px;
+    padding-left: 42px;
+    display: block;
+    color: #e40082;
+    font-size: 20px;
+    max-width: 200px;
+    float: left;
+    height: 54px;
+    line-height: 54px;
+    white-space:nowrap; text-overflow:ellipsis; overflow:hidden;
+
+}
+
+#about h2 i {
+    font-style: normal;
+    display: block;
+    max-width: 200px;
+    height: 54px;
+    line-height: 54px;
+    padding-left: 6px;
+    color: #343434;
+    font-size: 17px;
+    float: left;
+    white-space:nowrap; text-overflow:ellipsis; overflow:hidden;
+}
+
+#about h2 .more {
+    display: block;
+    padding-right: 12px;
+    margin-top: 22px;
+    text-align: center;
+    height: 14px;
+    max-width: 68px;
+    float: right;
+}
+
+#about .inner {
+    margin: 0 auto;
+    height: 384px;
+    padding: 26px 40px;
+}
+
+#about .inner .about_img {
+    height: 200px;
+    border: 2px solid #eeeeee;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+#about .inner .about_img img{
+    height: 100%;
+}
+
+#about .inner .about_text {
+    margin-top: 26px;
+    height: 120px;
+    line-height: 30px;
+    font-size: 12px;
+    font-family: SimSun;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+
+}
+
+#news {
+    float: right;
+    box-sizing: border-box;
+    width: 542px;
+    height: 462px;
+    border: 1px solid #ffe5ee;
+}
+
+#news h2 {
+    height: 54px;
+    width: 100%;
+    overflow: hidden;
+    background: url("../images/icion_2.jpg") repeat-x bottom;
+}
+
+#news h2 em {
+    background: url("../images/icion_1.jpg") no-repeat 18px 22px;
+    padding-left: 42px;
+    display: block;
+    color: #e40082;
+    font-size: 20px;
+    max-width: 200px;
+    float: left;
+    height: 54px;
+    line-height: 54px;
+    white-space:nowrap; text-overflow:ellipsis; overflow:hidden;
+
+}
+
+#news h2 i {
+    display: block;
+    max-width: 200px;
+    height: 54px;
+    line-height: 54px;
+    padding-left: 6px;
+    color: #343434;
+    text-transform: capitalize;
+    font-size: 17px;
+    float: left;
+    white-space:nowrap; text-overflow:ellipsis; overflow:hidden;
+}
+
+#news h2 .more {
+    display: block;
+    padding-right: 12px;
+    margin-top: 22px;
+    text-align: center;
+    height: 14px;
+    max-width: 68px;
+    float: right;
+}
+
+#news .inner ul li {
+    padding: 0px 20px 26px;
+    height: 150px;
+    overflow: hidden;
+    margin-top: 22px;
+}
+
+#news .inner .box_img {
+    height: 140px;
+    padding: 4px;
+    border: 2px solid #edebeb;
+}
+
+
+
+#news .inner ul li .box_text {
+    height: 150px;
+}
+
+#news .inner ul li .box_text h3 {
+    color: #e40082;
+    font-size: 14px;
+    font-weight: bolder;
+    line-height: 30px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+#news .inner ul li .box_text p {
+    line-height: 30px;
+    color: #5e5c5f;
+    height: 90px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+
+}
+#news .inner ul li .box_text span {
+    display: block;
+    height: 24px;
+    margin-top: 6px;
+}
+
+
+
+#product {
+    border: 1px solid #ffe5ee;
+    margin-top: 34px;
+    height: 370px;
+
+}
+
+#product h2 {
+    height: 54px;
+    width: 100%;
+    overflow: hidden;
+    background: url("../images/icion_2.jpg") repeat-x bottom;
+}
+
+#product h2 em {
+    background: url("../images/icion_1.jpg") no-repeat 18px 22px;
+    padding-left: 42px;
+    display: block;
+    color: #e40082;
+    font-size: 20px;
+    max-width: 400px;
+    float: left;
+    height: 54px;
+    line-height: 54px;
+    white-space:nowrap; text-overflow:ellipsis; overflow:hidden;
+
+}
+
+#product h2 i {
+    display: block;
+    max-width: 400px;
+    height: 54px;
+    line-height: 54px;
+    padding-left: 6px;
+    color: #343434;
+    text-transform: capitalize;
+    font-size: 17px;
+    float: left;
+    white-space:nowrap; text-overflow:ellipsis; overflow:hidden;
+}
+
+#product h2 .more {
+    display: block;
+    padding-right: 12px;
+    margin-top: 22px;
+    text-align: center;
+    height: 14px;
+    max-width: 68px;
+    float: right;
+}
+
+#product .inner {
+    margin-top: 32px;
+
+}
+
+#product .inner .bd {
+    width: 1140px;
+    height: 250px;
+    overflow: hidden;
+    margin: 0 auto
+}
+
+#product .inner ul li {
+    float: left;
+    width: 218px;
+    margin: 0 8px;
+    text-align: center;
+}
+#product .inner ul li .pic_bg{
+    padding: 10px;
+    border: 1px solid #eeeeee;
+
+}
+#product .inner ul li .pic {
+
+    width: 194px;
+    height: 194px;
+}
+#product .inner ul li .pic img{
+    height: 194px;
+    text-align: center;
+
+}
+#product .inner ul li:hover .pic_bg {
+    border: 1px solid #e44d84;
+}
+
+#product .inner ul li .pic img {
+}
+
+#product .inner ul li p {
+    margin-top: 14px;
+    font-size: 14px;
+    height: 24px;
+    color: #5e5c5f;
+    line-height: 24px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+}
+#product .inner ul li:hover p{
+    color: #ff0000;
+}
+
+/*首页主体部分的样式，可自行编辑*/
+
+/*内页主体样式*/
+#sub_container {
+    margin-top: 44px;
+    position: relative;
+    z-index: 1000;
+}
+
+/*侧边栏 样式*/
+.sidebar {
+    width: 254px;
+
+    float: left;
+    display: inline;
+}
+
+.list_class {
+    
+}
+
+.subnav {
+    border: 1px solid #ffe5ee;
+    background: #fff;
+}
+
+/*侧边栏标题样式*/
+.subnav .alefttitle {
+    background: url(../images/icion_2.jpg)  bottom repeat-x;
+    height: 56px;
+    padding-top: 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+    width: 100%
+}
+.subnav .alefttitle .hide{
+
+    background: url("../images/icion_3.jpg")no-repeat 18px 2px}
+.subnav .alefttitle b {
+    display: block;
+    padding-left: 34px;
+    font-size: 20px;
+    height: 20px;
+    line-height: 20px;
+    color: #e40082;
+    overflow: hidden;
+    font-weight: normal;
+}
+
+.subnav .alefttitle span {
+    color: #343434;
+    font-size: 12px;
+    height: 12px;
+    line-height: 12px;
+    padding-left: 34px;
+    display: block;
+
+}
+
+/*侧边栏级别分类样式*/
+.category {
+    padding: 28px;
+}
+
+/*侧边栏一级分类样式*/
+.category ul li .firsta {
+    overflow: hidden;
+    color: #6b6b6b;
+    font-size: 14px;
+    display: block;
+    background: url(../images/icion_4.jpg) no-repeat left;
+    height: 26px;
+    border-bottom:  1px dashed #e5e5e5;
+    line-height: 26px;
+    padding-left: 20px;
+    width: 160px;
+    padding-right: 20px;
+    margin: auto;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+.category ul li a:hover.firsta {
+    background: url("../images/icion_5.jpg") no-repeat left;
+    color: #e40082;
+    text-decoration: underline
+}
+
+/*侧边栏二级分类样式*/
+ul.second li .seconda {
+    height: 35px;
+    line-height: 35px;
+    background: url("../images/icion_6.jpg") no-repeat 18px 14px;
+    overflow: hidden;
+    text-indent: 1em;
+    margin: auto;
+    cursor: pointer;
+    color: #6b6b6b;
+    padding-left: 25px;
+    display: block;
+}
+
+ul.second li a.seconda:hover {
+    text-decoration: underline;
+    color: #e40082;
+}
+
+/*侧边栏三级分类样式*/
+ul.third li a.thirda {
+    color: #6b6b6b;
+    height: 35px;
+    text-indent: 1em;
+    line-height: 35px;
+    overflow: hidden;
+    margin: auto;
+    background: url("../images/icion_8.jpg") no-repeat 24px 14px;
+    cursor: pointer;
+    padding-left: 30px;
+    display: block;
+}
+
+ul.third li a.thirda:hover {
+    color: #e40082;
+    text-decoration: underline
+}
+
+/*侧边栏快捷按钮样式，可自行编辑*/
+.sub_contact {
+    margin-top: 20px;
+    border: 1px solid #ffe5ee;
+}
+.sub_contact h2{
+    padding-top: 10px;
+    height: 54px;
+    background: url("../images/icion_2.jpg") repeat-x bottom;
+}
+.sub_contact  .sub_contact_title{
+    padding-left: 34px;
+    background: url("../images/icion_3.jpg") no-repeat 18px 10px ;
+}
+.sub_contact h2 em{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+    color: #e40082;
+    display: block;
+}
+.sub_contact h2 i{
+    font-family:Arial;
+    font-style: normal;
+    font-weight: normal;
+    display: block;
+    color: #343434;
+    font-size: 12px;
+}
+
+.sub_contact .inner{
+    box-sizing: border-box;
+    min-height: 198px;
+    color: #626262;
+    font-size: 14px;
+    line-height: 34px;
+    padding: 26px 20px;
+}
+.sub_link, .sub_link1 {
+    position: relative;
+    padding: 1px;
+    border: solid 1px #d2d2d2;
+    margin-top: 10px;
+}
+
+
+.sub_link p, .sub_link1 p {
+    position: absolute;
+}
+
+.sub_link p {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 20px;
+    top: 20px;
+    left: 105px;
+}
+
+.sub_link p span {
+    display: block;
+    font-weight: normal
+}
+
+.sub_link1 p {
+    font-size: 16px;
+    font-weight: bold;
+    top: 35px;
+    left: 75px;
+}
+
+/*侧边栏快捷按钮样式，可自行编辑*/
+
+/*内页左边内容样式*/
+.main {
+    box-sizing: border-box;
+    border: 1px solid #ffe5ee;
+    float: right;
+    width: 915px;
+    display: inline;
+}
+
+.article {
+    min-height: 400px;
+
+       padding: 52px 42px;
+}
+
+.article img {
+    max-width: 730px;
+}
+
+/*此样式记得修改*/
+
+/*内页面包屑样式，可自行编辑*/
+.crumb {
+    background: url("../images/icion_2.jpg") repeat-x bottom;
+    height: 56px;
+    line-height: 56px;
+    font-size: 14px;
+    font-weight: bold;
+    overflow: hidden;
+    border-bottom: 1px solid #e3e3e3;
+}
+
+.crumb p {
+    max-width: 100px;
+    float: left;
+    font-weight: bold;
+    font-size: 20px;
+    height: 56px;
+    line-height: 56px;
+    color: #e40082;
+    overflow: hidden;
+    background: url(../images/sub_ico.jpg) no-repeat 15px center;
+    padding-left: 25px;
+}
+.crumb b{
+    max-width: 100px;
+    float: left;
+    line-height: 60px;
+    /*text-transform: capitalize;*/
+    font-size: 16px;
+    color: #343434;
+    font-weight: normal;
+}
+.crumb span {
+    float: right;
+    color: #999;
+    font-size: 12px;
+    font-weight: normal;
+    background: url(../images/ico9.png) no-repeat 5px;
+    padding-right: 10px;
+}
+.crumb span a:first-child{background: none;}
+.crumb span a {
+    color: #6a6a6a;
+    background: url(../images/icion_8.jpg) no-repeat 5px;
+    padding-left: 15px;
+}
+.crumb span a:hover{
+    color: #ff0000;
+}
+
+/*内页面包屑样式，可自行编辑*/
+
+

@@ -51,7 +51,6 @@
 				<ol class="recommend">
 					{foreach item=pro from=$index.pro.childmenu}
 					<li>
-                    
 						<div class="recommend_first"><a href="{$pro.data[0].link}">
 							<img src="{$pro.data[0].image}">
 							<article class="first_pic">
@@ -59,7 +58,6 @@
 								<p>{$pro.data[0].description}</p>
 							</article>
 						</a></div>
-                       
 						{foreach item=article from=$pro.data}
 							<a href="{$article.link}"><img src="{$article.image}"></a>
 						{if $article@index+1 eq 5}{break}{/if}
@@ -74,7 +72,7 @@
 				<ul class="scroll_list">
 					<span></span>
 					{foreach item=pro from=$index.pro.childmenu}
-						<li><a href="javascript:void(null)">{$pro.en_name}</a></li>
+						<li><a href="javascript:void(null)">{$pro.name}</a></li>
 					{if $pro@index+1 eq 5}{break}{/if}
 					{/foreach}
 				</ul>

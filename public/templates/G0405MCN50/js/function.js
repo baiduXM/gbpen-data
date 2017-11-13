@@ -92,7 +92,22 @@ $(".center").css({"margin-left":m})
 	
 	});
 	
-	
+	if ($("#banner").length>0) {
+	    var mySwiper = new Swiper('#banner',{
+			loop:true,
+			autoplay:5000,
+			calculateHeight : true,
+			pagination : '.pagination',
+		 });
+	 };
+	 if ($("#banner1").length>0) {
+	    var mySwiper = new Swiper('#banner1',{
+			loop:true,
+			autoplay:5000,
+			calculateHeight : true,
+			pagination : '.pagination',
+		 });
+	 };
 	function pageSlideOver(){
     $('.page-out').live('transitionend', function(){
       $(this).removeClass('page-out');

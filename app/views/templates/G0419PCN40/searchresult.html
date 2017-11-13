@@ -32,8 +32,8 @@
         <div class="det-rt">
             <div class="det-rt-top">
                 <div class="det-rt-title lt">
-                    <h5>{$search.data[0].category.name}</h5>
-                    <span>{$search.data[0].category.en_name}</span>
+                    <h5>搜索结果</h5>
+                    <span>Search result</span>
                 </div>
                 <ul class="det-rt-posnavs rt">
                     <li>所在位置 :</li>
@@ -47,14 +47,15 @@
             <p class="keyword">没有查找到相关数据！</p>
             {else}
             <p class="keyword">以下是您输入的搜索关键字“{$search.keyword}”的搜索结果，共{$search.total}条</p>
-            <ul class="result">
+            <ul class="cont2-ul ">
                 {foreach item=article from=$search.data}
-                    <li>
-                        <a href="{$article.link}">
-                            <p >{$article.title}</p>
-                            <time class="rt"> {$article.pubtimestamp|date_format:'%Y-%m-%d'} </time>
-                        </a>
-                    </li>
+                <li><a href="{$article.link}"><img src="{$article.image}" alt="">
+                    <div class="list2-des">
+                        <span class="ti1"><span class="ti2">{$article.title}</span></span>
+                        <p>{$article.description}</p>
+                        <img src="{$site_url}images/index_20.png" alt="">
+                    </div>
+                </a></li>
                 {/foreach}
             </ul>
             {/if}

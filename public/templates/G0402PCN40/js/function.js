@@ -4,11 +4,11 @@ $(document).ready(function() {
   	 	jQuery(".slider").slide({mainCell:".bd ul",autoPlay:true, effect:"left",delayTime:500, trigger:"click",interTime:4000});
 
         //友情链接轮播
-        jQuery(".link").slide({mainCell:".bd ul",autoPlay:true,autoPage:true, effect:"left", trigger:"click",vis:6,interTime:4000});
+        jQuery(".link_a").slide({mainCell:".bd ul",autoPlay:true,autoPage:true, effect:"left", trigger:"click",vis:6,interTime:4000});
 
         //首页banner图下面的轮播图
-         jQuery(".imgT").slide({mainCell:".bd ul",autoPlay:true,autoPage:true, effect:"left", trigger:"click",vis:4,interTime:4000});
-
+        //  jQuery(".picMarquee-left").slide({mainCell:".bd ul",autoPlay:true,pnLoop:true,effect:"leftMarquee", trigger:"click",vis:4,interTime:50});
+       jQuery(".imgT").slide({mainCell:".bd ul",autoPlay:true,effect:"leftMarquee",vis:4,interTime:50});
 
     if ($(".pictureSlider").length > 0) {
             Carousel.init($(".pictureSlider"));

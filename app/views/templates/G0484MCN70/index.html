@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="text/javascript">
+  // 跳转PC页面
+  {if $site_another_url}
+      if (!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+          location.href = '{$site_another_url}';
+      }
+  {/if}
+  </script>
+  <!-- 实时预览调试代码，模板开发完成后删除 -->
+
+  <meta name="x5-orientation" content="portrait">
+  <title>{$title}</title>
+  <meta name="keywords" content="{$keywords}" />
+  <meta name="description" content="{$description}" />
+  <link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no,minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta content="telephone=no, email=no" name="format-detection">
+  <!-- 启用360浏览器的极速模式(webkit) -->
+  <meta name="renderer" content="webkit">
+  <!-- 避免IE使用兼容模式 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+  <meta name="HandheldFriendly" content="true">
+  <!-- 微软的老式浏览器 -->
+  <meta name="MobileOptimized" content="320">
+  <!-- uc强制竖屏 -->
+  <meta name="screen-orientation" content="portrait">
+  <!-- QQ强制竖屏 -->
+  <meta name="screen-orientation" content="portrait">
+  <meta name="x5-orientation" content="portrait">
+  <link rel="stylesheet" href="{$site_url}css/idangerous.swiper.css">
+  <link href="{$site_url}css/css.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="{$site_url}js/jquery.min.js"></script>
+<script src="{$site_url}js/TouchSlide.1.1.js"></script>
+<script src="{$site_url}js/idangerous.swiper-2.0.min.js"></script>
+<script type="text/javascript" src="{$site_url}js/function.js"></script>
+ <script type="text/javascript">
+    window.addEventListener('load', function(){
+     setTimeout(function(){ window.scrollTo(0, 1); }, 100);
+  });//safari浏览器可以通过此代码来隐藏地址栏
+  </script>
+  {$headscript}
+</head>
+<body>
+<div class="index-wrap">
+      {include file='./_header.html'}
+      <section>
+        {foreach item=mIndexCat from=$mIndexCats}
+        {if $mIndexCat.type eq 4}
+          {if $mIndexCat.showtype eq 1}
+        <div class="about">
+          <div class="wrap_t">
+            <a class="about_title" href="{$mIndexCat.link}">
+                <span>{$mIndexCat.en_name}</span><em>{$mIndexCat.name}</em>
+            </a>
+          </div>
+          <div class="about_cont">
+            <div class="text1 kz" data-limit="140">
+              {$mIndexCat.description|unescape:"html"}
+            </div>
+          </div>
+        </div>
+        {/if}
+        {elseif $mIndexCat.type eq 2}
+          {if $mIndexCat.showtype eq 1}
+            <div class="news">
+                <ul class="news_cont clearfix">
+                    {foreach name=mIndexCat_list item=mIndexCat_list from=$mIndexCat.data}
+                    <li>
+                        <a href="{$mIndexCat_list.link}">
+                          <div class="wrap_t">
+                            <div class="about_title">
+                                <span>PRO • {$mIndexCat_list@index+1}</span><em>{$mIndexCat_list.title}</em>
+                            </div>
+                          </div>
+                          <div class="div_img">
+                              <img src="{$mIndexCat_list.image}">
+                          </div>
+                        </a>
+                    </li>
+                    {if $mIndexCat_list@index+1 gte 4}{break}{/if}  
+                    {/foreach}
+                </ul>
+            </div>
+            {/if}
+            {elseif $mIndexCat.type eq 3}
+              {if $mIndexCat.showtype eq 1}
+              <div class="txt_img">
+                  <div class="wrap_t">
+                    <a class="about_title" href="{$mIndexCat.link}">
+                        <span>{$mIndexCat.en_name}</span><em>{$mIndexCat.name}</em>
+                    </a>
+                  </div>
+                  <div id="leftTabBox" class="tabBox">
+                    <div class="bd">
+                        {foreach name=mIndexCat_list item=mIndexCat_list from=$mIndexCat.data}
+                        <ul>
+                          <li><a href="{$mIndexCat_list.link}" class="clearfix">
+                                <div class="wrap_divimg fl">
+                                  <div class="div_img">
+                                      <img src="{$mIndexCat_list.image}">
+                                  </div>
+                                </div>
+                                <div class="info fl">
+                                    <h2>{$mIndexCat_list.title}</h2>
+                                    <p class="kz" data-limit="50">{$mIndexCat_list.description}</p>
+                                </div>
+                              </a>
+                          </li>
+                        </ul>
+                        {if $mIndexCat_list@index+1 gte 5}{break}{/if}
+                        {/foreach}
+                    </div>
+                    <div class="hd">
+                      <ul>
+                        {foreach name=mIndexCat_list item=mIndexCat_list from=$mIndexCat.data}
+                        <li></li>
+                        {if $mIndexCat_list@index+1 gte 5}{break}{/if}
+                        {/foreach}
+                      </ul>
+                    </div>
+                  </div>
+              </div>
+                {/if}
+          {/if}
+        {/foreach}
+    </section>
+    {include file='./_footer.html'}
+</div>
+</body>
+</html>

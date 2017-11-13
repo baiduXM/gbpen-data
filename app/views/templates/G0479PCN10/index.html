@@ -1,0 +1,126 @@
+<!DOCTYPE>
+<html>
+<head>
+<script type="text/javascript">
+    // 跳转手机页面
+    {if $site_another_url}
+        if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+            location.href = '{$site_another_url}';
+        }
+    {/if}
+</script>
+
+<meta name="keywords" content="{$keywords}"/>
+<meta name="description" content="{$description}"/>
+<link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
+<meta http-equiv="x-ua-compatible" content="ie=8"/>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<link href="{$site_url}css/animate.css" rel="stylesheet">
+<link href="{$site_url}css/style.css" rel="stylesheet" type="text/css"/>
+<script src="{$site_url}js/jquery-1.7.2.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript" src="{$site_url}js/wow.min.js"></script>
+<script type="text/javascript" src="{$site_url}js/function.js"></script>
+<title>{$title}</title>
+{$headscript}
+</head>
+<body>
+<div class="wrap">
+    <div class="header1">
+		<div class="logo wow wobble"><a href="{$site_url}"><img src="{$logo}"/></a></div>
+		<div class="navBar wow fadeInDown">
+			<ul class="nav clearfix">
+				{foreach name=navs item=nav from=$navs}
+				<li class="m {if $nav.current}on{/if} nav_li" style="width:{100/(($navs|count))}%">
+					<a href="{$nav.link}" class="kz" data-limit="6"><em>0{$nav@index+1}</em>{$nav.name}</a>
+					{if $nav.childmenu}
+						<ul class="sub">
+							{foreach key=key item=nav_list from=$nav.childmenu}
+							<li><a class="kz" data-limit="20" href="{$nav_list.link}">{$nav_list.name}</a></li>
+							{/foreach}
+						</ul>
+					{/if}
+				</li>
+				{/foreach}
+			</ul>
+		</div>
+	</div>
+	<div class="content clearfix">
+		<div class="news fl">
+			<h2 class="titt"><a href="{$index.news.link}"><em>{$index.news.en_name}</em>{$index.news.name}</a></h2>
+			<div class="tmall-brand">
+				<ul class="fCl-slide">
+					{foreach item=news from=$index.news.childmenu}
+					<li>
+						{foreach item=news1 from=$news.data}
+						<a href="{$news1.link}" class="clearfix">
+							<div class="time fl">{$news1.pubtimestamp|date_format:'<em>%Y</em>%m.%d'}</div>
+							<div class="fr info">
+								<h2>{$news1.title}</h2>
+								<p>{$news1.description}</p>
+							</div>
+						</a>
+						{if $news1@index+1 eq 2}{break}{/if}  
+						{/foreach}
+					</li>
+					{/foreach}
+				</ul>
+				<ul class="fCl-nav">
+					{foreach item=news from=$index.news.childmenu}
+						<li></li>
+					{/foreach}
+				</ul>
+			</div>
+			<img class="imgfix2" src="{$site_url}images/nbg.png">
+		</div>
+		<div class="banner fl">
+			<div id="slideBox" class="slideBox" >
+				<div class="hd">
+					<ul>
+					{foreach name=slidepics item=slidepic from=$index.slidepics}
+					<li></li>
+					{/foreach}
+					</ul>
+				</div>
+				<div class="bd">
+					<ul>
+					{foreach name=slidepics item=slidepic from=$index.slidepics}
+						<li><a href="{$slidepic.link}" target="_blank"><img src="{$slidepic.image}" alt="{$slidepic.title}"/></a></li>
+					{/foreach}
+					</ul>
+				</div>
+			</div>
+			<img class="imgfix" src="{$index.bg1.image}">
+			<img class="imgfix1" src="{$site_url}images/cir.png">
+			<img class="imgfix3" src="{$site_url}images/tx.png">
+		</div>
+		<div class="confr fl">
+			<h2 class="titt"><a href="{$index.pro.link}"><em>{$index.pro.en_name}</em>{$index.pro.name}</a></h2>
+			<div class="focusBox">
+				<ul class="pic">
+					{foreach item=pro from=$index.pro.data}
+					<li><a href="{$pro.link}"><img src="{$pro.image}"/><p class="title">{$pro.title}</p></a></li>
+					{/foreach}
+				</ul>
+				<a class="prev" href="javascript:void(0)"></a>
+				<a class="next" href="javascript:void(0)"></a>
+			</div>
+		</div>
+	</div>
+	<div class="footer clearfix">
+	    <div class="friendlink fl">
+	        友情链接：
+	        {foreach item=flink from=$global.links}
+	            <a href="{$flink.link}" target="_blank">{$flink.title}</a> |
+	        {/foreach}     
+	    </div>
+	    <div class="copyright fr">
+	        <div class="footer1">
+	            <div class="footcopyright">{$footprint}</div>
+	        </div>
+	    </div>
+	</div>
+	{$footscript}
+</div>
+</body>
+</html>

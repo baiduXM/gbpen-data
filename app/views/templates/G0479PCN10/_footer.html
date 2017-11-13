@@ -1,0 +1,17 @@
+<div class="footer clearfix">
+    <div class="footer1">
+        <div class="friendlink">
+            <em>友情链接：</em>
+            {foreach item=flink from=$global.links}
+                <a href="{$flink.link}" target="_blank">{$flink.title}</a> |
+            {/foreach}     
+        </div>
+        <div class="copyright">
+            <div class="footer1">
+                <div class="footcopyright">{$footprint}</div>
+            </div>
+        </div>
+    </div>
+</div>
+{$footscript}
+

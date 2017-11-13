@@ -72,7 +72,7 @@ ul.subnav i{display: block;width: 1px;height: 15px;background: #333333;margin: 1
 .scroll>a.next:hover{background: url(../images/jt_04.png) no-repeat center center;}
 .side_pro ul.scroll_list{margin: 27px 0 28px 0;width: 100%;height: 385px;overflow: hidden;position: relative;}
 .side_pro ul{width: 100%;height: 100%;}
-.side_pro ul li{width: 100%;height: 65px !important;margin: 6px 0;float: left; display:table}
+.side_pro ul li{width: 100%;height: 65px !important;margin: 6px 0;float: left; display:block;overflow: hidden;}
 .side_pro ul li a{ display:table-cell;width: 62px; height:45px;background: url(../images/circle_01.png) no-repeat;color: #ffffff;text-align: center;font-size: 14px;line-height: 20px; padding:10px 0;padding-left:12px;overflow: hidden; vertical-align:middle}
 .side_pro ul li a:hover{background: url(../images/circle_02.png);}
 .side_pro ul li.on a{background: url(../images/circle_02.png) no-repeat !important;}

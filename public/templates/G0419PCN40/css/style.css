@@ -55,7 +55,7 @@ p{line-height:26px;}
 
 
 
-#banner{overflow: hidden;}
+#banner{overflow: hidden; width: 1920px; margin-left:-960px; left: 50%; position: relative;}
 #banner .bd ul li img{max-width:100%;max-height:100%;}
 
 #banner .bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto{bottom:11px;}

@@ -1,0 +1,26 @@
+{
+
+	"pagenavs": {
+		"value": {},
+		"description": "侧边栏目列表（当前栏目无子栏目时展示的目标栏目）",
+		"type": "list",
+		"config": {
+			"filter": "list,page",
+			"mustchild": true
+		}
+
+	},
+	"contactus": {
+		"value":{},
+		"description": "联系方式",
+		"type": "page"
+	},
+	"contactus_tt": {
+		"description": "联系方式绑定",
+		"value": {},
+		"type": "page"
+	}
+
+		
+}
+	

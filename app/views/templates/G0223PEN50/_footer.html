@@ -1,0 +1,18 @@
+<div class="footer">
+	<div class="public">
+		<div class="link clearfix">
+			<span>Friendly Link</span>
+			{foreach item=flink from=$global.links}
+			<a href="{$flink.link}"><img src="{$flink.image}"></a>
+			{/foreach}
+		</div>
+		<div class="bot_nav">
+			<a href="{$site_url}">Home</a>
+		{foreach name=navs item=nav from=$navs}
+			•<a href="{$nav.link}">{$nav.name}</a>
+		{/foreach}
+		</div>
+		<p>{$footprint}</p>
+	</div>
+</div>
+{$footscript}

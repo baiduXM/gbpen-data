@@ -1,0 +1,85 @@
+
+/*标题样式*/
+.in_h2{ width:40%; position:relative; margin:5% auto; text-align:center}
+.in_h2:after{ content:""; position:absolute; left:0px; bottom:28px; width:50%; height:1px; background:#fabc29; z-index:1000}
+.in_h2 .en{ font-size:14px; text-transform:uppercase; height:15px; line-height:15px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;  padding-bottom:5px; border-bottom:1px solid #333; position:relative}
+
+
+
+.in_h2 .ch{ font-size:18px; text-transform:uppercase; height:25px; line-height:25px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;position:relative; z-index:99; padding-top:3px;}
+
+
+
+.in_more{height:24px; padding:0px 7px; margin-top:4px;border-radius:5px; line-height:24px; text-indent:0px; display:block; text-align:center; color:#fff; background:#c0c0c0; font-size:0.9em; float:right;  position:relative; z-index:99999; margin-left:5px; margin-right:5px; }
+@media screen and (min-width: 320px) and (max-width: 480px){
+.in_h2 .text{ font-size:14px; }
+.in_h2 .text span{ font-size:12px;}
+
+
+
+}
+/*标题样式*/
+
+.wrapper{ width:100%; margin:auto;  }
+
+
+
+#in_page{ width:100%; padding-top:3%; position:relative; background:url(../images/about_img.jpg) no-repeat center; background-size:100% 100%; min-height:200px; overflow:hidden }
+#in_page .inner{  position:absolute; left:0px; top:0px; background:#463e3c;overflow:hidden; font-size:14px; color:#fff;  width:40%; height:100%; padding:0 5%;  }
+#in_page .inner .tit{ width:60%; border-bottom:1px solid #fff; position:relative; margin:15% 0 5% 0; }
+#in_page .inner .tit:after{ content:""; position:absolute; left:0px; bottom:-1px; width:50%; height:1px; background:#fabc29; z-index:1000}
+#in_page .inner .tit .en{ font-size:13px; text-transform:uppercase; height:15px; line-height:15px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+#in_page .inner .tit .ch{ font-size:16px; text-transform:uppercase; height:25px; line-height:25px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap; padding-bottom:5px; position:relative; z-index:99}
+
+#in_page .inner .tit a{ color:#fff}
+
+
+
+
+
+#in_page .inner p{ line-height:25px; height:100px; overflow:hidden}
+
+
+
+#in_text{ position:relative}
+#in_text .more{ width:40px; height:30px; background:#e7aa19; line-height:30px; text-align:center; margin:auto; font-size:18px; color:#fff; position:absolute; bottom:-40px; left:45%;}
+#in_text ul{ width:90%; margin:auto}
+#in_text ul li{  width:100%;  line-height:35px; line-height:35px; overflow:hidden; margin-bottom:6%; border-bottom:1px dashed #dedede; padding-bottom:6%; margin-bottom:6%}
+#in_text ul li .pix{ width:25%; float:left;}
+#in_text ul li .pix img{ width:100%}
+#in_text ul li .right{ width:73%; float:right;}
+#in_text ul li h2{ }
+#in_text ul li h2 span{ width:100%; float:left;  line-height:30px; line-height:30px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap; font-size:18px;   color:#5f2202;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+#in_text ul li .in_des{ line-height:22px; height:44px; overflow:hidden; color:#6a686; }
+#in_text ul li:last-child{ border-bottom:none}
+#in_text ul li:nth-child(even) .pix{ float:right}
+#in_text ul li:nth-child(even) .right{ width:63%; float:left;}
+
+
+
+@media screen and (min-width: 320px) and (max-width: 480px){
+#in_text ul li .pix{ width:35%; }
+#in_text ul li .right{ width:62%; }
+	
+#in_text:after{  top:11%; }
+	
+}
+
+#in_image{ width:100%; margin:auto;  position:relative;  padding:3% auto }
+
+#in_image .inner{   margin:auto;  }
+#in_image ul{  margin:auto; position:relative; z-index:2 }
+#in_image ul li{ float:left;margin:2% 1% 2% 1%; width:30.5%; }
+#in_image ul li .pix{ position:relative; border:1px solid #fff; margin:6% auto}
+#in_image ul li .bottom{ width:48px; height:11px; margin:auto;margin-top:-2px; position:relative; z-index:10}
+#in_image ul li .in_protitle{  width:100%; font-size:16px;  position:relative; z-index:11; height:35px; line-height:35px;display: block;margin: 0 auto;overflow: hidden;text-overflow: ellipsis;white-space: nowrap; color:#fff; text-align:center; }
+
+
+#in_image ul li .more{ width:45%; margin:auto; height:25px; line-height:25px; background:#fb8e00; text-align:center; color:#fff; border-radius:10px; }
+
+
+@media screen and (min-width: 320px) and (max-width: 480px){
+}
+@media screen and (min-width: 480px) {
+}
+

@@ -65,7 +65,8 @@
             <ul class="news">
               {foreach item=new from=$list.data}
                 <li><a href="{$new.link}">
-                     <span class="time">{$new.pubtimestamp|date_format:'%Y-%m-%d'}</span>{$new.description}
+                     <span class="time">{$new.pubtimestamp|date_format:'%Y-%m-%d'}</span>
+                    {$new.title}
                 </a></li>
               {/foreach}
             </ul>

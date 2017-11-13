@@ -33,16 +33,20 @@
      <div class="banner">
 
           <div class="focusBox" style="margin:0 auto">
-              <ul class="pic">
+              <div class="bd pic">
+                    <ul>
                         {foreach name=slidepics item=slidepic from=$global.slidepics}
                               <li><a href="{$slidepic.link}" target="_blank"><img src="{$slidepic.image}" alt="{$slidepic.title}" /></a></li>       
                         {/foreach}
+                    </ul>
                       
-              </ul>
-              <ul class="hd">
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul>
+              </div>
+               <div class="hd">
+                  <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+              </div>
           </div>
      </div>

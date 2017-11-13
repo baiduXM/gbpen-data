@@ -50,7 +50,7 @@
             <p class="search">以下是您输入关键词“{$search.keyword}”搜索的到结果</p>
             <ul class="news">
                 {foreach item=text from=$search.data}
-                <li><a href="">{$text.title}</a></li>
+                <li><a href="{$text.link}">{$text.title}</a></li>
                 {/foreach}
             </ul>
             {include file="./_page.html"}

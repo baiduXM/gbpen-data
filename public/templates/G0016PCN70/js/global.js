@@ -20,7 +20,7 @@ $(document).ready(function(){
 	$('.side-right h1 .locate a').first().css('marginLeft',20)
 	$('.ny-prolist li:nth-child(3n)').css('marginRight',0)
 
-    jQuery(".focusBox").slide({ mainCell:".pic",effect:"fold", autoPlay:true, delayTime:300});
+    jQuery(".focusBox").slide({ mainCell:".pic ul",effect:"fold", autoPlay:true, delayTime:300});
      jQuery(".focus").slide({ titCell:"#tip li", mainCell:"#pic ul",effect:"left",autoPlay:true,delayTime:200 })
     jQuery("#slide").slide({mainCell:"ul",autoPlay:true,effect:"left"});
 });

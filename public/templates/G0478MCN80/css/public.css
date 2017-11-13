@@ -35,24 +35,14 @@ mark{background: none;}
 .head .iconfont{right: 1rem;top:0;font-style: normal;font-size: 1.2rem;color: #282828;z-index: 3;line-height:3rem;}
 .index_dec{z-index: 6;top: 3rem;left: 0;background:rgba(255,255,255,0.8);width:13.4rem;height: 5.65rem;padding:1rem 1.3rem;overflow: hidden;}
 .index_dec p{width: 100%;height: 3.87rem;overflow: hidden;font-size:0.6rem;color: #666;line-height: 0.8rem;}
-.index_dec p span{opacity: 0;font-size: 0.7rem;font-weight: bold;color: #282828;margin-bottom: 0.4rem;display: block;width: 100%;height: 1rem;overflow: hidden;animation: navgo 1s ease-in-out forwards;}
-.index_dec p i{opacity: 0;display: block; animation: iigo 1s 0.5s ease-in-out forwards;}
-.search_div{opacity: 0;width: 13.2rem;height: 1.7rem;border: 1px solid #e5e5e5;line-height: 1.7rem;border-radius: 0.2rem;overflow: hidden;animation: ssgo 1s 1s ease-in-out forwards;}
+.index_dec p span{font-size: 0.7rem;font-weight: bold;color: #282828;margin-bottom: 0.4rem;display: block;width: 100%;height: 1rem;overflow: hidden;}
+.index_dec p i{display: block;}
+.search_div{width: 13.2rem;height: 1.7rem;border: 1px solid #e5e5e5;line-height: 1.7rem;border-radius: 0.2rem;overflow: hidden;}
 .search_div .btn{width:1.7rem;height: 1.7rem;background:url(../images/search.png) center no-repeat;background-size: 100% 100%;outline: none; }
 .search_div .input{width: 11.5rem;height: 1.7rem;line-height: 1.7rem;outline: none;}
 
-@-webkit-keyframes navgo{
-  0% {opacity: 0;-webkit-transform: translateX(-4rem);}
-  100% {opacity: 1;-webkit-transform: translateX(0);}
-}
-@-webkit-keyframes iigo{
-  0% {opacity: 0;-webkit-transform: translateX(4rem);}
-  100% {opacity: 1;-webkit-transform: translateX(0);}
-}
-@-webkit-keyframes ssgo{
-  0% {opacity: 0;-webkit-transform: translateY(3rem);}
-  100% {opacity: 1;-webkit-transform: translateY(0);}
-}
+
+
 /*banner*/
 .banner{position: relative;width: 16rem;height: auto;overflow: hidden;}
 .swiper-banner{position: relative;z-index: 1;width:16rem;height:auto;overflow: hidden;}

@@ -61,10 +61,18 @@
 		"type": "page"
 	},
 
-	"bottomnavs": {
-		"value": "http://api.map.baidu.com/marker?location=24.509271,117.705123&title=目标位置&content=厦门市软件园二期观日路30号&output=html",
-		"description": "地图地址",
-		"type": "text"
+	"bottomimg": {
+			"value": {
+				"title": "底部图片",
+				"image": "images/banner.png",
+				"link": "http://www.baidu.com/"
+			},
+			"description": "底部图片",
+			"type": "image",
+			"config": {
+				"width": 600,
+				"height": 350
+			}
 	}
 
 }
