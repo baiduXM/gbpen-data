@@ -54,20 +54,20 @@
 <body>
 
     <h1 class="fixed-top">
-      <span class="fixed-btn back"><a href="javascript:window.history.back()">back</a></span>
-      <span class="fixed-btn more2" id="font">word+</span>
+      <span class="fixed-btn back"><a href="javascript:window.history.back()">返回</a></span>
+      <span class="fixed-btn more2" id="font">字+</span>
       {$article.category.name}</h1>
       <div class="font1">
-            <dl class="big">big</dl>
-            <dl class="normal">middle</dl>
-            <dl class="small">small</dl>
+            <dl class="big">大</dl>
+            <dl class="normal">中</dl>
+            <dl class="small">小</dl>
           </div>
     <div class="index-wrap">
       <section>
         <div class="index_show">
           <div class="d_titles">
             <h1 class="title1 public_color">{$article.title}</h1>
-            <hl class="title2 public_color">Update time:{$article.pubdate}</hl>
+            <hl class="title2 public_color">更新时间：{$article.pubdate}</hl>
           </div>
           <div class="box-m">
             <div class="boxmain-m">
@@ -89,8 +89,8 @@
    </div>
               <div class="edite public_color" >  {$article.content|unescape:"html"}</div>
               <ul class="inner_pages">
-            <li><a href="{$article.prev.link}" class="public_color">Prev:{$article.prev.title}</a></li>
-            <li><a href="{$article.next.link}" class="public_color">Next:{$article.next.title}</a></li>
+            <li><a href="{$article.prev.link}" class="public_color">上一条:{$article.prev.title}</a></li>
+            <li><a href="{$article.next.link}" class="public_color">下一条:{$article.next.title}</a></li>
               </ul>
             </div>
           </div>

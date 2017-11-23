@@ -1,0 +1,78 @@
+{
+ "slidepics":{
+   "value":[
+     {
+       "title":"测试图1",
+       "image":"images/banner_02.png",
+       "link":"http://www.baidu.com"
+     },
+     {
+       "title":"测试图2",
+       "image":"images/banner_02.png",
+       "link":"http://www.baidu.com"
+     },
+     {
+       "title":"测试图3",
+       "image":"images/banner_02.png",
+       "link":"http://www.baidu.com"
+     }
+   ],
+   "description":"大轮播图",
+   "type":"images",
+   "config":{
+     "width":640
+   }
+ },
+  "list1Bg": {
+    "value": {
+      "title": "",
+      "image": "images/index-bg_04.png",
+      "link": ""
+    },
+    "description": "首页关于我们",
+    "type": "image",
+    "config": {
+      "width":640,
+      "height": 552,
+      "filter": "image"
+    }
+  },
+  "list3Bg": {
+    "value": {
+      "title": "",
+      "image": "images/index_10.png",
+      "link": ""
+    },
+    "description": "首页关于我们",
+    "type": "image",
+    "config": {
+      "width":640,
+      "height": 552,
+      "filter": "image"
+    }
+  },
+  "list3": {
+    "value": "<b>厦门易尔通网络科技有限公司</b><br>公司地址：厦门市思明区软件园二期观日路36号201单元<br>联系电话：0592-3503777 <br>传真：0592-3503003   0592-3503551 <br>投诉邮箱：tousu@xm12t.com",
+    "description": "公司信息",
+    "type": "text"
+  },
+  "links": {
+    "value": [
+      {
+        "title": "百度贴吧",
+        "image": "images/index_03.png",
+        "link": "http://tieba.baidu.com"
+      }, {
+        "title": "百度图片",
+        "image": "images/index_03.png",
+        "link": "http://image.baidu.com"
+      }
+    ],
+    "description": "友情链接",
+    "type": "images",
+    "config": {
+      "width": 158,
+      "height":58
+    }
+  }
+}

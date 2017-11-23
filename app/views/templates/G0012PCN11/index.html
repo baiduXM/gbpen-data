@@ -50,6 +50,11 @@
       <div class="xw">{$index.about_txt}</div>
       <img src="{$index.about.image}" width="455" height="338"  /> </div>
   </div>
+  <div class="about_mov" style="{if $index.inmov==2}display:block{else}display:none{/if}">
+      <div class="movbox">
+          <embed src="{$index.movlink.link}" allowFullScreen="true" quality="high" width="600" height="338" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
+      </div>
+  </div>
   <div class="news_bg">
     <div id="news" class="wrapper">
       <div class="title">

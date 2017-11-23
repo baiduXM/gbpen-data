@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <script type="text/javascript">
+        // 识别为手机客户端，自动跳转手机页面
+        {if $site_another_url}
+        if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+            location.href = '{$site_another_url}';
+        }
+        {/if}
+    </script>
+    <meta name="keywords" content="{$keywords}" />
+    <meta name="description" content="{$description}" />
+    <link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
+    <title>{$title}</title>
+    <link rel="stylesheet" href="{$site_url}css/style.css">
+    <script src="{$site_url}js/jquery-1.9.1.min.js"></script>
+    <script src="{$site_url}js/jquery.SuperSlide.2.1.1.js"></script>
+    <script src="{$site_url}js/index.js"></script>
+    {$headscript}
+</head>
+<body>
+<div id="banner">
+    <div class=" banner">
+        <div id="slideBox" class="banBox">
+            <div class="bd">
+                <ul>
+                    {foreach item=banner from=$global.banner}
+                    <li><a href="{$banner.link}"><img src="{$banner.image}" /></a></li>
+                    {/foreach}
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="index-search">
+        <div class="container">
+            <form action="{$search_action}" method="GET" class="rt">
+                <input class="input-sub" type="submit" value="" >
+                <input class="input-txt" type="text" name="s" placeholder="请输入搜索关键词">
+            </form>
+            <i class="icon-ser rt"></i>
+        </div>
+    </div>
+    <div class="up-icon">
+        <a href="javascript:"> <img src="{$site_url}images/icon2_03.png" alt=""></a>
+    </div>
+</div>
+<div id="had">
+    <div class="header">
+        <div class="container">
+            <div class="logo "><a href="{$site_url}"><img src="{$logo}" alt=""></a></div>
+            <div id="nav">
+                <ul class="nav ">
+                    {$litmit=9}
+                    {if $navs|count lt $litmit}{$litmit = $navs|count}{/if}
+                    <li class="lt nav-li" style="width:{100/($litmit+1)}%"><a class="nav-a"  href="{$site_url}">首页</a></li>
+                    {foreach item=nav from=$navs}
+                    <li class="{if $nav.current}current{/if} lt nav-li" style="width:{100/($litmit+1)}%">
+                        <a class="nav-a" href="{$nav.link}">{$nav.name}</a>
+                        {if $nav.childmenu}
+                        <ul class="chilmenu">
+                            {foreach item=nav_list from=$nav.childmenu}
+                            <li class="{if $nav_list.current}current{/if}">
+                                <a class="navC-a" href="{$nav_list.link}"> {$nav_list.name}</a>
+                                {if $nav_list.childmenu}
+                                <ul class="three-chilmenu">
+                                    {foreach item=nav_lists from=$nav_list.childmenu}
+                                    <li class="{if $nav_lists.current}current{/if}">
+                                        <a class="navC-a" href="{$nav_lists.link}"> {$nav_lists.name}</a>
+                                        {if $nav_lists.childmenu}
+                                        <ul class="four-chilmenu">
+                                            {foreach item=navLists from=$nav_lists.childmenu}
+                                            <li class="{if $navLists.current}current{/if}">
+                                                <a class="navC-a" href="{$navLists.link}"> {$navLists.name}</a>
+                                            </li>
+                                            {if $navLists@index+1 eq 4}{break}{/if}
+                                            {/foreach}
+                                        </ul>
+                                        {/if}
+                                    </li>
+                                    {if $nav_lists@index+1 eq 4}{break}{/if}
+                                    {/foreach}
+                                </ul>
+                                {/if}
+                            </li>
+                            {if $nav_list@index+1 eq 4}{break}{/if}
+                            {/foreach}
+                        </ul>
+                        {/if}
+                    </li>
+                    {if $nav@index+1 eq $litmit}{break}{/if}
+                    {/foreach}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="main">
+    <div class="S-brand">
+        <div class="container">
+            <dl class="brand-content">
+                <dd>
+                    <span class="en_name">{$index.listBrand.en_name}</span>
+                    <p class="name"><b>{$index.listBrand.name}</b><span>{$index.listBrand.description}</span></p>
+                    <div class="des">
+                        {$index.listBrand.content|unescape:"html"}
+                    </div>
+                    <a href="{$index.listBrand.link}"><img src="{$site_url}images/more.png" alt=""></a>
+                </dd>
+                <dt>
+                    <a href="{$index.listBrand.link}"><img src="{$index.listBrand.image}" alt=""></a>
+                </dt>
+            </dl>
+        </div>
+    </div>
+    <div class="S-product">
+        <div class="container">
+            <div class="S-title">
+                <span class="en_name">{$index.sProduct.en_name}</span>
+                <p class="name"><b>{$index.sProduct.name}</b><span>{$index.sProduct.description}</span></p>
+            </div>
+            <div class="productScroll-left">
+                <div class="hd">
+                    <a class="next"><img src="{$site_url}images/index-neiyi2_05.jpg" alt=""></a>
+                    <a class="prev"><img src="{$site_url}images/index-neiyi2_03.jpg" alt=""></a>
+                </div>
+                <div class="bd">
+                    <ul class="picList">
+                        {foreach item=product from=$index.sProduct.data}
+                        <li>
+                            <div class="pic"><a href="{$product.link}"><img src="{$product.image}" /></a></div>
+                            <div class="title">
+                                <a href="{$product.link}">
+                                     <p>{$product.title}</p>
+                                    <span>More > </span>
+                                </a>
+                            </div>
+                        </li>
+                        {/foreach}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="S-news">
+        <div class="container">
+            <div class="S-title">
+                <span class="en_name">{$index.sNews.en_name}</span>
+                <p class="name"><b>{$index.sNews.name}</b><span>{$index.sNews.description}</span></p>
+            </div>
+            <div class="S-news-content">
+                {foreach item=news from=$index.sNews.data}
+                <dl class="S-news-list">
+                    <dt><a href="{$news.link}"><img src="{$news.image}" alt=""></a></dt>
+                    <dd>
+                        <span>{$news.pubtimestamp|date_format:'%Y-%m-%d'}</span>
+                        <p>{$news.description}</p>
+                    </dd>
+                </dl>
+                {if $news@index + 1 == 3}{break}{/if}
+                {/foreach}
+            </div>
+            <a class="news-more rt" href="{$index.sNews.link}"><img src="{$site_url}images/more.png" alt=""></a>
+        </div>
+    </div>
+</div>
+
+{include file="./_footer.html"}
+</body>
+</html>

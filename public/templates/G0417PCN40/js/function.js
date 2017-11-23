@@ -8,7 +8,16 @@ $("#pro .inner ul li:even").addClass("pro2");
 
 });
 
-
+$('.search_area').focus(function(){
+	if($(this).val()=='请输入查找的关键字...'){
+		$('.search_area').val('');
+	}
+});
+$('.search_area').blur(function(){
+	if($(this).val()==''){
+		$('.search_area').val('请输入查找的关键字...')
+	}
+});
 
 
 window.onload=function(){

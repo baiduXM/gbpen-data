@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{$title}</title>
+
+    <script type="text/javascript">
+        // 跳转PC页面
+        {if $site_another_url}
+        if (!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+            location.href = '{$site_another_url}';
+        }
+        {/if}
+    </script>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no,minimal-ui">
+    <meta name="keywords" content="{$keywords}" />
+    <meta name="description" content="{$description}" />
+    <link rel="stylesheet" href="{$site_url}css/swiper.min.css" />
+    <link rel="stylesheet" href="{$site_url}css/common.css" />
+    <link rel="stylesheet" href="{$site_url}css/style.css">
+    <script src="{$site_url}js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="{$site_url}js/swiper.min.js"></script>
+    <script  type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.1.js"></script>
+    <script type="text/javascript" src="{$site_url}js/function.js"></script>
+    <script type="text/javascript" src="{$site_url}js/index.js"></script>
+
+    <script type="text/javascript">
+        window.addEventListener('load', function(){
+            setTimeout(function(){ window.scrollTo(0, 1);}, 100);
+        });//safari浏览器可以通过此代码来隐藏地址栏
+    </script>
+</head>
+<body>
+{include file="./_header.html"}
+<div class="det-ban">
+    <a class="ban-a" href="{$global.detImgNew.link}"><img src="{$global.detImgNew.image}" alt=""></a>
+    <div class="det-titleBox">
+        <span class="en_name">{$article.category.en_name}</span>
+        <p class="name">{$article.category.name}</p>
+        <span class="font-size">字体 <i class="iconfont">&#xe618;</i></span>
+    </div>
+    <div class="det-navBox">
+        <div class="font cont-font">
+            <ul>
+                <li class="big"><a href="javascript:" onclick="changeFontSize2('1.1')">大</a></li>
+                <li class="middle"><a href="javascript:" onclick="changeFontSize2('0.9')">中</a></li>
+                <li class="small"><a href="javascript:" onclick="changeFontSize2('0.6')">小</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="det-main ">
+    <div class="det-text ">
+        <div class="news">
+            <h2 class="news-title">{$article.title}</h2>
+            <time >{$article.pubtimestamp|date_format:'%Y-%m-%d'} </time>
+        </div>
+        <div class="det-text new-txt">{$article.content|unescape:"html"}</div>
+        <ul class="page-ul page">
+            <li><a href="{$article.prev.link}">上一篇: <span>{$article.prev.title}</span> </a></li>
+            <li><a href="{$article.next.link}">下一篇: <span>{$article.next.title}</span> </a ></li>
+        </ul>
+    </div>
+</div>
+{include file="./_footer.html"}
+</body>
+</html>

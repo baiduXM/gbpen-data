@@ -1,0 +1,78 @@
+{
+ "slidepics":{
+   "value":[
+     {
+       "title":"测试图1",
+       "image":"images/index_nav_01.jpg",
+       "link":"http://www.baidu.com"
+     },
+     {
+       "title":"测试图2",
+       "image":"images/index_nav_01.jpg",
+       "link":"http://www.baidu.com"
+     },
+     {
+       "title":"测试图3",
+       "image":"images/index_nav_01.jpg",
+       "link":"http://www.baidu.com"
+     }
+   ],
+   "description":"大轮播图",
+   "type":"images",
+   "config":{
+     "width":640
+   }
+ },
+  "detImgPro": {
+    "value": {
+      "title": "",
+      "image": "images/pro-detail_02.jpg",
+      "link": ""
+    },
+    "description": "",
+    "type": "image",
+    "config": {
+      "width": 640,
+      "height":244
+    }
+  },
+  "detImgNew": {
+    "value": {
+      "title": "",
+      "image": "images/news_02.png",
+      "link": ""
+    },
+    "description": "",
+    "type": "image",
+    "config": {
+      "width": 640,
+      "height":244
+    }
+  },
+  "detImgPage": {
+    "value": {
+      "title": "",
+      "image": "images/about_06.png",
+      "link": ""
+    },
+    "description": "",
+    "type": "image",
+    "config": {
+      "width": 640,
+      "height":244
+    }
+  },
+  "proList": {
+    "value": {
+      "title": "",
+      "image": "",
+      "link": ""
+    },
+    "description": "产品详情页底部图片列表",
+    "type": "list",
+    "config": {
+      "width": 266,
+      "height":397
+    }
+  }
+}

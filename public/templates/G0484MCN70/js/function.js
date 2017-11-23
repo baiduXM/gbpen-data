@@ -27,7 +27,7 @@ $(document).ready(function(){
     autoPage:true,//自动分页
     autoPlay:true,
     interTime:10000,//自动播放)
-    pnLoop:"ture" // 前后按钮不循环
+    pnLoop:"true" // 前后按钮不循环
 
     });
     //限制个数
@@ -269,22 +269,33 @@ $(document).ready(function(){
 			}
 		});			
 	})();
-
-	if ($("#banner1").length>0) {
-	    var mySwiper = new Swiper('#banner1',{
-			loop:true,
-			autoplay:5000,
-			calculateHeight : true,
-			pagination : '.pagination',
-		 });
-	 };
+	// if ($("#baner1").length>0) {
+	//     var swiper = new Swiper('#baner1', {
+	//         pagination: '.swiper-pagination',
+	//         paginationClickable: true
+	//     });
+	//  }  
+	// if ($("#banner1").length>0) {
+	//     var mySwiper1 = new Swiper('#banner1',{
+	// 		loop:true,
+	// 		autoplay:5000,
+	// 		calculateHeight : true,
+	// 		pagination : '.pagination'
+	// 	 });
+	//  };
 	if ($("#banner").length>0) {
 	    var mySwiper = new Swiper('#banner',{
 			loop:true,
 			autoplay:5000,
 			calculateHeight : true,
-			pagination : '.pagination',
+			pagination : '.pagination'
 		 });
+	 }  
+	 if ($("#baner1").length>0) {
+	    var swiper = new Swiper('.swiper-container', {
+	        pagination: '.swiper-pagination',
+	        paginationClickable: true
+	    });
 	 }  
   });
   

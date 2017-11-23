@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{$title}</title>
+    <script type="text/javascript">
+        // 跳转PC页面
+        {if $site_another_url}
+        if (!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+            location.href = '{$site_another_url}';
+        }
+        {/if}
+    </script>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no,minimal-ui">
+    <meta name="keywords" content="{$keywords}" />
+    <meta name="description" content="{$description}" />
+    <link rel="stylesheet" href="{$site_url}css/swiper-3.3.1.min.css" />
+    <link rel="stylesheet" href="{$site_url}css/style.css">
+    <script src="{$site_url}js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="{$site_url}js/swiper-3.3.1.jquery.min.js"></script>
+    <script  type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.1.js"></script>
+    <script type="text/javascript" src="{$site_url}js/index.js"></script>
+
+    <script type="text/javascript">
+        window.addEventListener('load', function(){
+            setTimeout(function(){ window.scrollTo(0, 1);}, 100);
+        });//safari浏览器可以通过此代码来隐藏地址栏
+    </script>
+    {$headscript}
+</head>
+<body>
+    {include file="./_header.html"}
+    {include file="./_nav.html"}
+    {include file="./_banner.html"}
+
+    <div class="main">
+        {foreach item=mIndexCat from=$mIndexCats}
+            {if $mIndexCat.type eq 4}
+                {if $mIndexCat.showtype eq 1}
+        <div class="main1">
+            <i class="m1-bg"> <img src="{$global.list1Bg.image}" alt=""></i>
+            <div class="m1-content">
+                <div class="m1-title">
+                    <a href="{$mIndexCat.link}"><span>{$mIndexCat.name}</span></a>
+                    <a href="{$mIndexCat.link}"> <b class="rt">+</b></a>
+                </div>
+                <div class="m1-page">
+                    {$mIndexCat.description}
+                </div>
+            </div>
+        </div>
+
+                {elseif $mIndexCat.showtype eq 2}
+        <div class="main3">
+            <img class="m3Bg" src="{$global.list3Bg.image}" alt="">
+            <div class="m3-content">
+                <p>{$global.list3}</p>
+            </div>
+        </div>
+                {/if}
+            {elseif $mIndexCat.type eq 1}
+                {if $mIndexCat.showtype eq 1}
+                    <div class="main4">
+                        <div class="m1-title">
+                            <a href="{$mIndexCat.link}"> <span>{$mIndexCat.name}</span></a>
+                            <a href="{$mIndexCat.link}"><b class="rt">+</b></a>
+                        </div>
+                        <ul class="m4-content">
+                            {foreach item=m4 from=$mIndexCat.data}
+                                <li>
+                                    <a href="{$m4.link}">
+                                        <p>{$m4.title}</p>
+                                        <time class="rt">{$m4.pubtimestamp|date_format:'%Y-%m-%d'}</time>
+                                    </a>
+                                </li>
+                                {if $m4@index+1 == 8}{break}{/if}
+                            {/foreach}
+                        </ul>
+                    </div>
+                {/if}
+            {elseif $mIndexCat.type eq 2}
+                {if $mIndexCat.showtype eq 1}
+                    <div class="main2">
+                        <div class="m2-title">
+                            <a href="{$mIndexCat.link}"> <span>{$mIndexCat.name}</span></a>
+                            <a href="{$mIndexCat.link}"> <b class="rt">+</b></a>
+                        </div>
+                        <div class="m2-content">
+                            <div class="m2-ulTab">
+                                
+                                <!--<ul class="ulTab">-->
+                                    
+                                    
+                                    
+                                    
+                                <!--</ul>-->
+                            </div>
+                            <div class="m2-ulList">
+                                <ul>
+                                    {foreach item=m2_list from=$mIndexCat.data}
+                                    <li class="ulList">
+                                        <a  href="{$m2_list.link}" >
+                                            <dl>
+                                                <dt>
+                                                    <img src="{$m2_list.image}" alt="">
+                                                </dt>
+                                                <dd>{$m2_list.title}</dd>
+                                            </dl>
+                                        </a>
+                                    </li>
+                                    {if $m2_list@index+1 == 6}{break}{/if}
+                                    {/foreach}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                {elseif $mIndexCat.showtype eq 2}
+                    <div class="main6">
+                        <div class="swiper-container swiper-link">
+                            <ul class="swiper-wrapper">
+                                {foreach item=m6  from=$global.links}
+                                <li class="swiper-slide">
+                                    <a href="{$m6.link}">
+                                        <img src="{$m6.image}" alt="">
+                                    </a>
+                                </li>
+                                {/foreach}
+                            </ul>
+                        </div>
+                    </div>
+                {/if}
+            {elseif $mIndexCat.type eq 3}
+                {if $mIndexCat.showtype eq 1}
+                    <div class="main5">
+                        <div class="m1-title">
+                            <a href="{$mIndexCat.link}"> <span>{$mIndexCat.name}</span></a>
+                            <a href="{$mIndexCat.link}"><b class="rt">+</b></a>
+                        </div>
+                        <div class="m5-content">
+                            {foreach item=m5 from=$mIndexCat.data}
+                                <a href="{$m5.link}" class="m5_list">
+                                    <dl>
+                                        <dt><img src="{$m5.image}" alt=""></dt>
+                                        <dd>{$m5.title}</dd>
+                                    </dl>
+                                </a>
+                                {if $m5@index+1 == 2}{break}{/if}
+                            {/foreach}
+                        </div>
+                    </div>
+                {/if}
+            {/if}
+        {/foreach}
+    </div>
+
+
+{include file="./_footer.html"}
+</body>
+</html>

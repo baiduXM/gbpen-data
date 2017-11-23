@@ -8,7 +8,7 @@
         location.href = '{$site_another_url}';
     } {/if}
     </script>
-
+    
 <meta http-equiv="x-ua-compatible" content="ie=7" />
 <title>{$title}</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -46,7 +46,7 @@
             <div class="bd" style="width:640px;">
               <ul>
                 {foreach item=proshowb from=$article.images}
-                <li><img src="{$proshowb.image}" alt="{$proshowb.title}"/></li>
+                <li><i><img src="{$proshowb.image}" alt="{$proshowb.title}"/></i></li>
                 {/foreach}
               </ul>
             </div>

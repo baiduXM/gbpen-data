@@ -102,7 +102,7 @@
 .product ul li a .info img{ display: block; width: 84px; margin: 0 auto;}
 .product ul li a .info em{ display: block;width: 172px; height: 44px; margin: 20px auto 0; line-height: 44px; border: 1px solid #e0e0e0; text-align: center; color: #808080; font-size: 14px;}
 .product ul li a:hover .info em{ transition:all 0.5s; background: #f5a11a; border: none; color: #ffffff;}
-.promore{ display: block; font-size: 14px; color: #f5a11a; line-height: 44px; width: 400px; height: 44px; border: 1px solid #f5a11a; margin: 56px auto 0; text-align: center;}
+.promore{ display: block; font-size: 14px; color: #f5a11a; line-height: 44px; width: 300px; height: 44px; border: 1px solid #f5a11a; margin: 56px auto 0; text-align: center;}
 .promore:hover{background: #f5a11a; color: #ffffff; transition:all 0.5s;}
 .product .tab-hd{ height: 56px; width: 134px; position: absolute; top: 0; right: 0;}
 .product .tab-hd .step{ display: block;width: 100%; height: 100%;}
@@ -195,7 +195,7 @@ a.sen_x, a.xz, .firstli a:hover, .firstli.active>a{ color: #f5a11a;}
 .thrul{ position: absolute; left: 160px; width: 100%; top: 0; background: rgba(255, 255, 255, 0.9);}
 .weizhi{ line-height: 54px; color: #808080; font-size: 14px;}
 .weizhi a:hover{ color: #f5a11a;}
-#content{ width: 100%; padding: 34px 0; background: #f8f8f8;}
+#content1{ width: 100%; padding: 34px 0; background: #f8f8f8;}
 .content{ width: 1200px; margin: 0 auto; background: #ffffff;}
 .content .main{ padding: 20px 30px; min-height: 350px; color: #333333; font-size: 14px;}
 .main .product1{width: 116%;height: auto;overflow: hidden;margin-top: 30px;}
@@ -287,7 +287,7 @@ a.sen_x, a.xz, .firstli a:hover, .firstli.active>a{ color: #f5a11a;}
 .main img{ max-height: 100%; max-width: 100%;}
 .sear_tit{width:100%;padding-bottom: 30px;}
 .sear_tit li{ overflow: hidden; border-bottom: 1px dotted #d5d5d4;}
-.sear_tit li a{ display: block; width: 100%; padding: 20px 0;}
+.sear_tit li a{ display: block; width: 100%; -padding: 20px 0;}
 .sear_tit li a h2{font-size: 18px; line-height: 40px; width: 100%; display: inline-block; color: #333333; overflow: hidden; text-overflow:ellipsis; white-space:nowrap;}
 .sear_tit li a:hover h2{color: #f5a11a; font-weight: bold;}
 .sear_tit li p{ color: #808080; line-height: 30px; height: 60px; overflow: hidden;}

@@ -5,7 +5,22 @@
 		"value": {},
 		"type": "page"
 		
-	},	
+	},
+	"inmov":{
+		"value":"2",
+		"description":"默认1关闭视频",
+		"type":"text"
+	},
+	"movlink":{
+        "value": {
+			"title": "关于我们下方视频连接",
+			"image": "images/logo.png",
+			"link": "http://player.youku.com/player.php/sid/XNTkyMTM0MzY4/v.swf"
+		},
+		"description": "关于我们下方视频连接",
+		"type": "image",
+		"config": {}
+	},
 	
 	"about_txt": {
 		"description": "关于我们",

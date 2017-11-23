@@ -1,0 +1,59 @@
+a{text-decoration: none;color:#333;}
+ul,dl{list-style: none;}
+h1,h2,h3,h4,h5,h6,p,div,a,img,ul,dl,li,dt,dd{margin:0;padding:0;}
+input{border:none;outline:none;background:none;}
+input,button,select,textarea,option{outline:none;font-family:  Microsoft YaHei,"微软雅黑";}
+i,em{font-style: normal;}
+.lt{float:left;}
+.rt{float:right;}
+.clear{clear:both;}
+.hide{display:none;}
+.show{display:block;}
+dt{text-align: center;}
+body{font-family:  Microsoft YaHei,"微软雅黑";font-size:0.6rem;line-height:0.8rem; max-width:640px;min-width:320px;margin:0 auto;background: #fff;  }
+img{max-width:100%;max-height:100%;vertical-align: middle;}
+
+/*首页banner*/
+.index_ban{position: relative;}
+.index_ban .swiper-pagination-bullet{background: #f9ce03;opacity: 0;border:1px solid #f9ce03;}
+.index_ban .swiper-pagination-bullet-active{background: #fff;}
+.index_ban .swiper-container-horizontal>.swiper-pagination-bullets,
+.index_ban.swiper-pagination-custom, .swiper-pagination-fraction{bottom:0.6rem;z-index:21;}
+
+/*底部copy*/
+.footprints{padding: 0.5rem;background: #282828; position: relative;}
+.copy{color:#ccc;font-size:0.6rem;}
+.copy p{color:#ccc;font-size:0.6rem;}
+.copy a{color:#ccc;font-size:0.6rem;}
+.scroll_top{position: absolute;top:-0.75rem;right:0.5rem;width:1.5rem;height:1.5rem;line-height:1.5rem;text-align:center;background: rgba(000,000,000,.5);color:#fff;font-size:0.6rem;border-radius: 50%;}
+
+
+/*内页分类列表*/
+.det-navBox{position: absolute;top:244px;left:0;width:100%;}
+.det-nav{ padding:0 0.375rem; background: #fff;display: none}
+.one{  border:1px solid #dedede;border-bottom:4px solid #1d1d1d;}
+.one li{position: relative;}
+.one-li{ border-bottom:1px solid #dedede }
+.one-li a{display:block;height:1.5rem;line-height:1.5rem; position: relative;z-index:10;padding:0 0.5rem 0 1.2rem;}
+.one-li>a{ margin:0 auto ;}
+.one-li a span{width:85%;height:1.5rem;line-height:1.5rem;color:#1d1d1d;font-size:0.65rem;display: inline-block; }
+.one-li i{position: absolute;top:0;right:0.5rem;  line-height:1.5rem;transition: all linear .3s;-webkit-transition: all linear .3s;}
+.one-li i.on{transform: rotate(-180deg);-webkit-transform: rotate(-180deg);}
+.two-li a span{margin-left:0.5rem;font-size:0.6rem; width:80%;}
+.two-li i{color:#828282;}
+.three-li a span{margin-left:1rem;color:#666;width:77%;}
+.two{display: none;padding-bottom:0.5rem;}
+.three{display: none}
+
+/*内页下拉字体*/
+.font{position: absolute;top:0;left:135px;width:2.1rem;background:#fff;display: none;
+    text-align: center;padding:0.2rem 0; z-index:100;border:1px solid #dedede;border-bottom:4px solid #1d1d1d;}
+.font li a{display: block;color:#000;line-height:1.4rem;}
+.font li.big a{font-size:0.9rem;}
+.font li.middle a{font-size:0.8rem;}
+.font li.small a{font-size:0.6rem;}
+
+/*内页基础样式*/
+.det-main{min-height:11rem;}
+.det-text{padding:1rem 0.375rem;}
+.txt{line-height:1.5;}

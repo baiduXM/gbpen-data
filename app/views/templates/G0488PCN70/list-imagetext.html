@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <script type="text/javascript">
+        // 识别为手机客户端，自动跳转手机页面
+        {if $site_another_url}
+        if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+            location.href = '{$site_another_url}';
+        }
+        {/if}
+    </script>
+    <meta name="keywords" content="{$keywords}" />
+    <meta name="description" content="{$description}" />
+    <link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
+    <title>{$title}</title>
+    <link rel="stylesheet" href="{$site_url}css/style.css">
+    <script src="{$site_url}js/jquery-1.9.1.min.js"></script>
+    <script src="{$site_url}js/jquery.SuperSlide.2.1.1.js"></script>
+    <script src="{$site_url}js/index.js"></script>
+</head>
+<body>
+{include file="./_header.html"}
+<div class="det-ban">
+    <a class="ban-a" href="{$global.detImgNew.link}"><img src="{$global.detImgNew.image}" alt=""></a>
+    <div class="container">
+        <div class="det-titleBox">
+            <span class="en_name">{$list.en_name}</span>
+            <p class="name"><b>{$list.name}</b></p>
+            <ul class="pos">
+                <li><a href="{$site_url}"><img src="{$site_url}images/address.png" alt="">首页 :</a></li>
+                {foreach item=nav from=$posnavs}
+                <li class=""><a href="{$nav.link}">{$nav.name}</a><i> > </i></li>
+                {/foreach}
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="main det-main">
+    <div class="container">
+        <div class="list-imgT">
+            {foreach item=imgT from=$list.data}
+                <dl>
+                    <dt class="lt"><a href="{$imgT.link}"><img src="{$imgT.image}" alt=""></a></dt>
+                    <dd class="lt">
+                        <span> {$imgT.pubtimestamp|date_format:'%Y-%m-%d'}</span>
+                        <a href="{$imgT.link}"><h3> {$imgT.title}</h3></a>
+                        <p class="limit">{$imgT.description} </p>
+                        <a class="rt imgT-more" href="{$imgT.link}">查看详情 <img src="{$site_url}images/news_03.png" alt=""></a>
+                    </dd>
+                </dl>
+            {/foreach}
+        </div>
+        {include file="./_page.html"}
+    </div>
+</div>
+
+{include file="./_footer.html"}
+</body>
+</html>
+

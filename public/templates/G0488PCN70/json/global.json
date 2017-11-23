@@ -1,0 +1,122 @@
+{
+  "banner": {
+    "value": [
+      {
+        "title": "测试图2",
+        "image": "images/banner.jpg",
+        "link": "http://www.baidu.com"
+      },
+      {
+        "title": "测试图2",
+        "image": "images/banner.jpg",
+        "link": "http://www.baidu.com"
+      },
+      {
+        "title": "测试图2",
+        "image": "images/banner.jpg",
+        "link": "http://www.baidu.com"
+      }
+    ],
+    "description": "首页banner图",
+    "type": "images",
+    "config": {
+      "width": 1920,
+      "height":729
+    }
+  },
+  "pagenavs": {
+    "value": {},
+    "description": "侧边栏目列表（当前栏目无子栏目时展示的目标栏目）",
+    "type": "list",
+    "config": {
+      "filter": "list,page",
+      "mustchild": true
+    }
+  },
+
+  "footImg": {
+    "value": {
+      "title": "扫我可用手机浏览器哦",
+      "image": "images/icon_03.png",
+      "link": ""
+    },
+    "description": "",
+    "type": "image",
+    "config": {
+      "width": 85,
+      "height":85
+    }
+  },
+
+  "links": {
+    "value": [
+      {
+        "title": "百度贴吧",
+        "image": "",
+        "link": "http://tieba.baidu.com"
+      }, {
+        "title": "百度图片",
+        "image": "",
+        "link": "http://image.baidu.com"
+      }
+    ],
+    "description": "友情链接",
+    "type": "images",
+    "config": {
+      "width": 10,
+      "height": 10
+    }
+  },
+  "detImgPro": {
+    "value": {
+      "title": "",
+      "image": "images/img3.jpg",
+      "link": ""
+    },
+    "description": "产品页banner图",
+    "type": "image",
+    "config": {
+      "width": 1920,
+      "height":237
+    }
+  },
+  "detImgNew": {
+    "value": {
+      "title": "",
+      "image": "images/img2.jpg",
+      "link": ""
+    },
+    "description": "新闻页banner图",
+    "type": "image",
+    "config": {
+      "width": 1920,
+      "height":237
+    }
+  },
+  "detImgPage": {
+    "value": {
+      "title": "",
+      "image": "images/about_02.jpg",
+      "link": ""
+    },
+    "description": "单页面banner图",
+    "type": "image",
+    "config": {
+      "width": 1920,
+      "height":237
+    }
+  },
+  "proList": {
+    "value": {
+      "title": "",
+      "image": "",
+      "link": ""
+    },
+    "description": "产品详情页底部图片列表",
+    "type": "list",
+    "config": {
+      "width": 266,
+      "height":397
+    }
+  }
+}

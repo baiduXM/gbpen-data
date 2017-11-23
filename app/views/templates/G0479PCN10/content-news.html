@@ -40,7 +40,7 @@
                 <div class="prodetailpage">
                     <div class="news-hd">
                         <h2>{$article.title}</h2>
-                        <p>发布于:{$article.pubtimestamp|date_format:'%Y年%m月%d日'}</p>
+                        <p>发布于:{$article.pubtimestamp|date_format:'%Y-%m-%d'}</p>
                     </div>
                     <div>{$article.content|unescape:"html"}</div>
                     <div class="share" style="float:right;">

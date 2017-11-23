@@ -1,0 +1,58 @@
+<div id="had">
+    <div class="header">
+        <div class="container">
+            <div class="logo "><a href="{$site_url}"><img src="{$logo}" alt=""></a></div>
+            <div class="index-search det-search">
+                <div class="container">
+                    <form action="{$search_action}" method="GET" class="rt">
+                        <input class="input-sub" type="submit" value="" >
+                        <input class="input-txt" type="text" name="s" placeholder="请输入搜索关键词">
+                    </form>
+                </div>
+            </div>
+            <div id="nav" class="det-nav">
+                <ul class="nav">
+                    {$litmit=9}
+                    {if $navs|count lt $litmit}{$litmit = $navs|count}{/if}
+                    <li class="lt nav-li" style="width:{100/($litmit+1)}%"><a class="nav-a"  href="{$site_url}">首页</a></li>
+                    {foreach item=nav from=$navs}
+                    <li class="{if $nav.current}current{/if} lt nav-li" style="width:{100/($litmit+1)}%">
+                        <a class="nav-a" href="{$nav.link}">{$nav.name}</a>
+                        {if $nav.childmenu}
+                        <ul class="chilmenu">
+                            {foreach item=nav_list from=$nav.childmenu}
+                            <li class="{if $nav_list.current}current{/if}">
+                                <a class="navC-a" href="{$nav_list.link}"> {$nav_list.name}</a>
+                                {if $nav_list.childmenu}
+                                <ul class="three-chilmenu">
+                                    {foreach item=nav_lists from=$nav_list.childmenu}
+                                    <li class="{if $nav_lists.current}current{/if}">
+                                        <a class="navC-a" href="{$nav_lists.link}"> {$nav_lists.name}</a>
+                                        {if $nav_lists.childmenu}
+                                        <ul class="four-chilmenu">
+                                            {foreach item=navLists from=$nav_lists.childmenu}
+                                            <li class="{if $navLists.current}current{/if}">
+                                                <a class="navC-a" href="{$navLists.link}"> {$navLists.name}</a>
+                                            </li>
+                                            {if $navLists@index+1 eq 4}{break}{/if}
+                                            {/foreach}
+                                        </ul>
+                                        {/if}
+                                    </li>
+                                    {if $nav_lists@index+1 eq 4}{break}{/if}
+                                    {/foreach}
+                                </ul>
+                                {/if}
+                            </li>
+                            {if $nav_list@index+1 eq 4}{break}{/if}
+                            {/foreach}
+                        </ul>
+                        {/if}
+                    </li>
+                    {if $nav@index+1 eq $litmit}{break}{/if}
+                    {/foreach}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

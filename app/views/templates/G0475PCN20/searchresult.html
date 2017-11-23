@@ -73,7 +73,7 @@
 		  		<span><a href="{$site_url}">首页</a> {foreach item=nav from=$posnavs} <a href="{$nav.link}">>{$nav.name}</a> {/foreach}</span>
 			</div>
 		</div>
-		<div id="content">
+		<div id="content1">
 			<div class="content">
 				<div class="main">
 					{if $search.total eq 0}
@@ -82,7 +82,7 @@
 					<div class="sear_tit1">以下是您输入的搜索关键词“{$search.keyword}”的搜索结果，共{$search.total}条</div>
 					<ul class="sear_tit">
 					{foreach name=article item=list1 from=$search.data}
-						<li><a href="{$list1.link}"><h2>{$list1.title}</h2><p>{$list1.description}</p></a></li>
+						<li><a href="{$list1.link}"><h2>{$list1.title}</h2></a></li>
 					{/foreach}
 					</ul>
 					{include file='./_page.html'}
