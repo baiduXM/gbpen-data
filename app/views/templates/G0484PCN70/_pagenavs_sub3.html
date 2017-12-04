@@ -1,0 +1,56 @@
+
+	<div class="box wow fadeInLeft">
+		{if $pagenavs}
+			<div class="box-hd"><h2>{$posnavs[0].name}</h2></div>
+			<ul class="first">
+				{foreach item=nav from=$pagenavs}
+				<li>
+					<a href="{$nav.link}"><span>{$nav.name}</span></a>
+					{if $nav.childmenu}
+					<ul class="second">
+						{foreach item=nav_list from=$nav.childmenu}
+						<li>
+							<a href="{$nav_list.link}">{$nav_list.name}</span></a>
+							{if $nav_list.childmenu}
+							<ul class="third">
+								{foreach item=nav_last from=$nav_list.childmenu}
+									<li><a href="{$nav_last.link}">{$nav_last.name}</a></li>
+								{/foreach}
+							</ul>
+							{/if}
+						</li>
+						{/foreach}
+					</ul>
+					{/if}
+				</li>
+				{/foreach}
+			</ul>
+		{else}  <!-- 无子栏目时 -->
+			<div class="box-hd"><h2>{$_pagenavs_sub3.pagenavs.name}</h2></div>
+			<ul class="first">
+				{foreach item=nav from=$_pagenavs_sub3.pagenavs.childmenu}
+				<li>
+					<a href="{$nav.link}"><span>{$nav.name}</span><i>∧</i></a>
+					{if $nav.childmenu}
+					<ul class="second">
+						{foreach item=nav_list from=$nav.childmenu}
+						<li>
+							<a href="{$nav_list.link}">{$nav_list.name}</span><i>∧</i></a>
+							{if $nav_list.childmenu}
+							<ul class="third">
+								{foreach item=nav_last from=$nav_list.childmenu}
+									<li><a href="{$nav_last.link}">{$nav_last.name}</a></li>
+								{/foreach}
+							</ul>
+							{/if}
+						</li>
+						{/foreach}
+					</ul>
+					{/if}
+				</li>
+				{/foreach}
+			</ul>
+		{/if}
+	</div>
+			
+

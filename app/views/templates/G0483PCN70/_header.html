@@ -1,0 +1,19 @@
+<div class="header1">
+	<div class="wrap_logo fl"><a href="{$site_url}" class="logo"><img src="{$logo}"></a></div>
+	<div class="navBar">
+		<ul class="nav clearfix">
+			{foreach name=navs item=nav from=$navs}
+			<li class="m {if $nav.current}on{/if} nav_li" style="width:{100/(($navs|count))}%">
+				<a href="{$nav.link}"><span>{$nav.name}</span></a>
+				{if $nav.childmenu}
+				<ul class="sub">
+					{foreach key=key item=nav_list from=$nav.childmenu}
+					<li><a class="kz" data-limit="6" href="{$nav_list.link}">{$nav_list.name}</a></li>
+					{/foreach}
+				</ul>
+				{/if}
+			</li>
+			{/foreach}
+		</ul>
+	</div>
+</div>

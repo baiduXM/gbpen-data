@@ -4,7 +4,7 @@
         {foreach item=nav from=$pagenavs}
         <li class="one-li"><a href="{$nav.link}"><span> {$nav.name}</span> </a>
             {if $nav.childmenu}
-            <i class="one-i"><img src="images/xx_03.png" alt=""></i>
+            <i class="one-i"><img src="{$site_url}images/xx_03.png" alt=""></i>
             <ul class="two">
                 {foreach item=nav_list from=$nav.childmenu}
                 <li class="two-li"><a href="{$nav_list.link}"><span> {$nav_list.name}</span></a>

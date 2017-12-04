@@ -1,0 +1,35 @@
+{
+	"about": {
+		"description": "关于我们",
+		"value": {},
+		"type": "page",
+		"config": {
+			"nav_width": 321,
+			"nav_height": 56
+		}
+		
+	},	
+	"news":{
+		"description":"新闻中心",
+		"value":{},
+		"type":"list",
+		"config": {
+			"nav_width": 321,
+			"nav_height": 56
+		}
+	},
+	"pro":{
+		"description": "产品中心",
+		"value": {},
+		"type": "list",
+		"config":{
+			"width":147,
+			"height":147
+		}
+	},
+	"left_nav":{
+		"description": "首页分类",
+		"value": {},
+		"type": "list"
+	}
+}

@@ -1,0 +1,18 @@
+<div id="footer">
+    <div class="footer wow rotateInDownLeft">
+    	<div class="picMarquee-left clear">
+            <h2>友情链接</h2>
+            <div class="bd">
+                <ul class="picList clear">
+                	{foreach item=flink from=$global.links}
+                    <li>
+                        <div class="pic"><a href="{$flink.link}" target="_blank"><img src="{$flink.image}"></a></div>
+                    </li>
+                    {/foreach}
+                </ul>
+            </div>      
+        </div>
+    	<div>{$footprint}</div>
+    </div>
+</div>
+{$footscript}

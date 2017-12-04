@@ -2,7 +2,11 @@
 "about": {
 		"value": "关于我们",
 		"description": "关于我们",
-		"type": "page"
+		"type": "page",
+		"config": {
+			"nav_width": 136,
+			"nav_height": 136
+		}
 	},
 	"contacta": {
 		"value": "联系我们的更多",
@@ -13,7 +17,11 @@
 	"products": {
 		"value": {},
 		"description": "产品展示",
-		"type": "list"
+		"type": "list",
+		"config":{
+			"width":179,
+			"height":179
+		}
 	},
 	
 	"contact":{

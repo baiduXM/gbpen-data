@@ -15,7 +15,7 @@ $(function(){
 
     banner();
 
-    asideBanner();
+
 
 });
     function banner() {
@@ -645,32 +645,7 @@ $(function(){
 
 
 
-    function asideBanner() {
-        var oAsideBanner = document.getElementById('aside_banner');
-        if( oAsideBanner ){
-            var galleryTop = new Swiper('.gallery-top', {
-                nextButton: '.swiper-button-next',
-                prevButton: '.swiper-button-prev',
-                paginationClickable: true,
-                autoplayDisableOnInteraction : false,
-                loopedSlides: 4, //looped slides should be the same
-                loop:true,
-                autoplay: 4000,
-            });
-            var galleryThumbs = new Swiper('.gallery-thumbs', {
-                spaceBetween: 10,
-                slidesPerView: 3,
-                touchRatio: 0.2,
-                loop:true,
-                loopedSlides: 4, //looped slides should be the same
-                slideToClickedSlide: true,
-                autoplayDisableOnInteraction : false,
-                paginationClickable: true
-            });
-            galleryTop.params.control = galleryThumbs;
-            galleryThumbs.params.control = galleryTop;
-        }
-    }
+    
 
 
 
@@ -747,3 +722,9 @@ function getByClass( oParent, sClass ) {
     return aResult;
 }
 
+$(function(){
+    // 产品图滚动
+    jQuery(".picFocus").slide({ mainCell:".bd ul",effect:"left",autoPlay:true, });  
+    jQuery(".picFocus .hd").slide({mainCell:"ul",autoPage:true,effect:"left",autoPlay:true,vis:3,prevCell:".left",nextCell:".down",trigger:"click"});
+   
+})

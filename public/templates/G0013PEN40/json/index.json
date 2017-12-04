@@ -2,21 +2,35 @@
 	"about": {
 		"description": "关于我们",
 		"value": {},
-		"type": "page"
+		"type": "page",
+		"config": {
+			"nav_width": 118,
+			"nav_height": 81
+		}
 		
 	},	
 	
 	"pro":{
 		"description": "产品中心",
 		"value": {},
-		"type": "list"
+		"type": "list",
+		"config":{
+			"width":100,
+			"height":65
+		}
 	},	
 	
 	"case":{
 		"description": "案例展示",
 		"value": {},
-		"type": "list"
-	},"video": {
+		"type": "list",
+		"config":{
+			"width":115,
+			"height":115
+		}
+	},
+
+	"video": {
 		"value": "http://player.youku.com/player.php/Type/Folder/Fid/25949051/Ob/1/sid/XMTI5NDQyNDkzNg==/v.swf",
 		"description": "视频，建议用swf格式",
 		"type": "text"

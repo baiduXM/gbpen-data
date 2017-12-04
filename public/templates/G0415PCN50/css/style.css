@@ -7,6 +7,7 @@ body{
     font-size: 14px;
     background: #ffffff;
 }
+ul,dl,li,i{list-style:none;}
 /* header */
 #header{
     width: 100%;
@@ -1657,86 +1658,25 @@ body{
     text-decoration: none;
     color: #5b5b5b;
 }
-#dqwz .wz a:hover{
-    color: #84a114;
-}
+#dqwz .wz a:hover{color: #84a114;}
+
+
+.picFocus{ margin:0 auto;width: 492px;height: 327px;position:relative;zoom:1;}
+.picFocus img{max-width: 100%;max-height: 100%;}
+.picFocus .bd ul li{width:100%;height:100%;float: left;}
+.picFocus .bd ul li .pimg{width:492px;height:327px;line-height: 0;display: table-cell;text-align: center;vertical-align: middle;}
+.picFocus .hd{width:300px;height:60px;padding:10px 96px;overflow:hidden;position:absolute;bottom:-10px;background-color: rgba(0, 0,0, 0.6);filter:progid:DXImageTransform.Microsoft.gradient(startcolorstr=#2f000000,endcolorstr=#2f000000);}
+.picFocus .hd ul{width: 100%;height:60px;overflow:hidden; zoom:1;}
+.picFocus .hd ul li{width:92px; height:60px;float:left;margin-right:10px;position: relative;}
+.picFocus .hd ul li .hd_div{width:100px; height:60px;overflow: hidden;cursor:pointer;display: table-cell;text-align: center;vertical-align: middle;}
+.picFocus .hd ul li em{display: block;width: 100%;height: 100%;position: absolute;top: 0;left: 0;background-color: rgba(0, 0,0, 0.6);filter:progid:DXImageTransform.Microsoft.gradient(startcolorstr=#2f000000,endcolorstr=#2f000000);}
+.picFocus .hd ul li.on em{display: none;}
+.picFocus .hd .up,.picFocus .hd .down{width: 58px;height:80px;position: absolute; top:0;z-index: 1;}
+.picFocus .hd .up{left:22px;background: url(../images/proleft.png) center no-repeat;}
+.picFocus .hd .down{right:22px;background: url(../images/proright.png) center no-repeat;}
 
 
 
-#aside_banner{
-    width: 492px;
-    height: 327px;
-    margin: 0 auto;
-    position: relative;
-}
-#aside_banner  .swiper-container {
-    width: 100%;
-    height: 327px;
-    margin-left: auto;
-    margin-right: auto;
-}
-#aside_banner .gallery-top {
-    height: 100%;
-    width: 100%;
-}
-#aside_banner .gallery-thumbs {
-    height: 80px;
-    box-sizing: border-box;
-    padding: 10px 0;
-    display: inline-block;
-    width: 60%;
-}
-#aside_banner  .gallery-thumbs .swiper-slide {
-    height: 100%;
-    opacity: 0.4;
-}
-#aside_banner .gallery-thumbs .swiper-slide-active {
-    opacity: 1;
-}
-#aside_banner .swiper-slide{
-    width: 100%;
-    height: 327px;
-    display: table-cell;
-    vertical-align: middle;
-    text-align: center;
-}
-#aside_banner .swiper-slide img{
-    max-width: 100%;
-    max-height: 100%;
-}
-#aside_banner .bottom{
-    width: 100%;
-    line-height: 0;
-    height: auto;
-    margin: 0 auto;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    background: #000;
-    opacity: 0.7;
-    filter:alpha(opacity=70);
-    z-index: 100;
-}
-#aside_banner .swiper-button-next{
-    position: absolute;
-    top: 50%;
-    margin-top: -16px;
-    margin-right: 16px;
-    width: 32px;
-    height: 32px;
-    background: url("../images/proright.png");
-    background-size: 100% 100%;
-}
-#aside_banner .swiper-button-prev{
-    position: absolute;
-    top: 50%;
-    margin-top: -16px;
-    margin-left: 16px;
-    width: 32px;
-    height: 32px;
-    background: url("../images/proleft.png");
-    background-size: 100% 100%;
-}
 
 
 

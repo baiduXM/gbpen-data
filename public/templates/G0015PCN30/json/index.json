@@ -1,0 +1,34 @@
+{
+	
+    "about_us": {
+		"description": "左上方内容单页（如关于我们栏目）",
+		"value": {},
+		"type": "page",
+		"config": {
+			"nav_width": 107,
+			"nav_height": 107
+		}
+	},
+	"news":{
+		"description": "右上方方文字列表页（如新闻栏目）",
+		"value": {},
+		"type": "list",
+		"config":{
+			"showchilddata":"true"
+		}	
+
+	},
+	"pro":{
+		"description":"底部图片列表(如产品展示)",
+		"value":{},
+		"type":"list",
+		"config":{
+			"width":167,
+			"height":167
+		}
+	}
+}
+               
+
+
+

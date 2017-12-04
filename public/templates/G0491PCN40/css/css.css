@@ -439,7 +439,7 @@ ul.third li a.thirda:hover{text-decoration:underline;color: #000;text-decoration
 /*内页面包屑样式，可自行编辑*/
 .crumb{padding-left: 40px;height:40px;line-height:40px;margin-top: 20px;   font-size:14px; font-weight:bold;  overflow:hidden ;background:url(../images/link_title_bg.jpg) repeat-x bottom left -60px;padding-bottom: 34px; }
 .crumb p{  font-weight:bold; font-size:24px;height:40px;line-height:40px;  overflow:hidden; background:url(../images/sub_ico.jpg) no-repeat 15px center;max-width: 300px;float: left}
-.crumb i{ display: block; font-weight:normal; font-size:24px;height:40px;line-height:40px;  overflow:hidden; background:url(../images/sub_ico.jpg) no-repeat 15px center; padding-left:10px;max-width: 200px;float: left;}
+.crumb i{ display: block; font-weight:normal;padding-right: 6px; font-size:24px;height:40px;line-height:40px;  overflow:hidden; background:url(../images/sub_ico.jpg) no-repeat 15px center; padding-left:10px;max-width: 200px;float: left;}
 
 .crumb span{ float:right;  color:#999; font-size:12px; font-weight:normal; background:url(../images/icion_4.jpg) no-repeat 5px; padding-left: 10px;padding-right:10px;}
 .crumb span a{ background:url(../images/icion_6.jpg) no-repeat 5px; padding-left:15px; }

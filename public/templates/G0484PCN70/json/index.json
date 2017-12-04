@@ -1,0 +1,50 @@
+{
+	"slidepics": {
+		"value": [{
+			"title": "banner",
+			"image": "images/banner.png",
+			"link": "article/1.html",
+			"description": "banner1"
+		}, {
+			"title": "测试图2",
+			"image": "images/banner.png",
+			"link": "http://www.baidu.com"
+		},{
+			"title": "测试图3",
+			"image": "images/banner.png",
+			"link": "http://www.baidu.com"
+		}],
+		"description": "头部大轮滚图",
+		"type": "images",
+		"config": {
+			"width": 1900,
+			"height": 930
+		}
+	},
+    "about_us": {
+		"description": "关于我们",
+		"value": "",
+		"type": "page"
+	},
+	"list":{
+		"description": "产品文字列表",
+		"value": {},
+		"type": "list",
+		"config": {
+			"height": 429,
+			"width":460
+		}	
+	},
+	"pro":{
+		"description": "产品中心",
+		"value": {},
+		"type": "list",
+		"config": {
+			"width": 535,
+			"height": 383
+		}
+	}
+}
+               
+
+

@@ -1,0 +1,16 @@
+  <div class="link">
+    <div class="linkbox">
+     <span>友情链接 :</span>
+     {$limit =  3}
+      {foreach name=flink item=flink from=$global.flinks}
+      <a href="{$flink.link}">{$flink.title}</a> 
+	  {if $flink@index+1 gte $limit}{break}{/if}
+      | 
+      {/foreach}
+    </div>
+  </div>
+  <div class="footer">
+    {$footprint}     
+   
+  </div>
+{$footscript}    

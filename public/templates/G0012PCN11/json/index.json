@@ -3,7 +3,11 @@
 	"about": {
 		"description": "关于我们",
 		"value": {},
-		"type": "page"
+		"type": "page",
+		"config": {
+			"nav_width": 455,
+			"nav_height": 338
+		}
 		
 	},
 	"inmov":{
@@ -31,12 +35,20 @@
 	"news":{
 		"description":"新闻中心",
 		"value":{},
-		"type":"list"
+		"type":"list",
+		"config":{
+			"width":150,
+			"height":150
+		}
 	},
 
 	"case":{
 		"description": "案例展示",
 		"value": {},
-		"type": "list"
+		"type": "list",
+		"config":{
+			"width":150,
+			"height":150
+		}
 	}
 }

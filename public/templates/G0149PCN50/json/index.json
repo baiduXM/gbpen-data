@@ -2,19 +2,31 @@
 	"about": {
 		"description": "关于我们",
 		"value": {},
-		"type": "page"
+		"type": "page",
+		"config": {
+			"nav_width": 91,
+			"nav_height": 104
+		}
 	},	
 	
 	"pro":{
 		"description": "产品中心",
 		"value": {},
-		"type": "list"
+		"type": "list",
+		"config":{
+			"width":106,
+			"height":106
+		}
 	},	
 	
 	"news":{
 		"description": "首页新闻",
 		"value": {},
-		"type": "list"
+		"type": "list",
+		"config":{
+			"width":110,
+			"height":110
+		}
 	},
 	
 	"btn1":{
@@ -22,7 +34,9 @@
 		"value":{},
 		"type":"list",
 	"config":{
-			"filter":"list,page"
+			"filter":"list,page",
+			"width":332,
+			"height":127
 		}
 	},
 
@@ -31,7 +45,9 @@
 		"value":{},
 		"type":"list",
 	"config":{
-			"filter":"list,page"
+			"filter":"list,page",
+			"width":280,
+			"height":127
 		}
 	},
 	"num": {

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <script type="text/javascript">
+        // 识别为手机客户端，自动跳转手机页面
+        {if $site_another_url}
+        if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+            location.href = '{$site_another_url}';
+        }
+        {/if}
+    </script>
+    <meta name="keywords" content="{$keywords}" />
+    <meta name="description" content="{$description}" />
+    <link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
+    <title>{$title}</title>
+    <link rel="stylesheet" href="{$site_url}css/style.css">
+    <script src="{$site_url}js/jquery-1.9.1.min.js"></script>
+    <script src="{$site_url}js/jquery.SuperSlide.2.1.1.js"></script>
+    <script src="{$site_url}js/index.js"></script>
+</head>
+<body>
+{include file="./_header.html"}
+<div class="bg1"><img src="{$site_url}images/bg_02.png" alt=""></div>
+<div class="main det-main" >
+    <div class="container">
+        <div class="det-lt">
+            {include file="./_pagenavs.html"}
+            <img class="ltBg" src="{$site_url}images/about_13.png" alt="">
+        </div>
+        <div class="det-rt">
+            <div class="pos">
+                <span class="list_name">{$list.name}</span>
+                <ul class="posnavs rt">▶
+                    <li><a href="{$site_url}">首页</a></li>
+                    {foreach item=nav from=$posnavs}
+                    <li class=""><i> - </i><a href="{$nav.link}">{$nav.name}</a></li>
+                    {/foreach}
+                </ul>
+            </div>
+            <div class="det-cont">
+                <div class="txt">  {$list.content|unescape:"html"}</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="foot-list">
+            <ul class="footNav">
+                {$litmit=6}
+                {if $navs|count lt $litmit}{$litmit = $navs|count}{/if}
+                {foreach item=nav from=$navs}
+                <li class="{if $nav.current}current{/if}  " style="width:{100/($litmit)-1}%">
+                    <a class="f-li" href="{$nav.link}">{$nav.name}</a>
+                    {if $nav.childmenu}
+                    <ul class="f-chilmenu">
+                        {foreach item=nav_list from=$nav.childmenu}
+                        <li class="{if $nav_list.current}current{/if}">
+                            <a class="f-liC" href="{$nav_list.link}"> {$nav_list.name}</a>
+                        </li>
+                        {/foreach}
+                    </ul>
+                    {/if}
+                </li>
+                {if $nav@index+1 eq $litmit}{break}{/if}
+                {/foreach}
+            </ul>
+            <div class="foot-img rt">
+                <dl>
+                    <dt><img src="{$global.footImg.image}" alt=""></dt>
+                    <dd>{$global.footImg.title}</dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+</div>
+{include file="./_footer.html"}
+</body>
+</html>

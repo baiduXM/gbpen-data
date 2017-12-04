@@ -1,0 +1,58 @@
+{
+ 
+"list1": {
+		"value": {},
+		"description": "新闻列表",
+		"type": "list",
+		"config":{
+			"star_only": true
+		}
+	},
+ 
+"about": {
+		"value": "关于我们",
+		"description": "关于我们",
+		"type": "page",
+		"config":{
+			"nav_width":162,
+			"nav_height":127
+		}
+	},
+	"contact": {
+		"value": "联系我们",
+		"description": "联系我们",
+		"type": "list"
+		
+	},
+	
+	
+	"products": {
+		"value": {},
+		"description": "产品展示",
+		"type": "list",
+		"config":{
+			"width":209,
+			"height":209
+		}
+	},
+
+	"video": {
+		"value": "http://player.youku.com/player.php/Type/Folder/Fid/25949051/Ob/1/sid/XMTI5NDQyNDkzNg==/v.swf",
+		"description": "视频",
+		"type": "text"
+	},
+	"indexleftimage": {
+		"value": {
+			"title": "首页侧边栏目底部图片",
+			"image": "images/bei.png",
+			"link": "http://www.baidu.com/"
+		},
+		"description": "侧边栏目底部图片",
+		"type": "image",
+		"config": {
+			"width":174,
+			"height": 89
+		}
+	}
+			
+}

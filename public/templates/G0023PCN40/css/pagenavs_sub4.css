@@ -1,0 +1,24 @@
+.category{ height:auto; overflow:hidden; margin:0px auto; width:260px;}
+.category ul li a{display:block; background:url(../images/first_link.png) no-repeat; height:38px; padding-left:65px;font-size:16px; line-height:42px; overflow:hidden;}
+.category ul li a:link,.category ul li a:visited{ color:#333333; }
+.category ul li a:hover{ color:#ffffff; background:url(../images/first_hover.png) no-repeat 0px 0px;  }
+ul.second{ width:197px; height:auto; overflow:hidden; margin-left:39px;}
+ul.second li a{font-size:12px;height:auto; height:28px; line-height:28px;padding-left:35px;margin-bottom:0px; background:none; font-size:14px; border-bottom:1px solid #dddddd; }
+ul.second li a:link,ul.second li a:visited{ color:#333; background:none;}
+ul.second li a:hover{color:#10f3f1; background:none;}
+ul.third li a{width:100%; font-size:12px;height:auto; line-height:28px; padding-left:48px; height:28px; display:block; font-weight:normal;border-bottom:none; background:url(../images/thirdicon_l.jpg) 55px no-repeat;}
+ul.third li a:link,ul.third li a:visited{ color:#666666;}
+ul.third li a:hover{color:#c03; }
+
+
+.category ul.third { display:none; margin:0px;}
+.category  ul.third { display:none; margin:0px;}
+.category  ul.second ul.third { display:none; margin:0px;}
+.category ul.second{ display:none;}
+
+.category  li.current ul.second li.current ul.third{ display:block; margin:0px;}
+.category  li.current ul.second { display:block;}
+
+.category  li a.selected{ color:#ffffff; background:url(../images/first_hover.png) no-repeat 0px 0px;  }
+.category  li ul.second li a.selected {color:#10f3f1;font-weight:normal; background:none;}
+.category  li ul.second li ul.third li a.selected{ color:#c03;}

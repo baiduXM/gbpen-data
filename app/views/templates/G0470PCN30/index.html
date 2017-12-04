@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <script type="text/javascript">
+        // 识别为手机客户端，自动跳转手机页面
+        {if $site_another_url}
+        if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+            location.href = '{$site_another_url}';
+        }
+        {/if}
+    </script>
+    <meta name="keywords" content="{$keywords}" />
+    <meta name="description" content="{$description}" />
+    <link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
+    <title>{$title}</title>
+    <link rel="stylesheet" href="{$site_url}css/style.css">
+    <script src="{$site_url}js/jquery-1.9.1.min.js"></script>
+    <script src="{$site_url}js/jquery.SuperSlide.2.1.1.js"></script>
+    <script src="{$site_url}js/index.js"></script>
+    {$headscript}
+</head>
+<body>
+{include file="./_header.html"}
+<div class="bg1"><img src="{$site_url}images/bg_02.png" alt=""></div>
+<div class="main">
+    <div class="main1">
+        <div class="container">
+            <div class="m1-slide">
+                <div class="hd">
+                    <a class="prev"><img src="{$site_url}images/icon_07.png" alt=""></a>
+                    <a class="next"><img src="{$site_url}images/icon_10.png" alt=""></a>
+                </div>
+                <div class="bd">
+                    <ul class="picList">
+                        {foreach item=m1 from=$index.list1.data}
+                        <li>
+                            <div class="pic"><a href="{$m1.link}"><img src="{$m1.image}" /></a></div>
+                            <div class="title"><a href="{$m1.link}">{$m1.title}</a></div>
+                        </li>
+                        {/foreach}
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="main2">
+      <div class="container">
+          <div class="m2-lt">
+                <div class="m2-title">
+                    <span>{$index.list2.name}</span>
+                    <a class="rt" href="{$index.list2.link}">点击查看 ▶</a>
+                </div>
+                <dl>
+                   <dt><a href="{$index.list2.link}"><img src="{$index.list2.image}" alt=""></a></dt>
+                   <dd class="rt"> <a href="{$index.list2.link}" class="limit" data-limit="250">
+                       {$index.list2.description}
+                       </a></dd>
+                </dl>
+          </div>
+          <div class="m2-rt rt">
+              <div class="m2-title">
+                  <span>{$index.list3.name}</span>
+                  <a class="rt" href="{$index.list3.link}">点击查看 ▶</a>
+              </div>
+              <div class="m2-rt-cont">
+                  {foreach item=m3 from=$index.list3.data}
+                  <dl>
+                      <dt><a href="{$m3.link}"><img src="{$m3.image}" alt=""></a></dt>
+                      <dd class="rt">
+                          <a href="{$m3.link}">
+                          <h4>{$m3.title}</h4>
+                          <span>发布日期: {$m3.pubtimestamp|date_format:'%Y-%m-%d'}</span>
+                          <p class="limit" data-limit="107">{$m3.description}<i>【查看更多】</i></p>
+                          </a>
+                      </dd>
+                  </dl>
+                  {if $m3@index+1 == 2}{break}{/if}
+                  {/foreach}
+              </div>
+          </div>
+      </div>
+    </div>
+    <div class="main3">
+        <div class="container">
+            <div class="m3-title">
+                <span>{$index.list4.name}</span>
+                <a class="rt" href="{$index.list4.link}">点击查看▶</a>
+            </div>
+            <div class="m3-content">
+                {foreach item=m4 from=$index.list4.data}
+                    <dl class="lt">
+                        <dt><a href="{$m4.link}"><img src="{$m4.image}" alt=""></a></dt>
+                        <dd><a href="{$m4.link}">{$m4.title}</a></dd>
+                    </dl>
+                {if $m4@index+1 == 6}{break}{/if}
+                {/foreach}
+            </div>
+            <a class="m4-more" href="{$index.list4.link}">查看更多</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="foot-list">
+            <ul class="footNav">
+                {$litmit=6}
+                {if $navs|count lt $litmit}{$litmit = $navs|count}{/if}
+                {foreach item=nav from=$navs}
+                <li class="{if $nav.current}current{/if}  " style="width:{100/($litmit)-1}%">
+                    <a class="f-li" href="{$nav.link}">{$nav.name}</a>
+                    {if $nav.childmenu}
+                    <ul class="f-chilmenu">
+                        {foreach item=nav_list from=$nav.childmenu}
+                        <li class="{if $nav_list.current}current{/if}">
+                            <a class="f-liC" href="{$nav_list.link}"> {$nav_list.name}</a>
+                        </li>
+                        {/foreach}
+                    </ul>
+                    {/if}
+                </li>
+                {if $nav@index+1 eq $litmit}{break}{/if}
+                {/foreach}
+            </ul>
+            <div class="foot-img rt">
+                <dl>
+                    <dt><img src="{$global.footImg.image}" alt=""></dt>
+                    <dd>{$global.footImg.title}</dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+</div>
+{include file="./_footer.html"}
+</body>
+</html>

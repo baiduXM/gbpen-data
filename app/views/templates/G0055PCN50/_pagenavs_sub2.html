@@ -1,0 +1,34 @@
+<!-- 二级栏目列表（仅展示到二级子栏目） -->
+{if $pagenavs}
+<nav>
+	 
+      <div class="list_lf fl" style="background: url({$index.indexleftimage.image}) no-repeat bottom;">
+	<ul class="clearfix">
+		{foreach name=pagenavs item=nav from=$pagenavs}
+		<li class="{if $nav.current}current{/if}">
+			<a href="{$nav.link}" class="choose">{$nav.name}</a>
+		</li>
+		{if $nav@index+1 == 5}{break}{/if}
+		{/foreach}
+	</ul>
+	
+    </div>
+    
+</nav>
+{else}	<!-- 让客服自己选择，如果当前无子栏目 展现的目标栏目 -->
+<nav>
+	  
+	   <div class="list_lf fl" style="background: url({$index.indexleftimage.image}) no-repeat bottom;">
+	<ul class="clearfix">
+		{foreach name=pagenavs2 item=nav from=$_pagenavs_sub2.pagenavs.childmenu}
+		<li class="{if $nav.current}current{/if}">
+			<a href="{$nav.link}">{$nav.name}</a>
+		</li>
+		{if $nav@index+1 == 5}{break}{/if}
+		{/foreach}
+	</ul>
+	
+	</div>
+	
+</nav>
+{/if}

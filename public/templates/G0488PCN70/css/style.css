@@ -45,7 +45,8 @@ img{max-width:100%;max-height:100%;vertical-align: middle;}
 .nav li a{font-size:14px;color:#666;line-height:30px;height:30px;overflow: hidden;display: inline-block;border-bottom:2px solid transparent;}
 .nav li.nav-li>a:hover{border-bottom:2px solid #000;color:#000;}
 .nav li.nav-li.current>a{border-bottom:2px solid #000;color:#000;}
-.nav li .chilmenu{position: absolute;top:32px;width:400px;text-align: center;left:50%;margin-left:-200px;display: none;}
+.nav li .chilmenu{position: absolute;top:32px;width:400px;text-align: center;
+    left:50%;margin-left:-200px;display: none;background: #fff;z-index:10;}
 .nav li .chilmenu li{width:24%;display:inline-block;margin:0 auto;vertical-align: top;line-height:20px; }
 .nav li .chilmenu li a{line-height:20px;height:20px;border:none;text-align: left;}
 .nav li .chilmenu>li{padding:6px 0 0;}
@@ -62,8 +63,9 @@ img{max-width:100%;max-height:100%;vertical-align: middle;}
 
 .en_name{color:#333;font-size:18px;}
 .name{margin-top:7px;}
-.name b{color:#333;font-size:36px;font-weight: bold;margin-right:10px;}
-.name span{font-size:18px;color:#666;display: inline-block;height:22px;line-height:22px;
+.name b{color:#333;font-size:36px;font-weight: bold;margin-right:10px;max-width:215px;height:47px;line-height:47px;display: inline-block;;vertical-align: middle;
+    overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.name span{font-size:18px;color:#666;display: inline-block;height:22px;line-height:22px;width:300px;
     overflow: hidden;text-overflow: ellipsis;white-space: nowrap;vertical-align: bottom;}
 
 .S-brand{padding:80px 0;}

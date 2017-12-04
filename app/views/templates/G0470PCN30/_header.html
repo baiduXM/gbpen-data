@@ -1,0 +1,43 @@
+<div class="header">
+    {include file="./_nav.html"}
+
+    <div class=" banner">
+        <div id="slideBox" class="banBox">
+            <div class="bd">
+                <ul>
+                    {foreach item=banner from=$global.banner}
+                    <li><a href="{$banner.link}"><img src="{$banner.image}" /></a></li>
+                    {/foreach}
+                </ul>
+            </div>
+            <div class="hd">
+                <ul><li> </li><li> </li><li> </li></ul>
+            </div>
+
+        </div>
+    </div>
+    <div class="banner-btn">
+        <div class="container">
+            <div class="contact">
+                <img src="{$site_url}images/img_03.png" alt="">
+                <span>咨询热线 : <b>{$contact.telephone}</b></span>
+            </div>
+            <div class="ban-search rt">
+                <form action="{$search_action}" method="GET">
+                    <input class="input-txt" type="text" name="s" placeholder="请输入搜索关键词">
+                    <input class="input-sub" type="submit" value="" >
+                </form>
+                <ul class="icon-btn">
+                    <li class="weixin">
+                        <a href="javasctipt:"><img src="{$global.weixin.image}" alt=""></a>
+                        <div>
+                            <p><img src="{$global.weixinMa.image}" alt=""></p>
+                        </div>
+                    </li>
+                    <li class="weibo" ><a href="{$global.weibo.link}"><img src="{$global.weibo.image}" alt=""></a></li>
+                    <li class="kefu"><a href="{$global.kefu.link}"><img src="{$global.kefu.image}" alt=""></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
