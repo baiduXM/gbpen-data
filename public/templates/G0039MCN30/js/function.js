@@ -51,7 +51,7 @@ $(document).ready(function(){
 		$(".class").removeClass("page-prev").addClass("page-in");
 		$(".wrap").removeClass("page-active").addClass("page-next page-in")
 		$(".opacity2").show()
-		pageSlideOver();
+		// pageSlideOver();
 		
 	})
 	$(".class-close,.opacity2").on('touchstart',function(){
@@ -59,7 +59,7 @@ $(document).ready(function(){
 		$(".wrap").removeClass("page-next").addClass(" page-out")
 		$(".opacity2").hide()
 		$(".newsclass").removeClass("show")
-		pageSlideOver();
+		// pageSlideOver();
 		return false;
 	})
 
@@ -68,7 +68,7 @@ $(document).ready(function(){
 		$(".class").removeClass("page-prev").addClass("page-in");
 		$(".wrap").removeClass("page-active").addClass("page-next page-in")
 		$(".opacity2").show()
-		pageSlideOver();
+		// pageSlideOver();
 		
 	})
 	$(".class-close,.opacity2").on('touchstart',function(){
@@ -76,7 +76,7 @@ $(document).ready(function(){
 		$(".wrap").removeClass("page-next").addClass(" page-out")
 		$(".opacity2").hide()
 		$(".newsclass").removeClass("show")
-		pageSlideOver();
+		// pageSlideOver();
 		return false;
 	})	
 

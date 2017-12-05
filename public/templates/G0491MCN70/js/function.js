@@ -7,7 +7,7 @@ $(document).ready(function() {
         // console.log(reg);
         var reg1 = text.substr(2);
         // console.log(reg);
-        data.empty().append("<span style='color: #333333; font-size: 1.4rem;font-weight: bold; display: block'>"+reg+"</span>"+reg1);
+        data.empty().append("<span style='color: #333333; font-size: 1.2rem;font-weight: bold; display: block'>"+reg+"</span>"+reg1);
     }
 
     starColor($("#header_text").html(),$("#header_text"));
