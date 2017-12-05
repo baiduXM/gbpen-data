@@ -1,3 +1,19 @@
+$(document).ready(function() {
+
+    function starColor(html,data){
+        var text = html;
+        // console.log(text);
+        var reg = text.substr(0,2);
+        // console.log(reg);
+        var reg1 = text.substr(2);
+        // console.log(reg);
+        data.empty().append("<span style='color: #333333; font-size: 1.4rem;font-weight: bold; display: block'>"+reg+"</span>"+reg1);
+    }
+
+    starColor($("#header_text").html(),$("#header_text"));
+});
+
+
 $(document).ready(function(){
 	/*大图js效果*/
 	TouchSlide({ 
@@ -12,10 +28,34 @@ $(document).ready(function(){
 				
 $(window).load(function(){
 /*美工专属区域*/
-  
+$(".homenav ul li .pix i.iconfont").css({"color":"#fff","font-size":"23px","text-align":"center"})
+
+$(".homenav ul li").eq(0).addClass("bg1")
+$(".homenav ul li").eq(1).addClass("bg2")
+$(".homenav ul li").eq(2).addClass("bg3")
+$(".homenav ul li").eq(3).addClass("bg4")
+$(".homenav ul li").eq(4).addClass("bg5")
+$(".homenav ul li").eq(5).addClass("bg6")
+
+$("#in_image .inner ul li .pix").height($("#in_image .inner ul li .pix").width())
+$(".list_image ul li .pix").height($(".list_image ul l .pixi").width())
+
+
+
+var m=($("#in_page").width()-$("#in_page .tit").width())*0.5
+$("#in_page .tit").css({"left":m-15})
+
+
 
 /*美工专属区域*/
-	
+/*	$(".homenav ul li a").each(function(index, element) {
+        if((index+1) % 4==1)
+		{
+			$(element).css({"background":"#255bb1","color":"#fff"})}
+		if((index+1) % 4==0)
+		{   
+		    $(element).css({"background":"#255bb1","color":"#fff"})}
+    });*/
 	
 /*标题自适应宽度*/		
 	$(".yc ul li").each(function(){
@@ -36,7 +76,6 @@ $(window).load(function(){
                                         var alimat6 = $(".decurlits");
                                         alimat6.height(heights6);
 	img.src=$(".prolist img").attr("src");
-	$(".index-wrap").height($(".wrap").height())
 	$(".class-m").height($(".class").outerHeight()-$(".class-top").outerHeight())
 	$(".menulist dl").height($(".menulist dl").width())
 	$(".menu").height($(".menulist dl").outerHeight())
@@ -60,7 +99,6 @@ $(window).load(function(){
 			
 			
 	$(".class-m").height($(".class").outerHeight()-$(".class-top").outerHeight())
-	 $(".index-wrap").height($(".wrap").height()+$(".quickbar-tips").height()) 
 	//赖加载
 	
 	});
@@ -104,10 +142,8 @@ $(window).load(function(){
           setHeighti();								
  $(window).resize(function(){
 	setTimeout(setHeighti);
-	 })		;
- $("#in_text .inner ul li:even").css({"float":"left"});
- $("#in_text .inner ul li:odd").css({"float":"right"});
-
+	 })		
+	
   //隐藏导航跟wrap的切换
   $("#daohang,#header_menu,#fixed_menu").click(function(){
 		$("#quickbar-navs").removeClass("page-prev").addClass("page-in");
@@ -179,7 +215,7 @@ $(window).load(function(){
 
 	})		
 	//返回顶部开始
-	$(".back-top").click(function(){$(".index-wrap").animate({scrollTop :0}, 800)})
+	$(".back-top").click(function(){$("#quickbar-wrap-body").animate({scrollTop :0}, 800)})
 	$("#share_btn").click(function(){
 		$(".newsclass").addClass("show")
 		$(".opacity2").show()
@@ -193,79 +229,4 @@ $(window).load(function(){
 	})
   	});
 	//分享取消按钮结束
-$(function(){
-	$(".show").css("margin-top","14rem");
-    //
-    // var swiper = new Swiper('.swiper-container');
-    //
-    // $(".button-collapse").sideNav({
-    //     menuWidth: 300, // Default is 240
-    //     edge: 'left', // Choose the horizontal origin
-    //     closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
-    //     draggable: true // Choose whether you can drag to open on touch screens
-    // });
-    //
 
-
-    // TouchSlide({
-    //     slideCell:"#slideBox",
-    //     titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
-    //     mainCell:".bd ul",
-    //     effect:"leftLoop",
-    //     autoPage:true,//自动分页
-    //     autoPlay:true,
-    //     interTime:6000 //自动播放
-    // });
-    //展开下一级
-    $("ul.sidemenu li a").click(function () {
-        $(this).parent().siblings().find("ul").slideUp()//如果要点击其他缩上去则增加这句
-        $(this).next("ul").slideToggle(300);
-    })
-//    当前选中项的所有父节点都显示出来，程序会将点击的li项默认添加.current
-    $("ul.sidemenu li.current").parents().show();
-
-    $(".aside").hide()
-
-    $(".inside .title img").on("click",function(){
-        $(".aside").stop().slideToggle("slow")
-    })
-});
-$(document).ready(function() {
-
-    function starColor(html,data){
-        var text = html;
-        // console.log(text);
-        var reg = text.substr(0,2);
-        // console.log(reg);
-        var reg1 = text.substr(2);
-        // console.log(reg);
-        data.empty().append("<span style='color: #333333; font-size: 1.4rem;font-weight: bold; display: block'>"+reg+"</span>"+reg1);
-    }
-
-    starColor($("#header_text").html(),$("#header_text"));
-    console.log($("#header_text").html());
-    console.log($("#header_text"));
-    $(document).ready(function(){
-        TouchSlide({
-            slideCell:"#slideBox",
-            titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
-            mainCell:".bd ul",
-            effect:"leftLoop",
-            autoPage:true,//自动分页
-            autoPlay:true,
-            interTime:6000 //自动播放
-        });
-    });
-
-});
-$(function () {
-    function dtWidth() {
-        var width = $(".show ul li").width() + 2;
-        $(".show ul li").css("height", width + "px");
-        var divWidth = $(".show ul li  a").width() + 2;
-        $(".show ul li a").css("height", divWidth + "px");
-    }
-});
-
-
-	

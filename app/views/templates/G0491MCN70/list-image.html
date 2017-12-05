@@ -33,23 +33,21 @@
 <meta name="description" content="{$description}" />
 <link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
 <title>{$title}</title>
-    <link rel="stylesheet" href="{$site_url}css/reset.css"/>
-    <link rel="stylesheet" href="{$site_url}css/public.css"/>
-    <link href="{$site_url}css/css.css" rel="stylesheet" type="text/css"/>
-    <link href="{$site_url}css/swipe.css" rel="stylesheet" type="text/css"/>
-    <link rel="stylesheet" rev="stylesheet" href="{$site_url}css/style_{$stylecolor}.css" type="text/css"/>
-    <script src="{$site_url}js/jquery.min.js"></script>
-    <script src="{$site_url}js/swiper.jquery.min.js"></script>
-    <script src="{$site_url}/js/fontsize.js"></script>
-    <script src="{$site_url}js/share.js" ></script>
+<link rel="stylesheet" href="{$site_url}css/reset.css" />
+<link rel="stylesheet" href="{$site_url}css/public.css" />
+<link href="{$site_url}css/css.css" rel="stylesheet" type="text/css" />
+<link href="{$site_url}css/swipe.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" rev="stylesheet" href="{$site_url}css/style_{$stylecolor}.css" type="text/css" />
     <script src="{$site_url}js/fontsize.js"></script>
+    <script src="{$site_url}js/jquery.min.js"></script>
+    <script src="{$site_url}js/share.js"></script>
     <script src="{$site_url}js/idangerous.swiper-2.0.min.js"></script>
     <script src="{$site_url}js/idangerous.swiper.3dflow-2.0.js"></script>
+    <script src="{$site_url}js/simple-app.js"></script>
     <script src="{$site_url}js/TouchSlide.1.1.js"></script>
     <script src="{$site_url}js/jquery.SuperSlide.2.1.1.js"></script>
     <script src="{$site_url}js/materialize.min.js"></script>
     <script src="{$site_url}js/swiper.min.js"></script>
-    <script src="{$site_url}js/simple-app.js"></script>
     <script src="{$site_url}js/function.js"></script>
 <script type="text/javascript">
 	window.addEventListener('load', function(){
@@ -58,80 +56,39 @@
 </script>
 </head>
 <body>
-<div class="body">
-  <div class="wrap page-active">
-    <div class="index-wrap"> {include file='./_header.html'}
+
+    <div class="index-wrap"> 
+     {include file="./_header.html"}
       <section>
+ 
         <div class="boxmaind">
           <div class="boxmain_d">
-              <h1 class="boxmain-top">
+         <h1 class="boxmain-top">
          <span class="more3" id="first"><span id="down"> ∧</span><span id="up"> ∨ </span></span>
-         <div class="sub_zh">{$list.name}</div><div class="sub_en">{$list.en_name}</div></h1>
+       <div class="sub_zh">{$list.name}</div></h1>
          
-        <!--<h1 class="boxmain-top2">
-         <span class="more3" id="font">字+</span> <span class="more3" id="first">分类<span id="down"> ∧</span><span id="up"> ∨ </span></span><div class="sub_zh">产品中心</div><div class="sub_en">products</div></h1>-->
-            
-        <!--<h1 class="boxmain-top3">
-         <span class="font1" id="font">字+</span> <span class="first" id="first">分类<span id="down"> ∧</span><span id="up"> ∨ </span></span>
-         <div class="sub">
-         <div class="sub_en public_bg">products</div>
-         <div class="sub_zh">产品中心</div>
-         </div>
-         </h1>-->
             {include file='./_nav.html'}
             <div class="main">
               <div class="list_image yc">
                 <ul class="clearfix">
-                  {foreach name=article item=article from=$list.data}
-                  <li><a href="{$article.link}">
-                    <div> <b><img src="{$article.image}" width="100%" title="160*150"></b>
-                      <p class="imgword">{$article.title}</p>
-                    </div>
-                    </a> </li>
+                  {foreach name=article item=article from=$list.data}                    
+             
+                 <li><a href="{$article.link}">
+                 <div class="imgpic"><img src="{$article.image}" width="100%" title="160*150"></div>
+             
+                  <div class="imgword"><p>{$article.title}</p></div>
+                  </a>
+              </li>
                       {if $article@index+1 == 12} {break} {/if}
                     {/foreach}
                 </ul>
-                <div class="next1"><a href="{$page_links.first_link}">首页</a><a href="{$page_links.prev_link}">  上一页</a>{$page_links.current_page}/{$page_links.page_count}　<a href="{$page_links.next_link}">下一页 </a><a href="{$page_links.last_link}">尾页 </a></div>
+                <div class="next1 public_color"><a href="{$page_links.first_link}" class="public_color">首页</a><a href="{$page_links.prev_link}" class="public_color">上一页</a>{$page_links.current_page}/{$page_links.page_count}　<a href="{$page_links.next_link}" class="public_color">下一页</a><a href="{$page_links.last_link}" class="public_color">尾页</a></div>
               </div>
             </div>
           </div>
         </div>
-          <div class="link wrapper">
-              <div class="title">
-                  <h4>联系方式</h4>
-                  <h5>CONTACT</h5>
-              </div>
-              <div class="con clearfix">
-                  <div class="address left">
-                      <p>
-                          {$contact.address}
-                      </p>
-                      <a href="http://wpa.qq.com/msgrd?v=3&uin=345100504&site=qq&menu=yes">
-                      <img src="{$site_url}images/qqtalk.png" alt=""/></a>
-                  </div>
-                  <div class="code right">
-                      <img src="{$site_url}images/code.jpg" alt=""/>
-                  </div>
-              </div>
-          </div>
-          <!--com-->
-          <div class="com">
-              <ul class="clearfix">
-                  <li><a href="javascript:;">泉州总部</a></li>
-                  <li><a href="javascript:;">广州公司</a></li>
-                  <li><a href="javascript:;">珠海公司</a></li>
-                  <li><a href="javascript:;">香港公司</a></li>
-                  <li><a href="javascript:;">东莞公司</a></li>
-              </ul>
-          </div>
-          <!--telephone-->
-          <div class="telephone">
-              {$footprint}
-          </div>
-          {$footscript}
       </section>
-    </div>
-  </div>
-  </div>
+        {include file="./_boot.html"}
+  {$footscript} </div>
 </body>
 </html>

@@ -1,27 +1,27 @@
 
 <div class="header wrapper clearfix">
-  <div class="logo left button-collapse">
-    <a href="{$site_url}"><img src="{$logo}"></a>
-  </div>
-  <div class="address  left" id="header_text">{$contact.company}
-  </div>
-  <!--<div class="menuBtn button-collapse" id="header_menu"  data-activates="slide-out" >-->
-  
-  <!--</div>-->
-  <div class="header_menu" id="header_menu"><A href="#"><img src="{$site_url}images/icion_1.png" width="100%"></A></div>
+    <div class="logo left button-collapse">
+        <a href="{$site_url}"><img src="{$logo}"></a>
+    </div>
+    <div class="address  left" id="header_text">{$contact.company}
+    </div>
+    <!--<div class="menuBtn button-collapse" id="header_menu"  data-activates="slide-out" >-->
+    
+    <!--</div>-->
+    <div class="header_menu" id="header_menu"><A href="#"><img src="{$site_url}images/icion_1.png" width="100%"></A></div>
 </div>
 <div class="baner">
-  <div id="slideBox" class="slideBox">
-    <div class="hd">
-      <ul>
-      </ul>
+    <div id="slideBox" class="slideBox">
+        <div class="hd">
+            <ul>
+            </ul>
+        </div>
+        <div class="bd">
+            <ul>
+                {foreach name=slidepics item=slidepic from=$global.slidepics}
+                <li><a class="pic" href="{$slidepic.link}"><img src="{$slidepic.image}" title="500*245" /></a></li>
+                {/foreach}
+            </ul>
+        </div>
     </div>
-    <div class="bd">
-      <ul>
-        {foreach name=slidepics item=slidepic from=$global.slidepics}
-        <li><a class="pic" href="{$slidepic.link}"><img src="{$slidepic.image}" title="500*245" /></a></li>
-        {/foreach}
-      </ul>
-    </div>
-  </div>
 </div>

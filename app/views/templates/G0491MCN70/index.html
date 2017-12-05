@@ -40,20 +40,17 @@
     <link href="{$site_url}css/css.css" rel="stylesheet" type="text/css"/>
     <link href="{$site_url}css/swipe.css" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" rev="stylesheet" href="{$site_url}css/style_{$stylecolor}.css" type="text/css"/>
-    <script src="{$site_url}js/jquery.min.js"></script>
-    <script src="{$site_url}js/swiper.jquery.min.js"></script>
-    <script src="{$site_url}/js/fontsize.js"></script>
-    <script src="{$site_url}js/share.js" ></script>
     <script src="{$site_url}js/fontsize.js"></script>
+    <script src="{$site_url}js/jquery.min.js"></script>
+    <script src="{$site_url}js/share.js"></script>
     <script src="{$site_url}js/idangerous.swiper-2.0.min.js"></script>
     <script src="{$site_url}js/idangerous.swiper.3dflow-2.0.js"></script>
+    <script src="{$site_url}js/simple-app.js"></script>
     <script src="{$site_url}js/TouchSlide.1.1.js"></script>
     <script src="{$site_url}js/jquery.SuperSlide.2.1.1.js"></script>
     <script src="{$site_url}js/materialize.min.js"></script>
     <script src="{$site_url}js/swiper.min.js"></script>
-    <script src="{$site_url}js/simple-app.js"></script>
     <script src="{$site_url}js/function.js"></script>
-
     <script type="text/javascript">
         window.addEventListener('load', function () {
             setTimeout(function () {
@@ -64,72 +61,40 @@
     {$headscript}
 </head>
 <body>
-<div class="body">
-    <div class="wrap page-active">
-        <div class="index-wrap">
-            {include file="./_header.html"}
-            {include file="./_pro.html"}
-            <section>
-                {foreach name=mIndexCats item=mIndexCat from=$mIndexCats}
-                {if $mIndexCat.type eq 2}
-                <div id="in_image" class="wrapper">
-                    <h2 class="in_h2">
-                        <div class="in_zh">{$mIndexCat.name}</div>
-                        <div class="in_en">{$mIndexCat.en_name}</div>
-                    </h2>
-                    <div class="inner yc">
-                        <ul class="clearfix">
-                            {foreach item=article from=$mIndexCat.data}
-                            <li><a href="{$article.link}">
-                                <div class="in_proimg"><img src="{$article.image}" width="100%" title="160*150"></div>
-                            </a>
-                            </li>
-                            {if $article@index+1 == 8}{break}{/if}
-                            {/foreach}
-                        </ul>
-                    </div>
-                    <a href="{$mIndexCat.link}" class="in_more">更多+</a>
-                </div>
-                {/if}
-                {/foreach}
-            </section>
-            <div class="link wrapper">
-                <div class="title">
-                    <h4>联系方式</h4>
-                    <h5>CONTACT</h5>
-                </div>
-                <div class="con clearfix">
-                    <div class="address left">
-                        <p>
-                            {$contact.address}
-                        </p>
-                        <a href="http://wpa.qq.com/msgrd?v=3&uin=345100504&site=qq&menu=yes">
-                        <img src="{$site_url}images/qqtalk.png" alt=""/></a>
-                    </div>
-                    <div class="code right">
-                        <img src="{$site_url}images/code.jpg" alt=""/>
-                    </div>
-                </div>
-            </div>
-            <!--com-->
-            <div class="com">
+
+<div class="index-wrap">
+    {include file="./_header.html"}
+    {include file="./_pro.html"}
+    <section>
+
+        {foreach name=mIndexCats item=mIndexCat from=$mIndexCats}
+        {if $mIndexCat.type eq 2}
+
+        <div id="in_image" class="wrapper">
+            <h2 class="in_h2">
+                <div class="in_zh">{$mIndexCat.name}</div>
+                <div class="in_en">{$mIndexCat.en_name}</div>
+            </h2>
+            <div class="inner yc">
                 <ul class="clearfix">
-                    <li><a href="javascript:;">泉州总部</a></li>
-                    <li><a href="javascript:;">广州公司</a></li>
-                    <li><a href="javascript:;">珠海公司</a></li>
-                    <li><a href="javascript:;">香港公司</a></li>
-                    <li><a href="javascript:;">东莞公司</a></li>
+                    {foreach item=article from=$mIndexCat.data}
+                    <li><a href="{$article.link}">
+                        <div class="in_proimg"><img src="{$article.image}" width="100%" title="160*150"></div>
+                    </a>
+                    </li>
+                    {if $article@index+1 == 8}{break}{/if}
+                    {/foreach}
                 </ul>
             </div>
-
-            <!--telephone-->
-            <div class="telephone">
-                {$footprint}
-            </div>
-            {$footscript}
+            <a href="{$mIndexCat.link}" class="in_more">更多+</a>
         </div>
-    </div>
+        {/if}
+        {/foreach}
+    </section>
+    {include file="./_boot.html"}
+</div>
 
+{$footscript}
 </div>
 </body>
 </html>
