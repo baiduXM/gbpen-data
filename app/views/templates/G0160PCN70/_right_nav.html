@@ -1,0 +1,14 @@
+ <h3 class="right_title">
+ 		{foreach item=navx from=$posnavs}
+ 		{if $navx@index+1 eq $navx@total}
+			{$navx.name}
+ 		{/if}
+ 		{/foreach}
+ 	
+ 	<i class="f_r">当前位置：
+ 		<a href="{$site_url}">首页</a>
+ 		{foreach item=nav from=$posnavs}
+			-<a href="{$nav.link}">{$nav.name}</a>
+ 		{/foreach}
+	</i> 
+ </h3>

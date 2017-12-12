@@ -88,9 +88,9 @@ p{line-height:26px;}
 
 #cont2{background: url(../images/index_02_03.png) no-repeat;background-size:100% 100%;padding:30px 0;}
 h5.cont2-title{height:42px;line-height:42px;color:#fff;font-size:18px;background: #003c94;width:100%;text-align: center;}
- ul.cont2-ul{width:1230px;overflow: hidden;}
+ ul.cont2-ul{width:1200px;overflow: hidden;}
  ul.cont2-ul li{width:272px;height:272px;padding:1px;background: #fff;
-    border:1px solid #e2e2e2;display: inline-block;margin-right:27px;margin-top:30px;position: relative;}
+    border:1px solid #e2e2e2;display: inline-block;margin-right:27px;margin-top:30px;position: relative; overflow: hidden;}
  ul.cont2-ul li a img{max-width:100%;max-height:100%;}
 .list2-des{display:none;position: absolute;top:1px;left:1px;background: rgba(241,2241,241,.5);width:202px;height:227px;padding:27px 35px 18px;text-align: center;}
 .list2-des span{color:#cc0000;font-size:18px;}
@@ -246,7 +246,7 @@ background: url(../images/index_032.png) no-repeat;padding:5px;}
 .result li:hover p{color:#cc0000;}
 .result li:hover time{color:#cc0000;}
 .result li:hover p:before{background:#cc0000;}
-
+.result1 li p{ width:100% !important;}
 .page{text-align: center;margin-top:40px;}
 .page li{display: inline-block;}
 .page li a{display:inline-block;color:#666;font-size:12px;width:24px;height:24px;border-radius:14px;

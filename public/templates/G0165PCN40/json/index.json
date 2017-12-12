@@ -1,0 +1,40 @@
+{   
+	"list1": {
+		"value": {},
+		"description": "首页左侧分类列表",
+		"type": "list",
+		"config": {
+			"mustchild": true
+		}
+	},
+	"pageimgs": {
+     "value":{},
+		"description": "banner下方图片轮播",
+		"type": "list",
+		"config": {
+			"width": 256,
+			"height": 186
+		}
+	},
+	"page": {
+		"value": {},
+		"description": "banner下方单页面",
+		"type": "page"
+	},	
+	"list2": {
+		"value": {},
+		"description": "中间文字列表",
+		"type": "list"	
+	},
+	"list3": {
+		"value": {},
+		"description": "下方图片滚动",
+		"type": "list",
+		"config": {
+			"width": 133,
+			"height": 107
+		}
+	}	
+}
+
+

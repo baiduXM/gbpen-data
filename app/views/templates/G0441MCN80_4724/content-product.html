@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{$title}</title>
+    <script type="text/javascript">
+        // 跳转PC页面
+        {if $site_another_url}
+        if (!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+            location.href = '{$site_another_url}';
+        }
+        {/if}
+    </script>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no,minimal-ui">
+    <meta name="keywords" content="{$keywords}" />
+    <meta name="description" content="{$description}" />
+    <link rel="stylesheet" href="{$site_url}css/swiper-3.3.1.min.css" />
+    <link rel="stylesheet" href="{$site_url}css/style.css">
+    <script src="{$site_url}js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="{$site_url}js/jquery.min.js"></script>
+    <script type="text/javascript" src="{$site_url}js/swiper-3.3.1.jquery.min.js"></script>
+    <script type="text/javascript" src="{$site_url}js/simple-app.js"></script>
+    <script  type="text/javascript" src="{$site_url}js/jquery.SuperSlide.2.1.1.js"></script>
+    <script type="text/javascript" src="{$site_url}js/index.js"></script>
+
+    <script type="text/javascript">
+        window.addEventListener('load', function(){
+            setTimeout(function(){ window.scrollTo(0, 1);}, 100);
+        });//safari浏览器可以通过此代码来隐藏地址栏
+    </script>
+</head>
+<body>
+<div class="detHad">
+    <a class="back x-child" href="javascript:history.back(-1)">返回</a>
+    <span class="detHad-name x-child">{$article.category.name}</span>
+    <span class="font-size rt x-child">字 +</span>
+    <div class="font">
+        <ul>
+            <li class="big"><a href="javascript:" onclick="changeFontSize2('0.8')">大</a></li>
+            <li class="middle"><a href="javascript:" onclick="changeFontSize2('0.7')">中</a></li>
+            <li class="sm"><a href="javascript:" onclick="changeFontSize2('0.6')">小</a></li>
+        </ul>
+    </div>
+</div>
+<div class="det-main">
+    <div class="det-text ">
+        <div class="pro-slide">
+            <h5 class="pro-title">{$article.title}</h5>
+            <div class="swiper-container swiper-product " >
+                <ul class="swiper-wrapper ">
+                    {foreach name=pro item=pro from=$article.images}
+                    <li class="swiper-slide"><a href="{$pro.link}" ><img src="{$pro.image}" alt=""></a></li>
+                    {/foreach}
+                </ul>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        <div class="det-txt">{$article.content|unescape:"html"}</div>
+        <ul class="page-pro">
+            <li><a href="{$article.prev.link}">上一个</a></li>
+            <li><a href="{$article.next.link}">下一个</a></li>
+            <li><a href="javascript:history.back(-1)">返回</a></li>
+        </ul>
+    </div>
+</div>
+
+{include file="./_footer.html"}
+</body>
+</html>

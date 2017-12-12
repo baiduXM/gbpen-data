@@ -5,8 +5,12 @@
 				<span class="fw fl">服务热线<br />{$global.quhao}</span>
 				<span class="num fl">{$global.num}</span>
 			</div>
+			{if $global.wbOff eq 1}
 			<div class="sns fl"><a class="wx" alt="{$global.erweima.title}"><img src="{$global.erweima.image}"></a></div>
+			{/if}
+			{if $global.erweimaOff eq 1}
 			<div class="sns fl"><a class="wb"><iframe src="http://widget.weibo.com/relationship/followbutton.php?uid={$global.wb}&btn=red&style=1&language=zh_cn" max-width="67" max-height="24" frameborder="0" scrolling="no" marginheight="0"></iframe></a></div>
+			{/if}
 		</div>
 	</div>
 	<div class="nav">

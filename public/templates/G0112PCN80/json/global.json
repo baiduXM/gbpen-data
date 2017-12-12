@@ -1,0 +1,62 @@
+{
+ "slidepics":{
+	"value":[{
+		
+		"title":"测试图1",
+		"image":"images/banner.jpg",
+		"link":"http://www.baidu.com"
+	},{
+		"title":"测试图1",
+		"image":"images/banner.jpg",
+		"link":"http://www.baidu.com"
+	
+	},{
+		"title":"测试图1",
+		"image":"images/banner.jpg",
+		"link":"http://www.baidu.com"
+	
+	}
+	
+	],
+	"description":"大轮滚动",
+	"type":"images",
+	"config": {
+			"width": 1120,
+			"height": 500,
+			"limit": 3
+ 
+			}
+ 
+ },
+	"second_navs1": {
+		"value": {},
+		"description": "第二导航（联系我们下方）1",
+		"type": "page",
+		"config": {
+			"width": 155,
+			"height": 77
+			
+		}
+	},
+	"second_navs2": {
+		"value": {},
+		"description": "第二导航（联系我们下方）2",
+		"type": "page",
+		"config": {
+			"width": 155,
+			"height": 77
+			
+		}
+	},
+	"ftlogo": {
+		"value": {},
+		"description": "底部logo",
+		"type": "page",
+		"config": {
+			"width": 155,
+			"height": 77
+			
+		}
+	}
+ }
+ 

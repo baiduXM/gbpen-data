@@ -1,0 +1,37 @@
+{	
+	"about": {
+		"description": "关于我们",
+		"value": {},
+		"type": "page"
+		
+	},	
+	"news":{
+		"description":"新闻中心",
+		"value":{},
+		"type":"list",
+		"config":{
+			"width":68,
+			"height":68
+		}
+	},
+	
+	"pro":{
+		"description": "产品中心",
+		"value": {},
+		"type": "list",
+		"config":{
+			"width":150,
+			"height":150
+		}
+	},	
+	
+	"case":{
+		"description": "案例展示",
+		"value": {},
+		"type": "list",
+		"config":{
+			"width":120,
+			"height":92
+		}
+	}
+}

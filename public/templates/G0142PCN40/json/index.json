@@ -1,0 +1,36 @@
+{
+    
+    "about_us": {
+		"description": "关于我们",
+		"value": {},
+		"type": "page",
+		"config": {
+			"nav_width": 134,
+			"nav_height": 107
+		}
+	},
+    "pro": {
+		"description": "首页右下角图片列表滚动图",
+		"value": {},
+		"type": "list",
+		"config":{
+			"width":121,
+			"height":121
+		}
+	},		
+	"left_nav":{
+		"value":{},
+		"type":"list",
+		"description":"首页侧边栏导航"
+	},
+	"show":{
+		"value":{},
+		"type":"list",
+		"description":"首页右侧滚图",
+		"config":{
+			"width":268,
+			"height":192
+		}		
+	}
+	
+}

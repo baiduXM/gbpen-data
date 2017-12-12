@@ -1,0 +1,49 @@
+{
+		
+
+		"list":{
+		"description": "产品列表",
+		"value": {},
+		"type": "list"
+		
+			
+	}   ,
+
+
+		"about": {
+	    "value": {},
+		"description": "关于我们",		
+		"type": "page",		
+		"config": {
+			"nav_width":424,
+			"nav_height":90
+		}
+		
+	}   ,
+
+		"news":{
+		"description": "新闻中心",
+		"value": {},
+		"type": "list",
+		"config": {
+			"nav_width": 90,
+			"nav_height":90
+		}
+			
+	}    ,  
+	
+	
+	  "products":{
+		"description": "产品中心",
+		"value": {},
+		"type": "list",
+		"config": {
+			"width":245,
+			"height":245
+		}
+	}  	
+
+
+
+	
+}

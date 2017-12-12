@@ -1,0 +1,60 @@
+{
+	
+	"recommend":{
+		"description":"单排图片滚动",
+		"value":{},
+		"type":"list",
+		"config": {
+			"filter": "list",
+			"width": 203,
+			"height": 300,
+			"star_only": true
+		}
+	},
+	"about": {
+		"description": "单页面(关于我们)",
+		"value": {},
+		"type": "page"
+	},
+	"pro":{
+		"description":"双排滚动图片",
+		"type":"list",
+		"value": [{
+			"title": "测试图1",
+			"image": "images/pic_01.jpg",
+			"link": "article/1.html",
+			"description": "banner1"
+		}, {
+			"title": "测试图2",
+			"image": "images/pic_02.jpg",
+			"link": "http://www.baidu.com"
+		}],
+		"config": {
+			"width": 174,
+			"height": 207,
+			"star_only": true
+		}
+	},
+	"back": {
+		"value": {
+			"title": "树木",
+			"image": "images/back_01.jpg",
+			"link": "http://www.baidu.com/"
+		},
+		"description": "背景图片",
+		"type": "image",
+		"config": {
+			"height": 733,
+			"width":1920
+		}
+	},
+	"news":{
+		"description": "首页文字列表(新闻中心)",
+		"value": {},
+		"type": "list",
+		"config": {
+			"showchilddata":true,
+			"star_only": true
+		}
+	}
+}

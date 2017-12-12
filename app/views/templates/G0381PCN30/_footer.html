@@ -1,0 +1,24 @@
+
+<div class="footer_bg">
+  <div class=" wrapper">
+    <div id="link">
+      <div class="link_top"></div>
+      <div class="link_inner">
+        <p><img src="{$site_url}images/link_title.jpg" width="191" height="25" /></p>
+        {foreach name=friend item=friend from=$global.links} <a href="{$friend.link}">{$friend.title}</a>|{/foreach} </div>
+      <div class="link_bot"></div>
+    </div>
+  </div>
+  <div class="cpt">
+    <div class="wrapper">{$footprint}</div>
+  </div>
+</div>
+{$footscript}
+<!--#*
+{foreach name=navs item=nav from=$navs}
+<a href="{$nav.link}" >{$nav.name}</a> |{/foreach}
+
+<a href="index.html" target="_blank">首页</a> | {foreach name=navs item=nav from=$navs}<a href="{$nav.link}">{$nav.name}</a> | {/foreach}
+
+{$footprint}
+*#-->

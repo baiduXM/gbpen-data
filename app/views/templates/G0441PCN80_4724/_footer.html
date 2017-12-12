@@ -1,0 +1,51 @@
+<div id="footer">
+    <div class="link">
+        <div class=" container">
+            <ul>
+                <li>友情链接 : </li>
+                {foreach key=key item=link from=$global.links}
+                <li class="fl"><a href="{$link.link}">{$link.title}</a><i>|</i></li>
+                {/foreach}
+            </ul>
+        </div>
+    </div>
+    <div class="foot">
+        <div class="container">
+            <div class="footNav">
+                <ul class="f-nav">
+                    {$litmit=5}
+                    {if $navs|count lt $litmit}{$litmit = $navs|count}{/if}
+                    {foreach item=nav from=$navs}
+                    <li class="{if $nav.current}current{/if}  f-nav-li" style="width:{100/($litmit)-1}%">
+                        <a class="f-nav-a" href="{$nav.link}"><span>{$nav.name}</span></a>
+                        {if $nav.childmenu}
+                        <ul class="f-chilmenu">
+                            {foreach item=nav_list from=$nav.childmenu}
+                            <li class="{if $nav_list.current}current{/if}">
+                                <a class="f-navC-a" href="{$nav_list.link}"> {$nav_list.name} </a>
+                            </li>
+                            {/foreach}
+                        </ul>
+                        {/if}
+                    </li>
+                    {if $nav@index+1 eq $litmit}{break}{/if}
+                    {/foreach}
+                </ul>
+
+                <div class="footMa rt">
+                    {foreach item=ma from=$global.footMa}
+                    <dl>
+                        <dt><img src="{$ma.image}" alt=""></dt>
+                        <dd>{$ma.title}</dd>
+                    </dl>
+                    {if $ma@index+1 == 2}{break}{/if}
+                    {/foreach}
+                </div>
+            </div>
+            <div class="copy">
+                {$footprint}
+            </div>
+        </div>
+    </div>
+
+</div>

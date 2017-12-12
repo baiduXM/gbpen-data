@@ -1,0 +1,42 @@
+{
+
+	"list1": {
+		"value": {},
+		"description": "关于我们版块",
+		"type": "page",
+		"config": {
+			"nav_width": 95,
+			"nav_height": 95
+		}
+	},
+	"list2": {
+		"value": {},
+		"description": "第二个栏目列表",
+		"type": "list"
+	}, 
+
+
+	"list3": {
+		"value": {},
+		"description": "第三个栏目列表",
+		"type": "list",
+		"config":{
+			"width":133,
+			"height":133
+		}
+	},
+	"nav1": {
+		"value": {},
+		"description": "首页快速侧边导航",
+		"type": "nav",
+		"config": {
+			"filter": "ALL",
+			"nav_width": 200,
+			"nav_height": 200,
+			"width": 200,
+			"height": 120
+		}
+	}
+}
+
+

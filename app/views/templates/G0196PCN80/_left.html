@@ -1,0 +1,109 @@
+<div class="left">
+          <div class="list">
+          {if $pagenavs}
+              <div  class="listtilte">{$posnavs[0].name}<b>{$posnavs[0].en_name}</b></div>
+              <div class="listbg">
+                  <ul class="first">
+                      {foreach item=nav from=$pagenavs}
+
+                      <li class="{if $nav.current}current{/if}">
+                          <a href="{$nav.link}">{$nav.name}</a>
+                          {if $nav.childmenu}
+                          <ul class="second">
+                              {foreach key=key item=nav_list from=$nav.childmenu}
+
+                              <li class="{if $nav_list.current}current{/if}">
+                                  <a href="{$nav_list.link}">{$nav_list.name}</a>
+                                  {if $nav_list.childmenu}
+                                  <ul class="third">
+                                      {foreach key=key item=nav_listse from=$nav_list.childmenu}
+
+                                      <li class="{if $nav_listse.current}current{/if}">
+                                          <a href="{$nav_listse.link}">{$nav_listse.name}</a>
+                                          {if $nav_listse.childmenu}
+                                          <ul class="four">
+                                              {foreach key=key item=nav_last from=$nav_list.childmenu}
+
+                                              <li class="{if $nav_last.current}current{/if}">
+                                                 <a href="{$nav_last.link}">{$nav_last.name}</a>
+                                              </li>
+
+                                              {/foreach}
+                                          </ul>
+                                          {/if}
+                                      </li>
+
+                                      {/foreach}
+                                  </ul>
+                                  {/if}
+                              </li>
+
+                              {/foreach}
+                          </ul>
+                          {/if}
+                      </li>
+
+                      {/foreach}
+                  </ul>
+              </div>
+              {else}  <!-- 让客服自己选择，如果当前无子栏目 展现的目标栏目 -->
+              <div  class="listtilte">{$global.pagenavs.name}<b>{$global.pagenavs.en_name}</b></div>
+              <div class="listbg">
+                  <ul class="first">
+                      {foreach name=pagenavs2 item=nav from=$global.pagenavs.childmenu}
+
+                      <li class="{if $nav.current}current{/if}">
+                          <a href="{$nav.link}">{$nav.name}</a>
+                          {if $nav.childmenu}
+                          <ul class="second">
+                              {foreach key=key item=nav_list from=$nav.childmenu}
+
+                              <li class="{if $nav_list.current}current{/if}">
+                                  <a href="{$nav_list.link}">{$nav_list.name}</a>
+                                  {if $nav_list.childmenu}
+                                  <ul class="third">
+                                      {foreach key=key item=nav_listse from=$nav_list.childmenu}
+
+                                      <li class="{if $nav_listse.current}current{/if}">
+                                          <a href="{$nav_listse.link}">{$nav_listse.name}</a>
+                                          {if $nav_listse.childmenu}
+                                          <ul class="four">
+                                              {foreach key=key item=nav_last from=$nav_list.childmenu}
+
+                                              <li class="{if $nav_last.current}current{/if}">
+                                                 <a href="{$nav_last.link}">{$nav_last.name}</a>
+                                              </li>
+
+                                              {/foreach}
+                                          </ul>
+                                          {/if}
+                                      </li>
+
+                                      {/foreach}
+                                  </ul>
+                                  {/if}
+                              </li>
+
+                              {/foreach}
+                          </ul>
+                          {/if}
+                      </li>
+
+                      {/foreach}
+                  </ul>
+              </div>
+          {/if}
+          </div>
+        <div class="contact">
+            <div  class="listtilte">联系我们<b>Contact us</b></div>
+            <div class="conbg">
+        	      <div class="tel">
+                    <p>联系人：{$contact.name}</p>
+                    <p>联系电话：{$contact.mobile}</p>
+                    <p>邮箱：{$contact.mail}</p>
+                    <span>地址：{$contact.address}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+        

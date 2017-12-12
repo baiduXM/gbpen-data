@@ -1,0 +1,54 @@
+{	
+
+	"about": {
+		"description": "关于我们",
+		"value": {},
+		"type": "page",
+		"config": {
+			"nav_width": 455,
+			"nav_height": 338
+		}
+		
+	},
+	"inmov":{
+		"value":"2",
+		"description":"默认1关闭视频",
+		"type":"text"
+	},
+	"movlink":{
+        "value": {
+			"title": "关于我们下方视频连接",
+			"image": "images/logo.png",
+			"link": "http://player.youku.com/player.php/sid/XNTkyMTM0MzY4/v.swf"
+		},
+		"description": "关于我们下方视频连接",
+		"type": "image",
+		"config": {}
+	},
+	
+	"about_txt": {
+		"description": "关于我们",
+		"value": "谢俊伟",
+		"type": "text"
+		
+	},
+	"news":{
+		"description":"新闻中心",
+		"value":{},
+		"type":"list",
+		"config":{
+			"width":150,
+			"height":150
+		}
+	},
+
+	"case":{
+		"description": "案例展示",
+		"value": {},
+		"type": "list",
+		"config":{
+			"width":150,
+			"height":150
+		}
+	}
+}

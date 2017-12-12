@@ -1,0 +1,13 @@
+
+<ul class="fo">
+              {foreach item=article from=$list.data}
+
+
+                            <li><a href="{$article.link}" ><img src="{$article.image}" width="192" />
+                                 <p>{$article.title}</p> </a></li>
+                               
+  {/foreach}
+
+
+
+            </ul>

@@ -1,0 +1,57 @@
+{
+	"news":{
+		"description":"新闻中心",
+		"value":{},
+		"type":"list",
+		"config":{
+			"width":170,
+			"height":170
+		}
+	},
+	"pro":{
+		"description": "产品中心",
+		"value": {},
+		"type": "list",
+		"config":{
+			"width":227,
+			"height":227
+		}
+	},
+	"list1":{
+        "value": {},
+		"description":"导航第1个子栏目",
+		"type":"list",
+		"config":{
+			"filter":"list,page"
+		}
+	},
+	
+	
+	"list2":{
+		"description":"导航第2个子栏目",
+		"value":{},
+		"type":"list",
+		"config":{
+			"filter":"list,page"
+		}
+	},
+
+	
+	"list3":{
+		"description":"导航第3个子栏目",
+		"value":{},
+		"type":"list",
+		"config":{
+			"filter":"list,page"
+		}
+	},
+	"list4":{
+		"description":"导航第4个子栏目",
+		"value":{},
+		"type":"list",
+		"config":{
+			"filter":"list,page"
+		}
+	}
+	
+}

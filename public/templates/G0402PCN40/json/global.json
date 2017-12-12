@@ -56,5 +56,15 @@
 			"filter":"list,page",
 			"mustchild":true
 		}
+	},
+	"wbOff":{
+		"description":"微博是否显示,默认1,开启",
+		"value":"0",
+		"type":"text"
+	},
+	"erweimaOff":{
+		"description":"二维码是否显示,默认1,开启",
+		"value":"0",
+		"type":"text"
 	}
 }

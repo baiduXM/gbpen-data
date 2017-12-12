@@ -1,0 +1,52 @@
+{
+	"slidepics": {
+		"value": [{
+			"title": "Gooseberry and Elderflower Tower Cakes",
+			"image": "images/banners_03.jpg",
+			"link": "article/1.html",
+			"description": "Although it isn't gooseberry season anymore, I thought I would publish this recipe now because it wo..."
+		}, {
+			"title": "测试图2",
+			"image": "images/banners_03.jpg",
+			"link": "http://www.baidu.com"
+		},{
+			"title": "测试图3",
+			"image": "images/banners_03.jpg",
+			"link": "http://www.baidu.com"
+		}],
+		"description": "大轮滚图",
+		"type": "images",
+		"config": {
+			"width": 1000,
+			"height": 380,
+			"limit": 3
+		}
+	},
+	"contact_us": {
+		"value": "姓名：洪先生\r\n电话：13606999989 \r\n手机：13606999989 \r\n传真：13606999989 \r\n邮箱：13606999989@qq.com\r\n地址：龙海市榜山镇文苑村洪厝社\r\n  ",
+		"description": "联系我们",
+		"type": "textarea"
+	},
+	"contact_img":{
+		"description":"联系我们栏目图片",
+		"value": {
+			"title": "contactimg",
+			"image": "images/inbgw_11.jpg",
+			"link": "http://www.baidu.com/"
+		},
+		"type": "image",
+		"config": {
+			"height": 89,
+			"width":219
+		}
+
+	},
+	"second_navs": {
+		"value": {},
+		"description": "第二导航（底部）",
+		"type": "navs",
+		"config": {
+			"limit": 8
+		}
+	}
+}

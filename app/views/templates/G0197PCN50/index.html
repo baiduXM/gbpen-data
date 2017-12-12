@@ -78,7 +78,7 @@
   
 
   <div id="pictype">
-    <div class="title">{$index.pro.name}</div>
+    <div class="title">{$index.pro_list.name}</div>
     <div id="pictype_bj">
       <ul class="pictype">
       
@@ -95,27 +95,25 @@
   <div class="c"></div>
   
   
-  <div id="center_photo2">
-  <div id="news">
-  
-   <div class="title"><a href="{$index.pro.link}"><img src="{$site_url}images/more.jpg" width="39" height="31" / style="float:right;"></a><h2><b>{$index.pro.en_name}</b>/{$index.pro.name}</h2></div>
-  </div>
-  <div class="inner">
-  <div class="bd" style=" margin-left:25px;">
-    <ul>
-
-
-
-    {foreach item=pro from=$index.pro.data}
-                   <li><a href="{$pro.link}"><div class="pic"><img src="{$pro.image}" /> </div> {$pro.title}</a></li>
-            {/foreach}
-            
-            
-
-    </ul>
-   </div>
-  </div>
-</div>
+   <div id="center_photo2">
+      <div id="news">
+           <div class="title">
+               <a href="{$index.pro.link}">
+                 <img src="{$site_url}images/more.jpg" width="39" height="31"  style="float:right;">
+               </a>
+               <h2><b>{$index.pro.en_name}</b>/{$index.pro.name}</h2>
+           </div>
+      </div>
+      <div class="inner">
+          <div class="bd" style=" margin-left:25px;">
+                <ul>
+                    {foreach item=pro from=$index.pro.data}
+                         <li><a href="{$pro.link}"><div class="pic"><img src="{$pro.image}" /> </div> {$pro.title}</a></li>
+                     {/foreach}
+                </ul>
+           </div>
+      </div>
+    </div>
   </div>
  
 {include file="./_footer.html"}

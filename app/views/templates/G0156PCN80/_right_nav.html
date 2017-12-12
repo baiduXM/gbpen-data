@@ -1,0 +1,9 @@
+
+
+
+ <h3 class="ti">
+          {$posnavs[0].name} · <span> {$posnavs[0].en_name}</span>
+          <i class="fr">当前位置：<a href="{$site_url}">首页</a>   {foreach item=nav from=$posnavs}
+  -<a href="{$nav.link}">{$nav.name}</a>
+  {/foreach}</i>
+        </h3>

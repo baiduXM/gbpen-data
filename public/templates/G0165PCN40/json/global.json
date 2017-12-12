@@ -1,0 +1,52 @@
+{
+	"telTitle": {
+		"value":"服务电话",
+		"description": "头部热线名称",
+		"type": "text"	
+	},
+	"slidepics": {
+     "value": [{
+			"title": "",
+			"image": "images/img.jpg",
+			"link": ""	
+		}, {
+			"title": "",
+			"image": "images/img.jpg",
+			"link": ""
+		}, {
+			"title": "",
+			"image": "images/img.jpg",
+			"link": ""
+		}],
+		"description": "大轮滚图",
+		"type": "images",
+		"config": {
+			"width": 997,
+			"height": 322
+		}
+	},
+	"link": {
+		"value": {},
+		"description": "左侧快捷栏目",
+		"type": "list"	
+	},	
+	"contact": {
+		"value": {},
+		"description": "左侧联系方式",
+		"type": "page"	
+	},	
+	"contact_us": {
+		"value": "联系人：叶小姐\r\n联系电话：0592-6383266\r\n传 真：0592-5659150\r\n联系手机：18659223288\r\n联系地址：福建省厦门市集美区灌口镇",
+		"description": "联系方式内容",
+		"type": "textarea"
+	 },
+	 "links": {
+		"value":[{
+			"title": "baidu",
+			"image":"",
+			"link": ""	
+		}],
+		"description": "友情链接",
+		"type": "images"
+	}	
+}

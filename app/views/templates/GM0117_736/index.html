@@ -99,7 +99,7 @@
 
       	 <div class="aboutbox">
            <h1 class="aboutboxtop">
-          <div class="wz"><span class="cn public-bg2">{$mIndexCat.name}<p class="en public-color2"></p></span><div class="jx public-color1"></div></div>
+          <div class="wz"><span class="cn public-bg2"><a href="{$mIndexCat.link}">{$mIndexCat.name}</a><p class="en public-color2"></p></span><div class="jx public-color1"></div></div>
           </h1>
           <div class="aboutboxm"  onclick="javascript:window.location.href='{$mIndexCat.link}'">
           {$mIndexCat.description|unescape:"html"} <font style="color: red;">[查看更多]</font>
@@ -111,7 +111,7 @@
       
       <div class="probox">
       	<h1 class="aboutboxtop">
-          <div class="wz"><span class="cn public-bg2">{$mIndexCat.name}<p class="en public-color2"></p></span><div class="jx public-color1"></div></div>
+          <div class="wz"><span class="cn public-bg2"><a href="{$mIndexCat.link}">{$mIndexCat.name}</a><p class="en public-color2"></p></span><div class="jx public-color1"></div></div>
           </h1>
          <div class="proboxm">
          	<ul class="prolist clearfix">
@@ -131,7 +131,7 @@
 {elseif $mIndexCat.type eq 3}
       <div class="probox newxbox">
       <h1 class="aboutboxtop">
-          <div class="wz"><span class="cn public-bg2">{$mIndexCat.name}<p class="en public-color2"></p></span><div class="jx public-color1"></div></div>
+          <div class="wz"><span class="cn public-bg2"><a href="{$mIndexCat.link}">{$mIndexCat.name}</a><p class="en public-color2"></p></span><div class="jx public-color1"></div></div>
           </h1>
 
       	  <ul class="caselist clearfix">
