@@ -1,0 +1,34 @@
+<div id="header">
+    <div class="container">
+        <div class="logo"><a href="{$site_url}"><img src="{$logo}" alt=""></a></div>
+        <ul class="nav">
+            {$limit=8}
+            {if $navs|count lt $limit}{$limit = $navs|count}{/if}
+            {foreach item=nav from=$navs}
+            <li class="{if $nav.current}current{/if} lt nav-li" style="width:{100/($limit)}%"><a class="nav-a" href="{$nav.link}">{$nav.name}</a>
+                {if $nav.childmenu}
+                <i class="iconfont">&#xe618;</i>
+                <ul class="chilmenu">
+                    {foreach item=nav_list from=$nav.childmenu}
+                    <li class="{if $nav_list.current}current{/if}">
+                        <a class="navC-a" href="{$nav_list.link}">{$nav_list.name}</a>
+                    </li>
+                    {/foreach}
+                </ul>
+                {/if}
+            </li>
+            {if $nav@index+1 eq $limit}{break}{/if}
+            {/foreach}
+        </ul>
+        <div class="search ">
+            <i class="ser iconfont">&#xe636;</i>
+            <div class="form">
+                <form action="{$search_action}" >
+                    <input class="text-btn" type="text" placeholder="请输入关键字" value="" name="s">
+                    <button class="subBtn iconfont" type="submit"  >&#xe636;</button>
+                </form>
+                <i class="close">×</i>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,93 @@
+{
+  "indexBan": {
+    "value": [
+      {
+        "title": "测试图2",
+        "image": "images/banner.png",
+        "link": "http://www.baidu.com"
+      },
+      {
+        "title": "测试图2",
+        "image": "images/banner.png",
+        "link": "http://www.baidu.com"
+      },
+      {
+        "title": "测试图2",
+        "image": "images/banner.png",
+        "link": "http://www.baidu.com"
+      }
+    ],
+    "description": "首页banner图",
+    "type": "images",
+    "config": {
+      "width": 1920,
+      "height": 969
+    }
+  },
+  "list1": {
+    "value": {},
+    "description": "第一个图文列表",
+    "type": "list",
+    "config": {
+      "star_only": true,
+      "width": 330,
+      "height": 272
+    }
+  },
+  "listLt": {
+    "value": {},
+    "description": "第一个图文列表右侧的图片",
+    "type": "list",
+    "config": {
+      "star_only": true,
+      "width": 386,
+      "height": 372
+    }
+  },
+  "list2": {
+    "value": {},
+    "description": "第二个图片列表",
+    "type": "list",
+    "config": {
+      "showchilddata":true,
+      "star_only": true,
+      "width": 580,
+      "height": 520
+    }
+  },
+  "list3": {
+    "value": {},
+    "description": "第三个单页面",
+    "type": "page",
+    "config": {
+      "width": 285,
+      "height": 200,
+      "star_only": true
+
+    }
+  },
+  "list3Bg": {
+    "value": {
+      "title": "",
+      "image": "images/index-bg_02.png",
+      "link": ""
+    },
+    "description": "首页关于我们",
+    "type": "image",
+    "config": {
+
+    }
+  },
+  "list4": {
+    "value": {},
+    "description": "第四个图文列表",
+    "type": "list",
+    "config": {
+      "width": 125,
+      "height": 115,
+      "star_only": true
+
+    }
+  }
+
+}

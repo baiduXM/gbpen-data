@@ -33,27 +33,47 @@
         <div id="demo" >
             <div class="page-des _panel-box" >
                 <h3 class="content-title">{$article.title}</h3>
+
                 <div id="product" class="picBtnTop">
-                    <div class="bd proBd">
-                        <ul>
-                            {foreach name=proImg item=proImg from=$article.images}
+                    <ul class="bigImg bd proBd">
+                        {foreach name=proImg item=proImg from=$article.images}
                             <li>
                                 <div class="pic"><img src="{$proImg.image}" /></div>
                             </li>
-                            {if $proImg@index+1 == 3}{break}{/if}
-                            {/foreach}
-                        </ul>
+                        {/foreach}
+                    </ul>
+
+                    <div class="smallScroll proHd">
+                        <a class="sPrev" href="javascript:void(0)"></a>
+                        <div class="smallImg ">
+                            <ul>
+                                {foreach name=proImg item=proImg from=$article.images}
+                                  <li class="{if $proImg.current}on{/if}"><img src="{$proImg.image}" /></li>
+                                {/foreach}
+                            </ul>
+                        </div>
+                        <a class="sNext" href="javascript:void(0)"></a>
                     </div>
-                    <div class="hd proHd">
-                        <ul>
-                            {foreach name=proImg item=proImg from=$article.images}
-                            <li class="{if $proImg.current}on{/if}"><img src="{$proImg.image}" /></li>
-                            {if $proImg@index+1 == 3}{break}{/if}
-                            {/foreach}
-                        </ul>
-                        <a class="next"></a>
-                        <a class="prev"></a>
-                    </div>
+                    <!--<div class="bd proBd">-->
+                        <!--<ul>-->
+                            
+                            <!--<li>-->
+                                
+                            <!--</li>-->
+                            
+                            
+                        <!--</ul>-->
+                    <!--</div>-->
+                    <!--<div class="hd proHd">-->
+                        <!--<ul>-->
+                            
+                            
+                            
+                            
+                        <!--</ul>-->
+                        <!--<a class="next"></a>-->
+                        <!--<a class="prev"></a>-->
+                    <!--</div>-->
                     <ul class="proImg-text">
                        <li>  {$article.content|unescape:"html"}</li>
                     </ul>

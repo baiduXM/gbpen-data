@@ -1,0 +1,9 @@
+<div id="banner">
+    <div  class="sliderBan">
+        {foreach item=banner from=$index.indexBan}
+            <div class="slide"><a href="{$banner.link}"><img src="{$banner.image}" /></a></div>
+        {/foreach}
+    </div>
+    <div id="banMore"><a href="list-image.html">MORE  +</a></div>
+    <div id="banBottom"><a href="" class="iconfont">&#xe644;</a></div>
+</div>

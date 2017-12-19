@@ -1,0 +1,61 @@
+{
+  "lNav": {
+    "value":[],
+    "description": "首页banner下的导航栏目（当前栏目无子栏目时展示的目标栏目）",
+    "type": "list",
+    "config": {
+      "filter": "list",
+      "mustchild": true
+    }
+  },
+  "list1": {
+    "value": [],
+    "description": "首页第一个图文列表",
+    "type": "list",
+    "config": {
+      "width": 370,
+      "height": 257,
+      "star_only": true,
+      "showchilddata":true
+    }
+  },
+  "list2": {
+    "value":[],
+    "description": "首页第二个单页面",
+    "type": "page",
+    "config": {
+      "width": 370,
+      "height": 255,
+      "star_only": true
+    }
+  },
+  "list3": {
+    "value": [],
+    "description": "首页第三个图片列表",
+    "type": "list",
+    "config": {
+      "width":400,
+      "height": 300,
+      "star_only": true,
+      "showchilddata":true
+    }
+  },
+  "links": {
+    "value": [{
+      "title": "百度贴吧",
+      "image": "images/baidu-logo_03.png",
+      "link": "http://tieba.baidu.com"
+    }, {
+      "title": "百度图片",
+      "image": "images/baidu-logo_03.png",
+      "link": "http://image.baidu.com"
+    }],
+    "description": "首页友情链接 ",
+    "type": "images",
+    "config": {
+      "width":165,
+      "height":75,
+      "star_only": true
+    }
+  }
+}

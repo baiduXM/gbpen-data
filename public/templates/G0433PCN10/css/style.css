@@ -156,18 +156,18 @@ body{background: url(../images/bg1.png) no-repeat;width:100%;height:100%;positio
 .pro-btn li a:hover{background: #476d47;color:#fff;}
 
 #product{text-align: center;padding:8px 0;}
-.proHd{display: inline-block;vertical-align: top;position: relative;}
-.proHd ul li{width:64px;height:64px;line-height:60px;background: #fff;border:1px solid #fff;margin:5px 0;}
+.proHd{ vertical-align: top;position: relative;margin:0 auto;width:220px;padding:0 10px;}
+.proHd ul li{width:64px;height:64px;line-height:60px;background: #fff;border:1px solid #fff;margin:5px 0;display: inline-block;}
 .proHd ul li img{max-width:100%;max-height:100%;vertical-align: middle;}
 .proHd ul li.on{border:1px solid #476d47;}
-.proBd{display: inline-block;margin-right:15px;}
+.proBd{display: inline-block; }
 .proBd ul li .pic{width:265px;height:210px;background: #fff;line-height:205px;}
 .proBd ul li img{max-width:100%;max-height:100%;vertical-align: middle;}
 
-#product .prev{width: 13px;height:7px;display: inline-block;background: url(../images/pro_26.png) no-repeat;position: absolute;top:-8px;left:0;margin-left:22px;}
-#product .next{width: 13px;height:7px;display: inline-block;background: url(../images/pro2_29.png) no-repeat;position: absolute;bottom:-8px;left:0;margin-left:22px;}
-#product .prev:hover{background: url(../images/pro2_26.png) no-repeat;}
-#product .next:hover{background: url(../images/pro_29.png) no-repeat;}
+#product .sPrev{width: 13px;height:7px;display: inline-block;background: url(../images/pro_26.png) no-repeat;position: absolute;top:50%;left:0;margin-left:-7px;transform: rotate(-90deg);-webkit-transform: rotate(-90deg);}
+#product .sNext{width: 13px;height:7px;display: inline-block;background: url(../images/pro2_29.png) no-repeat;position: absolute;top:50%;right:-5px;margin-left:-7px;transform: rotate(-90deg);-webkit-transform: rotate(-90deg);}
+#product .sPrev:hover{background: url(../images/pro2_26.png) no-repeat;}
+#product .sNext:hover{background: url(../images/pro_29.png) no-repeat;}
 
 .proImg-text li{text-align: left;}
 .proImg-text li span{color:#666;font-size:14px;}

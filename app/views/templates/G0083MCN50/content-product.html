@@ -57,7 +57,22 @@
           </div>
           <div class="boxmain-m">
             <div class="pro_det">
-              <div class="focusBox" id="focusBox">
+              <div class="baner" id="baner1">
+                <div id="slideBox" class="slideBox">
+                  <div class="hd">
+                    <ul>
+                    </ul>
+                  </div>
+                  <div class="bd">
+                    <ul>
+                      {foreach item=image from=$article.images}
+                      <li><a class="pic"><img src="{$image.image}" width="100%" title="500*240" /></a></li>
+                      {/foreach}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="focusBox" id="focusBox">
                 <div class="hd">
                   <ul></ul>
                 </div>
@@ -70,7 +85,7 @@
                     {/foreach} 
                   </ul>
                 </div>
-              </div>
+              </div> -->
               <h5 class="ti">{$article.title}</h5>
               <div class="edit">
                 {$article.content|unescape:"html"}  

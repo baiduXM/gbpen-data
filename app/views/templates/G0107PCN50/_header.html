@@ -1,0 +1,35 @@
+
+<div class="headerbg">
+	<div class="header">
+		<a href="{$site_url}" title="返回首页" class="logo">
+			<img src="{$logo}" alt="{$title}">
+		</a>
+		<div class="navBar">
+			<ul class="nav clearfix" >
+				{$limit = 7}
+				<li class="m" style="width:{100/($limit+1)}%" id="a">
+					<a  href="{$site_url}" class="first">网站首页</a>
+				</li>
+				
+				{foreach item=nav from=$navs}
+				<li class="m {if $nav.current}current{/if}" style="width: {100/($limit+1)}%" id="a">
+					<a href="{$nav.link}" class="first">{$nav.name}</a>
+					{if $nav.childmenu}					
+					<ul class="sub">
+						{foreach item=nav_list from=$nav.childmenu}
+						<li class="{if $nav_list.current}current{/if}">
+							<a href="{$nav_list.link}">{$nav_list.name}</a>
+						</li>
+						{/foreach}
+					</ul>
+					{/if}
+				</li>
+				{if $nav@index+1 gte $limit}{break}{/if}
+	            {/foreach}	
+			</ul>
+		</div>
+	</div>
+</div>	
+
+
+

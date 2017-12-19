@@ -1,0 +1,53 @@
+{   
+	"slidepics": {
+     "value": [{
+			"title": "",
+			"image": "images/banner.jpg",
+			"link": ""	
+		}, {
+			"title": "",
+			"image": "images/banner.jpg",
+			"link": ""
+		}, {
+			"title": "",
+			"image": "images/banner.jpg",
+			"link": ""
+		}],
+		"description": "大轮滚图",
+		"type": "images",
+		"config": {
+			"width": 1920,
+			"height": 754
+		}
+	},
+	"page": {
+		"value": {},
+		"description": "浮在大图上的单页面",
+		"type": "page",
+		"config": {
+			"nav_width": 332,
+			"nav_height": 344
+		}	
+	},
+	"text": {
+		"value": {},
+		"description": "中间左侧文字列表",
+		"type": "list"	
+	},	
+	"cont": {
+		"value": {},
+		"description": "中间右侧单页面",
+		"type": "page"	
+	},	
+	"pro": {
+		"value": {},
+		"description": "底下图片滚动",
+		"type": "list",
+		"config": {
+			"width": 219,
+			"height": 160
+		}	
+	}
+}
+
+

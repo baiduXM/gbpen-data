@@ -1,0 +1,46 @@
+{
+	"way": {
+		"value": "地 址：厦门市软件园二期观日路36号201单元\r\n电 话：4000-127-808\r\n传 真：0592-3503377\r\n邮 箱：tousu@xm12t.com",
+		"description": "中间右侧联系方式",
+		"type": "textarea"	
+	},	
+	"conttitle": {
+		"value": "联系我们\r\nContact Us",
+		"description": "中间右侧联系方式",
+		"type": "textarea"	
+	},	
+	"link": {
+		"value": [{
+			"title": "百度",
+			"image": "",
+			"link": "http://www.baidu.com"
+		}, {
+			"title": "易尔通",
+			"image": "",
+			"link": "http://www.12t.cn"
+		},{
+			"title": "百度",
+			"image": "",
+			"link": "http://www.baidu.com"
+		}, {
+			"title": "易尔通",
+			"image": "",
+			"link": "http://www.12t.cn"
+		}],
+		"description": "底部友情链接",
+		"type": "images"
+	},
+	"nybanner": {
+		"value": {
+			"title":"",
+			"image":"images/nybanner.jpg",
+			"link":""
+		},
+		"description": "内页banner",
+		"type": "image",
+		"config": {
+			"width": 1920,
+			"height": 402
+		}	
+	}
+}

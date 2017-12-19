@@ -1,6 +1,8 @@
+
 <div class="posnav">
-  {foreach item=child from=$navs}
+  {foreach item=child from=$navs[1].childmenu}
     <dl><a href="{$child.link}"><span>{$child.name}</span>{$child.en_name}</a></dl>
     {if $child@index+1 == 3}{break}{/if}
   {/foreach}
 </div>
+

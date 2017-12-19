@@ -43,5 +43,17 @@ $(function(){
         }
     });
     jQuery(".multipleLine").slide({titCell:".hd ul",mainCell:".bd .ulWrap",effect:"top",autoPlay:true});
-    jQuery("#product").slide({ mainCell:".bd ul",effect:"top",autoPlay:true,triggerTime:0 });
+    // jQuery("#product").slide({ mainCell:".bd ul",effect:"top",autoPlay:true,triggerTime:0 });
+
+    //大图切换
+    jQuery("#product").slide({ titCell:".smallImg li", mainCell:".bigImg", effect:"fold", autoPlay:true,delayTime:200,
+        startFun:function(i,p){
+            //控制小图自动翻页
+            if(i==0){ jQuery("#product .sPrev").click() } else if( i%3==0 ){ jQuery("#product .sNext").click()}
+        }
+    });
+
+    //小图左滚动切换
+    jQuery("#product .smallScroll").slide({ mainCell:"ul",delayTime:100,vis:3,scroll:3,effect:"left",autoPage:true,prevCell:".sPrev",nextCell:".sNext",pnLoop:false });
+
 });

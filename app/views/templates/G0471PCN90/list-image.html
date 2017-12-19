@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <script type="text/javascript">
+        // 识别为手机客户端，自动跳转手机页面
+        {if $site_another_url}
+        if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+            location.href = '{$site_another_url}';
+        }
+        {/if}
+    </script>
+    <meta name="keywords" content="{$keywords}" />
+    <meta name="description" content="{$description}" />
+    <link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
+    <title>{$title}</title>
+    <link rel="stylesheet" href="{$site_url}css/jquery.bxslider.css">
+    <link rel="stylesheet" href="{$site_url}css/style.css">
+    <script src="{$site_url}js/jquery-1.9.1.min.js"></script>
+    <script src="{$site_url}js/jquery.bxslider.js"></script>
+    <script src="{$site_url}js/jquery.SuperSlide.2.1.1.js"></script>
+    <script src="{$site_url}js/index.js"></script>
+</head>
+<body>
+{include file="./_header.html"}
+{include file="./_banner.html"}
+
+<div id="list">
+    <i class="redBg"></i>
+    <div class="listCon">
+        <div class="container">
+            <div class="z-tell">
+                <i class="iconfont">&#xe609;</i>
+                <span>咨询电话 :</span>
+                <b>{$contact.telephone}</b>
+            </div>
+            <span class="det-name">{$list.name}</span>
+        </div>
+    </div>
+</div>
+<div id="main">
+    <div class="main1 det-main">
+        <div class="container">
+            <h1 class="m1-enName">{$list.en_name}</h1>
+            <div class="m1-cont">
+                {include file="./_pagenavs.html"}
+            </div>
+            <div class="det-txt ">
+                <ul class="image">
+                    {foreach item=img from=$list.data}
+                    <li>
+                        <a href="{$img.link}">
+                            <div class="pic"><img src="{$img.image}" alt=""></div>
+                            <div class="title">
+                                <i>+</i>
+                                <h4>{$img.title}</h4>
+                            </div>
+                        </a>
+                    </li>
+                    {/foreach}
+                </ul>
+                {include file="./_page.html"}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{include file="./_footer.html"}
+{$footscript}
+</body>
+</html>

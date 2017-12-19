@@ -1,0 +1,12 @@
+
+<div class="posnav">
+  
+{foreach item=nav from=$navs}
+  {if $nav@index+1 gte 2 and $nav@index+1 lte 4}
+    <dl><a href="{$nav.link}"><span>{$nav.name}</span>{$nav.en_name}</a></dl>
+   {/if}
+  {/foreach}
+</div>
+
+
+

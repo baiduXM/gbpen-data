@@ -1,0 +1,38 @@
+<div id="footer">
+    <div class="foot">
+        <img class="foot-bg" src="{$global.footBg.image}" alt="">
+        <div class="foot-con">
+            <div class="container">
+                <a href="{$global.footLogo.link}" class="foot-logo rr">
+                    <img src="{$global.footLogo.image}" alt="">
+                </a>
+                <div class="contact rr">
+                    <p>联系电话 : {$contact.telephone}</p>
+                    <p>公司地址 : {$contact.address}</p>
+                    <p>客户邮件 : {$contact.mail}</p>
+                </div>
+                <div class="footMa rt rr">
+                   <dl>
+                       <dt><img src="{$global.footMa.image}" alt=""></dt>
+                       <dd>{$global.footMa.title}</dd>
+                   </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="link">
+        <div class=" container">
+            <div class="container">
+                <ul>
+                    <li>友情链接 : </li>
+                    {foreach key=key item=link from=$global.links}
+                    <li class="fl"><a href="{$link.link}">{$link.title}</a><i>|</i></li>
+                    {/foreach}
+                </ul>
+                <div class="copy">
+                    {$footprint}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
